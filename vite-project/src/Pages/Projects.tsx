@@ -11,6 +11,7 @@ import {
   SiTailwindcss,
   SiMui,
   SiJavascript,
+  SiTypescript,
   SiPhp,
   SiReact,
   SiFirebase,
@@ -191,6 +192,23 @@ const Projects = () => {
                     }}
                   />
                   JavaScript
+                </>
+              }
+            />
+            <FormControlLabel
+              sx={{ color: "#607B96" }}
+              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              label={
+                <>
+                  <SiTypescript
+                    style={{
+                      marginRight: "15px",
+                      position: "relative",
+                      top: "2px",
+                      left: "5px",
+                    }}
+                  />
+                  Typescript
                 </>
               }
             />

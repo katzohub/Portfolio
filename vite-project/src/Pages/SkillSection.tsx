@@ -21,7 +21,7 @@ const SkillSection = () => {
         left: "0px",
         height: "90vh",
         width: "100%",
-        overflowY: "scroll",
+        overflowY: "auto",
       }}
     >
       <Box sx={{ width: "100%", padding: "0 10px" }}>
@@ -44,18 +44,55 @@ const SkillSection = () => {
                 <div style={{ padding: "10px" }}>
                   <h2 style={{ fontSize: "1em" }}>{project.nameProject}</h2>
                   <p>{project.detailProject}</p>
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: "15px",
+                      top: "25px",
+                      display: "flex",
+                      justifyContent: "center",
+                      gap: "10px",
+                      background: "#010c15",
+                      padding: "5px 10px",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    {project.icon &&
+                      project.icon.map((icon, index) => (
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          }}
+                          key={index}
+                        >
+                          {icon}
+                        </Box>
+                      ))}
+                  </Box>
                   <Button
                     variant="contained"
                     sx={{
-                      background: "#1C2B3A",
+                      background: "#1E2D3D",
+
                       position: "absolute",
                       left: "25px",
                       bottom: "15px",
+                      "&:hover": {
+                        background: "#1E2D3D",
+                      },
                     }}
                   >
                     <a
                       href={project.openProject}
-                      style={{ color: "#fff", textDecoration: "none" }}
+                      style={{
+                        color: "#fff",
+                        textDecoration: "none",
+                        position: "relative",
+                        top: "2px",
+                      }}
                     >
                       View Project
                     </a>

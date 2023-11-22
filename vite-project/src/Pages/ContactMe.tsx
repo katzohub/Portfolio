@@ -1,3 +1,4 @@
+import { useState } from "react";
 import List from "@mui/material/List";
 import ListSubheader from "@mui/material/ListSubheader";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -9,9 +10,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { Box } from "@mui/material";
+import ListItem from "@mui/material/ListItem";
 import ContactForm from "./ContactForm";
-import { useState } from "react";
-
 const ContactMe = () => {
   const [openContact, setOpenContact] = useState(false);
 
@@ -71,56 +71,32 @@ const ContactMe = () => {
             </ListSubheader>
           }
         >
-          <Collapse timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
-                }}
-              >
-                <EmailIcon />
-                <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
-                  primary="tomasolsiak1@gmail.com"
-                />
-              </ListItemButton>
-              <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
-                }}
-              >
-                <LocalPhoneIcon />
-                <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
-                  primary="+421 515 974"
-                />
-              </ListItemButton>
+          <nav aria-label="main mailbox folders">
+            <List>
+              <ListItem disablePadding>
+                <a
+                  href="mailto:tomasolsiak1@gmail.com"
+                  style={{ textDecoration: "none", color: "#607B96" }}
+                >
+                  <ListItemButton sx={{ position: "relative", left: "25px" }}>
+                    <EmailIcon sx={{ marginRight: "10px" }} />
+                    <ListItemText primary="tomasolsiak1@gmail.com" />
+                  </ListItemButton>
+                </a>
+              </ListItem>
+              <ListItem disablePadding>
+                <a
+                  href="tel:+421915515974"
+                  style={{ textDecoration: "none", color: "#607B96" }}
+                >
+                  <ListItemButton sx={{ position: "relative", left: "25px" }}>
+                    <LocalPhoneIcon sx={{ marginRight: "10px" }} />
+                    <ListItemText primary="+421 915 515 974" />
+                  </ListItemButton>
+                </a>
+              </ListItem>
             </List>
-          </Collapse>
+          </nav>
 
           <ListItemButton
             onClick={handleClickContact}
@@ -146,55 +122,30 @@ const ContactMe = () => {
             <ListItemText primary="find-me-also-in" />
           </ListItemButton>
           <Collapse in={openContact} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
-                }}
+            <ListItem disablePadding>
+              <a
+                target="_blank"
+                href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
+                style={{ textDecoration: "none", color: "#607B96" }}
               >
-                <ShareIcon fontSize="small" />
-
-                <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
-                  primary="Instagram accaunt"
-                />
-              </ListItemButton>
-              <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
-                }}
+                <ListItemButton sx={{ position: "relative", left: "25px" }}>
+                  <ShareIcon fontSize="small" sx={{ marginRight: "10px" }} />
+                  <ListItemText primary="Instagram account" />
+                </ListItemButton>
+              </a>
+            </ListItem>
+            <ListItem disablePadding>
+              <a
+                target="_blank"
+                href="https://www.twitch.tv/settings/profile"
+                style={{ textDecoration: "none", color: "#607B96" }}
               >
-                <ShareIcon fontSize="small" />
-                <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
-                  primary="Twich profile"
-                />
-              </ListItemButton>
-            </List>
+                <ListItemButton sx={{ position: "relative", left: "25px" }}>
+                  <ShareIcon fontSize="small" sx={{ marginRight: "10px" }} />
+                  <ListItemText primary="Twitch profile" />
+                </ListItemButton>
+              </a>
+            </ListItem>
           </Collapse>
         </List>
         <ContactForm />

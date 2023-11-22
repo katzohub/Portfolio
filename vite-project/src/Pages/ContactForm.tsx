@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { Box, Typography, TextField, Button, styled } from "@mui/material";
+import {
+  Box,
+  Typography,
+  TextField,
+  Button,
+  Divider,
+  styled,
+} from "@mui/material";
 import usePageStyles from "../style";
 
 const CssTextField = styled(TextField)({
@@ -55,7 +62,7 @@ const ContactForm = () => {
       sx={{
         position: "relative",
         top: "150px",
-        left: "50px",
+        margin: "0 10px",
         width: "100%",
         height: "90vh",
         display: "flex",
@@ -68,7 +75,7 @@ const ContactForm = () => {
       <Box
         sx={{
           width: "100%",
-          maxWidth: "550px",
+          maxWidth: "500px",
         }}
       >
         <form
@@ -113,6 +120,7 @@ const ContactForm = () => {
             color="primary"
             sx={{
               width: "50%",
+              height: "40px",
               marginTop: 2,
               color: "#FFF",
               textAlign: "right",
@@ -123,6 +131,7 @@ const ContactForm = () => {
               lineHeight: "normal",
               borderRadius: "8px",
               background: "#1C2B3A",
+              textTransform: "lowercase",
               "&:hover": {
                 background: "#1C2B3A",
               },
@@ -132,17 +141,29 @@ const ContactForm = () => {
           </Button>
         </form>
       </Box>
+      <Divider
+        orientation="vertical"
+        flexItem
+        sx={{
+          width: "1px",
+          height: "100vh",
+          position: "relative",
+          top: "-46px",
+          background: "#1E2D3D",
+        }}
+      />
+
       <Box
         sx={{
-          maxWidth: "580px",
+          maxWidth: "600px",
           color: "white",
           padding: 2,
-          borderLeft: "1px solid #1E2D3D",
           height: "100vh",
         }}
       >
         <Typography variant="body1">
           <br />
+          <span className={classes.formTextGrey}>1&nbsp;</span>
           <span className={classes.formTextPink}>const</span>{" "}
           <span className={classes.formTextPurple}>button</span>{" "}
           <span className={classes.formTextPink}>=</span>{" "}
@@ -151,18 +172,22 @@ const ContactForm = () => {
           <span className={classes.formTextOrange}>'#sendBtn'</span>
           <span className={classes.formTextGrey}>);</span>
           <br />
+          <span className={classes.formTextGrey}>2&nbsp;</span>
           <br />
+          <span className={classes.formTextGrey}>3&nbsp;</span>
           <span className={classes.formTextPink}>const</span>
           <span className={classes.formTextPurple}>message</span>
           <span className={classes.formTextPink}>=</span>
           <span className={classes.formTextGrey}>{`{`}</span>
           <br />
+          <span className={classes.formTextGrey}>4</span>
           &nbsp;&nbsp;<span className={classes.formTextPurple}>Name</span>
           <span className={classes.formTextGrey}>:</span>
           <span
             className={classes.formTextOrange}
           >{`${displayData.name}`}</span>
           <br />
+          <span className={classes.formTextGrey}>5</span>
           &nbsp;&nbsp;
           <span className={classes.formTextPurple}>Email</span>
           <span className={classes.formTextGrey}>:</span>
@@ -170,6 +195,7 @@ const ContactForm = () => {
             className={classes.formTextOrange}
           >{` ${displayData.email}`}</span>
           <br />
+          <span className={classes.formTextGrey}>6</span>
           &nbsp;&nbsp;
           <span className={classes.formTextPurple}>Message</span>
           <span className={classes.formTextGrey}>:</span>
@@ -178,15 +204,19 @@ const ContactForm = () => {
           >{` ${displayData.message}`}</span>
           &nbsp;&nbsp;
           <br />
+          <span className={classes.formTextGrey}>7&nbsp;</span>
           <span className={classes.formTextGrey}>Date:</span>
           <span
             className={classes.formTextOrange}
           >{`${displayData.date}`}</span>
           &nbsp;&nbsp;
           <br />
+          <span className={classes.formTextGrey}>8&nbsp;</span>
           <span className={classes.formTextGrey}>{`}`}</span>
           <br />
+          <span className={classes.formTextGrey}>9&nbsp;</span>
           <br />
+          <span className={classes.formTextGrey}>10&nbsp;</span>
           <span className={classes.formTextPurple}>
             button
             <span className={classes.formTextGrey}>.</span>
@@ -198,6 +228,7 @@ const ContactForm = () => {
           <span className={classes.formTextPink}>{`=>`}</span>
           <span className={classes.formTextGrey}>{`{`}</span>
           <br />
+          <span className={classes.formTextGrey}>11&nbsp;</span>
           &nbsp;&nbsp;
           <span className={classes.formTextPurple}>
             form<span className={classes.formTextGrey}>.</span>send
@@ -206,6 +237,7 @@ const ContactForm = () => {
           <span className={classes.formTextPurple}>message</span>
           <span className={classes.formTextGrey}>
             ); <br />
+            <span className={classes.formTextGrey}>12&nbsp;</span>
             {`}`})
           </span>
           <br />

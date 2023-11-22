@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -20,14 +21,45 @@ import { Box } from "@mui/material";
 import SkillSection from "./SkillSection";
 
 const Projects = () => {
+  const [checkedState, setCheckedState] = useState({
+    all: true,
+    html: false,
+    css: false,
+    sass: false,
+    tailwind: false,
+    mui: false,
+    javascript: false,
+    typescript: false,
+    php: false,
+    react: false,
+    firebase: false,
+  });
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = event.target;
+
+    if (name === "all") {
+      setCheckedState({
+        all: checked,
+        html: false,
+        css: false,
+        sass: false,
+        tailwind: false,
+        mui: false,
+        javascript: false,
+        typescript: false,
+        php: false,
+        react: false,
+        firebase: false,
+      });
+    } else {
+      setCheckedState({ ...checkedState, [name]: checked, all: false });
+    }
+  };
+
   return (
     <>
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-        }}
-      >
+      <Box sx={{ width: "100%", display: "flex" }}>
         <List
           sx={{
             width: "267px",
@@ -74,7 +106,9 @@ const Projects = () => {
               sx={{ color: "#607B96" }}
               control={
                 <Checkbox
-                  defaultChecked
+                  checked={checkedState.all}
+                  onChange={handleCheckboxChange}
+                  name="all"
                   sx={{ "& svg": { color: "#607B96" } }}
                 />
               }
@@ -93,9 +127,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* HTML Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.html}
+                  onChange={handleCheckboxChange}
+                  name="html"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiHtml5
@@ -110,9 +152,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* CSS Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.css}
+                  onChange={handleCheckboxChange}
+                  name="css"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiCss3
@@ -127,9 +177,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* SCSS Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.sass}
+                  onChange={handleCheckboxChange}
+                  name="sass"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiSass
@@ -144,9 +202,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* TailWind Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.tailwind}
+                  onChange={handleCheckboxChange}
+                  name="tailwind"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiTailwindcss
@@ -161,9 +227,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* MUI Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.mui}
+                  onChange={handleCheckboxChange}
+                  name="mui"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiMui
@@ -178,9 +252,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* JavaScript Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.javascript}
+                  onChange={handleCheckboxChange}
+                  name="javascript"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiJavascript
@@ -195,9 +277,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* TypeScript Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.typescript}
+                  onChange={handleCheckboxChange}
+                  name="typescript"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiTypescript
@@ -212,9 +302,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* PHP Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.php}
+                  onChange={handleCheckboxChange}
+                  name="php"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiPhp
@@ -229,9 +327,17 @@ const Projects = () => {
                 </>
               }
             />
+
+            {/* React Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.react}
+                  onChange={handleCheckboxChange}
+                  name="react"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiReact
@@ -242,13 +348,21 @@ const Projects = () => {
                       left: "5px",
                     }}
                   />
-                  REACT
+                  React
                 </>
               }
             />
+
+            {/* Firebase Checkbox */}
             <FormControlLabel
-              sx={{ color: "#607B96" }}
-              control={<Checkbox sx={{ "& svg": { color: "#607B96" } }} />}
+              control={
+                <Checkbox
+                  checked={checkedState.firebase}
+                  onChange={handleCheckboxChange}
+                  name="firebase"
+                  sx={{ "& svg": { color: "#607B96" } }}
+                />
+              }
               label={
                 <>
                   <SiFirebase
@@ -259,13 +373,13 @@ const Projects = () => {
                       left: "5px",
                     }}
                   />
-                  FireBase
+                  Firebase
                 </>
               }
             />
           </FormGroup>
         </List>
-        <SkillSection />
+        <SkillSection checkedState={checkedState} />
       </Box>
     </>
   );

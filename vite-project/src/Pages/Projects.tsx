@@ -113,7 +113,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.all ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <CategoryIcon
                     fontSize="small"
                     style={{
@@ -124,7 +129,7 @@ const Projects = () => {
                     }}
                   />
                   All
-                </>
+                </Box>
               }
             />
 
@@ -132,14 +137,19 @@ const Projects = () => {
             <FormControlLabel
               control={
                 <Checkbox
+                  sx={{ "& svg": { color: "#607B96" } }}
                   checked={checkedState.html}
                   onChange={handleCheckboxChange}
                   name="html"
-                  sx={{ "& svg": { color: "#607B96" } }}
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.html ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiHtml5
                     style={{
                       marginRight: "15px",
@@ -149,7 +159,7 @@ const Projects = () => {
                     }}
                   />
                   HTML
-                </>
+                </Box>
               }
             />
 
@@ -164,7 +174,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.css ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiCss3
                     style={{
                       marginRight: "15px",
@@ -174,7 +189,7 @@ const Projects = () => {
                     }}
                   />
                   CSS
-                </>
+                </Box>
               }
             />
 
@@ -189,7 +204,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.sass ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiSass
                     style={{
                       marginRight: "15px",
@@ -199,7 +219,7 @@ const Projects = () => {
                     }}
                   />
                   SCSS
-                </>
+                </Box>
               }
             />
 
@@ -214,7 +234,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.tailwind ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiTailwindcss
                     style={{
                       marginRight: "15px",
@@ -224,7 +249,7 @@ const Projects = () => {
                     }}
                   />
                   TailWind
-                </>
+                </Box>
               }
             />
 
@@ -239,7 +264,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.mui ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiMui
                     style={{
                       marginRight: "15px",
@@ -249,7 +279,7 @@ const Projects = () => {
                     }}
                   />
                   MUI
-                </>
+                </Box>
               }
             />
 
@@ -264,7 +294,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.javascript ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiJavascript
                     style={{
                       marginRight: "15px",
@@ -274,7 +309,7 @@ const Projects = () => {
                     }}
                   />
                   JavaScript
-                </>
+                </Box>
               }
             />
 
@@ -289,7 +324,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.typescript ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiTypescript
                     style={{
                       marginRight: "15px",
@@ -299,7 +339,7 @@ const Projects = () => {
                     }}
                   />
                   Typescript
-                </>
+                </Box>
               }
             />
 
@@ -314,7 +354,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.php ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiPhp
                     style={{
                       marginRight: "15px",
@@ -324,7 +369,7 @@ const Projects = () => {
                     }}
                   />
                   PHP
-                </>
+                </Box>
               }
             />
 
@@ -339,7 +384,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.react ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiReact
                     style={{
                       marginRight: "15px",
@@ -349,7 +399,7 @@ const Projects = () => {
                     }}
                   />
                   React
-                </>
+                </Box>
               }
             />
 
@@ -364,7 +414,12 @@ const Projects = () => {
                 />
               }
               label={
-                <>
+                <Box
+                  sx={{
+                    color: checkedState.firebase ? "#fff" : "#607B96",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
                   <SiFirebase
                     style={{
                       marginRight: "15px",
@@ -374,7 +429,7 @@ const Projects = () => {
                     }}
                   />
                   Firebase
-                </>
+                </Box>
               }
             />
           </FormGroup>

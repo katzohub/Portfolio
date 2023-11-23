@@ -1,17 +1,18 @@
 import { useState } from "react";
-import List from "@mui/material/List";
-import ListSubheader from "@mui/material/ListSubheader";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
+import {
+  List,
+  ListSubheader,
+  ListItemButton,
+  ListItemText,
+  Collapse,
+  Box,
+} from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { Box } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ContactForm from "./ContactForm";
+import LeftContact from "./LeftContact";
 const ContactMe = () => {
   const [openContact, setOpenContact] = useState(false);
 
@@ -71,32 +72,8 @@ const ContactMe = () => {
             </ListSubheader>
           }
         >
-          <nav aria-label="main mailbox folders">
-            <List>
-              <ListItem disablePadding>
-                <a
-                  href="mailto:tomasolsiak1@gmail.com"
-                  style={{ textDecoration: "none", color: "#607B96" }}
-                >
-                  <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                    <EmailIcon sx={{ marginRight: "10px" }} />
-                    <ListItemText primary="tomasolsiak1@gmail.com" />
-                  </ListItemButton>
-                </a>
-              </ListItem>
-              <ListItem disablePadding>
-                <a
-                  href="tel:+421915515974"
-                  style={{ textDecoration: "none", color: "#607B96" }}
-                >
-                  <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                    <LocalPhoneIcon sx={{ marginRight: "10px" }} />
-                    <ListItemText primary="+421 915 515 974" />
-                  </ListItemButton>
-                </a>
-              </ListItem>
-            </List>
-          </nav>
+          {/* LeftContact */}
+          <LeftContact />
 
           <ListItemButton
             onClick={handleClickContact}

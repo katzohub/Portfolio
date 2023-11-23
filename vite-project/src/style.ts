@@ -230,41 +230,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "normal",
     textDecoration: "underline",
   },
-  //Project style
-
-  // Form Styles
-  formTextOrange: {
-    color: "#FEA55F",
-    fontFamily: "Fira Code",
-    fontSize: "18px",
-    fontStyle: "normal",
-    fontWeight: 450,
-    lineHeight: "150%",
-  },
-  formTextPurple: {
-    color: "#5565E8",
-    fontFamily: "Fira Code",
-    fontSize: "18px",
-    fontStyle: "normal",
-    fontWeight: 450,
-    lineHeight: "150%",
-  },
-  formTextPink: {
-    color: "#C98BDF",
-    fontFamily: "Fira Code",
-    fontSize: "18px",
-    fontStyle: "normal",
-    fontWeight: 450,
-    lineHeight: "150%",
-  },
-  formTextGrey: {
-    color: "#607B96",
-    fontFamily: "Fira Code",
-    fontSize: "18px",
-    fontStyle: "normal",
-    fontWeight: 450,
-    lineHeight: "150%",
-  },
 }));
 
 export default usePageStyles;

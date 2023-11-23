@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
-import {
-  Box,
-  Typography,
-  TextField,
-  Button,
-  Divider,
-  styled,
-} from "@mui/material";
-import usePageStyles from "../style";
+import { Box, Typography, TextField, Button, styled } from "@mui/material";
+import usePageStyles from "../stylePages";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -141,17 +134,6 @@ const ContactForm = () => {
           </Button>
         </form>
       </Box>
-      <Divider
-        orientation="vertical"
-        flexItem
-        sx={{
-          width: "1px",
-          height: "100vh",
-          position: "relative",
-          top: "-46px",
-          background: "#1E2D3D",
-        }}
-      />
 
       <Box
         sx={{
@@ -159,6 +141,7 @@ const ContactForm = () => {
           color: "white",
           padding: 2,
           height: "100vh",
+          borderLeft: "1px solid black",
         }}
       >
         <Typography variant="body1">

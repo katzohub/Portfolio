@@ -1,10 +1,14 @@
 import { useState } from "react";
-import ListSubheader from "@mui/material/ListSubheader";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
+import {
+  ListSubheader,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Collapse,
+  Box,
+  Typography,
+} from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -12,13 +16,98 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { Box } from "@mui/material";
+import LeftContact from "./LeftContact";
+import TemplateAbout from "./TemplateAbout";
+import usePageStyles from "../stylePages";
+import ja from "../img/ja.png";
 
 const AboutMe = () => {
-  const [open, setOpen] = useState(true);
-  const [openContact, setOpenContact] = useState(false);
+  const [activeButton, setActiveButton] = useState<string>("bio");
+  const [open, setOpen] = useState<boolean>(false);
+  const [openContact, setOpenContact] = useState<boolean>(false);
+  const [templateProps, setTemplateProps] = useState({
+    textOne: "Hi There",
+    textTwo: "I am Tomas Olsiak.",
+    textThree: "I am 25 year old.",
+    textFour: "In 1.5.2022 I am learning Programing.",
+    textFive: "My fovorite programing language is React,Typescript/JavaScript.",
+    textSix: "I would like programing carrer.",
+    textSeven: "I like learning programing.",
+    textEight: "Please rete my projects.",
+    textNine: "Thank you check my portfolio.",
+    textTen: "Thank you rate my projects.",
+    textEleven: "Thank you your feed back :)",
+    textTwelve: "Goodbye, have a nice day",
+  });
+
+  const handleBioClick = () => {
+    setTemplateProps({
+      textOne: "Hi There",
+      textTwo: "I am Tomas Olsiak.",
+      textThree: "I am 25 year old.",
+      textFour: "In 1.5.2022 I am learning Programing.",
+      textFive:
+        "My fovorite programing language is React,Typescript/JavaScript.",
+      textSix: "I would like programing carrer.",
+      textSeven: "I like learning programing.",
+      textEight: "Please rete my projects.",
+      textNine: "Thank you check my portfolio.",
+      textTen: "Thank you rate my projects.",
+      textEleven: "Thank you your feed back :)",
+      textTwelve: "Goodbye, have a nice day",
+    });
+  };
+
+  const handleInterestsClick = () => {
+    setTemplateProps({
+      textOne: "My Hobbys",
+      textTwo: "I am like a footbal,hockey,bangbington.skialptouring",
+      textThree: "Mit my friends game bangbingtonand skialp touring",
+      textFour: "Fusbal and hockej passive sport",
+      textFive: "I like and playstation",
+      textSix: "My best game is The last of us Part I and part II",
+      textSeven: "Next game: God of war and God of war Ragnarok,",
+      textEight: "Ghos and Tsusima and Crash Bandicoot(:D)",
+      textNine: "My actuality game Fortnite",
+      textTen: "This is my all hobby",
+      textEleven: "Thank you",
+      textTwelve: "Thank you, have a nice day",
+    });
+  };
+
+  const handlePrimarySchoolClick = () => {
+    setTemplateProps({
+      textOne: "My Primary School",
+      textTwo: "My primary schools location Detvianska Huta",
+      textThree: "This is good school",
+      textFour: "Vela ma toho naucila",
+      textFive: "I like and playstation",
+      textSix: "My best game is The last of us Part I and part II",
+      textSeven: "Next game: God of war and God of war Ragnarok,",
+      textEight: "Ghos and Tsusima and Crash Bandicoot(:D)",
+      textNine: "My actuality game Fortnite",
+      textTen: "This is my all hobby",
+      textEleven: "Thank you",
+      textTwelve: "Goodbye, have a nice day",
+    });
+  };
+
+  const handleHighSchoolClick = () => {
+    setTemplateProps({
+      textOne: "My High School",
+      textTwo: "My primary schools location Detva",
+      textThree: "I am learning machiner",
+      textFour: "I am learning cnc technologie",
+      textFive: "and orgraming cnc machines",
+      textSix: "Velmi som pri tomto obere neostal ",
+      textSeven: "bavilo ma iab to programovanie",
+      textEight: "Nakoniec som sa rozhodol aj tak pre web programovanie",
+      textNine: "Myslim si ze som urobil dobre",
+      textTen: "Len dost tazko je sa zamestanat ",
+      textEleven: "v tomto odvetvy ako zaciatocnik",
+      textTwelve: "Goodbye,thank have a nice day",
+    });
+  };
 
   const handleClick = () => {
     setOpen(!open);
@@ -26,186 +115,108 @@ const AboutMe = () => {
   const handleClickContact = () => {
     setOpenContact(!openContact);
   };
+  const classes = usePageStyles();
   return (
     <>
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-        }}
-      >
+      <Box className={classes.aboutContainer}>
         <List
-          sx={{
-            width: "267px",
-            marginTop: "56px",
-            borderRight: "2px solid #1E2D3D",
-            height: "95vh",
-          }}
+          className={classes.aboutLeftNavContainer}
           component="nav"
           aria-labelledby="nested-list-subheader"
           subheader={
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{
-                width: "94vw",
-                background: "transparent",
-                display: "flex",
-                borderBottom: "1px solid #1E2D3D",
-                position: "relative",
-                left: "30px",
-                color: "#fff",
-                fontFamily: "Fira Code",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-              }}
+              sx={{ position: "relative" }}
+              className={classes.aboutLeftWrap}
             >
               {" "}
               personal-info
-              <div
-                style={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "104px",
-                  fontFamily: "Fira Code",
-                  fontSize: "16px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                }}
-              >
-                _about_me
-              </div>
+              <div className={classes.aboutTextRight}>_about_me</div>
             </ListSubheader>
           }
         >
           <ListItemButton
-            sx={{
-              color: "#607B96",
-              "&:hover": {
-                color: "#fff",
-              },
+            style={{
+              color: activeButton === "bio" ? "#fff " : "#607B96",
+            }}
+            onClick={() => {
+              handleBioClick();
+              setActiveButton("bio");
             }}
           >
             <ChevronRightIcon />
             <ListItemIcon>
-              <FolderIcon sx={{ color: "#E99287" }} />
+              <FolderIcon className={classes.aboutIconBio} />
             </ListItemIcon>
 
-            <ListItemText
-              sx={{
-                fontFamily: "Fira Code",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "normal",
-                position: "relative",
-                top: "1px",
-                left: "-20px",
-              }}
-              primary="bio"
-            />
+            <ListItemText className={classes.aboutBtnText} primary="bio" />
           </ListItemButton>
           <ListItemButton
-            sx={{
-              color: "#607B96",
-              "&:hover": {
-                color: "#fff",
-              },
+            onClick={() => {
+              handleInterestsClick();
+              setActiveButton("interests");
+            }}
+            style={{
+              color: activeButton === "interests" ? "#fff" : "#607B96",
             }}
           >
             <ChevronRightIcon />
             <ListItemIcon>
-              <FolderIcon sx={{ color: "#43D9AD" }} />
+              <FolderIcon className={classes.aboutIconInterest} />
             </ListItemIcon>
 
             <ListItemText
-              sx={{
-                fontFamily: "Fira Code",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "normal",
-                position: "relative",
-                top: "1px",
-                left: "-20px",
-              }}
+              className={classes.aboutBtnText}
               primary="interests"
             />
           </ListItemButton>
 
           <ListItemButton
-            sx={{
-              color: "#607B96",
-              "&:hover": {
-                color: "#fff",
-              },
-            }}
+            className={classes.aboutBtnStyle}
             onClick={handleClick}
           >
             {open ? <ExpandLess /> : <ExpandMore />}
             <ListItemIcon>
-              <FolderIcon sx={{ color: "#3A49A4" }} />
+              <FolderIcon className={classes.aboutIconEducation} />
             </ListItemIcon>
             <ListItemText
-              sx={{
-                fontFamily: "Fira Code",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "normal",
-                position: "relative",
-                top: "1px",
-                left: "-20px",
-              }}
+              className={classes.aboutBtnText}
               primary="education"
             />
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
+                className={classes.aboutBtnEducationStyle}
+                onClick={() => {
+                  handlePrimarySchoolClick();
+                  setActiveButton("primary-school");
+                }}
+                style={{
+                  color: activeButton === "primary-school" ? "#fff" : "#607B96",
                 }}
               >
                 <SchoolIcon />
                 <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
+                  className={classes.aboutBtnEducationFont}
                   primary="primary-school"
                 />
               </ListItemButton>
               <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
+                className={classes.aboutBtnEducationStyle}
+                onClick={() => {
+                  handleHighSchoolClick();
+                  setActiveButton("high-school");
+                }}
+                style={{
+                  color: activeButton === "high-school" ? "#fff" : "#607B96",
                 }}
               >
                 <SchoolIcon />
                 <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
+                  //   onClick={handleHighSchoolClick}
+                  className={classes.aboutBtnEducationFont}
                   primary="high-school"
                 />
               </ListItemButton>
@@ -214,136 +225,116 @@ const AboutMe = () => {
 
           <ListItemButton
             onClick={handleClickContact}
-            sx={{
-              color: "#607B96",
-              marginTop: "100px",
-              fontFamily: "Fira Code",
-              fontSize: "16px",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "normal",
-              width: "240px",
-              position: "relative",
-              left: "27px",
-              borderTop: "1px solid #1E2D3D",
-              borderBottom: "1px solid #1E2D3D",
-              "& :hover": {
-                color: "#fff",
-              },
-            }}
+            className={classes.aboutContactContainer}
+            //  className={classes.aboutContactContainer}
           >
             {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             <ListItemText primary="contact" />
           </ListItemButton>
           <Collapse in={openContact} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
-                }}
-              >
-                <EmailIcon />
-
-                <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
-                  primary="tomasolsiak1@gmail.com"
-                />
-              </ListItemButton>
-              <ListItemButton
-                sx={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "15px",
-                  "&:hover": {
-                    color: "#fff",
-                  },
-                }}
-              >
-                <LocalPhoneIcon />
-                <ListItemText
-                  sx={{
-                    fontFamily: "Fira Code",
-                    fontSize: "16px",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                    paddingLeft: "10px",
-                  }}
-                  primary="+421 515 974"
-                />
-              </ListItemButton>
-            </List>
+            {/* leftContact */}
+            <LeftContact />
           </Collapse>
         </List>
-        <Box
-          sx={{
-            position: "relative",
+        {/* Template */}
+        <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+          <TemplateAbout {...templateProps} />
 
-            top: "120px",
-            left: "25px",
-            width: "100%",
-            color: "#607B96",
-            fontFamily: "Fira Code",
-            fontSize: "18px",
-            fontStyle: "normal",
-            fontWeight: 450,
-            lineHeight: "150%",
-            display: "grid",
-            gridTemplateColumns: "auto 1fr",
-          }}
-        >
           <Box
-            width={10}
-            display="flex"
-            flexDirection="column"
-            alignItems="end"
+            sx={{
+              marginTop: "150px",
+              color: "white",
+              padding: 2,
+              borderLeft: "1px solid black",
+              height: "80vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "start",
+            }}
           >
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-          </Box>
-          <Box pl={5}>
-            <p style={{ position: "relative", left: "-10px" }}>/**</p>
-            <p> * About me</p>
-            <p> * I have 5 years of еxperience in web</p>
-            <p>* development lorem ipsum dolor sit amet,</p>
-            <p>* consectetur adipiscing elit, sed do eiusmod</p>
-            <p>* tempor incididunt ut labore et dolore</p>
-            <p>* magna aliqua. Ut enim ad minim veniam,</p>
-            <p>* quis nostrud exercitation ullamco laboris</p>
-            <p>* nisi ut aliquip ex ea commodo consequat.</p>
-            <p>* Duis aute irure dolor in reprehenderit in</p>
-            <p>*</p>
-            <p>* Duis aute irure dolor in reprehenderit in</p>
-            <p>* voluptate velit esse cillum dolore eu fugiat</p>
-            <p>* nulla pariatur. Excepteur sint occaecat</p>
-            <p>* officia deserunt mollit anim id est laborum.</p>
-            <p>*/</p>
+            <Box
+              sx={{
+                borderRadius: "15px",
+                border: "1px solid #1E2D3D",
+                background: "#011221",
+                padding: "7px 12.5px",
+                position: "relative",
+                left: "25px",
+              }}
+            >
+              <Typography variant="body1">
+                <span className={classes.formTextGrey}>1&nbsp;</span>
+                <span className={classes.formTextPink}>const</span>{" "}
+                <span className={classes.formTextPurple}>button</span>{" "}
+                <span className={classes.formTextPink}>=</span>{" "}
+                <span className={classes.formTextPurple}>
+                  document.querySelector
+                </span>{" "}
+                <span className={classes.formTextGrey}>(</span>
+                <span className={classes.formTextOrange}>'#sendBtn'</span>
+                <span className={classes.formTextGrey}>);</span>
+                <br />
+                <span className={classes.formTextGrey}>2&nbsp;</span>
+                <br />
+                <span className={classes.formTextGrey}>3&nbsp;</span>
+                <span className={classes.formTextPink}>const</span>&nbsp;
+                <span className={classes.formTextPurple}>image</span>&nbsp;
+                <span className={classes.formTextPink}>=</span>&nbsp;
+                <span className={classes.formTextPurple}>
+                  document.querySelector
+                </span>
+                <span className={classes.formTextGrey}>{`(`}</span>
+                <span className={classes.formTextOrange}>'#myImage'</span>
+                <span className={classes.formTextGrey}>{`);`}</span>
+                <br />
+                <span className={classes.formTextGrey}>4&nbsp;</span>
+                <br />
+                <span className={classes.formTextGrey}>5&nbsp;</span>
+                <span className={classes.formTextPurple}>
+                  button
+                  <span className={classes.formTextGrey}>.</span>
+                  addEventListener
+                </span>
+                <span className={classes.formTextGrey}>(</span>
+                <span className={classes.formTextOrange}>'click'</span>
+                <span className={classes.formTextGrey}>, ()</span>&nbsp;
+                <span className={classes.formTextPink}>{`=>`}</span>&nbsp;
+                <span className={classes.formTextGrey}>{`{`}</span>
+                <br />
+                <span className={classes.formTextGrey}>6&nbsp;</span>
+                &nbsp;&nbsp;
+                <span className={classes.formTextPurple}>
+                  image<span className={classes.formTextGrey}>.</span>src
+                </span>
+                <span className={classes.formTextGrey}>(</span>
+                <span className={classes.formTextPurple}>"my_img.png"</span>
+                <span className={classes.formTextGrey}>
+                  ); <br />
+                  <span className={classes.formTextGrey}>7&nbsp;</span>
+                  {`}`})
+                </span>
+                <br />
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                position: "relative",
+                top: "50px",
+                borderRadius: "15px",
+                border: "1px solid #1E2D3D",
+                background: "#011221",
+                padding: "15px 20px",
+                display: "flex",
+                flexDirection: "column",
+                alignContent: "center",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <span className={classes.formTextGrey}>// Result</span>
+              <img src={ja} alt="" width={225} />
+            </Box>
           </Box>
         </Box>
       </Box>

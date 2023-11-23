@@ -3,8 +3,11 @@ import { Theme } from "@mui/material/styles";
 // #
 const usePageStyles = makeStyles((theme: Theme) => ({
   //AboutMe
-  colorFFFActive: {
-    color: "#fff",
+  aboutHoverBtnEffect: {
+    "&:hover": {
+      transition: "color 0.3s ease-in",
+      color: "#fff !important",
+    },
   },
   aboutContainer: {
     width: "100%",
@@ -42,9 +45,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       color: "#fff !important",
     },
-    "&:focus": {
-      color: "#fff !important",
-    },
   },
   aboutIconBio: {
     color: "#E99287 !important",
@@ -69,6 +69,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     left: "15px",
     "&:hover": {
+      transition: "color 0.3s ease-in",
       color: "#fff !important",
     },
   },
@@ -81,7 +82,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     paddingLeft: "10px",
   },
   aboutContactContainer: {
-    color: "#607B96 !important",
+    //   color: "#607B96 !important",
     marginTop: "100px !important",
     fontFamily: "Fira Code",
     fontSize: "16px",
@@ -94,15 +95,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderTop: "1px solid #1E2D3D !important",
     borderBottom: "1px solid #1E2D3D !important",
     "&:hover": {
-      color: "#fff !important",
-    },
-    "&:focus": {
+      transition: "color 0.3s ease-in",
       color: "#fff !important",
     },
   },
 
   //Project
   //ContactMe
+
   // Form Styles
   formTextOrange: {
     color: "#FEA55F",

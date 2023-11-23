@@ -8,7 +8,20 @@ const LeftContact = () => {
     <>
       <nav aria-label="main mailbox folders">
         <List>
-          <ListItem disablePadding>
+          <ListItem
+            disablePadding
+            sx={{
+              "&:hover": {
+                transition: "color 0.3s ease-in",
+                color: "#fff",
+                ".MuiListItemText-primary": {
+                  color: "#fff",
+                  transition: "color 0.3s ease-in",
+                },
+                "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
+              },
+            }}
+          >
             <a
               href="mailto:tomasolsiak1@gmail.com"
               style={{ textDecoration: "none", color: "#607B96" }}
@@ -19,7 +32,20 @@ const LeftContact = () => {
               </ListItemButton>
             </a>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem
+            disablePadding
+            sx={{
+              "&:hover": {
+                color: "#fff",
+                transition: "color 0.3s ease-in",
+                ".MuiListItemText-primary": {
+                  color: "#fff",
+                  transition: "color 0.3s ease-in",
+                },
+                "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
+              },
+            }}
+          >
             <a
               href="tel:+421915515974"
               style={{ textDecoration: "none", color: "#607B96" }}

@@ -23,6 +23,7 @@ import ja from "../img/ja.png";
 
 const AboutMe = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
+  const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [openContact, setOpenContact] = useState<boolean>(false);
   const [templateProps, setTemplateProps] = useState({
@@ -137,6 +138,7 @@ const AboutMe = () => {
           }
         >
           <ListItemButton
+            className={classes.aboutHoverBtnEffect}
             style={{
               color: activeButton === "bio" ? "#fff " : "#607B96",
             }}
@@ -153,6 +155,7 @@ const AboutMe = () => {
             <ListItemText className={classes.aboutBtnText} primary="bio" />
           </ListItemButton>
           <ListItemButton
+            className={classes.aboutHoverBtnEffect}
             onClick={() => {
               handleInterestsClick();
               setActiveButton("interests");
@@ -173,8 +176,14 @@ const AboutMe = () => {
           </ListItemButton>
 
           <ListItemButton
-            className={classes.aboutBtnStyle}
-            onClick={handleClick}
+            className={classes.aboutHoverBtnEffect}
+            style={{
+              color: activeButton === "education" ? "#fff " : "#607B96",
+            }}
+            onClick={() => {
+              handleClick();
+              setActiveButton("education");
+            }}
           >
             {open ? <ExpandLess /> : <ExpandMore />}
             <ListItemIcon>
@@ -215,7 +224,6 @@ const AboutMe = () => {
               >
                 <SchoolIcon />
                 <ListItemText
-                  //   onClick={handleHighSchoolClick}
                   className={classes.aboutBtnEducationFont}
                   primary="high-school"
                 />
@@ -224,9 +232,16 @@ const AboutMe = () => {
           </Collapse>
 
           <ListItemButton
-            onClick={handleClickContact}
             className={classes.aboutContactContainer}
-            //  className={classes.aboutContactContainer}
+            onClick={() => {
+              handleClickContact();
+              setActiveContactButton((prevState) =>
+                prevState === "contact" ? "" : "contact"
+              );
+            }}
+            style={{
+              color: activeContactButton === "contact" ? "#fff" : "#607B96",
+            }}
           >
             {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             <ListItemText primary="contact" />

@@ -116,7 +116,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.all ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <CategoryIcon
@@ -147,7 +150,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.html ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiHtml5
@@ -177,7 +183,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.css ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiCss3
@@ -207,7 +216,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.sass ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiSass
@@ -237,7 +249,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.tailwind ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiTailwindcss
@@ -267,7 +282,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.mui ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiMui
@@ -297,7 +315,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.javascript ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiJavascript
@@ -327,7 +348,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.typescript ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiTypescript
@@ -357,7 +381,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.php ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiPhp
@@ -387,7 +414,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.react ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiReact
@@ -417,7 +447,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.firebase ? "#fff" : "#607B96",
-                    "&:hover": { color: "#fff" },
+                    "&:hover": {
+                      color: "#fff",
+                      transition: "color 0.3s ease-in",
+                    },
                   }}
                 >
                   <SiFirebase

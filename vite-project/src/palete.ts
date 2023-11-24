@@ -11,6 +11,12 @@ declare module "@mui/material/styles" {
       colorPurple: string;
       colorLightOrange: string;
       colorLightGreen: string;
+      colorPurpleFolder: string;
+      colorDarkBlue: string;
+      colorDarkBlack: string;
+      colorDarkGrey: string;
+      colorPurpleText: string;
+      colorPinkText: string;
     };
     myShadow: {
       shadowSideBar: string;
@@ -30,6 +36,12 @@ declare module "@mui/material/styles" {
       colorPurple?: string;
       colorLightOrange?: string;
       colorLightGreen?: string;
+      colorPurpleFolder?: string;
+      colorDarkBlue?: string;
+      colorDarkBlack?: string;
+      colorDarkGrey?: string;
+      colorPurpleText?: string;
+      colorPinkText?: string;
     };
     myShadow?: {
       shadowSideBar?: string;
@@ -49,6 +61,12 @@ export const themeOptions: ThemeOptions = createTheme({
     colorLightOrange: "#E99287",
     colorLightGreen: "#43D9AD",
     whiteColor: "#fff",
+    colorPurpleFolder: "#3A49A4",
+    colorDarkBlue: "#011221",
+    colorDarkBlack: "#010c15",
+    colorDarkGrey: "#1C2B3A",
+    colorPurpleText: "#5565E8",
+    colorPinkText: "#C98BDF",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

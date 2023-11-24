@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import usePageStyles from "../stylePages";
 
 interface TextProps {
   textOne: string;
@@ -29,28 +30,10 @@ const TemplateAbout: React.FC<TextProps> = ({
   textEleven,
   textTwelve,
 }) => {
+  const classes = usePageStyles();
   return (
     <div>
-      <Box
-        sx={{
-          color: "#607B96",
-          fontFamily: "Fira Code",
-          fontSize: "18px",
-          fontStyle: "normal",
-          fontWeight: 450,
-          position: "relative",
-          top: "150px",
-          left: "-25px",
-          margin: "0 10px",
-          width: "100%",
-          height: "90vh",
-          display: "flex",
-          alignItems: "start",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          gap: 2,
-        }}
-      >
+      <Box className={classes.tempAboutText}>
         <Box width={10} display="flex" flexDirection="column" alignItems="end">
           <p>1</p>
           <p>2</p>
@@ -70,7 +53,7 @@ const TemplateAbout: React.FC<TextProps> = ({
           <p>16</p>
         </Box>
         <Box pl={5}>
-          <p style={{ position: "relative", left: "-10px" }}>/**</p>
+          <p className={classes.tempAboutNumber}>/**</p>
           <p>* About me</p>
           <p>* {textOne}</p>
           <p>* {textTwo}</p>

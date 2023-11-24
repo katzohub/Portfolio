@@ -1,5 +1,7 @@
 import { Box, useMediaQuery, Grid, Button } from "@mui/material";
 import DataSkills from "./DataSkills";
+import usePageStyles from "../stylePages";
+
 type CheckedStateType = {
   all: boolean;
   html: boolean;
@@ -17,14 +19,6 @@ type CheckedStateType = {
 const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
   const isMobile = useMediaQuery("(max-width:800px)");
 
-  const cardStyle = {
-    borderRadius: "15px",
-    border: "1px solid #1E2D3D",
-    background: "#011221",
-    maxWidth: "470px",
-    height: "350px",
-    overflow: "hidden",
-  };
   const filteredProjects = checkedState.all
     ? DataSkills
     : DataSkills.filter((project) =>
@@ -32,29 +26,11 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
           ([key, value]) => value && project.technologies.includes(key)
         )
       );
-
+  const classes = usePageStyles();
   return (
-    <Box
-      sx={{
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Box
-        sx={{
-          position: "relative",
-          top: "150px",
-          left: "0px",
-          height: "90vh",
-          width: "100%",
-          maxWidth: "1450px",
-          display: "flex",
-          justifyContent: "center",
-          overflowY: "auto",
-        }}
-      >
-        <Box sx={{ width: "100%", padding: "0 10px" }}>
+    <Box className={classes.skillContainer}>
+      <Box className={classes.skillWrap}>
+        <Box className={classes.skillPositionWrap}>
           <Grid container spacing={2}>
             {filteredProjects.map((project) => (
               <Grid
@@ -65,41 +41,23 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
                 md={isMobile ? 12 : 4}
                 key={project.id}
               >
-                <div style={cardStyle}>
+                <div className={classes.skillCard}>
                   <img
                     src={project.img}
                     alt={project.nameProject}
-                    style={{
-                      width: "100%",
-                      height: "200px",
-                      objectFit: "cover",
-                    }}
+                    className={classes.skillCardImg}
                   />
-                  <div style={{ padding: "10px" }}>
-                    <h2 style={{ fontSize: "1em" }}>{project.nameProject}</h2>
+                  <div className={classes.skillCardHeading}>
+                    <h2 className={classes.skillCardText}>
+                      {project.nameProject}
+                    </h2>
                     <p>{project.detailProject}</p>
 
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        right: "15px",
-                        top: "25px",
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: "10px",
-                        background: "#010c15",
-                        padding: "5px 10px",
-                        borderRadius: "10px",
-                      }}
-                    >
+                    <Box className={classes.skillCardContainer}>
                       {project.icon &&
                         project.icon.map((icon, index) => (
                           <Box
-                            sx={{
-                              display: "flex",
-                              justifyContent: "center",
-                              alignItems: "center",
-                            }}
+                            className={classes.skillCardIconWrap}
                             key={index}
                           >
                             {icon}
@@ -109,23 +67,15 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
                     <Button
                       variant="contained"
                       sx={{
-                        background: "#1E2D3D",
-                        position: "absolute",
+                        position: "absolute ",
                         left: "25px",
                         bottom: "15px",
-                        "&:hover": {
-                          background: "#1E2D3D",
-                        },
                       }}
+                      className={classes.skillCardBtn}
                     >
                       <a
                         href={project.openProject}
-                        style={{
-                          color: "#fff",
-                          textDecoration: "none",
-                          position: "relative",
-                          top: "2px",
-                        }}
+                        className={classes.skillCardLink}
                       >
                         View Project
                       </a>

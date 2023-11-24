@@ -1,12 +1,12 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-// #
+
 const usePageStyles = makeStyles((theme: Theme) => ({
   //AboutMe
   aboutHoverBtnEffect: {
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: "#fff !important",
+      color: `${theme.myColors.whiteColor} !important`,
     },
   },
   aboutContainer: {
@@ -16,14 +16,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutLeftNavContainer: {
     width: "267px",
     marginTop: "56px !important",
-    borderRight: "2px solid #1E2D3D",
+    borderRight: `1px solid ${theme.myColors.colorLinie}`,
     height: "95vh",
   },
   aboutLeftWrap: {
     width: "94vw !important",
     background: "transparent !important",
     display: "flex",
-    borderBottom: "1px solid #1E2D3D",
+    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
     left: "30px",
     color: `${theme.myColors.whiteColor} !important`,
     fontFamily: "Fira Code",
@@ -32,7 +32,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 400,
   },
   aboutTextRight: {
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
     position: "relative",
     left: "150px",
     fontFamily: "Fira Code",
@@ -41,19 +41,19 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 400,
   },
   aboutBtnStyle: {
-    color: "#607B96 !important",
+    color: `${theme.myColors.textColorNav} !important`,
     "&:hover": {
-      color: "#fff !important",
+      color: `${theme.myColors.whiteColor} !important`,
     },
   },
   aboutIconBio: {
-    color: "#E99287 !important",
+    color: `${theme.myColors.colorLightOrange} !important`,
   },
   aboutIconInterest: {
-    color: "#43D9AD !important",
+    color: `${theme.myColors.colorLightGreen} !important`,
   },
   aboutIconEducation: {
-    color: "#3A49A4 !important",
+    color: `${theme.myColors.colorPurpleFolder} !important`,
   },
   aboutBtnText: {
     fontFamily: "Fira Code",
@@ -70,7 +70,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     left: "15px",
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: "#fff !important",
+      color: `${theme.myColors.whiteColor} !important`,
     },
   },
   aboutBtnEducationFont: {
@@ -91,11 +91,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "240px",
     position: "relative",
     left: "27px",
-    borderTop: "1px solid #1E2D3D !important",
-    borderBottom: "1px solid #1E2D3D !important",
+    borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: "#fff !important",
+      color: `${theme.myColors.whiteColor} !important`,
     },
   },
   // next about
@@ -117,8 +117,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutNextMiniWrap: {
     borderRadius: "15px",
-    border: "1px solid #1E2D3D",
-    background: "#011221",
+    border: `1px solid ${theme.myColors.colorLinie}`,
+    background: theme.myColors.colorDarkBlue,
     padding: "7px 12.5px",
     position: "relative",
     left: "25px",
@@ -127,8 +127,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "50px",
     borderRadius: "15px",
-    border: "1px solid #1E2D3D",
-    background: "#011221",
+    border: `1px solid ${theme.myColors.colorLinie}`,
+    background: theme.myColors.colorDarkBlue,
     padding: "15px 20px",
     display: "flex",
     flexDirection: "column",
@@ -136,10 +136,34 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     justifyContent: "center",
   },
+  // TemplateAbout
+  tempAboutText: {
+    color: theme.myColors.textColorNav,
+    fontFamily: "Fira Code",
+    fontSize: "18px",
+    fontStyle: "normal",
+    fontWeight: 450,
+    position: "relative",
+    top: "150px",
+    left: "-25px",
+    margin: "0 10px",
+    width: "100%",
+    height: "90vh",
+    display: "flex",
+    alignItems: "start",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: 2,
+  },
+  tempAboutNumber: {
+    position: "relative",
+    left: "-10px",
+  },
+
   // LeftContact
   leftContactLink: {
     textDecoration: "none",
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
   },
   leftContactBtn: {
     position: "relative",
@@ -157,24 +181,24 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   projectList: {
     width: "267px",
     marginTop: "56px !important",
-    borderRight: "2px solid #1E2D3D",
+    borderRight: `1px solid ${theme.myColors.colorLinie}`,
     height: "95vh",
   },
   projectLeftNav: {
     width: "94vw",
     background: "transparent !important",
     display: "flex",
-    borderBottom: "1px solid #1E2D3D",
+    borderBottom: `1px solid ${theme.myColors.colorLinie} `,
     position: "relative",
     left: "30px",
-    color: "#FFF !important",
+    color: `1px solid ${theme.myColors.colorLinie} !important`,
     fontFamily: "Fira Code",
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 400,
   },
   projectRightText: {
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
     position: "relative",
     left: "174px",
   },
@@ -182,14 +206,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     marginLeft: "60px",
   },
   projectLabel: {
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
   },
   projectCheckBox: {
-    "& svg": { color: "#607B96" },
+    "& svg": { color: theme.myColors.textColorNav },
   },
   projectHoverBox: {
     "&:hover": {
-      color: "#fff",
+      color: theme.myColors.whiteColor,
       transition: "color 0.3s ease-in",
     },
   },
@@ -198,6 +222,74 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "2px",
     left: "5px",
+  },
+  //SkillSection
+  skillContainer: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+  },
+  skillWrap: {
+    position: "relative",
+    top: "150px",
+    left: "0px",
+    height: "90vh",
+    width: "100%",
+    maxWidth: "1450px",
+    display: "flex",
+    justifyContent: "center",
+    overflowY: "auto",
+  },
+  skillPositionWrap: {
+    width: "100%",
+    padding: "0 10px",
+  },
+  skillCard: {
+    borderRadius: "15px",
+    border: `1px solid ${theme.myColors.colorLinie} `,
+    background: theme.myColors.colorDarkBlue,
+    maxWidth: "470px",
+    height: "350px",
+    overflow: "hidden",
+  },
+  skillCardImg: {
+    width: "100%",
+    height: "200px",
+    objectFit: "cover",
+  },
+  skillCardHeading: {
+    padding: "10px",
+  },
+  skillCardText: {
+    fontSize: "1em",
+  },
+  skillCardContainer: {
+    position: "absolute",
+    right: "15px",
+    top: "25px",
+    display: "flex",
+    justifyContent: "center",
+    gap: "10px",
+    background: theme.myColors.colorDarkBlack,
+    padding: "5px 10px",
+    borderRadius: "10px",
+  },
+  skillCardIconWrap: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  skillCardBtn: {
+    background: `${theme.myColors.colorLinie} !important`,
+    "&:hover": {
+      background: theme.myColors.colorLinie,
+    },
+  },
+  skillCardLink: {
+    color: theme.myColors.whiteColor,
+    textDecoration: "none",
+    position: "relative",
+    top: "2px",
   },
 
   //ContactMe
@@ -208,22 +300,22 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactList: {
     width: "267px",
     marginTop: "56px !important",
-    borderRight: "2px solid #1E2D3D",
+    borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "95vh",
   },
   contactLeftWrap: {
     width: "94vw ",
     background: "transparent !important",
     display: "flex",
-    borderBottom: "1px solid #1E2D3D",
-    color: "#fff !important",
+    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    color: `${theme.myColors.whiteColor} !important`,
     fontFamily: "Fira Code",
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 400,
   },
   contactRighttext: {
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
     position: "relative",
     left: "184px",
     fontFamily: "Fira Code",
@@ -232,7 +324,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 400,
   },
   contactBoxNoavigation: {
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
     marginTop: "50px !important",
     fontFamily: "Fira Code",
     fontSize: "16px",
@@ -242,11 +334,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "240px",
     position: "relative",
     left: "27px",
-    borderTop: "1px solid #1E2D3D !important",
-    borderBottom: "1px solid #1E2D3D !important",
+    borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: "#fff !important",
+      color: `${theme.myColors.whiteColor} !important`,
     },
   },
   //contactForm
@@ -270,7 +362,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "50%",
     height: "40px",
     marginTop: 2,
-    color: "#FFF",
+    color: theme.myColors.whiteColor,
     textAlign: "right",
     fontFamily: "Fira Code",
     fontSize: "14px",
@@ -278,10 +370,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 450,
     lineHeight: "normal",
     borderRadius: "8px",
-    background: "#1C2B3A !important",
+    background: `${theme.myColors.colorDarkGrey} !important`,
     textTransform: "lowercase",
     "&:hover": {
-      background: "#1C2B3A !important",
+      background: `${theme.myColors.colorDarkGrey} !important`,
     },
   },
   contactFormBoxText: {
@@ -294,7 +386,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
   // Form Styles
   formTextOrange: {
-    color: "#FEA55F",
+    color: theme.myColors.hoverDownLinie,
     fontFamily: "Fira Code",
     fontSize: "18px",
     fontStyle: "normal",
@@ -302,7 +394,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "150%",
   },
   formTextPurple: {
-    color: "#5565E8",
+    color: theme.myColors.colorPurpleText,
     fontFamily: "Fira Code",
     fontSize: "18px",
     fontStyle: "normal",
@@ -310,7 +402,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "150%",
   },
   formTextPink: {
-    color: "#C98BDF",
+    color: theme.myColors.colorPinkText,
     fontFamily: "Fira Code",
     fontSize: "18px",
     fontStyle: "normal",
@@ -318,7 +410,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "150%",
   },
   formTextGrey: {
-    color: "#607B96",
+    color: theme.myColors.textColorNav,
     fontFamily: "Fira Code",
     fontSize: "18px",
     fontStyle: "normal",

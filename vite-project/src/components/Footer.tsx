@@ -20,6 +20,7 @@ const Footer = () => {
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <a
+                  target="_blank"
                   href="https://twitter.com/TomOliak140446"
                   className={classes.navLinkLeft}
                 >
@@ -30,6 +31,7 @@ const Footer = () => {
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <a
+                  target="_blank"
                   href="https://www.facebook.com/tomas.olsiak.37/"
                   className={classes.navBoxCenter}
                 >
@@ -40,6 +42,7 @@ const Footer = () => {
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <a
+                  target="_blank"
                   href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-ol%C5%A1iak-232196260/"
                   className={classes.navBoxRight}
                 >
@@ -52,7 +55,11 @@ const Footer = () => {
         {/* right */}
         <Grid item>
           <Box className={classes.navBoxContact}>
-            <a href="#" className={classes.navLinkContact}>
+            <a
+              target="_blank"
+              href="https://github.com/katzohub/"
+              className={classes.navLinkContact}
+            >
               <span style={{ position: "relative", top: "2px,", left: "-5px" }}>
                 katzohub
               </span>{" "}

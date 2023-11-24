@@ -14,11 +14,13 @@ import ListItem from "@mui/material/ListItem";
 import ContactForm from "./ContactForm";
 import LeftContact from "./LeftContact";
 const ContactMe = () => {
-  const [openContact, setOpenContact] = useState(false);
+  const [openFindMe, setOpenFindMe] = useState(false);
+  const [activeContactButton, setActiveContactButton] = useState<string>("");
 
   const handleClickContact = () => {
-    setOpenContact(!openContact);
+    setOpenFindMe(!openFindMe);
   };
+
   return (
     <>
       <Box
@@ -76,7 +78,16 @@ const ContactMe = () => {
           <LeftContact />
 
           <ListItemButton
-            onClick={handleClickContact}
+            onClick={() => {
+              handleClickContact();
+              setActiveContactButton((prevState) =>
+                prevState === "contact" ? "" : "contact"
+              );
+            }}
+            style={{
+              color: activeContactButton === "contact" ? "#fff" : "#607B96",
+            }}
+            //    onClick={handleClickContact}
             sx={{
               color: "#607B96",
               marginTop: "50px",
@@ -90,35 +101,60 @@ const ContactMe = () => {
               left: "27px",
               borderTop: "1px solid #1E2D3D",
               borderBottom: "1px solid #1E2D3D",
-              "& :hover": {
-                color: "#fff",
+              "&:hover": {
+                transition: "color 0.3s ease-in",
+                color: "#fff !important",
               },
             }}
           >
-            {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            {openFindMe ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             <ListItemText primary="find-me-also-in" />
           </ListItemButton>
-          <Collapse in={openContact} timeout="auto" unmountOnExit>
-            <ListItem disablePadding>
+          <Collapse in={openFindMe} timeout="auto" unmountOnExit>
+            <ListItem
+              disablePadding
+              sx={{
+                "&:hover": {
+                  color: "#fff",
+                  transition: "color 0.3s ease-in",
+                  ".MuiListItemText-primary": {
+                    color: "#fff",
+                    transition: "color 0.3s ease-in",
+                  },
+                  "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
+                },
+              }}
+            >
               <a
-                target="_blank"
                 href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
                 style={{ textDecoration: "none", color: "#607B96" }}
               >
                 <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                  <ShareIcon fontSize="small" sx={{ marginRight: "10px" }} />
+                  <ShareIcon sx={{ marginRight: "10px" }} />
                   <ListItemText primary="Instagram account" />
                 </ListItemButton>
               </a>
             </ListItem>
-            <ListItem disablePadding>
+            <ListItem
+              disablePadding
+              sx={{
+                "&:hover": {
+                  color: "#fff",
+                  transition: "color 0.3s ease-in",
+                  ".MuiListItemText-primary": {
+                    color: "#fff",
+                    transition: "color 0.3s ease-in",
+                  },
+                  "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
+                },
+              }}
+            >
               <a
-                target="_blank"
                 href="https://www.twitch.tv/settings/profile"
                 style={{ textDecoration: "none", color: "#607B96" }}
               >
                 <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                  <ShareIcon fontSize="small" sx={{ marginRight: "10px" }} />
+                  <ShareIcon sx={{ marginRight: "10px" }} />
                   <ListItemText primary="Twitch profile" />
                 </ListItemButton>
               </a>

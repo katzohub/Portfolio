@@ -252,32 +252,11 @@ const AboutMe = () => {
           </Collapse>
         </List>
         {/* Template */}
-        <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <Box className={classes.aboutNextContainer}>
           <TemplateAbout {...templateProps} />
 
-          <Box
-            sx={{
-              marginTop: "150px",
-              color: "white",
-              padding: 2,
-              borderLeft: "1px solid black",
-              height: "80vh",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "start",
-            }}
-          >
-            <Box
-              sx={{
-                borderRadius: "15px",
-                border: "1px solid #1E2D3D",
-                background: "#011221",
-                padding: "7px 12.5px",
-                position: "relative",
-                left: "25px",
-              }}
-            >
+          <Box className={classes.aboutNextWrap}>
+            <Box className={classes.aboutNextMiniWrap}>
               <Typography variant="body1">
                 <span className={classes.formTextGrey}>1&nbsp;</span>
                 <span className={classes.formTextPink}>const</span>{" "}
@@ -332,23 +311,9 @@ const AboutMe = () => {
                 <br />
               </Typography>
             </Box>
-            <Box
-              sx={{
-                position: "relative",
-                top: "50px",
-                borderRadius: "15px",
-                border: "1px solid #1E2D3D",
-                background: "#011221",
-                padding: "15px 20px",
-                display: "flex",
-                flexDirection: "column",
-                alignContent: "center",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <Box className={classes.aboutNextImgContainer}>
               <span className={classes.formTextGrey}>// Result</span>
-              <img src={ja} alt="" width={225} />
+              <img src={ja} alt="Mine photo" width={225} />
             </Box>
           </Box>
         </Box>

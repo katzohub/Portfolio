@@ -1,9 +1,10 @@
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
-
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import usePageStyles from "../stylePages";
 
 const LeftContact = () => {
+  const classes = usePageStyles();
   return (
     <>
       <nav aria-label="main mailbox folders">
@@ -24,10 +25,10 @@ const LeftContact = () => {
           >
             <a
               href="mailto:tomasolsiak1@gmail.com"
-              style={{ textDecoration: "none", color: "#607B96" }}
+              className={classes.leftContactLink}
             >
-              <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                <EmailIcon sx={{ marginRight: "10px" }} />
+              <ListItemButton className={classes.leftContactBtn}>
+                <EmailIcon className={classes.leftContactIcon} />
                 <ListItemText primary="tomasolsiak1@gmail.com" />
               </ListItemButton>
             </a>
@@ -46,12 +47,9 @@ const LeftContact = () => {
               },
             }}
           >
-            <a
-              href="tel:+421915515974"
-              style={{ textDecoration: "none", color: "#607B96" }}
-            >
-              <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                <LocalPhoneIcon sx={{ marginRight: "10px" }} />
+            <a href="tel:+421915515974" className={classes.leftContactLink}>
+              <ListItemButton className={classes.leftContactBtn}>
+                <LocalPhoneIcon className={classes.leftContactIcon} />
                 <ListItemText primary="+421 915 515 974" />
               </ListItemButton>
             </a>

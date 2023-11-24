@@ -82,7 +82,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     paddingLeft: "10px",
   },
   aboutContactContainer: {
-    //   color: "#607B96 !important",
     marginTop: "100px !important",
     fontFamily: "Fira Code",
     fontSize: "16px",
@@ -98,6 +97,56 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transition: "color 0.3s ease-in",
       color: "#fff !important",
     },
+  },
+  // next about
+  aboutNextContainer: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+  },
+  aboutNextWrap: {
+    marginTop: "150px",
+    color: "white",
+    padding: 2,
+    borderLeft: "1px solid black",
+    height: "80vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "start",
+  },
+  aboutNextMiniWrap: {
+    borderRadius: "15px",
+    border: "1px solid #1E2D3D",
+    background: "#011221",
+    padding: "7px 12.5px",
+    position: "relative",
+    left: "25px",
+  },
+  aboutNextImgContainer: {
+    position: "relative",
+    top: "50px",
+    borderRadius: "15px",
+    border: "1px solid #1E2D3D",
+    background: "#011221",
+    padding: "15px 20px",
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  // LeftContact
+  leftContactLink: {
+    textDecoration: "none",
+    color: "#607B96",
+  },
+  leftContactBtn: {
+    position: "relative",
+    left: "25px",
+  },
+  leftContactIcon: {
+    marginRight: "10px",
   },
 
   //Project

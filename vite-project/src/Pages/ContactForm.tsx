@@ -51,26 +51,8 @@ const ContactForm = () => {
 
   const classes = usePageStyles();
   return (
-    <Box
-      sx={{
-        position: "relative",
-        top: "150px",
-        margin: "0 10px",
-        width: "100%",
-        height: "90vh",
-        display: "flex",
-        alignItems: "start",
-        justifyContent: "center",
-        flexWrap: "wrap",
-        gap: 2,
-      }}
-    >
-      <Box
-        sx={{
-          width: "100%",
-          maxWidth: "500px",
-        }}
-      >
+    <Box className={classes.contactFormContainer}>
+      <Box className={classes.contactFormWrap}>
         <form
           action="https://formsubmit.co/tomasolsiak1@gmail.com"
           method="POST"
@@ -111,39 +93,14 @@ const ContactForm = () => {
             type="submit"
             variant="contained"
             color="primary"
-            sx={{
-              width: "50%",
-              height: "40px",
-              marginTop: 2,
-              color: "#FFF",
-              textAlign: "right",
-              fontFamily: "Fira Code",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: 450,
-              lineHeight: "normal",
-              borderRadius: "8px",
-              background: "#1C2B3A",
-              textTransform: "lowercase",
-              "&:hover": {
-                background: "#1C2B3A",
-              },
-            }}
+            className={classes.contactFormBtn}
           >
             submit-message
           </Button>
         </form>
       </Box>
 
-      <Box
-        sx={{
-          maxWidth: "600px",
-          color: "white",
-          padding: 2,
-          height: "100vh",
-          borderLeft: "1px solid black",
-        }}
-      >
+      <Box className={classes.contactFormBoxText}>
         <Typography variant="body1">
           <br />
           <span className={classes.formTextGrey}>1&nbsp;</span>

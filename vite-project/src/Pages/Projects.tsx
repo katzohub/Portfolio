@@ -19,6 +19,7 @@ import {
 } from "react-icons/si";
 import { Box } from "@mui/material";
 import SkillSection from "./SkillSection";
+import usePageStyles from "../stylePages";
 
 const Projects = () => {
   const [checkedState, setCheckedState] = useState({
@@ -56,80 +57,49 @@ const Projects = () => {
       setCheckedState({ ...checkedState, [name]: checked, all: false });
     }
   };
+  const classes = usePageStyles();
 
   return (
     <>
-      <Box sx={{ width: "100%", display: "flex" }}>
+      <Box className={classes.projectContainer}>
         <List
-          sx={{
-            width: "267px",
-            marginTop: "56px",
-            borderRight: "2px solid #1E2D3D",
-            height: "95vh",
-          }}
+          className={classes.projectList}
           component="nav"
           aria-labelledby="nested-list-subheader"
           subheader={
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{
-                width: "94vw",
-                background: "transparent",
-                display: "flex",
-                borderBottom: "1px solid #1E2D3D",
-                position: "relative",
-                left: "30px",
-                color: "#FFF",
-                fontFamily: "Fira Code",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-              }}
+              sx={{ position: "relative", left: "30px" }}
+              className={classes.projectLeftNav}
             >
               {" "}
               Category
-              <div
-                style={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "150px",
-                }}
-              >
-                _projects
-              </div>
+              <div className={classes.projectRightText}>_projects</div>
             </ListSubheader>
           }
         >
-          <FormGroup sx={{ marginLeft: "60px" }}>
+          <FormGroup className={classes.projectRightForm}>
             <FormControlLabel
-              sx={{ color: "#607B96" }}
+              className={classes.projectLabel}
               control={
                 <Checkbox
                   checked={checkedState.all}
                   onChange={handleCheckboxChange}
                   name="all"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.all ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
                   <CategoryIcon
                     fontSize="small"
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
+                    className={classes.projectCategory}
                   />
                   All
                 </Box>
@@ -140,7 +110,7 @@ const Projects = () => {
             <FormControlLabel
               control={
                 <Checkbox
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                   checked={checkedState.html}
                   onChange={handleCheckboxChange}
                   name="html"
@@ -150,20 +120,10 @@ const Projects = () => {
                 <Box
                   sx={{
                     color: checkedState.html ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiHtml5
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiHtml5 className={classes.projectCategory} />
                   HTML
                 </Box>
               }
@@ -176,27 +136,17 @@ const Projects = () => {
                   checked={checkedState.css}
                   onChange={handleCheckboxChange}
                   name="css"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.css ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiCss3
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiCss3 className={classes.projectCategory} />
                   CSS
                 </Box>
               }
@@ -209,27 +159,17 @@ const Projects = () => {
                   checked={checkedState.sass}
                   onChange={handleCheckboxChange}
                   name="sass"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.sass ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiSass
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiSass className={classes.projectCategory} />
                   SCSS
                 </Box>
               }
@@ -242,27 +182,17 @@ const Projects = () => {
                   checked={checkedState.tailwind}
                   onChange={handleCheckboxChange}
                   name="tailwind"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.tailwind ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiTailwindcss
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiTailwindcss className={classes.projectCategory} />
                   TailWind
                 </Box>
               }
@@ -275,27 +205,17 @@ const Projects = () => {
                   checked={checkedState.mui}
                   onChange={handleCheckboxChange}
                   name="mui"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.mui ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiMui
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiMui className={classes.projectCategory} />
                   MUI
                 </Box>
               }
@@ -308,27 +228,17 @@ const Projects = () => {
                   checked={checkedState.javascript}
                   onChange={handleCheckboxChange}
                   name="javascript"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.javascript ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiJavascript
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiJavascript className={classes.projectCategory} />
                   JavaScript
                 </Box>
               }
@@ -341,27 +251,17 @@ const Projects = () => {
                   checked={checkedState.typescript}
                   onChange={handleCheckboxChange}
                   name="typescript"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.typescript ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiTypescript
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiTypescript className={classes.projectCategory} />
                   Typescript
                 </Box>
               }
@@ -374,27 +274,17 @@ const Projects = () => {
                   checked={checkedState.php}
                   onChange={handleCheckboxChange}
                   name="php"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.php ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiPhp
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiPhp className={classes.projectCategory} />
                   PHP
                 </Box>
               }
@@ -407,27 +297,17 @@ const Projects = () => {
                   checked={checkedState.react}
                   onChange={handleCheckboxChange}
                   name="react"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.react ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiReact
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiReact className={classes.projectCategory} />
                   React
                 </Box>
               }
@@ -440,27 +320,17 @@ const Projects = () => {
                   checked={checkedState.firebase}
                   onChange={handleCheckboxChange}
                   name="firebase"
-                  sx={{ "& svg": { color: "#607B96" } }}
+                  className={classes.projectCheckBox}
                 />
               }
               label={
                 <Box
                   sx={{
                     color: checkedState.firebase ? "#fff" : "#607B96",
-                    "&:hover": {
-                      color: "#fff",
-                      transition: "color 0.3s ease-in",
-                    },
                   }}
+                  className={classes.projectHoverBox}
                 >
-                  <SiFirebase
-                    style={{
-                      marginRight: "15px",
-                      position: "relative",
-                      top: "2px",
-                      left: "5px",
-                    }}
-                  />
+                  <SiFirebase className={classes.projectCategory} />
                   Firebase
                 </Box>
               }

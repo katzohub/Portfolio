@@ -13,6 +13,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ListItem from "@mui/material/ListItem";
 import ContactForm from "./ContactForm";
 import LeftContact from "./LeftContact";
+import usePageStyles from "../stylePages";
+
 const ContactMe = () => {
   const [openFindMe, setOpenFindMe] = useState(false);
   const [activeContactButton, setActiveContactButton] = useState<string>("");
@@ -20,57 +22,24 @@ const ContactMe = () => {
   const handleClickContact = () => {
     setOpenFindMe(!openFindMe);
   };
-
+  const classes = usePageStyles();
   return (
     <>
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-        }}
-      >
+      <Box className={classes.contactContainer}>
         <List
-          sx={{
-            width: "267px",
-            marginTop: "56px",
-            borderRight: "2px solid #1E2D3D",
-            height: "95vh",
-          }}
+          className={classes.contactList}
           component="nav"
           aria-labelledby="nested-list-subheader"
           subheader={
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{
-                width: "94vw",
-                background: "transparent",
-                display: "flex",
-                borderBottom: "1px solid #1E2D3D",
-                position: "relative",
-                left: "30px",
-                color: "#fff",
-                fontFamily: "Fira Code",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-              }}
+              sx={{ position: "relative", left: "30px" }}
+              className={classes.contactLeftWrap}
             >
               {" "}
               contact
-              <div
-                style={{
-                  color: "#607B96",
-                  position: "relative",
-                  left: "164px",
-                  fontFamily: "Fira Code",
-                  fontSize: "16px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                }}
-              >
-                _contact_me
-              </div>
+              <div className={classes.contactRighttext}>_contact_me</div>
             </ListSubheader>
           }
         >
@@ -87,25 +56,7 @@ const ContactMe = () => {
             style={{
               color: activeContactButton === "contact" ? "#fff" : "#607B96",
             }}
-            //    onClick={handleClickContact}
-            sx={{
-              color: "#607B96",
-              marginTop: "50px",
-              fontFamily: "Fira Code",
-              fontSize: "16px",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "normal",
-              width: "240px",
-              position: "relative",
-              left: "27px",
-              borderTop: "1px solid #1E2D3D",
-              borderBottom: "1px solid #1E2D3D",
-              "&:hover": {
-                transition: "color 0.3s ease-in",
-                color: "#fff !important",
-              },
-            }}
+            className={classes.contactBoxNoavigation}
           >
             {openFindMe ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             <ListItemText primary="find-me-also-in" />
@@ -127,10 +78,10 @@ const ContactMe = () => {
             >
               <a
                 href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
-                style={{ textDecoration: "none", color: "#607B96" }}
+                className={classes.leftContactLink}
               >
-                <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                  <ShareIcon sx={{ marginRight: "10px" }} />
+                <ListItemButton className={classes.leftContactBtn}>
+                  <ShareIcon className={classes.leftContactIcon} />
                   <ListItemText primary="Instagram account" />
                 </ListItemButton>
               </a>
@@ -151,10 +102,10 @@ const ContactMe = () => {
             >
               <a
                 href="https://www.twitch.tv/settings/profile"
-                style={{ textDecoration: "none", color: "#607B96" }}
+                className={classes.leftContactLink}
               >
-                <ListItemButton sx={{ position: "relative", left: "25px" }}>
-                  <ShareIcon sx={{ marginRight: "10px" }} />
+                <ListItemButton className={classes.leftContactBtn}>
+                  <ShareIcon className={classes.leftContactIcon} />
                   <ListItemText primary="Twitch profile" />
                 </ListItemButton>
               </a>

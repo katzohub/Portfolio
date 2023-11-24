@@ -150,8 +150,105 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
 
   //Project
-  //ContactMe
+  projectContainer: {
+    width: "100%",
+    display: "flex",
+  },
+  projectList: {
+    width: "267px",
+    marginTop: "56px !important",
+    borderRight: "2px solid #1E2D3D",
+    height: "95vh",
+  },
+  projectLeftNav: {
+    width: "94vw",
+    background: "transparent !important",
+    display: "flex",
+    borderBottom: "1px solid #1E2D3D",
+    position: "relative",
+    left: "30px",
+    color: "#FFF !important",
+    fontFamily: "Fira Code",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 400,
+  },
+  projectRightText: {
+    color: "#607B96",
+    position: "relative",
+    left: "174px",
+  },
+  projectRightForm: {
+    marginLeft: "60px",
+  },
+  projectLabel: {
+    color: "#607B96",
+  },
+  projectCheckBox: {
+    "& svg": { color: "#607B96" },
+  },
+  projectHoverBox: {
+    "&:hover": {
+      color: "#fff",
+      transition: "color 0.3s ease-in",
+    },
+  },
+  projectCategory: {
+    marginRight: "15px",
+    position: "relative",
+    top: "2px",
+    left: "5px",
+  },
 
+  //ContactMe
+  contactContainer: {
+    width: "100%",
+    display: "flex",
+  },
+  contactList: {
+    width: "267px",
+    marginTop: "56px !important",
+    borderRight: "2px solid #1E2D3D",
+    height: "95vh",
+  },
+  contactLeftWrap: {
+    width: "94vw ",
+    background: "transparent !important",
+    display: "flex",
+    borderBottom: "1px solid #1E2D3D",
+    color: "#fff !important",
+    fontFamily: "Fira Code",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 400,
+  },
+  contactRighttext: {
+    color: "#607B96",
+    position: "relative",
+    left: "184px",
+    fontFamily: "Fira Code",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 400,
+  },
+  contactBoxNoavigation: {
+    color: "#607B96",
+    marginTop: "50px !important",
+    fontFamily: "Fira Code",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "normal",
+    width: "240px",
+    position: "relative",
+    left: "27px",
+    borderTop: "1px solid #1E2D3D !important",
+    borderBottom: "1px solid #1E2D3D !important",
+    "&:hover": {
+      transition: "color 0.3s ease-in",
+      color: "#fff !important",
+    },
+  },
   //contactForm
   contactFormContainer: {
     position: "relative",

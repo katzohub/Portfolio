@@ -89,6 +89,7 @@ const ContactForm = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
+          <input type="hidden" name="_next" value="http://localhost:5173/" />
           <Button
             type="submit"
             variant="contained"

@@ -21,6 +21,28 @@ import { Box } from "@mui/material";
 import SkillSection from "./SkillSection";
 import usePageStyles from "../stylePages";
 
+const AlretCheckBox = () => {
+  return (
+    <>
+      <Box>
+        <h1
+          style={{
+            position: "absolute",
+            top: "35%",
+            left: "50%",
+            width: "250px",
+            height: "250px",
+            color: "#fff",
+            fontWeight: 450,
+          }}
+        >
+          Sorry,Please one checkBox Click and view mine project.
+        </h1>
+      </Box>
+    </>
+  );
+};
+
 const Projects = () => {
   const [checkedState, setCheckedState] = useState({
     all: true,
@@ -35,6 +57,9 @@ const Projects = () => {
     react: false,
     firebase: false,
   });
+  const areAllCheckboxesFalse = () => {
+    return Object.values(checkedState).every((value) => !value);
+  };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
@@ -57,6 +82,7 @@ const Projects = () => {
       setCheckedState({ ...checkedState, [name]: checked, all: false });
     }
   };
+
   const classes = usePageStyles();
 
   return (
@@ -74,7 +100,7 @@ const Projects = () => {
               className={classes.projectLeftNav}
             >
               {" "}
-              Category
+              category
               <div className={classes.projectRightText}>_projects</div>
             </ListSubheader>
           }
@@ -337,6 +363,8 @@ const Projects = () => {
             />
           </FormGroup>
         </List>
+        {areAllCheckboxesFalse() && <AlretCheckBox />}
+
         <SkillSection checkedState={checkedState} />
       </Box>
     </>

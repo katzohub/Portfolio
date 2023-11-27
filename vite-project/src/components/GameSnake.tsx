@@ -181,10 +181,10 @@ const GameSnake: React.FC = () => {
         position: "relative",
       }}
     >
-      <div style={{ position: "absolute", top: -50, left: -50 }}>
+      <div style={{ position: "absolute", top: 170, left: 220 }}>
         <BoobleTwo />
       </div>
-      <div style={{ position: "absolute", bottom: 10, right: 10 }}>
+      <div style={{ position: "absolute", bottom: 110, right: 220 }}>
         <BoobleOne />
       </div>
       <div style={{ position: "absolute", top: 5, left: 5 }}>

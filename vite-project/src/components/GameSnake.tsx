@@ -11,10 +11,11 @@ import {
   FaCaretDown,
 } from "react-icons/fa";
 import screenLogo from "../img/screenGame.png";
+import usePageStyles from "../style";
 
-const gridSize = 20; // 20 stĺpcov
-const gridHeight = 34; // 34 riadkov
-const cellSize = 12; // Veľkosť bunky 12x12 pixelov
+const gridSize = 20;
+const gridHeight = 34;
+const cellSize = 12;
 const initialSnake = [
   { x: 10, y: 10 },
   { x: 9, y: 10 },
@@ -163,28 +164,13 @@ const GameSnake: React.FC = () => {
   const handleKeyUp = () => {
     setKeyPressed(false);
   };
-
+  const classes = usePageStyles();
   return (
-    <div
-      className="container"
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        width: "100%",
-        padding: "30px 0",
-        background:
-          "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
-        boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
-        border: "1px solid #0C1616",
-        borderRadius: "8px",
-        backdropFilter: "blur(32px)",
-        position: "relative",
-      }}
-    >
-      <div style={{ position: "absolute", top: 170, left: 220 }}>
+    <div className={classes.snakeContainer}>
+      <div className={classes.snakeBackEffectGreen}>
         <BoobleTwo />
       </div>
-      <div style={{ position: "absolute", bottom: 110, right: 220 }}>
+      <div className={classes.snakeBackEffectPurple}>
         <BoobleOne />
       </div>
       <div style={{ position: "absolute", top: 5, left: 5 }}>
@@ -219,12 +205,11 @@ const GameSnake: React.FC = () => {
               <img
                 src={screenLogo}
                 alt="Game screen logo"
-                style={{ position: "absolute", top: "50px", left: "67px" }}
+                className={classes.snakeScreenLogo}
               />
             )}
             <Button
               variant="text"
-              color="success"
               size="small"
               sx={{
                 top: "70%",
@@ -412,162 +397,35 @@ const GameSnake: React.FC = () => {
       </div>
 
       <Box>
-        <Box
-          className="box-setting"
-          sx={{
-            marginTop: "35px",
-            width: "181.382px",
-            height: "142px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: " 8px",
-            background: "rgba(1, 20, 35, 0.19)",
-          }}
-        >
-          <Typography
-            variant="body2"
-            sx={{
-              marginBottom: "8px",
-              fontFamily: "Fira Code",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: 450,
-              lineHeight: "normal",
-              position: "relative",
-              left: "-4px",
-            }}
-          >
+        <Box className={classes.snakeBoxSetting}>
+          <Typography variant="body2" className={classes.snakeArrowTextOne}>
             // use keyboard
           </Typography>
-          <Typography
-            variant="body2"
-            sx={{
-              marginBottom: "16px",
-              fontFamily: "Fira Code",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: 450,
-              lineHeight: "normal",
-            }}
-          >
+          <Typography variant="body2" className={classes.snakeArrowTextTwo}>
             // arrows to play
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div
-              className="up"
-              style={{
-                width: "50px",
-                height: "28px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                background: "black",
-                borderRadius: "8px",
-                position: "relative",
-                top: "-5px",
-                zIndex: 4,
-              }}
-            >
+          <Box className={classes.snakeArrowContainer}>
+            <div className={classes.snakeUp}>
               <FaCaretUp />
             </div>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                width: "100%",
-              }}
-            >
-              <div
-                className="left"
-                style={{
-                  width: "50px",
-                  height: "28px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  background: "black",
-                  borderRadius: "8px",
-                  position: "relative",
-                  left: "-5px",
-                }}
-              >
+            <Box className={classes.snakeArrowWrap}>
+              <div className={classes.snakeArrowLeft}>
                 <FaCaretLeft />
               </div>
-              <div
-                className="down"
-                style={{
-                  width: "50px",
-                  height: "28px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  background: "black",
-                  borderRadius: "8px",
-                  zIndex: 4,
-                }}
-              >
+              <div className={classes.snakeArrowDown}>
                 <FaCaretDown />
               </div>
-              <div
-                className="right"
-                style={{
-                  width: "50px",
-                  height: "28px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  background: "black",
-                  borderRadius: "8px",
-                  position: "relative",
-                  right: "-5px",
-                  zIndex: 4,
-                }}
-              >
+              <div className={classes.snakeArrowRight}>
                 <FaCaretRight />
               </div>
             </Box>
           </Box>
         </Box>
 
-        <Typography
-          variant="body2"
-          sx={{
-            position: "relative",
-            left: "30px",
-            top: "10px",
-            color: "#FFF",
-            fontFamily: "Fira Code",
-            fontSize: "14px",
-            fontStyle: "normal",
-            fontWeight: 450,
-            lineHeight: "normal",
-          }}
-        >
+        <Typography variant="body2" className={classes.snakeFoodLeft}>
           // food left
         </Typography>
-        <div
-          className="container-food"
-          style={{
-            width: "120px",
-            height: "50px",
-            margin: "20px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "5px",
-            position: "relative",
-            zIndex: "10",
-          }}
-        >
+        <div className={classes.snakeContainerFood}>
           {Array.from({ length: 10 }, (_, index) => (
             <PointSnake key={index} index={index} candyCount={candyCount} />
           ))}

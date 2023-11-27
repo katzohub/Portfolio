@@ -60,9 +60,7 @@ const Footer = () => {
               href="https://github.com/katzohub/"
               className={classes.navLinkContact}
             >
-              <span style={{ position: "relative", top: "2px,", left: "-5px" }}>
-                katzohub
-              </span>{" "}
+              <span className={classes.navTextLink}>katzohub</span>{" "}
               <GitHubIcon />
             </a>
           </Box>

@@ -40,6 +40,7 @@ const LeftHeadertable = () => {
               <span>
                 {" "}
                 <a
+                  target="_blank"
                   href="https://github.com/katzohub/Game-Seven-App"
                   className={classes.leftHeaderSpanFour}
                 >

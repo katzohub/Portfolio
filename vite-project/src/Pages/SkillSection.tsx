@@ -77,7 +77,7 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
                         href={project.openProject}
                         className={classes.skillCardLink}
                       >
-                        View Project
+                        View-Project
                       </a>
                     </Button>
                   </div>

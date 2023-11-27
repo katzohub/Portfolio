@@ -32,7 +32,7 @@ const TemplateAbout: React.FC<TextProps> = ({
 }) => {
   const classes = usePageStyles();
   return (
-    <div>
+    <>
       <Box className={classes.tempAboutText}>
         <Box width={10} display="flex" flexDirection="column" alignItems="end">
           <p>1</p>
@@ -71,7 +71,7 @@ const TemplateAbout: React.FC<TextProps> = ({
           <p>*/</p>
         </Box>
       </Box>
-    </div>
+    </>
   );
 };
 

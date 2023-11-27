@@ -102,13 +102,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutNextContainer: {
     width: "100%",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
   aboutNextWrap: {
     marginTop: "150px",
     color: "white",
     padding: 2,
-    borderLeft: "1px solid black",
     height: "80vh",
     display: "flex",
     flexDirection: "column",
@@ -120,8 +119,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     border: `1px solid ${theme.myColors.colorLinie}`,
     background: theme.myColors.colorDarkBlue,
     padding: "7px 12.5px",
-    position: "relative",
-    left: "25px",
   },
   aboutNextImgContainer: {
     position: "relative",
@@ -145,15 +142,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 450,
     position: "relative",
     top: "150px",
-    left: "-25px",
     margin: "0 10px",
-    width: "100%",
+    // width: "100%",
     height: "90vh",
     display: "flex",
     alignItems: "start",
     justifyContent: "center",
-    flexWrap: "wrap",
-    gap: 2,
+    gap: 1,
   },
   tempAboutNumber: {
     position: "relative",
@@ -263,6 +258,23 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   skillCardHeading: {
     padding: "10px",
+    "& h2": {
+      color: "#fff",
+      fontFamily: "Fira Code",
+      fontSize: "20px",
+      fontStyle: "normal",
+      fontWeight: 450,
+      lineHeight: "normal",
+    },
+    "& p": {
+      marginTop: "5px",
+      color: "#607B96",
+      fontFamily: "Fira Code",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 450,
+      lineHeight: "normal",
+    },
   },
   skillCardText: {
     fontSize: "1em",
@@ -284,16 +296,21 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
   },
   skillCardBtn: {
+    transition: "transform 0.3s ease !important",
     background: `${theme.myColors.colorLinie} !important`,
     "&:hover": {
-      background: theme.myColors.colorLinie,
+      transform: "scale(0.95)",
     },
   },
   skillCardLink: {
     color: theme.myColors.whiteColor,
+    fontFamily: "Fira Code",
+    fontSize: "14px",
+    fontStyle: "normal",
+    fontWeight: 450,
+    lineHeight: "normal",
     textDecoration: "none",
-    position: "relative",
-    top: "2px",
+    textTransform: "lowercase",
   },
 
   //ContactMe
@@ -353,10 +370,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     height: "90vh",
     display: "flex",
-    alignItems: "start",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    gap: 2,
+    //  alignItems: "start",
+    justifyContent: "space-evenly",
+    // flexWrap: "wrap",
   },
   contactFormWrap: {
     width: "100%",
@@ -368,15 +384,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     marginTop: 2,
     color: theme.myColors.whiteColor,
     textAlign: "right",
-    fontFamily: "Fira Code",
+    fontFamily: "Fira Code !important",
     fontSize: "14px",
     fontStyle: "normal",
     fontWeight: 450,
     lineHeight: "normal",
     borderRadius: "8px",
+    transition: "transform 0.3s ease !important",
     background: `${theme.myColors.colorDarkGrey} !important`,
-    textTransform: "lowercase",
+
     "&:hover": {
+      transform: "scale(0.97)",
       background: `${theme.myColors.colorDarkGrey} !important`,
     },
   },
@@ -385,7 +403,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: "white",
     padding: 2,
     height: "100vh",
-    borderLeft: "1px solid black",
   },
 
   // Form Styles

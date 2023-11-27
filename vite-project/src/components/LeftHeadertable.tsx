@@ -40,10 +40,10 @@ const LeftHeadertable = () => {
               <span>
                 {" "}
                 <a
-                  href="https://github.com/katzohub?tab=repositories&q=&type=public&language=&sort="
+                  href="https://github.com/katzohub/Game-Seven-App"
                   className={classes.leftHeaderSpanFour}
                 >
-                  “https://github.com/example/url”
+                  “https://github.com/gameSnake”
                 </a>
               </span>
             </Typography>

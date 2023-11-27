@@ -30,13 +30,17 @@ const AlretCheckBox = () => {
             position: "absolute",
             top: "35%",
             left: "50%",
-            width: "250px",
+            width: "350px",
             height: "250px",
             color: "#fff",
+            fontFamily: "Fira Code",
+            fontStyle: "normal",
             fontWeight: 450,
           }}
         >
-          Sorry,Please one checkBox Click and view mine project.
+          Sorry.
+          <br />
+          Please one checkbox click and view mine project.
         </h1>
       </Box>
     </>

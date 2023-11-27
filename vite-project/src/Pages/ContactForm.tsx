@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { Box, Typography, TextField, Button, styled } from "@mui/material";
+import {
+  Box,
+  Typography,
+  TextField,
+  Divider,
+  Button,
+  styled,
+} from "@mui/material";
 import usePageStyles from "../stylePages";
 
 const CssTextField = styled(TextField)({
@@ -95,12 +102,24 @@ const ContactForm = () => {
             variant="contained"
             color="primary"
             className={classes.contactFormBtn}
+            sx={{ textTransform: "lowercase" }}
           >
             submit-message
           </Button>
         </form>
       </Box>
 
+      <Divider
+        orientation="vertical"
+        flexItem
+        sx={{
+          position: "relative",
+          top: "-45px",
+          width: "1px !important",
+          height: "90vh",
+          background: "#1E2D3D",
+        }}
+      />
       <Box className={classes.contactFormBoxText}>
         <Typography variant="body1">
           <br />

@@ -228,7 +228,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "normal",
-    textDecoration: "underline",
+    borderBottom: "1px solid transparent",
+    transition: "border-bottom 0.3s ease-in",
+
+    "&:hover": {
+      borderBottom: "1px solid #E99287",
+    },
   },
 }));
 

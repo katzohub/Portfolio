@@ -6,6 +6,7 @@ import {
   ListItemIcon,
   ListItemText,
   Collapse,
+  Divider,
   Box,
   Typography,
 } from "@mui/material";
@@ -254,7 +255,17 @@ const AboutMe = () => {
         {/* Template */}
         <Box className={classes.aboutNextContainer}>
           <TemplateAbout {...templateProps} />
-
+          <Divider
+            orientation="vertical"
+            flexItem
+            sx={{
+              position: "relative",
+              top: "105px",
+              width: "1px !important",
+              height: "90vh",
+              background: "#1E2D3D",
+            }}
+          />
           <Box className={classes.aboutNextWrap}>
             <Box className={classes.aboutNextMiniWrap}>
               <Typography variant="body1">

@@ -3,9 +3,10 @@ const BoobleOne = () => {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="600"
-        height="500"
+        width="100%"
+        height="100%"
         viewBox="0 0 864 783"
+        transform="scale(1.8)"
         fill="none"
       >
         <g opacity="0.4" filter="url(#filter0_f_64_1236)">

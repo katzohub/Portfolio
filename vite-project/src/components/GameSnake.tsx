@@ -167,10 +167,10 @@ const GameSnake: React.FC = () => {
   const classes = usePageStyles();
   return (
     <div className={classes.snakeContainer}>
-      <div className={classes.snakeBackEffectGreen}>
+      <div className={classes.snakeBackEffectPurple}>
         <BoobleTwo />
       </div>
-      <div className={classes.snakeBackEffectPurple}>
+      <div className={classes.snakeBackEffectGreen}>
         <BoobleOne />
       </div>
       <div style={{ position: "absolute", top: 5, left: 5 }}>

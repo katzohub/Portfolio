@@ -10,7 +10,7 @@ const LeftHeadertable = () => {
           container
           direction="column"
           justifyContent="space-around"
-          sx={{ width: "100%", height: "100%", padding: "50px 0px 50px 15px" }}
+          className={classes.leftHeaderBox}
         >
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>

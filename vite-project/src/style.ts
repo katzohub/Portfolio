@@ -172,18 +172,19 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
     border: "1px solid #0C1616",
     borderRadius: "8px",
-    backdropFilter: "blur(32px)",
     position: "relative",
   },
   snakeBackEffectGreen: {
+    zIndex: "-5",
     position: "absolute",
-    top: 170,
-    left: 220,
+    top: -30,
+    left: -50,
   },
   snakeBackEffectPurple: {
+    zIndex: "-5",
     position: "absolute",
-    bottom: 110,
-    right: 220,
+    bottom: -20,
+    right: -30,
   },
   snakeScreenLogo: {
     position: "absolute",
@@ -298,15 +299,22 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     zIndex: "10",
   },
+
   // component LeftHeader
+  leftHeaderBox: {
+    width: "100%",
+    height: "100%",
+    padding: "50px 0px 50px 15px",
+  },
+
   leftHeaderContainer: {
-    width: 520,
+    //  width: 520,
     height: 410,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     position: "relative",
-    left: "-40px",
+    // left: "-40px",
   },
   leftHeaderH3: {
     fontFamily: "Fira Code",
@@ -376,6 +384,38 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       borderBottom: "1px solid #E99287",
     },
+  },
+  // OnePage
+  pageContainer: {
+    minHeight: "100vh",
+    width: "100vw",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  pageWrap: {
+    minHeight: "100vh",
+    width: "100vw",
+    maxWidth: "1700px",
+    margin: "0 100px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "wrap",
+  },
+  pageLeftWrap: {
+    width: "50%",
+    maxWidth: "600px",
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+  },
+  pageRightWrap: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "50%",
+    maxWidth: "600px",
   },
 }));
 

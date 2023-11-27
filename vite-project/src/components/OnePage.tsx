@@ -1,47 +1,18 @@
 import LeftHeadertable from "./LeftHeadertable";
 import GameSnake from "./GameSnake";
 import { Box } from "@mui/material";
+import usePageStyles from "../style";
 
 const OnePage = () => {
+  const classes = usePageStyles();
   return (
     <>
-      <Box
-        style={{
-          minHeight: "100vh",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          sx={{
-            minHeight: "100vh",
-            width: "100vw",
-            maxWidth: "1700px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: "600px",
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
+      <Box className={classes.pageContainer}>
+        <Box className={classes.pageWrap}>
+          <Box className={classes.pageLeftWrap}>
             <LeftHeadertable />
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "600px",
-            }}
-          >
+          <Box className={classes.pageRightWrap}>
             <GameSnake />
           </Box>
         </Box>

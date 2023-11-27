@@ -3,8 +3,9 @@ const BoobleTwo = () => {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="550"
-        height="450"
+        width="100%"
+        height="100%"
+        transform="scale(1.8)"
         viewBox="0 0 867 831"
         fill="none"
       >

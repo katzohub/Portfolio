@@ -3,16 +3,17 @@ import usePageStyles from "../stylePages";
 
 interface TextProps {
   textOne: string;
-  textTwo: string;
-  textThree: string;
-  textFour: string;
-  textFive: string;
-  textSix: string;
-  textSeven: string;
-  textEight: string;
-  textNine: string;
-  textTen: string;
-  textEleven: string;
+  textTwo?: string;
+  textThree?: string;
+  textFour?: string;
+  textFive?: string;
+  textSix?: string;
+  textSeven?: string;
+  textEight?: string;
+  textHelp: string;
+  textNine?: string;
+  textTen?: string;
+  textEleven?: string;
   textTwelve: string;
 }
 
@@ -25,6 +26,7 @@ const TemplateAbout: React.FC<TextProps> = ({
   textSix,
   textSeven,
   textEight,
+  textHelp,
   textNine,
   textTen,
   textEleven,
@@ -63,7 +65,7 @@ const TemplateAbout: React.FC<TextProps> = ({
           <p>* {textSix}</p>
           <p>* {textSeven}</p>
           <p>* {textEight}</p>
-          <p>*</p>
+          <p>{textHelp}</p>
           <p>* {textNine}</p>
           <p>* {textTen}</p>
           <p>* {textEleven}</p>

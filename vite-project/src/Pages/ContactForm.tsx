@@ -112,13 +112,7 @@ const ContactForm = () => {
       <Divider
         orientation="vertical"
         flexItem
-        sx={{
-          position: "relative",
-          top: "-45px",
-          width: "1px !important",
-          height: "90vh",
-          background: "#1E2D3D",
-        }}
+        className={classes.contactFormDivider}
       />
       <Box className={classes.contactFormBoxText}>
         <Typography variant="body1">

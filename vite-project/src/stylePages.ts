@@ -110,6 +110,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "space-evenly",
+    [theme.breakpoints.down("lg")]: {
+      flexDirection: "column",
+    },
   },
   aboutDivider: {
     position: "relative",
@@ -117,6 +120,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "1px !important",
     height: "90vh",
     background: "#1E2D3D",
+    [theme.breakpoints.down("lg")]: {
+      top: "0px",
+      width: "100% !important",
+      height: "1px",
+    },
   },
   aboutNextWrap: {
     marginTop: "150px",
@@ -127,9 +135,16 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "start",
+    [theme.breakpoints.down("lg")]: {
+      marginTop: "0px",
+      height: "auto",
+    },
   },
   aboutImg: {
     width: "225px",
+    [theme.breakpoints.down("lg")]: {
+      width: "150px",
+    },
   },
   aboutNextMiniWrap: {
     borderRadius: "15px",
@@ -149,6 +164,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignContent: "center",
     alignItems: "center",
     justifyContent: "center",
+    [theme.breakpoints.down("xl")]: {
+      top: "15px",
+    },
   },
   // TemplateAbout
   tempAboutText: {
@@ -157,8 +175,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "18px",
     fontStyle: "normal",
     fontWeight: 450,
-    position: "relative",
-    top: "150px",
+    marginTop: "150px",
     margin: "0 10px",
     height: "70vh",
     display: "flex",
@@ -167,6 +184,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("xl")]: {
       fontSize: "14px",
       fontWeight: 600,
+    },
+    [theme.breakpoints.down("lg")]: {
+      height: "auto",
+      marginTop: "100px",
     },
   },
   tempAboutNumber: {
@@ -393,15 +414,33 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     height: "90vh",
     display: "flex",
-    //  alignItems: "start",
     justifyContent: "space-evenly",
-    // flexWrap: "wrap",
+    [theme.breakpoints.down("lg")]: {
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+  contactFormDivider: {
+    position: "relative",
+    top: "-45px",
+    width: "1px !important",
+    height: "90vh",
+    background: "#1E2D3D",
+    [theme.breakpoints.down("xl")]: {
+      top: "0px",
+      left: "-10px",
+      width: "100% !important",
+      height: "1px !important",
+    },
   },
   contactFormWrap: {
     width: "100%",
     maxWidth: "500px",
     [theme.breakpoints.down("xl")]: {
-      maxWidth: "300px",
+      maxWidth: "350px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      maxWidth: "450px",
     },
   },
   contactFormBtn: {
@@ -418,7 +457,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderRadius: "8px",
     transition: "transform 0.3s ease !important",
     background: `${theme.myColors.colorDarkGrey} !important`,
-
     "&:hover": {
       transform: "scale(0.97)",
       background: `${theme.myColors.colorDarkGrey} !important`,
@@ -429,6 +467,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: "white",
     padding: 2,
     height: "100vh",
+    [theme.breakpoints.down("lg")]: {
+      height: "auto",
+    },
   },
 
   // Form Styles

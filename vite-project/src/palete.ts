@@ -52,6 +52,15 @@ declare module "@mui/material/styles" {
 }
 
 export const themeOptions: ThemeOptions = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1200,
+      xl: 1460,
+    },
+  },
   myColors: {
     colorLinie: "#1E2D3D",
     hoverDownLinie: "#FEA55F",

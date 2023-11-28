@@ -1,6 +1,13 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-
+// [theme.breakpoints.down('md')]: {
+//   marginTop: '-170px',
+// },
+// [theme.breakpoints.down("xl")]: {
+//   width: "100% !important",
+//   height: "1px",
+//   top: "0",
+// },
 const usePageStyles = makeStyles((theme: Theme) => ({
   //AboutMe
   aboutHoverBtnEffect: {
@@ -104,6 +111,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
   },
+  aboutDivider: {
+    position: "relative",
+    top: "105px",
+    width: "1px !important",
+    height: "90vh",
+    background: "#1E2D3D",
+  },
   aboutNextWrap: {
     marginTop: "150px",
     color: "white",
@@ -113,6 +127,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "start",
+  },
+  aboutImg: {
+    width: "225px",
   },
   aboutNextMiniWrap: {
     borderRadius: "15px",
@@ -147,7 +164,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "start",
     justifyContent: "center",
-    // gap: 1,
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "14px",
+      fontWeight: 600,
+    },
   },
   tempAboutNumber: {
     position: "relative",
@@ -380,13 +400,16 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactFormWrap: {
     width: "100%",
     maxWidth: "500px",
+    [theme.breakpoints.down("xl")]: {
+      maxWidth: "300px",
+    },
   },
   contactFormBtn: {
     width: "50%",
     height: "40px",
     marginTop: 2,
     color: theme.myColors.whiteColor,
-    textAlign: "right",
+    textAlign: "center",
     fontFamily: "Fira Code !important",
     fontSize: "14px",
     fontStyle: "normal",
@@ -416,6 +439,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 450,
     lineHeight: "150%",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "14px",
+      fontWeight: 600,
+    },
   },
   formTextPurple: {
     color: theme.myColors.colorPurpleText,
@@ -424,6 +451,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 450,
     lineHeight: "150%",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "14px",
+      fontWeight: 600,
+    },
   },
   formTextPink: {
     color: theme.myColors.colorPinkText,
@@ -432,6 +463,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 450,
     lineHeight: "150%",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "14px",
+      fontWeight: 600,
+    },
   },
   formTextGrey: {
     color: theme.myColors.textColorNav,
@@ -440,6 +475,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 450,
     lineHeight: "150%",
+    [theme.breakpoints.down("xl")]: {
+      fontSize: "14px",
+      fontWeight: 600,
+    },
   },
 }));
 

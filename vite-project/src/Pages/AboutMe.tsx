@@ -260,15 +260,9 @@ const AboutMe = () => {
         <Box className={classes.aboutNextContainer}>
           <TemplateAbout {...templateProps} />
           <Divider
-            orientation="vertical"
+            orientation="horizontal"
             flexItem
-            sx={{
-              position: "relative",
-              top: "105px",
-              width: "1px !important",
-              height: "90vh",
-              background: "#1E2D3D",
-            }}
+            className={classes.aboutDivider}
           />
           <Box className={classes.aboutNextWrap}>
             <Box className={classes.aboutNextMiniWrap}>
@@ -328,7 +322,7 @@ const AboutMe = () => {
             </Box>
             <Box className={classes.aboutNextImgContainer}>
               <span className={classes.formTextGrey}>// Result</span>
-              <img src={ja} alt="Mine photo" width={225} />
+              <img src={ja} alt="Mine photo" className={classes.aboutImg} />
             </Box>
           </Box>
         </Box>

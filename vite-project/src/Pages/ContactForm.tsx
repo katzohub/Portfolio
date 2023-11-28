@@ -33,7 +33,7 @@ const CssTextField = styled(TextField)({
     backgroundColor: "#011221",
   },
   "& .MuiInputBase-input": {
-    color: "#607B96", // Farba textu v TextFielde
+    color: "#607B96",
   },
 });
 
@@ -104,7 +104,7 @@ const ContactForm = () => {
             className={classes.contactFormBtn}
             sx={{ textTransform: "lowercase" }}
           >
-            submit-message
+            submit
           </Button>
         </form>
       </Box>

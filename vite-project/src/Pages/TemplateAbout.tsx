@@ -54,7 +54,7 @@ const TemplateAbout: React.FC<TextProps> = ({
           <p>15</p>
           <p>16</p>
         </Box>
-        <Box pl={5}>
+        <Box className={classes.tempAboutContainerText}>
           <p className={classes.tempAboutNumber}>/**</p>
           <p>* About me</p>
           <p>* {textOne}</p>

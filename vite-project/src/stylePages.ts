@@ -143,16 +143,18 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "150px",
     margin: "0 10px",
-    // width: "100%",
     height: "70vh",
     display: "flex",
     alignItems: "start",
     justifyContent: "center",
-    gap: 1,
+    // gap: 1,
   },
   tempAboutNumber: {
     position: "relative",
     left: "-10px",
+  },
+  tempAboutContainerText: {
+    paddingLeft: "15px",
   },
 
   // LeftContact

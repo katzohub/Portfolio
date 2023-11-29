@@ -16,9 +16,9 @@ const TopNav = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const handleNavLinkClick = (path) => {
-    setIsMenuOpen(false); // Zatvorí menu
-    navigate(path); // Naviguje na zvolenú cestu
+  const handleNavLinkClick = (path: string) => {
+    setIsMenuOpen(false);
+    navigate(path);
   };
   const classes = usePageStyles();
   return (

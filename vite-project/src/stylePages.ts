@@ -418,6 +418,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       alignItems: "center",
+      top: "105px",
+      height: "80vh",
     },
   },
   contactFormDivider: {

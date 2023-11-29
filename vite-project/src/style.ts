@@ -1,6 +1,14 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-// #
+
+// [theme.breakpoints.down('md')]: {
+//   marginTop: '-170px',
+// },
+// [theme.breakpoints.down("xl")]: {
+//   width: "100% !important",
+//   height: "1px",
+//   top: "0",
+// },
 const usePageStyles = makeStyles((theme: Theme) => ({
   // component Navigation navLinkLeft
   navContainer: {
@@ -14,6 +22,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "start",
     alignItems: "center",
     zIndex: "9999",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   bottomNavContainer: {
     position: "absolute",
@@ -25,9 +36,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
-
     background: "#010c15",
     zIndex: 999,
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
 
   navBoxItem: {
@@ -104,7 +117,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   navBoxRight: {
-    fontFamily: "Fira Code",
     fontSize: "1rem",
     fontStyle: "normal",
     fontWeight: 450,
@@ -173,6 +185,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     border: "1px solid #0C1616",
     borderRadius: "8px",
     position: "relative",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   snakeBackEffectGreen: {
     zIndex: "-5",
@@ -301,23 +316,47 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
 
   // component LeftHeader
+  leftHeaderGreen: {
+    // display: "none",
+    [theme.breakpoints.down("md")]: {
+      position: "absolute",
+      top: "200px",
+      left: "20px",
+      display: "block",
+    },
+  },
+  leftHeaderPurple: {
+    // display: "none",
+    [theme.breakpoints.down("md")]: {
+      position: "absolute",
+      bottom: "80px",
+      right: "-00px",
+      display: "block",
+    },
+  },
+
   leftHeaderBox: {
     width: "100%",
-    height: "100%",
+    height: "100vh",
+    justifyContent: "space-around",
     padding: "50px 0px 50px 15px",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "space-evenly",
+    },
   },
 
   leftHeaderContainer: {
-    //  width: 520,
-    height: 410,
+    height: "410px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     position: "relative",
-    // left: "-40px",
+    [theme.breakpoints.down("md")]: {
+      height: "100vh",
+    },
   },
   leftHeaderH3: {
-    fontFamily: "Fira Code",
+    fontFamily: "Fira Code !important",
     color: `${theme.myColors.colorGrey} !important`,
     fontSize: "18px !important",
     fontStyle: "normal",
@@ -325,17 +364,20 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "normal",
   },
   leftHeaderH1: {
-    fontFamily: "Fira Code",
+    fontFamily: "Fira Code !important",
     color: `${theme.myColors.colorGrey} !important`,
     fontSize: "62px !important",
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "72px !important",
+    },
   },
   leftHeaderH2: {
-    fontFamily: "Fira Code",
+    fontFamily: "Fira Code !important",
     color: `${theme.myColors.colorPurple} !important`,
-    fontSize: "32px !important",
+    fontSize: "30px !important",
     fontStyle: "normal",
     fontWeight: 450,
     lineHeight: "normal",
@@ -401,7 +443,16 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    flexWrap: "wrap",
+    [theme.breakpoints.down("lg")]: {
+      flexDirection: "column",
+      justifyContent: "space-evenly",
+      position: "relative",
+      top: "-50px",
+      margin: "0px 0px",
+    },
+    [theme.breakpoints.down("md")]: {
+      top: "0px",
+    },
   },
   pageLeftWrap: {
     width: "50%",
@@ -409,6 +460,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100%",
     display: "flex",
     justifyContent: "center",
+    [theme.breakpoints.down("lg")]: {
+      width: "550px",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "400px",
+    },
   },
   pageRightWrap: {
     display: "flex",
@@ -416,6 +473,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "50%",
     maxWidth: "600px",
+    [theme.breakpoints.down("xl")]: {
+      width: "550px",
+    },
+  },
+  //Mobile
+  mobileNavigationContainer: {
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
   },
 }));
 

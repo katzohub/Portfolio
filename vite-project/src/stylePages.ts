@@ -24,7 +24,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie}`,
-    height: "90vh",
+    height: "92vh",
   },
   aboutLeftWrap: {
     width: "94vw !important",
@@ -220,7 +220,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie}`,
-    height: "90vh",
+    height: "92vh",
   },
   projectLeftNav: {
     width: "94vw",
@@ -366,7 +366,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
-    height: "90vh",
+    height: "92vh",
   },
   contactLeftWrap: {
     width: "94vw ",

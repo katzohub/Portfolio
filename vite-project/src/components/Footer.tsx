@@ -54,7 +54,7 @@ const Footer = () => {
         </Grid>
         {/* right */}
         <Grid item>
-          <Box className={classes.navBoxContact}>
+          <Box>
             <a
               target="_blank"
               href="https://github.com/katzohub/"

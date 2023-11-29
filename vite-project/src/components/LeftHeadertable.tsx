@@ -1,17 +1,16 @@
 import { Grid, Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import usePageStyles from "../style";
+
 const LeftHeadertable = () => {
   const classes = usePageStyles();
   return (
     <>
       <Box className={classes.leftHeaderContainer}>
-        <Grid
-          container
-          direction="column"
-          justifyContent="space-around"
-          className={classes.leftHeaderBox}
-        >
+        <div className={classes.leftHeaderGreen}></div>
+        <div className={classes.leftHeaderPurple}></div>
+
+        <Grid container direction="column" className={classes.leftHeaderBox}>
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>
               Hi all. I am

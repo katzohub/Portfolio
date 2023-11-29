@@ -56,7 +56,7 @@ export const themeOptions: ThemeOptions = createTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 960,
+      md: 800,
       lg: 1230,
       xl: 1460,
     },

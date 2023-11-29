@@ -426,7 +426,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "1px !important",
     height: "90vh",
     background: "#1E2D3D",
-    [theme.breakpoints.down("xl")]: {
+    [theme.breakpoints.down("lg")]: {
       top: "0px",
       left: "-10px",
       width: "100% !important",

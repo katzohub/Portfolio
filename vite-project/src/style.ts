@@ -1,14 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
-// [theme.breakpoints.down('md')]: {
-//   marginTop: '-170px',
-// },
-// [theme.breakpoints.down("xl")]: {
-//   width: "100% !important",
-//   height: "1px",
-//   top: "0",
-// },
 const usePageStyles = makeStyles((theme: Theme) => ({
   // component Navigation navLinkLeft
   navContainer: {
@@ -190,16 +182,28 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   snakeBackEffectGreen: {
-    zIndex: "-5",
-    position: "absolute",
-    top: -30,
-    left: -50,
+    [theme.breakpoints.up("sm")]: {
+      zIndex: "-5",
+      position: "absolute",
+      top: -100,
+      left: -50,
+      transform: "scale(0.9)",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   snakeBackEffectPurple: {
-    zIndex: "-5",
-    position: "absolute",
-    bottom: -20,
-    right: -30,
+    [theme.breakpoints.up("sm")]: {
+      zIndex: "-5",
+      position: "absolute",
+      bottom: -30,
+      right: 30,
+      transform: "scale(0.9)",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   snakeScreenLogo: {
     position: "absolute",
@@ -317,21 +321,23 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
   // component LeftHeader
   leftHeaderGreen: {
-    // display: "none",
+    display: "none",
     [theme.breakpoints.down("md")]: {
       position: "absolute",
       top: "200px",
-      left: "20px",
+      left: "-220px",
       display: "block",
+      transform: "scale(0.7)",
     },
   },
   leftHeaderPurple: {
-    // display: "none",
+    display: "none",
     [theme.breakpoints.down("md")]: {
       position: "absolute",
-      bottom: "80px",
-      right: "-00px",
+      top: "0px",
+      right: "-200px",
       display: "block",
+      transform: "scale(0.7)",
     },
   },
 

@@ -1,5 +1,7 @@
 import { Grid, Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
+import Blue from "../img/boobleBackground/Blue.png";
+import Green from "../img/boobleBackground/Green.png";
 import usePageStyles from "../style";
 
 const LeftHeadertable = () => {
@@ -7,8 +9,8 @@ const LeftHeadertable = () => {
   return (
     <>
       <Box className={classes.leftHeaderContainer}>
-        <div className={classes.leftHeaderGreen}></div>
-        <div className={classes.leftHeaderPurple}></div>
+        <img className={classes.leftHeaderGreen} src={Blue} alt="" />
+        <img className={classes.leftHeaderPurple} src={Green} alt="" />
 
         <Grid container direction="column" className={classes.leftHeaderBox}>
           <Box>

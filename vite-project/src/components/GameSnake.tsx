@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import PointSnake from "./PointSnake";
-import BoobleOne from "../svg/BoobleOne";
-import BoobleTwo from "../svg/BoobleTwo";
+import Green from "../img/boobleBackground/Green.png";
+import Blue from "../img/boobleBackground/Blue.png";
 import MiniCircle from "../svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
 import {
@@ -167,12 +167,8 @@ const GameSnake: React.FC = () => {
   const classes = usePageStyles();
   return (
     <div className={classes.snakeContainer}>
-      <div className={classes.snakeBackEffectPurple}>
-        <BoobleTwo />
-      </div>
-      <div className={classes.snakeBackEffectGreen}>
-        <BoobleOne />
-      </div>
+      <img className={classes.snakeBackEffectPurple} src={Green} alt="" />
+      <img className={classes.snakeBackEffectGreen} src={Blue} alt="" />
       <div style={{ position: "absolute", top: 5, left: 5 }}>
         <MiniCircle />
       </div>

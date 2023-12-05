@@ -1,16 +1,12 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-// [theme.breakpoints.down('md')]: {
-//   marginTop: '-170px',
-// },
-// [theme.breakpoints.down("xl")]: {
-//   width: "100% !important",
-//   height: "1px",
-//   top: "0",
-// },
+
 const usePageStyles = makeStyles((theme: Theme) => ({
   //AboutMe
   aboutHoverBtnEffect: {
+    [theme.breakpoints.down("md")]: {
+      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    },
     "&:hover": {
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.whiteColor} !important`,
@@ -19,12 +15,25 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutContainer: {
     width: "100%",
     display: "flex",
+    [theme.breakpoints.down("md")]: {
+      overflowY: "auto",
+      minHeight: "100vh",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
   },
   aboutLeftNavContainer: {
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie}`,
     height: "92vh",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      height: "auto",
+      marginTop: "50px !important",
+      borderRight: `0px solid transparent`,
+    },
   },
   aboutLeftWrap: {
     width: "94vw !important",
@@ -37,6 +46,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 400,
+    [theme.breakpoints.down("md")]: {
+      width: "auto !important",
+      borderBottom: `1px solid transparent`,
+      left: "0px",
+      background: "red !important",
+      display: "none",
+    },
   },
   aboutTextRight: {
     color: theme.myColors.textColorNav,
@@ -79,6 +95,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.whiteColor} !important`,
     },
+    [theme.breakpoints.down("md")]: {
+      width: "90%",
+      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    },
   },
   aboutBtnEducationFont: {
     fontFamily: "Fira Code",
@@ -104,6 +124,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.whiteColor} !important`,
     },
+    [theme.breakpoints.down("md")]: {
+      display: "none !important",
+    },
   },
   // next about
   aboutNextContainer: {
@@ -112,6 +135,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "space-evenly",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "20px",
+      marginBottom: "100px",
     },
   },
   aboutDivider: {
@@ -124,6 +151,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       top: "0px",
       width: "100% !important",
       height: "1px",
+    },
+    [theme.breakpoints.down("md")]: {
+      display: "none",
     },
   },
   aboutNextWrap: {
@@ -138,6 +168,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       marginTop: "0px",
       height: "auto",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "40px",
     },
   },
   aboutImg: {
@@ -188,6 +221,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       height: "auto",
       marginTop: "100px",
+    },
+    [theme.breakpoints.down("md")]: {
+      margin: "0px",
     },
   },
   tempAboutNumber: {

@@ -260,7 +260,7 @@ const AboutMe = () => {
         <Box className={classes.aboutNextContainer}>
           <TemplateAbout {...templateProps} />
           <Divider
-            orientation="horizontal"
+            orientation="vertical"
             flexItem
             className={classes.aboutDivider}
           />

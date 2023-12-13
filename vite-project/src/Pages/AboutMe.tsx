@@ -124,7 +124,7 @@ const AboutMe = () => {
   const classes = usePageStyles();
   return (
     <>
-      <Box className={classes.aboutContainer}>
+      <Box className={classes.aboutContainer} sx={{ background: "red" }}>
         <List
           className={classes.aboutLeftNavContainer}
           component="nav"

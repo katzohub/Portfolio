@@ -137,6 +137,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       flexDirection: "column",
     },
     [theme.breakpoints.down("md")]: {
+      display: "block",
       marginTop: "20px",
       marginBottom: "100px",
     },

@@ -170,7 +170,7 @@ const AboutMe = () => {
             }}
           >
             <ChevronRightIcon />
-            <ListItemIcon>
+            <ListItemIcon sx={{ background: "green" }}>
               <FolderIcon className={classes.aboutIconInterest} />
             </ListItemIcon>
 

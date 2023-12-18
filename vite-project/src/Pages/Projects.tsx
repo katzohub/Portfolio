@@ -4,6 +4,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
+// import Divider from "@mui/material/Divider";
 import CategoryIcon from "@mui/icons-material/Category";
 import {
   SiHtml5,
@@ -22,9 +23,10 @@ import SkillSection from "./SkillSection";
 import usePageStyles from "../stylePages";
 
 const AlretCheckBox = () => {
+  const classes = usePageStyles();
   return (
     <>
-      <Box>
+      <Box className={classes.projectAlert}>
         <h1
           style={{
             position: "absolute",

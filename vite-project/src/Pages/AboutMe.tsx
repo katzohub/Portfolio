@@ -142,6 +142,13 @@ const AboutMe = () => {
             </ListSubheader>
           }
         >
+          <ListSubheader
+            component="div"
+            id="nested-list-subheader"
+            className={classes.aboutMinWidth}
+          >
+            About me
+          </ListSubheader>
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
             style={{
@@ -153,6 +160,7 @@ const AboutMe = () => {
             }}
           >
             <ChevronRightIcon />
+
             <ListItemIcon>
               <FolderIcon className={classes.aboutIconBio} />
             </ListItemIcon>

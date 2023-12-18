@@ -1,7 +1,21 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-
+// [theme.breakpoints.down("md")]: {
+//   display: "none !important",
+// },
 const usePageStyles = makeStyles((theme: Theme) => ({
+  projectAlert: {
+    [theme.breakpoints.down("md")]: {
+      "& h1": {
+        fontSize: "1rem !improtant",
+        textAlign: "center",
+        top: "50%",
+        left: "50%",
+        transform: "translateX(-50%) translateY(-50%)",
+        marginTop: "50px",
+      },
+    },
+  },
   //AboutMe
   aboutHoverBtnEffect: {
     [theme.breakpoints.down("md")]: {
@@ -50,8 +64,20 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       width: "auto !important",
       borderBottom: `1px solid transparent`,
       left: "0px",
-      background: "red !important",
       display: "none",
+    },
+  },
+  aboutMinWidth: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      position: "relative !important",
+      left: "0px",
+      color: `${theme.myColors.whiteColor} !important`,
+      background: `${theme.myColors.colorDarkBlack} !important`,
+      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+      textDecoration: "underline",
+      cursor: "default !important",
     },
   },
   aboutTextRight: {
@@ -252,12 +278,20 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   projectContainer: {
     width: "100%",
     display: "flex",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      overflowY: "auto",
+    },
   },
   projectList: {
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie}`,
     height: "92vh",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      height: "auto",
+    },
   },
   projectLeftNav: {
     width: "94vw",
@@ -271,6 +305,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 400,
+    [theme.breakpoints.down("md")]: {
+      width: "100vw !important",
+      left: "0px !important",
+      textDecoration: "underline !important",
+    },
   },
   projectRightText: {
     color: theme.myColors.textColorNav,
@@ -280,9 +319,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontSize: "16px",
     fontWeight: 400,
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   projectRightForm: {
     marginLeft: "60px",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "row !important",
+      marginLeft: "0px",
+      margin: "0 10px !important",
+    },
   },
   projectLabel: {
     color: theme.myColors.textColorNav,
@@ -313,24 +360,63 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "150px",
     left: "0px",
     height: "83vh",
-    // paddingBottom: "100px",
     width: "100%",
     maxWidth: "1450px",
     display: "flex",
     justifyContent: "center",
     overflowY: "auto",
+    [theme.breakpoints.down("md")]: {
+      position: "relative",
+      top: "0px",
+      left: "0px",
+      height: "100%",
+      paddingBottom: "100px",
+      overflowX: "hidden !important",
+    },
+  },
+  skillBoxMinWidth: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      width: "100vw",
+      position: "relative",
+      left: "-10px",
+    },
+  },
+  skillBoxDividerTop: {
+    background: "#1E2D3D !important",
+    height: "1px !important",
+    width: "100vw",
+  },
+  skillBoxText: {
+    fontSize: "16px !important",
+    fontWeight: "400 !important",
+    paddingLeft: "15px",
+    textDecoration: "underline",
+    fontFamily: "Fira Code !important",
+    lineHeight: "48px !important",
+    listStyle: "none",
+  },
+  skillBoxDividerDown: {
+    background: "#1E2D3D !important",
+    height: "1px !important",
+    width: "100%",
   },
   skillPositionWrap: {
     width: "100%",
     padding: "0 10px",
+    margin: "0 10px",
   },
   skillCard: {
     borderRadius: "15px",
     border: `1px solid ${theme.myColors.colorLinie} `,
     background: theme.myColors.colorDarkBlue,
-    maxWidth: "470px",
-    height: "350px",
+    maxWidth: "100%",
+    height: "420px",
     overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      height: "350px",
+    },
   },
   skillCardImg: {
     width: "100%",

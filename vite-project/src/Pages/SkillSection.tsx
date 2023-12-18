@@ -1,4 +1,11 @@
-import { Box, useMediaQuery, Grid, Button } from "@mui/material";
+import {
+  Box,
+  useMediaQuery,
+  Grid,
+  Divider,
+  Button,
+  Typography,
+} from "@mui/material";
 import DataSkills from "./DataSkills";
 import usePageStyles from "../stylePages";
 
@@ -31,10 +38,29 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
     <Box className={classes.skillContainer}>
       <Box className={classes.skillWrap}>
         <Box className={classes.skillPositionWrap}>
+          <Box className={classes.skillBoxMinWidth}>
+            <Divider
+              orientation="vertical"
+              flexItem
+              className={classes.skillBoxDividerTop}
+            />
+            <Typography variant="h5" className={classes.skillBoxText}>
+              projects
+            </Typography>
+
+            <Divider
+              orientation="vertical"
+              flexItem
+              className={classes.skillBoxDividerDown}
+            />
+          </Box>
           <Grid container spacing={2}>
             {filteredProjects.map((project) => (
               <Grid
-                sx={{ position: "relative" }}
+                sx={{
+                  position: "relative",
+                  ...(isMobile && { marginTop: "10px" }),
+                }}
                 item
                 xs={12}
                 sm={isMobile ? 12 : 6}
@@ -51,7 +77,7 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
                     <h2 className={classes.skillCardText}>
                       {project.nameProject}
                     </h2>
-                    <p>{project.detailProject}</p>
+                    <p style={{ fontSize: "15px" }}>{project.detailProject}</p>
 
                     <Box className={classes.skillCardContainer}>
                       {project.icon &&

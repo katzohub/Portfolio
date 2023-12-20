@@ -6,6 +6,7 @@ import {
   ListItemText,
   Collapse,
   Box,
+  Divider,
 } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
@@ -16,11 +17,18 @@ import LeftContact from "./LeftContact";
 import usePageStyles from "../stylePages";
 
 const ContactMe = () => {
-  const [openFindMe, setOpenFindMe] = useState(false);
+  const [openFindMeContact, setOpenFindMeContact] = useState<boolean>(false);
+  const [openFindMe, setOpenFindMe] = useState<boolean>(false);
   const [activeContactButton, setActiveContactButton] = useState<string>("");
+  const [activeButton, setActiveButton] = useState<string>("");
 
   const handleClickContact = () => {
     setOpenFindMe(!openFindMe);
+    console.log("openFindMe:", openFindMe);
+  };
+  const handleClickContactOne = () => {
+    setOpenFindMeContact(!openFindMeContact);
+    console.log("openFindMeContact:", openFindMeContact);
   };
   const classes = usePageStyles();
   return (
@@ -44,7 +52,43 @@ const ContactMe = () => {
           }
         >
           {/* LeftContact */}
-          <LeftContact />
+          <Box className={classes.contactBoxMinWidth}>
+            <LeftContact />
+          </Box>
+          <ListItemButton
+            className={classes.contactBoxMaxWidth}
+            onClick={() => {
+              handleClickContactOne();
+              setActiveButton((prevState) =>
+                prevState === "contact" ? "" : "contact"
+              );
+            }}
+            style={{
+              color: activeButton === "contact" ? "#fff" : "#607B96",
+            }}
+          >
+            {openFindMeContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+
+            <ListItemText primary="contact" />
+            {openFindMeContact ? (
+              <Divider
+                sx={{
+                  position: "relative",
+                  top: "25px",
+                  left: "-40px",
+                  background: "#1e2d3d",
+                  height: "1px",
+                  zIndex: 999,
+                  width: "100vw",
+                }}
+              />
+            ) : (
+              ""
+            )}
+          </ListItemButton>
+          <Collapse in={openFindMeContact} timeout="auto" unmountOnExit>
+            <LeftContact />
+          </Collapse>
 
           <ListItemButton
             onClick={() => {
@@ -59,6 +103,7 @@ const ContactMe = () => {
             className={classes.contactBoxNoavigation}
           >
             {openFindMe ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+
             <ListItemText primary="find-me-also-in" />
           </ListItemButton>
           <Collapse in={openFindMe} timeout="auto" unmountOnExit>
@@ -78,7 +123,7 @@ const ContactMe = () => {
             >
               <a
                 href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
-                className={classes.leftContactLink}
+                className={classes.leftFindMeIn}
               >
                 <ListItemButton className={classes.leftContactBtn}>
                   <ShareIcon className={classes.leftContactIcon} />
@@ -102,7 +147,7 @@ const ContactMe = () => {
             >
               <a
                 href="https://www.twitch.tv/settings/profile"
-                className={classes.leftContactLink}
+                className={classes.leftFindMeIn}
               >
                 <ListItemButton className={classes.leftContactBtn}>
                   <ShareIcon className={classes.leftContactIcon} />

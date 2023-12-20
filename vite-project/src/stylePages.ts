@@ -3,6 +3,10 @@ import { Theme } from "@mui/material/styles";
 // [theme.breakpoints.down("md")]: {
 //   display: "none !important",
 // },
+// [theme.breakpoints.down("md")]: {
+//   width: "90%",
+//   borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+// },
 const usePageStyles = makeStyles((theme: Theme) => ({
   projectAlert: {
     [theme.breakpoints.down("md")]: {
@@ -265,10 +269,21 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   leftContactLink: {
     textDecoration: "none",
     color: theme.myColors.textColorNav,
+    [theme.breakpoints.down("md")]: {
+      // display: "none",
+    },
+  },
+  leftFindMeIn: {
+    textDecoration: "none",
+    color: theme.myColors.textColorNav,
   },
   leftContactBtn: {
     position: "relative",
     left: "25px",
+    [theme.breakpoints.down("md")]: {
+      width: "90vw",
+      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    },
   },
   leftContactIcon: {
     marginRight: "10px",
@@ -484,12 +499,33 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactContainer: {
     width: "100%",
     display: "flex",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      overflowY: "auto !improtant",
+    },
   },
   contactList: {
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "92vh",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "50px !important",
+      width: "100vw",
+      height: "auto",
+    },
+  },
+  contactBoxMinWidth: {
+    display: "block",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  },
+  contactBoxMaxWidth: {
+    display: "none !important",
+    [theme.breakpoints.down("md")]: {
+      display: "flex !important",
+    },
   },
   contactLeftWrap: {
     width: "94vw ",
@@ -501,6 +537,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 400,
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   contactRighttext: {
     color: theme.myColors.textColorNav,
@@ -510,6 +549,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 400,
+    [theme.breakpoints.down("md")]: {
+      display: "none !important",
+    },
   },
   contactBoxNoavigation: {
     color: theme.myColors.textColorNav,
@@ -528,6 +570,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.whiteColor} !important`,
     },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "0px !important",
+      width: "100%",
+      left: "0px",
+    },
   },
   //contactForm
   contactFormContainer: {
@@ -544,6 +591,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       top: "105px",
       height: "80vh",
     },
+    [theme.breakpoints.down("md")]: {
+      top: "0px",
+      margin: "0 0px",
+      height: "auto",
+      overflwY: "auto !important",
+      marginTop: "10px",
+      marginBottom: "100px !important",
+    },
   },
   contactFormDivider: {
     position: "relative",
@@ -556,6 +611,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       left: "-10px",
       width: "100% !important",
       height: "1px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      display: "none",
     },
   },
   contactFormWrap: {

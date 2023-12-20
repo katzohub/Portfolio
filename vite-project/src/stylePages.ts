@@ -215,6 +215,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     border: `1px solid ${theme.myColors.colorLinie}`,
     background: theme.myColors.colorDarkBlue,
     padding: "7px 12.5px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px 7.5px",
+    },
   },
   aboutNextImgContainer: {
     position: "relative",
@@ -256,6 +259,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       margin: "0px",
     },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".8rem",
+      fontWeight: 400,
+      lineHeight: "18px",
+    },
   },
   tempAboutNumber: {
     position: "relative",
@@ -263,6 +271,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   tempAboutContainerText: {
     paddingLeft: "15px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".7rem",
+      fontWeight: 400,
+      lineHeight: "18px",
+    },
   },
 
   // LeftContact
@@ -625,6 +638,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       maxWidth: "450px",
     },
+    [theme.breakpoints.down("lg")]: {
+      maxWidth: "350px",
+    },
   },
   contactFormBtn: {
     width: "50%",
@@ -644,6 +660,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transform: "scale(0.97)",
       background: `${theme.myColors.colorDarkGrey} !important`,
     },
+    [theme.breakpoints.down("sm")]: {},
   },
   contactFormBoxText: {
     maxWidth: "600px",
@@ -667,6 +684,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontSize: "14px",
       fontWeight: 600,
     },
+    [theme.breakpoints.down("xl")]: {
+      fontSize: ".7rem",
+      fontWeight: 400,
+      lineHeight: "0%",
+    },
   },
   formTextPurple: {
     color: theme.myColors.colorPurpleText,
@@ -678,6 +700,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("xl")]: {
       fontSize: "14px",
       fontWeight: 600,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".7rem",
+      fontWeight: 400,
+      lineHeight: "0%",
     },
   },
   formTextPink: {
@@ -691,6 +718,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontSize: "14px",
       fontWeight: 600,
     },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".7rem",
+      fontWeight: 400,
+      lineHeight: "0%",
+    },
   },
   formTextGrey: {
     color: theme.myColors.textColorNav,
@@ -702,6 +734,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("xl")]: {
       fontSize: "14px",
       fontWeight: 600,
+    },
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "0%",
+      fontSize: ".7rem",
+      fontWeight: 400,
     },
   },
 }));

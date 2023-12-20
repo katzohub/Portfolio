@@ -8,7 +8,12 @@ import {
   styled,
 } from "@mui/material";
 import usePageStyles from "../stylePages";
-
+type DisplayDataProps = {
+  name: string;
+  email: string;
+  message: string;
+  date: string;
+};
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "#607B96",
@@ -37,11 +42,11 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [displayData, setDisplayData] = useState({
+const ContactForm: React.FC = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [displayData, setDisplayData] = useState<DisplayDataProps>({
     name: "",
     email: "",
     message: "",

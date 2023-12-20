@@ -16,24 +16,25 @@ import usePageStyles from "../style";
 const gridSize = 20;
 const gridHeight = 34;
 const cellSize = 12;
-const initialSnake = [
+type Coordinate = { x: number; y: number };
+const initialSnake: Coordinate[] = [
   { x: 10, y: 10 },
   { x: 9, y: 10 },
   { x: 8, y: 10 },
   { x: 7, y: 10 },
 ];
-const initialCandy = { x: 5, y: 5 };
+const initialCandy: Coordinate = { x: 5, y: 5 };
 
 const GameSnake: React.FC = () => {
-  const [snake, setSnake] = useState(initialSnake);
-  const [candy, setCandy] = useState(initialCandy);
-  const [dir, setDir] = useState({ x: 1, y: 0 });
-  const [speed, setSpeed] = useState(20);
-  const [gameOver, setGameOver] = useState(false);
-  const [candyCount, setCandyCount] = useState(0);
-  const [gameStarted, setGameStarted] = useState(false);
-  const [keyPressed, setKeyPressed] = useState(false);
-  const [hasWon, setHasWon] = useState(false);
+  const [snake, setSnake] = useState<Coordinate[]>(initialSnake);
+  const [candy, setCandy] = useState<Coordinate>(initialCandy);
+  const [dir, setDir] = useState<Coordinate>({ x: 1, y: 0 });
+  const [speed, setSpeed] = useState<number>(20);
+  const [gameOver, setGameOver] = useState<boolean>(false);
+  const [candyCount, setCandyCount] = useState<number>(0);
+  const [gameStarted, setGameStarted] = useState<boolean>(false);
+  const [keyPressed, setKeyPressed] = useState<boolean>(false);
+  const [hasWon, setHasWon] = useState<boolean>(false);
   const gameLoopRef = useRef<number | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
 

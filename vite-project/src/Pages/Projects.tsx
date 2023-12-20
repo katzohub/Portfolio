@@ -22,6 +22,20 @@ import { Box } from "@mui/material";
 import SkillSection from "./SkillSection";
 import usePageStyles from "../stylePages";
 
+type DisplayDataProps = {
+  all: boolean;
+  html: boolean;
+  css: boolean;
+  sass: boolean;
+  tailwind: boolean;
+  mui: boolean;
+  javascript: boolean;
+  typescript: boolean;
+  php: boolean;
+  react: boolean;
+  firebase: boolean;
+};
+
 const AlretCheckBox = () => {
   const classes = usePageStyles();
   return (
@@ -49,8 +63,8 @@ const AlretCheckBox = () => {
   );
 };
 
-const Projects = () => {
-  const [checkedState, setCheckedState] = useState({
+const Projects: React.FC = () => {
+  const [checkedState, setCheckedState] = useState<DisplayDataProps>({
     all: true,
     html: false,
     css: false,

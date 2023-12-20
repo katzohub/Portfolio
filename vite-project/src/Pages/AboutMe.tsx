@@ -22,12 +22,28 @@ import TemplateAbout from "./TemplateAbout";
 import usePageStyles from "../stylePages";
 import ja from "../img/ja.png";
 
-const AboutMe = () => {
+type TemplateProps = {
+  textOne: string;
+  textTwo: string;
+  textThree: string;
+  textFour: string;
+  textFive: string;
+  textSix: string;
+  textSeven: string;
+  textEight: string;
+  textHelp: string;
+  textNine: string;
+  textTen: string;
+  textEleven: string;
+  textTwelve: string;
+};
+
+const AboutMe: React.FC = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [openContact, setOpenContact] = useState<boolean>(false);
-  const [templateProps, setTemplateProps] = useState({
+  const [templateProps, setTemplateProps] = useState<TemplateProps>({
     textOne: "Hi There",
     textTwo: "I am Tomas and 25 year old",
     textThree: "Since 1.5.2022 I am learning programing.",

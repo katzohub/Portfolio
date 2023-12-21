@@ -5,6 +5,7 @@ import SharedLayout from "./Pages/SharedLayout";
 import AboutMe from "./Pages/AboutMe";
 import Projects from "./Pages/Projects";
 import ContactMe from "./Pages/ContactMe";
+import Error from "./Pages/Error";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
               <Route path="about-me" element={<AboutMe />}></Route>
               <Route path="projects" element={<Projects />}></Route>
               <Route path="/contact-me" element={<ContactMe />}></Route>
-              {/* <Route path="*" element={<Error />} /> */}
+              <Route path="*" element={<Error />} />
             </Route>
           </Routes>
         </MenuProvider>

@@ -638,7 +638,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       maxWidth: "450px",
     },
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("sm")]: {
       maxWidth: "350px",
     },
   },
@@ -684,7 +684,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontSize: "14px",
       fontWeight: 600,
     },
-    [theme.breakpoints.down("xl")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: ".7rem",
       fontWeight: 400,
       lineHeight: "0%",

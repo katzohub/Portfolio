@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   ListSubheader,
   List,
@@ -10,6 +10,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
+import { MenuContext } from "../MenuProvider";
 import SchoolIcon from "@mui/icons-material/School";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -43,6 +44,7 @@ const AboutMe: React.FC = () => {
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [openContact, setOpenContact] = useState<boolean>(false);
+  const { isMenuOpen } = useContext(MenuContext);
   const [templateProps, setTemplateProps] = useState<TemplateProps>({
     textOne: "Hi There",
     textTwo: "I am Tomas and 25 year old",
@@ -137,10 +139,17 @@ const AboutMe: React.FC = () => {
   const handleClickContact = () => {
     setOpenContact(!openContact);
   };
+
   const classes = usePageStyles();
+
   return (
     <>
-      <Box className={classes.aboutContainer}>
+      <Box
+        className={classes.aboutContainer}
+        sx={{
+          display: isMenuOpen ? "none" : "flex",
+        }}
+      >
         <List
           className={classes.aboutLeftNavContainer}
           component="nav"

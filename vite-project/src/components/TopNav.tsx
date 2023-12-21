@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { MenuContext } from "../MenuProvider";
 import { Grid, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
 import usePageStyles from "../style";
@@ -10,7 +11,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
 const TopNav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -66,43 +67,17 @@ const TopNav = () => {
       </nav>
       {/* // Mobile Navigation */}
       <nav className={classes.mobileNavigationContainer}>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "0",
-            width: "100vw",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            textAlign: "center",
-            padding: "10px 20px",
-            borderBottom: "1px solid #1E2D3D",
-            height: "50px",
-            backgroundColor: "#010c15",
-            zIndex: 9999,
-          }}
-        >
+        <Box className={classes.boxMobileNav}>
           <Typography style={{ color: isMenuOpen ? "white" : "#607B96" }}>
             tomas-olsiak
           </Typography>
           {isMenuOpen ? (
             <CloseIcon
               onClick={toggleMenu}
-              style={{
-                color: "white",
-                transition: "transform 0.3s ease",
-                cursor: "pointer",
-              }}
+              className={classes.iconCloseMobileNav}
             />
           ) : (
-            <MenuIcon
-              onClick={toggleMenu}
-              style={{
-                color: "#607B96",
-                transition: "transform 0.3s ease",
-                cursor: "pointer",
-              }}
-            />
+            <MenuIcon onClick={toggleMenu} className={classes.iconMobileNav} />
           )}
         </Box>
 
@@ -113,7 +88,7 @@ const TopNav = () => {
           justifyContent={"start"}
           sx={{
             position: "absolute",
-            marginTop: "50px",
+            overflow: "hidden",
             width: "100%",
             minHeight: isMenuOpen ? "100vh" : "0",
             backgroundColor: isMenuOpen ? "#011627" : "transparent",
@@ -128,68 +103,93 @@ const TopNav = () => {
           <NavLink
             onClick={() => handleNavLinkClick("/")}
             to="/"
-            style={{
-              padding: "10px 0",
-              borderBottom: "1px solid #1E2D3D",
-              width: "90vw",
-              color: "#607B96",
-            }}
+            className={classes.linkHomeMobileNav}
           >
             _hello
           </NavLink>
           <NavLink
             onClick={() => handleNavLinkClick("/about-me")}
             to="/about-me"
-            style={{
-              color: "#607B96",
-              padding: "10px 0",
-              borderBottom: "1px solid #1E2D3D",
-              width: "90vw",
-            }}
+            className={classes.nextLinkMobileNav}
           >
             _about-me
           </NavLink>
           <NavLink
             onClick={() => handleNavLinkClick("/projects")}
             to="/projects"
-            style={{
-              color: "#607B96",
-              padding: "10px 0",
-              borderBottom: "1px solid #1E2D3D",
-              width: "90vw",
-            }}
+            className={classes.nextLinkMobileNav}
           >
             _projects
           </NavLink>
           <NavLink
             onClick={() => handleNavLinkClick("/contact-me")}
             to="contact-me"
-            style={{
-              color: "#607B96",
-              padding: "10px 0",
-              borderBottom: "1px solid #1E2D3D",
-              width: "90vw",
-            }}
+            className={classes.nextLinkMobileNav}
           >
             _contact-me
           </NavLink>
+          <nav
+            className={classes.bootomNavContainer}
+            // style={{ bottom: "56px", overflow: "hidden" }}
+          >
+            <Grid item sx={{ position: "relative", left: "20px" }}>
+              <Box className={classes.navBoxItem}>
+                <div className={classes.navLink}>find me in:</div>
+              </Box>
+            </Grid>
+
+            <Grid item>
+              <Grid container className={classes.navContainerThreeBottom}>
+                <Grid item>
+                  <Box className={classes.navBoxItemCenter}>
+                    <a
+                      target="_blank"
+                      href="https://twitter.com/TomOliak140446"
+                      className={classes.navLinkLeft}
+                    >
+                      <TwitterIcon />
+                    </a>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box className={classes.navBoxItemCenter}>
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/tomas.olsiak.37/"
+                      className={classes.navBoxCenter}
+                    >
+                      <FacebookIcon />
+                    </a>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box className={classes.navBoxItemCenter}>
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-ol%C5%A1iak-232196260/"
+                      className={classes.navBoxRight}
+                    >
+                      <LinkedInIcon />
+                    </a>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box className={classes.navBoxItemCenter}>
+                    <a
+                      className={classes.navBoxRight}
+                      target="_blank"
+                      href="https://github.com/katzohub/"
+                    >
+                      <GitHubIcon />
+                    </a>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+          </nav>
         </Grid>
         {/* //bottom nav */}
-        <nav
-          style={{
-            position: "absolute",
-            bottom: "0",
-            left: "0px",
-            width: "100vw",
-            borderTop: `1px solid #1E2D3D`,
-            height: "56px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            background: "#010c15",
-            zIndex: 999,
-          }}
-        >
+        <nav className={classes.bootomNavContainer}>
           <Grid item sx={{ position: "relative", left: "20px" }}>
             <Box className={classes.navBoxItem}>
               <div className={classes.navLink}>find me in:</div>

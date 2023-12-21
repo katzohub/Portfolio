@@ -2,6 +2,66 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
+  // mobielNavigation
+  boxMobileNav: {
+    position: "absolute",
+    top: "0",
+    width: "100vw",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    textAlign: "center",
+    padding: "10px 20px",
+    borderBottom: "1px solid #1E2D3D",
+    height: "50px",
+    backgroundColor: "#010c15",
+    zIndex: 9999,
+  },
+  iconMobileNav: {
+    color: "#607B96",
+    transition: "transform 0.3s ease",
+    cursor: "pointer",
+  },
+  iconCloseMobileNav: {
+    color: "white",
+    transition: "transform 0.3s ease",
+    cursor: "pointer",
+  },
+  linkHomeMobileNav: {
+    marginTop: "50px",
+    padding: "10px 0",
+    borderBottom: "1px solid #1E2D3D",
+    width: "90vw",
+    color: "#607B96",
+    transition: "color 0.3s ease",
+    "&:hover": {
+      color: "#fff",
+    },
+  },
+  nextLinkMobileNav: {
+    color: "#607B96",
+    padding: "10px 0",
+    borderBottom: "1px solid #1E2D3D",
+    transition: "color 0.3s ease",
+    width: "90vw",
+    "&:hover": {
+      color: "#fff",
+    },
+  },
+  //Bottom Nav
+  bootomNavContainer: {
+    position: "absolute",
+    bottom: "0",
+    left: "0px",
+    width: "100vw",
+    borderTop: `1px solid #1E2D3D`,
+    height: "56px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    background: "#010c15",
+    zIndex: 999,
+  },
   // component Navigation navLinkLeft
   navContainer: {
     position: "absolute",

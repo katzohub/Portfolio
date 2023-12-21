@@ -25,7 +25,6 @@ type CheckedStateType = {
 
 const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
   const isMobile = useMediaQuery("(max-width:800px)");
-
   const filteredProjects = checkedState.all
     ? DataSkills
     : DataSkills.filter((project) =>

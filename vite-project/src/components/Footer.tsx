@@ -7,7 +7,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 const Footer = () => {
   const classes = usePageStyles();
   return (
-    <footer>
+    <footer className={classes.bottomNavFooterContainer}>
       <nav className={classes.bottomNavContainer}>
         <Grid item>
           <Box className={classes.navBoxItem}>

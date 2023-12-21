@@ -234,7 +234,7 @@ const TopNav = () => {
               <Grid item>
                 <Box className={classes.navBoxItemCenter}>
                   <a
-                    className={classes.navBoxRight}
+                    className={classes.navBoxRightMinScreenGit}
                     target="_blank"
                     href="https://github.com/katzohub/"
                   >

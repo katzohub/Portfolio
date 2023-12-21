@@ -53,7 +53,7 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
               className={classes.skillBoxDividerDown}
             />
           </Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className={classes.skillBoxCard}>
             {filteredProjects.map((project) => (
               <Grid
                 sx={{

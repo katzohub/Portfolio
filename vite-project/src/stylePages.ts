@@ -189,6 +189,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutNextWrap: {
     marginTop: "150px",
+    marginBottom: "80px",
     color: "white",
     padding: 2,
     height: "80vh",
@@ -202,6 +203,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       marginTop: "40px",
+      marginBottom: "0px",
     },
   },
   aboutImg: {
@@ -398,7 +400,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       top: "0px",
       left: "0px",
       height: "100%",
-      paddingBottom: "100px",
+      marginBottom: "100px",
       overflowX: "hidden !important",
     },
   },
@@ -408,7 +410,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "block",
       width: "100vw",
       position: "relative",
-      left: "-10px",
+      left: "-20px",
     },
   },
   skillBoxDividerTop: {
@@ -430,10 +432,21 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "1px !important",
     width: "100%",
   },
+  skillBoxCard: {
+    marginBottom: "70px",
+    [theme.breakpoints.down("md")]: {
+      marginBottom: "0px",
+    },
+  },
   skillPositionWrap: {
     width: "100%",
     padding: "0 10px",
     margin: "0 10px",
+    [theme.breakpoints.down("md")]: {
+      width: "94%",
+      position: "relative",
+      left: "-7.5px",
+    },
   },
   skillCard: {
     borderRadius: "15px",

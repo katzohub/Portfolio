@@ -78,21 +78,31 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "none",
     },
   },
+  bottomNavFooterContainer: {
+    background: "#010c15",
+    position: "absolute",
+    bottom: "0",
+    left: "0",
+    width: "100vw",
+    height: "56px",
+    display: "flex",
+    justifyContent: "center",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  },
   bottomNavContainer: {
     position: "absolute",
     bottom: "0",
     left: "30px",
     width: "94vw",
     borderTop: `1px solid ${theme.myColors.colorLinie}`,
-    height: "56px",
+    height: "100%",
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
     background: "#010c15",
     zIndex: 999,
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
   },
 
   navBoxItem: {
@@ -114,6 +124,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     transition: "color 0.3s ease-in",
   },
   navContainerThree: {
+    background: "red",
     height: "100%",
     paddingLeft: "20px",
     marginLeft: "100px",
@@ -121,6 +132,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   navContainerThreeBottom: {
     height: "100%",
     marginLeft: "20px",
+    position: "relative",
+    left: "-10px",
   },
   navBoxItemCenter: {
     color: theme.myColors.textColorNav,
@@ -168,6 +181,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       color: `${theme.myColors.whiteColor} !important`,
     },
   },
+
   navBoxRight: {
     fontSize: "1rem",
     fontStyle: "normal",
@@ -178,7 +192,26 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100%",
     width: "100%",
     display: "flex",
+
     borderRight: `2px solid ${theme.myColors.colorLinie}`,
+    padding: "0 10px",
+    alignItems: "center",
+    transition: "color 0.3s ease-in",
+    "&:hover": {
+      color: `${theme.myColors.whiteColor} !important`,
+    },
+  },
+  navBoxRightMinScreenGit: {
+    fontSize: "1rem",
+    fontStyle: "normal",
+    fontWeight: 450,
+    lineHeight: "normal",
+    color: `${theme.myColors.textColorNav}`,
+    textDecoration: "none !important",
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    // borderRight: `2px solid ${theme.myColors.colorLinie}`,
     padding: "0 10px",
     alignItems: "center",
     transition: "color 0.3s ease-in",
@@ -194,7 +227,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     cursor: "pointer",
     width: "200px",
     height: "100%",
-
     borderLeft: `2px solid ${theme.myColors.colorLinie}`,
     padding: "0 10px",
     transition: "border-bottom-color 0.3s ease-in, color 0.3s ease-in",

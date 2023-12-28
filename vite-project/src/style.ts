@@ -124,7 +124,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     transition: "color 0.3s ease-in",
   },
   navContainerThree: {
-    background: "red",
     height: "100%",
     paddingLeft: "20px",
     marginLeft: "100px",

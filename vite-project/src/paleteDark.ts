@@ -13,7 +13,7 @@ declare module "@mui/material/styles" {
       colorLightOrange: string;
       colorLightGreen: string;
       colorPurpleFolder: string;
-      colorDarkBlue: string;
+      colorDarkBlue: string; 
       colorDarkBlack: string;
       colorDarkGrey: string;
       colorPurpleText: string;
@@ -53,7 +53,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-export const themeOptions: ThemeOptions = createTheme({
+export const themeOptionsDark: ThemeOptions = createTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -64,21 +64,21 @@ export const themeOptions: ThemeOptions = createTheme({
     },
   },
   myColors: {
-    generalBackground: "#010C15",
-    colorLinie: "#1E2D3D",
-    hoverDownLinie: "#FEA55F",
-    textColorNav: "#607B96",
-    colorGrey: "#E5E9F0",
+    generalBackground: "#DAB07A",
+    colorLinie: "#fff",
+    hoverDownLinie: "#fff",
+    textColorNav: "#fff",
+    colorGrey: "#607b96",
     colorPurple: "#4D5BCE",
-    colorLightOrange: "#E99287",
-    colorLightGreen: "#43D9AD",
+    colorLightOrange: "#F66B15",
+    colorLightGreen: "#FF0",
     whiteColor: "#fff",
-    colorPurpleFolder: "#3A49A4",
-    colorDarkBlue: "#011221",
-    colorDarkBlack: "#010c15",
-    colorDarkGrey: "#1C2B3A",
-    colorPurpleText: "#5565E8",
-    colorPinkText: "#C98BDF",
+    colorPurpleFolder: "#fff",
+    colorDarkBlue: "#DAB07A",
+    colorDarkBlack: "#fff",
+    colorDarkGrey: "#fff",
+    colorPurpleText: "#fff",
+    colorPinkText: "#fff",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

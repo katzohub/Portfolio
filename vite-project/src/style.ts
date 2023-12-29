@@ -2,6 +2,9 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
+  backColor:{
+    backgroundColor: theme.myColors.generalBackground,
+  },
   // mobielNavigation
   boxMobileNav: {
     position: "absolute",
@@ -79,7 +82,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   bottomNavFooterContainer: {
-    background: "#010c15",
+    background: theme.myColors.generalBackground,
     position: "absolute",
     bottom: "0",
     left: "0",
@@ -101,7 +104,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
-    background: "#010c15",
+    background: theme.myColors.generalBackground,
     zIndex: 999,
   },
 
@@ -123,10 +126,31 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     transition: "color 0.3s ease-in",
   },
+  // component Navigation navLinkLeft
+  switch: {
+    transform: 'scale(1.3)',
+    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+      backgroundColor: '#092E40 !important',
+    },
+    '& .MuiSwitch-track': {
+      backgroundColor: '#FCE8B3 !important',
+    },
+  },
+  switchLightIcon: {
+    color: '#fff',
+    background: '#F2C039',
+    borderRadius: '50%',
+    padding: '4px',
+  },
+  switchDarkIcon: {
+    color: '#fff',
+    background: '#25AFEE',
+    borderRadius: '50%',
+    padding: '4px',
+  },
   navContainerThree: {
     height: "100%",
-    paddingLeft: "20px",
-    marginLeft: "100px",
+    marginLeft: "80px",
   },
   navContainerThreeBottom: {
     height: "100%",
@@ -268,13 +292,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     border: "1px solid #0C1616",
     borderRadius: "8px",
     position: "relative",
+    zIndex: "9999",
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
   },
   snakeBackEffectGreen: {
     [theme.breakpoints.up("sm")]: {
-      zIndex: "-5",
+      zIndex: "0",
       position: "absolute",
       top: -100,
       left: -50,
@@ -286,7 +311,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   snakeBackEffectPurple: {
     [theme.breakpoints.up("sm")]: {
-      zIndex: "-5",
+      zIndex: "0",
       position: "absolute",
       bottom: -30,
       right: 30,
@@ -407,7 +432,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexWrap: "wrap",
     gap: "5px",
     position: "relative",
-    zIndex: "10",
+    zIndex: "20 !important",
   },
 
   // component LeftHeader
@@ -570,6 +595,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "50%",
     maxWidth: "600px",
+    zIndex: '50 !important',
     [theme.breakpoints.down("xl")]: {
       width: "550px",
     },

@@ -15,10 +15,9 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  background-color: #010c15;
   color: #fff;
   overflow-x: hidden;
-
+  /* // background-color: #000 !important; */
   font-family: "Fira Code", monospace;
   font-family: "Mulish", sans-serif;
   font-family: "Neucha", cursive;

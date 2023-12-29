@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { MenuContext } from "../MenuProvider";
-import { Grid, Box, Typography } from "@mui/material";
+import { useThemeContext } from "../themeContext";
+import { Grid, Switch, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
 import usePageStyles from "../style";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";    
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -12,6 +15,9 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 const TopNav = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
+  const { themeMode, toggleTheme } = useThemeContext();
+  const switchChecked = themeMode === 'dark';
+
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -31,9 +37,31 @@ const TopNav = () => {
           </Box>
         </Grid>
 
+        <Grid item sx={{position:'relative',left:'20px'}}>
+          <Box className={classes.navBoxItem}>
+          <Switch
+          className={classes.switch}
+          icon={
+            <LightModeIcon
+              fontSize="small"
+              className={classes.switchLightIcon}
+            />
+          }
+          checkedIcon={
+            <DarkModeIcon fontSize="small" 
+             className={classes.switchDarkIcon} 
+            />
+          }
+           checked={switchChecked}
+           onChange={toggleTheme}
+        />
+          </Box>
+        </Grid>
+
         <Grid item>
-          <Grid container className={classes.navContainerThree}>
+          <Grid container className={classes.navContainerThree} >
             <Grid item>
+            
               <Box className={classes.navBoxItemCenter}>
                 <NavLink to="/" className={classes.navLinkLeft}>
                   _hello

@@ -9,7 +9,7 @@ const OnePage = () => {
   const { isMenuOpen } = useContext(MenuContext);
   const classes = usePageStyles();
   return (
-    <>
+    <Box className={classes.backColor}>
       <Box
         className={classes.pageContainer}
         sx={{
@@ -25,7 +25,7 @@ const OnePage = () => {
           </Box>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

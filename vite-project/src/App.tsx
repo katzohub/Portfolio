@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {CustomThemeProvider} from "./themeContext";
 import { MenuProvider } from "./MenuProvider";
 import OnePage from "./components/OnePage";
 import SharedLayout from "./Pages/SharedLayout";
@@ -7,10 +8,15 @@ import Projects from "./Pages/Projects";
 import ContactMe from "./Pages/ContactMe";
 import Error from "./Pages/Error";
 
+
+
 const App = () => {
+
+
   return (
-    <>
-      <BrowserRouter>
+  <>
+    <BrowserRouter>
+      <CustomThemeProvider>
         <MenuProvider>
           <Routes>
             <Route path="/" element={<SharedLayout />}>
@@ -22,8 +28,9 @@ const App = () => {
             </Route>
           </Routes>
         </MenuProvider>
-      </BrowserRouter>
-    </>
+      </CustomThemeProvider>
+    </BrowserRouter>
+  </>
   );
 };
 

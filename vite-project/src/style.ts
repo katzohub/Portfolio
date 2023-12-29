@@ -184,8 +184,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       color: `${theme.myColors.whiteColor} !important`,
     },
     "&.active": {
-      color: '#fff !important',
-      borderBottom: '4px solid #fea55f !important',
+      color: `${theme.myColors.colorTextLink} !important`,
+      borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
     },
   },
 
@@ -209,8 +209,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       color: `${theme.myColors.whiteColor} !important`,
     },
     "&.active": {
-      color: '#fff !important',
-      borderBottom: '4px solid #fea55f !important',
+      color: `${theme.myColors.colorTextLink} !important`,
+      borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
     },
   },
 
@@ -233,8 +233,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       color: `${theme.myColors.whiteColor} !important`,
     },
     "&.active": {
-      color: '#fff !important',
-      borderBottom: '4px solid #fea55f !important',
+      color: `${theme.myColors.colorTextLink} !important`,
+      borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
     },
   },
   navBoxRightMinScreenGit: {
@@ -286,6 +286,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     transition: "color 0.3s ease-in",
     "&:hover": {
       color: `${theme.myColors.whiteColor} !important`,
+    },
+    "&.active": {
+      color: `${theme.myColors.colorTextLink} !important`,
+      borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
     },
   },
   navTextLink: {

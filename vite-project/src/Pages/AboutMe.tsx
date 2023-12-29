@@ -176,9 +176,9 @@ const AboutMe: React.FC = () => {
           </ListSubheader>
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
-            style={{
-              color: activeButton === "bio" ? "#fff " : "#607B96",
-            }}
+            sx={(theme) => ({
+              color: activeButton === "bio" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+            })}
             onClick={() => {
               handleBioClick();
               setActiveButton("bio");
@@ -198,9 +198,9 @@ const AboutMe: React.FC = () => {
               handleInterestsClick();
               setActiveButton("interests");
             }}
-            style={{
-              color: activeButton === "interests" ? "#fff" : "#607B96",
-            }}
+            sx={(theme) => ({
+              color: activeButton === "interests" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+            })}
           >
             <ChevronRightIcon />
             <ListItemIcon>
@@ -215,9 +215,10 @@ const AboutMe: React.FC = () => {
 
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
-            style={{
-              color: activeButton === "education" ? "#fff " : "#607B96",
-            }}
+            
+            sx={(theme) => ({
+              color: activeButton === "education" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+            })}
             onClick={() => {
               handleClick();
               setActiveButton("education");
@@ -240,9 +241,10 @@ const AboutMe: React.FC = () => {
                   handlePrimarySchoolClick();
                   setActiveButton("primary-school");
                 }}
-                style={{
-                  color: activeButton === "primary-school" ? "#fff" : "#607B96",
-                }}
+                
+                sx={(theme) => ({
+                  color: activeButton === "primary-school" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+                })}
               >
                 <SchoolIcon />
                 <ListItemText
@@ -256,9 +258,9 @@ const AboutMe: React.FC = () => {
                   handleHighSchoolClick();
                   setActiveButton("high-school");
                 }}
-                style={{
-                  color: activeButton === "high-school" ? "#fff" : "#607B96",
-                }}
+                sx={(theme) => ({
+                  color: activeButton === "high-school" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+                })}
               >
                 <SchoolIcon />
                 <ListItemText
@@ -270,25 +272,25 @@ const AboutMe: React.FC = () => {
           </Collapse>
 
           <ListItemButton
-            className={classes.aboutContactContainer}
-            onClick={() => {
-              handleClickContact();
-              setActiveContactButton((prevState) =>
-                prevState === "contact" ? "" : "contact"
-              );
-            }}
-            style={{
-              color: activeContactButton === "contact" ? "#fff" : "#607B96",
-            }}
-          >
-            {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-            <ListItemText primary="contact" />
-          </ListItemButton>
-          <Collapse in={openContact} timeout="auto" unmountOnExit>
-            {/* leftContact */}
-            <LeftContact />
-          </Collapse>
-        </List>
+  className={classes.aboutContactContainer}
+  onClick={() => {
+    handleClickContact();
+    setActiveContactButton((prevState) =>
+      prevState === "contact" ? "" : "contact"
+    );
+  }}
+  sx={(theme) => ({
+    color: activeContactButton === "contact" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+  })}
+>
+  {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+  <ListItemText primary="contact" />
+</ListItemButton>
+<Collapse in={openContact} timeout="auto" unmountOnExit>
+  {/* leftContact */}
+  <LeftContact />
+</Collapse>
+</List>
         {/* Template */}
         <Box className={classes.aboutNextContainer}>
           <TemplateAbout {...templateProps} />

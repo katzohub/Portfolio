@@ -27,7 +27,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: `${theme.myColors.whiteColor} !important`,
+      color: `${theme.myColors.colorFFF} !important`,
     },
   },
   aboutContainer: {
@@ -59,7 +59,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     borderBottom: `1px solid ${theme.myColors.colorLinie}`,
     left: "30px",
-    color: `${theme.myColors.whiteColor} !important`,
+    color: `${theme.myColors.colorFFF} !important`,
     fontFamily: "Fira Code !important",
     fontSize: "16px !important",
     fontStyle: "normal",
@@ -85,7 +85,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutTextRight: {
-    color: theme.myColors.textColorNav,
+    color: `${theme.myColors.colorNonActive} !important`,
     position: "relative",
     left: "105px",
     fontFamily: "Fira Code",
@@ -123,7 +123,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     left: "15px",
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: `${theme.myColors.whiteColor} !important`,
+      color: `${theme.myColors.colorFFF} !important`,
     },
     [theme.breakpoints.down("md")]: {
       width: "90%",
@@ -152,7 +152,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
     "&:hover": {
       transition: "color 0.3s ease-in",
-      color: `${theme.myColors.whiteColor} !important`,
+      color: `${theme.myColors.colorFFF} !important`,
     },
     [theme.breakpoints.down("md")]: {
       display: "none !important",
@@ -325,7 +325,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   projectLeftNav: {
     width: "94vw",
-    color: `${theme.myColors.whiteColor} !important`,
+    color: `${theme.myColors.colorFFF} !important`,
     background: "transparent !important",
     display: "flex",
     borderBottom: `1px solid ${theme.myColors.colorLinie}`,
@@ -342,7 +342,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   projectRightText: {
-    color: theme.myColors.textColorNav,
+    color: theme.myColors.colorNonActive,
     position: "relative",
     left: "155px",
     fontFamily: "Fira Code",
@@ -558,7 +558,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: "transparent !important",
     display: "flex",
     borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
-    color: `${theme.myColors.whiteColor} !important`,
+    color: `${theme.myColors.colorFFF} !important`,
     fontFamily: "Fira Code !important",
     fontSize: "16px !important",
     fontStyle: "normal",
@@ -568,7 +568,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   contactRighttext: {
-    color: theme.myColors.textColorNav,
+    color: theme.myColors.colorNonActive,
     position: "relative",
     left: "164px",
     fontFamily: "Fira Code",
@@ -631,7 +631,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "-45px",
     width: "1px !important",
     height: "90vh",
-    background: "#1E2D3D",
+    background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
       top: "0px",
       left: "-10px",

@@ -3,10 +3,14 @@ import { ThemeOptions, createTheme } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface Theme {
     myColors: {
+      colorFFF:string;
       generalBackground: string;
+      colorBottomNavLink:string;
+      colorTextLink:string;
       colorLinie: string;
       hoverDownLinie: string;
       textColorNav: string;
+      colorNonActive:string;
       borderTableSnake:string;
       whiteColor: string;
       colorGreyText: string;
@@ -32,11 +36,15 @@ declare module "@mui/material/styles" {
   // Rozšírte ThemeOptions o vlastné vlastnosti
   interface ThemeOptions {
     myColors?: {
+      colorFFF?:string;
       generalBackground?: string;
+      colorTextLink?:string;
       colorLinie?: string;
+      colorBottomNavLink?: string;
       colorOrangeText?: string;
       hoverDownLinie?: string;
       textColorNav?: string;
+      colorNonActive?:string;
       colorGreyText?: string;
       whiteColor?: string;
       borderTableSnake?:string;
@@ -70,12 +78,16 @@ export const themeOptionsDark: ThemeOptions = createTheme({
     },
   },
   myColors: {
+    colorFFF:'#fff',
+    colorTextLink:'#607B96',
+    colorBottomNavLink:'#f2c039',
     generalBackground: "#DAB07A",
     borderTableSnake:'#888',
     colorLinie: "#fff",
     hoverDownLinie: "#fff",
     textColorNav: "#fff",
     colorGrey: "#fff",
+    colorNonActive:'#607B96',
     colorPurple: "#4D5BCE",
     colorLightOrange: "#F66B15",
     colorLightGreen: "#FF0",

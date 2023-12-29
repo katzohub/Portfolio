@@ -177,7 +177,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "105px",
     width: "1px !important",
     height: "90vh",
-    background: "#1E2D3D",
+     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
       top: "0px",
       width: "100% !important",

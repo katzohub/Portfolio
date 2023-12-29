@@ -183,7 +183,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       color: `${theme.myColors.whiteColor} !important`,
     },
+    "&.active": {
+      color: '#fff !important',
+      borderBottom: '4px solid #fea55f !important',
+    },
   },
+
   navBoxCenter: {
     fontFamily: "Fira Code",
     fontSize: "1rem",
@@ -202,6 +207,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     transition: "color 0.3s ease-in",
     "&:hover": {
       color: `${theme.myColors.whiteColor} !important`,
+    },
+    "&.active": {
+      color: '#fff !important',
+      borderBottom: '4px solid #fea55f !important',
     },
   },
 
@@ -222,6 +231,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     transition: "color 0.3s ease-in",
     "&:hover": {
       color: `${theme.myColors.whiteColor} !important`,
+    },
+    "&.active": {
+      color: '#fff !important',
+      borderBottom: '4px solid #fea55f !important',
     },
   },
   navBoxRightMinScreenGit: {

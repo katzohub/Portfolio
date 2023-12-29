@@ -31,7 +31,4 @@ body {
   overflow: hidden;
 }
 
-.active {
-  color: #fff !important;
-  border-bottom: 4px solid #fea55f !important;
-}
+

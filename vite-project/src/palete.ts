@@ -7,13 +7,16 @@ declare module "@mui/material/styles" {
       colorLinie: string;
       hoverDownLinie: string;
       textColorNav: string;
+      colorGreyText: string;
       whiteColor: string;
       colorGrey: string;
       colorPurple: string;
+      colorOrangeText: string;
       colorLightOrange: string;
       colorLightGreen: string;
       colorPurpleFolder: string;
       colorDarkBlue: string;
+      borderTableSnake:string;
       colorDarkBlack: string;
       colorDarkGrey: string;
       colorPurpleText: string;
@@ -32,6 +35,7 @@ declare module "@mui/material/styles" {
       generalBackground?: string;
       colorLinie?: string;
       hoverDownLinie?: string;
+      colorOrangeText?: string;
       textColorNav?: string;
       whiteColor?: string;
       colorGrey?: string;
@@ -40,6 +44,8 @@ declare module "@mui/material/styles" {
       colorLightGreen?: string;
       colorPurpleFolder?: string;
       colorDarkBlue?: string;
+      borderTableSnake?:string;
+      colorGreyText?: string;
       colorDarkBlack?: string;
       colorDarkGrey?: string;
       colorPurpleText?: string;
@@ -66,9 +72,12 @@ export const themeOptions: ThemeOptions = createTheme({
   myColors: {
     generalBackground: "#010C15",
     colorLinie: "#1E2D3D",
+    borderTableSnake:'#0C1616',
     hoverDownLinie: "#FEA55F",
     textColorNav: "#607B96",
+    colorGreyText: "#607B96",
     colorGrey: "#E5E9F0",
+    colorOrangeText: "#FEA55F",
     colorPurple: "#4D5BCE",
     colorLightOrange: "#E99287",
     colorLightGreen: "#43D9AD",

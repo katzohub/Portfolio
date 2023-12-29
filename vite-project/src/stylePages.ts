@@ -687,7 +687,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
   // Form Styles
   formTextOrange: {
-    color: theme.myColors.hoverDownLinie,
+    color: theme.myColors.colorOrangeText,
     fontFamily: "Fira Code",
     fontSize: "18px",
     fontStyle: "normal",
@@ -738,7 +738,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   formTextGrey: {
-    color: theme.myColors.textColorNav,
+    color: theme.myColors.colorGreyText,
     fontFamily: "Fira Code",
     fontSize: "18px",
     fontStyle: "normal",

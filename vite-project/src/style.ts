@@ -289,7 +289,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background:
       "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
     boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
-    border: "1px solid #0C1616",
+    border: `1px solid ${theme.myColors.borderTableSnake}`,
     borderRadius: "8px",
     position: "relative",
     zIndex: "9999",
@@ -337,6 +337,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     borderRadius: " 8px",
     background: "rgba(1, 20, 35, 0.19)",
+    color:'#fff'
   },
   snakeArrowTextOne: {
     marginBottom: "8px !important",
@@ -368,6 +369,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
+    color: '#fff',
     borderRadius: "8px",
     position: "relative",
     top: "-5px",
@@ -385,6 +387,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
+    color: '#fff',
     borderRadius: "8px",
     position: "relative",
     left: "-5px",
@@ -396,6 +399,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
+    color: '#fff',
     borderRadius: "8px",
     zIndex: 4,
   },
@@ -406,6 +410,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
+    color: '#fff',
     borderRadius: "8px",
     position: "relative",
     right: "-5px",
@@ -595,7 +600,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     width: "50%",
     maxWidth: "600px",
-    zIndex: '50 !important',
+    position: "relative",
+    zIndex: '999 !important',
     [theme.breakpoints.down("xl")]: {
       width: "550px",
     },

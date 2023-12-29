@@ -134,9 +134,9 @@ const ContactForm: React.FC = () => {
           <span className={classes.formTextGrey}>2&nbsp;</span>
           <br />
           <span className={classes.formTextGrey}>3&nbsp;</span>
-          <span className={classes.formTextPink}>const</span>
-          <span className={classes.formTextPurple}>message</span>
-          <span className={classes.formTextPink}>=</span>
+          <span className={classes.formTextPink}>const </span>
+          <span className={classes.formTextPurple}>message </span>
+          <span className={classes.formTextPink}>= </span>
           <span className={classes.formTextGrey}>{`{`}</span>
           <br />
           <span className={classes.formTextGrey}>4</span>
@@ -184,7 +184,7 @@ const ContactForm: React.FC = () => {
           <span className={classes.formTextGrey}>(</span>
           <span className={classes.formTextOrange}>'click'</span>
           <span className={classes.formTextGrey}>, ()</span>
-          <span className={classes.formTextPink}>{`=>`}</span>
+          <span className={classes.formTextPink}>{` => `}</span>
           <span className={classes.formTextGrey}>{`{`}</span>
           <br />
           <span className={classes.formTextGrey}>11&nbsp;</span>

@@ -14,33 +14,34 @@ type DisplayDataProps = {
   message: string;
   date: string;
 };
-const CssTextField = styled(TextField)({
+const CssTextField = styled(TextField)(({ theme }) => ({
   "& label.Mui-focused": {
-    color: "#607B96",
+    color: theme.myColors.colorFFF,
   },
   "& label": {
-    color: "#607B96",
+    color: theme.myColors.colorFFF,
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#607B96",
+    borderBottomColor: theme.myColors.colorInputSend,
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: "#607B96",
+      borderColor: theme.myColors.colorBackInput,
     },
     "&:hover fieldset": {
-      borderColor: "#607B96",
+      borderColor: theme.myColors.colorInputSend,
     },
     "&.Mui-focused fieldset": {
-      borderColor: "#607B96",
-      boxShadow: "0px 0px 0px 2px rgba(96, 123, 150, 0.30)",
+      borderColor: theme.myColors.colorInputSend,
     },
-    backgroundColor: "#011221",
+    backgroundColor: theme.myColors.colorBackInput,
+    boxShadow: theme.myShadow.shadowTextField,
   },
   "& .MuiInputBase-input": {
-    color: "#607B96",
+    color: theme.myColors.colorFFF,
+    backgroundColor: theme.myColors.colorBackInput,
   },
-});
+}));
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -101,7 +102,11 @@ const ContactForm: React.FC = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <input type="hidden" name="_next" value="http://localhost:5173/" />
+          <input
+            type="hidden"
+            name="_next"
+            value={`${window.location.origin}/thank-you`}
+          />
           <Button
             type="submit"
             variant="contained"

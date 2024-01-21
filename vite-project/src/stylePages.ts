@@ -32,6 +32,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutContainer: {
     width: "100%",
+    height: "100vh",
     display: "flex",
     [theme.breakpoints.down("md")]: {
       overflowY: "auto",
@@ -45,7 +46,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie}`,
-    height: "92vh",
+    height: "auto",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
@@ -163,6 +164,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "space-evenly",
+    height: "auto",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
     },
@@ -307,6 +309,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   //Project
   projectContainer: {
     width: "100%",
+    height: "100vh",
     display: "flex",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
@@ -317,7 +320,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie}`,
-    height: "92vh",
+    height: "auto",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
@@ -384,6 +387,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
+    height: "auto",
   },
   skillWrap: {
     position: "relative",
@@ -524,6 +528,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   //ContactMe
   contactContainer: {
     width: "100%",
+    height: "100vh",
     display: "flex",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
@@ -534,7 +539,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "267px",
     marginTop: "56px !important",
     borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
-    height: "92vh",
+    height: "auto",
     [theme.breakpoints.down("md")]: {
       marginTop: "50px !important",
       width: "100vw",
@@ -608,7 +613,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "150px",
     margin: "0 10px",
     width: "100%",
-    height: "90vh",
+    height: "auto",
     display: "flex",
     justifyContent: "space-evenly",
     [theme.breakpoints.down("lg")]: {

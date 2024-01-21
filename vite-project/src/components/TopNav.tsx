@@ -4,8 +4,9 @@ import { useThemeContext } from "../themeContext";
 import { Grid, Switch, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
 import usePageStyles from "../style";
+import { Theme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";    
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -16,8 +17,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 const TopNav = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
   const { themeMode, toggleTheme } = useThemeContext();
-  const switchChecked = themeMode === 'dark';
-
+  const switchChecked = themeMode === "dark";
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -37,31 +37,31 @@ const TopNav = () => {
           </Box>
         </Grid>
 
-        <Grid item sx={{position:'relative',left:'20px'}}>
+        <Grid item sx={{ position: "relative", left: "20px" }}>
           <Box className={classes.navBoxItem}>
-          <Switch
-          className={classes.switch}
-          icon={
-            <LightModeIcon
-              fontSize="small"
-              className={classes.switchLightIcon}
+            <Switch
+              className={classes.switch}
+              icon={
+                <LightModeIcon
+                  fontSize="small"
+                  className={classes.switchLightIcon}
+                />
+              }
+              checkedIcon={
+                <DarkModeIcon
+                  fontSize="small"
+                  className={classes.switchDarkIcon}
+                />
+              }
+              checked={switchChecked}
+              onChange={toggleTheme}
             />
-          }
-          checkedIcon={
-            <DarkModeIcon fontSize="small" 
-             className={classes.switchDarkIcon} 
-            />
-          }
-           checked={switchChecked}
-           onChange={toggleTheme}
-        />
           </Box>
         </Grid>
 
         <Grid item>
-          <Grid container className={classes.navContainerThree} >
+          <Grid container className={classes.navContainerThree}>
             <Grid item>
-            
               <Box className={classes.navBoxItemCenter}>
                 <NavLink to="/" className={classes.navLinkLeft}>
                   _hello
@@ -96,16 +96,35 @@ const TopNav = () => {
       {/* // Mobile Navigation */}
       <nav className={classes.mobileNavigationContainer}>
         <Box className={classes.boxMobileNav}>
-          <Typography style={{ color: isMenuOpen ? "white" : "#607B96" }}>
+          <Typography
+            sx={(theme: Theme) => ({
+              color: isMenuOpen
+                ? theme.myColors.colorFFF
+                : theme.myColors.textColorNav,
+            })}
+          >
             tomas-olsiak
           </Typography>
           {isMenuOpen ? (
             <CloseIcon
               onClick={toggleMenu}
               className={classes.iconCloseMobileNav}
+              sx={(theme: Theme) => ({
+                color: isMenuOpen
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.textColorNav,
+              })}
             />
           ) : (
-            <MenuIcon onClick={toggleMenu} className={classes.iconMobileNav} />
+            <MenuIcon
+              onClick={toggleMenu}
+              className={classes.iconMobileNav}
+              sx={(theme: Theme) => ({
+                color: isMenuOpen
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.textColorNav,
+              })}
+            />
           )}
         </Box>
 
@@ -114,19 +133,22 @@ const TopNav = () => {
           direction="column"
           alignItems={"flex-start"}
           justifyContent={"start"}
-          sx={{
+          sx={(theme: Theme) => ({
             position: "absolute",
             overflow: "hidden",
             width: "100%",
             minHeight: isMenuOpen ? "100vh" : "0",
-            backgroundColor: isMenuOpen ? "#011627" : "transparent",
+            backgroundColor: isMenuOpen
+              ? theme.myColors.generalBackground
+              : "transparent",
+
             color: "white",
             padding: "10px 20px",
             flexDirection: "column",
             transition: "max-height 0.3s ease, background-color 0.3s ease",
             visibility: isMenuOpen ? "visible" : "hidden",
             zIndex: 10,
-          }}
+          })}
         >
           <NavLink
             onClick={() => handleNavLinkClick("/")}
@@ -156,10 +178,7 @@ const TopNav = () => {
           >
             _contact-me
           </NavLink>
-          <nav
-            className={classes.bootomNavContainer}
-            // style={{ bottom: "56px", overflow: "hidden" }}
-          >
+          <nav className={classes.bootomNavContainer}>
             <Grid item sx={{ position: "relative", left: "20px" }}>
               <Box className={classes.navBoxItem}>
                 <div className={classes.navLink}>find me in:</div>

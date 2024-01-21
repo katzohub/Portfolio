@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
-  backColor:{
+  backColor: {
     backgroundColor: theme.myColors.generalBackground,
   },
   // mobielNavigation
@@ -15,25 +15,25 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     textAlign: "center",
     padding: "10px 20px",
-    borderBottom: "1px solid #1E2D3D",
+    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
     height: "50px",
-    backgroundColor: "#010c15",
+    backgroundColor: theme.myColors.colorNavBar,
     zIndex: 9999,
   },
   iconMobileNav: {
-    color: "#607B96",
+    //  color: "#607B96",
     transition: "transform 0.3s ease",
     cursor: "pointer",
   },
   iconCloseMobileNav: {
-    color: "white",
+    // color: "white",
     transition: "transform 0.3s ease",
     cursor: "pointer",
   },
   linkHomeMobileNav: {
     marginTop: "50px",
     padding: "10px 0",
-    borderBottom: "1px solid #1E2D3D",
+    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
     width: "90vw",
     color: "#607B96",
     transition: "color 0.3s ease",
@@ -44,7 +44,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   nextLinkMobileNav: {
     color: "#607B96",
     padding: "10px 0",
-    borderBottom: "1px solid #1E2D3D",
+    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
     transition: "color 0.3s ease",
     width: "90vw",
     "&:hover": {
@@ -57,12 +57,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     bottom: "0",
     left: "0px",
     width: "100vw",
-    borderTop: `1px solid #1E2D3D`,
+    borderTop: `1px solid ${theme.myColors.colorLinie}`,
     height: "56px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "#010c15",
+    background: theme.myColors.colorNavBar,
     zIndex: 999,
   },
   // component Navigation navLinkLeft
@@ -128,25 +128,25 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   // component Navigation navLinkLeft
   switch: {
-    transform: 'scale(1.3)',
-    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-      backgroundColor: '#092E40 !important',
+    transform: "scale(1.3)",
+    "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+      backgroundColor: "#092E40 !important",
     },
-    '& .MuiSwitch-track': {
-      backgroundColor: '#FCE8B3 !important',
+    "& .MuiSwitch-track": {
+      backgroundColor: "#FCE8B3 !important",
     },
   },
   switchLightIcon: {
-    color: '#fff',
-    background: '#F2C039',
-    borderRadius: '50%',
-    padding: '4px',
+    color: "#fff",
+    background: "#F2C039",
+    borderRadius: "50%",
+    padding: "4px",
   },
   switchDarkIcon: {
-    color: '#fff',
-    background: '#25AFEE',
-    borderRadius: '50%',
-    padding: '4px',
+    color: "#fff",
+    background: "#25AFEE",
+    borderRadius: "50%",
+    padding: "4px",
   },
   navContainerThree: {
     height: "100%",
@@ -354,7 +354,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     borderRadius: " 8px",
     background: "rgba(1, 20, 35, 0.19)",
-    color:'#fff'
+    color: "#fff",
   },
   snakeArrowTextOne: {
     marginBottom: "8px !important",
@@ -386,7 +386,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
-    color: '#fff',
+    color: "#fff",
     borderRadius: "8px",
     position: "relative",
     top: "-5px",
@@ -404,7 +404,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
-    color: '#fff',
+    color: "#fff",
     borderRadius: "8px",
     position: "relative",
     left: "-5px",
@@ -416,7 +416,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
-    color: '#fff',
+    color: "#fff",
     borderRadius: "8px",
     zIndex: 4,
   },
@@ -427,7 +427,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     background: "black",
-    color: '#fff',
+    color: "#fff",
     borderRadius: "8px",
     position: "relative",
     right: "-5px",
@@ -618,7 +618,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "50%",
     maxWidth: "600px",
     position: "relative",
-    zIndex: '999 !important',
+    zIndex: "999 !important",
     [theme.breakpoints.down("xl")]: {
       width: "550px",
     },

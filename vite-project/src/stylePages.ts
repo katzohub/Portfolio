@@ -1,12 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-// [theme.breakpoints.down("md")]: {
-//   display: "none !important",
-// },
-// [theme.breakpoints.down("md")]: {
-//   width: "90%",
-//   borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
-// },
+
 const usePageStyles = makeStyles((theme: Theme) => ({
   projectAlert: {
     [theme.breakpoints.down("md")]: {

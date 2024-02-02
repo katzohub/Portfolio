@@ -108,7 +108,7 @@ export const themeOptionsDark: ThemeOptions = createTheme({
     whiteColor: "#607B96",
     colorPurpleFolder: "#fff",
     colorDarkBlue: "#DAB07A",
-    colorDarkBlack: "#fff",
+    colorDarkBlack: "#dab07a",
     colorDarkGrey: "#fff",
     colorTextCard: "#fff",
     colorOrangeText: "#f66b15",

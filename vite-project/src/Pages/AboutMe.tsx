@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import {
   ListSubheader,
   List,
@@ -10,7 +10,6 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import { MenuContext } from "../MenuProvider";
 import SchoolIcon from "@mui/icons-material/School";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -44,7 +43,7 @@ const AboutMe: React.FC = () => {
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [openContact, setOpenContact] = useState<boolean>(false);
-  const { isMenuOpen } = useContext(MenuContext);
+
   const [templateProps, setTemplateProps] = useState<TemplateProps>({
     textOne: "Hi There",
     textTwo: "I am Tomas and 25 year old",
@@ -144,12 +143,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <>
-      <Box
-        className={classes.aboutContainer}
-        sx={{
-          display: isMenuOpen ? "none" : "flex",
-        }}
-      >
+      <Box className={classes.aboutContainer}>
         <List
           className={classes.aboutLeftNavContainer}
           component="nav"
@@ -177,7 +171,10 @@ const AboutMe: React.FC = () => {
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
             sx={(theme) => ({
-              color: activeButton === "bio" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+              color:
+                activeButton === "bio"
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.colorNonActive,
             })}
             onClick={() => {
               handleBioClick();
@@ -199,7 +196,10 @@ const AboutMe: React.FC = () => {
               setActiveButton("interests");
             }}
             sx={(theme) => ({
-              color: activeButton === "interests" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+              color:
+                activeButton === "interests"
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.colorNonActive,
             })}
           >
             <ChevronRightIcon />
@@ -215,9 +215,11 @@ const AboutMe: React.FC = () => {
 
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
-            
             sx={(theme) => ({
-              color: activeButton === "education" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+              color:
+                activeButton === "education"
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.colorNonActive,
             })}
             onClick={() => {
               handleClick();
@@ -241,9 +243,11 @@ const AboutMe: React.FC = () => {
                   handlePrimarySchoolClick();
                   setActiveButton("primary-school");
                 }}
-                
                 sx={(theme) => ({
-                  color: activeButton === "primary-school" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+                  color:
+                    activeButton === "primary-school"
+                      ? theme.myColors.colorFFF
+                      : theme.myColors.colorNonActive,
                 })}
               >
                 <SchoolIcon />
@@ -259,7 +263,10 @@ const AboutMe: React.FC = () => {
                   setActiveButton("high-school");
                 }}
                 sx={(theme) => ({
-                  color: activeButton === "high-school" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+                  color:
+                    activeButton === "high-school"
+                      ? theme.myColors.colorFFF
+                      : theme.myColors.colorNonActive,
                 })}
               >
                 <SchoolIcon />
@@ -272,25 +279,28 @@ const AboutMe: React.FC = () => {
           </Collapse>
 
           <ListItemButton
-  className={classes.aboutContactContainer}
-  onClick={() => {
-    handleClickContact();
-    setActiveContactButton((prevState) =>
-      prevState === "contact" ? "" : "contact"
-    );
-  }}
-  sx={(theme) => ({
-    color: activeContactButton === "contact" ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
-  })}
->
-  {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-  <ListItemText primary="contact" />
-</ListItemButton>
-<Collapse in={openContact} timeout="auto" unmountOnExit>
-  {/* leftContact */}
-  <LeftContact />
-</Collapse>
-</List>
+            className={classes.aboutContactContainer}
+            onClick={() => {
+              handleClickContact();
+              setActiveContactButton((prevState) =>
+                prevState === "contact" ? "" : "contact"
+              );
+            }}
+            sx={(theme) => ({
+              color:
+                activeContactButton === "contact"
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.colorNonActive,
+            })}
+          >
+            {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            <ListItemText primary="contact" />
+          </ListItemButton>
+          <Collapse in={openContact} timeout="auto" unmountOnExit>
+            {/* leftContact */}
+            <LeftContact />
+          </Collapse>
+        </List>
         {/* Template */}
         <Box className={classes.aboutNextContainer}>
           <TemplateAbout {...templateProps} />

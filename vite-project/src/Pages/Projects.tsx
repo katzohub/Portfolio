@@ -1,5 +1,4 @@
-import { useState, useContext } from "react";
-import { MenuContext } from "../MenuProvider";
+import { useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -78,7 +77,7 @@ const Projects: React.FC = () => {
     react: false,
     firebase: false,
   });
-  const { isMenuOpen } = useContext(MenuContext);
+
   const areAllCheckboxesFalse = () => {
     return Object.values(checkedState).every((value) => !value);
   };
@@ -109,10 +108,7 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <Box
-        className={classes.projectContainer}
-        sx={{ display: isMenuOpen ? "none" : "flex" }}
-      >
+      <Box className={classes.projectContainer}>
         <List
           className={classes.projectList}
           component="nav"

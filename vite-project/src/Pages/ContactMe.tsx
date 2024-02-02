@@ -1,5 +1,4 @@
-import { useState, useContext } from "react";
-import { MenuContext } from "../MenuProvider";
+import { useState } from "react";
 import {
   List,
   ListSubheader,
@@ -22,7 +21,6 @@ const ContactMe = () => {
   const [openFindMe, setOpenFindMe] = useState<boolean>(false);
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [activeButton, setActiveButton] = useState<string>("");
-  const { isMenuOpen } = useContext(MenuContext);
   const handleClickContact = () => {
     setOpenFindMe(!openFindMe);
     console.log("openFindMe:", openFindMe);
@@ -34,12 +32,7 @@ const ContactMe = () => {
   const classes = usePageStyles();
   return (
     <>
-      <Box
-        className={classes.contactContainer}
-        sx={{
-          display: isMenuOpen ? "none" : "flex",
-        }}
-      >
+      <Box className={classes.contactContainer}>
         <List
           className={classes.contactList}
           component="nav"

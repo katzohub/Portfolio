@@ -71,15 +71,15 @@ const ContactMe = () => {
             <ListItemText primary="contact" />
             {openFindMeContact ? (
               <Divider
-                sx={{
+                sx={(theme) => ({
                   position: "relative",
                   top: "25px",
                   left: "-40px",
-                  background: "#1e2d3d",
+                  background: theme.myColors.colorLinie,
                   height: "1px",
-                  zIndex: 999,
+                  zIndex: 9,
                   width: "100vw",
-                }}
+                })}
               />
             ) : (
               ""

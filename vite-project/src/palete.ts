@@ -16,6 +16,7 @@ declare module "@mui/material/styles" {
       colorTextCard: string;
       colorBackInput: string;
       whiteColor: string;
+
       colorGrey: string;
       colorPurple: string;
       colorOrangeText: string;

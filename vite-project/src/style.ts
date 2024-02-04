@@ -10,6 +10,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "absolute",
     top: "0",
     width: "100vw",
+
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -113,7 +114,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     cursor: "default",
   },
   navLink: {
-    fontFamily: "Fira Code",
+    fontFamily: "Fira Code !important",
     fontSize: "1rem",
     fontStyle: "normal",
     fontWeight: 450,
@@ -316,10 +317,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   snakeBackEffectGreen: {
     [theme.breakpoints.up("sm")]: {
-      zIndex: "0",
+      zIndex: "-10",
       position: "absolute",
-      top: -100,
-      left: -50,
+      top: -150,
+      left: -80,
       transform: "scale(0.9)",
     },
     [theme.breakpoints.down("sm")]: {
@@ -328,10 +329,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   snakeBackEffectPurple: {
     [theme.breakpoints.up("sm")]: {
-      zIndex: "0",
+      zIndex: "-10",
       position: "absolute",
-      bottom: -30,
-      right: 30,
+      bottom: -50,
+      right: -70,
       transform: "scale(0.9)",
     },
     [theme.breakpoints.down("sm")]: {
@@ -467,6 +468,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "block",
       transform: "scale(0.7)",
     },
+    [theme.breakpoints.down("sm")]: {
+      transform: "scale(0.5)",
+      top: "150px",
+    },
   },
   leftHeaderPurple: {
     display: "none",
@@ -477,13 +482,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "block",
       transform: "scale(0.7)",
     },
+    [theme.breakpoints.down("sm")]: {
+      transform: "scale(0.5)",
+      top: "10px",
+    },
   },
 
   leftHeaderBox: {
     width: "100%",
     height: "100vh",
     justifyContent: "space-around",
-    padding: "50px 0px 50px 15px",
+    padding: "70px 0px 70px 15px",
     [theme.breakpoints.down("md")]: {
       justifyContent: "space-evenly",
     },
@@ -504,7 +513,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: `${theme.myColors.colorGrey} !important`,
     fontSize: "18px !important",
     fontStyle: "normal",
-    fontWeight: 450,
     lineHeight: "normal",
   },
   leftHeaderH1: {
@@ -512,7 +520,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: `${theme.myColors.colorGrey} !important`,
     fontSize: "62px !important",
     fontStyle: "normal",
-    fontWeight: 400,
+    fontWeight: 600,
     lineHeight: "normal",
     [theme.breakpoints.down("md")]: {
       fontSize: "72px !important",
@@ -523,16 +531,20 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: `${theme.myColors.colorPurple} !important`,
     fontSize: "30px !important",
     fontStyle: "normal",
-    fontWeight: 450,
+    fontWeight: 600,
     lineHeight: "normal",
   },
   leftHeaderP: {
-    fontFamily: "Fira Code",
+    fontFamily: "Fira Code !important",
     color: `${theme.myColors.textColorNav} !important`,
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 450,
+    padding: "2.5px 0",
     lineHeight: "normal",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px !important",
+    },
   },
   leftHeaderSpanOne: {
     fontFamily: "Fira Code",
@@ -606,6 +618,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     [theme.breakpoints.down("lg")]: {
       width: "550px",
+      position: "relative",
+      top: "50px",
     },
     [theme.breakpoints.down("md")]: {
       width: "400px",

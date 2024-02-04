@@ -96,15 +96,39 @@ const TopNav = () => {
       {/* // Mobile Navigation */}
       <nav className={classes.mobileNavigationContainer}>
         <Box className={classes.boxMobileNav}>
-          <Typography
-            sx={(theme: Theme) => ({
-              color: isMenuOpen
-                ? theme.myColors.colorFFF
-                : theme.myColors.textColorNav,
-            })}
-          >
-            tomas-olsiak
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Typography
+              sx={(theme: Theme) => ({
+                fontFamily: "Fira Code",
+                color: isMenuOpen
+                  ? theme.myColors.colorFFF
+                  : theme.myColors.textColorNav,
+              })}
+            >
+              tomas-olsiak
+            </Typography>
+            <Grid item sx={{ position: "relative", left: "10px" }}>
+              <Box className={classes.navBoxItem}>
+                <Switch
+                  className={classes.switch}
+                  icon={
+                    <LightModeIcon
+                      fontSize="small"
+                      className={classes.switchLightIcon}
+                    />
+                  }
+                  checkedIcon={
+                    <DarkModeIcon
+                      fontSize="small"
+                      className={classes.switchDarkIcon}
+                    />
+                  }
+                  checked={switchChecked}
+                  onChange={toggleTheme}
+                />
+              </Box>
+            </Grid>
+          </Box>
           {isMenuOpen ? (
             <CloseIcon
               onClick={toggleMenu}

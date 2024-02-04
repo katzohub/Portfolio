@@ -41,19 +41,7 @@ const AlretCheckBox = () => {
   return (
     <>
       <Box className={classes.projectAlert}>
-        <h1
-          style={{
-            position: "absolute",
-            top: "35%",
-            left: "50%",
-            width: "350px",
-            height: "250px",
-            color: "#fff",
-            fontFamily: "Fira Code",
-            fontStyle: "normal",
-            fontWeight: 450,
-          }}
-        >
+        <h1 className={classes.skillTextAlert}>
           Sorry.
           <br />
           Please one checkbox click and view mine project.

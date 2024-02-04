@@ -39,8 +39,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutLeftNavContainer: {
     width: "267px",
     marginTop: "56px !important",
-    borderRight: `1px solid ${theme.myColors.colorLinie}`,
+    borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "auto",
+
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
@@ -59,6 +60,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 400,
+    backgroundColor: `${theme.myColors.generalBackground} !important`,
+    zIndex: 1000,
     [theme.breakpoints.down("md")]: {
       width: "auto !important",
       borderBottom: `1px solid transparent`,
@@ -85,6 +88,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutTextRight: {
     color: `${theme.myColors.colorNonActive} !important`,
+    borderLeft: `1px solid ${theme.myColors.colorLinie} !important`,
+    marginLeft: "-12px",
+    paddingLeft: "15px",
     position: "relative",
     left: "105px",
     fontFamily: "Fira Code",
@@ -164,9 +170,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "auto",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
+      overflowY: "auto",
     },
     [theme.breakpoints.down("md")]: {
       display: "block",
+
       marginTop: "20px",
       marginBottom: "100px",
     },
@@ -254,11 +262,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("lg")]: {
+      //  height: "auto",
+
       height: "auto",
-      marginTop: "100px",
+      paddingTop: "00px",
+      marginTop: "300px",
     },
     [theme.breakpoints.down("md")]: {
       margin: "0px",
+      paddingTop: "0px",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: ".8rem",
@@ -626,30 +638,29 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   //contactForm
   contactFormContainer: {
-    overflowY: "auto",
     position: "relative",
-    margin: "20 10px",
+    paddingTop: "100px",
     width: "100%",
     height: "auto",
     display: "flex",
+    overflowY: "hidden",
     justifyContent: "space-evenly",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
+      justifyContent: "space-between",
       alignItems: "center",
-      paddingTop: "200px",
+      paddingTop: "150px",
       paddingBottom: "100px",
-      height: "80vh",
+      minHeight: "80vh",
     },
     [theme.breakpoints.down("md")]: {
+      paddingTop: "40px",
       top: "0px",
+      overflowY: "auto",
       margin: "0 0px",
       height: "auto",
-      overflwY: "auto !important",
-      marginBottom: "0px !important",
-    },
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: "300px",
-      paddingBottom: "100px",
+      overfowY: "auto !important",
+      paddingBottom: "180px !important",
     },
   },
   contactFormDivider: {
@@ -671,10 +682,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactFormWrap: {
     width: "100%",
     maxWidth: "500px",
+    position: "relative",
+
     [theme.breakpoints.down("xl")]: {
       maxWidth: "350px",
     },
     [theme.breakpoints.down("lg")]: {
+      top: "-30px",
       maxWidth: "450px",
     },
     [theme.breakpoints.down("sm")]: {

@@ -70,6 +70,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   navContainer: {
     position: "absolute",
     top: "0",
+
     left: "30px",
     width: "94vw",
     borderBlockEnd: `1px solid ${theme.myColors.colorLinie}`,
@@ -77,6 +78,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
+    background: `${theme.myColors.generalBackground} !important`,
     zIndex: "9999",
     [theme.breakpoints.down("md")]: {
       display: "none",
@@ -463,28 +465,28 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "none",
     [theme.breakpoints.down("md")]: {
       position: "absolute",
-      top: "200px",
+      top: "120px",
       left: "-220px",
       display: "block",
       transform: "scale(0.7)",
     },
     [theme.breakpoints.down("sm")]: {
-      transform: "scale(0.5)",
-      top: "150px",
+      transform: "scale(0.7)",
+      top: "10px",
     },
   },
   leftHeaderPurple: {
     display: "none",
     [theme.breakpoints.down("md")]: {
       position: "absolute",
-      top: "0px",
+      top: "-110px",
       right: "-200px",
       display: "block",
       transform: "scale(0.7)",
     },
+
     [theme.breakpoints.down("sm")]: {
-      transform: "scale(0.5)",
-      top: "10px",
+      top: "-200px",
     },
   },
 
@@ -495,6 +497,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     padding: "70px 0px 70px 15px",
     [theme.breakpoints.down("md")]: {
       justifyContent: "space-evenly",
+    },
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      top: "-70px",
     },
   },
 
@@ -525,6 +531,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       fontSize: "72px !important",
     },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "42px !important",
+    },
   },
   leftHeaderH2: {
     fontFamily: "Fira Code !important",
@@ -533,6 +542,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "normal",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "24px !important",
+    },
   },
   leftHeaderP: {
     fontFamily: "Fira Code !important",
@@ -616,6 +628,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100%",
     display: "flex",
     justifyContent: "center",
+
     [theme.breakpoints.down("lg")]: {
       width: "550px",
       position: "relative",

@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   color: #fff;
   overflow-x: hidden;
+  overflow-y: auto;
   /* // background-color: #000 !important; */
   font-family: "Fira Code", monospace;
   font-family: "Mulish", sans-serif;
@@ -30,5 +31,3 @@ body {
   position: relative;
   overflow: hidden;
 }
-
-

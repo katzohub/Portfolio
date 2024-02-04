@@ -118,8 +118,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     left: "-20px",
   },
   aboutBtnEducationStyle: {
-    position: "relative",
-    left: "15px",
+    paddingLeft: "30px !important",
     "&:hover": {
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.colorFFF} !important`,
@@ -298,7 +297,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   leftContactIcon: {
-    marginRight: "10px",
+    position: "relative",
+    left: "-10px",
   },
 
   //Project

@@ -149,7 +149,7 @@ const ContactForm: React.FC = () => {
           <span className={classes.formTextGrey}>:</span>
           <span
             className={classes.formTextOrange}
-          >{`${displayData.name}`}</span>
+          >{`"${displayData.name}"`}</span>
           <br />
           <span className={classes.formTextGrey}>5</span>
           &nbsp;&nbsp;
@@ -157,7 +157,7 @@ const ContactForm: React.FC = () => {
           <span className={classes.formTextGrey}>:</span>
           <span
             className={classes.formTextOrange}
-          >{` ${displayData.email}`}</span>
+          >{`"${displayData.email}"`}</span>
           <br />
           <span className={classes.formTextGrey}>6</span>
           &nbsp;&nbsp;
@@ -165,14 +165,14 @@ const ContactForm: React.FC = () => {
           <span className={classes.formTextGrey}>:</span>
           <span
             className={classes.formTextOrange}
-          >{` ${displayData.message}`}</span>
+          >{`"${displayData.message}"`}</span>
           &nbsp;&nbsp;
           <br />
           <span className={classes.formTextGrey}>7&nbsp;</span>
           <span className={classes.formTextGrey}>Date:</span>
           <span
             className={classes.formTextOrange}
-          >{`${displayData.date}`}</span>
+          >{`"${displayData.date}"`}</span>
           &nbsp;&nbsp;
           <br />
           <span className={classes.formTextGrey}>8&nbsp;</span>

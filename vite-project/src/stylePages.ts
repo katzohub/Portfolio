@@ -283,14 +283,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   // LeftContact
   leftContactLink: {
     textDecoration: "none",
-    color: theme.myColors.textColorNav,
-    [theme.breakpoints.down("md")]: {
-      // display: "none",
-    },
+    color: theme.myColors.colorNonActive,
   },
   leftFindMeIn: {
     textDecoration: "none",
-    color: theme.myColors.textColorNav,
+    color: theme.myColors.colorNonActive,
   },
   leftContactBtn: {
     position: "relative",
@@ -416,7 +413,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   skillBoxDividerTop: {
-    background: "#1E2D3D !important",
+    background: `${theme.myColors.colorLinie} !important`,
     height: "1px !important",
     width: "100vw",
   },
@@ -450,7 +447,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   skillBoxDividerDown: {
-    background: "#1E2D3D !important",
+    background: `${theme.myColors.colorLinie} !important`,
     height: "1px !important",
     width: "100%",
   },
@@ -508,6 +505,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   skillCardText: {
     fontSize: "1em",
+    fontWeight: "600 !important",
   },
   skillCardContainer: {
     position: "absolute",

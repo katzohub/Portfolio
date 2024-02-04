@@ -96,6 +96,12 @@ const ContactMe = () => {
           </Collapse>
 
           <ListItemButton
+            sx={{
+              "&:hover": {
+                color: "#fff !important",
+                transition: "color 0.2s ease-in",
+              },
+            }}
             onClick={() => {
               handleClickContact();
               setActiveContactButton((prevState) =>

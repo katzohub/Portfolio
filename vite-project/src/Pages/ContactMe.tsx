@@ -55,6 +55,12 @@ const ContactMe = () => {
             <LeftContact />
           </Box>
           <ListItemButton
+            sx={{
+              "&:hover": {
+                color: "#fff !important",
+                transition: "color 0.2s ease-in",
+              },
+            }}
             className={classes.contactBoxMaxWidth}
             onClick={() => {
               handleClickContactOne();

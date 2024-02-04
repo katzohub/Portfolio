@@ -370,7 +370,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   projectHoverBox: {
     "&:hover": {
-      color: theme.myColors.whiteColor,
+      color: theme.myColors.colorFFF,
       transition: "color 0.3s ease-in",
     },
   },
@@ -562,6 +562,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       marginTop: "50px !important",
       width: "100vw",
       height: "auto",
+      marginBottom: "100px",
     },
   },
   contactBoxMinWidth: {
@@ -627,9 +628,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   //contactForm
   contactFormContainer: {
+    overflowY: "auto",
     position: "relative",
-    top: "150px",
-    margin: "0 10px",
+    margin: "20 10px",
     width: "100%",
     height: "auto",
     display: "flex",
@@ -637,7 +638,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       alignItems: "center",
-      top: "105px",
+      paddingTop: "200px",
+      paddingBottom: "100px",
       height: "80vh",
     },
     [theme.breakpoints.down("md")]: {
@@ -645,8 +647,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       margin: "0 0px",
       height: "auto",
       overflwY: "auto !important",
-      marginTop: "10px",
-      marginBottom: "100px !important",
+      marginBottom: "0px !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "300px",
+      paddingBottom: "100px",
     },
   },
   contactFormDivider: {

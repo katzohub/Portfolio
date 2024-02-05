@@ -31,6 +31,7 @@ declare module "@mui/material/styles" {
       colorPurpleText: string;
       colorPinkText: string;
       colorInputSend: string;
+      colorInCard: string;
     };
     myShadow: {
       shadowSideBar: string;
@@ -70,6 +71,7 @@ declare module "@mui/material/styles" {
       colorDarkGrey?: string;
       colorPurpleText?: string;
       colorPinkText?: string;
+      colorInCard?: string;
       colorInputSend?: string;
     };
     myShadow?: {
@@ -120,6 +122,7 @@ export const themeOptions: ThemeOptions = createTheme({
     colorBackInput: "#011221",
     colorTextInput: "#607B96",
     colorNavBar: "#010c15",
+    colorInCard: "#011221",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

@@ -222,7 +222,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutNextMiniWrap: {
     borderRadius: "15px",
     border: `1px solid ${theme.myColors.colorLinie}`,
-    background: theme.myColors.colorDarkBlue,
+    background: theme.myColors.colorInCard,
     padding: "7px 12.5px",
     [theme.breakpoints.down("sm")]: {
       padding: "10px 7.5px",
@@ -233,7 +233,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "50px",
     borderRadius: "15px",
     border: `1px solid ${theme.myColors.colorLinie}`,
-    background: theme.myColors.colorDarkBlue,
+    background: theme.myColors.colorInCard,
     padding: "15px 20px",
     display: "flex",
     flexDirection: "column",
@@ -482,7 +482,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   skillCard: {
     borderRadius: "15px",
     border: `1px solid ${theme.myColors.colorLinie} `,
-    background: theme.myColors.colorDarkBlue,
+    background: theme.myColors.colorInCard,
     maxWidth: "100%",
     height: "420px",
     overflow: "hidden",
@@ -746,9 +746,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: ".7rem",
-      fontWeight: 400,
-      lineHeight: "0%",
+      fontSize: "12px",
     },
   },
   formTextPurple: {
@@ -763,9 +761,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: ".7rem",
-      fontWeight: 400,
-      lineHeight: "0%",
+      fontSize: "12px",
     },
   },
   formTextPink: {
@@ -780,9 +776,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: ".7rem",
-      fontWeight: 400,
-      lineHeight: "0%",
+      fontSize: "12px",
     },
   },
   formTextGrey: {
@@ -797,9 +791,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      lineHeight: "0%",
-      fontSize: ".7rem",
-      fontWeight: 400,
+      fontSize: "12px",
     },
   },
   // Thank You

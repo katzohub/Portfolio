@@ -105,7 +105,7 @@ const Projects: React.FC = () => {
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{ position: "relative", left: "30px" }}
+              sx={{ position: "relative", left: "30px", zIndex: 1 }}
               className={classes.projectLeftNav}
             >
               {" "}

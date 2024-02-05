@@ -592,11 +592,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: "transparent !important",
     display: "flex",
     borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+
     color: `${theme.myColors.colorFFF} !important`,
     fontFamily: "Fira Code !important",
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 400,
+    backgroundColor: `${theme.myColors.generalBackground} !important`,
+    position: "relative",
+    zIndex: 1000,
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -604,7 +608,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactRighttext: {
     color: theme.myColors.colorNonActive,
     position: "relative",
-    left: "164px",
+    left: "152px",
+    paddingLeft: "15px",
+    borderLeft: `1px solid ${theme.myColors.colorLinie} !important`,
     fontFamily: "Fira Code",
     fontSize: "16px",
     fontStyle: "normal",
@@ -645,12 +651,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     overflowY: "hidden",
     justifyContent: "space-evenly",
+
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       justifyContent: "space-between",
       alignItems: "center",
       paddingTop: "150px",
       paddingBottom: "100px",
+      overflowY: "auto",
       minHeight: "80vh",
     },
     [theme.breakpoints.down("md")]: {

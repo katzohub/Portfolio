@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 
 interface TextProps {
   textOne: string;

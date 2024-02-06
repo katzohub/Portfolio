@@ -2,7 +2,7 @@ import { Grid, Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import Blue from "../img/boobleBackground/Blue.png";
 import Green from "../img/boobleBackground/Green.png";
-import usePageStyles from "../style";
+import usePageStyles from "../styles/style";
 
 const LeftHeadertable = () => {
   const classes = usePageStyles();

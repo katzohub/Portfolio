@@ -19,7 +19,7 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LeftContact from "./LeftContact";
 import TemplateAbout from "./TemplateAbout";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 import ja from "../img/ja.png";
 
 type TemplateProps = {

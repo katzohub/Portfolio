@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 
 const ThankYou = () => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import LeftHeadertable from "./LeftHeadertable";
 import GameSnake from "./GameSnake";
 import { Box } from "@mui/material";
-import usePageStyles from "../style";
+import usePageStyles from "../styles/style";
 
 const OnePage = () => {
   const classes = usePageStyles();

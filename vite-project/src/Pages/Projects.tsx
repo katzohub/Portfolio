@@ -20,7 +20,7 @@ import {
 } from "react-icons/si";
 import { Box } from "@mui/material";
 import SkillSection from "./SkillSection";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 
 type DisplayDataProps = {
   all: boolean;

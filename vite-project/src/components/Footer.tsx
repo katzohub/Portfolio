@@ -1,5 +1,5 @@
 import { Grid, Box } from "@mui/material";
-import usePageStyles from "../style";
+import usePageStyles from "../styles/style";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CustomThemeProvider } from "./themeContext";
-import { MenuProvider } from "./MenuProvider";
+import { CustomThemeProvider } from "./context/themeContext";
+import { MenuProvider } from "./context/MenuProvider";
 import OnePage from "./components/OnePage";
 import SharedLayout from "./Pages/SharedLayout";
 import AboutMe from "./Pages/AboutMe";

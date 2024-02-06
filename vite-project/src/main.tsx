@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import "./index.css";
+import "./styles/index.css";
 import { ThemeProvider } from "@mui/material/styles";
-import { themeOptions } from "./palete.ts";
+import { themeOptions } from "./theme/palete.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

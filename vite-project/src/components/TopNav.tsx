@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { MenuContext } from "../MenuProvider";
-import { useThemeContext } from "../themeContext";
+import { MenuContext } from "../context/MenuProvider";
+import { useThemeContext } from "../context/themeContext";
 import { Grid, Switch, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
-import usePageStyles from "../style";
+import usePageStyles from "../styles/style";
 import { Theme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";

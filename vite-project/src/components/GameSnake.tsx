@@ -11,7 +11,7 @@ import {
   FaCaretDown,
 } from "react-icons/fa";
 import screenLogo from "../img/screenGame.png";
-import usePageStyles from "../style";
+import usePageStyles from "../styles/style";
 
 const gridSize = 20;
 const gridHeight = 34;

@@ -4,8 +4,8 @@ import {
   createTheme,
   ThemeProvider as MUIThemeProvider,
 } from "@mui/material/styles";
-import { themeOptions } from "./palete";
-import { themeOptionsDark } from "./paleteDark";
+import { themeOptions } from "../theme/palete";
+import { themeOptionsDark } from "../theme/paleteDark";
 
 interface ThemeContextType {
   themeMode: string;

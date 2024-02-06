@@ -14,7 +14,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ListItem from "@mui/material/ListItem";
 import ContactForm from "./ContactForm";
 import LeftContact from "./LeftContact";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 
 const ContactMe = () => {
   const [openFindMeContact, setOpenFindMeContact] = useState<boolean>(false);

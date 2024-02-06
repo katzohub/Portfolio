@@ -1,7 +1,7 @@
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 
 const LeftContact = () => {
   const classes = usePageStyles();

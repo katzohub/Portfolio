@@ -7,7 +7,7 @@ import {
   Button,
   styled,
 } from "@mui/material";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 type DisplayDataProps = {
   name: string;
   email: string;

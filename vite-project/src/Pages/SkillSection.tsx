@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import DataSkills from "./DataSkills";
-import usePageStyles from "../stylePages";
+import usePageStyles from "../styles/stylePages";
 
 type CheckedStateType = {
   all: boolean;

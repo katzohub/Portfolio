@@ -139,11 +139,24 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       backgroundColor: "#FCE8B3 !important",
     },
   },
+  switchLanguage: {
+    transform: "scale(1.3)",
+    "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+      backgroundColor: "#092E40 !important",
+    },
+    "& .MuiSwitch-track": {
+      backgroundColor: "#FCE8B3 !important",
+    },
+  },
   switchLightIcon: {
     color: "#fff",
     background: "#F2C039",
     borderRadius: "50%",
     padding: "4px",
+  },
+  switchIconLanguage: {
+    position: "relative",
+    top: "-3px",
   },
   switchDarkIcon: {
     color: "#fff",

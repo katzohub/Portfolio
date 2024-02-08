@@ -1,11 +1,14 @@
 import { Grid, Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
+import { useIntl } from "react-intl";
 import Blue from "../img/boobleBackground/Blue.png";
 import Green from "../img/boobleBackground/Green.png";
 import usePageStyles from "../styles/style";
 
 const LeftHeadertable = () => {
   const classes = usePageStyles();
+  const intl = useIntl();
+
   return (
     <>
       <Box className={classes.leftHeaderContainer}>
@@ -16,6 +19,7 @@ const LeftHeadertable = () => {
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>
               Hi all. I am
+              {intl.formatMessage({ id: "home.name" })}
             </Typography>
             <Typography variant="h1" className={classes.leftHeaderH1}>
               Tomas Olsiak

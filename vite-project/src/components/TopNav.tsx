@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { MenuContext } from "../context/MenuProvider";
 import { useThemeContext } from "../context/themeContext";
+import { LanguageContext } from "../context/LanguageProvider";
 import { Grid, Switch, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
 import usePageStyles from "../styles/style";
 import { Theme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import AmericaFlag from "../svg/AmericaFlag";
+import SlovakiaFlag from "../svg/SlovakiaFlag";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -18,6 +21,7 @@ const TopNav = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
   const { themeMode, toggleTheme } = useThemeContext();
   const switchChecked = themeMode === "dark";
+  const { language, setLanguage } = useContext(LanguageContext);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -26,6 +30,9 @@ const TopNav = () => {
   const handleNavLinkClick = (path: string) => {
     setIsMenuOpen(false);
     navigate(path);
+  };
+  const toggleLanguage = () => {
+    setLanguage(language === "en-US" ? "sk-SK" : "en-US");
   };
   const classes = usePageStyles();
   return (
@@ -36,25 +43,27 @@ const TopNav = () => {
             <div className={classes.navLink}>tomas-olsiak</div>
           </Box>
         </Grid>
-
+        {/* LANGUAGE SWITCH */}
         <Grid item sx={{ position: "relative", left: "20px" }}>
           <Box className={classes.navBoxItem}>
             <Switch
               className={classes.switch}
-              icon={
-                <LightModeIcon
-                  fontSize="small"
-                  className={classes.switchLightIcon}
-                />
-              }
-              checkedIcon={
-                <DarkModeIcon
-                  fontSize="small"
-                  className={classes.switchDarkIcon}
-                />
-              }
+              icon={<LightModeIcon className={classes.switchLightIcon} />}
+              checkedIcon={<DarkModeIcon className={classes.switchDarkIcon} />}
               checked={switchChecked}
               onChange={toggleTheme}
+            />
+          </Box>
+        </Grid>
+
+        <Grid item sx={{ position: "relative", left: "20px" }}>
+          <Box className={classes.navBoxItem}>
+            <Switch
+              className={classes.switchLanguage}
+              icon={<AmericaFlag />}
+              checkedIcon={<SlovakiaFlag />}
+              checked={language === "sk-SK"}
+              onChange={toggleLanguage}
             />
           </Box>
         </Grid>
@@ -68,6 +77,7 @@ const TopNav = () => {
                 </NavLink>
               </Box>
             </Grid>
+
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <NavLink to="/about-me" className={classes.navBoxCenter}>

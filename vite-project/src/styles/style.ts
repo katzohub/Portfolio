@@ -110,9 +110,16 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: theme.myColors.generalBackground,
     zIndex: 999,
   },
-
+  switchBox: {
+    height: "100%",
+    borderLeft: `2px solid ${theme.myColors.colorLinie}`,
+  },
   navBoxItem: {
     height: "100%",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+    left: " 10px",
     cursor: "default",
   },
   navLink: {

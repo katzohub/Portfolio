@@ -9,7 +9,7 @@ const AmericaFlag = () => {
         fillRule="evenodd"
         clipRule="evenodd"
         viewBox="0 0 524 524"
-        width={22}
+        width={20}
       >
         <g fillRule="nonzero">
           <path

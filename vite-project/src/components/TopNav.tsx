@@ -43,8 +43,12 @@ const TopNav = () => {
             <div className={classes.navLink}>tomas-olsiak</div>
           </Box>
         </Grid>
-        {/* LANGUAGE SWITCH */}
-        <Grid item sx={{ position: "relative", left: "20px" }}>
+
+        <Grid
+          item
+          className={classes.switchBox}
+          sx={{ position: "relative", left: "40px" }}
+        >
           <Box className={classes.navBoxItem}>
             <Switch
               className={classes.switch}
@@ -55,8 +59,15 @@ const TopNav = () => {
             />
           </Box>
         </Grid>
-
-        <Grid item sx={{ position: "relative", left: "20px" }}>
+        {/* LANGUAGE SWITCH */}
+        <Grid
+          item
+          className={classes.switchBox}
+          sx={{
+            position: "relative",
+            left: "60px",
+          }}
+        >
           <Box className={classes.navBoxItem}>
             <Switch
               className={classes.switchLanguage}
@@ -135,6 +146,17 @@ const TopNav = () => {
                   }
                   checked={switchChecked}
                   onChange={toggleTheme}
+                />
+              </Box>
+            </Grid>
+            <Grid item sx={{ position: "relative", left: "25px" }}>
+              <Box className={classes.navBoxItem}>
+                <Switch
+                  className={classes.switchLanguage}
+                  icon={<AmericaFlag />}
+                  checkedIcon={<SlovakiaFlag />}
+                  checked={language === "sk-SK"}
+                  onChange={toggleLanguage}
                 />
               </Box>
             </Grid>

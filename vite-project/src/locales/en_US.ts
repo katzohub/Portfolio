@@ -21,6 +21,8 @@ export default {
   /*03.About-me*/
   "about.personal": "personal-info",
   "about.me": "_about_me",
+  "about.aboutPosttitle": "about-me",
+  "about.aboutTitleCard": "About me",
   "about.bio": "bio",
   "about.interests": "interests",
   "about.education": "education",

@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { useIntl } from "react-intl";
 import usePageStyles from "../styles/stylePages";
 
 interface TextProps {
@@ -32,6 +33,7 @@ const TemplateAbout: React.FC<TextProps> = ({
   textEleven,
   textTwelve,
 }) => {
+  const intl = useIntl();
   const classes = usePageStyles();
   return (
     <>
@@ -56,7 +58,7 @@ const TemplateAbout: React.FC<TextProps> = ({
         </Box>
         <Box className={classes.tempAboutContainerText}>
           <p className={classes.tempAboutNumber}>/**</p>
-          <p>* About me</p>
+          <p>* {intl.formatMessage({ id: "about.aboutTitleCard" })}</p>
           <p>* {textOne}</p>
           <p>* {textTwo}</p>
           <p>* {textThree}</p>

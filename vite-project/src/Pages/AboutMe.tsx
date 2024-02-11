@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ListSubheader,
   List,
@@ -10,6 +10,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
+import { useIntl } from "react-intl";
 import SchoolIcon from "@mui/icons-material/School";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -43,92 +44,107 @@ const AboutMe: React.FC = () => {
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [openContact, setOpenContact] = useState<boolean>(false);
+  const intl = useIntl();
 
   const [templateProps, setTemplateProps] = useState<TemplateProps>({
-    textOne: "Hi There",
-    textTwo: "I am Tomas and 25 year old",
-    textThree: "Since 1.5.2022 I am learning programing.",
-    textFour: "My fovorite programing language",
-    textFive: "is React,Typescript/JavaScript.",
-    textSix: "I would like to have programing career.",
-    textSeven: "I like learning programing.",
-    textEight: "Please rate my projects.",
+    textOne: `${intl.formatMessage({ id: "about.bioTextOne" })}`,
+    textTwo: `${intl.formatMessage({ id: "about.bioTextTwo" })}`,
+    textThree: `${intl.formatMessage({ id: "about.bioTextThree" })}`,
+    textFour: `${intl.formatMessage({ id: "about.bioTextFour" })}`,
+    textFive: `${intl.formatMessage({ id: "about.bioTextFive" })}`,
+    textSix: `${intl.formatMessage({ id: "about.bioTextSix" })}`,
+    textSeven: `${intl.formatMessage({ id: "about.bioTextSeven" })}`,
+    textEight: `${intl.formatMessage({ id: "about.bioTextEight" })}`,
     textHelp: "*",
-    textNine: "Thank you check my portfolio.",
-    textTen: "Thank you rate my projects.",
-    textEleven: "Thank you your feed back :)",
-    textTwelve: "Goodbye, have a nice day",
+    textNine: `${intl.formatMessage({ id: "about.bioTextNine" })}`,
+    textTen: `${intl.formatMessage({ id: "about.bioTextTen" })}`,
+    textEleven: `${intl.formatMessage({ id: "about.bioTextEleven" })}`,
+    textTwelve: `${intl.formatMessage({ id: "about.bioTextTwelve" })}`,
   });
 
   const handleBioClick = () => {
     setTemplateProps({
-      textOne: "Hi There",
-      textTwo: "I am Tomas and 25 year old",
-      textThree: "Since 1.5.2022 I am learning programing.",
-      textFour: "My fovorite programing language",
-      textFive: "is React,Typescript/JavaScript.",
-      textSix: "I would like to have programing career.",
-      textSeven: "I like learning programing.",
-      textEight: "Please rate my projects.",
+      textOne: `${intl.formatMessage({ id: "about.bioTextOne" })}`,
+      textTwo: `${intl.formatMessage({ id: "about.bioTextTwo" })}`,
+      textThree: `${intl.formatMessage({ id: "about.bioTextThree" })}`,
+      textFour: `${intl.formatMessage({ id: "about.bioTextFour" })}`,
+      textFive: `${intl.formatMessage({ id: "about.bioTextFive" })}`,
+      textSix: `${intl.formatMessage({ id: "about.bioTextSix" })}`,
+      textSeven: `${intl.formatMessage({ id: "about.bioTextSeven" })}`,
+      textEight: `${intl.formatMessage({ id: "about.bioTextEight" })}`,
       textHelp: "*",
-      textNine: "Thank you check my portfolio.",
-      textTen: "Thank you rate my projects.",
-      textEleven: "Thank you your feed back :)",
-      textTwelve: "Goodbye, have a nice day",
+      textNine: `${intl.formatMessage({ id: "about.bioTextNine" })}`,
+      textTen: `${intl.formatMessage({ id: "about.bioTextTen" })}`,
+      textEleven: `${intl.formatMessage({ id: "about.bioTextEleven" })}`,
+      textTwelve: `${intl.formatMessage({ id: "about.bioTextTwelve" })}`,
     });
   };
 
   const handleInterestsClick = () => {
     setTemplateProps({
-      textOne: "My Hobbies",
-      textTwo: "I like football, badminton and ski-touring",
-      textThree: "Me and my friends like to play badminton together",
-      textFour: "and we also like to go on ski tours together",
-      textFive: "I like football and hockey as passive sports",
-      textSix: "I like playstation",
-      textSeven: "My favorite games are The last of us Part I",
-      textEight: "and part II,God of war and God of war Ragnarok",
-      textHelp: "* My current game is Fortnite",
+      textOne: `${intl.formatMessage({ id: "about.interestsTextOne" })}`,
+      textTwo: `${intl.formatMessage({ id: "about.interestsTextTwo" })}`,
+      textThree: `${intl.formatMessage({ id: "about.interestsTextThree" })}`,
+      textFour: `${intl.formatMessage({ id: "about.interestsTextFour" })}`,
+      textFive: `${intl.formatMessage({ id: "about.interestsTextFive" })}`,
+      textSix: `${intl.formatMessage({ id: "about.interestsTextSix" })}`,
+      textSeven: `${intl.formatMessage({ id: "about.interestsTextSeven" })}`,
+      textEight: `${intl.formatMessage({ id: "about.interestsTextEight" })}`,
+      textHelp: `${intl.formatMessage({ id: "about.interestsTextNine" })}`,
       textNine: "",
-      textTen: "I like to talk about other things as well.",
-      textEleven: "This is my all hobby",
-      textTwelve: "Thank you and have a nice day",
+      textTen: `${intl.formatMessage({ id: "about.interestsTextTen" })}`,
+      textEleven: `${intl.formatMessage({ id: "about.interestsTextEleven" })}`,
+      textTwelve: `${intl.formatMessage({ id: "about.interestsTextTwelve" })}`,
     });
   };
 
   const handlePrimarySchoolClick = () => {
     setTemplateProps({
-      textOne: "My primary school",
-      textTwo: "My primary school is located at",
-      textThree: "Detvianska Huta 369, 962 05",
-      textFour: "This school taught me a lot",
-      textFive: "We still use the experience I gained there",
-      textSix: "Especially our clever teachers",
-      textSeven: "which are located in our village",
-      textEight: "I am very glad that we have them here",
-      textHelp: "* I studied at this school",
-      textNine: "from 2005 to 2014",
+      textOne: `${intl.formatMessage({ id: "about.educationTextOne" })}`,
+      textTwo: `${intl.formatMessage({ id: "about.educationTextTwo" })}`,
+      textThree: `${intl.formatMessage({ id: "about.educationTextThree" })}`,
+      textFour: `${intl.formatMessage({ id: "about.educationTextFour" })}`,
+      textFive: `${intl.formatMessage({ id: "about.educationTextFive" })}`,
+      textSix: `${intl.formatMessage({ id: "about.educationTextSix" })}`,
+      textSeven: `${intl.formatMessage({ id: "about.educationTextSeven" })}`,
+      textEight: `${intl.formatMessage({ id: "about.educationTextEight" })}`,
+      textHelp: `${intl.formatMessage({ id: "about.educationTextNine" })}`,
+      textNine: `${intl.formatMessage({ id: "about.educationTextTen" })}`,
       textTen: "",
-      textEleven: "Thank you",
-      textTwelve: "Goodbye, have a nice day",
+      textEleven: `${intl.formatMessage({ id: "about.educationTextEleven" })}`,
+      textTwelve: `${intl.formatMessage({ id: "about.educationTextTwelve" })}`,
     });
   };
 
   const handleHighSchoolClick = () => {
     setTemplateProps({
-      textOne: "My high school",
-      textTwo: "My high school is located at",
-      textThree: "Sturova 848, 962 12 Detva",
-      textFour: "I studied the field CNC machinist",
-      textFive: "I learned cnc technologie",
-      textSix: "and programing cnc machines",
-      textSeven: "I didn't stay very much with this",
-      textEight: "I only enjoyed programming",
-      textHelp: "* In the end, I decided on web programming",
+      textOne: `${intl.formatMessage({ id: "about.highEducationTextOne" })}`,
+      textTwo: `${intl.formatMessage({ id: "about.highEducationTextTwo" })}`,
+      textThree: `${intl.formatMessage({
+        id: "about.highEducationTextThree",
+      })}`,
+      textFour: `${intl.formatMessage({ id: "about.highEducationTextFour" })}`,
+      textFive: `${intl.formatMessage({ id: "about.highEducationTextFive" })}`,
+      textSix: `${intl.formatMessage({ id: "about.highEducationTextSix" })}`,
+      textSeven: `${intl.formatMessage({
+        id: "about.highEducationTextSeven",
+      })}`,
+      textEight: `${intl.formatMessage({
+        id: "about.highEducationTextEight",
+      })}`,
+      textHelp: `${intl.formatMessage({
+        id: "about.highEducationTextNine",
+      })}`,
       textNine: "",
-      textTen: "It is quite difficult to find a job",
-      textEleven: "in Slovakia as a Junior programmer",
-      textTwelve: "Goodbye, thank and have a nice day",
+      textTen: `${intl.formatMessage({
+        id: "about.highEducationTextTen",
+      })}`,
+      textEleven: `${intl.formatMessage({
+        id: "about.highEducationTextEleven",
+      })}`,
+      textTwelve: `${intl.formatMessage({
+        id: "about.highEducationTextTwelve",
+      })}`,
     });
   };
 
@@ -140,7 +156,24 @@ const AboutMe: React.FC = () => {
   };
 
   const classes = usePageStyles();
-
+  useEffect(() => {
+    switch (activeButton) {
+      case "bio":
+        handleBioClick();
+        break;
+      case "interests":
+        handleInterestsClick();
+        break;
+      case "primary-school":
+        handlePrimarySchoolClick();
+        break;
+      case "high-school":
+        handleHighSchoolClick();
+        break;
+      default:
+        handleBioClick();
+    }
+  }, [activeButton, intl.locale]);
   return (
     <>
       <Box className={classes.aboutContainer}>
@@ -156,8 +189,10 @@ const AboutMe: React.FC = () => {
               className={classes.aboutLeftWrap}
             >
               {" "}
-              personal-info
-              <div className={classes.aboutTextRight}>_about_me</div>
+              {intl.formatMessage({ id: "about.personal" })}
+              <div className={classes.aboutTextRight}>
+                {intl.formatMessage({ id: "about.me" })}
+              </div>
             </ListSubheader>
           }
         >
@@ -166,7 +201,7 @@ const AboutMe: React.FC = () => {
             id="nested-list-subheader"
             className={classes.aboutMinWidth}
           >
-            About me
+            {intl.formatMessage({ id: "about.aboutPosttitle" })}
           </ListSubheader>
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
@@ -232,7 +267,7 @@ const AboutMe: React.FC = () => {
             </ListItemIcon>
             <ListItemText
               className={classes.aboutBtnText}
-              primary="education"
+              primary={intl.formatMessage({ id: "about.education" })}
             />
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>

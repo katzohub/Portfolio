@@ -21,6 +21,8 @@ export default {
   /*03.About-me*/
   "about.personal": "osobné-informácie",
   "about.me": "_o-mne",
+  "about.aboutPosttitle": "o-mne",
+  "about.aboutTitleCard": "O mne",
   "about.bio": "bio",
   "about.interests": "záujmy",
   "about.education": "vzdelanie",

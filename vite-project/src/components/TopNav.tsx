@@ -4,6 +4,7 @@ import { useThemeContext } from "../context/themeContext";
 import { LanguageContext } from "../context/LanguageProvider";
 import { Grid, Switch, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useIntl } from "react-intl";
 import usePageStyles from "../styles/style";
 import { Theme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -23,6 +24,7 @@ const TopNav = () => {
   const switchChecked = themeMode === "dark";
   const { language, setLanguage } = useContext(LanguageContext);
   const navigate = useNavigate();
+  const intl = useIntl();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,7 +42,9 @@ const TopNav = () => {
       <nav className={classes.navContainer}>
         <Grid item>
           <Box className={classes.navBoxItem}>
-            <div className={classes.navLink}>tomas-olsiak</div>
+            <div className={classes.navLink}>
+              {intl.formatMessage({ id: "nav.name" })}
+            </div>
           </Box>
         </Grid>
 
@@ -84,7 +88,7 @@ const TopNav = () => {
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <NavLink to="/" className={classes.navLinkLeft}>
-                  _hello
+                  {intl.formatMessage({ id: "nav.home" })}
                 </NavLink>
               </Box>
             </Grid>
@@ -92,14 +96,14 @@ const TopNav = () => {
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <NavLink to="/about-me" className={classes.navBoxCenter}>
-                  _about-me
+                  {intl.formatMessage({ id: "nav.about" })}
                 </NavLink>
               </Box>
             </Grid>
             <Grid item>
               <Box className={classes.navBoxItemCenter}>
                 <NavLink to="/projects" className={classes.navBoxRight}>
-                  _projects
+                  {intl.formatMessage({ id: "nav.project" })}
                 </NavLink>
               </Box>
             </Grid>
@@ -109,7 +113,7 @@ const TopNav = () => {
         <Grid item>
           <Box className={classes.navBoxContact}>
             <NavLink to="contact-me" className={classes.navLinkContact}>
-              _contact-me
+              {intl.formatMessage({ id: "nav.contact" })}
             </NavLink>
           </Box>
         </Grid>
@@ -126,7 +130,7 @@ const TopNav = () => {
                   : theme.myColors.textColorNav,
               })}
             >
-              tomas-olsiak
+              {intl.formatMessage({ id: "nav.name" })}
             </Typography>
             <Grid item sx={{ position: "relative", left: "10px" }}>
               <Box className={classes.navBoxItem}>
@@ -211,33 +215,35 @@ const TopNav = () => {
             to="/"
             className={classes.linkHomeMobileNav}
           >
-            _hello
+            {intl.formatMessage({ id: "nav.home" })}
           </NavLink>
           <NavLink
             onClick={() => handleNavLinkClick("/about-me")}
             to="/about-me"
             className={classes.nextLinkMobileNav}
           >
-            _about-me
+            {intl.formatMessage({ id: "nav.about" })}
           </NavLink>
           <NavLink
             onClick={() => handleNavLinkClick("/projects")}
             to="/projects"
             className={classes.nextLinkMobileNav}
           >
-            _projects
+            {intl.formatMessage({ id: "nav.project" })}
           </NavLink>
           <NavLink
             onClick={() => handleNavLinkClick("/contact-me")}
             to="contact-me"
             className={classes.nextLinkMobileNav}
           >
-            _contact-me
+            {intl.formatMessage({ id: "nav.contact" })}
           </NavLink>
           <nav className={classes.bootomNavContainer}>
             <Grid item sx={{ position: "relative", left: "20px" }}>
               <Box className={classes.navBoxItem}>
-                <div className={classes.navLink}>find me in:</div>
+                <div className={classes.navLink}>
+                  {intl.formatMessage({ id: "footer.findMeIn" })}:
+                </div>
               </Box>
             </Grid>
 
@@ -299,7 +305,9 @@ const TopNav = () => {
         <nav className={classes.bootomNavContainer}>
           <Grid item sx={{ position: "relative", left: "20px" }}>
             <Box className={classes.navBoxItem}>
-              <div className={classes.navLink}>find me in:</div>
+              <div className={classes.navLink}>
+                {intl.formatMessage({ id: "footer.findMeIn" })}:
+              </div>
             </Box>
           </Grid>
 

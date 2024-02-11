@@ -13,7 +13,7 @@ export default {
   "home.posTitleTwo": "you can also see it on my Github page",
   "home.startGame": "START-GAME",
   "home.gameOver": "GAME-OVER",
-  "home.wellDone": "GRATULUJEM",
+  "home.wellDone": "WELL-DONE",
   "home.tryAgain": "TRY-AGAIN",
   "home.useKeyboard": "use keyboard",
   "home.usePlay": "arrows to play",

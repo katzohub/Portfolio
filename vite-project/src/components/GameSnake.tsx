@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import PointSnake from "./PointSnake";
+import { useIntl } from "react-intl";
 import Green from "../img/boobleBackground/Green.png";
 import Blue from "../img/boobleBackground/Blue.png";
 import MiniCircle from "../svg/MiniCircle";
@@ -37,7 +38,7 @@ const GameSnake: React.FC = () => {
   const [hasWon, setHasWon] = useState<boolean>(false);
   const gameLoopRef = useRef<number | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
-
+  const intl = useIntl();
   const endGame = useCallback(() => {
     if (gameLoopRef.current) clearInterval(gameLoopRef.current);
     setGameOver(true);
@@ -241,7 +242,7 @@ const GameSnake: React.FC = () => {
                   lineHeight: "100%",
                 }}
               >
-                Start-Game
+                {intl.formatMessage({ id: "home.startGame" })}
               </Typography>
             </Button>
           </>
@@ -303,7 +304,7 @@ const GameSnake: React.FC = () => {
                       lineHeight: "100%",
                     }}
                   >
-                    WELL DONE
+                    {intl.formatMessage({ id: "home.wellDone" })}
                   </Typography>
 
                   <Button
@@ -361,7 +362,7 @@ const GameSnake: React.FC = () => {
                     lineHeight: "100%",
                   }}
                 >
-                  Game Over
+                  {intl.formatMessage({ id: "home.gameOver" })}
                 </Typography>
 
                 <Button
@@ -384,7 +385,7 @@ const GameSnake: React.FC = () => {
                   onClick={startGame}
                 >
                   <Typography variant="body2" fontSize={15}>
-                    Try Again
+                    {intl.formatMessage({ id: "home.tryAgain" })}
                   </Typography>
                 </Button>
               </Box>
@@ -396,10 +397,10 @@ const GameSnake: React.FC = () => {
       <Box>
         <Box className={classes.snakeBoxSetting}>
           <Typography variant="body2" className={classes.snakeArrowTextOne}>
-            // use keyboard
+            // {intl.formatMessage({ id: "home.useKeyboard" })}
           </Typography>
           <Typography variant="body2" className={classes.snakeArrowTextTwo}>
-            // arrows to play
+            // {intl.formatMessage({ id: "home.usePlay" })}
           </Typography>
           <Box className={classes.snakeArrowContainer}>
             <div className={classes.snakeUp}>
@@ -420,7 +421,7 @@ const GameSnake: React.FC = () => {
         </Box>
 
         <Typography variant="body2" className={classes.snakeFoodLeft}>
-          // food left
+          // {intl.formatMessage({ id: "home.lastFood" })}
         </Typography>
         <div className={classes.snakeContainerFood}>
           {Array.from({ length: 10 }, (_, index) => (

@@ -104,6 +104,7 @@ export default {
   "project.nameMarkPlaceText": "Môj ďalší mini projekt s REACT",
   "project.button": "pozrieť-projekt",
   /*05.Contact-me*/
+  "contact.LeftCard": "kontakt",
   "contact.contact": "_kontakt",
   "contact.contactName": "_kontaktujte_ma",
   "contact.findMeIn": "tiež_ma_nájdete_na",

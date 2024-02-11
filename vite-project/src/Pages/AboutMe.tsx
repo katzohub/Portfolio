@@ -222,7 +222,10 @@ const AboutMe: React.FC = () => {
               <FolderIcon className={classes.aboutIconBio} />
             </ListItemIcon>
 
-            <ListItemText className={classes.aboutBtnText} primary="bio" />
+            <ListItemText
+              className={classes.aboutBtnText}
+              primary={intl.formatMessage({ id: "about.bio" })}
+            />
           </ListItemButton>
           <ListItemButton
             className={classes.aboutHoverBtnEffect}
@@ -244,7 +247,7 @@ const AboutMe: React.FC = () => {
 
             <ListItemText
               className={classes.aboutBtnText}
-              primary="interests"
+              primary={intl.formatMessage({ id: "about.interests" })}
             />
           </ListItemButton>
 
@@ -288,7 +291,7 @@ const AboutMe: React.FC = () => {
                 <SchoolIcon />
                 <ListItemText
                   className={classes.aboutBtnEducationFont}
-                  primary="primary-school"
+                  primary={intl.formatMessage({ id: "about.primaryScholl" })}
                 />
               </ListItemButton>
               <ListItemButton
@@ -307,7 +310,7 @@ const AboutMe: React.FC = () => {
                 <SchoolIcon />
                 <ListItemText
                   className={classes.aboutBtnEducationFont}
-                  primary="high-school"
+                  primary={intl.formatMessage({ id: "about.highSchool" })}
                 />
               </ListItemButton>
             </List>
@@ -329,7 +332,9 @@ const AboutMe: React.FC = () => {
             })}
           >
             {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-            <ListItemText primary="contact" />
+            <ListItemText
+              primary={intl.formatMessage({ id: "contact.LeftCard" })}
+            />
           </ListItemButton>
           <Collapse in={openContact} timeout="auto" unmountOnExit>
             {/* leftContact */}

@@ -101,6 +101,7 @@ export default {
   "project.nameMarkPlaceText": "My next mini project with react",
   "project.button": "view-project",
   /*05.Contact-me*/
+  "contact.LeftCard": "contact",
   "contact.contact": "_contact",
   "contact.contactName": "_contact_me",
   "contact.findMeIn": "find-me-also-in",

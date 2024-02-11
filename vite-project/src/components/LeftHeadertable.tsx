@@ -18,25 +18,24 @@ const LeftHeadertable = () => {
         <Grid container direction="column" className={classes.leftHeaderBox}>
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>
-              Hi all. I am
               {intl.formatMessage({ id: "home.name" })}
             </Typography>
             <Typography variant="h1" className={classes.leftHeaderH1}>
-              Tomas Olsiak
+              {intl.formatMessage({ id: "home.nameHeader" })}
             </Typography>
             <Typography variant="h2" className={classes.leftHeaderH2}>
               <FaChevronRight
                 style={{ fontSize: "1.5rem", position: "relative", top: "2px" }}
               />{" "}
-              Front End Developer
+              {intl.formatMessage({ id: "home.myWork" })}
             </Typography>
           </Box>
           <Box>
             <Typography variant="body2" className={classes.leftHeaderP}>
-              // complete the game to continue
+              // {intl.formatMessage({ id: "home.posTitleOne" })}
             </Typography>
             <Typography variant="body2" className={classes.leftHeaderP}>
-              // you can also see it on my Github page
+              // {intl.formatMessage({ id: "home.posTitleTwo" })}
             </Typography>
             <Typography variant="body2">
               <span className={classes.leftHeaderSpanOne}>const </span>

@@ -5,7 +5,7 @@ import {
   ThemeProvider as MUIThemeProvider,
 } from "@mui/material/styles";
 import { themeOptions } from "../theme/palete";
-import { themeOptionsDark } from "../theme/paleteDark";
+import { themeOptionsLight } from "../theme/paleteLight";
 
 interface ThemeContextType {
   themeMode: string;
@@ -30,7 +30,7 @@ export const CustomThemeProvider = ({
   children: React.ReactNode;
 }) => {
   const [themeMode, setThemeMode] = useState<string>(
-    localStorage.getItem("themeMode") || "light"
+    localStorage.getItem("themeMode") || "dark" // changed from "light" to "dark"
   );
 
   const toggleTheme = () => {
@@ -42,7 +42,7 @@ export const CustomThemeProvider = ({
   };
 
   const theme = useMemo(() => {
-    return createTheme(themeMode === "dark" ? themeOptions : themeOptionsDark);
+    return createTheme(themeMode === "dark" ? themeOptions : themeOptionsLight);
   }, [themeMode]);
 
   return (

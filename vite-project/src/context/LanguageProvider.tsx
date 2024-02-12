@@ -2,7 +2,9 @@ import { createContext, useState, useEffect, ReactNode } from "react";
 
 export const LanguageContext = createContext({
   language: "en-US",
-  setLanguage: (language: string) => {},
+  setLanguage: (language: string) => {
+    language;
+  },
 });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {

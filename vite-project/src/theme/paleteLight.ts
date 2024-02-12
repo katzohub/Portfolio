@@ -83,7 +83,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-export const themeOptionsDark: ThemeOptions = createTheme({
+export const themeOptionsLight: ThemeOptions = createTheme({
   breakpoints: {
     values: {
       xs: 0,

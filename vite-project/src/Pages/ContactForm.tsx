@@ -7,6 +7,7 @@ import {
   Button,
   styled,
 } from "@mui/material";
+import { useIntl } from "react-intl";
 import usePageStyles from "../styles/stylePages";
 type DisplayDataProps = {
   name: string;
@@ -53,7 +54,7 @@ const ContactForm: React.FC = () => {
     message: "",
     date: "",
   });
-
+  const intl = useIntl();
   useEffect(() => {
     const currentDate = new Date();
     const formattedDate = `${
@@ -72,7 +73,7 @@ const ContactForm: React.FC = () => {
         >
           <CssTextField
             name="name"
-            label="Name"
+            label={intl.formatMessage({ id: "contact.name" })}
             variant="outlined"
             required
             fullWidth
@@ -82,7 +83,7 @@ const ContactForm: React.FC = () => {
           />
           <CssTextField
             name="email"
-            label="Email"
+            label={intl.formatMessage({ id: "contact.email" })}
             variant="outlined"
             required
             fullWidth
@@ -92,7 +93,7 @@ const ContactForm: React.FC = () => {
           />
           <CssTextField
             name="message"
-            label="Message"
+            label={intl.formatMessage({ id: "contact.message" })}
             variant="outlined"
             required
             multiline
@@ -114,7 +115,7 @@ const ContactForm: React.FC = () => {
             className={classes.contactFormBtn}
             sx={{ textTransform: "lowercase" }}
           >
-            submit
+            {intl.formatMessage({ id: "contact.submit" })}
           </Button>
         </form>
       </Box>

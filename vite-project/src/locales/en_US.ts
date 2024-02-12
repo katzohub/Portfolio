@@ -107,6 +107,8 @@ export default {
   "contact.LeftCard": "contact",
   "contact.contact": "_contact",
   "contact.contactName": "_contact_me",
+  "contact.instagramAccount": "Instagram account",
+  "contact.twitchAccount": "Twitch profile",
   "contact.findMeIn": "find-me-also-in",
   "contact.name": "Name",
   "contact.email": "Email",

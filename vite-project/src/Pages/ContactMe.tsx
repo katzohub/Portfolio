@@ -8,6 +8,7 @@ import {
   Box,
   Divider,
 } from "@mui/material";
+import { useIntl } from "react-intl";
 import ShareIcon from "@mui/icons-material/Share";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -25,6 +26,7 @@ const ContactMe = () => {
     setOpenFindMe(!openFindMe);
     console.log("openFindMe:", openFindMe);
   };
+  const intl = useIntl();
   const handleClickContactOne = () => {
     setOpenFindMeContact(!openFindMeContact);
     console.log("openFindMeContact:", openFindMeContact);
@@ -45,8 +47,10 @@ const ContactMe = () => {
               className={classes.contactLeftWrap}
             >
               {" "}
-              contact
-              <div className={classes.contactRighttext}>_contact_me</div>
+              {intl.formatMessage({ id: "contact.LeftCard" })}
+              <div className={classes.contactRighttext}>
+                {intl.formatMessage({ id: "contact.contact" })}
+              </div>
             </ListSubheader>
           }
         >
@@ -115,7 +119,9 @@ const ContactMe = () => {
           >
             {openFindMe ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
 
-            <ListItemText primary="find-me-also-in" />
+            <ListItemText
+              primary={intl.formatMessage({ id: "contact.findMeIn" })}
+            />
           </ListItemButton>
           <Collapse in={openFindMe} timeout="auto" unmountOnExit>
             <ListItem
@@ -138,7 +144,11 @@ const ContactMe = () => {
               >
                 <ListItemButton className={classes.leftContactBtn}>
                   <ShareIcon className={classes.leftContactIcon} />
-                  <ListItemText primary="Instagram account" />
+                  <ListItemText
+                    primary={intl.formatMessage({
+                      id: "contact.instagramAccount",
+                    })}
+                  />
                 </ListItemButton>
               </a>
             </ListItem>
@@ -162,7 +172,11 @@ const ContactMe = () => {
               >
                 <ListItemButton className={classes.leftContactBtn}>
                   <ShareIcon className={classes.leftContactIcon} />
-                  <ListItemText primary="Twitch profile" />
+                  <ListItemText
+                    primary={intl.formatMessage({
+                      id: "contact.twitchAccount",
+                    })}
+                  />
                 </ListItemButton>
               </a>
             </ListItem>

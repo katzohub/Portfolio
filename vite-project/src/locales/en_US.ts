@@ -84,6 +84,9 @@ export default {
   /*04.Projects*/
   "project.projects": "_projects",
   "project.category": "category",
+  "project.allCategory": "All",
+  "project.sorry": "Sorry",
+  "project.please": "Please one checkbox click and view mine project.",
   "project.namePortfolio": "Portfolio",
   "project.restaurant": "Menu-restaurant",
   "project.nameGame": "Game-seven",

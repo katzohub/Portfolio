@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { useIntl } from "react-intl";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
-// import Divider from "@mui/material/Divider";
 import CategoryIcon from "@mui/icons-material/Category";
 import {
   SiHtml5,
@@ -19,6 +19,7 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { Box } from "@mui/material";
+
 import SkillSection from "./SkillSection";
 import usePageStyles from "../styles/stylePages";
 
@@ -38,13 +39,14 @@ type DisplayDataProps = {
 
 const AlretCheckBox = () => {
   const classes = usePageStyles();
+  const intl = useIntl();
   return (
     <>
       <Box className={classes.projectAlert}>
         <h1 className={classes.skillTextAlert}>
-          Sorry.
+          {intl.formatMessage({ id: "project.sorry" })}.
           <br />
-          Please one checkbox click and view mine project.
+          {intl.formatMessage({ id: "project.please" })}
         </h1>
       </Box>
     </>
@@ -65,7 +67,7 @@ const Projects: React.FC = () => {
     react: false,
     firebase: false,
   });
-
+  const intl = useIntl();
   const areAllCheckboxesFalse = () => {
     return Object.values(checkedState).every((value) => !value);
   };
@@ -109,8 +111,10 @@ const Projects: React.FC = () => {
               className={classes.projectLeftNav}
             >
               {" "}
-              category
-              <div className={classes.projectRightText}>_projects</div>
+              {intl.formatMessage({ id: "project.category" })}
+              <div className={classes.projectRightText}>
+                {intl.formatMessage({ id: "project.projects" })}
+              </div>
             </ListSubheader>
           }
         >
@@ -136,7 +140,7 @@ const Projects: React.FC = () => {
                     fontSize="small"
                     className={classes.projectCategory}
                   />
-                  All
+                  {intl.formatMessage({ id: "project.allCategory" })}
                 </Box>
               }
             />

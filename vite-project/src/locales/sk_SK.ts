@@ -85,6 +85,10 @@ export default {
   /*04.Projects*/
   "project.projects": "_projekty",
   "project.category": "kategórie",
+  "project.allCategory": "Všetko",
+  "project.sorry": "Prepáčte",
+  "project.please":
+    "Ak chcete vidieť moje projekty musíte zadkliknúť aspoň jednu kategóriu",
   "project.namePortfolio": "Portfólio",
   "project.restaurant": "Menu pre reštauráciu",
   "project.nameGame": "Hra-sedemička",

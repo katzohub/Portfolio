@@ -17,11 +17,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   //AboutMe
   aboutHoverBtnEffect: {
     [theme.breakpoints.down("md")]: {
-      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+      borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     },
     "&:hover": {
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.colorFFF} !important`,
+    },
+  },
+  aboutCollapseContact: {
+    display: "block",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
     },
   },
   aboutContainer: {
@@ -37,9 +43,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutLeftNavContainer: {
-    width: "267px",
+    width: "268px",
     marginTop: "56px !important",
-    borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
     height: "auto",
 
     [theme.breakpoints.down("md")]: {
@@ -53,7 +59,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "94vw !important",
     background: "transparent !important",
     display: "flex",
-    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie}`,
     left: "30px",
     color: `${theme.myColors.colorFFF} !important`,
     fontFamily: "Fira Code !important",
@@ -77,7 +83,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       left: "0px",
       color: `${theme.myColors.colorFFF} !important`,
       background: `${theme.myColors.colorDarkBlack} !important`,
-      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+      borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
       textDecoration: "underline",
       fontFamily: "Fira Code !important",
       fontSize: "16px !important",
@@ -88,11 +94,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutTextRight: {
     color: `${theme.myColors.colorNonActive} !important`,
-    borderLeft: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderLeft: `2px solid ${theme.myColors.colorLinie} !important`,
     marginLeft: "-12px",
     paddingLeft: "15px",
-    position: "relative",
-    left: "105px",
+    position: "absolute",
+    left: "249px",
     fontFamily: "Fira Code",
     fontSize: "16px",
     fontStyle: "normal",
@@ -131,7 +137,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "90%",
-      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+      borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     },
   },
   aboutBtnEducationFont: {
@@ -152,8 +158,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "240px",
     position: "relative",
     left: "27px",
-    borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
-    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderTop: `2px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     "&:hover": {
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.colorFFF} !important`,
@@ -174,15 +180,19 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       display: "block",
-
       marginTop: "20px",
-      marginBottom: "100px",
+      marginBottom: "60px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+      marginTop: "0px",
     },
   },
   aboutDivider: {
     position: "relative",
     top: "105px",
-    width: "1px !important",
+    width: "2px",
+    border: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "90vh",
     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
@@ -205,7 +215,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     justifyContent: "start",
     [theme.breakpoints.down("lg")]: {
-      marginTop: "0px",
+      margin: "20px 0",
+      marginBottom: "100px",
       height: "auto",
     },
     [theme.breakpoints.down("md")]: {
@@ -221,7 +232,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutNextMiniWrap: {
     borderRadius: "15px",
-    border: `1px solid ${theme.myColors.colorLinie}`,
+    border: `2px solid ${theme.myColors.colorLinie}`,
     background: theme.myColors.colorInCard,
     padding: "7px 12.5px",
     [theme.breakpoints.down("sm")]: {
@@ -232,7 +243,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "50px",
     borderRadius: "15px",
-    border: `1px solid ${theme.myColors.colorLinie}`,
+    border: `2px solid ${theme.myColors.colorLinie}`,
     background: theme.myColors.colorInCard,
     padding: "15px 20px",
     display: "flex",
@@ -262,15 +273,19 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("lg")]: {
-      //  height: "auto",
-
       height: "auto",
       paddingTop: "00px",
       marginTop: "300px",
+      position: "relative",
+      top: "-20px",
+      left: "50px",
     },
     [theme.breakpoints.down("md")]: {
       margin: "0px",
       paddingTop: "0px",
+      top: "0px",
+
+      left: "0px",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: ".8rem",
@@ -305,7 +320,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     left: "25px",
     [theme.breakpoints.down("md")]: {
       width: "90vw",
-      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+      borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     },
   },
   leftContactIcon: {
@@ -326,7 +341,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   projectList: {
     width: "267px",
     marginTop: "56px !important",
-    borderRight: `1px solid ${theme.myColors.colorLinie}`,
+    borderRight: `2px solid ${theme.myColors.colorLinie}`,
     height: "auto",
     [theme.breakpoints.down("md")]: {
       width: "100%",
@@ -338,7 +353,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: `${theme.myColors.colorFFF} !important`,
     background: "transparent !important",
     display: "flex",
-    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie}`,
     position: "relative",
     left: "30px",
     fontFamily: "Fira Code !important",
@@ -426,7 +441,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   skillBoxDividerTop: {
     background: `${theme.myColors.colorLinie} !important`,
-    height: "1px !important",
+    height: "2px !important",
     width: "100vw",
   },
   skillBoxText: {
@@ -460,7 +475,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   skillBoxDividerDown: {
     background: `${theme.myColors.colorLinie} !important`,
-    height: "1px !important",
+    height: "2px !important",
     width: "100%",
   },
   skillBoxCard: {
@@ -481,7 +496,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   skillCard: {
     borderRadius: "15px",
-    border: `1px solid ${theme.myColors.colorLinie} `,
+    border: `2px solid ${theme.myColors.colorLinie} `,
     background: theme.myColors.colorInCard,
     maxWidth: "100%",
     height: "420px",
@@ -566,7 +581,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactList: {
     width: "267px",
     marginTop: "56px !important",
-    borderRight: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
     height: "auto",
     [theme.breakpoints.down("md")]: {
       marginTop: "50px !important",
@@ -591,7 +606,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "94vw ",
     background: "transparent !important",
     display: "flex",
-    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
 
     color: `${theme.myColors.colorFFF} !important`,
     fontFamily: "Fira Code !important",
@@ -610,7 +625,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     left: "152px",
     paddingLeft: "15px",
-    borderLeft: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderLeft: `2px solid ${theme.myColors.colorLinie} !important`,
     fontFamily: "Fira Code",
     fontSize: "16px",
     fontStyle: "normal",
@@ -630,8 +645,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "240px",
     position: "relative",
     left: "27px",
-    borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
-    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderTop: `2px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     "&:hover": {
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.whiteColor} !important`,
@@ -674,7 +689,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactFormDivider: {
     position: "relative",
     top: "-45px",
-    width: "1px !important",
+    width: "2px !important",
     height: "90vh",
     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {

@@ -16,7 +16,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     textAlign: "center",
     padding: "10px 20px",
-    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie}`,
     height: "50px",
     backgroundColor: theme.myColors.colorNavBar,
     zIndex: 9999,
@@ -34,7 +34,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   linkHomeMobileNav: {
     marginTop: "50px",
     padding: "10px 0",
-    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie}`,
     width: "90vw",
     color: "#607B96",
     transition: "color 0.3s ease",
@@ -45,7 +45,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   nextLinkMobileNav: {
     color: "#607B96",
     padding: "10px 0",
-    borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie}`,
     transition: "color 0.3s ease",
     width: "90vw",
     "&:hover": {
@@ -58,7 +58,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     bottom: "0",
     left: "0px",
     width: "100vw",
-    borderTop: `1px solid ${theme.myColors.colorLinie}`,
+    borderTop: `2px solid ${theme.myColors.colorLinie}`,
     height: "56px",
     display: "flex",
     justifyContent: "space-between",
@@ -73,7 +73,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
     left: "30px",
     width: "94vw",
-    borderBlockEnd: `1px solid ${theme.myColors.colorLinie}`,
+    borderBlockEnd: `2px solid ${theme.myColors.colorLinie}`,
     height: "56px",
     display: "flex",
     justifyContent: "start",
@@ -102,7 +102,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     bottom: "0",
     left: "30px",
     width: "94vw",
-    borderTop: `1px solid ${theme.myColors.colorLinie}`,
+    borderTop: `2px solid ${theme.myColors.colorLinie}`,
     height: "100%",
     display: "flex",
     justifyContent: "start",

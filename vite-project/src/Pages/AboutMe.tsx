@@ -336,8 +336,12 @@ const AboutMe: React.FC = () => {
               primary={intl.formatMessage({ id: "contact.LeftCard" })}
             />
           </ListItemButton>
-          <Collapse in={openContact} timeout="auto" unmountOnExit>
-            {/* leftContact */}
+          <Collapse
+            className={classes.aboutCollapseContact}
+            in={openContact}
+            timeout="auto"
+            unmountOnExit
+          >
             <LeftContact />
           </Collapse>
         </List>

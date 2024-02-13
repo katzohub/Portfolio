@@ -86,7 +86,7 @@ const ContactMe = () => {
                   top: "25px",
                   left: "-40px",
                   background: theme.myColors.colorLinie,
-                  height: "1px",
+                  height: "2px",
                   zIndex: 9,
                   width: "100vw",
                 })}

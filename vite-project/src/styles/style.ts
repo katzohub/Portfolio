@@ -284,7 +284,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "0",
     right: "0",
     cursor: "pointer",
-    width: "200px",
+    width: "140px",
     height: "100%",
     borderLeft: `2px solid ${theme.myColors.colorLinie}`,
     padding: "0 10px",
@@ -333,7 +333,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderRadius: "8px",
     position: "relative",
     zIndex: "9999",
+    [theme.breakpoints.down("lg")]: {
+      marginBlockEnd: "50px",
+    },
     [theme.breakpoints.down("md")]: {
+      marginBlockEnd: "0px",
       display: "none",
     },
   },
@@ -648,14 +652,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100%",
     display: "flex",
     justifyContent: "center",
-
     [theme.breakpoints.down("lg")]: {
       width: "550px",
       position: "relative",
       top: "50px",
+      marginBlockEnd: "50px",
     },
     [theme.breakpoints.down("md")]: {
       width: "400px",
+      marginBlockEnd: "0px",
     },
   },
   pageRightWrap: {

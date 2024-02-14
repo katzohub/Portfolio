@@ -43,7 +43,7 @@ const ContactMe = () => {
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{ position: "relative", left: "30px" }}
+              sx={{ position: "relative", left: "30px", zIndex: "99999" }}
               className={classes.contactLeftWrap}
             >
               {" "}

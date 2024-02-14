@@ -702,7 +702,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     maxWidth: "500px",
     position: "relative",
-
+    top: "15px",
     [theme.breakpoints.down("xl")]: {
       maxWidth: "350px",
     },

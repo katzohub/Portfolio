@@ -88,7 +88,7 @@ export default {
   "project.allCategory": "Všetko",
   "project.sorry": "Prepáčte",
   "project.please":
-    "Ak chcete vidieť moje projekty musíte zadkliknúť aspoň jednu kategóriu",
+    "Ak chcete vidieť moje projekty musíte zaskillBoxTextkliknúť aspoň jednu kategóriu",
   "project.namePortfolio": "Portfólio",
   "project.restaurant": "Menu pre reštauráciu",
   "project.nameGame": "Hra-sedemička",

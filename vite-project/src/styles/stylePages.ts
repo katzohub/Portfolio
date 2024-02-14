@@ -284,7 +284,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       margin: "0px",
       paddingTop: "0px",
       top: "0px",
-
       left: "0px",
     },
     [theme.breakpoints.down("sm")]: {
@@ -421,6 +420,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "center",
     overflowY: "auto",
+
     [theme.breakpoints.down("md")]: {
       position: "relative",
       top: "0px",
@@ -436,13 +436,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "block",
       width: "100vw",
       position: "relative",
-      left: "-20px",
+      left: "-10px",
     },
   },
   skillBoxDividerTop: {
     background: `${theme.myColors.colorLinie} !important`,
     height: "2px !important",
-    width: "100vw",
+    width: "100vw !important",
   },
   skillBoxText: {
     fontSize: "16px !important",
@@ -482,17 +482,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     marginBottom: "70px",
     [theme.breakpoints.down("md")]: {
       marginBottom: "0px",
+      padding: "0 20px",
     },
   },
   skillPositionWrap: {
     width: "100%",
     padding: "0 10px",
     margin: "0 10px",
-    [theme.breakpoints.down("md")]: {
-      width: "94%",
-      position: "relative",
-      left: "-7.5px",
-    },
   },
   skillCard: {
     borderRadius: "15px",
@@ -736,7 +732,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transform: "scale(0.97)",
       background: `${theme.myColors.colorBackInput} !important`,
     },
-    [theme.breakpoints.down("sm")]: {},
   },
   contactFormBoxText: {
     maxWidth: "600px",

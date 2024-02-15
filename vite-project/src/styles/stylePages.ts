@@ -119,6 +119,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutIconEducation: {
     color: `${theme.myColors.colorPurpleFolder} !important`,
   },
+  aboutWrappScholls: {
+    paddingLeft: "20px",
+    position: "relative",
+
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "0px",
+      left: "35px",
+    },
+  },
   aboutBtnText: {
     fontFamily: "Fira Code",
     fontSize: "16px",

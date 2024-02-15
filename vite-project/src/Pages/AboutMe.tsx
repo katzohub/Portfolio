@@ -273,7 +273,12 @@ const AboutMe: React.FC = () => {
               primary={intl.formatMessage({ id: "about.education" })}
             />
           </ListItemButton>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse
+            in={open}
+            timeout="auto"
+            unmountOnExit
+            className={classes.aboutWrappScholls}
+          >
             <List component="div" disablePadding>
               <ListItemButton
                 className={classes.aboutBtnEducationStyle}

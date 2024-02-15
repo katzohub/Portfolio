@@ -14,7 +14,6 @@ const LeftHeadertable = () => {
       <Box className={classes.leftHeaderContainer}>
         <img className={classes.leftHeaderGreen} src={Blue} alt="" />
         <img className={classes.leftHeaderPurple} src={Green} alt="" />
-
         <Grid container direction="column" className={classes.leftHeaderBox}>
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>

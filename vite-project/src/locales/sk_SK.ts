@@ -90,7 +90,7 @@ export default {
   "project.please":
     "Ak chcete vidieť moje projekty musíte zaskillBoxTextkliknúť aspoň jednu kategóriu",
   "project.namePortfolio": "Portfólio",
-  "project.restaurant": "Menu pre reštauráciu",
+  "project.restaurant": "Menu-pre-reštauráciu",
   "project.nameGame": "Hra-sedemička",
   "project.nameOffice": "Box-Office",
   "project.nameDatabase": "Filmová-Databáza",

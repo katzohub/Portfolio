@@ -489,6 +489,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "none",
     [theme.breakpoints.down("md")]: {
       position: "absolute",
+      zIndex: "1",
       top: "120px",
       left: "-220px",
       display: "block",
@@ -502,6 +503,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   leftHeaderPurple: {
     display: "none",
     [theme.breakpoints.down("md")]: {
+      zIndex: "1",
       position: "absolute",
       top: "-110px",
       right: "-200px",
@@ -518,7 +520,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     height: "100vh",
     justifyContent: "space-around",
-    padding: "70px 0px 70px 15px",
+    padding: "70px 0px 120px 15px",
+    zIndex: "9",
     [theme.breakpoints.down("md")]: {
       justifyContent: "space-evenly",
     },

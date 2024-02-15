@@ -95,7 +95,12 @@ const ContactMe = () => {
               ""
             )}
           </ListItemButton>
-          <Collapse in={openFindMeContact} timeout="auto" unmountOnExit>
+          <Collapse
+            className={classes.contactLeftBoxMinWidth}
+            in={openFindMeContact}
+            timeout="auto"
+            unmountOnExit
+          >
             <LeftContact />
           </Collapse>
 

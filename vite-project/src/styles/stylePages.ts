@@ -592,6 +592,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "none",
     },
   },
+  contactLeftBoxMinWidth: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+    },
+  },
   contactBoxMaxWidth: {
     display: "none !important",
     [theme.breakpoints.down("md")]: {

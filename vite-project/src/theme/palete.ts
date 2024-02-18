@@ -27,6 +27,7 @@ declare module "@mui/material/styles" {
       colorDarkBlue: string;
       borderTableSnake: string;
       colorDarkBlack: string;
+      colorLightLinkHomeGithub: string;
       colorDarkGrey: string;
       colorPurpleText: string;
       colorPinkText: string;
@@ -64,6 +65,7 @@ declare module "@mui/material/styles" {
       colorLightGreen?: string;
       colorPurpleFolder?: string;
       colorDarkBlue?: string;
+      colorLightLinkHomeGithub?: string;
       borderTableSnake?: string;
       colorTextInput?: string;
       colorGreyText?: string;
@@ -109,6 +111,7 @@ export const themeOptions: ThemeOptions = createTheme({
     colorOrangeText: "#FEA55F",
     colorPurple: "#4D5BCE",
     colorLightOrange: "#E99287",
+    colorLightLinkHomeGithub: "#E99287",
     colorLightGreen: "#43D9AD",
     whiteColor: "#fff",
     colorPurpleFolder: "#3A49A4",

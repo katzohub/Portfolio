@@ -18,6 +18,7 @@ declare module "@mui/material/styles" {
       colorTextCard: string;
       colorGreyText: string;
       colorGrey: string;
+      colorLightLinkHomeGithub: string;
       colorPurple: string;
       colorLightOrange: string;
       colorOrangeText: string;
@@ -50,6 +51,7 @@ declare module "@mui/material/styles" {
       colorLinie?: string;
       colorTextInput?: string;
       colorTextCard?: string;
+      colorLightLinkHomeGithub?: string;
       colorBottomNavLink?: string;
       colorOrangeText?: string;
       hoverDownLinie?: string;
@@ -105,6 +107,7 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorGrey: "#fff",
     colorNonActive: "#607B96",
     colorPurple: "#4D5BCE",
+    colorLightLinkHomeGithub: "#222",
     colorLightOrange: "#222",
     colorLightGreen: "#FF0",
     whiteColor: "#607B96",

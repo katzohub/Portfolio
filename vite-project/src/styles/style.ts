@@ -521,7 +521,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100vh",
     justifyContent: "space-around",
     padding: "70px 0px 120px 15px",
-    zIndex: "9",
+    zIndex: "9999",
     [theme.breakpoints.down("md")]: {
       justifyContent: "space-evenly",
     },
@@ -610,7 +610,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   leftHeaderSpanFour: {
     fontFamily: "Fira Code",
-    color: theme.myColors.colorLightOrange,
+    color: theme.myColors.colorLightLinkHomeGithub,
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 500,
@@ -619,7 +619,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     transition: "border-bottom 0.3s ease-in",
 
     "&:hover": {
-      borderBottom: "1px solid #E99287",
+      borderBottom: `1px solid ${theme.myColors.colorLightLinkHomeGithub}`,
     },
   },
   // OnePage
@@ -647,6 +647,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       top: "0px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      zIndex: "5",
     },
   },
   pageLeftWrap: {

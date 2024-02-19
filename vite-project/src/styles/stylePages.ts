@@ -321,10 +321,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   leftFindMeIn: {
     display: "flex",
-    position: "relative",
-    left: "-15px",
     width: "90vw",
-
     justifyContent: "center",
     textDecoration: "none",
     color: theme.myColors.colorNonActive,

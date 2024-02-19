@@ -320,14 +320,25 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: theme.myColors.colorNonActive,
   },
   leftFindMeIn: {
+    display: "flex",
+    position: "relative",
+    left: "-15px",
+    width: "90vw",
+
+    justifyContent: "center",
     textDecoration: "none",
     color: theme.myColors.colorNonActive,
+    [theme.breakpoints.down("md")]: {
+      left: "0px",
+    },
   },
   leftContactBtn: {
     position: "relative",
+    background: "red",
     left: "25px",
     [theme.breakpoints.down("md")]: {
       width: "90vw",
+      left: "0px",
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     },
   },
@@ -488,7 +499,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
   },
   skillBoxCard: {
-    marginBottom: "70px",
+    marginBottom: "100px",
     [theme.breakpoints.down("md")]: {
       marginBottom: "0px",
       padding: "0 20px",

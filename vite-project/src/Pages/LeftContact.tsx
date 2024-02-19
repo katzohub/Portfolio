@@ -11,7 +11,12 @@ const LeftContact = () => {
         <List sx={{ paddingTop: "0px !important" }}>
           <ListItem
             disablePadding
-            sx={{
+            sx={(theme) => ({
+              [theme.breakpoints.down("md")]: {
+                display: "flex",
+                justifyContent: "center",
+              },
+
               "&:hover": {
                 transition: "color 0.3s ease-in",
                 color: "#fff",
@@ -21,7 +26,7 @@ const LeftContact = () => {
                 },
                 "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
               },
-            }}
+            })}
           >
             <a
               href="mailto:tomasolsiak1@gmail.com"
@@ -35,7 +40,11 @@ const LeftContact = () => {
           </ListItem>
           <ListItem
             disablePadding
-            sx={{
+            sx={(theme) => ({
+              [theme.breakpoints.down("md")]: {
+                display: "flex",
+                justifyContent: "center",
+              },
               "&:hover": {
                 color: "#fff",
                 transition: "color 0.3s ease-in",
@@ -45,7 +54,7 @@ const LeftContact = () => {
                 },
                 "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
               },
-            }}
+            })}
           >
             <a href="tel:+421915515974" className={classes.leftContactLink}>
               <ListItemButton className={classes.leftContactBtn}>

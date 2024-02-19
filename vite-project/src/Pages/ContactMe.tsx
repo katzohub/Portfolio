@@ -131,7 +131,13 @@ const ContactMe = () => {
           <Collapse in={openFindMe} timeout="auto" unmountOnExit>
             <ListItem
               disablePadding
-              sx={{
+              sx={(theme) => ({
+                [theme.breakpoints.down("md")]: {
+                  display: "flex",
+                  justifyContent: "center",
+                  position: "relative",
+                },
+
                 "&:hover": {
                   color: "#fff",
                   transition: "color 0.3s ease-in",
@@ -141,7 +147,7 @@ const ContactMe = () => {
                   },
                   "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
                 },
-              }}
+              })}
             >
               <a
                 href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
@@ -159,7 +165,11 @@ const ContactMe = () => {
             </ListItem>
             <ListItem
               disablePadding
-              sx={{
+              sx={(theme) => ({
+                [theme.breakpoints.down("md")]: {
+                  display: "flex",
+                  justifyContent: "center",
+                },
                 "&:hover": {
                   color: "#fff",
                   transition: "color 0.3s ease-in",
@@ -169,7 +179,7 @@ const ContactMe = () => {
                   },
                   "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
                 },
-              }}
+              })}
             >
               <a
                 href="https://www.twitch.tv/settings/profile"

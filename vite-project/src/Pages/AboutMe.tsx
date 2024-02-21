@@ -279,7 +279,20 @@ const AboutMe: React.FC = () => {
             unmountOnExit
             className={classes.aboutWrappScholls}
           >
-            <List component="div" disablePadding>
+            <List
+              component="div"
+              disablePadding
+              sx={(theme) => ({
+                [theme.breakpoints.down("md")]: {
+                  width: "100%",
+                  position: "relative",
+                  left: "-35px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                },
+              })}
+            >
               <ListItemButton
                 className={classes.aboutBtnEducationStyle}
                 onClick={() => {

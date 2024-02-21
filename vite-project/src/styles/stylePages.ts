@@ -186,8 +186,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       overflowY: "auto",
+      height: "80vh",
+      position: "relative",
+      top: "130px",
+      paddingTop: "120px",
     },
     [theme.breakpoints.down("md")]: {
+      height: "auto",
+      top: "0px",
+      paddingTop: "0px",
       display: "block",
       marginTop: "20px",
       marginBottom: "60px",

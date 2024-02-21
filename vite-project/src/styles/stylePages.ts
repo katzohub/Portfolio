@@ -43,7 +43,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutLeftNavContainer: {
-    width: "268px",
+    width: "269px",
     marginTop: "56px !important",
     borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
     height: "auto",

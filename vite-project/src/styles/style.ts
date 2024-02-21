@@ -658,6 +658,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100%",
     display: "flex",
     justifyContent: "center",
+    zIndex: "5",
     [theme.breakpoints.down("lg")]: {
       width: "550px",
       position: "relative",

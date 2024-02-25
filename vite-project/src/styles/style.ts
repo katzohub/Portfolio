@@ -41,6 +41,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       color: "#fff",
     },
+    "&.active": {
+      color: "#fff !important",
+    },
   },
   nextLinkMobileNav: {
     color: "#607B96",
@@ -51,7 +54,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       color: "#fff",
     },
+    "&.active": {
+      color: "#fff !important",
+    },
   },
+
   //Bottom Nav
   bootomNavContainer: {
     position: "absolute",

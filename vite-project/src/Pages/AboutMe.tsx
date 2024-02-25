@@ -176,267 +176,272 @@ const AboutMe: React.FC = () => {
   }, [activeButton, intl.locale]);
   return (
     <>
-      <Box
-        className={classes.aboutContainer}
-        sx={{ background: "red !important" }}
-      >
-        <List
-          className={classes.aboutLeftNavContainer}
-          sx={{ background: "purple !important" }}
-          component="nav"
-          aria-labelledby="nested-list-subheader"
-          subheader={
+      <Box className={classes.aboutContainer}>
+        <Box
+          sx={(theme) => ({
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+
+            [theme.breakpoints.down("md")]: {
+              display: "block",
+            },
+          })}
+        >
+          <List
+            className={classes.aboutLeftNavContainer}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader
+                component="div"
+                id="nested-list-subheader"
+                sx={{ position: "relative" }}
+                className={classes.aboutLeftWrap}
+              >
+                {" "}
+                {intl.formatMessage({ id: "about.personal" })}
+                <div className={classes.aboutTextRight}>
+                  {intl.formatMessage({ id: "about.me" })}
+                </div>
+              </ListSubheader>
+            }
+          >
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{ position: "relative" }}
-              className={classes.aboutLeftWrap}
+              className={classes.aboutMinWidth}
             >
-              {" "}
-              {intl.formatMessage({ id: "about.personal" })}
-              <div className={classes.aboutTextRight}>
-                {intl.formatMessage({ id: "about.me" })}
-              </div>
+              {intl.formatMessage({ id: "about.aboutPosttitle" })}
             </ListSubheader>
-          }
-        >
-          <ListSubheader
-            component="div"
-            id="nested-list-subheader"
-            className={classes.aboutMinWidth}
-          >
-            {intl.formatMessage({ id: "about.aboutPosttitle" })}
-          </ListSubheader>
-          <ListItemButton
-            className={classes.aboutHoverBtnEffect}
-            sx={(theme) => ({
-              color:
-                activeButton === "bio"
-                  ? theme.myColors.colorFFF
-                  : theme.myColors.colorNonActive,
-            })}
-            onClick={() => {
-              handleBioClick();
-              setActiveButton("bio");
-            }}
-          >
-            <ChevronRightIcon />
-
-            <ListItemIcon>
-              <FolderIcon className={classes.aboutIconBio} />
-            </ListItemIcon>
-
-            <ListItemText
-              className={classes.aboutBtnText}
-              primary={intl.formatMessage({ id: "about.bio" })}
-            />
-          </ListItemButton>
-          <ListItemButton
-            className={classes.aboutHoverBtnEffect}
-            onClick={() => {
-              handleInterestsClick();
-              setActiveButton("interests");
-            }}
-            sx={(theme) => ({
-              color:
-                activeButton === "interests"
-                  ? theme.myColors.colorFFF
-                  : theme.myColors.colorNonActive,
-            })}
-          >
-            <ChevronRightIcon />
-            <ListItemIcon>
-              <FolderIcon className={classes.aboutIconInterest} />
-            </ListItemIcon>
-
-            <ListItemText
-              className={classes.aboutBtnText}
-              primary={intl.formatMessage({ id: "about.interests" })}
-            />
-          </ListItemButton>
-
-          <ListItemButton
-            className={classes.aboutHoverBtnEffect}
-            sx={(theme) => ({
-              color:
-                activeButton === "education"
-                  ? theme.myColors.colorFFF
-                  : theme.myColors.colorNonActive,
-            })}
-            onClick={() => {
-              handleClick();
-              setActiveButton("education");
-            }}
-          >
-            {open ? <ExpandLess /> : <ExpandMore />}
-            <ListItemIcon>
-              <FolderIcon className={classes.aboutIconEducation} />
-            </ListItemIcon>
-            <ListItemText
-              className={classes.aboutBtnText}
-              primary={intl.formatMessage({ id: "about.education" })}
-            />
-          </ListItemButton>
-          <Collapse
-            in={open}
-            timeout="auto"
-            unmountOnExit
-            className={classes.aboutWrappScholls}
-          >
-            <List
-              component="div"
-              disablePadding
+            <ListItemButton
+              className={classes.aboutHoverBtnEffect}
               sx={(theme) => ({
-                [theme.breakpoints.down("md")]: {
-                  width: "100%",
-                  position: "relative",
-                  left: "-35px",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                },
+                color:
+                  activeButton === "bio"
+                    ? theme.myColors.colorFFF
+                    : theme.myColors.colorNonActive,
+              })}
+              onClick={() => {
+                handleBioClick();
+                setActiveButton("bio");
+              }}
+            >
+              <ChevronRightIcon />
+
+              <ListItemIcon>
+                <FolderIcon className={classes.aboutIconBio} />
+              </ListItemIcon>
+
+              <ListItemText
+                className={classes.aboutBtnText}
+                primary={intl.formatMessage({ id: "about.bio" })}
+              />
+            </ListItemButton>
+            <ListItemButton
+              className={classes.aboutHoverBtnEffect}
+              onClick={() => {
+                handleInterestsClick();
+                setActiveButton("interests");
+              }}
+              sx={(theme) => ({
+                color:
+                  activeButton === "interests"
+                    ? theme.myColors.colorFFF
+                    : theme.myColors.colorNonActive,
               })}
             >
-              <ListItemButton
-                className={classes.aboutBtnEducationStyle}
-                onClick={() => {
-                  handlePrimarySchoolClick();
-                  setActiveButton("primary-school");
-                }}
-                sx={(theme) => ({
-                  color:
-                    activeButton === "primary-school"
-                      ? theme.myColors.colorFFF
-                      : theme.myColors.colorNonActive,
-                })}
-              >
-                <SchoolIcon />
-                <ListItemText
-                  className={classes.aboutBtnEducationFont}
-                  primary={intl.formatMessage({ id: "about.primaryScholl" })}
-                />
-              </ListItemButton>
-              <ListItemButton
-                className={classes.aboutBtnEducationStyle}
-                onClick={() => {
-                  handleHighSchoolClick();
-                  setActiveButton("high-school");
-                }}
-                sx={(theme) => ({
-                  color:
-                    activeButton === "high-school"
-                      ? theme.myColors.colorFFF
-                      : theme.myColors.colorNonActive,
-                })}
-              >
-                <SchoolIcon />
-                <ListItemText
-                  className={classes.aboutBtnEducationFont}
-                  primary={intl.formatMessage({ id: "about.highSchool" })}
-                />
-              </ListItemButton>
-            </List>
-          </Collapse>
+              <ChevronRightIcon />
+              <ListItemIcon>
+                <FolderIcon className={classes.aboutIconInterest} />
+              </ListItemIcon>
 
-          <ListItemButton
-            className={classes.aboutContactContainer}
-            onClick={() => {
-              handleClickContact();
-              setActiveContactButton((prevState) =>
-                prevState === "contact" ? "" : "contact"
-              );
-            }}
-            sx={(theme) => ({
-              color:
-                activeContactButton === "contact"
-                  ? theme.myColors.colorFFF
-                  : theme.myColors.colorNonActive,
-            })}
-          >
-            {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-            <ListItemText
-              primary={intl.formatMessage({ id: "contact.LeftCard" })}
+              <ListItemText
+                className={classes.aboutBtnText}
+                primary={intl.formatMessage({ id: "about.interests" })}
+              />
+            </ListItemButton>
+
+            <ListItemButton
+              className={classes.aboutHoverBtnEffect}
+              sx={(theme) => ({
+                color:
+                  activeButton === "education"
+                    ? theme.myColors.colorFFF
+                    : theme.myColors.colorNonActive,
+              })}
+              onClick={() => {
+                handleClick();
+                setActiveButton("education");
+              }}
+            >
+              {open ? <ExpandLess /> : <ExpandMore />}
+              <ListItemIcon>
+                <FolderIcon className={classes.aboutIconEducation} />
+              </ListItemIcon>
+              <ListItemText
+                className={classes.aboutBtnText}
+                primary={intl.formatMessage({ id: "about.education" })}
+              />
+            </ListItemButton>
+            <Collapse
+              in={open}
+              timeout="auto"
+              unmountOnExit
+              className={classes.aboutWrappScholls}
+            >
+              <List
+                component="div"
+                disablePadding
+                sx={(theme) => ({
+                  [theme.breakpoints.down("md")]: {
+                    width: "100%",
+                    position: "relative",
+                    left: "-35px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  },
+                })}
+              >
+                <ListItemButton
+                  className={classes.aboutBtnEducationStyle}
+                  onClick={() => {
+                    handlePrimarySchoolClick();
+                    setActiveButton("primary-school");
+                  }}
+                  sx={(theme) => ({
+                    color:
+                      activeButton === "primary-school"
+                        ? theme.myColors.colorFFF
+                        : theme.myColors.colorNonActive,
+                  })}
+                >
+                  <SchoolIcon />
+                  <ListItemText
+                    className={classes.aboutBtnEducationFont}
+                    primary={intl.formatMessage({ id: "about.primaryScholl" })}
+                  />
+                </ListItemButton>
+                <ListItemButton
+                  className={classes.aboutBtnEducationStyle}
+                  onClick={() => {
+                    handleHighSchoolClick();
+                    setActiveButton("high-school");
+                  }}
+                  sx={(theme) => ({
+                    color:
+                      activeButton === "high-school"
+                        ? theme.myColors.colorFFF
+                        : theme.myColors.colorNonActive,
+                  })}
+                >
+                  <SchoolIcon />
+                  <ListItemText
+                    className={classes.aboutBtnEducationFont}
+                    primary={intl.formatMessage({ id: "about.highSchool" })}
+                  />
+                </ListItemButton>
+              </List>
+            </Collapse>
+
+            <ListItemButton
+              className={classes.aboutContactContainer}
+              onClick={() => {
+                handleClickContact();
+                setActiveContactButton((prevState) =>
+                  prevState === "contact" ? "" : "contact"
+                );
+              }}
+              sx={(theme) => ({
+                color:
+                  activeContactButton === "contact"
+                    ? theme.myColors.colorFFF
+                    : theme.myColors.colorNonActive,
+              })}
+            >
+              {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+              <ListItemText
+                primary={intl.formatMessage({ id: "contact.LeftCard" })}
+              />
+            </ListItemButton>
+            <Collapse
+              className={classes.aboutCollapseContact}
+              in={openContact}
+              timeout="auto"
+              unmountOnExit
+            >
+              <LeftContact />
+            </Collapse>
+          </List>
+          {/* Template */}
+          <Box className={classes.aboutNextContainer}>
+            <TemplateAbout {...templateProps} />
+            <Divider
+              orientation="horizontal"
+              flexItem
+              className={classes.aboutDivider}
             />
-          </ListItemButton>
-          <Collapse
-            className={classes.aboutCollapseContact}
-            in={openContact}
-            timeout="auto"
-            unmountOnExit
-          >
-            <LeftContact />
-          </Collapse>
-        </List>
-        {/* Template */}
-        <Box
-          className={classes.aboutNextContainer}
-          sx={{ background: "green !important" }}
-        >
-          <TemplateAbout {...templateProps} />
-          <Divider
-            orientation="horizontal"
-            flexItem
-            className={classes.aboutDivider}
-          />
-          <Box className={classes.aboutNextWrap}>
-            <Box className={classes.aboutNextMiniWrap}>
-              <Typography variant="body1">
-                <span className={classes.formTextGrey}>1&nbsp;</span>
-                <span className={classes.formTextPink}>const</span>{" "}
-                <span className={classes.formTextPurple}>button</span>{" "}
-                <span className={classes.formTextPink}>=</span>{" "}
-                <span className={classes.formTextPurple}>
-                  document.querySelector
-                </span>{" "}
-                <span className={classes.formTextGrey}>(</span>
-                <span className={classes.formTextOrange}>'#sendBtn'</span>
-                <span className={classes.formTextGrey}>);</span>
-                <br />
-                <span className={classes.formTextGrey}>2&nbsp;</span>
-                <br />
-                <span className={classes.formTextGrey}>3&nbsp;</span>
-                <span className={classes.formTextPink}>const</span>&nbsp;
-                <span className={classes.formTextPurple}>image</span>&nbsp;
-                <span className={classes.formTextPink}>=</span>&nbsp;
-                <span className={classes.formTextPurple}>
-                  document.querySelector
-                </span>
-                <span className={classes.formTextGrey}>{`(`}</span>
-                <span className={classes.formTextOrange}>'#myImage'</span>
-                <span className={classes.formTextGrey}>{`);`}</span>
-                <br />
-                <span className={classes.formTextGrey}>4&nbsp;</span>
-                <br />
-                <span className={classes.formTextGrey}>5&nbsp;</span>
-                <span className={classes.formTextPurple}>
-                  button
-                  <span className={classes.formTextGrey}>.</span>
-                  addEventListener
-                </span>
-                <span className={classes.formTextGrey}>(</span>
-                <span className={classes.formTextOrange}>'click'</span>
-                <span className={classes.formTextGrey}>, ()</span>&nbsp;
-                <span className={classes.formTextPink}>{`=>`}</span>&nbsp;
-                <span className={classes.formTextGrey}>{`{`}</span>
-                <br />
-                <span className={classes.formTextGrey}>6&nbsp;</span>
-                &nbsp;&nbsp;
-                <span className={classes.formTextPurple}>
-                  image<span className={classes.formTextGrey}>.</span>src
-                </span>
-                <span className={classes.formTextGrey}>(</span>
-                <span className={classes.formTextPurple}>"my_img.png"</span>
-                <span className={classes.formTextGrey}>
-                  ); <br />
-                  <span className={classes.formTextGrey}>7&nbsp;</span>
-                  {`}`})
-                </span>
-                <br />
-              </Typography>
-            </Box>
-            <Box className={classes.aboutNextImgContainer}>
-              <span className={classes.formTextGrey}>// Result</span>
-              <img src={ja} alt="Mine photo" className={classes.aboutImg} />
+            <Box className={classes.aboutNextWrap}>
+              <Box className={classes.aboutNextMiniWrap}>
+                <Typography variant="body1">
+                  <span className={classes.formTextGrey}>1&nbsp;</span>
+                  <span className={classes.formTextPink}>const</span>{" "}
+                  <span className={classes.formTextPurple}>button</span>{" "}
+                  <span className={classes.formTextPink}>=</span>{" "}
+                  <span className={classes.formTextPurple}>
+                    document.querySelector
+                  </span>{" "}
+                  <span className={classes.formTextGrey}>(</span>
+                  <span className={classes.formTextOrange}>'#sendBtn'</span>
+                  <span className={classes.formTextGrey}>);</span>
+                  <br />
+                  <span className={classes.formTextGrey}>2&nbsp;</span>
+                  <br />
+                  <span className={classes.formTextGrey}>3&nbsp;</span>
+                  <span className={classes.formTextPink}>const</span>&nbsp;
+                  <span className={classes.formTextPurple}>image</span>&nbsp;
+                  <span className={classes.formTextPink}>=</span>&nbsp;
+                  <span className={classes.formTextPurple}>
+                    document.querySelector
+                  </span>
+                  <span className={classes.formTextGrey}>{`(`}</span>
+                  <span className={classes.formTextOrange}>'#myImage'</span>
+                  <span className={classes.formTextGrey}>{`);`}</span>
+                  <br />
+                  <span className={classes.formTextGrey}>4&nbsp;</span>
+                  <br />
+                  <span className={classes.formTextGrey}>5&nbsp;</span>
+                  <span className={classes.formTextPurple}>
+                    button
+                    <span className={classes.formTextGrey}>.</span>
+                    addEventListener
+                  </span>
+                  <span className={classes.formTextGrey}>(</span>
+                  <span className={classes.formTextOrange}>'click'</span>
+                  <span className={classes.formTextGrey}>, ()</span>&nbsp;
+                  <span className={classes.formTextPink}>{`=>`}</span>&nbsp;
+                  <span className={classes.formTextGrey}>{`{`}</span>
+                  <br />
+                  <span className={classes.formTextGrey}>6&nbsp;</span>
+                  &nbsp;&nbsp;
+                  <span className={classes.formTextPurple}>
+                    image<span className={classes.formTextGrey}>.</span>src
+                  </span>
+                  <span className={classes.formTextGrey}>(</span>
+                  <span className={classes.formTextPurple}>"my_img.png"</span>
+                  <span className={classes.formTextGrey}>
+                    ); <br />
+                    <span className={classes.formTextGrey}>7&nbsp;</span>
+                    {`}`})
+                  </span>
+                  <br />
+                </Typography>
+              </Box>
+              <Box className={classes.aboutNextImgContainer}>
+                <span className={classes.formTextGrey}>// Result</span>
+                <img src={ja} alt="Mine photo" className={classes.aboutImg} />
+              </Box>
             </Box>
           </Box>
         </Box>

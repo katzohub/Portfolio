@@ -31,11 +31,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutContainer: {
-    width: "100%",
-    height: "100vh",
-    display: "flex",
+    // width: "100%",
+    // height: "100vh",
+    // display: "flex",
     [theme.breakpoints.down("md")]: {
-      overflowY: "auto",
+      overflowY: "auto !important",
       minHeight: "100vh",
       flexDirection: "column",
       alignItems: "center",
@@ -196,13 +196,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       top: "-56px",
     },
     [theme.breakpoints.down("md")]: {
-      overflowY: "hidden",
+      position: "relative",
+      top: "56px",
+      width: "100%",
       height: "auto",
-      top: "0px",
-      paddingTop: "0px",
-      display: "block",
-      marginTop: "20px",
-      marginBottom: "50px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-evenly",
+      paddingBottom: "150px",
+      alignItems: "center",
     },
     [theme.breakpoints.down("sm")]: {
       display: "block",
@@ -343,7 +345,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   leftContactBtn: {
     position: "relative",
-    background: "red",
     left: "25px",
     [theme.breakpoints.down("md")]: {
       width: "90vw",

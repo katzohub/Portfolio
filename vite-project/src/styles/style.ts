@@ -4,13 +4,14 @@ import { Theme } from "@mui/material/styles";
 const usePageStyles = makeStyles((theme: Theme) => ({
   backColor: {
     width: "100vw",
-    height: "100vh",
-    overflow: "hidden !important",
+    minHeight: "100vh",
+    //  overflowY: "auto !important",
+    // overflow: "hidden !important",
     backgroundColor: theme.myColors.generalBackground,
   },
   // mobielNavigation
   boxMobileNav: {
-    position: "absolute",
+    position: "fixed",
     top: "0",
     width: "100vw",
     display: "flex",
@@ -536,6 +537,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       position: "relative",
+
       top: "-70px",
     },
   },
@@ -676,6 +678,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "400px",
+
       marginBlockEnd: "0px",
     },
   },

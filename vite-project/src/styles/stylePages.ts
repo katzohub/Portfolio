@@ -52,7 +52,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       width: "100%",
       height: "auto",
       marginTop: "50px !important",
-      borderRight: `0px solid transparent`,
+      borderRight: `0px solid transparent !important`,
     },
   },
   aboutLeftWrap: {
@@ -373,6 +373,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
+      borderRight: `0px solid transparent !important`,
     },
   },
   projectLeftNav: {
@@ -612,6 +613,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       width: "100vw",
       height: "auto",
       marginBottom: "100px",
+      borderRight: `0px solid transparent !important`,
     },
   },
   contactBoxMinWidth: {

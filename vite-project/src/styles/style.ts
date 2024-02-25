@@ -3,6 +3,9 @@ import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
   backColor: {
+    width: "100vw",
+    height: "100vh",
+    overflow: "hidden !important",
     backgroundColor: theme.myColors.generalBackground,
   },
   // mobielNavigation
@@ -10,7 +13,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "absolute",
     top: "0",
     width: "100vw",
-
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -61,7 +63,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
   //Bottom Nav
   bootomNavContainer: {
-    position: "absolute",
+    position: "fixed",
     bottom: "0",
     left: "0px",
     width: "100vw",

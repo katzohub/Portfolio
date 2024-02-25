@@ -176,9 +176,13 @@ const AboutMe: React.FC = () => {
   }, [activeButton, intl.locale]);
   return (
     <>
-      <Box className={classes.aboutContainer}>
+      <Box
+        className={classes.aboutContainer}
+        sx={{ background: "red !important" }}
+      >
         <List
           className={classes.aboutLeftNavContainer}
+          sx={{ background: "purple !important" }}
           component="nav"
           aria-labelledby="nested-list-subheader"
           subheader={
@@ -364,7 +368,10 @@ const AboutMe: React.FC = () => {
           </Collapse>
         </List>
         {/* Template */}
-        <Box className={classes.aboutNextContainer}>
+        <Box
+          className={classes.aboutNextContainer}
+          sx={{ background: "green !important" }}
+        >
           <TemplateAbout {...templateProps} />
           <Divider
             orientation="horizontal"

@@ -196,12 +196,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       top: "-56px",
     },
     [theme.breakpoints.down("md")]: {
+      overflowY: "hidden",
       height: "auto",
       top: "0px",
       paddingTop: "0px",
       display: "block",
       marginTop: "20px",
-      marginBottom: "60px",
+      marginBottom: "50px",
     },
     [theme.breakpoints.down("sm")]: {
       display: "block",
@@ -598,6 +599,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
     height: "100vh",
     display: "flex",
+
+    overflowY: "auto",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       overflowY: "auto !improtant",
@@ -690,6 +693,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   //contactForm
+  // contactFormContainer: {
+  //   position: "relative",
+  //   paddingTop: "100px",
+  //   width: "100%",
+  //   height: "auto",
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   justifyContent: "space-evenly",
+  //   paddingBottom: "100px",
+  //   alignItems: "center",
+  // },
   contactFormContainer: {
     position: "relative",
     paddingTop: "100px",
@@ -709,13 +723,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       minHeight: "80vh",
     },
     [theme.breakpoints.down("md")]: {
-      paddingTop: "40px",
-      top: "0px",
-      overflowY: "auto",
-      margin: "0 0px",
-      height: "auto",
-      overfowY: "auto !important",
-      paddingBottom: "180px !important",
+      position: "relative",
+      width: "100%",
+      minHeight: "auto",
+      paddingTop: "50px",
+      //   top: "-80px",
+
+      overflowY: "visible",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-evenly",
+      alignItems: "center",
     },
   },
   contactFormDivider: {

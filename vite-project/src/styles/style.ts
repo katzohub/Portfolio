@@ -4,9 +4,7 @@ import { Theme } from "@mui/material/styles";
 const usePageStyles = makeStyles((theme: Theme) => ({
   backColor: {
     width: "100vw",
-    minHeight: "100vh",
-    //  overflowY: "auto !important",
-    // overflow: "hidden !important",
+    minHeight: "100dvh",
     backgroundColor: theme.myColors.generalBackground,
   },
   // mobielNavigation
@@ -549,7 +547,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     position: "relative",
     [theme.breakpoints.down("md")]: {
-      height: "100vh",
+      height: "100dvh",
     },
   },
   leftHeaderH3: {
@@ -635,14 +633,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   // OnePage
   pageContainer: {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     width: "100vw",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   pageWrap: {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     width: "100vw",
     maxWidth: "1700px",
     margin: "0 100px",

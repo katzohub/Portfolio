@@ -184,7 +184,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "space-evenly",
     height: "auto",
     [theme.breakpoints.down("lg")]: {
-      height: "100vh",
+      // height: "100%",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",

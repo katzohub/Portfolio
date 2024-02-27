@@ -782,7 +782,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 450,
     lineHeight: "normal",
     borderRadius: "8px",
-    transition: "transform 0.3s ease !important",
+    transition: "all .3s ease-in-out",
     background: `${theme.myColors.colorBackInput} !important`,
     "&:hover": {
       transform: "scale(0.97)",

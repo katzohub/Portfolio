@@ -197,7 +197,7 @@ const TopNav = () => {
             position: "absolute",
             overflow: "hidden",
             width: "100%",
-            minHeight: isMenuOpen ? "100vh" : "0",
+            minHeight: isMenuOpen ? "100dvh" : "0",
             backgroundColor: isMenuOpen
               ? theme.myColors.generalBackground
               : "transparent",

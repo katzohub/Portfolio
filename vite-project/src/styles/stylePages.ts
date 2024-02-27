@@ -36,7 +36,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     // display: "flex",
     [theme.breakpoints.down("md")]: {
       overflowY: "auto !important",
-      minHeight: "100vh",
+      minHeight: "100dvh",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "space-between",
@@ -192,8 +192,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       paddingBottom: "80px",
       overflowY: "auto",
       overflowX: "hidden",
-      position: "relative",
-      top: "-56px",
     },
     [theme.breakpoints.down("md")]: {
       position: "relative",
@@ -216,7 +214,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "105px",
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
-    height: "90vh",
+    height: "90dvh",
     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
       top: "0px",
@@ -232,7 +230,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     marginBottom: "80px",
     color: "white",
     padding: 2,
-    height: "80vh",
+    height: "80dvh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -287,7 +285,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 450,
     marginTop: "150px",
     margin: "0 10px",
-    height: "70vh",
+    height: "70dvh",
     display: "flex",
     alignItems: "start",
     justifyContent: "center",
@@ -360,7 +358,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   //Project
   projectContainer: {
     width: "100%",
-    height: "100vh",
+    height: "100dvh",
     display: "flex",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
@@ -445,7 +443,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "150px",
     left: "0px",
-    height: "83vh",
+    height: "83dvh",
     width: "100%",
     maxWidth: "1450px",
     display: "flex",
@@ -598,7 +596,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   //ContactMe
   contactContainer: {
     width: "100%",
-    height: "100vh",
+    height: "100dvh",
     display: "flex",
 
     overflowY: "auto",
@@ -721,7 +719,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       paddingTop: "150px",
       paddingBottom: "100px",
       overflowY: "auto",
-      minHeight: "80vh",
+      minHeight: "80dvh",
     },
     [theme.breakpoints.down("md")]: {
       position: "relative",
@@ -741,7 +739,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "-45px",
     width: "2px !important",
-    height: "90vh",
+    height: "90dvh",
     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
       top: "0px",
@@ -792,7 +790,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     maxWidth: "600px",
     color: "white",
     padding: 2,
-    height: "100vh",
+    height: "100dvh",
     [theme.breakpoints.down("lg")]: {
       height: "auto",
     },
@@ -862,7 +860,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   // Thank You
   thankYouContainer: {
     width: "100vw",
-    height: "100vh",
+    height: "100dvh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

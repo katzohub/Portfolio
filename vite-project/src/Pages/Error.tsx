@@ -6,7 +6,7 @@ const Eroor = () => {
       <Box
         sx={{
           width: "100vw",
-          height: "100vh",
+          height: "100dvh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

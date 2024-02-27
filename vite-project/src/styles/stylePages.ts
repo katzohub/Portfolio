@@ -36,7 +36,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     // display: "flex",
     [theme.breakpoints.down("md")]: {
       overflowY: "auto !important",
-      minHeight: "100dvh",
+      minHeight: "80dvh",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "space-between",
@@ -44,14 +44,15 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutLeftNavContainer: {
     width: "269px",
-    marginTop: "56px !important",
+    paddingTop: "56px !important",
     borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
     height: "auto",
 
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
-      marginTop: "50px !important",
+      paddingTop: "50px !important",
+
       borderRight: `0px solid transparent !important`,
     },
   },
@@ -192,6 +193,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       paddingBottom: "80px",
       overflowY: "auto",
       overflowX: "hidden",
+      position: "relative",
+      top: "-56px",
     },
     [theme.breakpoints.down("md")]: {
       position: "relative",

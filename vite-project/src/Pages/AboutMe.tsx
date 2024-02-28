@@ -385,17 +385,24 @@ const AboutMe: React.FC = () => {
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>
                 <Typography variant="body1">
-                  <span className={classes.formTextGrey}>1&nbsp;</span>
-                  <span className={classes.formTextPink}>const</span>{" "}
-                  <span className={classes.formTextPurple}>button</span>{" "}
-                  <span className={classes.formTextPink}>=</span>{" "}
-                  <span className={classes.formTextPurple}>
-                    document.querySelector
-                  </span>{" "}
-                  <span className={classes.formTextGrey}>(</span>
-                  <span className={classes.formTextOrange}>'#sendBtn'</span>
-                  <span className={classes.formTextGrey}>);</span>
-                  <br />
+                  <Box
+                    sx={{
+                      width: "100%",
+
+                      display: "flex",
+                    }}
+                  >
+                    <span className={classes.formTextGrey}>1&nbsp;</span>
+                    <span className={classes.formTextPink}>const</span>{" "}
+                    <span className={classes.formTextPurple}>button</span>{" "}
+                    <span className={classes.formTextPink}>=</span>{" "}
+                    <span className={classes.formTextPurple}>
+                      document.querySelector
+                    </span>{" "}
+                    <span className={classes.formTextGrey}>(</span>
+                    <span className={classes.formTextOrange}>'#sendBtn'</span>
+                    <span className={classes.formTextGrey}>);</span>
+                  </Box>
                   <span className={classes.formTextGrey}>2&nbsp;</span>
                   <br />
                   <span className={classes.formTextGrey}>3&nbsp;</span>

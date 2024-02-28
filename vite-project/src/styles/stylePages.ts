@@ -260,7 +260,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: theme.myColors.colorInCard,
     padding: "7px 12.5px",
     [theme.breakpoints.down("sm")]: {
-      padding: "10px 7.5px",
+      width: "100%",
+      padding: "5px",
     },
   },
   aboutNextImgContainer: {
@@ -812,7 +813,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "12px",
+      fontSize: "11px",
     },
   },
   formTextPurple: {
@@ -827,7 +828,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "12px",
+      fontSize: "11px",
     },
   },
   formTextPink: {
@@ -842,7 +843,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "12px",
+      fontSize: "11px",
     },
   },
   formTextGrey: {
@@ -857,7 +858,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontWeight: 600,
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "12px",
+      fontSize: "11px",
     },
   },
   // Thank You

@@ -125,8 +125,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
 
     [theme.breakpoints.down("md")]: {
-      paddingLeft: "0px",
-      left: "35px",
+      paddingLeft: "35px",
+      left: "0px",
     },
   },
   aboutBtnText: {

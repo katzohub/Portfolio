@@ -798,6 +798,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       height: "auto",
     },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      "& p": {
+        width: "350px",
+      },
+    },
   },
 
   // Form Styles

@@ -120,4 +120,9 @@ export default {
   "contact.submit": "odoslať",
   /*06.Footer*/
   "footer.findMeIn": "nájdete-ma-na",
+  /*07.Thank-You Message*/
+  "thankYou.thankYou": "Ďakujem 🤘",
+  "thankYou.thankYouText":
+    "Vaša správa bola prijatá. Odpoveď dostanete čoskoro!",
+  "thankYou.thankYouBtn": "poslať-novú-správu",
 };

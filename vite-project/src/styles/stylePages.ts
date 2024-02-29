@@ -374,9 +374,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     marginTop: "56px !important",
     borderRight: `2px solid ${theme.myColors.colorLinie}`,
     height: "auto",
+    position: "relative",
+    left: "2px",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
+
+      left: "0px",
       borderRight: `0px solid transparent !important`,
     },
   },
@@ -610,14 +614,16 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   contactList: {
-    width: "267px",
+    width: "269px",
     marginTop: "56px !important",
     borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
     height: "auto",
+
     [theme.breakpoints.down("md")]: {
       marginTop: "50px !important",
       width: "100vw",
       height: "auto",
+
       marginBottom: "100px",
       borderRight: `0px solid transparent !important`,
     },
@@ -661,7 +667,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   contactRighttext: {
     color: theme.myColors.colorNonActive,
     position: "relative",
-    left: "152px",
+    left: "153px",
     paddingLeft: "15px",
     borderLeft: `2px solid ${theme.myColors.colorLinie} !important`,
     fontFamily: "Fira Code",

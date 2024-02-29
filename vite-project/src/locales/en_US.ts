@@ -116,4 +116,9 @@ export default {
   "contact.submit": "submit",
   /*06.Footer*/
   "footer.findMeIn": "find-me-in",
+  /*07.Thank-You Message*/
+  "thankYou.thankYou": "Thank you! 🤘",
+  "thankYou.thankYouText":
+    "Your message has been accepted. You will recieve answer really soon!",
+  "thankYou.thankYouBtn": "send-new-message",
 };

@@ -1,11 +1,12 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useIntl } from "react-intl";
 import usePageStyles from "../styles/stylePages";
 
 const ThankYou = () => {
   const navigate = useNavigate();
   const classes = usePageStyles();
-
+  const intl = useIntl();
   const handleButtonClick = () => {
     navigate("/contact-me");
   };
@@ -13,10 +14,10 @@ const ThankYou = () => {
   return (
     <Box className={classes.thankYouContainer}>
       <Typography className={classes.thankYouHeading} variant="h2">
-        Thank you! 🤘
+        {intl.formatMessage({ id: "thankYou.thankYou" })}
       </Typography>
       <p className={classes.thankYouText}>
-        Your message has been accepted. You will recieve answer really soon!
+        {intl.formatMessage({ id: "thankYou.thankYouText" })}
       </p>
       <Button
         className={classes.thankYouBtn}
@@ -24,7 +25,7 @@ const ThankYou = () => {
         sx={{ textTransform: "lowercase" }}
         onClick={handleButtonClick}
       >
-        send-new-message
+        {intl.formatMessage({ id: "thankYou.thankYouBtn" })}
       </Button>
     </Box>
   );

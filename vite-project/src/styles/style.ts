@@ -362,13 +362,16 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   snakeBackEffectPurple: {
-    [theme.breakpoints.up("sm")]: {
-      zIndex: "-10",
-      position: "absolute",
-      bottom: -50,
-      right: -70,
-      transform: "scale(0.9)",
-    },
+    // zIndex: "-10",
+    // position: "absolute",
+    // bottom: -65,
+    // right: -70,
+    // transform: "scale(0.7)",
+    zIndex: "-10",
+    position: "absolute",
+    bottom: -65,
+    right: -70,
+    transform: "scale(0.7)",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -698,12 +701,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   pageLeftWrap: {
+    position: "relative",
+    zIndex: "8888",
     width: "50%",
     maxWidth: "600px",
     height: "100%",
     display: "flex",
     justifyContent: "center",
-    zIndex: "5",
     [theme.breakpoints.down("lg")]: {
       width: "550px",
       position: "relative",

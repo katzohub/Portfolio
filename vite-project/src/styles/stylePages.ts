@@ -519,9 +519,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "100%",
   },
   skillBoxCard: {
-    marginBottom: "100px",
+    paddingBottom: "120px",
     [theme.breakpoints.down("md")]: {
       marginBottom: "0px",
+
       padding: "0 20px",
     },
   },

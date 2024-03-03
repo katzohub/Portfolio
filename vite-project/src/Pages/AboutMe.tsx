@@ -7,7 +7,6 @@ import {
   ListItemText,
   Collapse,
   Box,
-  Typography,
 } from "@mui/material";
 import { useIntl } from "react-intl";
 import SchoolIcon from "@mui/icons-material/School";
@@ -376,13 +375,10 @@ const AboutMe: React.FC = () => {
           {/* Template */}
           <Box className={classes.aboutNextContainer}>
             <TemplateAbout {...templateProps} />
-            <div
-              //  orientation="horizontal"
-              className={classes.aboutDivider}
-            ></div>
+            <div className={classes.aboutDivider}></div>
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>
-                <Typography variant="body1">
+                <Box>
                   <Box
                     sx={{
                       width: "100%",
@@ -441,7 +437,7 @@ const AboutMe: React.FC = () => {
                     {`}`})
                   </span>
                   <br />
-                </Typography>
+                </Box>
               </Box>
               <Box className={classes.aboutNextImgContainer}>
                 <span className={classes.formTextGrey}>// Result</span>

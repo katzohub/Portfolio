@@ -150,6 +150,7 @@ const ContactMe = () => {
               })}
             >
               <a
+                target="_blank"
                 href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
                 className={classes.leftFindMeIn}
               >
@@ -182,6 +183,7 @@ const ContactMe = () => {
               })}
             >
               <a
+                target="_blank"
                 href="https://www.twitch.tv/settings/profile"
                 className={classes.leftFindMeIn}
               >

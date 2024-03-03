@@ -226,6 +226,7 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
                     >
                       <a
                         href={project.openProject}
+                        target="_blank"
                         className={classes.skillCardLink}
                       >
                         View-Project

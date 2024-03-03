@@ -379,6 +379,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "auto",
     position: "relative",
     left: "2px",
+
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
@@ -390,7 +391,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   projectLeftNav: {
     width: "94vw",
     color: `${theme.myColors.colorFFF} !important`,
-    background: "transparent !important",
+    background: `${theme.myColors.generalBackground} !important`,
     display: "flex",
     borderBottom: `2px solid ${theme.myColors.colorLinie}`,
     position: "relative",
@@ -399,6 +400,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px !important",
     fontStyle: "normal",
     fontWeight: 400,
+
     [theme.breakpoints.down("md")]: {
       width: "100vw !important",
       left: "0px !important",
@@ -407,8 +409,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   projectRightText: {
     color: theme.myColors.colorNonActive,
-    position: "relative",
-    left: "155px",
+    left: "110px",
+    borderLeft: `2px solid ${theme.myColors.colorLinie}`,
+    paddingLeft: "15px",
+    position: "absolute",
+    marginLeft: "125px",
     fontFamily: "Fira Code",
     fontStyle: "normal",
     fontSize: "16px",
@@ -449,6 +454,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "center",
     height: "auto",
+    [theme.breakpoints.up("md")]: {
+      overflowY: "auto",
+    },
   },
   skillWrap: {
     position: "relative",
@@ -459,7 +467,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     maxWidth: "1450px",
     display: "flex",
     justifyContent: "center",
-    overflowY: "auto",
+    [theme.breakpoints.down("md")]: {
+      overflowY: "auto",
+    },
 
     [theme.breakpoints.down("md")]: {
       position: "relative",

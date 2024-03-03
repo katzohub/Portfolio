@@ -107,11 +107,18 @@ const Projects: React.FC = () => {
             <ListSubheader
               component="div"
               id="nested-list-subheader"
-              sx={{ position: "relative", left: "30px", zIndex: 1 }}
+              sx={{
+                position: "relative",
+                left: "30px",
+                zIndex: "1",
+              }}
               className={classes.projectLeftNav}
             >
-              {" "}
-              {intl.formatMessage({ id: "project.category" })}
+              <div style={{ width: "auto" }}>
+                {" "}
+                {intl.formatMessage({ id: "project.category" })}
+              </div>
+
               <div className={classes.projectRightText}>
                 {intl.formatMessage({ id: "project.projects" })}
               </div>

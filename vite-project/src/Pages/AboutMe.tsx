@@ -6,7 +6,6 @@ import {
   ListItemIcon,
   ListItemText,
   Collapse,
-  Divider,
   Box,
   Typography,
 } from "@mui/material";
@@ -377,11 +376,10 @@ const AboutMe: React.FC = () => {
           {/* Template */}
           <Box className={classes.aboutNextContainer}>
             <TemplateAbout {...templateProps} />
-            <Divider
-              orientation="horizontal"
-              flexItem
+            <div
+              //  orientation="horizontal"
               className={classes.aboutDivider}
-            />
+            ></div>
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>
                 <Typography variant="body1">

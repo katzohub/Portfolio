@@ -592,6 +592,21 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "normal",
     [theme.breakpoints.down("md")]: {
       fontSize: "14px !important",
+      display: "none",
+    },
+  },
+  mobileLeftHeaderP: {
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px !important",
+      fontFamily: "Fira Code !important",
+      color: `${theme.myColors.textColorNav} !important`,
+      fontStyle: "normal",
+      fontWeight: 450,
+      padding: "2.5px 0",
+      lineHeight: "normal",
     },
   },
   leftHeaderSpanOne: {
@@ -627,6 +642,27 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderBottom: "1px solid transparent",
     transition: "border-bottom 0.3s ease-in",
 
+    "&:hover": {
+      borderBottom: `1px solid ${theme.myColors.colorLightLinkHomeGithub}`,
+    },
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  },
+  leftHeaderSpanFourMobile: {
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontFamily: "Fira Code",
+      color: theme.myColors.colorLightLinkHomeGithub,
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "normal",
+      borderBottom: "1px solid transparent",
+      transition: "border-bottom 0.3s ease-in",
+    },
     "&:hover": {
       borderBottom: `1px solid ${theme.myColors.colorLightLinkHomeGithub}`,
     },

@@ -36,6 +36,10 @@ const LeftHeadertable = () => {
             <Typography variant="body2" className={classes.leftHeaderP}>
               // {intl.formatMessage({ id: "home.posTitleTwo" })}
             </Typography>
+            <Typography variant="body2" className={classes.mobileLeftHeaderP}>
+              // {intl.formatMessage({ id: "home.posTitleMobile" })}
+            </Typography>
+
             <Typography variant="body2">
               <span className={classes.leftHeaderSpanOne}>const </span>
               <span className={classes.leftHeaderSpanTwo}>githubLink</span>
@@ -49,6 +53,14 @@ const LeftHeadertable = () => {
                   className={classes.leftHeaderSpanFour}
                 >
                   “https://github.com/gameSnake”
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/katzohub"
+                  className={classes.leftHeaderSpanFourMobile}
+                >
+                  “https://github.com/katzohub”
                 </a>
               </span>
             </Typography>

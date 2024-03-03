@@ -11,6 +11,7 @@ export default {
   "home.myWork": " Front End Developer",
   "home.posTitleOne": "complete the game to continue",
   "home.posTitleTwo": "you can also see it on my Github page",
+  "home.posTitleMobile": "find my profile on Github:",
   "home.startGame": "START-GAME",
   "home.gameOver": "GAME-OVER",
   "home.wellDone": "WELL-DONE",

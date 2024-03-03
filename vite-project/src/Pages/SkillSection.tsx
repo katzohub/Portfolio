@@ -10,6 +10,7 @@ import boxOffice from "../img/box office.webp";
 import filmDatabase from "../img/film database.webp";
 import logicGame from "../img/logic game.webp";
 import marketPlace from "../img/marketplace.webp";
+import upgradePorfolio from "../img/upgradePorfolio.jpeg";
 import menu from "../img/menu.png";
 import notes from "../img/notes.webp";
 import portfolio from "../img/portfolio.webp";
@@ -23,6 +24,7 @@ import {
   SiPhp,
   SiReact,
   SiFirebase,
+  SiMui,
 } from "react-icons/si";
 import usePageStyles from "../styles/stylePages";
 
@@ -147,6 +149,21 @@ const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
         id: "project.nameMarkPlaceText",
       })}`,
       openProject: "https://github.com/katzohub/marketplace-Mobile-App",
+    },
+    {
+      id: 8,
+      icon: [
+        <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
+        <SiTypescript style={{ fontSize: "20px", color: "#007acc" }} />,
+        <SiMui style={{ fontSize: "20px", color: "#007fff" }} />,
+      ],
+      technologies: ["react", "typescript", "mui"],
+      img: upgradePorfolio,
+      nameProject: `${intl.formatMessage({ id: "project.portolioUpgrade" })}`,
+      detailProject: `${intl.formatMessage({
+        id: "project.portolioUpgradeText",
+      })}`,
+      openProject: "https://github.com/katzohub/Portfolio",
     },
   ];
 

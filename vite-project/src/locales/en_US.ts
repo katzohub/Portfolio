@@ -95,6 +95,9 @@ export default {
   "project.nameDatabase": "Film-Database",
   "project.nameNotes": "Notes",
   "project.nameMarkPlace": "Market-Place",
+  "project.portolioUpgrade": "Upgrade-portfolio",
+  "project.portolioUpgradeText":
+    "My upgraded portfolio with the new technologies I learned",
   "project.namePortfolioText": "My first portfolio html,css and javascript",
   "project.restaurantText":
     "My first menu for restaurant html,css and javascript",

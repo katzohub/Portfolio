@@ -97,6 +97,9 @@ export default {
   "project.nameDatabase": "Filmová-Databáza",
   "project.nameNotes": "Zápisnik",
   "project.nameMarkPlace": "Bazar",
+  "project.portolioUpgrade": "Vylepšené-portfólio",
+  "project.portolioUpgradeText":
+    "Moje vylepšené portfólio s novými technológiami ktoré som sa naučil",
   "project.namePortfolioText":
     "Môj prvý projekt portfólio html,css a javascript",
   "project.restaurantText":

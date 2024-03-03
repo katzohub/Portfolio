@@ -49,7 +49,7 @@ const LeftHeadertable = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/katzohub/Game-Seven-App"
+                  href="https://github.com/katzohub/Portfolio/tree/main/vite-project/src/components"
                   className={classes.leftHeaderSpanFour}
                 >
                   “https://github.com/gameSnake”

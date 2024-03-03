@@ -532,7 +532,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     paddingBottom: "120px",
     [theme.breakpoints.down("md")]: {
       marginBottom: "0px",
-
       padding: "0 20px",
     },
   },

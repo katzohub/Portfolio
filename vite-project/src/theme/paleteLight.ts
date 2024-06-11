@@ -44,8 +44,8 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorInputSend: "#d3a05f",
     colorBackInput: "#d3a05f",
     colorTextInput: "#fff",
-    colorNavBar: "#cc9044",
-    colorInCard: "#cc9044",
+    colorNavBar: "#d3a05f",
+    colorInCard: "#d3a05f",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

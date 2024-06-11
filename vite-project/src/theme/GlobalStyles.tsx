@@ -22,7 +22,7 @@ const GlobalStyles = () => (
         overflowX: "hidden",
         overflowY: "auto",
         /* // background-color: #000 !important; */
-        fontFamily: "'Fira Code',Mulish,Neucha,Open Sans, monospace",
+        fontFamily: `"Fira Code" !important`,
       },
       "#root": {
         width: "100vw",

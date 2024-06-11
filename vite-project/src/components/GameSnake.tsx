@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import PointSnake from "./PointSnake";
 import { useIntl } from "react-intl";
-import Green from "../img/boobleBackground/Green.png";
-import Blue from "../img/boobleBackground/Blue.png";
-import MiniCircle from "../svg/MiniCircle";
+import Green from "../assets/img/boobleBackground/Green.png";
+import Blue from "../assets/img/boobleBackground/Blue.png";
+import MiniCircle from "../assets/svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
 import {
   FaCaretLeft,
@@ -11,7 +11,7 @@ import {
   FaCaretRight,
   FaCaretDown,
 } from "react-icons/fa";
-import screenLogo from "../img/screenGame.png";
+import screenLogo from "../assets/img/screenGame.png";
 import usePageStyles from "../styles/style";
 
 const gridSize = 20;

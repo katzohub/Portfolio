@@ -1,11 +1,12 @@
+import { FC } from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
-import Blue from "../img/boobleBackground/Blue.png";
-import Green from "../img/boobleBackground/Green.png";
+import Blue from "../assets/img/boobleBackground/Blue.png";
+import Green from "../assets/img/boobleBackground/Green.png";
 import usePageStyles from "../styles/style";
 
-const LeftHeadertable = () => {
+const LeftHeadertable: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
 

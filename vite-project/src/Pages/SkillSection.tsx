@@ -6,14 +6,14 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import boxOffice from "../img/box office.webp";
-import filmDatabase from "../img/film database.webp";
-import logicGame from "../img/logic game.webp";
-import marketPlace from "../img/marketplace.webp";
-import upgradePorfolio from "../img/upgradePorfolio.jpeg";
-import menu from "../img/menu.png";
-import notes from "../img/notes.webp";
-import portfolio from "../img/portfolio.webp";
+import boxOffice from "../assets/img/box office.webp";
+import filmDatabase from "../assets/img/film database.webp";
+import logicGame from "../assets/img/logic game.webp";
+import marketPlace from "../assets/img/marketplace.webp";
+import upgradePorfolio from "../assets/img/upgradePorfolio.jpeg";
+import menu from "../assets/img/menu.png";
+import notes from "../assets/img/notes.webp";
+import portfolio from "../assets/img/portfolio.webp";
 import {
   SiHtml5,
   SiCss3,
@@ -26,24 +26,16 @@ import {
   SiFirebase,
   SiMui,
 } from "react-icons/si";
+import { CheckedStateProps } from "../types";
 import usePageStyles from "../styles/stylePages";
 
-type CheckedStateType = {
-  all: boolean;
-  html: boolean;
-  css: boolean;
-  sass: boolean;
-  tailwind: boolean;
-  mui: boolean;
-  javascript: boolean;
-  typescript: boolean;
-  php: boolean;
-  react: boolean;
-  firebase: boolean;
-};
 import { useIntl } from "react-intl";
 
-const SkillSection = ({ checkedState }: { checkedState: CheckedStateType }) => {
+const SkillSection = ({
+  checkedState,
+}: {
+  checkedState: CheckedStateProps;
+}) => {
   const intl = useIntl();
   const DataSkills = [
     {

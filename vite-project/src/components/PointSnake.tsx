@@ -1,11 +1,7 @@
-import React from "react";
+import { FC } from "react";
+import { PointSnakeProps } from "../types";
 
-interface PointSnakeProps {
-  index: number;
-  candyCount: number;
-}
-
-const PointSnake: React.FC<PointSnakeProps> = ({ index, candyCount }) => {
+const PointSnake: FC<PointSnakeProps> = ({ index, candyCount }) => {
   const opacity = candyCount > index ? 0.2 : 0.5;
 
   return (

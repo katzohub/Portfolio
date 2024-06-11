@@ -9,12 +9,8 @@ import {
 } from "@mui/material";
 import { useIntl } from "react-intl";
 import usePageStyles from "../styles/stylePages";
-type DisplayDataProps = {
-  name: string;
-  email: string;
-  message: string;
-  date: string;
-};
+import { DisplayDataProps } from "../types";
+
 const CssTextField = styled(TextField)(({ theme }) => ({
   "& label.Mui-focused": {
     color: theme.myColors.colorFFF,

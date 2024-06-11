@@ -1,9 +1,5 @@
-import React, { useState, createContext, ReactNode } from "react";
-
-interface MenuContextType {
-  isMenuOpen: boolean;
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { useState, createContext } from "react";
+import { MenuContextType, MenuProviderProps } from "../types";
 
 const defaultMenuContext: MenuContextType = {
   isMenuOpen: false,
@@ -11,10 +7,6 @@ const defaultMenuContext: MenuContextType = {
 };
 
 export const MenuContext = createContext<MenuContextType>(defaultMenuContext);
-
-interface MenuProviderProps {
-  children: ReactNode;
-}
 
 export const MenuProvider = ({ children }: MenuProviderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);

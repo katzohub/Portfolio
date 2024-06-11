@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, FC } from "react";
 import { MenuContext } from "../context/MenuProvider";
 import { useThemeContext } from "../context/themeContext";
 import { LanguageContext } from "../context/LanguageProvider";
@@ -9,8 +9,8 @@ import usePageStyles from "../styles/style";
 import { Theme } from "@mui/material/styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import AmericaFlag from "../svg/AmericaFlag";
-import SlovakiaFlag from "../svg/SlovakiaFlag";
+import AmericaFlag from "../assets/svg/AmericaFlag";
+import SlovakiaFlag from "../assets/svg/SlovakiaFlag";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -18,7 +18,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-const TopNav = () => {
+const TopNav: FC = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
   const { themeMode, toggleTheme } = useThemeContext();
   const switchChecked = themeMode === "dark";

@@ -1,24 +1,10 @@
+import { FC } from "react";
 import { Box } from "@mui/material";
 import { useIntl } from "react-intl";
 import usePageStyles from "../styles/stylePages";
+import { TextProps } from "../types";
 
-interface TextProps {
-  textOne: string;
-  textTwo?: string;
-  textThree?: string;
-  textFour?: string;
-  textFive?: string;
-  textSix?: string;
-  textSeven?: string;
-  textEight?: string;
-  textHelp: string;
-  textNine?: string;
-  textTen?: string;
-  textEleven?: string;
-  textTwelve: string;
-}
-
-const TemplateAbout: React.FC<TextProps> = ({
+const TemplateAbout: FC<TextProps> = ({
   textOne,
   textTwo,
   textThree,

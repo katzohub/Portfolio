@@ -4,13 +4,9 @@ import {
   createTheme,
   ThemeProvider as MUIThemeProvider,
 } from "@mui/material/styles";
+import { ThemeContextType } from "../types";
 import { themeOptions } from "../theme/palete";
 import { themeOptionsLight } from "../theme/paleteLight";
-
-interface ThemeContextType {
-  themeMode: string;
-  toggleTheme: () => void;
-}
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 

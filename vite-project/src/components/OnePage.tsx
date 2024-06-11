@@ -1,9 +1,10 @@
+import { FC } from "react";
 import LeftHeadertable from "./LeftHeadertable";
 import GameSnake from "./GameSnake";
 import { Box } from "@mui/material";
 import usePageStyles from "../styles/style";
 
-const OnePage = () => {
+const OnePage: FC = () => {
   const classes = usePageStyles();
   return (
     <Box className={classes.backColor}>

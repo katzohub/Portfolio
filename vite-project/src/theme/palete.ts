@@ -1,89 +1,9 @@
 import { ThemeOptions, createTheme } from "@mui/material/styles";
-
+import { DefaultTheme } from "@mui/system";
+import { ThemeProps } from "../types";
 declare module "@mui/material/styles" {
-  interface Theme {
-    myColors: {
-      colorFFF: string;
-      generalBackground: string;
-      colorLinie: string;
-      colorNavBar: string;
-      colorBottomNavLink: string;
-      colorTextLink: string;
-      hoverDownLinie: string;
-      textColorNav: string;
-      colorNonActive: string;
-      colorGreyText: string;
-      colorTextCard: string;
-      colorBackInput: string;
-      whiteColor: string;
-
-      colorGrey: string;
-      colorPurple: string;
-      colorOrangeText: string;
-      colorLightOrange: string;
-      colorLightGreen: string;
-      colorPurpleFolder: string;
-      colorTextInput: string;
-      colorDarkBlue: string;
-      borderTableSnake: string;
-      colorDarkBlack: string;
-      colorLightLinkHomeGithub: string;
-      colorDarkGrey: string;
-      colorPurpleText: string;
-      colorPinkText: string;
-      colorInputSend: string;
-      colorInCard: string;
-    };
-    myShadow: {
-      shadowSideBar: string;
-      shadowChat: string;
-      shadowInput: string;
-      shadowField: string;
-      shadowTextField: string;
-    };
-  }
-
-  // Rozšírte ThemeOptions o vlastné vlastnosti
-  interface ThemeOptions {
-    myColors?: {
-      colorFFF?: string;
-      generalBackground?: string;
-      colorLinie?: string;
-      colorNavBar?: string;
-      colorBottomNavLink?: string;
-      hoverDownLinie?: string;
-      colorTextLink?: string;
-      colorBackInput?: string;
-      colorOrangeText?: string;
-      textColorNav?: string;
-      colorNonActive?: string;
-      colorTextCard?: string;
-      whiteColor?: string;
-      colorGrey?: string;
-      colorPurple?: string;
-      colorLightOrange?: string;
-      colorLightGreen?: string;
-      colorPurpleFolder?: string;
-      colorDarkBlue?: string;
-      colorLightLinkHomeGithub?: string;
-      borderTableSnake?: string;
-      colorTextInput?: string;
-      colorGreyText?: string;
-      colorDarkBlack?: string;
-      colorDarkGrey?: string;
-      colorPurpleText?: string;
-      colorPinkText?: string;
-      colorInCard?: string;
-      colorInputSend?: string;
-    };
-    myShadow?: {
-      shadowSideBar?: string;
-      shadowChat?: string;
-      shadowInput?: string;
-      shadowField?: string;
-      shadowTextField?: string;
-    };
-  }
+  interface Theme extends ThemeProps, DefaultTheme {}
+  interface ThemeOptions extends ThemeProps, DefaultTheme {}
 }
 
 export const themeOptions: ThemeOptions = createTheme({

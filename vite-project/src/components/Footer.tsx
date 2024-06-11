@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Grid, Box } from "@mui/material";
 import usePageStyles from "../styles/style";
 import { useIntl } from "react-intl";
@@ -5,7 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-const Footer = () => {
+const Footer: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
   return (

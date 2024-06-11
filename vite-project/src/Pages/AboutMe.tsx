@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
 import {
   ListSubheader,
   List,
@@ -19,32 +19,17 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LeftContact from "./LeftContact";
 import TemplateAbout from "./TemplateAbout";
 import usePageStyles from "../styles/stylePages";
-import ja from "../img/ja.png";
+import { TextProps } from "../types";
+import ja from "../assets/img/ja.png";
 
-type TemplateProps = {
-  textOne: string;
-  textTwo: string;
-  textThree: string;
-  textFour: string;
-  textFive: string;
-  textSix: string;
-  textSeven: string;
-  textEight: string;
-  textHelp: string;
-  textNine: string;
-  textTen: string;
-  textEleven: string;
-  textTwelve: string;
-};
-
-const AboutMe: React.FC = () => {
+const AboutMe: FC = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [openContact, setOpenContact] = useState<boolean>(false);
   const intl = useIntl();
 
-  const [templateProps, setTemplateProps] = useState<TemplateProps>({
+  const [templateProps, setTemplateProps] = useState<TextProps>({
     textOne: `${intl.formatMessage({ id: "about.bioTextOne" })}`,
     textTwo: `${intl.formatMessage({ id: "about.bioTextTwo" })}`,
     textThree: `${intl.formatMessage({ id: "about.bioTextThree" })}`,

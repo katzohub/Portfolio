@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FC } from "react";
 import { useIntl } from "react-intl";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -19,25 +19,11 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { Box } from "@mui/material";
-
+import { CheckedStateProps } from "../types";
 import SkillSection from "./SkillSection";
 import usePageStyles from "../styles/stylePages";
 
-type DisplayDataProps = {
-  all: boolean;
-  html: boolean;
-  css: boolean;
-  sass: boolean;
-  tailwind: boolean;
-  mui: boolean;
-  javascript: boolean;
-  typescript: boolean;
-  php: boolean;
-  react: boolean;
-  firebase: boolean;
-};
-
-const AlretCheckBox = () => {
+const AlretCheckBox: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
   return (
@@ -54,7 +40,7 @@ const AlretCheckBox = () => {
 };
 
 const Projects: React.FC = () => {
-  const [checkedState, setCheckedState] = useState<DisplayDataProps>({
+  const [checkedState, setCheckedState] = useState<CheckedStateProps>({
     all: true,
     html: false,
     css: false,

@@ -1,9 +1,10 @@
+import { FC } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useIntl } from "react-intl";
 import usePageStyles from "../styles/stylePages";
 
-const ThankYou = () => {
+const ThankYou: FC = () => {
   const navigate = useNavigate();
   const classes = usePageStyles();
   const intl = useIntl();

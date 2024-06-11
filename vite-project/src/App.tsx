@@ -9,6 +9,7 @@ import Projects from "./Pages/Projects";
 import ContactMe from "./Pages/ContactMe";
 import ThankYou from "./Pages/ThankYou";
 import Error from "./Pages/Error";
+import GlobalStyles from "./theme/GlobalStyles.tsx";
 import { IntlProvider } from "react-intl";
 import { LanguageProvider, LanguageContext } from "./context/LanguageProvider";
 import en from "./locales/en_US";
@@ -17,6 +18,7 @@ import sk from "./locales/sk_SK";
 const App = () => {
   return (
     <BrowserRouter>
+      <GlobalStyles />
       <CustomThemeProvider>
         <MenuProvider>
           <LanguageProvider>

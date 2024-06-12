@@ -1,6 +1,5 @@
 import { FC } from "react";
-import LeftHeadertable from "./LeftHeadertable";
-import GameSnake from "./GameSnake";
+import { LeftHeadertable, GameSnake } from "../components";
 import { Box } from "@mui/material";
 import usePageStyles from "../styles/style";
 

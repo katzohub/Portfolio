@@ -1,7 +1,6 @@
 import { FC } from "react";
-import TopNav from "../components/TopNav";
+import { TopNav, Footer } from "../components";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
 import { Box } from "@mui/material";
 import usePageStyles from "../styles/style";
 

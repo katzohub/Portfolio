@@ -2,13 +2,17 @@ import { useContext, ReactNode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
-import OnePage from "./components/OnePage";
-import SharedLayout from "./Pages/SharedLayout";
-import AboutMe from "./Pages/AboutMe";
-import Projects from "./Pages/Projects";
-import ContactMe from "./Pages/ContactMe";
-import ThankYou from "./Pages/ThankYou";
-import Error from "./Pages/Error";
+
+import {
+  SharedLayout,
+  AboutMe,
+  Projects,
+  ContactMe,
+  ThankYou,
+  Error,
+  OnePage,
+} from "./Pages";
+
 import GlobalStyles from "./theme/GlobalStyles.tsx";
 import CssBaseline from "@mui/material/CssBaseline";
 import { IntlProvider } from "react-intl";

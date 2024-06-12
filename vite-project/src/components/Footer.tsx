@@ -10,7 +10,10 @@ const Footer: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
   return (
-    <footer className={classes.bottomNavFooterContainer}>
+    <footer
+      className={classes.bottomNavFooterContainer}
+      style={{ display: "none" }}
+    >
       <nav className={classes.bottomNavContainer}>
         <Grid item>
           <Box className={classes.navBoxItem}>

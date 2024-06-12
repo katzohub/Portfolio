@@ -1,44 +1,60 @@
-import { useContext, ReactNode } from "react";
+import { lazy, useContext, ReactNode, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
-
-import {
-  SharedLayout,
-  AboutMe,
-  Projects,
-  ContactMe,
-  ThankYou,
-  Error,
-  OnePage,
-} from "./Pages";
-
-import GlobalStyles from "./theme/GlobalStyles.tsx";
-import CssBaseline from "@mui/material/CssBaseline";
-import { IntlProvider } from "react-intl";
 import { LanguageProvider, LanguageContext } from "./context/LanguageProvider";
+import { CssBaseline, Skeleton } from "@mui/material";
+import GlobalStyles from "./theme/GlobalStyles.tsx";
+import { IntlProvider } from "react-intl";
 import en from "./locales/en_US";
 import sk from "./locales/sk_SK";
 
+const SharedLayout = lazy(() => import("./Pages/SharedLayout.tsx"));
+const AboutMe = lazy(() => import("./Pages/AboutMe"));
+const Projects = lazy(() => import("./Pages/Projects"));
+const ContactMe = lazy(() => import("./Pages/ContactMe"));
+const ThankYou = lazy(() => import("./Pages/ThankYou"));
+const Error = lazy(() => import("./Pages/Error"));
+const OnePage = lazy(() => import("./Pages/OnePage"));
+
 const App = () => {
+  // const theme = useTheme();
   return (
     <BrowserRouter>
       <CssBaseline />
       <GlobalStyles />
+
       <CustomThemeProvider>
         <MenuProvider>
           <LanguageProvider>
             <IntlProviderWrapper>
-              <Routes>
-                <Route path="/" element={<SharedLayout />}>
-                  <Route index element={<OnePage />} />
-                  <Route path="/about-me" element={<AboutMe />}></Route>
-                  <Route path="/projects" element={<Projects />}></Route>
-                  <Route path="/contact-me" element={<ContactMe />}></Route>
-                  <Route path="/thank-you" element={<ThankYou />}></Route>
-                  <Route path="*" element={<Error />} />
-                </Route>
-              </Routes>
+              <Suspense
+                fallback={
+                  <Skeleton
+                    animation="wave"
+                    variant="rectangular"
+                    sx={(theme) => ({
+                      bgcolor: theme.myColors.generalBackground,
+                      width: "100vw !important",
+                      height: "100vh !important",
+                      padding: "0",
+                      margin: "0",
+                      overflow: "hidden",
+                    })}
+                  />
+                }
+              >
+                <Routes>
+                  <Route path="/" element={<SharedLayout />}>
+                    <Route index element={<OnePage />} />
+                    <Route path="/about-me" element={<AboutMe />}></Route>
+                    <Route path="/projects" element={<Projects />}></Route>
+                    <Route path="/contact-me" element={<ContactMe />}></Route>
+                    <Route path="/thank-you" element={<ThankYou />}></Route>
+                    <Route path="*" element={<Error />} />
+                  </Route>
+                </Routes>
+              </Suspense>
             </IntlProviderWrapper>
           </LanguageProvider>
         </MenuProvider>

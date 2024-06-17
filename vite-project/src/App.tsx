@@ -18,12 +18,10 @@ const Error = lazy(() => import("./Pages/Error"));
 const OnePage = lazy(() => import("./Pages/OnePage"));
 
 const App = () => {
-  // const theme = useTheme();
   return (
     <BrowserRouter>
       <CssBaseline />
       <GlobalStyles />
-
       <CustomThemeProvider>
         <MenuProvider>
           <LanguageProvider>

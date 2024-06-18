@@ -7,7 +7,6 @@ import { Grid, Switch, Box, Typography } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useIntl } from "react-intl";
 import usePageStyles from "../styles/style";
-import { Theme } from "@mui/material/styles";
 import Navigation from "./Navigation";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -42,7 +41,7 @@ const TopNav: FC = () => {
   return (
     <>
       <nav className={classes.navContainer}>
-        <Grid item sx={{ background: "yellow" }}>
+        <Grid item>
           <Box className={classes.navBoxItem}>
             <div className={classes.navLink}>
               {intl.formatMessage({ id: "nav.name" })}
@@ -53,7 +52,7 @@ const TopNav: FC = () => {
         <Switcher />
         {/* STYLED COMPONENT */}
         {/* STYLED COMPONENT */}
-        <Navigation />
+        <Navigation isNavigationLink={false} />
         {/* STYLED COMPONENT */}
       </nav>
       {/* // Mobile Navigation */}
@@ -61,7 +60,7 @@ const TopNav: FC = () => {
         <Box className={classes.boxMobileNav}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Typography
-              sx={(theme: Theme) => ({
+              sx={(theme) => ({
                 fontFamily: "Fira Code",
                 color: isMenuOpen
                   ? theme.myColors.colorFFF
@@ -107,7 +106,7 @@ const TopNav: FC = () => {
             <CloseIcon
               onClick={toggleMenu}
               className={classes.iconCloseMobileNav}
-              sx={(theme: Theme) => ({
+              sx={(theme) => ({
                 color: isMenuOpen
                   ? theme.myColors.colorFFF
                   : theme.myColors.textColorNav,
@@ -117,7 +116,7 @@ const TopNav: FC = () => {
             <MenuIcon
               onClick={toggleMenu}
               className={classes.iconMobileNav}
-              sx={(theme: Theme) => ({
+              sx={(theme) => ({
                 color: isMenuOpen
                   ? theme.myColors.colorFFF
                   : theme.myColors.textColorNav,
@@ -131,7 +130,7 @@ const TopNav: FC = () => {
           direction="column"
           alignItems={"flex-start"}
           justifyContent={"start"}
-          sx={(theme: Theme) => ({
+          sx={(theme) => ({
             position: "absolute",
             overflow: "hidden",
             width: "100%",

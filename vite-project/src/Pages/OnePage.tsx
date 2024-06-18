@@ -7,12 +7,7 @@ const OnePage: FC = () => {
   const classes = usePageStyles();
   return (
     <Box className={classes.backColor}>
-      <Box
-        className={classes.pageContainer}
-        // sx={{
-        //   display: isMenuOpen ? "none" : "flex",
-        // }}
-      >
+      <Box className={classes.pageContainer}>
         <Box className={classes.pageWrap}>
           <Box className={classes.pageLeftWrap}>
             <LeftHeadertable />

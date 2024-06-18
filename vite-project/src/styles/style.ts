@@ -126,8 +126,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     height: "100%",
     display: "flex",
     alignItems: "center",
-    position: "relative",
-    left: " 10px",
     cursor: "default",
   },
   navLink: {

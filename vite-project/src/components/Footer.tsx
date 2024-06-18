@@ -19,7 +19,7 @@ const Footer: FC = () => {
             </Box>
           </Grid>
           {/* right */}
-          <Navigation />
+          <Navigation isNavigationLink={true} />
           {/* right */}
         </nav>
       </Box>

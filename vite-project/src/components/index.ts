@@ -1,6 +1,5 @@
-import Footer from "./Footer";
 import LeftHeadertable from "./LeftHeadertable";
-import TopNav from "./TopNav";
+import Navbar from "../containers/Navbar";
 import GameSnake from "./GameSnake";
 
-export { Footer, LeftHeadertable, GameSnake, TopNav };
+export { Navbar, LeftHeadertable, GameSnake };

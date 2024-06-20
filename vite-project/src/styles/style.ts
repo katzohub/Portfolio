@@ -2,6 +2,12 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
+  containerNavlinksTop: {
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  },
+  containerNavlinksDown: {},
   backColor: {
     width: "100vw",
     minHeight: "100dvh",
@@ -161,7 +167,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   navContainerThreeBottom: {
     display: "flex",
   },
-  // this rechanged
+
   navBoxItemCenter: {
     display: "flex",
   },
@@ -230,6 +236,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       position: "relative",
       top: "1.5px",
       right: "3px",
+      [theme.breakpoints.down("md")]: {
+        display: "none",
+      },
     },
   },
   navContainer: {
@@ -244,9 +253,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     background: `${theme.myColors.generalBackground} !important`,
     zIndex: "9999",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
   },
 
   // end rechanged

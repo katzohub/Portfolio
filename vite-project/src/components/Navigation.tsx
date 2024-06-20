@@ -56,7 +56,14 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink }) => {
   ];
 
   return (
-    <Grid sx={{ width: "100%" }}>
+    <Grid
+      sx={{ width: "100%" }}
+      className={
+        isNavigationLink
+          ? classes.containerNavlinksTop
+          : classes.containerNavlinksDown
+      }
+    >
       <Box className={classes.navBoxItemCenter}>
         {isNavigationLink
           ? falseNavgationData.map((item) => {

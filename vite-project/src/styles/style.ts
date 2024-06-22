@@ -11,9 +11,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "none",
     [theme.breakpoints.down("md")]: {
       display: "block",
-      fontSize: "1rem",
+      fontSize: "1.25rem",
       position: "relative",
       top: "5px",
+      paddingLeft: "8.5px",
+      marginRight: "17px",
     },
   },
   // mobielNavigation
@@ -207,6 +209,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       borderRight: "none",
       borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+
       "&:last-child": {
         borderBottom: `1px solid ${theme.myColors.colorLinie}`,
         borderRight: "none",

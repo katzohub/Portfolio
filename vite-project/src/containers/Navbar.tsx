@@ -30,7 +30,15 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
           <Typography className={classes.navLink}>{text}</Typography>
         </Box>
         {isTopnav && <Switcher />}
-        {!isTopnav && <Navigation isNavigationLink={isTopnav} />}
+        <Box
+          sx={(theme) => ({
+            display: "block",
+            [theme.breakpoints.down("md")]: { display: "none" },
+          })}
+        >
+          <Navigation isNavigationLink={isTopnav} />
+        </Box>
+
         {isTopnav && (
           <MenuIcon
             onClick={toggleMenu}

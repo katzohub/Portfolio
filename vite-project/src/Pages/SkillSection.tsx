@@ -6,7 +6,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import DataSkills from "../constants/dataSkills";
+import dataSkills from "../constants/DataSkills";
 import { CheckedStateProps } from "../types";
 import usePageStyles from "../styles/stylePages";
 import { useIntl } from "react-intl";
@@ -20,8 +20,8 @@ const SkillSection = ({
 
   const isMobile = useMediaQuery("(max-width:800px)");
   const filteredProjects = checkedState.all
-    ? DataSkills
-    : DataSkills.filter((project) =>
+    ? dataSkills
+    : dataSkills.filter((project) =>
         Object.entries(checkedState).some(
           ([key, value]) => value && project.technologies.includes(key)
         )

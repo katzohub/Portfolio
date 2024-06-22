@@ -2,16 +2,19 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
-  containerNavlinksTop: {
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-  },
-  containerNavlinksDown: {},
   backColor: {
     width: "100vw",
     minHeight: "100dvh",
     backgroundColor: theme.myColors.generalBackground,
+  },
+  iconMobileMenu: {
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      fontSize: "1rem",
+      position: "relative",
+      top: "5px",
+    },
   },
   // mobielNavigation
   boxMobileNav: {
@@ -170,6 +173,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
   navBoxItemCenter: {
     display: "flex",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
   },
   navBoxCenter: {
     fontFamily: "Fira Code",
@@ -179,10 +185,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     lineHeight: "normal",
     color: `${theme.myColors.textColorNav}`,
     textDecoration: "none !important",
-
     height: "56px",
     display: "flex",
-    //  borderLeft: `2px solid ${theme.myColors.colorLinie}`,
     borderRight: `2px solid ${theme.myColors.colorLinie}`,
     padding: "0 10px",
     alignItems: "center",
@@ -200,8 +204,22 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       position: "absolute",
       right: "0",
     },
-    // lastCHild borderRight: "none",
-    // lastCHild end position in linnie,
+    [theme.breakpoints.down("md")]: {
+      borderRight: "none",
+      borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+      "&:last-child": {
+        borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+        borderRight: "none",
+        borderLeft: "none",
+        position: "static",
+      },
+      "&:first-child": {
+        borderTop: `1px solid ${theme.myColors.colorLinie}`,
+      },
+      "&:hover": {
+        background: "rgba(255, 255, 255, 0.08) !important",
+      },
+    },
   },
   navLinkLeft: {
     fontFamily: "Fira Code",

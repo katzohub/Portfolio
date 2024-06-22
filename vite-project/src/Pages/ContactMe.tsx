@@ -24,12 +24,10 @@ const ContactMe = () => {
   const [activeButton, setActiveButton] = useState<string>("");
   const handleClickContact = () => {
     setOpenFindMe(!openFindMe);
-    console.log("openFindMe:", openFindMe);
   };
   const intl = useIntl();
   const handleClickContactOne = () => {
     setOpenFindMeContact(!openFindMeContact);
-    console.log("openFindMeContact:", openFindMeContact);
   };
   const classes = usePageStyles();
   return (

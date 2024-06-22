@@ -8,7 +8,6 @@ import { useIntl } from "react-intl";
 const SharedLayout: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
-  console.log(intl);
 
   return (
     <>

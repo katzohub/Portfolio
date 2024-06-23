@@ -1,10 +1,9 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import Drawer, { DrawerProps } from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-// import Navigation from "./Navigation";
 
 const item = {
   py: "14px",
@@ -15,6 +14,7 @@ const itemCategory = {
   py: 1.5,
   px: 3,
 };
+
 interface MobileDrawerProps extends DrawerProps {
   toggleMenu: () => void;
   children: React.ReactNode;
@@ -27,7 +27,7 @@ const MobileDrawer: FC<MobileDrawerProps> = ({
 }) => {
   return (
     <Drawer
-      variant="permanent"
+      variant="temporary"
       {...other}
       anchor="right"
       sx={(theme) => ({

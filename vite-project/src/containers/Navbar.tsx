@@ -1,10 +1,11 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import Switcher from "../components/Switcher";
 import { Box, Typography } from "@mui/material";
 import usePageStyles from "../styles/style";
 import MenuIcon from "@mui/icons-material/Menu";
 import Navigation from "../components/Navigation";
 import MobileDrawer from "../components/MobileDrawer";
+import { useLocation } from "react-router-dom";
 
 type NavbarProps = {
   isTopnav: boolean;
@@ -15,11 +16,17 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
   const classes = usePageStyles();
   const drawerWidth = 256;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    console.log("Menu toggled:", !isMenuOpen);
   };
-  console.log(isMenuOpen);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+    console.log("Location changed:", location.pathname);
+  }, [location.pathname]);
 
   return (
     <>
@@ -72,8 +79,7 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
               PaperProps={{ style: { width: drawerWidth } }}
               open={isMenuOpen}
               toggleMenu={toggleMenu}
-              onClose={toggleMenu}
-              variant="temporary"
+              onClose={() => setIsMenuOpen(false)}
               children={
                 <Navigation
                   isNavigationLink={isTopnav}

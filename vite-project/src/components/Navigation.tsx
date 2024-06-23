@@ -16,7 +16,6 @@ type NavigationProps = {
 const Navigation: FC<NavigationProps> = ({ isNavigationLink, toggleMenu }) => {
   const classes = usePageStyles();
   const intl = useIntl();
-  console.log(toggleMenu);
 
   return (
     <Grid sx={{ width: "100%" }}>
@@ -36,7 +35,10 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink, toggleMenu }) => {
                   className={classes.navBoxCenter}
                   key={index}
                   onClick={() => {
-                    if (toggleMenu) toggleMenu(); // Zavolá toggleMenu, pokud je definováno
+                    if (toggleMenu) {
+                      console.log("NavLink clicked, closing menu");
+                      toggleMenu();
+                    }
                   }}
                 >
                   <Typography

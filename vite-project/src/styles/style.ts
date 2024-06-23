@@ -2,6 +2,14 @@ import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const usePageStyles = makeStyles((theme: Theme) => ({
+  linkSocial: {
+    color: "#fff",
+    display: "flex",
+    transition: "color 0.3s ease",
+    "&:hover": {
+      color: "#607B96",
+    },
+  },
   backColor: {
     width: "100vw",
     minHeight: "100dvh",
@@ -174,15 +182,25 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
 
   navBoxItemCenter: {
-    display: "flex",
+    display: "flex !important",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
+    },
+  },
+  navBoxItemCenterBottom: {
+    display: "flex !important",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "row",
+      position: "absolute",
+      right: "0",
+      top: "0",
     },
   },
   navBoxCenter: {
     fontFamily: "Fira Code",
     fontSize: "1rem",
     fontStyle: "normal",
+
     fontWeight: 450,
     lineHeight: "normal",
     color: `${theme.myColors.textColorNav}`,
@@ -192,6 +210,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderRight: `2px solid ${theme.myColors.colorLinie}`,
     padding: "0 10px",
     alignItems: "center",
+    zIndex: 999999,
     transition: "color 0.3s ease-in",
     "&:hover": {
       color: `${theme.myColors.whiteColor} !important`,
@@ -224,6 +243,19 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       },
     },
   },
+  bottomLink: {
+    color: `${theme.myColors.textColorNav} !important`,
+    textDecoration: "none !important",
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "color 0.3s ease-in",
+    "&:hover": {
+      color: `${theme.myColors.whiteColor} !important`,
+    },
+  },
   navLinkLeft: {
     fontFamily: "Fira Code",
     fontSize: "1rem",
@@ -231,7 +263,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 450,
     lineHeight: "normal",
     color: `${theme.myColors.textColorNav} !important`,
-
     textDecoration: "none !important",
     height: "56px",
     display: "flex",
@@ -252,6 +283,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       borderRight: "none",
       position: "absolute",
       right: "0",
+      textDecoration: "none !important",
     },
     "& .github-link": {
       position: "relative",
@@ -259,6 +291,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       right: "3px",
       [theme.breakpoints.down("md")]: {
         display: "none",
+      },
+    },
+    [theme.breakpoints.down("md")]: {
+      "&:last-child": {
+        borderLeft: "none",
+        borderRight: "none",
+        position: "static",
+        textDecoration: "none !important",
+      },
+      "&:first-child": {
+        borderLeft: `2px solid ${theme.myColors.colorLinie}`,
       },
     },
   },

@@ -119,7 +119,7 @@ export default {
   "contact.message": "Message",
   "contact.submit": "submit",
   /*06.Footer*/
-  "footer.findMeIn": "find-me-in",
+  "footer.findMeIn": "find-me-in:",
   /*07.Thank-You Message*/
   "thankYou.thankYou": "Thank you! 🤘",
   "thankYou.thankYouText":

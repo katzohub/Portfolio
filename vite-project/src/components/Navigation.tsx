@@ -20,7 +20,7 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink }) => {
   const classes = usePageStyles();
   const intl = useIntl();
 
-  const trueNavgationData = [
+  const falseNavgationData = [
     {
       goUrl: "https://twitter.com/TomOliak140446",
       icon: <TwitterIcon />,
@@ -40,7 +40,7 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink }) => {
       text: "GitHub",
     },
   ];
-  const falseNavgationData = [
+  const trueNavgationData = [
     {
       goUrl: "/",
       icon: <FaHome />,
@@ -65,9 +65,15 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink }) => {
 
   return (
     <Grid sx={{ width: "100%" }}>
-      <Box className={classes.navBoxItemCenter}>
+      <Box
+        className={
+          isNavigationLink
+            ? classes.navBoxItemCenter
+            : classes.navBoxItemCenterBottom
+        }
+      >
         {isNavigationLink
-          ? falseNavgationData.map((item, index) => {
+          ? trueNavgationData.map((item, index) => {
               const { goUrl, text, icon } = item;
               return (
                 <NavLink
@@ -85,7 +91,7 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink }) => {
                 </NavLink>
               );
             })
-          : trueNavgationData.map((item, index) => {
+          : falseNavgationData.map((item, index) => {
               const { goUrl, icon, text } = item;
               return (
                 <a

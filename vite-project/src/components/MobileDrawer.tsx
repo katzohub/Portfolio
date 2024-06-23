@@ -25,12 +25,12 @@ const MobileDrawer: FC<MobileDrawerProps> = ({ toggleMenu, ...other }) => {
       variant="permanent"
       {...other}
       anchor="right"
-      sx={{
+      sx={(theme) => ({
         zIndex: 999999,
         "& .MuiDrawer-paperAnchorRight": {
-          backgroundColor: "#1f1f1f",
+          backgroundColor: theme.myColors.colorDarkBlue,
         },
-      }}
+      })}
     >
       <List disablePadding sx={{ position: "relative", height: "100%" }}>
         <ListItem
@@ -44,7 +44,7 @@ const MobileDrawer: FC<MobileDrawerProps> = ({ toggleMenu, ...other }) => {
           <IconButton
             onClick={toggleMenu}
             aria-label="delete"
-            sx={{
+            sx={(theme) => ({
               position: "relative",
               left: "-10px",
               cursor: "pointer",
@@ -52,10 +52,10 @@ const MobileDrawer: FC<MobileDrawerProps> = ({ toggleMenu, ...other }) => {
               background: "transparent",
               "&:hover, &:focus": {
                 transition: "color .2s,background .2s",
-                color: "#fff",
+                color: theme.myColors.textColorNav,
                 background: "rgba(255, 255, 255, 0.08)",
               },
-            }}
+            })}
           >
             <ChevronRightIcon />
           </IconButton>

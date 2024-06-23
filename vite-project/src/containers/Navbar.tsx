@@ -30,10 +30,13 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
           <Typography className={classes.navLink}>{text}</Typography>
         </Box>
         {isTopnav && <Switcher />}
+
         <Box
           sx={(theme) => ({
             display: "block",
-            [theme.breakpoints.down("md")]: { display: "none" },
+            [theme.breakpoints.down("md")]: {
+              display: isTopnav ? "none" : "block",
+            },
           })}
         >
           <Navigation isNavigationLink={isTopnav} />
@@ -49,12 +52,16 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
                 position: "absolute",
                 right: "10px",
                 height: "56px",
-                borderLeft: "2px solid #fff",
-                color: "#fff",
+                borderLeft: `2px solid ${theme.myColors.colorLinie}`,
                 paddingLeft: "10px",
                 fontSize: "2.2rem",
                 transition: "transform 0.3s ease",
                 cursor: "pointer",
+                color: theme.myColors.textColorNav,
+                "&:hover": {
+                  transition: "color 0.3s",
+                  color: theme.myColors.colorFFF,
+                },
               },
             })}
           />

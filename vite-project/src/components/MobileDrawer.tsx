@@ -4,7 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 
 const item = {
   py: "14px",
@@ -17,9 +17,14 @@ const itemCategory = {
 };
 interface MobileDrawerProps extends DrawerProps {
   toggleMenu: () => void;
+  children: React.ReactNode;
 }
 
-const MobileDrawer: FC<MobileDrawerProps> = ({ toggleMenu, ...other }) => {
+const MobileDrawer: FC<MobileDrawerProps> = ({
+  toggleMenu,
+  children,
+  ...other
+}) => {
   return (
     <Drawer
       variant="permanent"
@@ -60,7 +65,7 @@ const MobileDrawer: FC<MobileDrawerProps> = ({ toggleMenu, ...other }) => {
             <ChevronRightIcon />
           </IconButton>
         </ListItem>
-        <Navigation isNavigationLink={true} />
+        {children}
       </List>
     </Drawer>
   );

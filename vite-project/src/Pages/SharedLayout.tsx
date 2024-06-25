@@ -13,7 +13,6 @@ const SharedLayout: FC = () => {
     <>
       <Box className={classes.backColor}>
         <Navbar isTopnav={true} text={intl.formatMessage({ id: "nav.name" })} />
-
         <Outlet />
         <Navbar
           isTopnav={false}

@@ -68,6 +68,8 @@ const IntlProviderWrapper = ({ children }: { children: ReactNode }) => {
     "sk-SK": sk,
   };
 
+  console.log("IntlProviderWrapper language:", language);
+
   return (
     <IntlProvider locale={language} messages={messages[language]}>
       {children}

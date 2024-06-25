@@ -10,12 +10,21 @@ import usePageStyles from "../styles/style";
 
 type NavigationProps = {
   isNavigationLink: boolean;
-  toggleMenu?: () => void;
+  //  handleDrawerClose?: () => void;
 };
 
-const Navigation: FC<NavigationProps> = ({ isNavigationLink, toggleMenu }) => {
+const Navigation: FC<NavigationProps> = ({
+  isNavigationLink,
+  //  handleDrawerClose,
+}) => {
   const classes = usePageStyles();
   const intl = useIntl();
+
+  // const goMyAdress = () => {
+  //   if (handleDrawerClose) {
+  //     handleDrawerClose();
+  //   }
+  // };
 
   return (
     <Grid sx={{ width: "100%" }}>
@@ -34,12 +43,7 @@ const Navigation: FC<NavigationProps> = ({ isNavigationLink, toggleMenu }) => {
                   to={goUrl}
                   className={classes.navBoxCenter}
                   key={index}
-                  onClick={() => {
-                    if (toggleMenu) {
-                      console.log("NavLink clicked, closing menu");
-                      toggleMenu();
-                    }
-                  }}
+                  // onClick={() => goMyAdress()}
                 >
                   <Typography
                     variant="caption"

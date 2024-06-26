@@ -1,7 +1,15 @@
-import React, { FC } from "react";
-import { Grid, Box, Typography } from "@mui/material";
+import { FC } from "react";
+import {
+  Grid,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Box,
+  Typography,
+} from "@mui/material";
 import { useIntl } from "react-intl";
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 import {
   trueNavigationData,
   falseNavigationData,
@@ -10,21 +18,17 @@ import usePageStyles from "../styles/style";
 
 type NavigationProps = {
   isNavigationLink: boolean;
-  //  handleDrawerClose?: () => void;
+  onSelectItem?: (path: string) => void;
 };
 
 const Navigation: FC<NavigationProps> = ({
   isNavigationLink,
-  //  handleDrawerClose,
+  onSelectItem,
 }) => {
   const classes = usePageStyles();
   const intl = useIntl();
-
-  // const goMyAdress = () => {
-  //   if (handleDrawerClose) {
-  //     handleDrawerClose();
-  //   }
-  // };
+  const location = useLocation();
+  const { pathname } = location;
 
   return (
     <Grid sx={{ width: "100%" }}>
@@ -39,20 +43,29 @@ const Navigation: FC<NavigationProps> = ({
           ? trueNavigationData.map((item, index) => {
               const { goUrl, text, icon } = item;
               return (
-                <NavLink
-                  to={goUrl}
-                  className={classes.navBoxCenter}
+                <ListItemButton
                   key={index}
-                  // onClick={() => goMyAdress()}
+                  className={`${classes.navBoxCenter} ${
+                    pathname === goUrl ? "active" : ""
+                  }`}
+                  onClick={() => onSelectItem && onSelectItem(goUrl)}
+                  sx={{
+                    "&:hover": {
+                      "& .MuiListItemIcon-root, & .MuiListItemText-root": {
+                        transition: "color .2s",
+                        color: "#fff",
+                      },
+                    },
+                  }}
                 >
-                  <Typography
-                    variant="caption"
-                    className={classes.iconMobileMenu}
-                  >
+                  <ListItemIcon className={classes.iconMobileMenu}>
                     {icon}
-                  </Typography>
-                  {intl.formatMessage({ id: text })}
-                </NavLink>
+                  </ListItemIcon>
+                  <ListItemText>
+                    {" "}
+                    {intl.formatMessage({ id: text })}
+                  </ListItemText>
+                </ListItemButton>
               );
             })
           : falseNavigationData.map((item, index) => {

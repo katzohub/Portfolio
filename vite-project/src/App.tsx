@@ -2,6 +2,7 @@ import { lazy, useContext, ReactNode, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
+import SharedLayout from "./Pages/SharedLayout";
 import { LanguageProvider, LanguageContext } from "./context/LanguageProvider";
 import { CssBaseline, Skeleton } from "@mui/material";
 import GlobalStyles from "./theme/GlobalStyles.tsx";
@@ -9,7 +10,6 @@ import { IntlProvider } from "react-intl";
 import en from "./locales/en_US";
 import sk from "./locales/sk_SK";
 
-const SharedLayout = lazy(() => import("./Pages/SharedLayout.tsx"));
 const AboutMe = lazy(() => import("./Pages/AboutMe"));
 const Projects = lazy(() => import("./Pages/Projects"));
 const ContactMe = lazy(() => import("./Pages/ContactMe"));
@@ -67,8 +67,6 @@ const IntlProviderWrapper = ({ children }: { children: ReactNode }) => {
     "en-US": en,
     "sk-SK": sk,
   };
-
-  console.log("IntlProviderWrapper language:", language);
 
   return (
     <IntlProvider locale={language} messages={messages[language]}>

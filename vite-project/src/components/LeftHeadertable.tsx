@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { Grid, Box, Typography, Button } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
+import { MyButton } from "../components/";
 // import Blue from "../assets/img/boobleBackground/Blue.png";
 // import Green from "../assets/img/boobleBackground/Green.png";
 import usePageStyles from "../styles/style";
@@ -67,53 +68,10 @@ const LeftHeadertable: FC = () => {
               </span>
             </Typography>
           </Box>
-          <Button
-            variant="outlined"
-            sx={{
-              background:
-                "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 0%, rgba(67, 217, 173, 0.09) 100%)",
-              boxShadow: "0px 2px 0px rgba(255, 255, 255, 0.30) inset",
-              borderRadius: 8,
-              border: "1px #0C1616 solid",
-              backdropFilter: "blur(64px)",
-            }}
-          >
-            <Typography
-              variant="caption"
-              sx={(theme) => ({
-                display: "block",
-                [theme.breakpoints.down("md")]: {
-                  display: "none",
-                },
-              })}
-            >
-              Spustiť hru snake v novom okne
-            </Typography>
-            <Typography
-              variant="caption"
-              sx={(theme) => ({
-                display: "none",
-                [theme.breakpoints.down("md")]: {
-                  display: "block",
-                },
-              })}
-            >
-              Spustiť hru snake pre mobilne zariadenia
-            </Typography>
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{
-              background:
-                "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 0%, rgba(67, 217, 173, 0.09) 100%)",
-              boxShadow: "0px 2px 0px rgba(255, 255, 255, 0.30) inset",
-              borderRadius: 8,
-              border: "1px #0C1616 solid",
-              backdropFilter: "blur(64px)",
-            }}
-          >
-            Stiahnúť CV
-          </Button>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "20px 0" }}>
+            <MyButton text="home.startGameBtn" />
+            <MyButton text="home.download.cv" />
+          </Box>
         </Grid>
       </Box>
     </>

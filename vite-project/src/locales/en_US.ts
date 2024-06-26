@@ -19,6 +19,8 @@ export default {
   "home.useKeyboard": "use keyboard",
   "home.usePlay": "arrows to play",
   "home.lastFood": "food left",
+  "home.download.cv": "Download CV",
+  "home.startGameBtn": "start game snake",
   /*03.About-me*/
   "about.personal": "personal-info",
   "about.me": "_about_me",

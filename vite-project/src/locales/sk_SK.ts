@@ -19,6 +19,8 @@ export default {
   "home.useKeyboard": "stlačte klávesnicu",
   "home.usePlay": "šípky pre hranie",
   "home.lastFood": "zostáva jedlo",
+  "home.download.cv": "Stiahnúť životopis",
+  "home.startGameBtn": "spustiť hru hada",
   /*03.About-me*/
   "about.personal": "osobné-informácie",
   "about.me": "_o-mne",

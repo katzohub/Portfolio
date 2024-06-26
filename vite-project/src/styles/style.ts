@@ -31,7 +31,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       textDecoration: "none !important",
       position: "relative",
       left: "12.5px",
-
       transition: "color 0.3s ease-in",
       "&:hover": {
         color: `${theme.myColors.whiteColor} !important`,
@@ -170,8 +169,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: "#F2C039",
     borderRadius: "50%",
     padding: "4px",
-    width: "20px",
-    height: "20px",
+    width: "20px !important",
+    height: "20px !important",
   },
   switchIconLanguage: {
     position: "relative",
@@ -182,8 +181,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: "#25AFEE",
     borderRadius: "50%",
     padding: "4px",
-    width: "20px",
-    height: "20px",
+    width: "20px !important",
+    height: "20px !important",
   },
   navContainerThree: {
     height: "100%",

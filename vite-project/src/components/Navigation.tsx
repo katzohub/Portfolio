@@ -53,7 +53,6 @@ const Navigation: FC<NavigationProps> = ({
                     {icon}
                   </ListItemIcon>
                   <ListItemText>
-                    {" "}
                     {intl.formatMessage({ id: text })}
                   </ListItemText>
                 </ListItemButton>

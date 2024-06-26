@@ -778,7 +778,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     minHeight: "100dvh",
     width: "100vw",
     maxWidth: "1700px",
-    margin: "0 100px",
+    margin: "56px 100px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",

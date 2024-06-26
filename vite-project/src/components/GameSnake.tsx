@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import PointSnake from "./PointSnake";
 import { useIntl } from "react-intl";
-import Green from "../assets/img/boobleBackground/Green.png";
-import Blue from "../assets/img/boobleBackground/Blue.png";
+// import Green from "../assets/img/boobleBackground/Green.png";
+// import Blue from "../assets/img/boobleBackground/Blue.png";
 import MiniCircle from "../assets/svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
 import {
@@ -169,8 +169,9 @@ const GameSnake: React.FC = () => {
   const classes = usePageStyles();
   return (
     <div className={classes.snakeContainer}>
-      <img className={classes.snakeBackEffectPurple} src={Green} alt="" />
-      <img className={classes.snakeBackEffectGreen} src={Blue} alt="" />
+      {/* TODO Canva redesign and change color */}
+      {/* <img className={classes.snakeBackEffectPurple} src={Green} alt="" />
+      <img className={classes.snakeBackEffectGreen} src={Blue} alt="" /> */}
       <div style={{ position: "absolute", top: 5, left: 5 }}>
         <MiniCircle />
       </div>

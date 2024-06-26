@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Grid, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { MyButton } from "../components/";
@@ -17,7 +17,7 @@ const LeftHeadertable: FC = () => {
         {/* TODO Canva redesign and change color */}
         {/* <img className={classes.leftHeaderGreen} src={Blue} alt="" />
         <img className={classes.leftHeaderPurple} src={Green} alt="" /> */}
-        <Grid container direction="column" className={classes.leftHeaderBox}>
+        <Box className={classes.leftHeaderBox}>
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>
               {intl.formatMessage({ id: "home.name" })}
@@ -68,11 +68,19 @@ const LeftHeadertable: FC = () => {
               </span>
             </Typography>
           </Box>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: "20px 0" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "25px 0",
+              position: "relative",
+              top: "-10px",
+            }}
+          >
             <MyButton text="home.startGameBtn" />
             <MyButton text="home.download.cv" />
           </Box>
-        </Grid>
+        </Box>
       </Box>
     </>
   );

@@ -3,20 +3,20 @@ import { Button } from "@mui/material";
 import { useIntl } from "react-intl";
 
 type MyButtonProps = {
-  text: string;
+  text?: string;
 };
 
 const MyButton: FC<MyButtonProps> = ({ text }) => {
   const intl = useIntl();
+  const openSnakeGame = () => {
+    window.open("/game_snake", "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       <Button
-        disableRipple={false}
-        variant="text"
+        onClick={openSnakeGame}
         className="learn-more"
         sx={(theme) => ({
-          position: "relative",
-          top: "20px",
           display: "inline-block",
           cursor: "pointer",
           outline: "none",

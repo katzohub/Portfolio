@@ -626,25 +626,29 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   leftHeaderBox: {
     width: "100%",
     height: "100vh",
-    justifyContent: "space-around",
-    padding: "70px 0px 120px 15px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "space-between",
+    justifyContent: "space-between",
+
+    alignContent: "space-between",
     zIndex: "9999",
     [theme.breakpoints.down("md")]: {
-      justifyContent: "space-evenly",
+      alignItems: "space-between",
     },
     [theme.breakpoints.down("sm")]: {
       position: "relative",
-
       top: "-70px",
     },
   },
 
   leftHeaderContainer: {
-    height: "410px",
+    height: "470px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+
     position: "relative",
+
     [theme.breakpoints.down("md")]: {
       height: "100dvh",
     },
@@ -778,10 +782,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     minHeight: "100dvh",
     width: "100vw",
     maxWidth: "1700px",
-    margin: "56px 100px",
+    padding: "56px 100px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       justifyContent: "space-evenly",
@@ -798,12 +803,17 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   pageLeftWrap: {
     position: "relative",
-    zIndex: "8888",
+    padding: "0 20px",
     width: "50%",
     maxWidth: "600px",
     height: "100%",
+
     display: "flex",
-    justifyContent: "center",
+    flexDirection: "column",
+
+    alignItems: "space-between",
+    justifyContent: "space-between",
+
     [theme.breakpoints.down("lg")]: {
       width: "550px",
       position: "relative",
@@ -812,7 +822,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       width: "400px",
-
       marginBlockEnd: "0px",
     },
   },

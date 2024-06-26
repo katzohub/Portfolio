@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router-dom";
-
 import {
   trueNavigationData,
   falseNavigationData,
@@ -49,14 +48,6 @@ const Navigation: FC<NavigationProps> = ({
                     pathname === goUrl ? "active" : ""
                   }`}
                   onClick={() => onSelectItem && onSelectItem(goUrl)}
-                  sx={{
-                    "&:hover": {
-                      "& .MuiListItemIcon-root, & .MuiListItemText-root": {
-                        transition: "color .2s",
-                        color: "#fff",
-                      },
-                    },
-                  }}
                 >
                   <ListItemIcon className={classes.iconMobileMenu}>
                     {icon}

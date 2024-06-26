@@ -16,14 +16,26 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.myColors.generalBackground,
   },
   iconMobileMenu: {
-    display: "none",
+    display: "none !important",
     [theme.breakpoints.down("md")]: {
-      display: "block",
+      display: "flex !important",
       fontSize: "1.25rem",
+      width: "auto !important",
+      padding: "0 !important",
+      fontFamily: "Fira Code",
+      alignItems: "center",
+      fontStyle: "normal",
+      fontWeight: 450,
+      lineHeight: "normal",
+      color: `${theme.myColors.textColorNav} !important`,
+      textDecoration: "none !important",
       position: "relative",
-      top: "5px",
-      paddingLeft: "8.5px",
-      marginRight: "17px",
+      left: "12.5px",
+
+      transition: "color 0.3s ease-in",
+      "&:hover": {
+        color: `${theme.myColors.whiteColor} !important`,
+      },
     },
   },
   // mobielNavigation
@@ -200,43 +212,49 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontFamily: "Fira Code",
     fontSize: "1rem",
     fontStyle: "normal",
-
     fontWeight: 450,
     lineHeight: "normal",
-    color: `${theme.myColors.textColorNav}`,
+    color: `${theme.myColors.textColorNav} !important`,
     textDecoration: "none !important",
     height: "56px",
     display: "flex",
-    borderRight: `2px solid ${theme.myColors.colorLinie}`,
-    padding: "0 10px",
+    borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
+    padding: "0 10px !important",
     alignItems: "center",
     zIndex: 999999,
     transition: "color 0.3s ease-in",
     "&:hover": {
-      color: `${theme.myColors.whiteColor} !important`,
+      "& .MuiListItemIcon-root, & .MuiListItemText-root": {
+        transition: "color .2s",
+        color: `${theme.myColors.whiteColor} !important`,
+      },
     },
+
     "&.active": {
       color: `${theme.myColors.colorTextLink} !important`,
-      borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
+      borderBottom: `3px solid ${theme.myColors.colorBottomNavLink} !important`,
+      "&:hover": {
+        background: "transparent !important",
+      },
     },
     "&:last-child": {
-      borderLeft: `2px solid ${theme.myColors.colorLinie}`,
-      borderRight: "none",
+      borderLeft: `2px solid ${theme.myColors.colorLinie} !important`,
+      borderRight: "none !important",
       position: "absolute",
       right: "0",
     },
     [theme.breakpoints.down("md")]: {
       borderRight: "none",
-      borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
 
       "&:last-child": {
-        borderBottom: `1px solid ${theme.myColors.colorLinie}`,
+        borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
         borderRight: "none",
-        borderLeft: "none",
+        borderLeft: "none !important",
         position: "static",
       },
       "&:first-child": {
-        borderTop: `1px solid ${theme.myColors.colorLinie}`,
+        borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
       },
       "&:hover": {
         background: "rgba(255, 255, 255, 0.08) !important",

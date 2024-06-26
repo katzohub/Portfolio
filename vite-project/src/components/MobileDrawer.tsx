@@ -60,11 +60,11 @@ const MobileDrawer: FC<MobileDrawerProps> = ({
                 position: "relative",
                 left: "-10px",
                 cursor: "pointer",
-                color: "rgba(255, 255, 255, 0.7)",
+                color: `${theme.myColors.textColorNav} !important`,
                 background: "transparent",
                 "&:hover, &:focus": {
                   transition: "color .2s,background .2s",
-                  color: theme.myColors.textColorNav,
+                  color: `${theme.myColors.whiteColor} !important`,
                   background: "rgba(255, 255, 255, 0.08)",
                 },
               })}

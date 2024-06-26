@@ -235,6 +235,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       "&:hover": {
         background: "transparent !important",
       },
+      "& svg": {
+        color: `${theme.myColors.whiteColor} !important`,
+      },
     },
     "&:last-child": {
       borderLeft: `2px solid ${theme.myColors.colorLinie} !important`,
@@ -243,7 +246,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       right: "0",
     },
     [theme.breakpoints.down("md")]: {
-      borderRight: "none",
+      borderRight: "none !important",
       borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
 
       "&:last-child": {

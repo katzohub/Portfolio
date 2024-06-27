@@ -14,6 +14,7 @@ const AboutMe = lazy(() => import("./Pages/AboutMe"));
 const Projects = lazy(() => import("./Pages/Projects"));
 const ContactMe = lazy(() => import("./Pages/ContactMe"));
 const ThankYou = lazy(() => import("./Pages/ThankYou"));
+const SnakeGame = lazy(() => import("./Pages/SnakeGame"));
 const Error = lazy(() => import("./Pages/Error"));
 const OnePage = lazy(() => import("./Pages/OnePage"));
 
@@ -48,6 +49,7 @@ const App = () => {
                     <Route path="/about-me" element={<AboutMe />}></Route>
                     <Route path="/projects" element={<Projects />}></Route>
                     <Route path="/contact-me" element={<ContactMe />}></Route>
+                    <Route path="/game_snake" element={<SnakeGame />}></Route>
                     <Route path="/thank-you" element={<ThankYou />}></Route>
                     <Route path="*" element={<Error />} />
                   </Route>

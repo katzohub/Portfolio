@@ -1,13 +1,11 @@
 import { FC } from "react";
 import { Button } from "@mui/material";
-import { useIntl } from "react-intl";
 
 type MyButtonProps = {
-  text?: string;
+  children?: React.ReactNode;
 };
 
-const MyButton: FC<MyButtonProps> = ({ text }) => {
-  const intl = useIntl();
+const MyButton: FC<MyButtonProps> = ({ children }) => {
   const openSnakeGame = () => {
     window.open("/game_snake", "_blank", "noopener,noreferrer");
   };
@@ -73,7 +71,7 @@ const MyButton: FC<MyButtonProps> = ({ text }) => {
           },
         })}
       >
-        {intl.formatMessage({ id: text })}
+        {children}
       </Button>
     </>
   );

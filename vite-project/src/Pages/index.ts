@@ -8,6 +8,7 @@ import Projects from "./Projects";
 import SkillSection from "./SkillSection";
 import TemplateAbout from "./TemplateAbout";
 import OnePage from "./OnePage";
+import SnakeGame from "./SnakeGame";
 import ThankYou from "./ThankYou";
 
 export {
@@ -18,6 +19,7 @@ export {
   SharedLayout,
   Error,
   LeftContact,
+  SnakeGame,
   Projects,
   SkillSection,
   TemplateAbout,

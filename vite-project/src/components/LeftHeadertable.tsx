@@ -77,8 +77,12 @@ const LeftHeadertable: FC = () => {
               top: "-10px",
             }}
           >
-            <MyButton text="home.startGameBtn" />
-            <MyButton text="home.download.cv" />
+            <MyButton>
+              {intl.formatMessage({ id: "home.startGameBtn" })}
+            </MyButton>
+            <MyButton>
+              {intl.formatMessage({ id: "home.download.cv" })}
+            </MyButton>
           </Box>
         </Box>
       </Box>

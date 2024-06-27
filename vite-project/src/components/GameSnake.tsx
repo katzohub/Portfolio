@@ -3,14 +3,9 @@ import PointSnake from "./PointSnake";
 import { useIntl } from "react-intl";
 // import Green from "../assets/img/boobleBackground/Green.png";
 // import Blue from "../assets/img/boobleBackground/Blue.png";
+import KeyboardSnake from "./KeyboardSnake";
 import MiniCircle from "../assets/svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
-import {
-  FaCaretLeft,
-  FaCaretUp,
-  FaCaretRight,
-  FaCaretDown,
-} from "react-icons/fa";
 import screenLogo from "../assets/img/screenGame.png";
 import usePageStyles from "../styles/style";
 
@@ -403,22 +398,7 @@ const GameSnake: React.FC = () => {
           <Typography variant="body2" className={classes.snakeArrowTextTwo}>
             // {intl.formatMessage({ id: "home.usePlay" })}
           </Typography>
-          <Box className={classes.snakeArrowContainer}>
-            <div className={classes.snakeUp}>
-              <FaCaretUp />
-            </div>
-            <Box className={classes.snakeArrowWrap}>
-              <div className={classes.snakeArrowLeft}>
-                <FaCaretLeft />
-              </div>
-              <div className={classes.snakeArrowDown}>
-                <FaCaretDown />
-              </div>
-              <div className={classes.snakeArrowRight}>
-                <FaCaretRight />
-              </div>
-            </Box>
-          </Box>
+          <KeyboardSnake isFunctionKeyboard={false} />
         </Box>
 
         <Typography variant="body2" className={classes.snakeFoodLeft}>

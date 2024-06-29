@@ -17,7 +17,7 @@ export default {
   "home.wellDone": "WELL-DONE",
   "home.tryAgain": "TRY-AGAIN",
   "home.useKeyboard": "use keyboard",
-  "home.usePlay": "arrows to play",
+  "home.usePlay": "button to play ",
   "home.lastFood": "food left",
   "home.download.cv": "Download CV",
   "home.startGameBtn": "start game snake",

@@ -13,7 +13,7 @@ const OnePage: FC = () => {
             <LeftHeadertable />
           </Box>
           <Box className={classes.pageRightWrap}>
-            <GameSnake />
+            <GameSnake isFullWindow={true} />
           </Box>
         </Box>
       </Box>

@@ -478,6 +478,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     left: "67px",
   },
   //KeyBoard Container styled
+  // toggle class
   snakeBoxSetting: {
     marginTop: "35px",
     width: "181.382px",
@@ -486,6 +487,18 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: " 8px",
+    background: "rgba(1, 20, 35, 0.19)",
+    color: "#fff",
+  },
+  snakeBoxSettingFullWidth: {
+    marginTop: "0px",
+    width: "240px",
+    height: "408px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "start",
     borderRadius: " 8px",
     background: "rgba(1, 20, 35, 0.19)",
     color: "#fff",

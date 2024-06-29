@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { FC, useState, useEffect, useRef, useCallback } from "react";
 import PointSnake from "./PointSnake";
 import { useIntl } from "react-intl";
 // import Green from "../assets/img/boobleBackground/Green.png";
@@ -21,7 +21,11 @@ const initialSnake: Coordinate[] = [
 ];
 const initialCandy: Coordinate = { x: 5, y: 5 };
 
-const GameSnake: React.FC = () => {
+interface GameSnakeProps {
+  isFullWindow: boolean;
+}
+
+const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   const [snake, setSnake] = useState<Coordinate[]>(initialSnake);
   const [candy, setCandy] = useState<Coordinate>(initialCandy);
   const [dir, setDir] = useState<Coordinate>({ x: 1, y: 0 });
@@ -391,24 +395,31 @@ const GameSnake: React.FC = () => {
       </div>
 
       <Box>
-        <Box className={classes.snakeBoxSetting}>
+        <Box
+          className={
+            isFullWindow
+              ? classes.snakeBoxSetting
+              : classes.snakeBoxSettingFullWidth
+          }
+        >
           <Typography variant="body2" className={classes.snakeArrowTextOne}>
             // {intl.formatMessage({ id: "home.useKeyboard" })}
           </Typography>
           <Typography variant="body2" className={classes.snakeArrowTextTwo}>
             // {intl.formatMessage({ id: "home.usePlay" })}
           </Typography>
-          <KeyboardSnake isFunctionKeyboard={false} />
+          <KeyboardSnake isFunctionKeyboard={isFullWindow} />
         </Box>
-
-        <Typography variant="body2" className={classes.snakeFoodLeft}>
-          // {intl.formatMessage({ id: "home.lastFood" })}
-        </Typography>
-        <div className={classes.snakeContainerFood}>
-          {Array.from({ length: 10 }, (_, index) => (
-            <PointSnake key={index} index={index} candyCount={candyCount} />
-          ))}
-        </div>
+        <Box>
+          <Typography variant="body2" className={classes.snakeFoodLeft}>
+            // {intl.formatMessage({ id: "home.lastFood" })}
+          </Typography>
+          <div className={classes.snakeContainerFood}>
+            {Array.from({ length: 10 }, (_, index) => (
+              <PointSnake key={index} index={index} candyCount={candyCount} />
+            ))}
+          </div>
+        </Box>
       </Box>
     </div>
   );

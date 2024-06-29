@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 import { Box } from "@mui/material";
 import { GameSnake } from "../components/";
 
-const SnakeGame = () => {
+const SnakeGame: FC = () => {
   return (
     <Box
       sx={{
@@ -14,7 +14,7 @@ const SnakeGame = () => {
         alignItems: "center",
       }}
     >
-      <GameSnake />
+      <GameSnake isFullWindow={false} />
     </Box>
   );
 };

@@ -10,7 +10,9 @@ import usePageStyles from "../styles/style";
 const LeftHeadertable: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
-
+  const openSnakeGame = () => {
+    window.open("/game_snake", "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       <Box className={classes.leftHeaderContainer}>
@@ -28,7 +30,7 @@ const LeftHeadertable: FC = () => {
             <Typography variant="h2" className={classes.leftHeaderH2}>
               <FaChevronRight
                 style={{ fontSize: "1.5rem", position: "relative", top: "2px" }}
-              />{" "}
+              />
               {intl.formatMessage({ id: "home.myWork" })}
             </Typography>
           </Box>
@@ -77,7 +79,7 @@ const LeftHeadertable: FC = () => {
               top: "-10px",
             }}
           >
-            <MyButton>
+            <MyButton myBtnFn={openSnakeGame}>
               {intl.formatMessage({ id: "home.startGameBtn" })}
             </MyButton>
             <MyButton>

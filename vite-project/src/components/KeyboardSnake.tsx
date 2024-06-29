@@ -37,33 +37,32 @@ const KeyboardSnake: FC<KeyboardSnakeProps> = ({ isFunctionKeyboard }) => {
           </Box>
         </>
       ) : (
-        <>
+        <Box>
           <Box className={classes.snakeArrowContainer}>
-            <div className={classes.snakeUp}>
+            <Box sx={{ position: "relative", top: "0px" }}>
               <MyButton>
-                {" "}
                 <FaCaretUp />
               </MyButton>
-            </div>
+            </Box>
             <Box className={classes.snakeArrowWrap}>
-              <div className={classes.snakeArrowLeft}>
+              <Box sx={{ position: "relative", left: "0px" }}>
                 <MyButton>
                   <FaCaretLeft />
                 </MyButton>
-              </div>
-              <div className={classes.snakeArrowDown}>
+              </Box>
+              <Box>
                 <MyButton>
                   <FaCaretDown />
                 </MyButton>
-              </div>
-              <div className={classes.snakeArrowRight}>
+              </Box>
+              <Box sx={{ position: "relative", right: "0px" }}>
                 <MyButton>
                   <FaCaretRight />
                 </MyButton>
-              </div>
+              </Box>
             </Box>
           </Box>
-        </>
+        </Box>
       )}
     </>
   );

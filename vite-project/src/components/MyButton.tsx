@@ -3,16 +3,14 @@ import { Button } from "@mui/material";
 
 type MyButtonProps = {
   children?: React.ReactNode;
+  myBtnFn?: () => void;
 };
 
-const MyButton: FC<MyButtonProps> = ({ children }) => {
-  const openSnakeGame = () => {
-    window.open("/game_snake", "_blank", "noopener,noreferrer");
-  };
+const MyButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
   return (
     <>
       <Button
-        onClick={openSnakeGame}
+        onClick={myBtnFn}
         className="learn-more"
         sx={(theme) => ({
           display: "inline-block",

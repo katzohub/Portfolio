@@ -212,9 +212,9 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
       <div style={{ position: "absolute", bottom: 5, left: 5 }}>
         <MiniCircle />
       </div>
-      <div
+      <Box
         ref={gameAreaRef}
-        style={{
+        sx={{
           position: "relative",
           height: `${gridHeight * cellSize}px`,
           width: `${gridSize * cellSize}px`,
@@ -222,6 +222,9 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           background: "rgba(1, 22, 39, 0.84)",
           boxShadow: " 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset",
         }}
+        className={
+          isFullWindow ? classes.snakeGameArea : classes.snakeGameAreaFullWidth
+        }
         tabIndex={0}
         onKeyDown={handleKeyPress}
         onKeyUp={handleKeyUp}
@@ -421,7 +424,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
             )}
           </>
         )}
-      </div>
+      </Box>
 
       <Box>
         <Box
@@ -431,10 +434,24 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
               : classes.snakeBoxSettingFullWidth
           }
         >
-          <Typography variant="body2" className={classes.snakeArrowTextOne}>
+          <Typography
+            variant="body2"
+            className={
+              isFullWindow
+                ? classes.snakeArrowTextOne
+                : classes.snakeBoxSettingFullWidthFullWidth
+            }
+          >
             // {intl.formatMessage({ id: "home.useKeyboard" })}
           </Typography>
-          <Typography variant="body2" className={classes.snakeArrowTextTwo}>
+          <Typography
+            variant="body2"
+            className={
+              isFullWindow
+                ? classes.snakeArrowTextTwo
+                : classes.snakeArrowTextTwoFullWidth
+            }
+          >
             // {intl.formatMessage({ id: "home.usePlay" })}
           </Typography>
           <Box

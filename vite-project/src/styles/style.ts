@@ -447,9 +447,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   snakeContainerFullWidth: {
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
+    alignItems: "center",
     width: "100%",
-    padding: "30px 0",
+    height: "80vh",
+    maxWidth: "1380px",
     background:
       "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
     boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
@@ -457,30 +459,33 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     borderRadius: "8px",
     position: "relative",
     zIndex: "9999",
-    [theme.breakpoints.down("lg")]: {
-      marginBlockEnd: "50px",
-    },
     [theme.breakpoints.down("md")]: {
-      marginBlockEnd: "0px",
+      flexDirection: "column",
     },
   },
   snakeContainerFoodFullWidth: {
     width: "120px",
     height: "50px",
-
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
     gap: "5px",
     position: "relative",
-    zIndex: "20 !important",
-    left: "37px",
-    top: "-85px",
+    top: "-200px",
+    left: "85px",
+    [theme.breakpoints.down("md")]: {
+      top: "-550px",
+    },
   },
   containerKeyboardFullWidth: {
     position: "relative",
     top: "190px",
+    [theme.breakpoints.down("md")]: {
+      position: "absolute",
+      top: "00px",
+      left: "0px",
+    },
   },
   snakeBackEffectGreen: {
     [theme.breakpoints.up("sm")]: {
@@ -528,6 +533,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: "rgba(1, 20, 35, 0.19)",
     color: "#fff",
   },
+  snakeGameArea: {},
+  snakeGameAreaFullWidth: {
+    [theme.breakpoints.down("md")]: {
+      position: "relative",
+      top: "75px",
+    },
+  },
   snakeBoxSettingFullWidth: {
     marginTop: "0px",
     width: "240px",
@@ -536,9 +548,28 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "start",
-    borderRadius: " 8px",
+    borderRadius: "8px",
     background: "rgba(1, 20, 35, 0.19)",
     color: "#fff",
+    position: "relative",
+    top: "-110px",
+    left: "50px",
+    [theme.breakpoints.down("md")]: {
+      position: "relative",
+      background: "transparent",
+      top: "100px",
+      left: "0px",
+    },
+  },
+  snakeBoxSettingFullWidthFullWidth: {
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  },
+  snakeArrowTextTwoFullWidth: {
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   snakeArrowTextOne: {
     marginBottom: "8px !important",

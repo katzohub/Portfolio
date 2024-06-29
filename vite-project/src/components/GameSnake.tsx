@@ -437,20 +437,30 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           <Typography variant="body2" className={classes.snakeArrowTextTwo}>
             // {intl.formatMessage({ id: "home.usePlay" })}
           </Typography>
-          <KeyboardSnake
-            isFunctionKeyboard={isFullWindow}
-            handleButtonClick={handleButtonClick}
-          />
+          <Box
+            className={isFullWindow ? "" : classes.containerKeyboardFullWidth}
+          >
+            <KeyboardSnake
+              isFunctionKeyboard={isFullWindow}
+              handleButtonClick={handleButtonClick}
+            />
+          </Box>
         </Box>
-        <Box>
+
+        <Box
+          className={
+            isFullWindow
+              ? classes.snakeContainerFood
+              : classes.snakeContainerFoodFullWidth
+          }
+        >
           <Typography variant="body2" className={classes.snakeFoodLeft}>
             // {intl.formatMessage({ id: "home.lastFood" })}
           </Typography>
-          <div className={classes.snakeContainerFood}>
-            {Array.from({ length: 10 }, (_, index) => (
-              <PointSnake key={index} index={index} candyCount={candyCount} />
-            ))}
-          </div>
+
+          {Array.from({ length: 10 }, (_, index) => (
+            <PointSnake key={index} index={index} candyCount={candyCount} />
+          ))}
         </Box>
       </Box>
     </div>

@@ -464,6 +464,24 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       marginBlockEnd: "0px",
     },
   },
+  snakeContainerFoodFullWidth: {
+    width: "120px",
+    height: "50px",
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: "5px",
+    position: "relative",
+    zIndex: "20 !important",
+    left: "37px",
+    top: "-85px",
+  },
+  containerKeyboardFullWidth: {
+    position: "relative",
+    top: "190px",
+  },
   snakeBackEffectGreen: {
     [theme.breakpoints.up("sm")]: {
       zIndex: "-10",
@@ -513,7 +531,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   snakeBoxSettingFullWidth: {
     marginTop: "0px",
     width: "240px",
-    height: "408px",
+    height: "142px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -600,9 +618,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     zIndex: 4,
   },
   snakeFoodLeft: {
-    position: "relative",
-    left: "30px",
-    top: "10px",
     color: "#FFF",
     fontFamily: "Fira Code !important",
     fontSize: "14px",
@@ -613,13 +628,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   snakeContainerFood: {
     width: "120px",
     height: "50px",
-    margin: "20px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
     gap: "5px",
     position: "relative",
+    left: "32px",
+    top: "25px",
     zIndex: "20 !important",
   },
 

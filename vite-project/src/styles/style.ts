@@ -445,6 +445,25 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "none",
     },
   },
+  snakeContainerFullWidth: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: "100%",
+    padding: "30px 0",
+    background:
+      "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
+    boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
+    border: `1px solid ${theme.myColors.borderTableSnake}`,
+    borderRadius: "8px",
+    position: "relative",
+    zIndex: "9999",
+    [theme.breakpoints.down("lg")]: {
+      marginBlockEnd: "50px",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginBlockEnd: "0px",
+    },
+  },
   snakeBackEffectGreen: {
     [theme.breakpoints.up("sm")]: {
       zIndex: "-10",

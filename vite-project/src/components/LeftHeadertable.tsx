@@ -2,7 +2,9 @@ import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
+import { Link } from "@mui/material";
 import { MyButton } from "../components/";
+import SK from "../assets/SK.png";
 // import Blue from "../assets/img/boobleBackground/Blue.png";
 // import Green from "../assets/img/boobleBackground/Green.png";
 import usePageStyles from "../styles/style";
@@ -82,8 +84,20 @@ const LeftHeadertable: FC = () => {
             <MyButton myBtnFn={openSnakeGame}>
               {intl.formatMessage({ id: "home.startGameBtn" })}
             </MyButton>
+
             <MyButton>
-              {intl.formatMessage({ id: "home.download.cv" })}
+              <Link
+                href={SK}
+                download={"portfolio_design"}
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  color: "#fff",
+                  textDecoration: "none",
+                }}
+              >
+                {intl.formatMessage({ id: "home.download.cv" })}
+              </Link>
             </MyButton>
           </Box>
         </Box>

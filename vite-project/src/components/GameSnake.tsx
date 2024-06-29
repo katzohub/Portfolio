@@ -142,32 +142,61 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   const handleKeyPress = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (keyPressed) return;
     setKeyPressed(true);
+    handleDirectionChange(e.key);
+  };
+
+  const handleButtonClick = (direction: string) => {
+    console.log("clicked id", direction);
+
+    handleDirectionChange(direction);
+  };
+
+  const handleDirectionChange = (input: string) => {
     const newDir = { ...dir };
-    switch (e.key) {
+    switch (input) {
       case "ArrowUp":
-        if (dir.y === 0) (newDir.y = -1), (newDir.x = 0);
+      case "up":
+        if (dir.y === 0) {
+          newDir.y = -1;
+          newDir.x = 0;
+        }
         break;
       case "ArrowRight":
-        if (dir.x === 0) (newDir.x = 1), (newDir.y = 0);
+      case "right":
+        if (dir.x === 0) {
+          newDir.x = 1;
+          newDir.y = 0;
+        }
         break;
       case "ArrowDown":
-        if (dir.y === 0) (newDir.y = 1), (newDir.x = 0);
+      case "down":
+        if (dir.y === 0) {
+          newDir.y = 1;
+          newDir.x = 0;
+        }
         break;
       case "ArrowLeft":
-        if (dir.x === 0) (newDir.x = -1), (newDir.y = 0);
+      case "left":
+        if (dir.x === 0) {
+          newDir.x = -1;
+          newDir.y = 0;
+        }
         break;
       default:
         break;
     }
     setDir(newDir);
   };
-
   const handleKeyUp = () => {
     setKeyPressed(false);
   };
   const classes = usePageStyles();
   return (
-    <div className={classes.snakeContainer}>
+    <div
+      className={
+        isFullWindow ? classes.snakeContainer : classes.snakeContainerFullWidth
+      }
+    >
       {/* TODO Canva redesign and change color */}
       {/* <img className={classes.snakeBackEffectPurple} src={Green} alt="" />
       <img className={classes.snakeBackEffectGreen} src={Blue} alt="" /> */}
@@ -408,7 +437,10 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           <Typography variant="body2" className={classes.snakeArrowTextTwo}>
             // {intl.formatMessage({ id: "home.usePlay" })}
           </Typography>
-          <KeyboardSnake isFunctionKeyboard={isFullWindow} />
+          <KeyboardSnake
+            isFunctionKeyboard={isFullWindow}
+            handleButtonClick={handleButtonClick}
+          />
         </Box>
         <Box>
           <Typography variant="body2" className={classes.snakeFoodLeft}>

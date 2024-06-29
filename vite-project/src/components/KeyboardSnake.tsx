@@ -11,9 +11,13 @@ import MyButton from "./MyButton";
 
 type KeyboardSnakeProps = {
   isFunctionKeyboard: boolean;
+  handleButtonClick?: (direction: string) => void;
 };
 
-const KeyboardSnake: FC<KeyboardSnakeProps> = ({ isFunctionKeyboard }) => {
+const KeyboardSnake: FC<KeyboardSnakeProps> = ({
+  isFunctionKeyboard,
+  handleButtonClick,
+}) => {
   const classes = usePageStyles();
   return (
     <>
@@ -39,23 +43,34 @@ const KeyboardSnake: FC<KeyboardSnakeProps> = ({ isFunctionKeyboard }) => {
       ) : (
         <Box>
           <Box className={classes.snakeArrowContainer}>
-            <Box sx={{ position: "relative", top: "0px" }}>
+            <Box
+              sx={{ position: "relative", top: "0px" }}
+              onClick={() => handleButtonClick && handleButtonClick("up")}
+            >
               <MyButton>
                 <FaCaretUp />
               </MyButton>
             </Box>
             <Box className={classes.snakeArrowWrap}>
-              <Box sx={{ position: "relative", left: "0px" }}>
+              <Box
+                sx={{ position: "relative", left: "0px" }}
+                onClick={() => handleButtonClick && handleButtonClick("left")}
+              >
                 <MyButton>
                   <FaCaretLeft />
                 </MyButton>
               </Box>
-              <Box>
+              <Box
+                onClick={() => handleButtonClick && handleButtonClick("down")}
+              >
                 <MyButton>
                   <FaCaretDown />
                 </MyButton>
               </Box>
-              <Box sx={{ position: "relative", right: "0px" }}>
+              <Box
+                sx={{ position: "relative", right: "0px" }}
+                onClick={() => handleButtonClick && handleButtonClick("right")}
+              >
                 <MyButton>
                   <FaCaretRight />
                 </MyButton>

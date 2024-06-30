@@ -480,7 +480,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     gap: "5px",
     position: "relative",
     top: "-200px",
-    left: "85px",
+    left: "112px",
     [theme.breakpoints.down("md")]: {
       top: "15px",
       left: "50%",
@@ -580,6 +580,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
     top: "-110px",
     left: "50px",
+    "& p": {
+      fontSize: 14,
+      fontFamily: "Fira Code",
+      fontWeight: "450",
+      wordWrap: "break-word",
+    },
     [theme.breakpoints.down("md")]: {
       position: "relative",
       background: "transparent",

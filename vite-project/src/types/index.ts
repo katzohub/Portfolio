@@ -90,6 +90,8 @@ export interface ThemeProps {
     strokeMiniCircle: string;
     resultCanal: string;
     inCanal: string;
+    pointSnake: string;
+    colorSnakeLong: string;
   };
   myShadow: {
     shadowSideBar: string;
@@ -99,5 +101,8 @@ export interface ThemeProps {
     shadowTextField: string;
     shadowAreaSnake: string;
     shadowBtnSnake: string;
+  };
+  myUrl: {
+    snakeLogoUrl: string;
   };
 }

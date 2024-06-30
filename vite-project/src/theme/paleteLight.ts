@@ -1,6 +1,8 @@
 import { ThemeOptions, createTheme } from "@mui/material/styles";
 import { ThemeProps } from "../types";
 import { DefaultTheme } from "@mui/system";
+import urlSnakeLogo from "../assets/img/light_logo_snake.png";
+
 declare module "@mui/material/styles" {
   interface Theme extends ThemeProps, DefaultTheme {}
   interface ThemeOptions extends ThemeProps, DefaultTheme {}
@@ -56,6 +58,8 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     strokeMiniCircle: "#ffff",
     resultCanal: "",
     inCanal: "",
+    pointSnake: "#ffda85",
+    colorSnakeLong: "255, 218, 133",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",
@@ -65,5 +69,8 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     shadowTextField: "3px 3px 6px 0px rgba(0,0,0,0.5)",
     shadowAreaSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.25)",
     shadowBtnSnake: "5px 5px 11px 11px rgba(2, 18, 27, 0.21)",
+  },
+  myUrl: {
+    snakeLogoUrl: `${urlSnakeLogo}`,
   },
 });

@@ -15,24 +15,24 @@ const PointSnake: FC<PointSnakeProps> = ({ index, candyCount }) => {
     >
       <circle
         opacity={opacity}
+        className="point-snake"
         cx="10.8456"
         cy="10.5377"
         r="10.3456"
-        fill="#43D9AD"
       />
       <circle
         opacity={opacity}
+        className="point-snake"
         cx="10.8456"
         cy="10.5377"
         r="7.34558"
-        fill="#43D9AD"
       />
       <circle
         opacity={opacity}
+        className="point-snake"
         cx="10.8457"
         cy="10.5377"
         r="4"
-        fill="#43D9AD"
       />
     </svg>
   );

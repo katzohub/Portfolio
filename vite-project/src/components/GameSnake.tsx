@@ -6,7 +6,8 @@ import { useIntl } from "react-intl";
 import KeyboardSnake from "./KeyboardSnake";
 import MiniCircle from "../assets/svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
-import screenLogo from "../assets/img/screenGame.png";
+// import snakeLogoLight from "../assets/img/dark_logo_snake.png";
+// import snakeLogoDark from "../assets/img/light_logo_snake.png";
 import usePageStyles from "../styles/style";
 
 const gridSize = 20;
@@ -91,8 +92,8 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
 
       if (newHead.x === candy.x && newHead.y === candy.y) {
         setCandy(generateNewCandyPosition());
-        setSpeed((oldSpeed) => oldSpeed + 1);
-        setCandyCount((prevCount) => prevCount + 0.5);
+        setSpeed((oldSpeed) => oldSpeed + 0.1);
+        setCandyCount((prevCount) => prevCount + 0.1);
 
         if (candyCount + 1 === 10) {
           wellDoneGame();
@@ -246,10 +247,15 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
         {!gameStarted && (
           <>
             {!gameStarted && (
-              <img
-                src={screenLogo}
-                alt="Game screen logo"
+              <Box
                 className={classes.snakeScreenLogo}
+                sx={(theme) => ({
+                  backgroundImage: `url(${theme.myUrl.snakeLogoUrl})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  width: "50%",
+                  height: "50%",
+                })}
               />
             )}
             <Button
@@ -296,28 +302,30 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
         {gameStarted && (
           <>
             {snake.map((part, i) => (
-              <div
+              <Box
                 key={i}
-                style={{
+                sx={(theme) => ({
                   position: "absolute",
                   top: `${part.y * cellSize}px`,
                   left: `${part.x * cellSize}px`,
                   height: `${cellSize}px`,
                   width: `${cellSize}px`,
-                  backgroundColor: `rgba(0,255,0,${1 - i / snake.length})`,
-                }}
+                  backgroundColor: `rgba(${theme.myColors.colorSnakeLong},${
+                    1 - i / snake.length
+                  })`,
+                })}
               />
             ))}
-            <div
-              style={{
+            <Box
+              sx={(theme) => ({
                 position: "absolute",
                 top: `${candy.y * cellSize}px`,
                 left: `${candy.x * cellSize}px`,
                 height: `${cellSize}px`,
                 width: `${cellSize}px`,
-                backgroundColor: "#00ff00",
+                backgroundColor: theme.myColors.fotnBtnSnake,
                 borderRadius: "50%",
-              }}
+              })}
             />
             {hasWon && (
               <>
@@ -499,7 +507,12 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           </Typography>
           <Box
             className={isFullWindow ? "" : classes.pointContainerFoodFullWidth}
-            sx={{ width: "90px" }}
+            sx={(theme) => ({
+              width: "90px",
+              "& .point-snake": {
+                fill: theme.myColors.pointSnake,
+              },
+            })}
           >
             {Array.from({ length: 10 }, (_, index) => (
               <PointSnake key={index} index={index} candyCount={candyCount} />

@@ -1,13 +1,14 @@
 import React, { FC, useState, useEffect, useRef, useCallback } from "react";
 import PointSnake from "./PointSnake";
 import { useIntl } from "react-intl";
-// import Green from "../assets/img/boobleBackground/Green.png";
-// import Blue from "../assets/img/boobleBackground/Blue.png";
 import KeyboardSnake from "./KeyboardSnake";
 import MiniCircle from "../assets/svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
-// import snakeLogoLight from "../assets/img/dark_logo_snake.png";
-// import snakeLogoDark from "../assets/img/light_logo_snake.png";
+
+import {
+  BackroundGlassSnakeLeft,
+  BackroundGlassSnakeRight,
+} from "../assets/svg";
 import usePageStyles from "../styles/style";
 
 const gridSize = 20;
@@ -198,9 +199,8 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
         isFullWindow ? classes.snakeContainer : classes.snakeContainerFullWidth
       }
     >
-      {/* TODO Canva redesign and change color */}
-      {/* <img className={classes.snakeBackEffectPurple} src={Green} alt="" />
-      <img className={classes.snakeBackEffectGreen} src={Blue} alt="" /> */}
+      <BackroundGlassSnakeLeft />
+      <BackroundGlassSnakeRight />
       <Box
         className={classes.miniCircleWrapper}
         sx={{

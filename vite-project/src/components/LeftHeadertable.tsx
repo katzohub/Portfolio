@@ -5,6 +5,10 @@ import { useIntl } from "react-intl";
 import { Link } from "@mui/material";
 import { MyButton } from "../components/";
 import SK from "../assets/SK.png";
+import {
+  BackroundGlassSnakeLeft,
+  BackroundGlassSnakeRight,
+} from "../assets/svg";
 // import Blue from "../assets/img/boobleBackground/Blue.png";
 // import Green from "../assets/img/boobleBackground/Green.png";
 import usePageStyles from "../styles/style";
@@ -18,9 +22,15 @@ const LeftHeadertable: FC = () => {
   return (
     <>
       <Box className={classes.leftHeaderContainer}>
-        {/* TODO Canva redesign and change color */}
-        {/* <img className={classes.leftHeaderGreen} src={Blue} alt="" />
-        <img className={classes.leftHeaderPurple} src={Green} alt="" /> */}
+        <Box
+          sx={(theme) => ({
+            display: "none",
+            [theme.breakpoints.down("md")]: { display: "block" },
+          })}
+        >
+          <BackroundGlassSnakeLeft />
+          <BackroundGlassSnakeRight />
+        </Box>
         <Box className={classes.leftHeaderBox}>
           <Box>
             <Typography variant="h3" className={classes.leftHeaderH3}>

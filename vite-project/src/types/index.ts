@@ -92,6 +92,8 @@ export interface ThemeProps {
     inCanal: string;
     pointSnake: string;
     colorSnakeLong: string;
+    colorCircleLeft: string;
+    colorCircleRight: string;
   };
   myShadow: {
     shadowSideBar: string;

@@ -60,6 +60,8 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     inCanal: "",
     pointSnake: "#ffda85",
     colorSnakeLong: "255, 218, 133",
+    colorCircleLeft: "#FF0",
+    colorCircleRight: "#4D5BCE",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

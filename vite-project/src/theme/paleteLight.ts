@@ -21,7 +21,7 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorTextLink: "#607B96",
     colorBottomNavLink: "#f2c039",
     generalBackground: "#DAB07A",
-    borderTableSnake: "#888",
+    borderTableSnake: "#d3a05f",
     colorLinie: "#fff",
     hoverDownLinie: "#fff",
     textColorNav: "#fff",
@@ -46,6 +46,11 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorTextInput: "#fff",
     colorNavBar: "#d3a05f",
     colorInCard: "#d3a05f",
+    backgroundAreaSnake: "#d3a05f",
+    backgroundAreaFirst: "rgba(218, 176, 122, 0.70)",
+    backgroundAreaSecond: "rgba(255, 255, 255, 0.09)",
+    backgroundBtnSnake: "#d3a05f",
+    fotnBtnSnake: "#ffda85",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",
@@ -53,5 +58,7 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     shadowInput: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
     shadowField: "0px 0px 0px 2px rgba(96, 123, 150, 0.30)",
     shadowTextField: "3px 3px 6px 0px rgba(0,0,0,0.5)",
+    shadowAreaSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.25)",
+    shadowBtnSnake: "5px 5px 11px 11px rgba(2, 18, 27, 0.21)",
   },
 });

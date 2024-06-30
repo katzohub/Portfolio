@@ -439,8 +439,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "space-evenly",
     width: "100%",
     padding: "30px 0",
-    background:
-      "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
+    background: `linear-gradient(150deg, ${theme.myColors.backgroundAreaFirst} 1.7%, ${theme.myColors.backgroundAreaSecond} 81.82%)`,
     boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
     border: `1px solid ${theme.myColors.borderTableSnake}`,
     borderRadius: "8px",
@@ -555,8 +554,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: "rgba(1, 20, 35, 0.19)",
     color: "#fff",
   },
-  snakeGameArea: {},
+  snakeGameArea: {
+    background: theme.myColors.backgroundAreaSnake,
+    boxShadow: `${theme.myShadow.shadowAreaSnake} inset`,
+  },
   snakeGameAreaFullWidth: {
+    background: theme.myColors.backgroundAreaSnake,
+    boxShadow: `${theme.myShadow.shadowAreaSnake} inset`,
     [theme.breakpoints.down("md")]: {
       position: "relative",
       top: "20px",

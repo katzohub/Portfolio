@@ -80,6 +80,11 @@ export interface ThemeProps {
     colorPinkText: string;
     colorInputSend: string;
     colorInCard: string;
+    backgroundAreaSnake: string;
+    backgroundAreaFirst: string;
+    backgroundAreaSecond: string;
+    backgroundBtnSnake: string;
+    fotnBtnSnake: string;
   };
   myShadow: {
     shadowSideBar: string;
@@ -87,5 +92,7 @@ export interface ThemeProps {
     shadowInput: string;
     shadowField: string;
     shadowTextField: string;
+    shadowAreaSnake: string;
+    shadowBtnSnake: string;
   };
 }

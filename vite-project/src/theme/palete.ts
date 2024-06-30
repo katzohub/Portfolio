@@ -46,6 +46,11 @@ export const themeOptions: ThemeOptions = createTheme({
     colorTextInput: "#607B96",
     colorNavBar: "#010c15",
     colorInCard: "#011221",
+    backgroundAreaSnake: "#021927",
+    backgroundBtnSnake: "rgba(1, 22, 39, 0.84)",
+    backgroundAreaFirst: "rgba(23, 85, 83, 0.70)",
+    backgroundAreaSecond: "rgba(67, 217, 173, 0.09)",
+    fotnBtnSnake: "#43D9AD",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",
@@ -53,5 +58,7 @@ export const themeOptions: ThemeOptions = createTheme({
     shadowInput: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
     shadowField: "0px 0px 0px 2px rgba(96, 123, 150, 0.30)",
     shadowTextField: "3px 3px 6px 0px rgba(0,0,0,0.5)",
+    shadowAreaSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.71)",
+    shadowBtnSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.71)",
   },
 });

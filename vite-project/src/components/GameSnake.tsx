@@ -219,8 +219,6 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           height: `${gridHeight * cellSize}px`,
           width: `${gridSize * cellSize}px`,
           borderRadius: "8px",
-          background: "rgba(1, 22, 39, 0.84)",
-          boxShadow: " 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset",
         }}
         className={
           isFullWindow ? classes.snakeGameArea : classes.snakeGameAreaFullWidth
@@ -258,21 +256,21 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
               <Typography
                 variant="h4"
                 fontSize={15}
-                sx={{
+                sx={(theme) => ({
                   borderRadius: "8px",
-                  background: "rgba(1, 22, 39, 0.84)",
-                  boxShadow: "1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset ",
+                  background: theme.myColors.backgroundBtnSnake,
+                  boxShadow: `${theme.myShadow.shadowBtnSnake} inset`,
                   height: "30px",
                   width: "100%",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  color: "#43D9AD",
+                  color: theme.myColors.fotnBtnSnake,
                   fontFamily: "Fira Code",
                   fontStyle: "normal",
                   fontWeight: 450,
                   lineHeight: "100%",
-                }}
+                })}
               >
                 {intl.formatMessage({ id: "home.startGame" })}
               </Typography>

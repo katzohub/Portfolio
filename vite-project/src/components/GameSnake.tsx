@@ -509,7 +509,13 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
             className={isFullWindow ? "" : classes.pointContainerFoodFullWidth}
             sx={(theme) => ({
               width: "90px",
-              "& .point-snake": {
+              "& .point-snake-fist": {
+                fill: theme.myColors.pointSnakeSecond,
+              },
+              "& .point-snake-second": {
+                fill: theme.myColors.pointSnakeThread,
+              },
+              "& .point-snake-thread": {
                 fill: theme.myColors.pointSnake,
               },
             })}

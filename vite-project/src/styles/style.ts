@@ -493,7 +493,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   containerKeyboardFullWidth: {
     position: "relative",
-    top: "190px",
+    top: "215px",
     [theme.breakpoints.down("md")]: {
       position: "relative",
       top: "-65px",

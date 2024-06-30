@@ -94,6 +94,8 @@ export interface ThemeProps {
     colorSnakeLong: string;
     colorCircleLeft: string;
     colorCircleRight: string;
+    pointSnakeSecond: string;
+    pointSnakeThread: string;
   };
   myShadow: {
     shadowSideBar: string;

@@ -59,6 +59,8 @@ export const themeOptions: ThemeOptions = createTheme({
     resultCanal: "hardAlpha",
     inCanal: "SourceAlpha",
     pointSnake: "#43D9AD",
+    pointSnakeSecond: "#297877",
+    pointSnakeThread: "#2e8c82",
     colorSnakeLong: "67, 217, 173",
     colorCircleLeft: "#43D9AD",
     colorCircleRight: "#4D5BCE",

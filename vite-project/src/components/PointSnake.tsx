@@ -15,21 +15,21 @@ const PointSnake: FC<PointSnakeProps> = ({ index, candyCount }) => {
     >
       <circle
         opacity={opacity}
-        className="point-snake"
+        className="point-snake-fist"
         cx="10.8456"
         cy="10.5377"
         r="10.3456"
       />
       <circle
         opacity={opacity}
-        className="point-snake"
+        className="point-snake-second"
         cx="10.8456"
         cy="10.5377"
         r="7.34558"
       />
       <circle
         opacity={opacity}
-        className="point-snake"
+        className="point-snake-thread"
         cx="10.8457"
         cy="10.5377"
         r="4"

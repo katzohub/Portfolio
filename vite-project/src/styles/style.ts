@@ -822,6 +822,23 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 500,
     lineHeight: "normal",
   },
+  miniCircleWrapper: {
+    "& .mini-circle": {
+      "& .mini-stop-one": {
+        stopColor: theme.myColors.stopColorOut,
+      },
+      "& .mini-stop-two": {
+        stopColor: theme.myColors.stopColorIn,
+      },
+      "& .mini-path": {
+        stroke: theme.myColors.strokeMiniCircle,
+      },
+      "& .feColorMatrix": {
+        result: theme.myColors.resultCanal,
+        in: theme.myColors.inCanal,
+      },
+    },
+  },
   leftHeaderSpanTwo: {
     fontFamily: "Fira Code",
     color: theme.myColors.colorLightGreen,

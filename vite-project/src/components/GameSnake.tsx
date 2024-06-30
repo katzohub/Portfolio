@@ -200,18 +200,34 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
       {/* TODO Canva redesign and change color */}
       {/* <img className={classes.snakeBackEffectPurple} src={Green} alt="" />
       <img className={classes.snakeBackEffectGreen} src={Blue} alt="" /> */}
-      <div style={{ position: "absolute", top: 5, left: 5 }}>
+      <Box
+        className={classes.miniCircleWrapper}
+        sx={{
+          position: "absolute",
+          top: 5,
+          left: 5,
+        }}
+      >
         <MiniCircle />
-      </div>
-      <div style={{ position: "absolute", top: 5, right: 5 }}>
+      </Box>
+      <Box
+        className={classes.miniCircleWrapper}
+        sx={{ position: "absolute", top: 5, right: 5 }}
+      >
         <MiniCircle />
-      </div>
-      <div style={{ position: "absolute", bottom: 5, right: 5 }}>
+      </Box>
+      <Box
+        className={classes.miniCircleWrapper}
+        sx={{ position: "absolute", bottom: 5, right: 5 }}
+      >
         <MiniCircle />
-      </div>
-      <div style={{ position: "absolute", bottom: 5, left: 5 }}>
+      </Box>
+      <Box
+        className={classes.miniCircleWrapper}
+        sx={{ position: "absolute", bottom: 5, left: 5 }}
+      >
         <MiniCircle />
-      </div>
+      </Box>
       <Box
         ref={gameAreaRef}
         sx={{
@@ -317,22 +333,23 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                   <Typography
                     variant="h4"
                     fontSize={20}
-                    sx={{
+                    sx={(theme) => ({
                       borderRadius: "8px",
-                      background: "rgba(1, 22, 39, 0.84)",
-                      boxShadow:
-                        "1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset ",
+
+                      background: theme.myColors.backgroundBtnSnake,
+                      boxShadow: `${theme.myShadow.shadowBtnSnake} inset`,
+                      color: theme.myColors.fotnBtnSnake,
                       height: "60px",
                       width: "100%",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      color: "#43D9AD",
+
                       fontFamily: "Fira Code",
                       fontStyle: "normal",
                       fontWeight: 450,
                       lineHeight: "100%",
-                    }}
+                    })}
                   >
                     {intl.formatMessage({ id: "home.wellDone" })}
                   </Typography>
@@ -356,7 +373,11 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                     }}
                     onClick={startGame}
                   >
-                    <Typography variant="body2" fontSize={15}>
+                    <Typography
+                      variant="body2"
+                      fontSize={15}
+                      sx={{ color: "#fff" }}
+                    >
                       play-again
                     </Typography>
                   </Button>
@@ -376,21 +397,21 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                 <Typography
                   variant="h4"
                   fontSize={20}
-                  sx={{
+                  sx={(theme) => ({
                     borderRadius: "8px",
-                    background: "rgba(1, 22, 39, 0.84)",
-                    boxShadow: "1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset ",
+                    background: theme.myColors.backgroundBtnSnake,
+                    boxShadow: `${theme.myShadow.shadowBtnSnake} inset`,
+                    color: theme.myColors.fotnBtnSnake,
                     height: "60px",
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    color: "#43D9AD",
                     fontFamily: "Fira Code",
                     fontStyle: "normal",
                     fontWeight: 450,
                     lineHeight: "100%",
-                  }}
+                  })}
                 >
                   {intl.formatMessage({ id: "home.gameOver" })}
                 </Typography>
@@ -414,7 +435,11 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                   }}
                   onClick={startGame}
                 >
-                  <Typography variant="body2" fontSize={15}>
+                  <Typography
+                    variant="body2"
+                    fontSize={15}
+                    sx={{ color: "#fff" }}
+                  >
                     {intl.formatMessage({ id: "home.tryAgain" })}
                   </Typography>
                 </Button>

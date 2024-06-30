@@ -2,6 +2,7 @@ const MiniCircle = () => {
   return (
     <>
       <svg
+        className="mini-circle"
         xmlns="http://www.w3.org/2000/svg"
         width="22"
         height="22"
@@ -17,8 +18,8 @@ const MiniCircle = () => {
           />
         </g>
         <path
+          className="mini-path"
           d="M6.46094 11.5657L11.9995 6.97635M6.46094 6.97635L11.9995 11.5657"
-          stroke="#114944"
         />
         <defs>
           <filter
@@ -32,10 +33,9 @@ const MiniCircle = () => {
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
-              in="SourceAlpha"
+              className="feColorMatrix"
               type="matrix"
               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
             />
             <feOffset dx="2" dy="2" />
             <feGaussianBlur stdDeviation="2" />
@@ -56,10 +56,10 @@ const MiniCircle = () => {
               result="shape"
             />
             <feColorMatrix
+              className="feColorMatrix"
               in="SourceAlpha"
               type="matrix"
               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
             />
             <feOffset dy="1" />
             <feGaussianBlur stdDeviation="1" />
@@ -82,8 +82,8 @@ const MiniCircle = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(9.23047 6.27106) rotate(90) scale(9.5)"
           >
-            <stop offset="0.151042" stopColor="#196C6A" />
-            <stop offset="1" stopColor="#114B4A" />
+            <stop offset="0.151042" className="mini-stop-one" />
+            <stop offset="1" className="mini-stop-two" />
           </radialGradient>
         </defs>
       </svg>

@@ -85,6 +85,11 @@ export interface ThemeProps {
     backgroundAreaSecond: string;
     backgroundBtnSnake: string;
     fotnBtnSnake: string;
+    stopColorIn: string;
+    stopColorOut: string;
+    strokeMiniCircle: string;
+    resultCanal: string;
+    inCanal: string;
   };
   myShadow: {
     shadowSideBar: string;

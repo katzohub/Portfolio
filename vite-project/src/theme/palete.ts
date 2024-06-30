@@ -51,6 +51,11 @@ export const themeOptions: ThemeOptions = createTheme({
     backgroundAreaFirst: "rgba(23, 85, 83, 0.70)",
     backgroundAreaSecond: "rgba(67, 217, 173, 0.09)",
     fotnBtnSnake: "#43D9AD",
+    stopColorIn: "#196C6A",
+    stopColorOut: "#114B4A",
+    strokeMiniCircle: "#114944",
+    resultCanal: "hardAlpha",
+    inCanal: "SourceAlpha",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

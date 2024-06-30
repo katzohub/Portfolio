@@ -93,8 +93,8 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
 
       if (newHead.x === candy.x && newHead.y === candy.y) {
         setCandy(generateNewCandyPosition());
-        setSpeed((oldSpeed) => oldSpeed + 0.1);
-        setCandyCount((prevCount) => prevCount + 0.1);
+        setSpeed((oldSpeed) => oldSpeed + 1);
+        setCandyCount((prevCount) => prevCount + 0.5);
 
         if (candyCount + 1 === 10) {
           wellDoneGame();

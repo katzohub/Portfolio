@@ -6,9 +6,9 @@ const SnakeGame: FC = () => {
   return (
     <Box
       sx={{
-        padding: "56px 30px",
-        height: "100vh",
+        height: "100dvh",
         color: "#fff",
+        background: "#dab07a",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

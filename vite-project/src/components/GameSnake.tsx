@@ -474,10 +474,14 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           <Typography variant="body2" className={classes.snakeFoodLeft}>
             // {intl.formatMessage({ id: "home.lastFood" })}
           </Typography>
-
-          {Array.from({ length: 10 }, (_, index) => (
-            <PointSnake key={index} index={index} candyCount={candyCount} />
-          ))}
+          <Box
+            className={isFullWindow ? "" : classes.pointContainerFoodFullWidth}
+            sx={{ width: "90px" }}
+          >
+            {Array.from({ length: 10 }, (_, index) => (
+              <PointSnake key={index} index={index} candyCount={candyCount} />
+            ))}
+          </Box>
         </Box>
       </Box>
     </div>

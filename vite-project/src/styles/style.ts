@@ -450,13 +450,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    height: "80vh",
-    maxWidth: "1380px",
+    height: "100%",
+    overflow: "hidden",
     background:
       "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
     boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
     border: `1px solid ${theme.myColors.borderTableSnake}`,
-    borderRadius: "8px",
     position: "relative",
     zIndex: "9999",
     [theme.breakpoints.down("md")]: {
@@ -475,16 +474,30 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     top: "-200px",
     left: "85px",
     [theme.breakpoints.down("md")]: {
-      top: "-550px",
+      top: "15px",
+      left: "50%",
+      height: "auto",
+      width: "240px",
+      transform: "translateX(-50%)",
+      position: "absolute",
+      flexDirection: "column",
     },
   },
   containerKeyboardFullWidth: {
     position: "relative",
     top: "190px",
     [theme.breakpoints.down("md")]: {
-      position: "absolute",
-      top: "00px",
+      position: "relative",
+      top: "-65px",
       left: "0px",
+    },
+  },
+  pointContainerFoodFullWidth: {
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      display: "flex",
+
+      justifyContent: "center",
     },
   },
   snakeBackEffectGreen: {
@@ -537,7 +550,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   snakeGameAreaFullWidth: {
     [theme.breakpoints.down("md")]: {
       position: "relative",
-      top: "75px",
+      top: "20px",
     },
   },
   snakeBoxSettingFullWidth: {

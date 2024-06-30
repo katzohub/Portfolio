@@ -85,20 +85,21 @@ const LeftHeadertable: FC = () => {
               {intl.formatMessage({ id: "home.startGameBtn" })}
             </MyButton>
 
-            <MyButton>
-              <Link
-                href={SK}
-                download={"portfolio_design"}
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  color: "#fff",
-                  textDecoration: "none",
-                }}
-              >
+            <Link
+              href={SK}
+              download={"portfolio_design"}
+              sx={(theme) => ({
+                color: `${theme.myColors.textColorNav} !important`,
+                textDecoration: "none",
+                "&:hover": {
+                  color: `${theme.myColors.whiteColor} !important`,
+                },
+              })}
+            >
+              <MyButton>
                 {intl.formatMessage({ id: "home.download.cv" })}
-              </Link>
-            </MyButton>
+              </MyButton>
+            </Link>
           </Box>
         </Box>
       </Box>

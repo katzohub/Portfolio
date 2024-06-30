@@ -21,7 +21,7 @@ const MyButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
           textDecoration: "none",
           fontSize: "inherit",
           fontFamily: "inherit",
-
+          width: "100%",
           "&.learn-more": {
             fontWeight: 600,
             color: theme.myColors.textColorNav,

@@ -45,7 +45,7 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
   };
 
   return (
-    <>
+    <Box sx={{ width: "100vw", display: "flex", justifyContent: "center" }}>
       <nav
         className={isTopnav ? classes.navContainer : classes.bottomNavContainer}
       >
@@ -100,7 +100,7 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
           </>
         )}
       </nav>
-    </>
+    </Box>
   );
 };
 

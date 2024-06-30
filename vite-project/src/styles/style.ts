@@ -109,8 +109,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   bottomNavContainer: {
     position: "absolute",
     bottom: "0",
-    left: "30px",
-    width: "94vw",
+
+    width: "95%",
     height: "56px",
     borderTop: `2px solid ${theme.myColors.colorLinie}`,
     display: "flex",
@@ -118,6 +118,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     background: theme.myColors.generalBackground,
     zIndex: 999,
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
   },
   switchBox: {
     height: "100%",
@@ -144,6 +147,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "center",
     transition: "color 0.3s ease-in",
+    [theme.breakpoints.down("md")]: {
+      padding: "0 10px",
+    },
   },
   // component Navigation navLinkLeft
   switch: {
@@ -328,8 +334,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   navContainer: {
     position: "absolute",
     top: "0",
-    left: "30px",
-    width: "94vw",
+    width: "95%",
+
     borderBlockEnd: `2px solid ${theme.myColors.colorLinie}`,
     height: "56px",
     display: "flex",
@@ -337,6 +343,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     background: `${theme.myColors.generalBackground} !important`,
     zIndex: "9999",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
   },
 
   // end rechanged
@@ -722,15 +731,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "space-between",
     justifyContent: "space-between",
-
     alignContent: "space-between",
     zIndex: "9999",
     [theme.breakpoints.down("md")]: {
-      alignItems: "space-between",
-    },
-    [theme.breakpoints.down("sm")]: {
-      position: "relative",
-      top: "-70px",
+      justifyContent: "start",
+      alignContent: "center",
+      gap: "25px 0",
     },
   },
 
@@ -881,13 +887,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
-      justifyContent: "space-evenly",
       position: "relative",
-      top: "-50px",
+      gap: "40px",
       margin: "0px 0px",
     },
     [theme.breakpoints.down("md")]: {
       top: "0px",
+      height: "100dvh",
     },
     [theme.breakpoints.down("sm")]: {
       zIndex: "5",

@@ -13,7 +13,6 @@ const BackroundGlassSnakeRight = () => {
           opacity: 0.4,
           position: "absolute",
           background: theme.myColors.colorCircleRight,
-          boxShadow: "174px 174px 174px ",
           filter: "blur(174px)",
           bottom: -120,
           right: -70,

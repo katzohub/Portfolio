@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 import {
   ListSubheader,
   List,
@@ -17,119 +17,25 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LeftContact from "./LeftContact";
-import TemplateAbout from "./TemplateAbout";
+
 import usePageStyles from "../styles/stylePages";
-import { TextProps } from "../types";
+import {
+  TemplateTextBio,
+  TemplateTextInterest,
+  TemplateTextPrimarySchool,
+  TemplateTextHighSchool,
+} from "../constants/TemplatesAbout";
 import ja from "../assets/img/ja.png";
 
 const AboutMe: FC = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
   const [activeContactButton, setActiveContactButton] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
+  const [templateProps, setTemplateProps] = useState<React.ReactNode>(
+    <TemplateTextBio />
+  );
   const [openContact, setOpenContact] = useState<boolean>(false);
   const intl = useIntl();
-
-  const [templateProps, setTemplateProps] = useState<TextProps>({
-    textOne: `${intl.formatMessage({ id: "about.bioTextOne" })}`,
-    textTwo: `${intl.formatMessage({ id: "about.bioTextTwo" })}`,
-    textThree: `${intl.formatMessage({ id: "about.bioTextThree" })}`,
-    textFour: `${intl.formatMessage({ id: "about.bioTextFour" })}`,
-    textFive: `${intl.formatMessage({ id: "about.bioTextFive" })}`,
-    textSix: `${intl.formatMessage({ id: "about.bioTextSix" })}`,
-    textSeven: `${intl.formatMessage({ id: "about.bioTextSeven" })}`,
-    textEight: `${intl.formatMessage({ id: "about.bioTextEight" })}`,
-    textHelp: "*",
-    textNine: `${intl.formatMessage({ id: "about.bioTextNine" })}`,
-    textTen: `${intl.formatMessage({ id: "about.bioTextTen" })}`,
-    textEleven: `${intl.formatMessage({ id: "about.bioTextEleven" })}`,
-    textTwelve: `${intl.formatMessage({ id: "about.bioTextTwelve" })}`,
-  });
-
-  const handleBioClick = () => {
-    setTemplateProps({
-      textOne: `${intl.formatMessage({ id: "about.bioTextOne" })}`,
-      textTwo: `${intl.formatMessage({ id: "about.bioTextTwo" })}`,
-      textThree: `${intl.formatMessage({ id: "about.bioTextThree" })}`,
-      textFour: `${intl.formatMessage({ id: "about.bioTextFour" })}`,
-      textFive: `${intl.formatMessage({ id: "about.bioTextFive" })}`,
-      textSix: `${intl.formatMessage({ id: "about.bioTextSix" })}`,
-      textSeven: `${intl.formatMessage({ id: "about.bioTextSeven" })}`,
-      textEight: `${intl.formatMessage({ id: "about.bioTextEight" })}`,
-      textHelp: "*",
-      textNine: `${intl.formatMessage({ id: "about.bioTextNine" })}`,
-      textTen: `${intl.formatMessage({ id: "about.bioTextTen" })}`,
-      textEleven: `${intl.formatMessage({ id: "about.bioTextEleven" })}`,
-      textTwelve: `${intl.formatMessage({ id: "about.bioTextTwelve" })}`,
-    });
-  };
-
-  const handleInterestsClick = () => {
-    setTemplateProps({
-      textOne: `${intl.formatMessage({ id: "about.interestsTextOne" })}`,
-      textTwo: `${intl.formatMessage({ id: "about.interestsTextTwo" })}`,
-      textThree: `${intl.formatMessage({ id: "about.interestsTextThree" })}`,
-      textFour: `${intl.formatMessage({ id: "about.interestsTextFour" })}`,
-      textFive: `${intl.formatMessage({ id: "about.interestsTextFive" })}`,
-      textSix: `${intl.formatMessage({ id: "about.interestsTextSix" })}`,
-      textSeven: `${intl.formatMessage({ id: "about.interestsTextSeven" })}`,
-      textEight: `${intl.formatMessage({ id: "about.interestsTextEight" })}`,
-      textHelp: `${intl.formatMessage({ id: "about.interestsTextNine" })}`,
-      textNine: "",
-      textTen: `${intl.formatMessage({ id: "about.interestsTextTen" })}`,
-      textEleven: `${intl.formatMessage({ id: "about.interestsTextEleven" })}`,
-      textTwelve: `${intl.formatMessage({ id: "about.interestsTextTwelve" })}`,
-    });
-  };
-
-  const handlePrimarySchoolClick = () => {
-    setTemplateProps({
-      textOne: `${intl.formatMessage({ id: "about.educationTextOne" })}`,
-      textTwo: `${intl.formatMessage({ id: "about.educationTextTwo" })}`,
-      textThree: `${intl.formatMessage({ id: "about.educationTextThree" })}`,
-      textFour: `${intl.formatMessage({ id: "about.educationTextFour" })}`,
-      textFive: `${intl.formatMessage({ id: "about.educationTextFive" })}`,
-      textSix: `${intl.formatMessage({ id: "about.educationTextSix" })}`,
-      textSeven: `${intl.formatMessage({ id: "about.educationTextSeven" })}`,
-      textEight: `${intl.formatMessage({ id: "about.educationTextEight" })}`,
-      textHelp: `${intl.formatMessage({ id: "about.educationTextNine" })}`,
-      textNine: `${intl.formatMessage({ id: "about.educationTextTen" })}`,
-      textTen: "",
-      textEleven: `${intl.formatMessage({ id: "about.educationTextEleven" })}`,
-      textTwelve: `${intl.formatMessage({ id: "about.educationTextTwelve" })}`,
-    });
-  };
-
-  const handleHighSchoolClick = () => {
-    setTemplateProps({
-      textOne: `${intl.formatMessage({ id: "about.highEducationTextOne" })}`,
-      textTwo: `${intl.formatMessage({ id: "about.highEducationTextTwo" })}`,
-      textThree: `${intl.formatMessage({
-        id: "about.highEducationTextThree",
-      })}`,
-      textFour: `${intl.formatMessage({ id: "about.highEducationTextFour" })}`,
-      textFive: `${intl.formatMessage({ id: "about.highEducationTextFive" })}`,
-      textSix: `${intl.formatMessage({ id: "about.highEducationTextSix" })}`,
-      textSeven: `${intl.formatMessage({
-        id: "about.highEducationTextSeven",
-      })}`,
-      textEight: `${intl.formatMessage({
-        id: "about.highEducationTextEight",
-      })}`,
-      textHelp: `${intl.formatMessage({
-        id: "about.highEducationTextNine",
-      })}`,
-      textNine: "",
-      textTen: `${intl.formatMessage({
-        id: "about.highEducationTextTen",
-      })}`,
-      textEleven: `${intl.formatMessage({
-        id: "about.highEducationTextEleven",
-      })}`,
-      textTwelve: `${intl.formatMessage({
-        id: "about.highEducationTextTwelve",
-      })}`,
-    });
-  };
 
   const handleClick = () => {
     setOpen(!open);
@@ -139,24 +45,21 @@ const AboutMe: FC = () => {
   };
 
   const classes = usePageStyles();
-  useEffect(() => {
-    switch (activeButton) {
-      case "bio":
-        handleBioClick();
-        break;
-      case "interests":
-        handleInterestsClick();
-        break;
-      case "primary-school":
-        handlePrimarySchoolClick();
-        break;
-      case "high-school":
-        handleHighSchoolClick();
-        break;
-      default:
-        handleBioClick();
+
+  const toggleText = (active: string): React.ReactNode => {
+    if (active === intl.formatMessage({ id: "about.bio" })) {
+      return <TemplateTextBio />;
+    } else if (active === intl.formatMessage({ id: "about.interests" })) {
+      return <TemplateTextInterest />;
+    } else if (active === intl.formatMessage({ id: "about.primaryScholl" })) {
+      return <TemplateTextPrimarySchool />;
+    } else if (active === intl.formatMessage({ id: "about.highSchool" })) {
+      return <TemplateTextHighSchool />;
+    } else {
+      return <TemplateTextBio />;
     }
-  }, [activeButton, intl.locale]);
+  };
+
   return (
     <>
       <Box className={classes.aboutContainer}>
@@ -182,11 +85,8 @@ const AboutMe: FC = () => {
                 sx={{ position: "relative" }}
                 className={classes.aboutLeftWrap}
               >
-                {" "}
                 {intl.formatMessage({ id: "about.personal" })}
-                <div className={classes.aboutTextRight}>
-                  {intl.formatMessage({ id: "about.me" })}
-                </div>
+                <div className={classes.aboutTextRight}>{activeButton}</div>
               </ListSubheader>
             }
           >
@@ -206,7 +106,9 @@ const AboutMe: FC = () => {
                     : theme.myColors.colorNonActive,
               })}
               onClick={() => {
-                handleBioClick();
+                setTemplateProps(
+                  toggleText(intl.formatMessage({ id: "about.bio" }))
+                );
                 setActiveButton("bio");
               }}
             >
@@ -224,7 +126,10 @@ const AboutMe: FC = () => {
             <ListItemButton
               className={classes.aboutHoverBtnEffect}
               onClick={() => {
-                handleInterestsClick();
+                setTemplateProps(
+                  toggleText(intl.formatMessage({ id: "about.interests" }))
+                );
+
                 setActiveButton("interests");
               }}
               sx={(theme) => ({
@@ -290,7 +195,12 @@ const AboutMe: FC = () => {
                 <ListItemButton
                   className={classes.aboutBtnEducationStyle}
                   onClick={() => {
-                    handlePrimarySchoolClick();
+                    setTemplateProps(
+                      toggleText(
+                        intl.formatMessage({ id: "about.primaryScholl" })
+                      )
+                    );
+
                     setActiveButton("primary-school");
                   }}
                   sx={(theme) => ({
@@ -309,7 +219,9 @@ const AboutMe: FC = () => {
                 <ListItemButton
                   className={classes.aboutBtnEducationStyle}
                   onClick={() => {
-                    handleHighSchoolClick();
+                    setTemplateProps(
+                      toggleText(intl.formatMessage({ id: "about.highSchool" }))
+                    );
                     setActiveButton("high-school");
                   }}
                   sx={(theme) => ({
@@ -359,7 +271,8 @@ const AboutMe: FC = () => {
           </List>
           {/* Template */}
           <Box className={classes.aboutNextContainer}>
-            <TemplateAbout {...templateProps} />
+            {/* <TemplateAbout {...templateProps} /> */}
+            {templateProps}
             <div className={classes.aboutDivider}></div>
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>

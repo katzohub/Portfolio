@@ -42,7 +42,6 @@ export type TextProps = {
   textSix?: string;
   textSeven?: string;
   textEight?: string;
-  textHelp: string;
   textNine?: string;
   textTen?: string;
   textEleven?: string;

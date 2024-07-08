@@ -51,6 +51,15 @@ export type TextProps = {
   textFifteen?: string;
   textSixteen?: string;
   textSeventeen?: string;
+  textEighteen?: string;
+  textNineteen?: string;
+  textTwenty?: string;
+  textTwentyOne?: string;
+  textTwentyTwo?: string;
+  textTwentyThree?: string;
+  textTwentyFour?: string;
+  textTwentyFive?: string;
+  textTwentySix?: string;
 };
 export interface ThemeProps {
   myColors: {

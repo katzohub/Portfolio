@@ -20,9 +20,16 @@ const TemplateAbout: FC<TextProps> = ({
   textFifteen,
   textSixteen,
   textSeventeen,
+  textEighteen,
+  textNineteen,
+  textTwenty,
+  textTwentyOne,
+  textTwentyTwo,
+  textTwentyThree,
+  textTwentyFour,
+  textTwentyFive,
+  textTwentySix,
 }) => {
-  // const classes = usePageStyles();
-  // TODO fix code
   return (
     <>
       <Box
@@ -73,6 +80,33 @@ const TemplateAbout: FC<TextProps> = ({
         )}
         {textSeventeen && (
           <Typography variant="body2">17 * {textSeventeen}</Typography>
+        )}
+        {textEighteen && (
+          <Typography variant="body2">18 * {textEighteen}</Typography>
+        )}
+        {textNineteen && (
+          <Typography variant="body2">19 * {textNineteen}</Typography>
+        )}
+        {textTwenty && (
+          <Typography variant="body2">20 * {textTwenty}</Typography>
+        )}
+        {textTwentyOne && (
+          <Typography variant="body2">21 * {textTwentyOne}</Typography>
+        )}
+        {textTwentyTwo && (
+          <Typography variant="body2">22 * {textTwentyTwo}</Typography>
+        )}
+        {textTwentyThree && (
+          <Typography variant="body2">23 * {textTwentyThree}</Typography>
+        )}
+        {textTwentyFour && (
+          <Typography variant="body2">24 * {textTwentyFour}</Typography>
+        )}
+        {textTwentyFive && (
+          <Typography variant="body2">25 * {textTwentyFive}</Typography>
+        )}
+        {textTwentySix && (
+          <Typography variant="body2">26 * {textTwentySix}</Typography>
         )}
 
         <Typography variant="body2">*/</Typography>

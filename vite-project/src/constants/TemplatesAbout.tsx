@@ -6,40 +6,50 @@ export const TemplateTextBio = () => {
       textOne={"Ahoj"}
       textTwo={"Rád ťa vítam na mojej stránke"}
       textThree={"Dúfam, že sa ti páči a zanecháš mi taktiež aj hodnotenie,"}
-      textFour={"prípadne pošleš ponuku ... :)"}
-      textFour={
+      textFour={" prípadne pošleš ponuku ... :)"}
+      textFive={
         "Toto portfólio som vytvoril preto, aby som sa zlepšil a získal skúsenosti."
       }
-      textFive={"Tak dúfam, že sa ti páči a zanecháš mi aj spätnú väzbu"}
-      textSix={"Moja kariérna cesta začala v roku 2023"}
-      textSeven={"keď som si uvedomil, že programovanie je to, čo ma baví"}
-      textEight={
+      textSix={"Tak dúfam, že sa ti páči a zanecháš mi aj spätnú väzbu"}
+      textSeven={"Moja kariérna cesta začala v roku 2023"}
+      textEight={"keď som si uvedomil, že programovanie je to, čo ma baví"}
+      textNine={
         "odvtedy sa snažím učiť sa, zlepšovať sa a nájsť si aj nejakú prácu."
       }
-      textNine={"Kvôli tomu som sa rozhodol spraviť si toto portfólio,"}
-      textNine={"ktoré bude odrážať pár mojich znalostí"}
-      textTen={
-        "Medzi niektoré patria napríklad: HTML, CSS, SASS, Tailwind, JavaScript, TypeScript, PHP (žiaľ PHP už trošku menej), React, Firebase, Next.js, MongoDB."
-      }
-      textEleven={
-        "Taktiež ma zaujímajú technológie ako sú GraphQL, Node.js, Docker, React Native, Three.js, s týmito technológiami už mám menší prehľad."
-      }
+      textTen={"Kvôli tomu som sa rozhodol spraviť si toto portfólio,"}
+      textEleven={"ktoré bude odrážať pár mojich znalostí"}
       textTwelve={
-        "Taktiež ma bavia knižnice na komponenty ako sú MUI, Shadcn, DaisyUI, s týmito knižnicami mám skúsenosti."
+        "Medzi niektoré patria napríklad: HTML, CSS, SASS, Tailwind, JavaScript,"
       }
       textThirteen={
-        "Medzi ďalšie môj stack, s ktorými už mám reálne skúsenosti, patria: Git, GitHub, GitLab, Trello, Jira, VSCode, Figma, Canva, AWS SDK, Redux, Zustand..."
+        "TypeScript, PHP (žiaľ PHP už trošku menej), React, Firebase, Next.js, MongoDB."
       }
       textFourteen={
-        "Rád sa učím novým veciam a zlepšovaniu a taktiež sa snažím byť kreatívny."
+        "Taktiež ma zaujímajú technológie ako sú GraphQL, Node.js, Docker,"
       }
       textFifteen={
-        "Dúfam, že sa mi podarí nájsť si môj vytúžený job a že sa mi podarí získať skúsenosti, ktoré patria aj do reálneho sveta."
+        "React Native, Three.js, s týmito technológiami už mám menší prehľad."
       }
       textSixteen={
-        "Ak by som vás náhodou oslovil, neváhajte ma kontaktovať a ja sa budem snažíť vás čo najskôr kontaktovať."
+        "Taktiež ma bavia knižnice na komponenty ako sú MUI, Shadcn, DaisyUI,"
       }
-      textSeventeen={"Ďakujem za váš čas a prajem pekný deň"}
+      textSeventeen={"s týmito knižnicami mám skúsenosti."}
+      textEighteen={
+        "Medzi ďalšie môj stack, s ktorými už mám reálne skúsenosti, patria: Git, GitHub,"
+      }
+      textTwenty={
+        "GitLab, Trello, Jira, VSCode, Figma, Canva, AWS SDK, Redux, Zustand..."
+      }
+      textTwentyOne={
+        "Rád sa učím novým veciam a zlepšovaniu a taktiež sa snažím byť kreatívny."
+      }
+      textTwentyTwo={"Dúfam, že sa mi podarí nájsť si môj vytúžený job"}
+      textTwentyThree={
+        "a že sa mi podarí získať skúsenosti, ktoré patria aj do reálneho sveta."
+      }
+      textTwentyFour={"Ak by som vás náhodou oslovil, neváhajte ma kontaktovať"}
+      textTwentyFive={"a ja sa budem snažíť vás čo najskôr kontaktovať."}
+      textTwentySix={"Ďakujem za váš čas a prajem pekný deň"}
     />
   );
 };
@@ -49,7 +59,6 @@ export const TemplateTextInterest = () => {
       textOne={"Vitaj v sekcii moje zaujmy"}
       textTwo={"Mimo programovania mám veľký záujem o nové technológie"}
       textThree={"a neustále sledujem najnovšie trendy v IT svete."}
-      // one add
       textFour={
         "Fascinujú ma oblasti ako umelá inteligencia,virtuálna realita..."
       }
@@ -58,24 +67,18 @@ export const TemplateTextInterest = () => {
         "Pracujem s nástrojmi ako Figma a Canva, aby som vytváral vizuálne"
       }
       textSeven={"príťažlivé a používateľsky prívetivé rozhrania."}
-      // two add
       textEight={
-        "Vo voľnom čase rád športujem a cestujem medzi obľubené športy patrí"
+        "Vo voľnom čase rád športujem a cestujem, medzi obľubené športy patrí"
       }
       textNine={"behanie,cyklistika,badminton a cez zimu je to skialpinizmus."}
-      // three add
       textTen={"Taktiež rad sledujem filmy a seriály a hram playstation,"}
       textTwelve={
-        "ale najčastejšie sa stretávam s priateľmi a trávim čas s rodinou."
+        "ale najradšej sa stretávam s priateľmi a trávim čas s rodinou."
       }
       textThirteen={"Som tiež veľkým fanúšikom open-source projektov"}
       textFourteen={"a rád prispievam do rôznych komunitných projektov,"}
       textFifteen={"kde môžem zdieľať svoje znalosti a učiť sa od ostatných"}
-      //  four add
       textSixteen={
-        "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)"
-      }
-      textSeventeen={
         "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)"
       }
     />

@@ -194,12 +194,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       paddingBottom: "80px",
       overflowY: "auto",
       overflowX: "hidden",
-      position: "relative",
-      top: "-56px",
     },
     [theme.breakpoints.down("md")]: {
-      position: "relative",
-      top: "56px",
       width: "100%",
       height: "auto",
       display: "flex",

@@ -17,7 +17,6 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LeftContact from "./LeftContact";
-
 import usePageStyles from "../styles/stylePages";
 import {
   TemplateTextBio,
@@ -160,7 +159,6 @@ const AboutMe: FC = () => {
               })}
               onClick={() => {
                 handleClick();
-                setActiveButton("education");
               }}
             >
               {open ? <ExpandLess /> : <ExpandMore />}

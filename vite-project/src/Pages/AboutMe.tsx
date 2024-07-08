@@ -269,7 +269,7 @@ const AboutMe: FC = () => {
           </List>
           {/* Template */}
           <Box className={classes.aboutNextContainer}>
-            {/* <TemplateAbout {...templateProps} /> */}
+            {/*TODO*/}
             {templateProps}
             <div className={classes.aboutDivider}></div>
             <Box className={classes.aboutNextWrap}>

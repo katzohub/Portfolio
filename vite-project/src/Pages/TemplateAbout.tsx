@@ -16,6 +16,10 @@ const TemplateAbout: FC<TextProps> = ({
   textTen,
   textEleven,
   textTwelve,
+  textFourteen,
+  textFifteen,
+  textSixteen,
+  textSeventeen,
 }) => {
   // const classes = usePageStyles();
   // TODO fix code
@@ -49,15 +53,26 @@ const TemplateAbout: FC<TextProps> = ({
 
         <Typography variant="body2">8 * {textEight} </Typography>
 
-        <Typography variant="body2">*</Typography>
-
-        <Typography variant="body2">10 * {textNine}</Typography>
-
-        <Typography variant="body2">11 * {textTen}</Typography>
-
-        <Typography variant="body2">12 * {textEleven}</Typography>
-
-        <Typography variant="body2">13 * {textTwelve}</Typography>
+        {textNine && <Typography variant="body2">10 * {textNine}</Typography>}
+        {textTen && <Typography variant="body2">11 * {textTen}</Typography>}
+        {textEleven && (
+          <Typography variant="body2">12 * {textEleven}</Typography>
+        )}
+        {textTwelve && (
+          <Typography variant="body2">13 * {textTwelve}</Typography>
+        )}
+        {textFourteen && (
+          <Typography variant="body2">14 * {textFourteen}</Typography>
+        )}
+        {textFifteen && (
+          <Typography variant="body2">15 * {textFifteen}</Typography>
+        )}
+        {textSixteen && (
+          <Typography variant="body2">16 * {textSixteen}</Typography>
+        )}
+        {textSeventeen && (
+          <Typography variant="body2">17 * {textSeventeen}</Typography>
+        )}
 
         <Typography variant="body2">*/</Typography>
       </Box>

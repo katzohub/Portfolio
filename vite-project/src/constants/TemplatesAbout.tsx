@@ -12,7 +12,7 @@ export const TemplateTextBio = () => {
         "Toto portfólio som vytvoril preto, aby som sa zlepšil a získal skúsenosti."
       }
       textFive={"Tak dúfam, že sa ti páči a zanecháš mi aj spätnú väzbu"}
-      textSix={"Moja kariérna cesta začala v roku 2022"}
+      textSix={"Moja kariérna cesta začala v roku 2023"}
       textSeven={"keď som si uvedomil, že programovanie je to, čo ma baví"}
       textEight={
         "odvtedy sa snažím učiť sa, zlepšovať sa a nájsť si aj nejakú prácu."

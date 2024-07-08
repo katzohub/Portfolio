@@ -182,7 +182,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutNextContainer: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-evenly",
+    // justifyContent: "space-evenly",
     overflowY: "auto",
     height: "auto",
     [theme.breakpoints.down("lg")]: {

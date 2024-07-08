@@ -33,6 +33,7 @@ const TemplateAbout: FC<TextProps> = ({
           fontStyle: "normal",
           fontWeight: 450,
           paddingTop: "120px",
+          width: "550px",
         })}
       >
         <Typography variant="body2">/** </Typography>

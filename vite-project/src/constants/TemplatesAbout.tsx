@@ -5,9 +5,8 @@ export const TemplateTextBio = () => {
     <TemplateAbout
       textOne={"Ahoj"}
       textTwo={"Rád ťa vítam na mojej stránke"}
-      textThree={
-        "Dúfam, že sa ti páči a zanecháš mi taktiež aj hodnotenie, prípadne pošleš ponuku ... :)"
-      }
+      textThree={"Dúfam, že sa ti páči a zanecháš mi taktiež aj hodnotenie,"}
+      textFour={"prípadne pošleš ponuku ... :)"}
       textFour={
         "Toto portfólio som vytvoril preto, aby som sa zlepšil a získal skúsenosti."
       }
@@ -17,9 +16,8 @@ export const TemplateTextBio = () => {
       textEight={
         "odvtedy sa snažím učiť sa, zlepšovať sa a nájsť si aj nejakú prácu."
       }
-      textNine={
-        "Kvôli tomu som sa rozhodol spraviť si toto portfólio, ktoré bude odrážať pár mojich znalostí"
-      }
+      textNine={"Kvôli tomu som sa rozhodol spraviť si toto portfólio,"}
+      textNine={"ktoré bude odrážať pár mojich znalostí"}
       textTen={
         "Medzi niektoré patria napríklad: HTML, CSS, SASS, Tailwind, JavaScript, TypeScript, PHP (žiaľ PHP už trošku menej), React, Firebase, Next.js, MongoDB."
       }
@@ -49,29 +47,35 @@ export const TemplateTextInterest = () => {
   return (
     <TemplateAbout
       textOne={"Vitaj v sekcii moje zaujmy"}
-      textTwo={
-        "Mimo programovania mám veľký záujem o nové technológie a neustále sledujem najnovšie trendy v IT svete."
-      }
-      textThree={
+      textTwo={"Mimo programovania mám veľký záujem o nové technológie"}
+      textThree={"a neustále sledujem najnovšie trendy v IT svete."}
+      // one add
+      textFour={
         "Fascinujú ma oblasti ako umelá inteligencia,virtuálna realita..."
       }
-      textFour={"Okrem technológií ma baví aj dizajn a UX/UI."}
-      textFive={
-        "Pracujem s nástrojmi ako Figma a Canva, aby som vytváral vizuálne príťažlivé a používateľsky prívetivé rozhrania."
-      }
+      textFive={"Okrem technológií ma baví aj dizajn a UX/UI."}
       textSix={
-        "Vo voľnom čase rád športujem a cestujem medzi obľubené športy patrý behanie,cyklistika,badminton a cez zimu je to skialpinizmus."
+        "Pracujem s nástrojmi ako Figma a Canva, aby som vytváral vizuálne"
       }
-      textSeven={"Taktiež rad sledujem filmy a seriály a hram playstation."}
+      textSeven={"príťažlivé a používateľsky prívetivé rozhrania."}
+      // two add
       textEight={
-        "Ale najčastejšie sa stretávam s priateľmi a trávim čas s rodinou."
+        "Vo voľnom čase rád športujem a cestujem medzi obľubené športy patrí"
       }
-      textNine={"Taktiež sa rád stretávam s priateľmi a trávim čas s rodinou."}
-      textTen={"Som tiež veľkým fanúšikom open-source projektov"}
-      textEleven={
-        "a rád prispievam do rôznych komunitných projektov, kde môžem zdieľať svoje znalosti a učiť sa od ostatných"
-      }
+      textNine={"behanie,cyklistika,badminton a cez zimu je to skialpinizmus."}
+      // three add
+      textTen={"Taktiež rad sledujem filmy a seriály a hram playstation,"}
       textTwelve={
+        "ale najčastejšie sa stretávam s priateľmi a trávim čas s rodinou."
+      }
+      textThirteen={"Som tiež veľkým fanúšikom open-source projektov"}
+      textFourteen={"a rád prispievam do rôznych komunitných projektov,"}
+      textFifteen={"kde môžem zdieľať svoje znalosti a učiť sa od ostatných"}
+      //  four add
+      textSixteen={
+        "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)"
+      }
+      textSeventeen={
         "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)"
       }
     />
@@ -87,11 +91,12 @@ export const TemplateTextPrimarySchool = () => {
         "ktorá sa nachádza na Detvianskej Hute v mojej dedine, kde som vyrastal."
       }
       textFive={
-        "Počas týchto rokov som získal pevné základy vo všeobecných predmetoch, ako sú matematika, prírodné vedy a jazyky."
+        "Počas týchto rokov som získal pevné základy vo všeobecných predmetoch,"
       }
-      textSix={"Vďaka našim múdrym učiteľom som sa naučil veľa nových vecí."}
-      textSeven={"A stále využívam skúsenosti, ktoré som tam získal."}
-      textEight={"Som veľmi rád, že som mohol navštevovať túto školu."}
+      textSix={"ako sú matematika, prírodné vedy a jazyky."}
+      textSeven={"Vďaka našim múdrym učiteľom som sa naučil veľa nových vecí."}
+      textEight={"A stále využívam skúsenosti, ktoré som tam získal."}
+      textNine={"Som veľmi rád, že som mohol navštevovať túto školu."}
     />
   );
 };
@@ -107,14 +112,16 @@ export const TemplateTextHighSchool = () => {
       textSix={"Žiaľ, dlho som pri tom neostal,"}
       textSeven={"pretože som mal rád iné programovanie."}
       textEight={
-        "Počas štúdia som sa začal zaujímať o webové technológie a programovanie, čo ma viedlo k tomu, aby som sa venoval tejto oblasti."
+        "Počas štúdia som sa začal zaujímať o webové technológie a programovanie,"
       }
-      textNine={
+      textNine={"čo ma viedlo k tomu, aby som sa venoval tejto oblasti."}
+      textTen={
         "Aktívne som sa zapájal do rôznych projektov, kde som získal cenné skúsenosti."
       }
-      textTen={
-        "Tieto aktivity ma motivovali aby som neskôr prehodnotil moje ciele a začal sa učiť programovať."
+      textEleven={
+        "Tieto aktivity ma motivovali aby som neskôr prehodnotiť moje ciele"
       }
+      textTwelve={"a začal sa učiť programovať."}
     />
   );
 };

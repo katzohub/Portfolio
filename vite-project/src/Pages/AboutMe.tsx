@@ -267,14 +267,36 @@ const AboutMe: FC = () => {
               <LeftContact />
             </Collapse>
           </List>
-          {/* Template */}
+          {/* TODO */}
           <Box className={classes.aboutNextContainer}>
-            {/*TODO*/}
-            {templateProps}
-            <div className={classes.aboutDivider}></div>
+            <Box
+              sx={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "start",
+                alignContent: "center",
+                position: "relative",
+                paddingTop: "120px",
+              }}
+            >
+              {templateProps}
+              <div className={classes.aboutDivider}></div>
+            </Box>
+
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>
-                <Box>
+                <Box
+                  sx={{
+                    "& span": {
+                      fontSize: "clamp(13px, 1vw, 16px)",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                    },
+                  }}
+                >
                   <Box
                     sx={{
                       width: "100%",
@@ -283,9 +305,9 @@ const AboutMe: FC = () => {
                     }}
                   >
                     <span className={classes.formTextGrey}>1&nbsp;</span>
-                    <span className={classes.formTextPink}>const</span>{" "}
-                    <span className={classes.formTextPurple}>button</span>{" "}
-                    <span className={classes.formTextPink}>=</span>{" "}
+                    <span className={classes.formTextPink}>const&nbsp;</span>
+                    <span className={classes.formTextPurple}>button&nbsp;</span>
+                    <span className={classes.formTextPink}>=&nbsp;</span>{" "}
                     <span className={classes.formTextPurple}>
                       document.querySelector
                     </span>{" "}

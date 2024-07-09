@@ -39,8 +39,11 @@ const TemplateAbout: FC<TextProps> = ({
           fontSize: "18px",
           fontStyle: "normal",
           fontWeight: 450,
-          paddingTop: "120px",
-          width: "550px",
+          "& p": {
+            fontSize: "clamp(13px, 1vw, 16px)",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+          },
         })}
       >
         <Typography variant="body2">/** </Typography>

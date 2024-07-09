@@ -182,7 +182,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutNextContainer: {
     width: "100%",
     display: "flex",
-    // justifyContent: "space-evenly",
+    justifyContent: "space-evenly",
     overflowY: "auto",
     height: "auto",
     [theme.breakpoints.down("lg")]: {
@@ -211,7 +211,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutDivider: {
     position: "absolute",
-    left: "57%",
+    right: "0px",
+    top: "-20px",
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "100vh",
@@ -228,23 +229,24 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutNextWrap: {
-    marginTop: "150px",
-    marginBottom: "50px",
     color: "white",
-    padding: 2,
-    height: "675px",
+    width: "100%",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "start",
+    paddingTop: "120px",
+    alignContent: "center !important",
+
     [theme.breakpoints.down("lg")]: {
-      margin: "20px 0",
-      marginBottom: "100px",
-      height: "auto",
+      // margin: "20px 0",
+      // marginBottom: "100px",
+      // height: "auto",
     },
     [theme.breakpoints.down("md")]: {
-      marginTop: "40px",
-      marginBottom: "0px",
+      // marginTop: "40px",
+      // marginBottom: "0px",
     },
   },
   aboutImg: {
@@ -265,6 +267,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutNextImgContainer: {
     position: "relative",
+
     top: "50px",
     borderRadius: "15px",
     border: `2px solid ${theme.myColors.colorLinie}`,

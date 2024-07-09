@@ -38,7 +38,7 @@ export const TemplateTextBio = () => {
         "Medzi ďalšie môj stack, s ktorými už mám reálne skúsenosti, patria: Git, GitHub,"
       }
       textTwenty={
-        "GitLab, Trello, Jira, VSCode, Figma, Canva, AWS SDK, Redux, Zustand..."
+        "GitLab, Trello, Jira, UploadThing, Figma, Canva, AWS SDK, Redux, Zustand..."
       }
       textTwentyOne={
         "Rád sa učím novým veciam a zlepšovaniu a taktiež sa snažím byť kreatívny."

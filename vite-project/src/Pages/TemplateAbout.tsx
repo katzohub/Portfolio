@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 // import usePageStyles from "../styles/stylePages";
+import { TemplateRow } from "../components/";
 import { TextProps } from "../types";
 
 const TemplateAbout: FC<TextProps> = ({
@@ -23,6 +24,7 @@ const TemplateAbout: FC<TextProps> = ({
   textEighteen,
   textNineteen,
   textTwenty,
+  textThirteen,
   textTwentyOne,
   textTwentyTwo,
   textTwentyThree,
@@ -43,75 +45,47 @@ const TemplateAbout: FC<TextProps> = ({
             fontSize: "clamp(13px, 1vw, 16px)",
             whiteSpace: "nowrap",
             overflow: "hidden",
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "11px",
+              whiteSpace: "wrap",
+              overflow: "auto",
+              padding: "0 10px",
+            },
+          },
+          "& span": {
+            fontSize: "clamp(13px, 1vw, 16px)",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
           },
         })}
       >
         <Typography variant="body2">/** </Typography>
-
-        <Typography variant="body2">1 * {textOne} </Typography>
-
-        <Typography variant="body2">2 * {textTwo} </Typography>
-
-        <Typography variant="body2">3 * {textThree} </Typography>
-
-        <Typography variant="body2">4 * {textFour} </Typography>
-
-        <Typography variant="body2">5 * {textFive} </Typography>
-
-        <Typography variant="body2">6 * {textSix} </Typography>
-
-        <Typography variant="body2">7 * {textSeven} </Typography>
-
-        <Typography variant="body2">8 * {textEight} </Typography>
-
-        {textNine && <Typography variant="body2">10 * {textNine}</Typography>}
-        {textTen && <Typography variant="body2">11 * {textTen}</Typography>}
-        {textEleven && (
-          <Typography variant="body2">12 * {textEleven}</Typography>
-        )}
-        {textTwelve && (
-          <Typography variant="body2">13 * {textTwelve}</Typography>
-        )}
-        {textFourteen && (
-          <Typography variant="body2">14 * {textFourteen}</Typography>
-        )}
-        {textFifteen && (
-          <Typography variant="body2">15 * {textFifteen}</Typography>
-        )}
-        {textSixteen && (
-          <Typography variant="body2">16 * {textSixteen}</Typography>
-        )}
-        {textSeventeen && (
-          <Typography variant="body2">17 * {textSeventeen}</Typography>
-        )}
-        {textEighteen && (
-          <Typography variant="body2">18 * {textEighteen}</Typography>
-        )}
-        {textNineteen && (
-          <Typography variant="body2">19 * {textNineteen}</Typography>
-        )}
-        {textTwenty && (
-          <Typography variant="body2">20 * {textTwenty}</Typography>
-        )}
-        {textTwentyOne && (
-          <Typography variant="body2">21 * {textTwentyOne}</Typography>
-        )}
-        {textTwentyTwo && (
-          <Typography variant="body2">22 * {textTwentyTwo}</Typography>
-        )}
-        {textTwentyThree && (
-          <Typography variant="body2">23 * {textTwentyThree}</Typography>
-        )}
-        {textTwentyFour && (
-          <Typography variant="body2">24 * {textTwentyFour}</Typography>
-        )}
-        {textTwentyFive && (
-          <Typography variant="body2">25 * {textTwentyFive}</Typography>
-        )}
-        {textTwentySix && (
-          <Typography variant="body2">26 * {textTwentySix}</Typography>
-        )}
-
+        <TemplateRow myNumber="1" text={textOne} />
+        <TemplateRow myNumber="2" text={textTwo} />
+        <TemplateRow myNumber="3" text={textThree} />
+        <TemplateRow myNumber="4" text={textFour} />
+        <TemplateRow myNumber="5" text={textFive} />
+        <TemplateRow myNumber="6" text={textSix} />
+        <TemplateRow myNumber="7" text={textSeven} />
+        <TemplateRow myNumber="8" text={textEight} />
+        <TemplateRow myNumber="9" text={textNine} />
+        <TemplateRow myNumber="10" text={textTen} />
+        <TemplateRow myNumber="11" text={textEleven} />
+        <TemplateRow myNumber="12" text={textTwelve} />
+        <TemplateRow myNumber="13" text={textThirteen} />
+        <TemplateRow myNumber="14" text={textFourteen} />
+        <TemplateRow myNumber="15" text={textFifteen} />
+        <TemplateRow myNumber="16" text={textSixteen} />
+        <TemplateRow myNumber="17" text={textSeventeen} />
+        <TemplateRow myNumber="18" text={textEighteen} />
+        <TemplateRow myNumber="19" text={textNineteen} />
+        <TemplateRow myNumber="20" text={textTwenty} />
+        <TemplateRow myNumber="21" text={textTwentyOne} />
+        <TemplateRow myNumber="22" text={textTwentyTwo} />
+        <TemplateRow myNumber="23" text={textTwentyThree} />
+        <TemplateRow myNumber="24" text={textTwentyFour} />
+        <TemplateRow myNumber="24" text={textTwentyFive} />
+        <TemplateRow myNumber="24" text={textTwentySix} />
         <Typography variant="body2">*/</Typography>
       </Box>
     </>

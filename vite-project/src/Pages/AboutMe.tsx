@@ -7,6 +7,7 @@ import {
   ListItemText,
   Collapse,
   Box,
+  Typography,
 } from "@mui/material";
 import { useIntl } from "react-intl";
 import SchoolIcon from "@mui/icons-material/School";
@@ -289,76 +290,305 @@ const AboutMe: FC = () => {
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>
                 <Box
-                  sx={{
+                  sx={(theme) => ({
                     "& span": {
                       fontSize: "clamp(13px, 1vw, 16px)",
                       whiteSpace: "nowrap",
                       overflow: "hidden",
+                      [theme.breakpoints.down("sm")]: {
+                        fontSize: "11px",
+                        whiteSpace: "wrap",
+                        overflow: "auto",
+                        padding: "0 10px",
+                      },
                     },
-                  }}
+                  })}
                 >
                   <Box
-                    sx={{
+                    sx={(theme) => ({
                       width: "100%",
-
                       display: "flex",
-                    }}
+                      [theme.breakpoints.down("sm")]: {
+                        flexDirection: "column",
+                      },
+                    })}
                   >
-                    <span className={classes.formTextGrey}>1&nbsp;</span>
-                    <span className={classes.formTextPink}>const&nbsp;</span>
-                    <span className={classes.formTextPurple}>button&nbsp;</span>
-                    <span className={classes.formTextPink}>=&nbsp;</span>{" "}
-                    <span className={classes.formTextPurple}>
-                      document.querySelector
-                    </span>{" "}
-                    <span className={classes.formTextGrey}>(</span>
-                    <span className={classes.formTextOrange}>'#sendBtn'</span>
-                    <span className={classes.formTextGrey}>);</span>
+                    <Box>
+                      {" "}
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextGrey}
+                        sx={(theme) => ({
+                          [theme.breakpoints.down("sm")]: {
+                            display: "none",
+                          },
+                        })}
+                      >
+                        1&nbsp;
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPink}
+                      >
+                        const&nbsp;
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPurple}
+                      >
+                        button&nbsp;
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPink}
+                      >
+                        =&nbsp;
+                      </Typography>{" "}
+                    </Box>
+
+                    <Box
+                      sx={(theme) => ({
+                        [theme.breakpoints.down("sm")]: { paddingLeft: "45px" },
+                      })}
+                    >
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPurple}
+                      >
+                        document.querySelector
+                      </Typography>{" "}
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextGrey}
+                      >
+                        (
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextOrange}
+                      >
+                        '#sendBtn'
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextGrey}
+                      >
+                        );
+                      </Typography>
+                    </Box>
                   </Box>
-                  <span className={classes.formTextGrey}>2&nbsp;</span>
-                  <br />
-                  <span className={classes.formTextGrey}>3&nbsp;</span>
-                  <span className={classes.formTextPink}>const</span>&nbsp;
-                  <span className={classes.formTextPurple}>image</span>&nbsp;
-                  <span className={classes.formTextPink}>=</span>&nbsp;
-                  <span className={classes.formTextPurple}>
-                    document.querySelector
-                  </span>
-                  <span className={classes.formTextGrey}>{`(`}</span>
-                  <span className={classes.formTextOrange}>'#myImage'</span>
-                  <span className={classes.formTextGrey}>{`);`}</span>
-                  <br />
-                  <span className={classes.formTextGrey}>4&nbsp;</span>
-                  <br />
-                  <span className={classes.formTextGrey}>5&nbsp;</span>
-                  <span className={classes.formTextPurple}>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                    sx={(theme) => ({
+                      [theme.breakpoints.down("sm")]: {
+                        display: "none",
+                      },
+                    })}
+                  >
+                    2&nbsp;
+                    <br />
+                  </Typography>
+                  <Box
+                    sx={(theme) => ({
+                      width: "100%",
+                      display: "flex",
+
+                      [theme.breakpoints.down("sm")]: {
+                        flexDirection: "column",
+                      },
+                    })}
+                  >
+                    <Box>
+                      {" "}
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextGrey}
+                        sx={(theme) => ({
+                          [theme.breakpoints.down("sm")]: {
+                            display: "none",
+                          },
+                        })}
+                      >
+                        3&nbsp;
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPink}
+                      >
+                        const
+                      </Typography>
+                      &nbsp;
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPurple}
+                      >
+                        image
+                      </Typography>
+                      &nbsp;
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPink}
+                      >
+                        =
+                      </Typography>
+                      &nbsp;
+                    </Box>
+
+                    <Box
+                      sx={(theme) => ({
+                        [theme.breakpoints.down("sm")]: { paddingLeft: "48px" },
+                      })}
+                    >
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextPurple}
+                      >
+                        document.querySelector
+                      </Typography>{" "}
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextGrey}
+                      >{`(`}</Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextOrange}
+                      >
+                        '#myImage'
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        className={classes.formTextGrey}
+                      >{`);`}</Typography>
+                    </Box>
+                  </Box>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                    sx={(theme) => ({
+                      [theme.breakpoints.down("sm")]: {
+                        display: "none",
+                      },
+                    })}
+                  >
+                    4&nbsp;
+                    <br />
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                    sx={(theme) => ({
+                      [theme.breakpoints.down("sm")]: {
+                        display: "none",
+                      },
+                    })}
+                  >
+                    5&nbsp;
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextPurple}
+                  >
                     button
-                    <span className={classes.formTextGrey}>.</span>
+                    <Typography
+                      variant="caption"
+                      className={classes.formTextGrey}
+                    >
+                      .
+                    </Typography>
                     addEventListener
-                  </span>
-                  <span className={classes.formTextGrey}>(</span>
-                  <span className={classes.formTextOrange}>'click'</span>
-                  <span className={classes.formTextGrey}>, ()</span>&nbsp;
-                  <span className={classes.formTextPink}>{`=>`}</span>&nbsp;
-                  <span className={classes.formTextGrey}>{`{`}</span>
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                  >
+                    (
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextOrange}
+                  >
+                    'click'
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                  >
+                    , ()
+                  </Typography>
+                  &nbsp;
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextPink}
+                  >{`=>`}</Typography>
+                  &nbsp;
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                  >{`{`}</Typography>
                   <br />
-                  <span className={classes.formTextGrey}>6&nbsp;</span>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                    sx={(theme) => ({
+                      [theme.breakpoints.down("sm")]: {
+                        display: "none",
+                      },
+                    })}
+                  >
+                    6&nbsp;
+                  </Typography>
                   &nbsp;&nbsp;
-                  <span className={classes.formTextPurple}>
-                    image<span className={classes.formTextGrey}>.</span>src
-                  </span>
-                  <span className={classes.formTextGrey}>(</span>
-                  <span className={classes.formTextPurple}>"my_img.png"</span>
-                  <span className={classes.formTextGrey}>
-                    ); <br />
-                    <span className={classes.formTextGrey}>7&nbsp;</span>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextPurple}
+                  >
+                    image
+                    <Typography
+                      variant="caption"
+                      className={classes.formTextGrey}
+                    >
+                      .
+                    </Typography>
+                    src
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextPink}
+                  >
+                    &nbsp;=&nbsp;
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextPurple}
+                  >
+                    "my_img.png"
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    className={classes.formTextGrey}
+                  >
+                    ; <br />
+                    <Typography
+                      variant="caption"
+                      className={classes.formTextGrey}
+                      sx={(theme) => ({
+                        [theme.breakpoints.down("sm")]: {
+                          display: "none",
+                        },
+                      })}
+                    >
+                      7&nbsp;
+                    </Typography>
                     {`}`})
-                  </span>
+                  </Typography>
                   <br />
                 </Box>
               </Box>
               <Box className={classes.aboutNextImgContainer}>
-                <span className={classes.formTextGrey}>// Result</span>
+                <Typography variant="caption" className={classes.formTextGrey}>
+                  // Result
+                </Typography>
                 <img src={ja} alt="Mine photo" className={classes.aboutImg} />
               </Box>
             </Box>

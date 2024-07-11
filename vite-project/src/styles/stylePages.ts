@@ -244,10 +244,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       // marginBottom: "100px",
       // height: "auto",
     },
-    [theme.breakpoints.down("md")]: {
-      // marginTop: "40px",
-      // marginBottom: "0px",
-    },
+    [theme.breakpoints.down("sm")]: {},
   },
   aboutImg: {
     width: "225px",
@@ -262,7 +259,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     padding: "7px 12.5px",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      padding: "5px",
+
+      border: `none`,
+      background: "transparent",
     },
   },
   aboutNextImgContainer: {

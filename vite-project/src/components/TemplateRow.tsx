@@ -14,6 +14,7 @@ const TemplateRow: FC<TemplateRowProps> = ({ text, myNumber }) => {
           <Typography
             variant="caption"
             sx={(theme) => ({
+              fontSize: "clamp(13px, 1vw, 16px)",
               [theme.breakpoints.down(525)]: {
                 display: "none",
               },

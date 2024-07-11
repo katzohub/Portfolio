@@ -238,13 +238,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "start",
     paddingTop: "120px",
     alignContent: "center !important",
-
-    [theme.breakpoints.down("lg")]: {
-      // margin: "20px 0",
-      // marginBottom: "100px",
-      // height: "auto",
+    [theme.breakpoints.down("sm")]: {
+      padding: "120px 10px 0 10px",
     },
-    [theme.breakpoints.down("sm")]: {},
   },
   aboutImg: {
     width: "225px",
@@ -259,9 +255,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     padding: "7px 12.5px",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-
-      border: `none`,
-      background: "transparent",
+      display: "flex",
+      justifyContent: "center !important",
+      padding: "2.5px",
     },
   },
   aboutNextImgContainer: {

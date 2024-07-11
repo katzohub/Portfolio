@@ -291,16 +291,14 @@ const AboutMe: FC = () => {
               <Box className={classes.aboutNextMiniWrap}>
                 <Box
                   sx={(theme) => ({
+                    [theme.breakpoints.down("sm")]: {
+                      width: "auto",
+                      padding: "2.5px",
+                    },
                     "& span": {
                       fontSize: "clamp(13px, 1vw, 16px)",
                       whiteSpace: "nowrap",
                       overflow: "hidden",
-                      [theme.breakpoints.down("sm")]: {
-                        fontSize: "11px",
-                        whiteSpace: "wrap",
-                        overflow: "auto",
-                        padding: "0 10px",
-                      },
                     },
                   })}
                 >
@@ -308,6 +306,7 @@ const AboutMe: FC = () => {
                     sx={(theme) => ({
                       width: "100%",
                       display: "flex",
+
                       [theme.breakpoints.down("sm")]: {
                         flexDirection: "column",
                       },

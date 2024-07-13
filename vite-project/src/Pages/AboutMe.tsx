@@ -11,13 +11,14 @@ import {
 } from "@mui/material";
 import { useIntl } from "react-intl";
 import SchoolIcon from "@mui/icons-material/School";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LeftContact from "./LeftContact";
+import { ChangeButton } from "../components";
 import usePageStyles from "../styles/stylePages";
 import {
   TemplateTextBio,
@@ -59,6 +60,10 @@ const AboutMe: FC = () => {
       return <TemplateTextBio />;
     }
   };
+  const changeText = (translate: string, changeText: string) => {
+    setTemplateProps(toggleText(intl.formatMessage({ id: translate })));
+    setActiveButton(changeText);
+  };
 
   return (
     <>
@@ -97,58 +102,18 @@ const AboutMe: FC = () => {
             >
               {intl.formatMessage({ id: "about.aboutPosttitle" })}
             </ListSubheader>
-            <ListItemButton
-              className={classes.aboutHoverBtnEffect}
-              sx={(theme) => ({
-                color:
-                  activeButton === "bio"
-                    ? theme.myColors.colorFFF
-                    : theme.myColors.colorNonActive,
-              })}
-              onClick={() => {
-                setTemplateProps(
-                  toggleText(intl.formatMessage({ id: "about.bio" }))
-                );
-                setActiveButton("bio");
-              }}
-            >
-              <ChevronRightIcon />
-
-              <ListItemIcon>
-                <FolderIcon className={classes.aboutIconBio} />
-              </ListItemIcon>
-
-              <ListItemText
-                className={classes.aboutBtnText}
-                primary={intl.formatMessage({ id: "about.bio" })}
-              />
-            </ListItemButton>
-            <ListItemButton
-              className={classes.aboutHoverBtnEffect}
-              onClick={() => {
-                setTemplateProps(
-                  toggleText(intl.formatMessage({ id: "about.interests" }))
-                );
-
-                setActiveButton("interests");
-              }}
-              sx={(theme) => ({
-                color:
-                  activeButton === "interests"
-                    ? theme.myColors.colorFFF
-                    : theme.myColors.colorNonActive,
-              })}
-            >
-              <ChevronRightIcon />
-              <ListItemIcon>
-                <FolderIcon className={classes.aboutIconInterest} />
-              </ListItemIcon>
-
-              <ListItemText
-                className={classes.aboutBtnText}
-                primary={intl.formatMessage({ id: "about.interests" })}
-              />
-            </ListItemButton>
+            <ChangeButton
+              text={"about.bio"}
+              myIcon={<FolderIcon className={classes.aboutIconBio} />}
+              myCondition={activeButton === "bio"}
+              changeText={() => changeText("about.bio", "bio")}
+            />
+            <ChangeButton
+              text={"about.interests"}
+              myIcon={<FolderIcon className={classes.aboutIconInterest} />}
+              myCondition={activeButton === "interests"}
+              changeText={() => changeText("about.interests", "interests")}
+            />
 
             <ListItemButton
               className={classes.aboutHoverBtnEffect}
@@ -171,12 +136,7 @@ const AboutMe: FC = () => {
                 primary={intl.formatMessage({ id: "about.education" })}
               />
             </ListItemButton>
-            <Collapse
-              in={open}
-              timeout="auto"
-              unmountOnExit
-              //  className={classes.aboutWrappScholls}
-            >
+            <Collapse in={open} timeout="auto" unmountOnExit>
               <List
                 component="div"
                 disablePadding
@@ -190,53 +150,22 @@ const AboutMe: FC = () => {
                   },
                 })}
               >
-                <ListItemButton
-                  className={classes.aboutBtnEducationStyle}
-                  onClick={() => {
-                    setTemplateProps(
-                      toggleText(
-                        intl.formatMessage({ id: "about.primaryScholl" })
-                      )
-                    );
-
-                    setActiveButton("primary-school");
-                  }}
-                  sx={(theme) => ({
-                    paddingLeft: "40px !important",
-                    color:
-                      activeButton === "primary-school"
-                        ? theme.myColors.colorFFF
-                        : theme.myColors.colorNonActive,
-                  })}
-                >
-                  <SchoolIcon />
-                  <ListItemText
-                    className={classes.aboutBtnEducationFont}
-                    primary={intl.formatMessage({ id: "about.primaryScholl" })}
-                  />
-                </ListItemButton>
-                <ListItemButton
-                  className={classes.aboutBtnEducationStyle}
-                  onClick={() => {
-                    setTemplateProps(
-                      toggleText(intl.formatMessage({ id: "about.highSchool" }))
-                    );
-                    setActiveButton("high-school");
-                  }}
-                  sx={(theme) => ({
-                    paddingLeft: "40px !important",
-                    color:
-                      activeButton === "high-school"
-                        ? theme.myColors.colorFFF
-                        : theme.myColors.colorNonActive,
-                  })}
-                >
-                  <SchoolIcon />
-                  <ListItemText
-                    className={classes.aboutBtnEducationFont}
-                    primary={intl.formatMessage({ id: "about.highSchool" })}
-                  />
-                </ListItemButton>
+                <ChangeButton
+                  text={"about.primaryScholl"}
+                  myIcon={<SchoolIcon />}
+                  myCondition={activeButton === "primary-school"}
+                  changeText={() =>
+                    changeText("about.primaryScholl", "primary-school")
+                  }
+                />
+                <ChangeButton
+                  text={"about.highSchool"}
+                  myIcon={<SchoolIcon />}
+                  myCondition={activeButton === "high-school"}
+                  changeText={() =>
+                    changeText("about.highSchool", "high-school")
+                  }
+                />
               </List>
             </Collapse>
 

@@ -31,9 +31,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutContainer: {
-    // width: "100%",
-    // height: "100vh",
-    // display: "flex",
     [theme.breakpoints.down("md")]: {
       overflowY: "auto !important",
       minHeight: "80dvh",

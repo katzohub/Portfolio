@@ -104,6 +104,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 400,
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   aboutBtnStyle: {
     color: `${theme.myColors.textColorNav} !important`,
@@ -177,14 +180,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
     overflowY: "auto",
+
     height: "auto",
     [theme.breakpoints.down("lg")]: {
-      // height: "100%",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
       alignItems: "center",
-      paddingBottom: "80px",
+      // paddingBottom: "80px",
       overflowY: "auto",
       overflowX: "hidden",
     },
@@ -194,7 +197,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-evenly",
-      paddingBottom: "150px",
+      // paddingBottom: "150px",
       alignItems: "center",
     },
     [theme.breakpoints.down("sm")]: {

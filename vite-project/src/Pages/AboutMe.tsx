@@ -270,6 +270,7 @@ const AboutMe: FC = () => {
             </Collapse>
           </List>
           {/* TODO */}
+
           <Box className={classes.aboutNextContainer}>
             <Box
               sx={{
@@ -284,6 +285,23 @@ const AboutMe: FC = () => {
                 paddingTop: "120px",
               }}
             >
+              <Box
+                sx={(theme) => ({
+                  display: "none",
+                  [theme.breakpoints.down("md")]: {
+                    display: "block",
+                    position: "relative",
+                    top: "-50px",
+                    color: theme.myColors.textColorNav,
+                  },
+                  [theme.breakpoints.down(555)]: {
+                    left: "0px",
+                    paddingLeft: "40px",
+                  },
+                })}
+              >
+                // {activeButton}
+              </Box>
               {templateProps}
               <div className={classes.aboutDivider}></div>
             </Box>

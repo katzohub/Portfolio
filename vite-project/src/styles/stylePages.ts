@@ -120,15 +120,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutIconEducation: {
     color: `${theme.myColors.colorPurpleFolder} !important`,
   },
-  aboutWrappScholls: {
-    paddingLeft: "20px",
-    position: "relative",
 
-    [theme.breakpoints.down("md")]: {
-      paddingLeft: "35px",
-      left: "0px",
-    },
-  },
   aboutBtnText: {
     fontFamily: "Fira Code",
     fontSize: "16px",
@@ -140,13 +132,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     left: "-20px",
   },
   aboutBtnEducationStyle: {
-    paddingLeft: "30px !important",
+    width: "100%",
+
     "&:hover": {
       transition: "color 0.3s ease-in",
       color: `${theme.myColors.colorFFF} !important`,
     },
     [theme.breakpoints.down("md")]: {
-      width: "90%",
+      // width: "90%",
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     },
   },

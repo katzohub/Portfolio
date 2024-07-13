@@ -175,7 +175,7 @@ const AboutMe: FC = () => {
               in={open}
               timeout="auto"
               unmountOnExit
-              className={classes.aboutWrappScholls}
+              //  className={classes.aboutWrappScholls}
             >
               <List
                 component="div"
@@ -183,8 +183,7 @@ const AboutMe: FC = () => {
                 sx={(theme) => ({
                   [theme.breakpoints.down("md")]: {
                     width: "100%",
-                    position: "relative",
-                    left: "-35px",
+
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -203,6 +202,7 @@ const AboutMe: FC = () => {
                     setActiveButton("primary-school");
                   }}
                   sx={(theme) => ({
+                    paddingLeft: "40px !important",
                     color:
                       activeButton === "primary-school"
                         ? theme.myColors.colorFFF
@@ -224,6 +224,7 @@ const AboutMe: FC = () => {
                     setActiveButton("high-school");
                   }}
                   sx={(theme) => ({
+                    paddingLeft: "40px !important",
                     color:
                       activeButton === "high-school"
                         ? theme.myColors.colorFFF

@@ -78,25 +78,76 @@ const AboutMe: FC = () => {
             },
           })}
         >
-          <List
+          <Box
+            sx={{ position: "relative" }}
             className={classes.aboutLeftNavContainer}
             component="nav"
             aria-labelledby="nested-list-subheader"
-            subheader={
-              <ListSubheader
-                component="div"
-                id="nested-list-subheader"
-                sx={{ position: "relative" }}
-                className={classes.aboutLeftWrap}
+          >
+            <Box
+              sx={(theme) => ({
+                position: "absolute",
+                right: "0px",
+                top: "0px",
+                width: "2px",
+                border: `1px solid ${theme.myColors.colorLinie} !important`,
+                height: "100vh",
+                zIndex: 999,
+                background: theme.myColors.colorLinie,
+
+                [theme.breakpoints.down("md")]: {
+                  display: "none",
+                },
+              })}
+            ></Box>
+            <Box
+              sx={(theme) => ({
+                width: "100vw",
+                height: "56px",
+                fontFamily: "Fira Code !important",
+                display: "flex",
+                justifyContent: "center",
+                color: `${theme.myColors.colorFFF} !important`,
+                fontSize: "16px !important",
+                fontStyle: "normal",
+                position: "relative",
+                background: theme.myColors.generalBackground,
+                zIndex: 500,
+                fontWeight: 400,
+                [theme.breakpoints.down("md")]: {
+                  width: "auto !important",
+                  borderBottom: `1px solid transparent`,
+                  left: "0px",
+                  display: "none",
+                },
+              })}
+            >
+              <Box
+                sx={(theme) => ({
+                  width: "95%",
+                  height: "100%",
+                  zIndex: 500,
+                  borderBottom: `2px solid ${theme.myColors.colorLinie}`,
+                  display: "flex",
+                  alignItems: "center",
+                  [theme.breakpoints.down("md")]: {
+                    width: "100%",
+                  },
+                })}
               >
                 {intl.formatMessage({ id: "about.personal" })}
                 {/* TODO */}
-                <Box className={classes.aboutTextRight}>
+                <Box
+                  sx={{
+                    position: "relative",
+                    left: "120px",
+                  }}
+                >
                   {intl.formatMessage({ id: `about.${activeButton}` })}
                 </Box>
-              </ListSubheader>
-            }
-          >
+              </Box>
+            </Box>
+
             <ListSubheader
               component="div"
               id="nested-list-subheader"
@@ -104,73 +155,79 @@ const AboutMe: FC = () => {
             >
               {intl.formatMessage({ id: "about.aboutPosttitle" })}
             </ListSubheader>
-            <ChangeButton
-              text={"about.bio"}
-              myIcon={<FolderIcon className={classes.aboutIconBio} />}
-              myCondition={activeButton === "bio"}
-              changeText={() => changeText("about.bio", "bio")}
-            />
-            <ChangeButton
-              text={"about.interests"}
-              myIcon={<FolderIcon className={classes.aboutIconInterest} />}
-              myCondition={activeButton === "interests"}
-              changeText={() => changeText("about.interests", "interests")}
-            />
 
-            <ListItemButton
-              className={classes.aboutHoverBtnEffect}
+            <Box
               sx={(theme) => ({
-                color:
-                  activeButton === "education"
-                    ? theme.myColors.colorFFF
-                    : theme.myColors.colorNonActive,
+                paddingLeft: "25px",
+                [theme.breakpoints.down("md")]: { paddingLeft: "0" },
               })}
-              onClick={() => {
-                handleClick();
-              }}
             >
-              {open ? <ExpandLess /> : <ExpandMore />}
-              <ListItemIcon>
-                <FolderIcon className={classes.aboutIconEducation} />
-              </ListItemIcon>
-              <ListItemText
-                className={classes.aboutBtnText}
-                primary={intl.formatMessage({ id: "about.education" })}
+              <ChangeButton
+                text={"about.bio"}
+                myIcon={<FolderIcon className={classes.aboutIconBio} />}
+                myCondition={activeButton === "bio"}
+                changeText={() => changeText("about.bio", "bio")}
               />
-            </ListItemButton>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-              <List
-                component="div"
-                disablePadding
+              <ChangeButton
+                text={"about.interests"}
+                myIcon={<FolderIcon className={classes.aboutIconInterest} />}
+                myCondition={activeButton === "interests"}
+                changeText={() => changeText("about.interests", "interests")}
+              />
+              <ListItemButton
+                className={classes.aboutHoverBtnEffect}
                 sx={(theme) => ({
-                  [theme.breakpoints.down("md")]: {
-                    width: "100%",
-
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  },
+                  color:
+                    activeButton === "education"
+                      ? theme.myColors.colorFFF
+                      : theme.myColors.colorNonActive,
                 })}
+                onClick={() => {
+                  handleClick();
+                }}
               >
-                <ChangeButton
-                  text={"about.primary-school"}
-                  myIcon={<SchoolIcon />}
-                  myCondition={activeButton === "primary-school"}
-                  changeText={() =>
-                    changeText("about.primary-school", "primary-school")
-                  }
+                {open ? <ExpandLess /> : <ExpandMore />}
+                <ListItemIcon>
+                  <FolderIcon className={classes.aboutIconEducation} />
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.aboutBtnText}
+                  primary={intl.formatMessage({ id: "about.education" })}
                 />
-                <ChangeButton
-                  text={"about.high-school"}
-                  myIcon={<SchoolIcon />}
-                  myCondition={activeButton === "high-school"}
-                  changeText={() =>
-                    changeText("about.high-school", "high-school")
-                  }
-                />
-              </List>
-            </Collapse>
+              </ListItemButton>
+              <Collapse in={open} timeout="auto" unmountOnExit>
+                <List
+                  component="div"
+                  disablePadding
+                  sx={(theme) => ({
+                    [theme.breakpoints.down("md")]: {
+                      width: "100%",
 
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    },
+                  })}
+                >
+                  <ChangeButton
+                    text={"about.primary-school"}
+                    myIcon={<SchoolIcon />}
+                    myCondition={activeButton === "primary-school"}
+                    changeText={() =>
+                      changeText("about.primary-school", "primary-school")
+                    }
+                  />
+                  <ChangeButton
+                    text={"about.high-school"}
+                    myIcon={<SchoolIcon />}
+                    myCondition={activeButton === "high-school"}
+                    changeText={() =>
+                      changeText("about.high-school", "high-school")
+                    }
+                  />
+                </List>
+              </Collapse>
+            </Box>
             <ListItemButton
               className={classes.aboutContactContainer}
               onClick={() => {
@@ -199,7 +256,7 @@ const AboutMe: FC = () => {
             >
               <LeftContact />
             </Collapse>
-          </List>
+          </Box>
           {/* TODO */}
 
           <Box className={classes.aboutNextContainer}>

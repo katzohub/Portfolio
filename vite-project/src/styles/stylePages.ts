@@ -42,23 +42,22 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutLeftNavContainer: {
     width: "269px",
     paddingTop: "56px !important",
-    borderRight: `2px solid ${theme.myColors.colorLinie} !important`,
+
     height: "auto",
 
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
       paddingTop: "50px !important",
-
       borderRight: `0px solid transparent !important`,
     },
   },
   aboutLeftWrap: {
-    width: "94vw !important",
+    // width: "94vw !important",
     background: "transparent !important",
     display: "flex",
     borderBottom: `2px solid ${theme.myColors.colorLinie}`,
-    left: "30px",
+
     color: `${theme.myColors.colorFFF} !important`,
     fontFamily: "Fira Code !important",
     fontSize: "16px !important",
@@ -209,6 +208,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "100vh",
+    zIndex: 10,
     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
       position: "relative",

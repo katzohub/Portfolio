@@ -1,7 +1,6 @@
 import { FC, ReactNode } from "react";
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-// import FolderIcon from "@mui/icons-material/Folder";
 import usePageStyles from "../styles/stylePages";
 import { useIntl } from "react-intl";
 
@@ -25,6 +24,7 @@ const ChangeButton: FC<ChangeButtonProps> = ({
       <ListItemButton
         className={classes.aboutHoverBtnEffect}
         sx={(theme) => ({
+          width: "100%",
           color: myCondition
             ? theme.myColors.colorFFF
             : theme.myColors.colorNonActive,

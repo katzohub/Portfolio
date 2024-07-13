@@ -29,8 +29,8 @@ export default {
   "about.bio": "bio",
   "about.interests": "interests",
   "about.education": "education",
-  "about.primaryScholl": "primary-school",
-  "about.highSchool": "high-school",
+  "about.primary-school": "primary-school",
+  "about.high-school": "high-school",
   /*03.1.Bio*/
   "about.bioTextOne": "Hi There",
   "about.bioTextTwo": "I am Tomas and 25 year old",

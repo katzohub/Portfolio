@@ -38,10 +38,7 @@ const ChangeButton: FC<ChangeButtonProps> = ({
       >
         <ChevronRightIcon />
 
-        <ListItemIcon>
-          {/* // props  <FolderIcon className={classes.aboutIconBio} />*/}
-          {myIcon}
-        </ListItemIcon>
+        <ListItemIcon>{myIcon}</ListItemIcon>
 
         <ListItemText
           className={classes.aboutBtnText}

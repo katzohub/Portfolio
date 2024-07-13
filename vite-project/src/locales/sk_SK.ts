@@ -29,8 +29,8 @@ export default {
   "about.bio": "bio",
   "about.interests": "záujmy",
   "about.education": "vzdelanie",
-  "about.primaryScholl": "základná-škola",
-  "about.highSchool": "stredná-škola",
+  "about.primary-school": "základná-škola",
+  "about.high-school": "stredná-škola",
   /*03.1.Bio*/
   "about.bioTextOne": "Ahojte",
   "about.bioTextTwo": "Ja som Tomáš a mám 25 rokov",

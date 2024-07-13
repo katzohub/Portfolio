@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import { useIntl } from "react-intl";
 import SchoolIcon from "@mui/icons-material/School";
-// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -52,9 +51,9 @@ const AboutMe: FC = () => {
       return <TemplateTextBio />;
     } else if (active === intl.formatMessage({ id: "about.interests" })) {
       return <TemplateTextInterest />;
-    } else if (active === intl.formatMessage({ id: "about.primaryScholl" })) {
+    } else if (active === intl.formatMessage({ id: "about.primary-school" })) {
       return <TemplateTextPrimarySchool />;
-    } else if (active === intl.formatMessage({ id: "about.highSchool" })) {
+    } else if (active === intl.formatMessage({ id: "about.high-school" })) {
       return <TemplateTextHighSchool />;
     } else {
       return <TemplateTextBio />;
@@ -91,7 +90,10 @@ const AboutMe: FC = () => {
                 className={classes.aboutLeftWrap}
               >
                 {intl.formatMessage({ id: "about.personal" })}
-                <div className={classes.aboutTextRight}>{activeButton}</div>
+                {/* TODO */}
+                <Box className={classes.aboutTextRight}>
+                  {intl.formatMessage({ id: `about.${activeButton}` })}
+                </Box>
               </ListSubheader>
             }
           >
@@ -151,19 +153,19 @@ const AboutMe: FC = () => {
                 })}
               >
                 <ChangeButton
-                  text={"about.primaryScholl"}
+                  text={"about.primary-school"}
                   myIcon={<SchoolIcon />}
                   myCondition={activeButton === "primary-school"}
                   changeText={() =>
-                    changeText("about.primaryScholl", "primary-school")
+                    changeText("about.primary-school", "primary-school")
                   }
                 />
                 <ChangeButton
-                  text={"about.highSchool"}
+                  text={"about.high-school"}
                   myIcon={<SchoolIcon />}
                   myCondition={activeButton === "high-school"}
                   changeText={() =>
-                    changeText("about.highSchool", "high-school")
+                    changeText("about.high-school", "high-school")
                   }
                 />
               </List>
@@ -229,7 +231,7 @@ const AboutMe: FC = () => {
                   },
                 })}
               >
-                // {activeButton}
+                // {intl.formatMessage({ id: `about.${activeButton}` })}
               </Box>
               {templateProps}
               <div className={classes.aboutDivider}></div>

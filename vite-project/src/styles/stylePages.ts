@@ -53,7 +53,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutLeftWrap: {
-    // width: "94vw !important",
     background: "transparent !important",
     display: "flex",
     borderBottom: `2px solid ${theme.myColors.colorLinie}`,
@@ -157,9 +156,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
-    width: "240px",
+    width: "234px",
     position: "relative",
-    left: "27px",
+    left: "35px",
+
     borderTop: `2px solid ${theme.myColors.colorLinie} !important`,
     borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     "&:hover": {
@@ -324,6 +324,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     textDecoration: "none",
     color: theme.myColors.colorNonActive,
     width: "100%",
+    paddingLeft: "10px",
   },
   leftFindMeIn: {
     display: "flex",

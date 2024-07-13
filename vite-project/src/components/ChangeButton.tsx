@@ -25,6 +25,7 @@ const ChangeButton: FC<ChangeButtonProps> = ({
         className={classes.aboutHoverBtnEffect}
         sx={(theme) => ({
           width: "100%",
+          padding: "8px 16px 8px 0px",
           color: myCondition
             ? theme.myColors.colorFFF
             : theme.myColors.colorNonActive,

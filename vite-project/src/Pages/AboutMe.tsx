@@ -126,7 +126,7 @@ const AboutMe: FC = () => {
                 sx={(theme) => ({
                   width: "95%",
                   height: "100%",
-                  zIndex: 500,
+                  zIndex: 5000,
                   borderBottom: `2px solid ${theme.myColors.colorLinie}`,
                   display: "flex",
                   alignItems: "center",
@@ -158,7 +158,8 @@ const AboutMe: FC = () => {
 
             <Box
               sx={(theme) => ({
-                paddingLeft: "25px",
+                paddingLeft: "35px",
+
                 [theme.breakpoints.down("md")]: { paddingLeft: "0" },
               })}
             >
@@ -177,6 +178,7 @@ const AboutMe: FC = () => {
               <ListItemButton
                 className={classes.aboutHoverBtnEffect}
                 sx={(theme) => ({
+                  padding: "8px 16px 8px 0px",
                   color:
                     activeButton === "education"
                       ? theme.myColors.colorFFF
@@ -228,6 +230,7 @@ const AboutMe: FC = () => {
                 </List>
               </Collapse>
             </Box>
+            {/* TODO */}
             <ListItemButton
               className={classes.aboutContactContainer}
               onClick={() => {
@@ -237,6 +240,7 @@ const AboutMe: FC = () => {
                 );
               }}
               sx={(theme) => ({
+                padding: "8px 16px 8px 0px",
                 color:
                   activeContactButton === "contact"
                     ? theme.myColors.colorFFF

@@ -262,7 +262,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutNextImgContainer: {
     position: "relative",
-
     top: "50px",
     borderRadius: "15px",
     border: `2px solid ${theme.myColors.colorLinie}`,
@@ -896,7 +895,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: theme.myColors.colorFFF,
     textAlign: "center",
     fontFamily: "Fira Code !important",
-    fontSsize: "26px",
+    fontSize: "26px",
     fontStyle: "normal",
     fontWeight: "450",
     lineHeight: "normal !important",

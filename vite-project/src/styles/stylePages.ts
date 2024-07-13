@@ -176,14 +176,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
     overflowY: "auto",
-
-    height: "auto",
+    height: "100dvh",
     [theme.breakpoints.down("lg")]: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
       alignItems: "center",
-      // paddingBottom: "80px",
+      paddingBottom: "80px",
       overflowY: "auto",
       overflowX: "hidden",
     },
@@ -193,7 +192,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-evenly",
-      // paddingBottom: "150px",
+      paddingBottom: "150px",
       alignItems: "center",
     },
     [theme.breakpoints.down("sm")]: {
@@ -204,7 +203,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutDivider: {
     position: "absolute",
     right: "0px",
-    top: "-20px",
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "100vh",

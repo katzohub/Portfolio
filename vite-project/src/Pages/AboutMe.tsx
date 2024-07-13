@@ -111,8 +111,7 @@ const AboutMe: FC = () => {
                 fontSize: "16px !important",
                 fontStyle: "normal",
                 position: "relative",
-                background: theme.myColors.generalBackground,
-                zIndex: 500,
+
                 fontWeight: 400,
                 [theme.breakpoints.down("md")]: {
                   width: "auto !important",
@@ -126,7 +125,8 @@ const AboutMe: FC = () => {
                 sx={(theme) => ({
                   width: "95%",
                   height: "100%",
-                  zIndex: 5000,
+                  background: theme.myColors.generalBackground,
+                  zIndex: 500,
                   borderBottom: `2px solid ${theme.myColors.colorLinie}`,
                   display: "flex",
                   alignItems: "center",
@@ -274,7 +274,6 @@ const AboutMe: FC = () => {
                 justifyContent: "start",
                 alignContent: "center",
                 position: "relative",
-                paddingTop: "120px",
               }}
             >
               <Box
@@ -294,8 +293,8 @@ const AboutMe: FC = () => {
               >
                 // {intl.formatMessage({ id: `about.${activeButton}` })}
               </Box>
-              {templateProps}
-              <div className={classes.aboutDivider}></div>
+              <Box sx={{ paddingTop: "120px" }}>{templateProps}</Box>
+              <Box className={classes.aboutDivider}></Box>
             </Box>
 
             <Box className={classes.aboutNextWrap}>

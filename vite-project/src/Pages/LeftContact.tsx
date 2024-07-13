@@ -8,7 +8,7 @@ const LeftContact = () => {
   return (
     <>
       <nav aria-label="main mailbox folders">
-        <List sx={{ paddingTop: "0px !important" }}>
+        <List sx={{ paddingTop: "0px !important", overflow: "hidden" }}>
           <ListItem
             disablePadding
             sx={(theme) => ({

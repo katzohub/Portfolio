@@ -330,6 +330,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   leftContactLink: {
     textDecoration: "none",
     color: theme.myColors.colorNonActive,
+    width: "100%",
   },
   leftFindMeIn: {
     display: "flex",

@@ -293,10 +293,9 @@ const AboutMe: FC = () => {
               >
                 // {intl.formatMessage({ id: `about.${activeButton}` })}
               </Box>
-              <Box sx={{ paddingTop: "120px" }}>{templateProps}</Box>
-              <Box className={classes.aboutDivider}></Box>
+              <Box>{templateProps}</Box>
             </Box>
-
+            <Box className={classes.aboutDivider}></Box>
             <Box className={classes.aboutNextWrap}>
               <Box className={classes.aboutNextMiniWrap}>
                 <Box
@@ -316,14 +315,12 @@ const AboutMe: FC = () => {
                     sx={(theme) => ({
                       width: "100%",
                       display: "flex",
-
                       [theme.breakpoints.down("sm")]: {
                         flexDirection: "column",
                       },
                     })}
                   >
                     <Box>
-                      {" "}
                       <Typography
                         variant="caption"
                         className={classes.formTextGrey}

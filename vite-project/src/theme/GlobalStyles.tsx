@@ -21,7 +21,6 @@ const GlobalStyles = () => (
         color: " #fff",
         overflowX: "hidden",
         overflowY: "auto",
-        /* // background-color: #000 !important; */
         fontFamily: `"Fira Code" !important`,
       },
       "#root": {

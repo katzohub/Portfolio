@@ -31,6 +31,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   aboutContainer: {
+    overflowY: "hidden",
     [theme.breakpoints.down("md")]: {
       overflowY: "auto !important",
       minHeight: "80dvh",
@@ -173,16 +174,20 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   // next about
   aboutNextContainer: {
     width: "100%",
+    height: "100dvh",
+    paddingTop: "112px",
+    paddingBottom: "160px",
     display: "flex",
     justifyContent: "space-evenly",
+    alignItems: "start",
     overflowY: "auto",
-    height: "100dvh",
+
     [theme.breakpoints.down("lg")]: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
       alignItems: "center",
-      paddingBottom: "80px",
+      // paddingBottom: "80px",
       overflowY: "auto",
       overflowX: "hidden",
     },
@@ -192,7 +197,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-evenly",
-      paddingBottom: "150px",
+      //  paddingBottom: "150px",
       alignItems: "center",
     },
     [theme.breakpoints.down("sm")]: {
@@ -202,10 +207,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutDivider: {
     position: "absolute",
-    right: "0px",
+
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
-    height: "100vh",
+    height: "100%",
+
     zIndex: 10,
     background: theme.myColors.colorLinie,
     [theme.breakpoints.down("lg")]: {
@@ -222,12 +228,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutNextWrap: {
     color: "white",
     width: "100%",
-    height: "100%",
+    // height: "100%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "start",
-    paddingTop: "120px",
+    paddingTop: "18px",
     alignContent: "center !important",
     [theme.breakpoints.down("sm")]: {
       padding: "120px 10px 0 10px",

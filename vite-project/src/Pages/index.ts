@@ -3,7 +3,6 @@ import ContactForm from "./ContactForm";
 import ContactMe from "./ContactMe";
 import Error from "./Error";
 import SharedLayout from "./SharedLayout";
-import LeftContact from "./LeftContact";
 import Projects from "./Projects";
 import SkillSection from "./SkillSection";
 import TemplateAbout from "./TemplateAbout";
@@ -18,7 +17,6 @@ export {
   ContactMe,
   SharedLayout,
   Error,
-  LeftContact,
   SnakeGame,
   Projects,
   SkillSection,

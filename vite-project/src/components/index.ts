@@ -5,6 +5,7 @@ import MyButton from "./MyButton";
 import TemplateRow from "./TemplateRow";
 import GeneralBoard from "./GeneralBoard";
 import ChangeButton from "./ChangeButton";
+import LeftContact from "./LeftContact";
 
 export {
   Navbar,
@@ -12,6 +13,7 @@ export {
   GeneralBoard,
   TemplateRow,
   MyButton,
+  LeftContact,
   LeftHeadertable,
   GameSnake,
 };

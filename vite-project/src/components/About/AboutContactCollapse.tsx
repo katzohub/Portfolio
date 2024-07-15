@@ -2,7 +2,7 @@ import { FC } from "react";
 import { ListItemButton, ListItemText, Collapse } from "@mui/material";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { LeftContact } from "../../Pages";
+import LeftContact from "../LeftContact";
 import { useIntl } from "react-intl";
 import usePageStyles from "../../styles/stylePages";
 

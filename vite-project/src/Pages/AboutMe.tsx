@@ -1,16 +1,9 @@
 import { FC, useState } from "react";
-import {
-  ListItemButton,
-  ListItemText,
-  Collapse,
-  Box,
-  Typography,
-} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useIntl } from "react-intl";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 import { GeneralBoard } from "../components";
-import LeftContact from "./LeftContact";
+
 import usePageStyles from "../styles/stylePages";
 import {
   TemplateTextBio,
@@ -18,7 +11,7 @@ import {
   TemplateTextPrimarySchool,
   TemplateTextHighSchool,
 } from "../constants/TemplatesAbout";
-import { AboutSideBar } from "../components/About";
+import { AboutSideBar, AboutContactCollapse } from "../components/About";
 import ja from "../assets/img/ja.png";
 
 const AboutMe: FC = () => {
@@ -32,7 +25,11 @@ const AboutMe: FC = () => {
   const intl = useIntl();
 
   const handleClickContact = () => {
+    console.log("click");
     setOpenContact(!openContact);
+    setActiveContactButton((prevState) =>
+      prevState === "contact" ? "" : "contact"
+    );
   };
 
   const classes = usePageStyles();
@@ -65,35 +62,11 @@ const AboutMe: FC = () => {
         }
         postprimaryTemplate={
           <>
-            <ListItemButton
-              className={classes.aboutContactContainer}
-              onClick={() => {
-                handleClickContact();
-                setActiveContactButton((prevState) =>
-                  prevState === "contact" ? "" : "contact"
-                );
-              }}
-              sx={(theme) => ({
-                padding: "8px 16px 8px 0px",
-                color:
-                  activeContactButton === "contact"
-                    ? theme.myColors.colorFFF
-                    : theme.myColors.colorNonActive,
-              })}
-            >
-              {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-              <ListItemText
-                primary={intl.formatMessage({ id: "contact.LeftCard" })}
-              />
-            </ListItemButton>
-            <Collapse
-              className={classes.aboutCollapseContact}
-              in={openContact}
-              timeout="auto"
-              unmountOnExit
-            >
-              <LeftContact />
-            </Collapse>
+            <AboutContactCollapse
+              handleClickContact={handleClickContact}
+              activeContactButton={activeContactButton}
+              openContact={openContact}
+            />
           </>
         }
         generalTemplate={

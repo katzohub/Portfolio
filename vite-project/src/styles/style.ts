@@ -228,6 +228,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     zIndex: 999999,
     transition: "color 0.3s ease-in",
+
     "&:hover": {
       "& .MuiListItemIcon-root, & .MuiListItemText-root": {
         transition: "color .2s",
@@ -259,7 +260,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
         borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
         borderRight: "none",
         borderLeft: "none !important",
-        position: "static",
+        position: "relative",
+      },
+      "&.active": {
+        color: `${theme.myColors.colorTextLink} !important`,
+        borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
       },
       "&:first-child": {
         borderTop: `1px solid ${theme.myColors.colorLinie} !important`,

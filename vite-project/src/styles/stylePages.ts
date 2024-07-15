@@ -49,7 +49,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       width: "100%",
       height: "auto",
-      paddingTop: "50px !important",
+      paddingTop: "56px !important",
       borderRight: `0px solid transparent !important`,
     },
   },
@@ -75,7 +75,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   aboutMinWidth: {
     display: "none",
     [theme.breakpoints.down("md")]: {
-      display: "block",
+      display: "flex",
       position: "relative !important",
       left: "0px",
       color: `${theme.myColors.colorFFF} !important`,
@@ -87,6 +87,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       fontStyle: "normal",
       fontWeight: 400,
       cursor: "default !important",
+      height: "56px",
+      alignItems: "center",
     },
   },
   aboutTextRight: {
@@ -497,7 +499,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: theme.myColors.colorFFF,
     textDecoration: "underline",
     fontFamily: "Fira Code !important",
-    lineHeight: "48px !important",
+    height: "56px",
+    display: "flex",
+    alignItems: "center",
     listStyle: "none",
   },
   skillTextAlert: {

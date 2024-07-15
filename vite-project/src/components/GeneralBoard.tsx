@@ -89,25 +89,25 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
                   },
                 })}
               >
-                {intl.formatMessage({ id: generalHeading })}
+                <Box sx={{ width: "232px" }}>
+                  {intl.formatMessage({ id: generalHeading })}
+                </Box>
 
                 <Box
                   sx={{
-                    position: "relative",
-                    left: "120px",
+                    paddingLeft: "10px",
                   }}
                 >
                   {intl.formatMessage({ id: generalText })}
                 </Box>
               </Box>
             </Box>
-
             <ListSubheader
               component="div"
               id="nested-list-subheader"
               className={classes.aboutMinWidth}
             >
-              {intl.formatMessage({ id: "about.aboutPosttitle" })}
+              {intl.formatMessage({ id: generalHeading })}
             </ListSubheader>
             {leftTemplate}
             {postprimaryTemplate}

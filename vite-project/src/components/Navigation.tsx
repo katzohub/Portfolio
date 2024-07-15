@@ -5,6 +5,7 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
+  Link,
   Typography,
 } from "@mui/material";
 import { useIntl } from "react-intl";
@@ -61,7 +62,7 @@ const Navigation: FC<NavigationProps> = ({
           : falseNavigationData.map((item, index) => {
               const { goUrl, icon, text } = item;
               return (
-                <a
+                <Link
                   key={index}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -72,7 +73,7 @@ const Navigation: FC<NavigationProps> = ({
                     <Typography className="github-link">{text}</Typography>
                   )}
                   {icon}
-                </a>
+                </Link>
               );
             })}
       </Box>

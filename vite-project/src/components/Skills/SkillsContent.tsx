@@ -47,7 +47,12 @@ const SkillsContent = ({
               className={classes.skillBoxDividerDown}
             />
           </Box>
-          <Grid container spacing={2} className={classes.skillBoxCard}>
+          <Grid
+            container
+            spacing={2}
+            className={classes.skillBoxCard}
+            sx={{ position: "relative", left: "-8px" }}
+          >
             {filteredProjects.map((project) => (
               <Grid
                 sx={{

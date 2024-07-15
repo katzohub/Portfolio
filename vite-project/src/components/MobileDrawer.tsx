@@ -36,7 +36,6 @@ const MobileDrawer: FC<MobileDrawerProps> = ({
         open={myOnOpen}
         onClose={myOnCloseFn}
         anchor="right"
-        className="draweritshere"
         sx={(theme) => ({
           zIndex: 999999,
           "& .MuiDrawer-paperAnchorRight": {

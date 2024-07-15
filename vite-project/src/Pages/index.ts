@@ -4,7 +4,6 @@ import ContactMe from "./ContactMe";
 import Error from "./Error";
 import SharedLayout from "./SharedLayout";
 import Projects from "./Projects";
-import SkillSection from "./SkillSection";
 import TemplateAbout from "./TemplateAbout";
 import OnePage from "./OnePage";
 import SnakeGame from "./SnakeGame";
@@ -19,7 +18,6 @@ export {
   Error,
   SnakeGame,
   Projects,
-  SkillSection,
   TemplateAbout,
   ThankYou,
 };

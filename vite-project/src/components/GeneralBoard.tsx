@@ -7,7 +7,7 @@ type GeneralBoardProps = {
   generalHeading: string;
   generalText: string;
   leftTemplate: ReactNode;
-  postprimaryTemplate: ReactNode;
+  postprimaryTemplate?: ReactNode;
   generalTemplate: ReactNode;
 };
 

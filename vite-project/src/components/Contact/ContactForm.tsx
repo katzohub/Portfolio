@@ -8,8 +8,8 @@ import {
   styled,
 } from "@mui/material";
 import { useIntl } from "react-intl";
-import usePageStyles from "../styles/stylePages";
-import { DisplayDataProps } from "../types";
+import usePageStyles from "../../styles/stylePages";
+import { DisplayDataProps } from "../../types";
 
 const CssTextField = styled(TextField)(({ theme }) => ({
   "& label.Mui-focused": {

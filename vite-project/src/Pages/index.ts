@@ -1,5 +1,4 @@
 import AboutMe from "./AboutMe";
-import ContactForm from "./ContactForm";
 import ContactMe from "./ContactMe";
 import Error from "./Error";
 import SharedLayout from "./SharedLayout";
@@ -12,7 +11,6 @@ import ThankYou from "./ThankYou";
 export {
   AboutMe,
   OnePage,
-  ContactForm,
   ContactMe,
   SharedLayout,
   Error,

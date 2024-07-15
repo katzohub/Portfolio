@@ -9,11 +9,12 @@ const ContactMe = () => {
   return (
     <>
       <GeneralBoard
-        generalHeading="contact.LeftCard"
-        generalText="contact.contact"
+        generalHeading="nav.contact"
+        generalText="nav.contact"
         leftTemplate={<ContactSidebar />}
         postprimaryTemplate={<ContactCollapse />}
         generalTemplate={<ContactForm />}
+        smallGeneralHeading="nav.contact"
       />
     </>
   );

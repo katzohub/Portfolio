@@ -1,11 +1,4 @@
-import {
-  Box,
-  useMediaQuery,
-  Grid,
-  Divider,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Box, useMediaQuery, Grid, Button } from "@mui/material";
 import dataSkills from "../../constants/DataSkills";
 import { CheckedStateProps } from "../../types";
 import usePageStyles from "../../styles/stylePages";
@@ -31,22 +24,6 @@ const SkillsContent = ({
     <Box className={classes.skillContainer}>
       <Box className={classes.skillWrap}>
         <Box className={classes.skillPositionWrap}>
-          <Box className={classes.skillBoxMinWidth}>
-            <Divider
-              orientation="vertical"
-              flexItem
-              className={classes.skillBoxDividerTop}
-            />
-            <Typography variant="h5" className={classes.skillBoxText}>
-              projects
-            </Typography>
-
-            <Divider
-              orientation="vertical"
-              flexItem
-              className={classes.skillBoxDividerDown}
-            />
-          </Box>
           <Grid
             container
             spacing={2}

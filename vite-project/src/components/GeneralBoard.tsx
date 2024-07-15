@@ -9,6 +9,7 @@ type GeneralBoardProps = {
   leftTemplate: ReactNode;
   postprimaryTemplate?: ReactNode;
   generalTemplate: ReactNode;
+  smallGeneralHeading: string;
 };
 
 const GeneralBoard: FC<GeneralBoardProps> = ({
@@ -17,6 +18,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
   leftTemplate,
   postprimaryTemplate,
   generalTemplate,
+  smallGeneralHeading,
 }) => {
   const classes = usePageStyles();
   const intl = useIntl();
@@ -95,7 +97,8 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
 
                 <Box
                   sx={{
-                    paddingLeft: "10px",
+                    position: "absolute",
+                    left: "285px",
                   }}
                 >
                   {intl.formatMessage({ id: generalText })}
@@ -107,7 +110,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
               id="nested-list-subheader"
               className={classes.aboutMinWidth}
             >
-              {intl.formatMessage({ id: generalHeading })}
+              {intl.formatMessage({ id: smallGeneralHeading })}
             </ListSubheader>
             {leftTemplate}
             {postprimaryTemplate}

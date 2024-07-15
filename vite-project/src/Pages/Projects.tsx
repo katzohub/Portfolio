@@ -60,6 +60,7 @@ const Projects: React.FC = () => {
           />
         }
         generalTemplate={<SkillsContent checkedState={checkedState} />}
+        smallGeneralHeading="project.projects"
       />
       {areAllCheckboxesFalse() && <SkillsAlert />}
     </>

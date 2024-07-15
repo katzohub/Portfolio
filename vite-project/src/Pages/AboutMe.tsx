@@ -52,7 +52,7 @@ const AboutMe: FC = () => {
   return (
     <>
       <GeneralBoard
-        generalHeading="about.aboutPosttitle"
+        generalHeading="nav.about"
         generalText={`about.${activeButton}`}
         leftTemplate={
           <AboutSideBar changeText={changeText} activeButton={activeButton} />
@@ -72,6 +72,7 @@ const AboutMe: FC = () => {
             activeButton={activeButton}
           />
         }
+        smallGeneralHeading="nav.about"
       />
     </>
   );

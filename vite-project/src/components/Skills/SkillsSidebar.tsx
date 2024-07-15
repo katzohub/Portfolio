@@ -1,5 +1,11 @@
 import { FC } from "react";
-import { Box, Checkbox, FormControlLabel, FormGroup } from "@mui/material";
+import {
+  Box,
+  Checkbox,
+  FormControlLabel,
+  Divider,
+  FormGroup,
+} from "@mui/material";
 import { SiHtml5, SiCss3, SiSass, SiTailwindcss, SiMui } from "react-icons/si";
 import {
   SiJavascript,
@@ -273,6 +279,11 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
               Firebase
             </Box>
           }
+        />
+        <Divider
+          orientation="vertical"
+          flexItem
+          className={classes.skillBoxDividerTop}
         />
       </FormGroup>
     </>

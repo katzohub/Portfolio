@@ -81,7 +81,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       color: `${theme.myColors.colorFFF} !important`,
       background: `${theme.myColors.colorDarkBlack} !important`,
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
-      textDecoration: "underline",
+
       fontFamily: "Fira Code !important",
       fontSize: "16px !important",
       fontStyle: "normal",
@@ -424,6 +424,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     marginLeft: "60px",
     [theme.breakpoints.down("md")]: {
       flexDirection: "row !important",
+      position: "relative",
       marginLeft: "0px",
       margin: "0 10px !important",
     },
@@ -488,16 +489,23 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
   },
   skillBoxDividerTop: {
-    background: `${theme.myColors.colorLinie} !important`,
-    height: "2px !important",
-    width: "100vw !important",
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+      position: "absolute",
+      bottom: "0px",
+      left: "-10px",
+      background: `${theme.myColors.colorLinie} !important`,
+      height: "2px !important",
+      width: "100vw !important",
+    },
   },
   skillBoxText: {
     fontSize: "16px !important",
     fontWeight: "400 !important",
     paddingLeft: "15px",
     color: theme.myColors.colorFFF,
-    textDecoration: "underline",
+
     fontFamily: "Fira Code !important",
     height: "56px",
     display: "flex",

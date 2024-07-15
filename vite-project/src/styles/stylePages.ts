@@ -207,20 +207,24 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutDivider: {
     position: "absolute",
-
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "100%",
-
     zIndex: 10,
     background: theme.myColors.colorLinie,
+    [theme.breakpoints.down(1300)]: {
+      left: "64%",
+      transform: "translateX(-64%)",
+    },
     [theme.breakpoints.down("lg")]: {
+      transform: "translateX(0%) !important",
       position: "relative",
       top: "0px",
       left: "0",
       width: "100% !important",
       height: "1px",
     },
+
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -233,7 +237,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "start",
-    paddingTop: "18px",
+    paddingTop: "15px",
     alignContent: "center !important",
     [theme.breakpoints.down("sm")]: {
       padding: "120px 10px 0 10px",

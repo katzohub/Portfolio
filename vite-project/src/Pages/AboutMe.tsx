@@ -274,6 +274,7 @@ const AboutMe: FC = () => {
                 justifyContent: "start",
                 alignContent: "center",
                 position: "relative",
+                paddingTop: "15px",
               }}
             >
               <Box

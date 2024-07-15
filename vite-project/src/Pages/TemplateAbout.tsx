@@ -45,7 +45,7 @@ const TemplateAbout: FC<TextProps> = ({
             fontSize: "clamp(13px, 1vw, 16px)",
             whiteSpace: "nowrap",
             overflow: "hidden",
-            [theme.breakpoints.down("sm")]: {
+            [theme.breakpoints.down(500)]: {
               fontSize: "11px",
               whiteSpace: "wrap",
               overflow: "auto",

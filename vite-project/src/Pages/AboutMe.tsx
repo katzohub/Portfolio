@@ -7,11 +7,8 @@ import {
   TemplateTextPrimarySchool,
   TemplateTextHighSchool,
 } from "../constants/TemplatesAbout";
-import {
-  AboutSideBar,
-  AboutContactCollapse,
-  AboutContent,
-} from "../components/About";
+import { AboutSideBar, AboutContent } from "../components/About";
+import { ContactLeft } from "../components";
 
 const AboutMe: FC = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
@@ -59,7 +56,9 @@ const AboutMe: FC = () => {
         }
         postprimaryTemplate={
           <>
-            <AboutContactCollapse
+            <ContactLeft
+              isTrue={true}
+              isScreen={true}
               handleClickContact={handleClickContact}
               activeContactButton={activeContactButton}
               openContact={openContact}

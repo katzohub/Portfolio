@@ -1,10 +1,14 @@
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import usePageStyles from "../styles/stylePages";
+import { FC, ReactNode } from "react";
+import { List, ListItem } from "@mui/material";
+// import EmailIcon from "@mui/icons-material/Email";
+// import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
-const LeftContact = () => {
-  const classes = usePageStyles();
+type LeftContactProps = {
+  myFirstInfo: ReactNode;
+  mySecondInfo: ReactNode;
+};
+
+const LeftContact: FC<LeftContactProps> = ({ myFirstInfo, mySecondInfo }) => {
   return (
     <>
       <nav aria-label="main mailbox folders">
@@ -28,15 +32,18 @@ const LeftContact = () => {
               },
             })}
           >
-            <a
+            {" "}
+            {myFirstInfo}
+            {/*  <a
               href="mailto:tomasolsiak1@gmail.com"
               className={classes.leftContactLink}
             >
-              <ListItemButton className={classes.leftContactBtn}>
+           
+               <ListItemButton className={classes.leftContactBtn}>
                 <EmailIcon className={classes.leftContactIcon} />
                 <ListItemText primary="tomasolsiak1@gmail.com" />
-              </ListItemButton>
-            </a>
+              </ListItemButton> 
+            </a>*/}
           </ListItem>
           <ListItem
             disablePadding
@@ -56,12 +63,14 @@ const LeftContact = () => {
               },
             })}
           >
-            <a href="tel:+421915515974" className={classes.leftContactLink}>
-              <ListItemButton className={classes.leftContactBtn}>
+            {mySecondInfo}
+            {/* <a href="tel:+421915515974" className={classes.leftContactLink}>
+            
+               <ListItemButton className={classes.leftContactBtn}>
                 <LocalPhoneIcon className={classes.leftContactIcon} />
-                <ListItemText primary="+421 915 515 974" />
+                <ListItemText primary="+421 915 515 974" /> 
               </ListItemButton>
-            </a>
+            </a> */}
           </ListItem>
         </List>
       </nav>

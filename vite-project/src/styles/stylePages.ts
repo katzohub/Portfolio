@@ -153,7 +153,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     paddingLeft: "10px",
   },
   aboutContactContainer: {
-    marginTop: "100px !important",
+    marginTop: "50px !important",
     fontFamily: "Fira Code",
     fontSize: "16px",
     fontStyle: "normal",
@@ -222,7 +222,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       left: "-1.25%",
       transform: "translateX(0)",
       position: "relative",
-      top: "0px",
+      top: "15px",
       width: "100% !important",
       height: "1px",
     },
@@ -241,6 +241,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "start",
     paddingTop: "15px",
     alignContent: "center !important",
+    [theme.breakpoints.down("lg")]: {
+      paddingTop: "30px",
+    },
     [theme.breakpoints.down("sm")]: {
       padding: "120px 10px 0 10px",
     },

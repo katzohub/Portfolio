@@ -22,14 +22,11 @@ const AboutContent: FC<GeneralBoardProps> = ({
         <Box
           sx={{
             width: "100%",
-            height: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "start",
-            alignContent: "center",
             position: "relative",
-            paddingTop: "15px",
+            top: "15px",
           }}
         >
           <Box

@@ -219,10 +219,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transform: "translateX(-64%)",
     },
     [theme.breakpoints.down("lg")]: {
-      transform: "translateX(0%) !important",
+      left: "-1.25%",
+      transform: "translateX(0)",
       position: "relative",
       top: "0px",
-      left: "0",
       width: "100% !important",
       height: "1px",
     },
@@ -766,18 +766,24 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       alignItems: "center",
     },
   },
+  // todo my code
   contactFormDivider: {
-    position: "relative",
-    top: "-45px",
-    width: "2px !important",
-    height: "90dvh",
+    //  position: "absolute",
+    width: "2px",
+    border: `1px solid ${theme.myColors.colorLinie} !important`,
+    height: "100%",
+    zIndex: 10,
     background: theme.myColors.colorLinie,
+
     [theme.breakpoints.down("lg")]: {
+      left: "-3.25%",
+
+      position: "relative",
       top: "0px",
-      left: "-10px",
       width: "100% !important",
-      height: "1px !important",
+      height: "1px",
     },
+
     [theme.breakpoints.down("md")]: {
       display: "none",
     },

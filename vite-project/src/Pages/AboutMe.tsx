@@ -8,6 +8,7 @@ import {
   TemplateTextHighSchool,
 } from "../constants/TemplatesAbout";
 import { AboutSideBar, AboutContent } from "../components/About";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { ContactLeft } from "../components";
 
 const AboutMe: FC = () => {
@@ -63,6 +64,7 @@ const AboutMe: FC = () => {
               activeContactButton={activeContactButton}
               openContact={openContact}
               nameCollapse="contact.LeftCard"
+              myIcon={<LocalPhoneIcon />}
             />
           </>
         }

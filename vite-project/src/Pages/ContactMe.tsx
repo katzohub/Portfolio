@@ -1,9 +1,6 @@
 import { useState } from "react";
-import {
-  // ContactSidebar,
-  // ContactCollapse,
-  ContactForm,
-} from "../components/Contact";
+import { ContactForm } from "../components/Contact";
+import ShareIcon from "@mui/icons-material/Share";
 
 import { ContactLeft } from "../components";
 import { GeneralBoard } from "../components";
@@ -37,6 +34,7 @@ const ContactMe = () => {
             handleClickContact={handleClickContact}
             openContact={openFindMeContact}
             nameCollapse="contact.findMeIn"
+            myIcon={<ShareIcon />}
           />
         }
         generalTemplate={<ContactForm />}

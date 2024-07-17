@@ -1,9 +1,8 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { ListItemButton, ListItemText, Collapse } from "@mui/material";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import EmailIcon from "@mui/icons-material/Email";
-// import ShareIcon from "@mui/icons-material/Share";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { useIntl } from "react-intl";
 import { FaXTwitter } from "react-icons/fa6";
@@ -18,6 +17,7 @@ type ContactLeftProps = {
   activeContactButton?: string;
   openContact: boolean;
   nameCollapse: string;
+  myIcon?: ReactNode;
 };
 
 const ContactLeft: FC<ContactLeftProps> = ({
@@ -27,6 +27,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
   activeContactButton,
   openContact,
   nameCollapse,
+  myIcon,
 }) => {
   const classes = usePageStyles();
   const intl = useIntl();
@@ -51,8 +52,11 @@ const ContactLeft: FC<ContactLeftProps> = ({
             })}
           >
             {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-            {/* TODO ADD ICON NO URGENT PROPS */}
-            <ListItemText primary={intl.formatMessage({ id: nameCollapse })} />
+            {myIcon}
+            <ListItemText
+              primary={intl.formatMessage({ id: nameCollapse })}
+              sx={{ paddingLeft: "10px" }}
+            />
           </ListItemButton>
         </>
       ) : null}
@@ -93,8 +97,9 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 className={classes.leftFindMeIn}
               >
                 <ListItemButton className={classes.leftContactBtn}>
-                  <FaInstagram className={classes.leftContactIcon} />
+                  <FaInstagram style={{ fontSize: "24px" }} />
                   <ListItemText
+                    sx={{ paddingLeft: "10px" }}
                     primary={intl.formatMessage({
                       id: "contact.instagramAccount",
                     })}
@@ -106,12 +111,13 @@ const ContactLeft: FC<ContactLeftProps> = ({
             mySecondInfo={
               <a
                 target="_blank"
-                href="https://www.twitch.tv/settings/profile"
+                href="https://x.com/TOM3K_R34DY"
                 className={classes.leftFindMeIn}
               >
                 <ListItemButton className={classes.leftContactBtn}>
-                  <FaXTwitter className={classes.leftContactIcon} />
+                  <FaXTwitter style={{ fontSize: "24px" }} />
                   <ListItemText
+                    sx={{ paddingLeft: "10px" }}
                     primary={intl.formatMessage({
                       id: "contact.twitchAccount",
                     })}

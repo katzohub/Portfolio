@@ -119,7 +119,7 @@ export default {
   "contact.contactName": "_kontaktujte_ma",
   "contact.findMeIn": "tiež_ma_nájdete",
   "contact.instagramAccount": "Instagram profil",
-  "contact.twitchAccount": "Twitch profil",
+  "contact.twitchAccount": "X profil",
   "contact.name": "Meno",
   "contact.email": "Email",
   "contact.message": "Správa",

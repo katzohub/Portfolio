@@ -108,6 +108,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
             <ListSubheader
               component="div"
               id="nested-list-subheader"
+              disableGutters
               className={classes.aboutMinWidth}
             >
               {intl.formatMessage({ id: smallGeneralHeading })}

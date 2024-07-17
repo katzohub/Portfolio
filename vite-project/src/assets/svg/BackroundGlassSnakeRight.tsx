@@ -23,6 +23,9 @@ const BackroundGlassSnakeRight = () => {
             bottom: 425,
             right: -170,
           },
+          [theme.breakpoints.down("sm")]: {
+            display: "none",
+          },
         })}
       />
     </>

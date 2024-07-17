@@ -74,7 +74,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       display: "flex",
       position: "relative !important",
-      left: "-7.5px",
+      paddingLeft: "10px",
       color: `${theme.myColors.colorFFF} !important`,
       background: `${theme.myColors.colorDarkBlack} !important`,
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
@@ -220,7 +220,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transform: "translateX(-64%)",
     },
     [theme.breakpoints.down("lg")]: {
-      left: "-1.25%",
+      left: "-3.40%",
+
       transform: "translateX(0)",
       position: "relative",
       top: "15px",
@@ -784,7 +785,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: theme.myColors.colorLinie,
 
     [theme.breakpoints.down("lg")]: {
-      left: "-3.25%",
+      left: "-3.40%",
 
       position: "relative",
       top: "0px",

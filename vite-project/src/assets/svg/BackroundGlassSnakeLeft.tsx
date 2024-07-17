@@ -20,6 +20,10 @@ const BackroundGlassSnakeLeft = () => {
             top: 350,
             left: -100,
           },
+          [theme.breakpoints.down("sm")]: {
+            top: 500,
+            left: 50,
+          },
         })}
       />
     </>

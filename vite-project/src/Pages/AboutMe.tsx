@@ -8,8 +8,8 @@ import {
   TemplateTextHighSchool,
 } from "../constants/TemplatesAbout";
 import { AboutSideBar, AboutContent } from "../components/About";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { ContactLeft } from "../components";
+import { GrContactInfo } from "react-icons/gr";
 
 const AboutMe: FC = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
@@ -64,7 +64,7 @@ const AboutMe: FC = () => {
               activeContactButton={activeContactButton}
               openContact={openContact}
               nameCollapse="contact.LeftCard"
-              myIcon={<LocalPhoneIcon />}
+              myIcon={<GrContactInfo style={{ fontSize: "24px" }} />}
             />
           </>
         }

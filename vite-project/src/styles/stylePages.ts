@@ -74,7 +74,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       display: "flex",
       position: "relative !important",
-      left: "0px",
+      left: "-7.5px",
       color: `${theme.myColors.colorFFF} !important`,
       background: `${theme.myColors.colorDarkBlack} !important`,
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,

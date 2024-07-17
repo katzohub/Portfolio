@@ -56,6 +56,9 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
               activeButton === "education"
                 ? theme.myColors.colorFFF
                 : theme.myColors.colorNonActive,
+            [theme.breakpoints.down("md")]: {
+              paddingLeft: "2.5px",
+            },
           })}
           onClick={() => {
             handleClick();

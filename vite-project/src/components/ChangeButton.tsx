@@ -34,6 +34,9 @@ const ChangeButton: FC<ChangeButtonProps> = ({
               ? theme.myColors.colorFFF
               : theme.myColors.colorNonActive,
           },
+          [theme.breakpoints.down("md")]: {
+            paddingLeft: "2.5px",
+          },
         })}
         onClick={() => changeText("about.bio", "bio")}
       >

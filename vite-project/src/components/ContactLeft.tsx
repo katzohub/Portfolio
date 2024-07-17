@@ -9,6 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import usePageStyles from "../styles/stylePages";
 import LeftContact from "./LeftContact";
+
 // TODO reapain component
 type ContactLeftProps = {
   isTrue: boolean;
@@ -34,35 +35,40 @@ const ContactLeft: FC<ContactLeftProps> = ({
 
   return (
     <>
-      {isTrue ? (
-        <>
-          <ListItemButton
-            className={classes.aboutContactContainer}
-            onClick={() => {
-              if (handleClickContact) {
-                handleClickContact();
-              }
-            }}
-            sx={(theme) => ({
-              padding: "8px 16px 8px 0px",
-              color:
-                activeContactButton === "contact"
-                  ? theme.myColors.colorFFF
-                  : theme.myColors.colorNonActive,
-            })}
-          >
-            {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-            {myIcon}
-            <ListItemText
-              primary={intl.formatMessage({ id: nameCollapse })}
-              sx={{ paddingLeft: "10px" }}
-            />
-          </ListItemButton>
-        </>
-      ) : null}
+      <>
+        <ListItemButton
+          className={classes.aboutContactContainer}
+          onClick={() => {
+            if (handleClickContact) {
+              handleClickContact();
+            }
+          }}
+          sx={(theme) => ({
+            display: isTrue ? "flex" : "none",
+            padding: "8px 16px 8px 0px",
+
+            color:
+              activeContactButton === "contact"
+                ? theme.myColors.colorFFF
+                : theme.myColors.colorNonActive,
+            [theme.breakpoints.down("md")]: {
+              display: isTrue ? "flex" : "flex",
+              paddingLeft: "2.5px",
+            },
+          })}
+        >
+          {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+          {myIcon}
+          <ListItemText
+            primary={intl.formatMessage({ id: nameCollapse })}
+            sx={{ paddingLeft: "10px" }}
+          />
+        </ListItemButton>
+      </>
+
       <Collapse
         className={classes.aboutCollapseContact}
-        in={openContact || !isTrue}
+        in={openContact}
         timeout="auto"
         unmountOnExit
       >
@@ -73,7 +79,12 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 href="mailto:tomasolsiak1@gmail.com"
                 className={classes.leftContactLink}
               >
-                <ListItemButton className={classes.leftContactBtn}>
+                <ListItemButton
+                  className={classes.leftContactBtn}
+                  sx={(theme) => ({
+                    [theme.breakpoints.down("md")]: { paddingLeft: "35px" },
+                  })}
+                >
                   <EmailIcon className={classes.leftContactIcon} />
                   <ListItemText primary="tomasolsiak1@gmail.com" />
                 </ListItemButton>
@@ -81,7 +92,12 @@ const ContactLeft: FC<ContactLeftProps> = ({
             }
             mySecondInfo={
               <a href="tel:+421915515974" className={classes.leftContactLink}>
-                <ListItemButton className={classes.leftContactBtn}>
+                <ListItemButton
+                  className={classes.leftContactBtn}
+                  sx={(theme) => ({
+                    [theme.breakpoints.down("md")]: { paddingLeft: "35px" },
+                  })}
+                >
                   <LocalPhoneIcon className={classes.leftContactIcon} />
                   <ListItemText primary="+421 915 515 974" />
                 </ListItemButton>
@@ -96,7 +112,12 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 href="https://instagram.com/tomasolsiak?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
                 className={classes.leftFindMeIn}
               >
-                <ListItemButton className={classes.leftContactBtn}>
+                <ListItemButton
+                  className={classes.leftContactBtn}
+                  sx={(theme) => ({
+                    [theme.breakpoints.down("md")]: { paddingLeft: "25px" },
+                  })}
+                >
                   <FaInstagram style={{ fontSize: "24px" }} />
                   <ListItemText
                     sx={{ paddingLeft: "10px" }}
@@ -114,7 +135,12 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 href="https://x.com/TOM3K_R34DY"
                 className={classes.leftFindMeIn}
               >
-                <ListItemButton className={classes.leftContactBtn}>
+                <ListItemButton
+                  className={classes.leftContactBtn}
+                  sx={(theme) => ({
+                    [theme.breakpoints.down("md")]: { paddingLeft: "25px" },
+                  })}
+                >
                   <FaXTwitter style={{ fontSize: "24px" }} />
                   <ListItemText
                     sx={{ paddingLeft: "10px" }}

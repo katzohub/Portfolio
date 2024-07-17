@@ -1,16 +1,20 @@
 import { useState } from "react";
+import { Box } from "@mui/system";
 import { ContactForm } from "../components/Contact";
 import ShareIcon from "@mui/icons-material/Share";
-
+import { GrContactInfo } from "react-icons/gr";
 import { ContactLeft } from "../components";
 import { GeneralBoard } from "../components";
 
 const ContactMe = () => {
   const [openFindMeContact, setOpenFindMeContact] = useState<boolean>(false);
-  console.log(setOpenFindMeContact);
+  const [openSmallScreen, setOpenSmallScreen] = useState<boolean>(true);
 
   const handleClickContact = () => {
     setOpenFindMeContact(!openFindMeContact);
+  };
+  const handleClickOpenSmallScreen = () => {
+    setOpenSmallScreen(!openSmallScreen);
   };
 
   return (
@@ -22,9 +26,21 @@ const ContactMe = () => {
           <ContactLeft
             isTrue={false}
             isScreen={true}
-            handleClickContact={handleClickContact}
-            openContact={openFindMeContact}
+            handleClickContact={handleClickOpenSmallScreen}
+            openContact={openSmallScreen}
             nameCollapse="contact.LeftCard"
+            myIcon={
+              <Box
+                sx={(theme) => ({
+                  display: "none",
+                  [theme.breakpoints.down("md")]: {
+                    display: "flex",
+                  },
+                })}
+              >
+                <GrContactInfo style={{ fontSize: "24px" }} />
+              </Box>
+            }
           />
         }
         postprimaryTemplate={

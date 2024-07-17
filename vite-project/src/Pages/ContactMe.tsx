@@ -27,6 +27,7 @@ const ContactMe = () => {
             isScreen={true}
             handleClickContact={handleClickContact}
             openContact={openFindMeContact}
+            nameCollapse="contact.LeftCard"
           />
         }
         postprimaryTemplate={
@@ -35,6 +36,7 @@ const ContactMe = () => {
             isScreen={false}
             handleClickContact={handleClickContact}
             openContact={openFindMeContact}
+            nameCollapse="contact.findMeIn"
           />
         }
         generalTemplate={<ContactForm />}

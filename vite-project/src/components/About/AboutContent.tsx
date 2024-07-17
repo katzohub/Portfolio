@@ -2,7 +2,6 @@ import { FC, ReactNode } from "react";
 import { Box, Typography } from "@mui/material";
 import ja from "../../assets/img/ja.png";
 import { useIntl } from "react-intl";
-
 import usePageStyles from "../../styles/stylePages";
 
 type GeneralBoardProps = {

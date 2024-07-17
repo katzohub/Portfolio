@@ -62,6 +62,7 @@ const AboutMe: FC = () => {
               handleClickContact={handleClickContact}
               activeContactButton={activeContactButton}
               openContact={openContact}
+              nameCollapse="contact.LeftCard"
             />
           </>
         }

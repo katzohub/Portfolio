@@ -3,18 +3,21 @@ import { ListItemButton, ListItemText, Collapse } from "@mui/material";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import EmailIcon from "@mui/icons-material/Email";
-import ShareIcon from "@mui/icons-material/Share";
+// import ShareIcon from "@mui/icons-material/Share";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { useIntl } from "react-intl";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 import usePageStyles from "../styles/stylePages";
 import LeftContact from "./LeftContact";
-
+// TODO reapain component
 type ContactLeftProps = {
   isTrue: boolean;
   isScreen: boolean;
   handleClickContact?: () => void | undefined;
   activeContactButton?: string;
   openContact: boolean;
+  nameCollapse: string;
 };
 
 const ContactLeft: FC<ContactLeftProps> = ({
@@ -23,6 +26,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
   handleClickContact,
   activeContactButton,
   openContact,
+  nameCollapse,
 }) => {
   const classes = usePageStyles();
   const intl = useIntl();
@@ -47,10 +51,9 @@ const ContactLeft: FC<ContactLeftProps> = ({
             })}
           >
             {openContact ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-            <ListItemText
-              primary={intl.formatMessage({ id: "contact.LeftCard" })}
-            />
-          </ListItemButton>{" "}
+            {/* TODO ADD ICON NO URGENT PROPS */}
+            <ListItemText primary={intl.formatMessage({ id: nameCollapse })} />
+          </ListItemButton>
         </>
       ) : null}
       <Collapse
@@ -90,7 +93,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 className={classes.leftFindMeIn}
               >
                 <ListItemButton className={classes.leftContactBtn}>
-                  <ShareIcon className={classes.leftContactIcon} />
+                  <FaInstagram className={classes.leftContactIcon} />
                   <ListItemText
                     primary={intl.formatMessage({
                       id: "contact.instagramAccount",
@@ -99,6 +102,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 </ListItemButton>
               </a>
             }
+            // rechange link
             mySecondInfo={
               <a
                 target="_blank"
@@ -106,7 +110,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
                 className={classes.leftFindMeIn}
               >
                 <ListItemButton className={classes.leftContactBtn}>
-                  <ShareIcon className={classes.leftContactIcon} />
+                  <FaXTwitter className={classes.leftContactIcon} />
                   <ListItemText
                     primary={intl.formatMessage({
                       id: "contact.twitchAccount",

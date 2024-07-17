@@ -26,9 +26,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   aboutCollapseContact: {
     display: "block",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
   },
   aboutContainer: {
     overflowY: "hidden",
@@ -170,7 +167,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       color: `${theme.myColors.colorFFF} !important`,
     },
     [theme.breakpoints.down("md")]: {
-      display: "none !important",
+      borderTop: "none !important",
+      marginTop: "0px !important",
+      width: "100%",
+      left: "0px",
+      //  display: "none !important",
     },
   },
   // next about
@@ -338,6 +339,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: theme.myColors.colorNonActive,
     width: "100%",
     paddingLeft: "10px",
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "0px",
+    },
   },
   leftFindMeIn: {
     display: "flex",
@@ -347,13 +351,14 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     color: theme.myColors.colorNonActive,
     [theme.breakpoints.down("md")]: {
       left: "0px",
+      width: "100%",
     },
   },
   leftContactBtn: {
     position: "relative",
     left: "25px",
     [theme.breakpoints.down("md")]: {
-      width: "90vw",
+      width: "100%",
       left: "0px",
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
     },

@@ -1,7 +1,5 @@
 import { FC, ReactNode } from "react";
 import { List, ListItem } from "@mui/material";
-// import EmailIcon from "@mui/icons-material/Email";
-// import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 type LeftContactProps = {
   myFirstInfo: ReactNode;
@@ -12,7 +10,15 @@ const LeftContact: FC<LeftContactProps> = ({ myFirstInfo, mySecondInfo }) => {
   return (
     <>
       <nav aria-label="main mailbox folders">
-        <List sx={{ paddingTop: "0px !important", overflow: "hidden" }}>
+        <List
+          sx={(theme) => ({
+            paddingTop: "0px !important",
+            overflow: "hidden",
+            [theme.breakpoints.down("md")]: {
+              padding: "0px !important",
+            },
+          })}
+        >
           <ListItem
             disablePadding
             sx={(theme) => ({
@@ -32,18 +38,7 @@ const LeftContact: FC<LeftContactProps> = ({ myFirstInfo, mySecondInfo }) => {
               },
             })}
           >
-            {" "}
             {myFirstInfo}
-            {/*  <a
-              href="mailto:tomasolsiak1@gmail.com"
-              className={classes.leftContactLink}
-            >
-           
-               <ListItemButton className={classes.leftContactBtn}>
-                <EmailIcon className={classes.leftContactIcon} />
-                <ListItemText primary="tomasolsiak1@gmail.com" />
-              </ListItemButton> 
-            </a>*/}
           </ListItem>
           <ListItem
             disablePadding
@@ -64,13 +59,6 @@ const LeftContact: FC<LeftContactProps> = ({ myFirstInfo, mySecondInfo }) => {
             })}
           >
             {mySecondInfo}
-            {/* <a href="tel:+421915515974" className={classes.leftContactLink}>
-            
-               <ListItemButton className={classes.leftContactBtn}>
-                <LocalPhoneIcon className={classes.leftContactIcon} />
-                <ListItemText primary="+421 915 515 974" /> 
-              </ListItemButton>
-            </a> */}
           </ListItem>
         </List>
       </nav>

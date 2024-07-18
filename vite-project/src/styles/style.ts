@@ -630,6 +630,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      top: "-10px",
+    },
   },
   snakeUp: {
     width: "50px",
@@ -748,10 +752,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "space-between",
     alignContent: "space-between",
     zIndex: "9999",
+
     [theme.breakpoints.down("md")]: {
       justifyContent: "start",
       alignContent: "center",
       gap: "25px 0",
+      height: "mac-content",
     },
   },
 
@@ -781,9 +787,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 600,
     lineHeight: "normal",
     [theme.breakpoints.down("md")]: {
-      fontSize: "72px !important",
-    },
-    [theme.breakpoints.down("sm")]: {
       fontSize: "42px !important",
     },
   },
@@ -795,7 +798,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontWeight: 600,
     lineHeight: "normal",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "24px !important",
+      fontSize: "16px !important",
     },
   },
   leftHeaderP: {
@@ -929,6 +932,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       zIndex: "5",
+      padding: "0px",
+      paddingTop: "50px",
     },
   },
   pageLeftWrap: {
@@ -951,7 +956,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       marginBlockEnd: "50px",
     },
     [theme.breakpoints.down("md")]: {
-      width: "400px",
+      width: "100%",
       marginBlockEnd: "0px",
     },
   },

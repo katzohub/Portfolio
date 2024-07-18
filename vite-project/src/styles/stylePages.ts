@@ -208,6 +208,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       marginTop: "0px",
     },
   },
+  // TODO my code
   aboutDivider: {
     position: "absolute",
     width: "2px",
@@ -220,11 +221,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       transform: "translateX(-64%)",
     },
     [theme.breakpoints.down("lg")]: {
-      left: "-3.40%",
-
-      transform: "translateX(0)",
+      left: "-1.75%",
+      transform: "translateX(-1.75%)",
+      border: `0.5px solid ${theme.myColors.colorLinie} !important`,
       position: "relative",
-      top: "15px",
+      top: "13px",
       width: "100% !important",
       height: "1px",
     },
@@ -785,8 +786,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     background: theme.myColors.colorLinie,
 
     [theme.breakpoints.down("lg")]: {
-      left: "-3.40%",
-
+      left: "-1.84%",
+      transform: "translateX(-1.84%)",
       position: "relative",
       top: "0px",
       width: "100% !important",

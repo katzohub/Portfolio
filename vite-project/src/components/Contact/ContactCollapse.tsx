@@ -9,7 +9,7 @@ import {
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ShareIcon from "@mui/icons-material/Share";
-import { LeftContact } from "../../components";
+// import { LeftContact } from "../../components";
 import { useIntl } from "react-intl";
 import usePageStyles from "../../styles/stylePages";
 
@@ -65,14 +65,7 @@ const ContactCollapse = () => {
           ""
         )}
       </ListItemButton>
-      <Collapse
-        className={classes.contactLeftBoxMinWidth}
-        in={openFindMeContact}
-        timeout="auto"
-        unmountOnExit
-      >
-        <LeftContact />
-      </Collapse>
+
       <ListItemButton
         sx={{
           "&:hover": {

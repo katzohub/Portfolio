@@ -67,6 +67,12 @@ const MyButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
               },
             },
           },
+          [theme.breakpoints.down("sm")]: {
+            width: "100%",
+            "&.learn-more": {
+              padding: "1em 1.75em",
+            },
+          },
         })}
       >
         {children}

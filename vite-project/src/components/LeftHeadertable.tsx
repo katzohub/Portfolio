@@ -39,10 +39,22 @@ const LeftHeadertable: FC = () => {
             <Typography variant="h1" className={classes.leftHeaderH1}>
               {intl.formatMessage({ id: "home.nameHeader" })}
             </Typography>
-            <Typography variant="h2" className={classes.leftHeaderH2}>
-              <FaChevronRight
-                style={{ fontSize: "1.5rem", position: "relative", top: "2px" }}
-              />
+            <Typography
+              variant="h2"
+              className={classes.leftHeaderH2}
+              sx={(theme) => ({
+                [theme.breakpoints.down("md")]: { fontSize: "18px !important" },
+                "& .chevronRight": {
+                  fontSize: "30px",
+                  position: "relative",
+                  top: "2px",
+                  [theme.breakpoints.down("md")]: {
+                    fontSize: "18px !important",
+                  },
+                },
+              })}
+            >
+              <FaChevronRight className="chevronRight" />
               {intl.formatMessage({ id: "home.myWork" })}
             </Typography>
           </Box>

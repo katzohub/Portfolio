@@ -39,7 +39,7 @@ const AboutContent: FC<GeneralBoardProps> = ({
               },
               [theme.breakpoints.down(555)]: {
                 left: "0px",
-                paddingLeft: "40px",
+                //  paddingLeft: "40px",
               },
             })}
           >
@@ -47,7 +47,37 @@ const AboutContent: FC<GeneralBoardProps> = ({
           </Box>
           <Box>{templateProps}</Box>
         </Box>
+        {/* <Box
+          sx={(theme) => ({
+            position: "absolute",
+            width: "2px",
+            border: `1px solid ${theme.myColors.colorLinie} !important`,
+            height: "100%",
+            zIndex: 10,
+            background: theme.myColors.colorLinie,
+            [theme.breakpoints.down(1300)]: {
+              left: "64%",
+              transform: "translateX(-64%)",
+            },
+            [theme.breakpoints.down("lg")]: {
+              left: "-3.40%",
+
+              transform: "translateX(0)",
+              position: "relative",
+              top: "15px",
+              width: "100% !important",
+              height: "1px",
+            },
+
+            [theme.breakpoints.down("md")]: {
+              display: "none",
+            },
+          })}
+        > */}
+
         <Box className={classes.aboutDivider}></Box>
+        {/* </Box> */}
+
         <Box className={classes.aboutNextWrap}>
           <Box className={classes.aboutNextMiniWrap}>
             <Box

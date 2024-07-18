@@ -4,9 +4,14 @@ import { List, ListItem } from "@mui/material";
 type LeftContactProps = {
   myFirstInfo: ReactNode;
   mySecondInfo: ReactNode;
+  myThirdInfo?: ReactNode;
 };
 
-const LeftContact: FC<LeftContactProps> = ({ myFirstInfo, mySecondInfo }) => {
+const LeftContact: FC<LeftContactProps> = ({
+  myFirstInfo,
+  mySecondInfo,
+  myThirdInfo,
+}) => {
   return (
     <>
       <nav aria-label="main mailbox folders">
@@ -60,6 +65,28 @@ const LeftContact: FC<LeftContactProps> = ({ myFirstInfo, mySecondInfo }) => {
           >
             {mySecondInfo}
           </ListItem>
+          {myThirdInfo && (
+            <ListItem
+              disablePadding
+              sx={(theme) => ({
+                [theme.breakpoints.down("md")]: {
+                  display: "flex",
+                  justifyContent: "center",
+                },
+                "&:hover": {
+                  color: "#fff",
+                  transition: "color 0.3s ease-in",
+                  ".MuiListItemText-primary": {
+                    color: "#fff",
+                    transition: "color 0.3s ease-in",
+                  },
+                  "& svg": { color: "#fff", transition: "color 0.3s ease-in" },
+                },
+              })}
+            >
+              {myThirdInfo}
+            </ListItem>
+          )}
         </List>
       </nav>
     </>

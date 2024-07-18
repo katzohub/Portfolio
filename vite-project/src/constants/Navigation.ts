@@ -3,7 +3,7 @@ import { FaHome, FaPhoneAlt, FaUser, FaProjectDiagram } from "react-icons/fa";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import XIcon from "@mui/icons-material/X";
 
 const FaHomeIcon = createElement(FaHome);
 const FaPhoneAltIcon = createElement(FaPhoneAlt);
@@ -12,7 +12,7 @@ const FaProjectDiagramIcon = createElement(FaProjectDiagram);
 const GitHubMuiIcon = createElement(GitHubIcon);
 const LinkedInMuiIcon = createElement(LinkedInIcon);
 const FacebookMuiIcon = createElement(FacebookIcon);
-const TwitterMuiIcon = createElement(TwitterIcon);
+const XIconMuiIcon = createElement(XIcon);
 
 type NavigationDataProps = {
   goUrl: string;
@@ -22,8 +22,8 @@ type NavigationDataProps = {
 
 export const falseNavigationData: NavigationDataProps[] = [
   {
-    goUrl: "https://twitter.com/TomOliak140446",
-    icon: TwitterMuiIcon,
+    goUrl: "https://x.com/TOM3K_R34DY",
+    icon: XIconMuiIcon,
   },
   {
     goUrl: "https://www.facebook.com/tomas.olsiak.37/",

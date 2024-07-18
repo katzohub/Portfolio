@@ -7,6 +7,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { useIntl } from "react-intl";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import { FaReddit } from "react-icons/fa6";
 import usePageStyles from "../styles/stylePages";
 import LeftContact from "./LeftContact";
 
@@ -147,6 +148,30 @@ const ContactLeft: FC<ContactLeftProps> = ({
                     primary={intl.formatMessage({
                       id: "contact.twitchAccount",
                     })}
+                  />
+                </ListItemButton>
+              </a>
+            }
+            myThirdInfo={
+              <a
+                target="_blank"
+                href="https://www.reddit.com/user/New-Bench9932/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                className={classes.leftFindMeIn}
+              >
+                <ListItemButton
+                  className={classes.leftContactBtn}
+                  sx={(theme) => ({
+                    [theme.breakpoints.down("md")]: { paddingLeft: "25px" },
+                  })}
+                >
+                  <FaReddit style={{ fontSize: "24px" }} />
+                  <ListItemText
+                    sx={{ paddingLeft: "10px" }}
+                    // primary={intl.formatMessage({
+                    //   id: "contact.twitchAccount",
+                    // })}
+                    // TODO reapain text
+                    primary="Reddit"
                   />
                 </ListItemButton>
               </a>

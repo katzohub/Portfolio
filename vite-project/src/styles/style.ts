@@ -757,7 +757,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       justifyContent: "start",
       alignContent: "center",
       gap: "25px 0",
-      height: "mac-content",
+      height: "max-content",
     },
   },
 
@@ -770,6 +770,10 @@ const usePageStyles = makeStyles((theme: Theme) => ({
 
     [theme.breakpoints.down("md")]: {
       height: "100dvh",
+      alignItems: "center",
+      justifyContent: "center",
+      paddingTop: "7px",
+      paddingBottom: "102px",
     },
   },
   leftHeaderH3: {
@@ -925,6 +929,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       position: "relative",
       gap: "40px",
       margin: "0px 0px",
+      padding: "0px",
+      alignItems: "center",
+      alignContent: "center",
+      jusstyContent: "center",
+      height: "100%",
     },
     [theme.breakpoints.down("md")]: {
       top: "0px",
@@ -933,7 +942,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("sm")]: {
       zIndex: "5",
       padding: "0px",
-      paddingTop: "50px",
     },
   },
   pageLeftWrap: {
@@ -958,6 +966,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("md")]: {
       width: "100%",
       marginBlockEnd: "0px",
+      alignItems: "center",
+      justifyContent: "center",
     },
   },
   pageRightWrap: {

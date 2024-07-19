@@ -2,6 +2,24 @@ import { FC, ReactNode } from "react";
 import { Box, Typography } from "@mui/material";
 import ja from "../../assets/img/ja.png";
 import { useIntl } from "react-intl";
+import {
+  StyledAboutContainer,
+  StyledAboutContainerTemplate,
+  StyledAboutWrappTemplate,
+  StyledAboutDivider,
+  StyledAboutContainerRight,
+  // StyledAboutWrappRight,
+  // StyledAboutText,
+  // StyledAboutTextWrap,
+  // StyledAboutTextGrayNone,
+  // StyledAboutTextGray,
+  // StyledAboutTextPink,
+  // StyledAboutTextPurple,
+  // StyledAboutTextOrange,
+  // StyledAboutNextText,
+  // StyledAboutCodeWrapper,
+  // StyledAboutImgContainer,
+} from "./StyledAbout";
 import usePageStyles from "../../styles/stylePages";
 
 type GeneralBoardProps = {
@@ -13,43 +31,21 @@ const AboutContent: FC<GeneralBoardProps> = ({
   templateProps,
   activeButton,
 }) => {
-  const classes = usePageStyles();
   const intl = useIntl();
+  const classes = usePageStyles();
   return (
     <>
-      <Box className={classes.aboutNextContainer}>
-        <Box
-          sx={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            position: "relative",
-            top: "15px",
-          }}
-        >
-          <Box
-            sx={(theme) => ({
-              display: "none",
-              [theme.breakpoints.down("md")]: {
-                display: "block",
-                position: "relative",
-                top: "-50px",
-                color: theme.myColors.textColorNav,
-              },
-              [theme.breakpoints.down(555)]: {
-                left: "0px",
-              },
-            })}
-          >
+      <StyledAboutContainer>
+        <StyledAboutContainerTemplate>
+          <StyledAboutWrappTemplate>
             // {intl.formatMessage({ id: `about.${activeButton}` })}
-          </Box>
+          </StyledAboutWrappTemplate>
           <Box>{templateProps}</Box>
-        </Box>
+        </StyledAboutContainerTemplate>
 
-        <Box className={classes.aboutDivider}></Box>
+        <StyledAboutDivider />
 
-        <Box className={classes.aboutNextWrap}>
+        <StyledAboutContainerRight>
           <Box className={classes.aboutNextMiniWrap}>
             <Box
               sx={(theme) => ({
@@ -320,8 +316,8 @@ const AboutContent: FC<GeneralBoardProps> = ({
             </Typography>
             <img src={ja} alt="Mine photo" className={classes.aboutImg} />
           </Box>
-        </Box>
-      </Box>
+        </StyledAboutContainerRight>
+      </StyledAboutContainer>
     </>
   );
 };

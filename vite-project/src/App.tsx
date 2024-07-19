@@ -21,9 +21,10 @@ const Home = lazy(() => import("./Pages/Home.tsx"));
 const App = () => {
   return (
     <BrowserRouter>
-      <CssBaseline />
-      <GlobalStyles />
       <CustomThemeProvider>
+        <CssBaseline />
+        <GlobalStyles />
+
         <MenuProvider>
           <LanguageProvider>
             <IntlProviderWrapper>

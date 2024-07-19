@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Box } from "@mui/material";
-import { GameSnake } from "../components/";
+import { GameSnake } from "../components/Home";
 
 const SnakeGame: FC = () => {
   return (

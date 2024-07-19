@@ -3,7 +3,7 @@ import { ThemeProps } from "../types";
 import { DefaultTheme } from "@mui/system";
 import urlSnakeLogo from "../assets/img/light_logo_snake.png";
 
-declare module "@mui/material/styles" {
+declare module "@mui/system" {
   interface Theme extends ThemeProps, DefaultTheme {}
   interface ThemeOptions extends ThemeProps, DefaultTheme {}
 }

@@ -33,7 +33,10 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
 
   return (
     <>
-      <FormGroup className={classes.projectRightForm}>
+      <FormGroup
+        className={classes.projectRightForm}
+        sx={{ overflow: "hidden" }}
+      >
         <FormControlLabel
           className={classes.projectLabel}
           control={
@@ -280,6 +283,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             </Box>
           }
         />
+
         <Divider
           orientation="vertical"
           flexItem

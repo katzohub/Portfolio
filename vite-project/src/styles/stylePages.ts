@@ -37,6 +37,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       justifyContent: "space-between",
     },
   },
+  // TODO - fix this
   aboutLeftNavContainer: {
     width: "269px",
     paddingTop: "56px !important",
@@ -436,7 +437,8 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       flexDirection: "row !important",
       position: "relative",
       marginLeft: "0px",
-      margin: "0 10px !important",
+      margin: "0 !important",
+      padding: "0 10px !important",
     },
   },
   projectLabel: {
@@ -498,6 +500,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       left: "-10px",
     },
   },
+  // fix this
   skillBoxDividerTop: {
     display: "none",
     [theme.breakpoints.down("md")]: {

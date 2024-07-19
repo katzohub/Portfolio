@@ -44,6 +44,7 @@ const App = () => {
                 }
               >
                 <Routes>
+                  {/* TODO FIX THIS LOADING PAGES */}
                   <Route path="/" element={<SharedLayout />}>
                     <Route index element={<OnePage />} />
                     <Route path="/about-me" element={<AboutMe />}></Route>

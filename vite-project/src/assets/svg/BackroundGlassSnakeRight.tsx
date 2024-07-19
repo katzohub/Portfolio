@@ -15,6 +15,8 @@ const BackroundGlassSnakeRight = () => {
           filter: "blur(174px)",
           bottom: -120,
           right: -70,
+
+          zIndex: "-1 !important",
           [theme.breakpoints.down("lg")]: {
             bottom: -25,
             right: -70,

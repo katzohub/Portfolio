@@ -117,7 +117,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "start",
     alignItems: "center",
     background: theme.myColors.generalBackground,
-    zIndex: 999,
+    zIndex: 9999,
     [theme.breakpoints.down("md")]: {
       width: "100%",
     },
@@ -449,9 +449,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     border: `1px solid ${theme.myColors.borderTableSnake}`,
     borderRadius: "8px",
     position: "relative",
-    zIndex: "9999",
+    zIndex: "99",
     [theme.breakpoints.down("lg")]: {
-      marginBlockEnd: "50px",
+      //  marginBlockEnd: "50px",
     },
     [theme.breakpoints.down("md")]: {
       marginBlockEnd: "0px",
@@ -751,8 +751,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     alignItems: "space-between",
     justifyContent: "space-between",
     alignContent: "space-between",
-    zIndex: "9999",
-
+    zIndex: "99",
     [theme.breakpoints.down("md")]: {
       justifyContent: "start",
       alignContent: "center",
@@ -769,7 +768,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     position: "relative",
 
     [theme.breakpoints.down("md")]: {
-      height: "100dvh",
       alignItems: "center",
       justifyContent: "center",
       paddingTop: "7px",
@@ -927,12 +925,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       position: "relative",
-      gap: "40px",
+
       margin: "0px 0px",
       padding: "0px",
       alignItems: "center",
       alignContent: "center",
-      jusstyContent: "center",
+      justifyContent: "center",
+      gap: "80px 0",
       height: "100%",
     },
     [theme.breakpoints.down("md")]: {
@@ -950,7 +949,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "50%",
     maxWidth: "600px",
     height: "100%",
-
+    zIndex: "999",
     display: "flex",
     flexDirection: "column",
 
@@ -961,7 +960,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
       width: "550px",
       position: "relative",
       top: "50px",
-      marginBlockEnd: "50px",
+      height: "auto",
+
+      // marginBlockEnd: "50px",
     },
     [theme.breakpoints.down("md")]: {
       width: "100%",
@@ -977,7 +978,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     width: "50%",
     maxWidth: "600px",
     position: "relative",
-    zIndex: "999 !important",
+    //  zIndex: "999 !important",
     [theme.breakpoints.down("xl")]: {
       width: "550px",
     },

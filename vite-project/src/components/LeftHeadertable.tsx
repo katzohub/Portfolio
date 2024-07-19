@@ -58,7 +58,18 @@ const LeftHeadertable: FC = () => {
               {intl.formatMessage({ id: "home.myWork" })}
             </Typography>
           </Box>
-          <Box>
+          <Box
+            sx={(theme) => ({
+              "& p": {
+                [theme.breakpoints.down("lg")]: {
+                  fontSize: "16px !important",
+                },
+                [theme.breakpoints.down("md")]: {
+                  fontSize: "14px !important",
+                },
+              },
+            })}
+          >
             <Typography variant="body2" className={classes.leftHeaderP}>
               // {intl.formatMessage({ id: "home.posTitleOne" })}
             </Typography>
@@ -95,13 +106,16 @@ const LeftHeadertable: FC = () => {
             </Typography>
           </Box>
           <Box
-            sx={{
+            sx={(theme) => ({
               display: "flex",
               flexDirection: "column",
               gap: "25px 0",
               position: "relative",
               top: "-10px",
-            }}
+              [theme.breakpoints.down("lg")]: {
+                top: "0px",
+              },
+            })}
           >
             <MyButton myBtnFn={openSnakeGame}>
               {intl.formatMessage({ id: "home.startGameBtn" })}

@@ -752,6 +752,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     justifyContent: "space-between",
     alignContent: "space-between",
     zIndex: "99",
+    [theme.breakpoints.down("lg")]: {
+      alignItems: "space-between",
+      justifyContent: "center",
+      alignContent: "center",
+      gap: "25px 0",
+      height: "max-content",
+    },
     [theme.breakpoints.down("md")]: {
       justifyContent: "start",
       alignContent: "center",
@@ -766,7 +773,9 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
 
     position: "relative",
-
+    [theme.breakpoints.down("lg")]: {
+      height: "auto",
+    },
     [theme.breakpoints.down("md")]: {
       alignItems: "center",
       justifyContent: "center",
@@ -780,6 +789,12 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontSize: "18px !important",
     fontStyle: "normal",
     lineHeight: "normal",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "16px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px !important",
+    },
   },
   leftHeaderH1: {
     fontFamily: "Fira Code !important",
@@ -788,8 +803,11 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "normal",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       fontSize: "42px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "32px !important",
     },
   },
   leftHeaderH2: {
@@ -799,20 +817,30 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "normal",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("lg")]: {
       fontSize: "16px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px !important",
+    },
+    "& svg": {
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "16px !important",
+      },
+      [theme.breakpoints.down("md")]: {
+        fontSize: "14px !important",
+      },
     },
   },
   leftHeaderP: {
     fontFamily: "Fira Code !important",
     color: `${theme.myColors.textColorNav} !important`,
-    fontSize: "16px !important",
+
     fontStyle: "normal",
     fontWeight: 450,
     padding: "2.5px 0",
     lineHeight: "normal",
     [theme.breakpoints.down("md")]: {
-      fontSize: "14px !important",
       display: "none",
     },
   },
@@ -959,13 +987,13 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("lg")]: {
       width: "550px",
       position: "relative",
-      top: "50px",
+      top: "56px",
       height: "auto",
-
-      // marginBlockEnd: "50px",
+      padding: "0px",
     },
     [theme.breakpoints.down("md")]: {
       width: "100%",
+      padding: "0 20px",
       marginBlockEnd: "0px",
       alignItems: "center",
       justifyContent: "center",

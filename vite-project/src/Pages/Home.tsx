@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { LeftHeadertable, GameSnake } from "../components";
+import { LeftSectionHome, GameSnake } from "../components/Home";
 import { Box } from "@mui/material";
 import usePageStyles from "../styles/style";
 
-const OnePage: FC = () => {
+const Home: FC = () => {
   const classes = usePageStyles();
   return (
     <Box
@@ -45,7 +45,7 @@ const OnePage: FC = () => {
     >
       <Box className={classes.pageWrap}>
         <Box className={classes.pageLeftWrap}>
-          <LeftHeadertable />
+          <LeftSectionHome />
         </Box>
         <Box className={classes.pageRightWrap}>
           <GameSnake isFullWindow={true} />
@@ -55,4 +55,4 @@ const OnePage: FC = () => {
   );
 };
 
-export default OnePage;
+export default Home;

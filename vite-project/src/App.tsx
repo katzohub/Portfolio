@@ -11,12 +11,12 @@ import en from "./locales/en_US";
 import sk from "./locales/sk_SK";
 
 const AboutMe = lazy(() => import("./Pages/AboutMe"));
-const Projects = lazy(() => import("./Pages/Projects"));
+const Skills = lazy(() => import("./Pages/Skills.tsx"));
 const ContactMe = lazy(() => import("./Pages/ContactMe"));
 const ThankYou = lazy(() => import("./Pages/ThankYou"));
 const SnakeGame = lazy(() => import("./Pages/SnakeGame"));
 const Error = lazy(() => import("./Pages/Error"));
-const OnePage = lazy(() => import("./Pages/OnePage"));
+const Home = lazy(() => import("./Pages/Home.tsx"));
 
 const App = () => {
   return (
@@ -46,9 +46,9 @@ const App = () => {
                 <Routes>
                   {/* TODO FIX THIS LOADING PAGES */}
                   <Route path="/" element={<SharedLayout />}>
-                    <Route index element={<OnePage />} />
+                    <Route index element={<Home />} />
                     <Route path="/about-me" element={<AboutMe />}></Route>
-                    <Route path="/projects" element={<Projects />}></Route>
+                    <Route path="/projects" element={<Skills />}></Route>
                     <Route path="/contact-me" element={<ContactMe />}></Route>
                     <Route path="/thank-you" element={<ThankYou />}></Route>
                     <Route path="*" element={<Error />} />

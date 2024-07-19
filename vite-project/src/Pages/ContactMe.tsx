@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { ContactForm } from "../components/Contact";
 import ShareIcon from "@mui/icons-material/Share";
 import { GrContactInfo } from "react-icons/gr";
-import { ContactLeft } from "../components";
+import { ButtonCollapse } from "../components/Buttons";
 import { GeneralBoard } from "../components";
 
 const ContactMe = () => {
@@ -23,7 +23,7 @@ const ContactMe = () => {
         generalHeading="nav.contact"
         generalText="nav.contact"
         leftTemplate={
-          <ContactLeft
+          <ButtonCollapse
             isTrue={false}
             isScreen={true}
             handleClickContact={handleClickOpenSmallScreen}
@@ -44,7 +44,7 @@ const ContactMe = () => {
           />
         }
         postprimaryTemplate={
-          <ContactLeft
+          <ButtonCollapse
             isTrue={true}
             isScreen={false}
             handleClickContact={handleClickContact}

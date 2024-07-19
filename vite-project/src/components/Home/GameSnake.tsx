@@ -1,15 +1,13 @@
 import React, { FC, useState, useEffect, useRef, useCallback } from "react";
-import PointSnake from "./PointSnake";
+import { PointSnake, KeyboardSnake } from "../Snake";
 import { useIntl } from "react-intl";
-import KeyboardSnake from "./KeyboardSnake";
-import MiniCircle from "../assets/svg/MiniCircle";
+import MiniCircle from "../../assets/svg/MiniCircle";
 import { Box, Typography, Button } from "@mui/material";
-
 import {
   BackroundGlassSnakeLeft,
   BackroundGlassSnakeRight,
-} from "../assets/svg";
-import usePageStyles from "../styles/style";
+} from "../../assets/svg";
+import usePageStyles from "../../styles/style";
 
 const gridSize = 20;
 const gridHeight = 34;

@@ -3,17 +3,16 @@ import { Box, Typography } from "@mui/material";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { Link } from "@mui/material";
-import { MyButton } from "../components/";
-import SK from "../assets/SK.png";
+import { BigButton } from "../../components/Buttons";
+import canvaSvk from "../../assets/canva_svk.pdf";
+// import canvaUs from "../assets/canva_svk.pdf";
 import {
   BackroundGlassSnakeLeft,
   BackroundGlassSnakeRight,
-} from "../assets/svg";
-// import Blue from "../assets/img/boobleBackground/Blue.png";
-// import Green from "../assets/img/boobleBackground/Green.png";
-import usePageStyles from "../styles/style";
+} from "../../assets/svg";
+import usePageStyles from "../../styles/style";
 
-const LeftHeadertable: FC = () => {
+const LeftSectionHome: FC = () => {
   const classes = usePageStyles();
   const intl = useIntl();
   const openSnakeGame = () => {
@@ -117,12 +116,12 @@ const LeftHeadertable: FC = () => {
               },
             })}
           >
-            <MyButton myBtnFn={openSnakeGame}>
+            <BigButton myBtnFn={openSnakeGame}>
               {intl.formatMessage({ id: "home.startGameBtn" })}
-            </MyButton>
+            </BigButton>
 
             <Link
-              href={SK}
+              href={canvaSvk}
               download={"portfolio_design"}
               sx={(theme) => ({
                 color: `${theme.myColors.textColorNav} !important`,
@@ -132,9 +131,9 @@ const LeftHeadertable: FC = () => {
                 },
               })}
             >
-              <MyButton>
+              <BigButton>
                 {intl.formatMessage({ id: "home.download.cv" })}
-              </MyButton>
+              </BigButton>
             </Link>
           </Box>
         </Box>
@@ -143,4 +142,4 @@ const LeftHeadertable: FC = () => {
   );
 };
 
-export default LeftHeadertable;
+export default LeftSectionHome;

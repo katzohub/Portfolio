@@ -7,7 +7,7 @@ import {
   SkillsAlert,
 } from "../components/Skills";
 
-const Projects: React.FC = () => {
+const Skills: React.FC = () => {
   const [checkedState, setCheckedState] = useState<CheckedStateProps>({
     all: true,
     html: false,
@@ -67,4 +67,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default Skills;

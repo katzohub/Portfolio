@@ -9,7 +9,7 @@ type MySwitchProps = {
   toggleSwitch: () => void;
 };
 
-const MySwitch: FC<MySwitchProps> = ({
+const SwitchButton: FC<MySwitchProps> = ({
   trueIcon,
   falseIcon,
   condition,
@@ -33,4 +33,4 @@ const MySwitch: FC<MySwitchProps> = ({
   );
 };
 
-export default MySwitch;
+export default SwitchButton;

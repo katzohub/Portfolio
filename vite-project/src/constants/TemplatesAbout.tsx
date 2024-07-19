@@ -1,4 +1,4 @@
-import TemplateAbout from "../Pages/TemplateAbout";
+import { TemplateAbout } from "../components/About";
 
 export const TemplateTextBio = () => {
   return (

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 // import usePageStyles from "../styles/stylePages";
-import { TemplateRow } from "../components/";
-import { TextProps } from "../types";
+import { TemplateRow } from "..";
+import { TextProps } from "../../types";
 
 const TemplateAbout: FC<TextProps> = ({
   textOne,

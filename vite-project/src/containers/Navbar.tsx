@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import Switcher from "../components/Switcher";
+import SwitchContainer from "../components/SwitchContainer";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -52,7 +52,7 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
         <Box>
           <Typography className={classes.navLink}>{text}</Typography>
         </Box>
-        {isTopnav && <Switcher />}
+        {isTopnav && <SwitchContainer />}
 
         <Box
           sx={(theme) => ({

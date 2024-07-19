@@ -6,8 +6,8 @@ import {
   FaCaretRight,
   FaCaretDown,
 } from "react-icons/fa";
-import usePageStyles from "../styles/style";
-import MyButton from "./MyButton";
+import usePageStyles from "../../styles/style";
+import { BigButton } from "../../components/Buttons";
 
 type KeyboardSnakeProps = {
   isFunctionKeyboard: boolean;
@@ -47,33 +47,33 @@ const KeyboardSnake: FC<KeyboardSnakeProps> = ({
               sx={{ position: "relative", top: "0px" }}
               onClick={() => handleButtonClick && handleButtonClick("up")}
             >
-              <MyButton>
+              <BigButton>
                 <FaCaretUp />
-              </MyButton>
+              </BigButton>
             </Box>
             <Box className={classes.snakeArrowWrap}>
               <Box
                 sx={{ position: "relative", left: "0px" }}
                 onClick={() => handleButtonClick && handleButtonClick("left")}
               >
-                <MyButton>
+                <BigButton>
                   <FaCaretLeft />
-                </MyButton>
+                </BigButton>
               </Box>
               <Box
                 onClick={() => handleButtonClick && handleButtonClick("down")}
               >
-                <MyButton>
+                <BigButton>
                   <FaCaretDown />
-                </MyButton>
+                </BigButton>
               </Box>
               <Box
                 sx={{ position: "relative", right: "0px" }}
                 onClick={() => handleButtonClick && handleButtonClick("right")}
               >
-                <MyButton>
+                <BigButton>
                   <FaCaretRight />
-                </MyButton>
+                </BigButton>
               </Box>
             </Box>
           </Box>

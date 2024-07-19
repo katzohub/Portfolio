@@ -8,8 +8,8 @@ import { useIntl } from "react-intl";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa6";
-import usePageStyles from "../styles/stylePages";
-import LeftContact from "./LeftContact";
+import usePageStyles from "../../styles/stylePages";
+import { DropdownButtons } from "../Buttons";
 
 // TODO reapain component
 type ContactLeftProps = {
@@ -22,7 +22,7 @@ type ContactLeftProps = {
   myIcon?: ReactNode;
 };
 
-const ContactLeft: FC<ContactLeftProps> = ({
+const ButtonCollapse: FC<ContactLeftProps> = ({
   isTrue,
   isScreen,
   handleClickContact,
@@ -74,7 +74,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
         unmountOnExit
       >
         {isScreen ? (
-          <LeftContact
+          <DropdownButtons
             myFirstInfo={
               <a
                 href="mailto:tomasolsiak1@gmail.com"
@@ -106,7 +106,7 @@ const ContactLeft: FC<ContactLeftProps> = ({
             }
           />
         ) : (
-          <LeftContact
+          <DropdownButtons
             myFirstInfo={
               <a
                 target="_blank"
@@ -183,4 +183,4 @@ const ContactLeft: FC<ContactLeftProps> = ({
   );
 };
 
-export default ContactLeft;
+export default ButtonCollapse;

@@ -2,7 +2,7 @@ import { FC } from "react";
 import { ListItemButton, Box, ListItemText, Collapse } from "@mui/material";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import LeftContact from "../LeftContact";
+import DropdownButtons from "../Buttons/DropdownButtons";
 import { useIntl } from "react-intl";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -49,7 +49,7 @@ const AboutContactCollapse: FC<AboutContactCollapseProps> = ({
         timeout="auto"
         unmountOnExit
       >
-        <LeftContact
+        <DropdownButtons
           myFirstInfo={
             <a
               href="mailto:tomasolsiak1@gmail.com"

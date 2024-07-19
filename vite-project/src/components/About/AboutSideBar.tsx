@@ -7,7 +7,7 @@ import {
   ListItemText,
   List,
 } from "@mui/material";
-import ChangeButton from "../ChangeButton";
+import AboutNavButton from "./AboutNavButton";
 import FolderIcon from "@mui/icons-material/Folder";
 import SchoolIcon from "@mui/icons-material/School";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
@@ -36,13 +36,13 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
           [theme.breakpoints.down("md")]: { paddingLeft: "0" },
         })}
       >
-        <ChangeButton
+        <AboutNavButton
           text={"about.bio"}
           myIcon={<FolderIcon className={classes.aboutIconBio} />}
           myCondition={activeButton === "bio"}
           changeText={() => changeText("about.bio", "bio")}
         />
-        <ChangeButton
+        <AboutNavButton
           text={"about.interests"}
           myIcon={<FolderIcon className={classes.aboutIconInterest} />}
           myCondition={activeButton === "interests"}
@@ -87,7 +87,7 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
               },
             })}
           >
-            <ChangeButton
+            <AboutNavButton
               text={"about.primary-school"}
               myIcon={<SchoolIcon />}
               myCondition={activeButton === "primary-school"}
@@ -95,7 +95,7 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
                 changeText("about.primary-school", "primary-school")
               }
             />
-            <ChangeButton
+            <AboutNavButton
               text={"about.high-school"}
               myIcon={<SchoolIcon />}
               myCondition={activeButton === "high-school"}

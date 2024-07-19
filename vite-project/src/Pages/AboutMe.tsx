@@ -8,7 +8,7 @@ import {
   TemplateTextHighSchool,
 } from "../constants/TemplatesAbout";
 import { AboutSideBar, AboutContent } from "../components/About";
-import { ContactLeft } from "../components";
+import { ButtonCollapse } from "../components/Buttons";
 import { GrContactInfo } from "react-icons/gr";
 
 const AboutMe: FC = () => {
@@ -57,7 +57,7 @@ const AboutMe: FC = () => {
         }
         postprimaryTemplate={
           <>
-            <ContactLeft
+            <ButtonCollapse
               isTrue={true}
               isScreen={true}
               handleClickContact={handleClickContact}

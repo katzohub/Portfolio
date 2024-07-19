@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import usePageStyles from "../styles/stylePages";
+import usePageStyles from "../../styles/stylePages";
 import { useIntl } from "react-intl";
 
 type ChangeButtonProps = {
@@ -11,7 +11,7 @@ type ChangeButtonProps = {
   changeText: (translate: string, changeText: string) => void;
 };
 
-const ChangeButton: FC<ChangeButtonProps> = ({
+const AboutNavButton: FC<ChangeButtonProps> = ({
   text,
   myIcon,
   myCondition,
@@ -25,6 +25,7 @@ const ChangeButton: FC<ChangeButtonProps> = ({
         className={classes.aboutHoverBtnEffect}
         sx={(theme) => ({
           width: "100%",
+
           padding: "8px 16px 8px 0px",
           color: myCondition
             ? theme.myColors.colorFFF
@@ -53,4 +54,4 @@ const ChangeButton: FC<ChangeButtonProps> = ({
   );
 };
 
-export default ChangeButton;
+export default AboutNavButton;

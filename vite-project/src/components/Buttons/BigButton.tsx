@@ -6,7 +6,7 @@ type MyButtonProps = {
   myBtnFn?: () => void;
 };
 
-const MyButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
+const BigButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
   return (
     <>
       <Button
@@ -89,4 +89,4 @@ const MyButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
   );
 };
 
-export default MyButton;
+export default BigButton;

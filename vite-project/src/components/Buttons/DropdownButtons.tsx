@@ -7,7 +7,7 @@ type LeftContactProps = {
   myThirdInfo?: ReactNode;
 };
 
-const LeftContact: FC<LeftContactProps> = ({
+const DropdownButtons: FC<LeftContactProps> = ({
   myFirstInfo,
   mySecondInfo,
   myThirdInfo,
@@ -93,4 +93,4 @@ const LeftContact: FC<LeftContactProps> = ({
   );
 };
 
-export default LeftContact;
+export default DropdownButtons;

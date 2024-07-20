@@ -1,5 +1,17 @@
 import { styled } from "@mui/system";
-import { Box, Typography } from "@mui/material";
+import {
+  Box,
+  Typography,
+  ListItemButton,
+  ListItemText,
+  List,
+} from "@mui/material";
+
+import FolderIcon from "@mui/icons-material/Folder";
+
+type StyledAboutItemBtnProps = {
+  activeButton: string;
+};
 
 // Styled components for AboutCOntent
 export const StyledAboutContainer = styled(Box)(({ theme }) => ({
@@ -213,7 +225,56 @@ export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
     overflow: "hidden",
   },
 }));
+// Styled components for AboutSidebar
+export const StyledAboutSidebarContainer = styled(Box)(({ theme }) => ({
+  paddingLeft: "35px",
+  [theme.breakpoints.down("md")]: { paddingLeft: "0" },
+}));
+export const StyledAboutIconBio = styled(FolderIcon)(({ theme }) => ({
+  color: `${theme.myColors.colorLightOrange} !important`,
+}));
+export const StyledAboutIconInterest = styled(FolderIcon)(({ theme }) => ({
+  color: `${theme.myColors.colorLightGreen} !important`,
+}));
+export const StyledAboutItemBtn = styled(
+  ListItemButton
+)<StyledAboutItemBtnProps>(({ theme, activeButton }) => ({
+  padding: "8px 16px 8px 0px",
+  color:
+    activeButton === "education"
+      ? theme.myColors.colorFFF
+      : theme.myColors.colorNonActive,
+  "&:hover": {
+    transition: "color 0.3s ease-in",
+    color: `${theme.myColors.colorFFF} !important`,
+  },
+  [theme.breakpoints.down("md")]: {
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
+    paddingLeft: "2.5px",
+  },
+}));
+export const StyledAboutIconEducation = styled(FolderIcon)(({ theme }) => ({
+  color: `${theme.myColors.colorPurpleFolder} !important`,
+}));
+export const StyledAboutBtnText = styled(ListItemText)(() => ({
+  fontFamily: "Fira Code",
+  fontSize: "16px",
+  fontStyle: "normal",
+  fontWeight: 400,
+  lineHeight: "normal",
+  position: "relative",
+  top: "1px",
+  left: "-20px",
+}));
+export const StyledAboutCollapseList = styled(List)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
 
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+}));
 // Display name for components
 StyledAboutContainer.displayName = "StyledAboutContainer";
 StyledAboutContainerTemplate.displayName = "StyledAboutContainerTemplate";

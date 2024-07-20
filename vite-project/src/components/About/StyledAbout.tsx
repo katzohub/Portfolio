@@ -61,12 +61,12 @@ export const StyledAboutDivider = styled(Box)(({ theme }) => ({
   zIndex: 10,
   background: theme.myColors.colorLinie,
   [theme.breakpoints.down(1300)]: {
-    left: "64%",
-    transform: "translateX(-64%)",
+    left: "64% !important",
+    transform: "translateX(-64%) !important",
   },
   [theme.breakpoints.down("lg")]: {
-    left: "-1.75%",
-    transform: "translateX(-1.75%)",
+    left: "-1.75% !important",
+    transform: "translateX(-1.75%) !important",
     border: `0.5px solid ${theme.myColors.colorLinie} !important`,
     position: "relative",
     top: "13px",
@@ -120,11 +120,10 @@ export const StyledAboutText = styled(Box)(({ theme }) => ({
     fontWeight: "450 !important",
     lineHeight: "150% !important",
     [theme.breakpoints.down("xl")]: {
-      //  fontSize: "14px !important",
       fontWeight: "600 !important",
     },
     [theme.breakpoints.down("sm")]: {
-      //  fontSize: "11px !important",
+      // fontSize: "11px !important",
     },
   },
 }));
@@ -140,6 +139,9 @@ export const StyledAboutTextGray = styled(Typography)(({ theme }) => ({
 }));
 export const StyledAboutTextGrayNone = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorGreyText,
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
 }));
 export const StyledAboutTextPink = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorPinkText,
@@ -187,3 +189,18 @@ export const StyledAboutImgContainer = styled(Box)(({ theme }) => ({
 
 // Display name for components
 StyledAboutContainer.displayName = "StyledAboutContainer";
+StyledAboutContainerTemplate.displayName = "StyledAboutContainerTemplate";
+StyledAboutWrappTemplate.displayName = "StyledAboutWrappTemplate";
+StyledAboutDivider.displayName = "StyledAboutDivider";
+StyledAboutContainerRight.displayName = "StyledAboutContainerRight";
+StyledAboutWrappRight.displayName = "StyledAboutWrappRight";
+StyledAboutText.displayName = "StyledAboutText";
+StyledAboutTextWrap.displayName = "StyledAboutTextWrap";
+StyledAboutTextGray.displayName = "StyledAboutTextGray";
+StyledAboutTextGrayNone.displayName = "StyledAboutTextGrayNone";
+StyledAboutTextPink.displayName = "StyledAboutTextPink";
+StyledAboutTextPurple.displayName = "StyledAboutTextPurple";
+StyledAboutTextOrange.displayName = "StyledAboutTextOrange";
+StyledAboutNextText.displayName = "StyledAboutNextText";
+StyledAboutCodeWrapper.displayName = "StyledAboutCodeWrapper";
+StyledAboutImgContainer.displayName = "StyledAboutImgContainer";

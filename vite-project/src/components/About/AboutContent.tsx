@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import ja from "../../assets/img/ja.png";
 import { useIntl } from "react-intl";
 import {
@@ -8,19 +8,18 @@ import {
   StyledAboutWrappTemplate,
   StyledAboutDivider,
   StyledAboutContainerRight,
-  // StyledAboutWrappRight,
-  // StyledAboutText,
-  // StyledAboutTextWrap,
-  // StyledAboutTextGrayNone,
-  // StyledAboutTextGray,
-  // StyledAboutTextPink,
-  // StyledAboutTextPurple,
-  // StyledAboutTextOrange,
-  // StyledAboutNextText,
-  // StyledAboutCodeWrapper,
-  // StyledAboutImgContainer,
+  StyledAboutWrappRight,
+  StyledAboutText,
+  StyledAboutTextWrap,
+  StyledAboutTextGrayNone,
+  StyledAboutTextGray,
+  StyledAboutTextPink,
+  StyledAboutTextPurple,
+  StyledAboutTextOrange,
+  StyledAboutNextText,
+  StyledAboutCodeWrapper,
+  StyledAboutImgContainer,
 } from "./StyledAbout";
-import usePageStyles from "../../styles/stylePages";
 
 type GeneralBoardProps = {
   templateProps: ReactNode;
@@ -32,7 +31,7 @@ const AboutContent: FC<GeneralBoardProps> = ({
   activeButton,
 }) => {
   const intl = useIntl();
-  const classes = usePageStyles();
+
   return (
     <>
       <StyledAboutContainer>
@@ -46,59 +45,22 @@ const AboutContent: FC<GeneralBoardProps> = ({
         <StyledAboutDivider />
 
         <StyledAboutContainerRight>
-          <Box className={classes.aboutNextMiniWrap}>
-            <Box
-              sx={(theme) => ({
-                [theme.breakpoints.down("sm")]: {
-                  width: "auto",
-                  padding: "2.5px",
-                },
-                "& span": {
-                  fontSize: "clamp(13px, 1vw, 16px)",
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                },
-              })}
-            >
-              <Box
-                sx={(theme) => ({
-                  width: "100%",
-                  display: "flex",
-                  [theme.breakpoints.down("sm")]: {
-                    flexDirection: "column",
-                  },
-                })}
-              >
+          <StyledAboutWrappRight>
+            <StyledAboutText>
+              <StyledAboutTextWrap>
                 <Box>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextGrey}
-                    sx={(theme) => ({
-                      [theme.breakpoints.down("sm")]: {
-                        display: "none",
-                      },
-                    })}
-                  >
+                  <StyledAboutTextGrayNone variant="caption">
                     1&nbsp;
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPink}
-                  >
+                  </StyledAboutTextGrayNone>
+                  <StyledAboutTextPink variant="caption">
                     const&nbsp;
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPurple}
-                  >
+                  </StyledAboutTextPink>
+                  <StyledAboutTextPurple variant="caption">
                     button&nbsp;
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPink}
-                  >
+                  </StyledAboutTextPurple>
+                  <StyledAboutTextPink variant="caption">
                     =&nbsp;
-                  </Typography>{" "}
+                  </StyledAboutTextPink>{" "}
                 </Box>
 
                 <Box
@@ -106,216 +68,104 @@ const AboutContent: FC<GeneralBoardProps> = ({
                     [theme.breakpoints.down("sm")]: { paddingLeft: "45px" },
                   })}
                 >
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPurple}
-                  >
+                  <StyledAboutTextPurple variant="caption">
                     document.querySelector
-                  </Typography>{" "}
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextGrey}
-                  >
-                    (
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextOrange}
-                  >
+                  </StyledAboutTextPurple>{" "}
+                  <StyledAboutTextGray variant="caption">(</StyledAboutTextGray>
+                  <StyledAboutTextOrange variant="caption">
                     '#sendBtn'
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextGrey}
-                  >
+                  </StyledAboutTextOrange>
+                  <StyledAboutTextGray variant="caption">
                     );
-                  </Typography>
+                  </StyledAboutTextGray>
                 </Box>
-              </Box>
-              <Typography
-                variant="caption"
-                className={classes.formTextGrey}
-                sx={(theme) => ({
-                  [theme.breakpoints.down("sm")]: {
-                    display: "none",
-                  },
-                })}
-              >
+              </StyledAboutTextWrap>
+              <StyledAboutTextGrayNone variant="caption">
                 2&nbsp;
                 <br />
-              </Typography>
-              <Box
-                sx={(theme) => ({
-                  width: "100%",
-                  display: "flex",
-
-                  [theme.breakpoints.down("sm")]: {
-                    flexDirection: "column",
-                  },
-                })}
-              >
+              </StyledAboutTextGrayNone>
+              <StyledAboutNextText>
                 <Box>
                   {" "}
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextGrey}
-                    sx={(theme) => ({
-                      [theme.breakpoints.down("sm")]: {
-                        display: "none",
-                      },
-                    })}
-                  >
+                  <StyledAboutTextGrayNone variant="caption">
                     3&nbsp;
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPink}
-                  >
+                  </StyledAboutTextGrayNone>
+                  <StyledAboutTextPink variant="caption">
                     const
-                  </Typography>
+                  </StyledAboutTextPink>
                   &nbsp;
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPurple}
-                  >
+                  <StyledAboutTextPurple variant="caption">
                     image
-                  </Typography>
+                  </StyledAboutTextPurple>
                   &nbsp;
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPink}
-                  >
-                    =
-                  </Typography>
+                  <StyledAboutTextPink variant="caption">=</StyledAboutTextPink>
                   &nbsp;
                 </Box>
 
-                <Box
-                  sx={(theme) => ({
-                    [theme.breakpoints.down("sm")]: { paddingLeft: "48px" },
-                  })}
-                >
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextPurple}
-                  >
+                <StyledAboutCodeWrapper>
+                  <StyledAboutTextPurple variant="caption">
                     document.querySelector
-                  </Typography>{" "}
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextGrey}
-                  >{`(`}</Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextOrange}
-                  >
+                  </StyledAboutTextPurple>{" "}
+                  <StyledAboutTextGray variant="caption">{`(`}</StyledAboutTextGray>
+                  <StyledAboutTextOrange variant="caption">
                     '#myImage'
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    className={classes.formTextGrey}
-                  >{`);`}</Typography>
-                </Box>
-              </Box>
-              <Typography
-                variant="caption"
-                className={classes.formTextGrey}
-                sx={(theme) => ({
-                  [theme.breakpoints.down("sm")]: {
-                    display: "none",
-                  },
-                })}
-              >
+                  </StyledAboutTextOrange>
+                  <StyledAboutTextGray variant="caption">{`);`}</StyledAboutTextGray>
+                </StyledAboutCodeWrapper>
+              </StyledAboutNextText>
+              <StyledAboutTextGrayNone variant="caption">
                 4&nbsp;
                 <br />
-              </Typography>
-              <Typography
-                variant="caption"
-                className={classes.formTextGrey}
-                sx={(theme) => ({
-                  [theme.breakpoints.down("sm")]: {
-                    display: "none",
-                  },
-                })}
-              >
+              </StyledAboutTextGrayNone>
+              <StyledAboutTextGrayNone variant="caption">
                 5&nbsp;
-              </Typography>
-              <Typography variant="caption" className={classes.formTextPurple}>
+              </StyledAboutTextGrayNone>
+              <StyledAboutTextPurple variant="caption">
                 button
-                <Typography variant="caption" className={classes.formTextGrey}>
-                  .
-                </Typography>
+                <StyledAboutTextGray variant="caption">.</StyledAboutTextGray>
                 addEventListener
-              </Typography>
-              <Typography variant="caption" className={classes.formTextGrey}>
-                (
-              </Typography>
-              <Typography variant="caption" className={classes.formTextOrange}>
+              </StyledAboutTextPurple>
+              <StyledAboutTextGray variant="caption">(</StyledAboutTextGray>
+              <StyledAboutTextOrange variant="caption">
                 'click'
-              </Typography>
-              <Typography variant="caption" className={classes.formTextGrey}>
-                , ()
-              </Typography>
+              </StyledAboutTextOrange>
+              <StyledAboutTextGray variant="caption">, ()</StyledAboutTextGray>
               &nbsp;
-              <Typography
-                variant="caption"
-                className={classes.formTextPink}
-              >{`=>`}</Typography>
+              <StyledAboutTextPink variant="caption">{`=>`}</StyledAboutTextPink>
               &nbsp;
-              <Typography
-                variant="caption"
-                className={classes.formTextGrey}
-              >{`{`}</Typography>
+              <StyledAboutTextGray variant="caption">{`{`}</StyledAboutTextGray>
               <br />
-              <Typography
-                variant="caption"
-                className={classes.formTextGrey}
-                sx={(theme) => ({
-                  [theme.breakpoints.down("sm")]: {
-                    display: "none",
-                  },
-                })}
-              >
+              <StyledAboutTextGrayNone variant="caption">
                 6&nbsp;
-              </Typography>
+              </StyledAboutTextGrayNone>
               &nbsp;&nbsp;
-              <Typography variant="caption" className={classes.formTextPurple}>
+              <StyledAboutTextPurple variant="caption">
                 image
-                <Typography variant="caption" className={classes.formTextGrey}>
-                  .
-                </Typography>
+                <StyledAboutTextGray variant="caption">.</StyledAboutTextGray>
                 src
-              </Typography>
-              <Typography variant="caption" className={classes.formTextPink}>
+              </StyledAboutTextPurple>
+              <StyledAboutTextPink variant="caption">
                 &nbsp;=&nbsp;
-              </Typography>
-              <Typography variant="caption" className={classes.formTextPurple}>
+              </StyledAboutTextPink>
+              <StyledAboutTextPurple variant="caption">
                 "my_img.png"
-              </Typography>
-              <Typography variant="caption" className={classes.formTextGrey}>
+              </StyledAboutTextPurple>
+              <StyledAboutTextGray variant="caption">
                 ; <br />
-                <Typography
-                  variant="caption"
-                  className={classes.formTextGrey}
-                  sx={(theme) => ({
-                    [theme.breakpoints.down("sm")]: {
-                      display: "none",
-                    },
-                  })}
-                >
+                <StyledAboutTextGrayNone variant="caption">
                   7&nbsp;
-                </Typography>
+                </StyledAboutTextGrayNone>
                 {`}`})
-              </Typography>
+              </StyledAboutTextGray>
               <br />
-            </Box>
-          </Box>
-          <Box className={classes.aboutNextImgContainer}>
-            <Typography variant="caption" className={classes.formTextGrey}>
+            </StyledAboutText>
+          </StyledAboutWrappRight>
+          <StyledAboutImgContainer>
+            <StyledAboutTextGray variant="caption">
               // Result
-            </Typography>
-            <img src={ja} alt="Mine photo" className={classes.aboutImg} />
-          </Box>
+            </StyledAboutTextGray>
+            <img src={ja} alt="Mine photo" />
+          </StyledAboutImgContainer>
         </StyledAboutContainerRight>
       </StyledAboutContainer>
     </>

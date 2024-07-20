@@ -112,9 +112,20 @@ export const StyledAboutText = styled(Box)(({ theme }) => ({
     padding: "2.5px",
   },
   "& span": {
-    // fontSize: "clamp(10px, 1vw, 14px) !important",
+    fontSize: "clamp(10px, 1vw, 14px) !important",
     whiteSpace: "nowrap !important",
-    overflow: "hidden",
+    overflow: "hidden !important",
+    fontFamily: "Fira Code !important",
+    fontStyle: "normal !important",
+    fontWeight: "450 !important",
+    lineHeight: "150% !important",
+    [theme.breakpoints.down("xl")]: {
+      //  fontSize: "14px !important",
+      fontWeight: "600 !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      //  fontSize: "11px !important",
+    },
   },
 }));
 export const StyledAboutTextWrap = styled(Box)(({ theme }) => ({
@@ -126,80 +137,19 @@ export const StyledAboutTextWrap = styled(Box)(({ theme }) => ({
 }));
 export const StyledAboutTextGray = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorGreyText,
-  fontFamily: "Fira Code !important",
-  fontSize: "18px !important",
-  fontStyle: "normal",
-  fontWeight: "450 !important",
-  lineHeight: "150%",
-  [theme.breakpoints.down("xl")]: {
-    fontSize: "14px !important",
-    fontWeight: 600,
-  },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
-  },
 }));
 export const StyledAboutTextGrayNone = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorGreyText,
-  fontFamily: "Fira Code !important",
-  fontSize: "18px !important",
-  fontStyle: "normal",
-  fontWeight: "450 !important",
-  lineHeight: "150%",
-  [theme.breakpoints.down("xl")]: {
-    fontSize: "14px",
-    fontWeight: "600 !important",
-  },
-
-  [theme.breakpoints.down("sm")]: {
-    display: "none",
-    fontSize: "11px !important",
-  },
 }));
 export const StyledAboutTextPink = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorPinkText,
-  fontFamily: "Fira Code !important",
-  fontSize: "18px !important",
-  fontStyle: "normal",
-  fontWeight: "450  !important",
-  lineHeight: "150%",
-  [theme.breakpoints.down("xl")]: {
-    fontSize: "14px !important",
-    fontWeight: "600  !important",
-  },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
-  },
 }));
 export const StyledAboutTextPurple = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorPurpleText,
   fontFamily: "Fira Code !important",
-  fontSize: "18px !important",
-  fontStyle: "normal !important",
-  fontWeight: "450 !important",
-  lineHeight: "150% !important",
-  [theme.breakpoints.down("xl")]: {
-    fontSize: "14px !important",
-    fontWeight: "600 !important",
-  },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "11px !important",
-  },
 }));
 export const StyledAboutTextOrange = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorOrangeText,
-  fontFamily: "Fira Code",
-  fontSize: "18px !important",
-  fontStyle: "normal",
-  fontWeight: "450  !important",
-  lineHeight: "150%",
-  [theme.breakpoints.down("xl")]: {
-    fontSize: "14px !important",
-    fontWeight: "600  !important",
-  },
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
-  },
 }));
 export const StyledAboutNextText = styled(Box)(({ theme }) => ({
   width: "100%",

@@ -61,12 +61,12 @@ export const StyledAboutDivider = styled(Box)(({ theme }) => ({
   zIndex: 10,
   background: theme.myColors.colorLinie,
   [theme.breakpoints.down(1300)]: {
-    left: "64% !important",
-    transform: "translateX(-64%) !important",
+    left: "63.5%",
+    transform: "translateX(-63.5%)",
   },
   [theme.breakpoints.down("lg")]: {
-    left: "-1.75% !important",
-    transform: "translateX(-1.75%) !important",
+    left: "-1.75%",
+    transform: "translateX(-1.75%)",
     border: `0.5px solid ${theme.myColors.colorLinie} !important`,
     position: "relative",
     top: "13px",
@@ -81,29 +81,29 @@ export const StyledAboutDivider = styled(Box)(({ theme }) => ({
 export const StyledAboutContainerRight = styled(Box)(({ theme }) => ({
   color: "white",
   width: "100%",
-  display: "flex",
+  display: "flex !important",
   flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "start",
-  paddingTop: "15px",
+  alignItems: "center !important",
+  justifyContent: "start !important",
+  paddingTop: "15px !important",
   alignContent: "center !important",
   [theme.breakpoints.down("lg")]: {
-    paddingTop: "30px",
+    paddingTop: "30p !important",
   },
   [theme.breakpoints.down("sm")]: {
-    padding: "120px 10px 0 10px",
+    padding: "120px 10px 0 10px !important",
   },
 }));
 export const StyledAboutWrappRight = styled(Box)(({ theme }) => ({
-  borderRadius: "15px",
+  borderRadius: "15px !important",
   border: `2px solid ${theme.myColors.colorLinie}`,
   background: theme.myColors.colorInCard,
-  padding: "7px 12.5px",
+  padding: "7px 12.5px !important",
   [theme.breakpoints.down("sm")]: {
-    width: "100%",
+    width: "100% !important",
     display: "flex",
     justifyContent: "center !important",
-    padding: "2.5px",
+    padding: "2.5px !important",
   },
 }));
 export const StyledAboutText = styled(Box)(({ theme }) => ({
@@ -121,6 +121,7 @@ export const StyledAboutText = styled(Box)(({ theme }) => ({
     lineHeight: "150% !important",
     [theme.breakpoints.down("xl")]: {
       fontWeight: "600 !important",
+      fontSize: "11px !important",
     },
     [theme.breakpoints.down("sm")]: {
       // fontSize: "11px !important",

@@ -165,12 +165,14 @@ export const StyledTextNavigate = styled(Link)(({ theme }) => ({
   width: "90vw",
   justifyContent: "center",
   textDecoration: "none",
+
   color: theme.myColors.colorNonActive,
   [theme.breakpoints.down("md")]: {
     left: "0px",
     width: "100%",
   },
 }));
+
 export const StyledTextNavigateContact = styled(Link)(({ theme }) => ({
   textDecoration: "none",
   color: theme.myColors.colorNonActive,

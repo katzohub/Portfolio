@@ -19,7 +19,9 @@ const DropdownButtons: FC<LeftContactProps> = ({
           <StyledListItemContainer disablePadding>
             {myFirstInfo}
           </StyledListItemContainer>
-          <StyledListItemContainer>{mySecondInfo}</StyledListItemContainer>
+          <StyledListItemContainer disablePadding>
+            {mySecondInfo}
+          </StyledListItemContainer>
           {myThirdInfo && (
             <StyledListItemContainer disablePadding>
               {myThirdInfo}

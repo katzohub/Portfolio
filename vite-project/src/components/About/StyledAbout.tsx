@@ -12,6 +12,9 @@ import FolderIcon from "@mui/icons-material/Folder";
 type StyledAboutItemBtnProps = {
   activeButton: string;
 };
+type StyledAboutItemBtnNavProps = {
+  myCondition: boolean;
+};
 
 // Styled components for AboutCOntent
 export const StyledAboutContainer = styled(Box)(({ theme }) => ({
@@ -275,6 +278,28 @@ export const StyledAboutCollapseList = styled(List)(({ theme }) => ({
     alignItems: "center",
   },
 }));
+export const StyledAboutItemBtnNav = styled(
+  ListItemButton
+)<StyledAboutItemBtnNavProps>(({ theme, myCondition }) => ({
+  width: "100%",
+  padding: "8px 16px 8px 0px",
+  color: myCondition ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
+  "& svg": {
+    color: myCondition
+      ? theme.myColors.colorFFF
+      : theme.myColors.colorNonActive,
+  },
+
+  [theme.breakpoints.down("md")]: {
+    paddingLeft: "2.5px",
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
+  },
+  "&:hover": {
+    transition: "color 0.3s ease-in",
+    color: `${theme.myColors.colorFFF} !important`,
+  },
+}));
+// Styled components for TemplateAbout
 // Display name for components
 StyledAboutContainer.displayName = "StyledAboutContainer";
 StyledAboutContainerTemplate.displayName = "StyledAboutContainerTemplate";

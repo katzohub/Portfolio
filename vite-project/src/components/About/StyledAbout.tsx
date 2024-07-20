@@ -6,15 +6,7 @@ import {
   ListItemText,
   List,
 } from "@mui/material";
-
 import FolderIcon from "@mui/icons-material/Folder";
-
-type StyledAboutItemBtnProps = {
-  activeButton: string;
-};
-type StyledAboutItemBtnNavProps = {
-  myCondition: boolean;
-};
 
 // Styled components for AboutCOntent
 export const StyledAboutContainer = styled(Box)(({ theme }) => ({
@@ -239,14 +231,9 @@ export const StyledAboutIconBio = styled(FolderIcon)(({ theme }) => ({
 export const StyledAboutIconInterest = styled(FolderIcon)(({ theme }) => ({
   color: `${theme.myColors.colorLightGreen} !important`,
 }));
-export const StyledAboutItemBtn = styled(
-  ListItemButton
-)<StyledAboutItemBtnProps>(({ theme, activeButton }) => ({
+export const StyledAboutItemBtn = styled(ListItemButton)(({ theme }) => ({
   padding: "8px 16px 8px 0px",
-  color:
-    activeButton === "education"
-      ? theme.myColors.colorFFF
-      : theme.myColors.colorNonActive,
+
   "&:hover": {
     transition: "color 0.3s ease-in",
     color: `${theme.myColors.colorFFF} !important`,
@@ -278,17 +265,9 @@ export const StyledAboutCollapseList = styled(List)(({ theme }) => ({
     alignItems: "center",
   },
 }));
-export const StyledAboutItemBtnNav = styled(
-  ListItemButton
-)<StyledAboutItemBtnNavProps>(({ theme, myCondition }) => ({
+export const StyledAboutItemBtnNav = styled(ListItemButton)(({ theme }) => ({
   width: "100%",
   padding: "8px 16px 8px 0px",
-  color: myCondition ? theme.myColors.colorFFF : theme.myColors.colorNonActive,
-  "& svg": {
-    color: myCondition
-      ? theme.myColors.colorFFF
-      : theme.myColors.colorNonActive,
-  },
 
   [theme.breakpoints.down("md")]: {
     paddingLeft: "2.5px",

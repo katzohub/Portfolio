@@ -9,6 +9,7 @@ import {
   StyledAboutBtnText,
   StyledAboutCollapseList,
 } from "./StyledAbout";
+import { Theme } from "@mui/system";
 import AboutNavButton from "./AboutNavButton";
 import SchoolIcon from "@mui/icons-material/School";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
@@ -42,7 +43,12 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
           changeText={() => changeText("about.interests", "interests")}
         />
         <StyledAboutItemBtn
-          activeButton={activeButton}
+          sx={(theme: Theme) => ({
+            color:
+              activeButton === "education"
+                ? theme.myColors.colorFFF
+                : theme.myColors.colorNonActive,
+          })}
           onClick={() => {
             handleClick();
           }}

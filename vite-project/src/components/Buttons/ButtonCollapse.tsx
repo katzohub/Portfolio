@@ -12,6 +12,7 @@ import {
   StyledTextNavigate,
   StyledTextNavigateContact,
 } from "./StyledButtons";
+import { Theme } from "@mui/system";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useIntl } from "react-intl";
@@ -46,8 +47,16 @@ const ButtonCollapse: FC<ContactLeftProps> = ({
     <>
       <>
         <StyledListButtonsCollapse
-          activeContactButton={activeContactButton}
-          isTrue={isTrue}
+          sx={(theme: Theme) => ({
+            display: isTrue ? "flex" : "none",
+            color:
+              activeContactButton === "contact"
+                ? theme.myColors.colorFFF
+                : theme.myColors.colorNonActive,
+            [theme.breakpoints.down("md")]: {
+              display: isTrue ? "flex" : "flex",
+            },
+          })}
           onClick={() => {
             if (handleClickContact) {
               handleClickContact();

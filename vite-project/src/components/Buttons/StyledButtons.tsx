@@ -10,11 +10,6 @@ import {
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
-type StyledListButtonsCollapseProps = {
-  isTrue: boolean;
-  activeContactButton?: string;
-};
-
 // Styled components for BigButton
 export const StyledBigButton = styled(Button)(({ theme }) => ({
   display: "inline-block",
@@ -87,39 +82,35 @@ export const StyledBigButton = styled(Button)(({ theme }) => ({
   },
 }));
 // Styled components for ButtonCollapse
-export const StyledListButtonsCollapse = styled(
-  ListItemButton
-)<StyledListButtonsCollapseProps>(({ theme, isTrue, activeContactButton }) => ({
-  marginTop: "50px !important",
-  fontFamily: "Fira Code",
-  fontSize: "16px",
-  fontStyle: "normal",
-  fontWeight: 400,
-  lineHeight: "normal",
-  width: "234px",
-  position: "relative",
-  left: "35px",
-  borderTop: `2px solid ${theme.myColors.colorLinie} !important`,
-  borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
-  display: isTrue ? "flex" : "none",
-  padding: "8px 16px 8px 0px",
-  color:
-    activeContactButton === "contact"
-      ? theme.myColors.colorFFF
-      : theme.myColors.colorNonActive,
-  "&:hover": {
-    transition: "color 0.3s ease-in",
-    color: `${theme.myColors.colorFFF} !important`,
-  },
-  [theme.breakpoints.down("md")]: {
-    display: isTrue ? "flex" : "flex",
-    paddingLeft: "2.5px",
-    borderTop: "none !important",
-    marginTop: "0px !important",
-    width: "100%",
-    left: "0px",
-  },
-}));
+export const StyledListButtonsCollapse = styled(ListItemButton)(
+  ({ theme }) => ({
+    marginTop: "50px !important",
+    fontFamily: "Fira Code",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "normal",
+    width: "234px",
+    position: "relative",
+    left: "35px",
+    borderTop: `2px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
+
+    padding: "8px 16px 8px 0px",
+
+    "&:hover": {
+      transition: "color 0.3s ease-in",
+      color: `${theme.myColors.colorFFF} !important`,
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "2.5px",
+      borderTop: "none !important",
+      marginTop: "0px !important",
+      width: "100%",
+      left: "0px",
+    },
+  })
+);
 export const StyledBtnText = styled(ListItemText)(() => ({
   paddingLeft: "10px",
 }));

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Box, Typography } from "@mui/material";
-// import usePageStyles from "../styles/stylePages";
+import { Typography } from "@mui/material";
+import { StyledAboutTemplateContainer } from "./StyledAbout";
 import { TemplateRow } from "..";
 import { TextProps } from "../../types";
 
@@ -34,31 +34,7 @@ const TemplateAbout: FC<TextProps> = ({
 }) => {
   return (
     <>
-      <Box
-        sx={(theme) => ({
-          color: theme.myColors.textColorNav,
-          fontFamily: "Fira Code",
-          fontSize: "18px",
-          fontStyle: "normal",
-          fontWeight: 450,
-          "& p": {
-            fontSize: "clamp(13px, 1vw, 16px)",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            [theme.breakpoints.down(500)]: {
-              fontSize: "11px",
-              whiteSpace: "wrap",
-              overflow: "auto",
-              padding: "0 10px",
-            },
-          },
-          "& span": {
-            fontSize: "clamp(13px, 1vw, 16px)",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-          },
-        })}
-      >
+      <StyledAboutTemplateContainer>
         <Typography variant="body2">/** </Typography>
         <TemplateRow myNumber="1" text={textOne} />
         <TemplateRow myNumber="2" text={textTwo} />
@@ -87,7 +63,7 @@ const TemplateAbout: FC<TextProps> = ({
         <TemplateRow myNumber="24" text={textTwentyFive} />
         <TemplateRow myNumber="24" text={textTwentySix} />
         <Typography variant="body2">*/</Typography>
-      </Box>
+      </StyledAboutTemplateContainer>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Typography } from "@mui/material";
 
+// Styled components for AboutCOntent
 export const StyledAboutContainer = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100dvh",
@@ -185,6 +186,31 @@ export const StyledAboutImgContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("lg")]: {
       width: "150px",
     },
+  },
+}));
+
+// Styled components for TemplateAbout
+export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
+  color: theme.myColors.textColorNav,
+  fontFamily: "Fira Code",
+  fontSize: "18px",
+  fontStyle: "normal",
+  fontWeight: 450,
+  "& p": {
+    fontSize: "clamp(13px, 1vw, 16px)",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    [theme.breakpoints.down(500)]: {
+      fontSize: "11px",
+      whiteSpace: "wrap",
+      overflow: "auto",
+      padding: "0 10px",
+    },
+  },
+  "& span": {
+    fontSize: "clamp(13px, 1vw, 16px)",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
   },
 }));
 

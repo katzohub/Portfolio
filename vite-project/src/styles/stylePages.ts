@@ -781,7 +781,6 @@ const usePageStyles = makeStyles((theme: Theme) => ({
   },
   // todo my code
   contactFormDivider: {
-    //  position: "absolute",
     width: "2px",
     border: `1px solid ${theme.myColors.colorLinie} !important`,
     height: "100%",

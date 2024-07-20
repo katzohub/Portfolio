@@ -1,44 +1,19 @@
 import { useState, useEffect } from "react";
+import { Typography } from "@mui/material";
 import {
-  Box,
-  Typography,
-  TextField,
-  Divider,
-  Button,
-  styled,
-} from "@mui/material";
+  StyledTextField,
+  StyledContactFormContainer,
+  StyledContactFormWrap,
+  StyledContactFormDivider,
+  StyledSubmitFormBtn,
+  StyledFormTextContainer,
+  StyledTextGray,
+  StyledTextPink,
+  StyledTextOrange,
+  StyledTextPurple,
+} from "./StyledContact";
 import { useIntl } from "react-intl";
-import usePageStyles from "../../styles/stylePages";
 import { DisplayDataProps } from "../../types";
-
-const CssTextField = styled(TextField)(({ theme }) => ({
-  "& label.Mui-focused": {
-    color: theme.myColors.colorFFF,
-  },
-  "& label": {
-    color: theme.myColors.colorFFF,
-  },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: theme.myColors.colorInputSend,
-  },
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: theme.myColors.colorBackInput,
-    },
-    "&:hover fieldset": {
-      borderColor: theme.myColors.colorInputSend,
-    },
-    "&.Mui-focused fieldset": {
-      borderColor: theme.myColors.colorInputSend,
-    },
-    backgroundColor: theme.myColors.colorBackInput,
-    boxShadow: theme.myShadow.shadowTextField,
-  },
-  "& .MuiInputBase-input": {
-    color: theme.myColors.colorFFF,
-    backgroundColor: theme.myColors.colorBackInput,
-  },
-}));
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -59,15 +34,14 @@ const ContactForm: React.FC = () => {
     setDisplayData({ name, email, message, date: formattedDate });
   }, [name, email, message]);
 
-  const classes = usePageStyles();
   return (
-    <Box className={classes.contactFormContainer}>
-      <Box className={classes.contactFormWrap}>
+    <StyledContactFormContainer>
+      <StyledContactFormWrap>
         <form
           action="https://formsubmit.co/tomasolsiak1@gmail.com"
           method="POST"
         >
-          <CssTextField
+          <StyledTextField
             name="name"
             label={intl.formatMessage({ id: "contact.name" })}
             variant="outlined"
@@ -77,7 +51,7 @@ const ContactForm: React.FC = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <CssTextField
+          <StyledTextField
             name="email"
             label={intl.formatMessage({ id: "contact.email" })}
             variant="outlined"
@@ -87,7 +61,7 @@ const ContactForm: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <CssTextField
+          <StyledTextField
             name="message"
             label={intl.formatMessage({ id: "contact.message" })}
             variant="outlined"
@@ -104,107 +78,96 @@ const ContactForm: React.FC = () => {
             name="_next"
             value={`${window.location.origin}/thank-you`}
           />
-          <Button
+          <StyledSubmitFormBtn
             type="submit"
             variant="contained"
             color="primary"
-            className={classes.contactFormBtn}
-            sx={{ textTransform: "lowercase" }}
           >
             {intl.formatMessage({ id: "contact.submit" })}
-          </Button>
+          </StyledSubmitFormBtn>
         </form>
-      </Box>
+      </StyledContactFormWrap>
 
-      <Divider
-        orientation="vertical"
-        flexItem
-        className={classes.contactFormDivider}
-      />
-      <Box className={classes.contactFormBoxText}>
+      <StyledContactFormDivider orientation="vertical" flexItem />
+      <StyledFormTextContainer>
         <Typography variant="body1">
           <br />
-          <span className={classes.formTextGrey}>1&nbsp;</span>
-          <span className={classes.formTextPink}>const</span>{" "}
-          <span className={classes.formTextPurple}>button</span>{" "}
-          <span className={classes.formTextPink}>=</span>{" "}
-          <span className={classes.formTextPurple}>document.querySelector</span>{" "}
-          <span className={classes.formTextGrey}>(</span>
-          <span className={classes.formTextOrange}>'#sendBtn'</span>
-          <span className={classes.formTextGrey}>);</span>
+          <StyledTextGray variant="caption">1&nbsp;</StyledTextGray>
+          <StyledTextPink variant="caption">const</StyledTextPink>{" "}
+          <StyledTextPurple variant="caption">button</StyledTextPurple>{" "}
+          <StyledTextPink variant="caption">=</StyledTextPink>{" "}
+          <StyledTextPurple variant="caption">
+            document.querySelector
+          </StyledTextPurple>{" "}
+          <StyledTextGray variant="caption">(</StyledTextGray>
+          <StyledTextOrange variant="caption">'#sendBtn'</StyledTextOrange>
+          <StyledTextGray variant="caption">);</StyledTextGray>
           <br />
-          <span className={classes.formTextGrey}>2&nbsp;</span>
+          <StyledTextGray variant="caption">2&nbsp;</StyledTextGray>
           <br />
-          <span className={classes.formTextGrey}>3&nbsp;</span>
-          <span className={classes.formTextPink}>const </span>
-          <span className={classes.formTextPurple}>message </span>
-          <span className={classes.formTextPink}>= </span>
-          <span className={classes.formTextGrey}>{`{`}</span>
+          <StyledTextGray variant="caption">3&nbsp;</StyledTextGray>
+          <StyledTextPink variant="caption">const </StyledTextPink>
+          <StyledTextPurple variant="caption">message </StyledTextPurple>
+          <StyledTextPink variant="caption">= </StyledTextPink>
+          <StyledTextGray variant="caption">{`{`}</StyledTextGray>
           <br />
-          <span className={classes.formTextGrey}>4</span>
-          &nbsp;&nbsp;<span className={classes.formTextPurple}>Name</span>
-          <span className={classes.formTextGrey}>:</span>
-          <span
-            className={classes.formTextOrange}
-          >{`"${displayData.name}"`}</span>
-          <br />
-          <span className={classes.formTextGrey}>5</span>
+          <StyledTextGray variant="caption">4</StyledTextGray>
           &nbsp;&nbsp;
-          <span className={classes.formTextPurple}>Email</span>
-          <span className={classes.formTextGrey}>:</span>
-          <span
-            className={classes.formTextOrange}
-          >{`"${displayData.email}"`}</span>
+          <StyledTextPurple variant="caption">Name</StyledTextPurple>
+          <StyledTextGray variant="caption">:</StyledTextGray>
+          <StyledTextOrange variant="caption">{`"${displayData.name}"`}</StyledTextOrange>
           <br />
-          <span className={classes.formTextGrey}>6</span>
+          <StyledTextGray variant="caption">5</StyledTextGray>
           &nbsp;&nbsp;
-          <span className={classes.formTextPurple}>Message</span>
-          <span className={classes.formTextGrey}>:</span>
-          <span
-            className={classes.formTextOrange}
-          >{`"${displayData.message}"`}</span>
+          <StyledTextPurple variant="caption">Email</StyledTextPurple>
+          <StyledTextGray variant="caption">:</StyledTextGray>
+          <StyledTextOrange variant="caption">{`"${displayData.email}"`}</StyledTextOrange>
+          <br />
+          <StyledTextGray variant="caption">6</StyledTextGray>
+          &nbsp;&nbsp;
+          <StyledTextPurple variant="caption">Message</StyledTextPurple>
+          <StyledTextGray variant="caption">:</StyledTextGray>
+          <StyledTextOrange variant="caption">{`"${displayData.message}"`}</StyledTextOrange>
           &nbsp;&nbsp;
           <br />
-          <span className={classes.formTextGrey}>7&nbsp;</span>
-          <span className={classes.formTextGrey}>Date:</span>
-          <span
-            className={classes.formTextOrange}
-          >{`"${displayData.date}"`}</span>
+          <StyledTextGray variant="caption">7&nbsp;</StyledTextGray>
+          <StyledTextGray variant="caption">Date:</StyledTextGray>
+          <StyledTextOrange variant="caption">{`"${displayData.date}"`}</StyledTextOrange>
           &nbsp;&nbsp;
           <br />
-          <span className={classes.formTextGrey}>8&nbsp;</span>
-          <span className={classes.formTextGrey}>{`}`}</span>
+          <StyledTextGray variant="caption">8&nbsp;</StyledTextGray>
+          <StyledTextGray variant="caption">{`}`}</StyledTextGray>
           <br />
-          <span className={classes.formTextGrey}>9&nbsp;</span>
+          <StyledTextGray variant="caption">9&nbsp;</StyledTextGray>
           <br />
-          <span className={classes.formTextGrey}>10&nbsp;</span>
-          <span className={classes.formTextPurple}>
+          <StyledTextGray variant="caption">10&nbsp;</StyledTextGray>
+          <StyledTextPurple variant="caption">
             button
-            <span className={classes.formTextGrey}>.</span>
+            <StyledTextGray variant="caption">.</StyledTextGray>
             addEventListener
-          </span>
-          <span className={classes.formTextGrey}>(</span>
-          <span className={classes.formTextOrange}>'click'</span>
-          <span className={classes.formTextGrey}>, ()</span>
-          <span className={classes.formTextPink}>{` => `}</span>
-          <span className={classes.formTextGrey}>{`{`}</span>
+          </StyledTextPurple>
+          <StyledTextGray variant="caption">(</StyledTextGray>
+          <StyledTextOrange variant="caption">'click'</StyledTextOrange>
+          <StyledTextGray variant="caption">, ()</StyledTextGray>
+          <StyledTextPink variant="caption">{` => `}</StyledTextPink>
+          <StyledTextGray variant="caption">{`{`}</StyledTextGray>
           <br />
-          <span className={classes.formTextGrey}>11&nbsp;</span>
+          <StyledTextGray variant="caption">11&nbsp;</StyledTextGray>
           &nbsp;&nbsp;
-          <span className={classes.formTextPurple}>
-            form<span className={classes.formTextGrey}>.</span>send
-          </span>
-          <span className={classes.formTextGrey}>(</span>
-          <span className={classes.formTextPurple}>message</span>
-          <span className={classes.formTextGrey}>
+          <StyledTextPurple variant="caption">
+            form<StyledTextGray variant="caption">.</StyledTextGray>send
+          </StyledTextPurple>
+          <StyledTextGray variant="caption">(</StyledTextGray>
+          <StyledTextPurple variant="caption">message</StyledTextPurple>
+          <StyledTextGray variant="caption">
             ); <br />
-            <span className={classes.formTextGrey}>12&nbsp;</span>
+            <StyledTextGray variant="caption">12&nbsp;</StyledTextGray>
             {`}`})
-          </span>
+          </StyledTextGray>
           <br />
         </Typography>
-      </Box>
-    </Box>
+      </StyledFormTextContainer>
+    </StyledContactFormContainer>
   );
 };
 

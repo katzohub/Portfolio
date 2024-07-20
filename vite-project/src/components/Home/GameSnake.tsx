@@ -2,12 +2,31 @@ import React, { FC, useState, useEffect, useRef, useCallback } from "react";
 import { PointSnake, KeyboardSnake } from "../Snake";
 import { useIntl } from "react-intl";
 import MiniCircle from "../../assets/svg/MiniCircle";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {
   BackroundGlassSnakeLeft,
   BackroundGlassSnakeRight,
 } from "../../assets/svg";
-import usePageStyles from "../../styles/style";
+import {
+  ContainerSnake,
+  StyledMiniCircleWrapper,
+  StyledSnakeGameArea,
+  StyledSnakeScreenLogo,
+  StyledStartGameBtn,
+  StyledTextStartGame,
+  StyledContainerContinue,
+  StyledTextContinue,
+  StyledContainerStart,
+  StyledContainerGameOver,
+  StyledTextGameOver,
+  StyledContainerStartGame,
+  StyledSnakeBoxSetting,
+  StyledSnakeArrowTextFirst,
+  StyledSnakeArrowTextSecond,
+  StyledSnakeContainerFood,
+  StyledSnakeFoodLeft,
+  StyledSnakePointContainer,
+} from "./StyledHome";
 
 const gridSize = 20;
 const gridHeight = 34;
@@ -190,17 +209,12 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   const handleKeyUp = () => {
     setKeyPressed(false);
   };
-  const classes = usePageStyles();
+
   return (
-    <div
-      className={
-        isFullWindow ? classes.snakeContainer : classes.snakeContainerFullWidth
-      }
-    >
+    <ContainerSnake isFullWindow={isFullWindow}>
       <BackroundGlassSnakeLeft />
       <BackroundGlassSnakeRight />
-      <Box
-        className={classes.miniCircleWrapper}
+      <StyledMiniCircleWrapper
         sx={{
           position: "absolute",
           top: 5,
@@ -208,26 +222,21 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
         }}
       >
         <MiniCircle />
-      </Box>
-      <Box
-        className={classes.miniCircleWrapper}
-        sx={{ position: "absolute", top: 5, right: 5 }}
-      >
+      </StyledMiniCircleWrapper>
+      <StyledMiniCircleWrapper sx={{ position: "absolute", top: 5, right: 5 }}>
         <MiniCircle />
-      </Box>
-      <Box
-        className={classes.miniCircleWrapper}
+      </StyledMiniCircleWrapper>
+      <StyledMiniCircleWrapper
         sx={{ position: "absolute", bottom: 5, right: 5 }}
       >
         <MiniCircle />
-      </Box>
-      <Box
-        className={classes.miniCircleWrapper}
+      </StyledMiniCircleWrapper>
+      <StyledMiniCircleWrapper
         sx={{ position: "absolute", bottom: 5, left: 5 }}
       >
         <MiniCircle />
-      </Box>
-      <Box
+      </StyledMiniCircleWrapper>
+      <StyledSnakeGameArea
         ref={gameAreaRef}
         sx={{
           position: "relative",
@@ -235,66 +244,18 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           width: `${gridSize * cellSize}px`,
           borderRadius: "8px",
         }}
-        className={
-          isFullWindow ? classes.snakeGameArea : classes.snakeGameAreaFullWidth
-        }
         tabIndex={0}
         onKeyDown={handleKeyPress}
         onKeyUp={handleKeyUp}
       >
         {!gameStarted && (
           <>
-            {!gameStarted && (
-              <Box
-                className={classes.snakeScreenLogo}
-                sx={(theme) => ({
-                  backgroundImage: `url(${theme.myUrl.snakeLogoUrl})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  width: "50%",
-                  height: "50%",
-                })}
-              />
-            )}
-            <Button
-              variant="text"
-              size="small"
-              sx={{
-                top: "70%",
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                color: "#607B96",
-                fontFamily: "Fira Code",
-                fontStyle: "normal",
-                fontWeight: 450,
-                lineHeight: "normal",
-                cursor: "pointer",
-              }}
-              onClick={startGame}
-            >
-              <Typography
-                variant="h4"
-                fontSize={15}
-                sx={(theme) => ({
-                  borderRadius: "8px",
-                  background: theme.myColors.backgroundBtnSnake,
-                  boxShadow: `${theme.myShadow.shadowBtnSnake} inset`,
-                  height: "30px",
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: theme.myColors.fotnBtnSnake,
-                  fontFamily: "Fira Code",
-                  fontStyle: "normal",
-                  fontWeight: 450,
-                  lineHeight: "100%",
-                })}
-              >
+            {!gameStarted && <StyledSnakeScreenLogo />}
+            <StyledStartGameBtn variant="text" size="small" onClick={startGame}>
+              <StyledTextStartGame variant="h4" fontSize={15}>
                 {intl.formatMessage({ id: "home.startGame" })}
-              </Typography>
-            </Button>
+              </StyledTextStartGame>
+            </StyledStartGameBtn>
           </>
         )}
         {gameStarted && (
@@ -327,56 +288,15 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
             />
             {hasWon && (
               <>
-                <Box
-                  sx={{
-                    width: "240px",
-                    position: "absolute",
-                    bottom: 50,
-                    left: 0,
-                    zIndex: "9",
-                  }}
-                >
-                  <Typography
-                    variant="h4"
-                    fontSize={20}
-                    sx={(theme) => ({
-                      borderRadius: "8px",
-
-                      background: theme.myColors.backgroundBtnSnake,
-                      boxShadow: `${theme.myShadow.shadowBtnSnake} inset`,
-                      color: theme.myColors.fotnBtnSnake,
-                      height: "60px",
-                      width: "100%",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-
-                      fontFamily: "Fira Code",
-                      fontStyle: "normal",
-                      fontWeight: 450,
-                      lineHeight: "100%",
-                    })}
-                  >
+                <StyledContainerContinue>
+                  <StyledTextContinue variant="h4" fontSize={20}>
                     {intl.formatMessage({ id: "home.wellDone" })}
-                  </Typography>
+                  </StyledTextContinue>
 
-                  <Button
+                  <StyledContainerStart
                     variant="text"
                     color="success"
                     size="small"
-                    sx={{
-                      position: "relative",
-                      top: "25px",
-                      width: "100%",
-                      display: "flex",
-                      alignItems: "center",
-                      color: "#607B96",
-                      fontFamily: "Fira Code",
-                      fontStyle: "normal",
-                      fontWeight: 450,
-                      lineHeight: "normal",
-                      cursor: "pointer",
-                    }}
                     onClick={startGame}
                   >
                     <Typography
@@ -386,59 +306,20 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                     >
                       play-again
                     </Typography>
-                  </Button>
-                </Box>
+                  </StyledContainerStart>
+                </StyledContainerContinue>
               </>
             )}
             {gameOver && (
-              <Box
-                sx={{
-                  width: "240px",
-                  position: "absolute",
-                  bottom: 50,
-                  left: 0,
-                  zIndex: "9",
-                }}
-              >
-                <Typography
-                  variant="h4"
-                  fontSize={20}
-                  sx={(theme) => ({
-                    borderRadius: "8px",
-                    background: theme.myColors.backgroundBtnSnake,
-                    boxShadow: `${theme.myShadow.shadowBtnSnake} inset`,
-                    color: theme.myColors.fotnBtnSnake,
-                    height: "60px",
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontFamily: "Fira Code",
-                    fontStyle: "normal",
-                    fontWeight: 450,
-                    lineHeight: "100%",
-                  })}
-                >
+              <StyledContainerGameOver>
+                <StyledTextGameOver variant="h4" fontSize={20}>
                   {intl.formatMessage({ id: "home.gameOver" })}
-                </Typography>
+                </StyledTextGameOver>
 
-                <Button
+                <StyledContainerStartGame
                   variant="text"
                   color="success"
                   size="small"
-                  sx={{
-                    position: "relative",
-                    top: "25px",
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#607B96",
-                    fontFamily: "Fira Code",
-                    fontStyle: "normal",
-                    fontWeight: 450,
-                    lineHeight: "normal",
-                    cursor: "pointer",
-                  }}
                   onClick={startGame}
                 >
                   <Typography
@@ -448,83 +329,50 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                   >
                     {intl.formatMessage({ id: "home.tryAgain" })}
                   </Typography>
-                </Button>
-              </Box>
+                </StyledContainerStartGame>
+              </StyledContainerGameOver>
             )}
           </>
         )}
-      </Box>
+      </StyledSnakeGameArea>
 
       <Box>
-        <Box
-          className={
-            isFullWindow
-              ? classes.snakeBoxSetting
-              : classes.snakeBoxSettingFullWidth
-          }
-        >
-          <Typography
-            variant="body2"
-            className={
-              isFullWindow
-                ? classes.snakeArrowTextOne
-                : classes.snakeBoxSettingFullWidthFullWidth
-            }
-          >
+        <StyledSnakeBoxSetting isFullWindow={isFullWindow}>
+          <StyledSnakeArrowTextFirst>
             // {intl.formatMessage({ id: "home.useKeyboard" })}
-          </Typography>
-          <Typography
-            variant="body2"
-            className={
-              isFullWindow
-                ? classes.snakeArrowTextTwo
-                : classes.snakeArrowTextTwoFullWidth
-            }
-          >
+          </StyledSnakeArrowTextFirst>
+          <StyledSnakeArrowTextSecond variant="body2">
             // {intl.formatMessage({ id: "home.usePlay" })}
-          </Typography>
+          </StyledSnakeArrowTextSecond>
           <Box
-            className={isFullWindow ? "" : classes.containerKeyboardFullWidth}
+            sx={(theme) => ({
+              position: isFullWindow ? "" : "relative",
+              top: isFullWindow ? "" : "215px",
+              [theme.breakpoints.down("md")]: {
+                top: isFullWindow ? "" : "-65px",
+                left: isFullWindow ? "" : "0px",
+              },
+            })}
           >
             <KeyboardSnake
               isFunctionKeyboard={isFullWindow}
               handleButtonClick={handleButtonClick}
             />
           </Box>
-        </Box>
+        </StyledSnakeBoxSetting>
 
-        <Box
-          className={
-            isFullWindow
-              ? classes.snakeContainerFood
-              : classes.snakeContainerFoodFullWidth
-          }
-        >
-          <Typography variant="body2" className={classes.snakeFoodLeft}>
+        <StyledSnakeContainerFood isFullWindow={isFullWindow}>
+          <StyledSnakeFoodLeft variant="body2">
             // {intl.formatMessage({ id: "home.lastFood" })}
-          </Typography>
-          <Box
-            className={isFullWindow ? "" : classes.pointContainerFoodFullWidth}
-            sx={(theme) => ({
-              width: "90px",
-              "& .point-snake-fist": {
-                fill: theme.myColors.pointSnakeSecond,
-              },
-              "& .point-snake-second": {
-                fill: theme.myColors.pointSnakeThread,
-              },
-              "& .point-snake-thread": {
-                fill: theme.myColors.pointSnake,
-              },
-            })}
-          >
+          </StyledSnakeFoodLeft>
+          <StyledSnakePointContainer>
             {Array.from({ length: 10 }, (_, index) => (
               <PointSnake key={index} index={index} candyCount={candyCount} />
             ))}
-          </Box>
-        </Box>
+          </StyledSnakePointContainer>
+        </StyledSnakeContainerFood>
       </Box>
-    </div>
+    </ContainerSnake>
   );
 };
 

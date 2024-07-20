@@ -568,7 +568,7 @@ const usePageStyles = makeStyles((theme: Theme) => ({
     boxShadow: `${theme.myShadow.shadowAreaSnake} inset`,
     [theme.breakpoints.down("md")]: {
       position: "relative",
-      top: "20px",
+      //  top: "20px",
     },
   },
   snakeBoxSettingFullWidth: {

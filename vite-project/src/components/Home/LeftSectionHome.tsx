@@ -1,5 +1,22 @@
 import { FC } from "react";
 import { Box, Typography } from "@mui/material";
+import {
+  StyledLeftContainer,
+  StyledLeftWrapp,
+  StyledLeftWrapper,
+  StyledLeftHeadingGeneral,
+  StyledLeftHeadingName,
+  StyledLeftHeadingProfes,
+  StyledLeftArticleContainer,
+  StyledLeftArticlePrimaryText,
+  StyledLeftArticlePrimaryTextMobile,
+  StyledLeftArticlePurpleText,
+  StyledLeftArticleGreen,
+  StyledLeftArticleWhite,
+  StyledLeftArticleLinkMaxScreen,
+  StyledLeftArticleLinkMinScreen,
+  StyledLeftContainerBtns,
+} from "./StyledHome";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { Link } from "@mui/material";
@@ -10,112 +27,74 @@ import {
   BackroundGlassSnakeLeft,
   BackroundGlassSnakeRight,
 } from "../../assets/svg";
-import usePageStyles from "../../styles/style";
 
 const LeftSectionHome: FC = () => {
-  const classes = usePageStyles();
   const intl = useIntl();
   const openSnakeGame = () => {
     window.open("/game_snake", "_blank", "noopener,noreferrer");
   };
   return (
     <>
-      <Box className={classes.leftHeaderContainer}>
-        <Box
-          sx={(theme) => ({
-            display: "none",
-            [theme.breakpoints.down("md")]: { display: "block" },
-          })}
-        >
+      <StyledLeftContainer>
+        <StyledLeftWrapp>
           <BackroundGlassSnakeLeft />
           <BackroundGlassSnakeRight />
-        </Box>
-        <Box className={classes.leftHeaderBox}>
+        </StyledLeftWrapp>
+        <StyledLeftWrapper>
           <Box>
-            <Typography variant="h3" className={classes.leftHeaderH3}>
+            <StyledLeftHeadingGeneral variant="h3">
               {intl.formatMessage({ id: "home.name" })}
-            </Typography>
-            <Typography variant="h1" className={classes.leftHeaderH1}>
+            </StyledLeftHeadingGeneral>
+            <StyledLeftHeadingName variant="h1">
               {intl.formatMessage({ id: "home.nameHeader" })}
-            </Typography>
-            <Typography
-              variant="h2"
-              className={classes.leftHeaderH2}
-              sx={(theme) => ({
-                [theme.breakpoints.down("md")]: { fontSize: "18px !important" },
-                "& .chevronRight": {
-                  fontSize: "30px",
-                  position: "relative",
-                  top: "2px",
-                  [theme.breakpoints.down("md")]: {
-                    fontSize: "18px !important",
-                  },
-                },
-              })}
-            >
+            </StyledLeftHeadingName>
+            <StyledLeftHeadingProfes variant="h2">
               <FaChevronRight className="chevronRight" />
               {intl.formatMessage({ id: "home.myWork" })}
-            </Typography>
+            </StyledLeftHeadingProfes>
           </Box>
-          <Box
-            sx={(theme) => ({
-              "& p": {
-                [theme.breakpoints.down("lg")]: {
-                  fontSize: "16px !important",
-                },
-                [theme.breakpoints.down("md")]: {
-                  fontSize: "14px !important",
-                },
-              },
-            })}
-          >
-            <Typography variant="body2" className={classes.leftHeaderP}>
+          <StyledLeftArticleContainer>
+            <StyledLeftArticlePrimaryText variant="body2">
               // {intl.formatMessage({ id: "home.posTitleOne" })}
-            </Typography>
-            <Typography variant="body2" className={classes.leftHeaderP}>
+            </StyledLeftArticlePrimaryText>
+            <StyledLeftArticlePrimaryText variant="body2">
               // {intl.formatMessage({ id: "home.posTitleTwo" })}
-            </Typography>
-            <Typography variant="body2" className={classes.mobileLeftHeaderP}>
+            </StyledLeftArticlePrimaryText>
+            <StyledLeftArticlePrimaryTextMobile>
               // {intl.formatMessage({ id: "home.posTitleMobile" })}
-            </Typography>
+            </StyledLeftArticlePrimaryTextMobile>
 
             <Typography variant="body2">
-              <span className={classes.leftHeaderSpanOne}>const </span>
-              <span className={classes.leftHeaderSpanTwo}>githubLink</span>
-              <span className={classes.leftHeaderSpanThree}> = </span>
+              <StyledLeftArticlePurpleText variant="caption">
+                const{" "}
+              </StyledLeftArticlePurpleText>
+              <StyledLeftArticleGreen variant="caption">
+                githubLink
+              </StyledLeftArticleGreen>
+              <StyledLeftArticleWhite variant="caption">
+                {" "}
+                ={" "}
+              </StyledLeftArticleWhite>
               <span>
                 {" "}
-                <a
+                <StyledLeftArticleLinkMaxScreen
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/katzohub/Portfolio/tree/main/vite-project/src/components"
-                  className={classes.leftHeaderSpanFour}
                 >
                   “https://github.com/gameSnake”
-                </a>
-                <a
+                </StyledLeftArticleLinkMaxScreen>
+                <StyledLeftArticleLinkMinScreen
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/katzohub"
-                  className={classes.leftHeaderSpanFourMobile}
                 >
                   “https://github.com/katzohub”
-                </a>
+                </StyledLeftArticleLinkMinScreen>
               </span>
             </Typography>
-          </Box>
-          <Box
-            sx={(theme) => ({
-              display: "flex",
-              flexDirection: "column",
-              gap: "25px 0",
-              position: "relative",
-              top: "-10px",
-              [theme.breakpoints.down("lg")]: {
-                top: "0px",
-              },
-            })}
-          >
+          </StyledLeftArticleContainer>
+          <StyledLeftContainerBtns>
             <BigButton myBtnFn={openSnakeGame}>
               {intl.formatMessage({ id: "home.startGameBtn" })}
             </BigButton>
@@ -135,9 +114,9 @@ const LeftSectionHome: FC = () => {
                 {intl.formatMessage({ id: "home.download.cv" })}
               </BigButton>
             </Link>
-          </Box>
-        </Box>
-      </Box>
+          </StyledLeftContainerBtns>
+        </StyledLeftWrapper>
+      </StyledLeftContainer>
     </>
   );
 };

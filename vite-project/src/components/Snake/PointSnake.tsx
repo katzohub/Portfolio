@@ -6,7 +6,6 @@ const PointSnake: FC<PointSnakeProps> = ({ index, candyCount }) => {
 
   return (
     <svg
-      // style={{ flex: "0 0 auto" }}
       xmlns="http://www.w3.org/2000/svg"
       width="17"
       height="16"

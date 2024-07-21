@@ -6,7 +6,18 @@ import {
   FaCaretRight,
   FaCaretDown,
 } from "react-icons/fa";
-import usePageStyles from "../../styles/style";
+import {
+  StyledSnakeArrowsContainer,
+  StyledSnakeArrowUp,
+  StyledSnakeArrowsWrapp,
+  StyledSnakeArrowLeft,
+  StyledSnakeArrowDown,
+  StyledSnakeArrowRight,
+  StyledSnakeArrowsWrapper,
+  StyledSnakeBigBtnContainer,
+  StyledSnakeBigBtnLeftWrapp,
+  StyledSnakeBigBtnLeftPosition,
+} from "./StyledSnake";
 import { BigButton } from "../../components/Buttons";
 
 type KeyboardSnakeProps = {
@@ -18,48 +29,45 @@ const KeyboardSnake: FC<KeyboardSnakeProps> = ({
   isFunctionKeyboard,
   handleButtonClick,
 }) => {
-  const classes = usePageStyles();
   return (
     <>
       {isFunctionKeyboard ? (
         <>
-          <Box className={classes.snakeArrowContainer}>
-            <div className={classes.snakeUp}>
+          <StyledSnakeArrowsContainer>
+            <StyledSnakeArrowUp>
               <FaCaretUp />
-            </div>
-            <Box className={classes.snakeArrowWrap}>
-              <div className={classes.snakeArrowLeft}>
+            </StyledSnakeArrowUp>
+            <StyledSnakeArrowsWrapp>
+              <StyledSnakeArrowLeft>
                 <FaCaretLeft />
-              </div>
-              <div className={classes.snakeArrowDown}>
+              </StyledSnakeArrowLeft>
+              <StyledSnakeArrowDown>
                 <FaCaretDown />
-              </div>
-              <div className={classes.snakeArrowRight}>
+              </StyledSnakeArrowDown>
+              <StyledSnakeArrowRight>
                 <FaCaretRight />
-              </div>
-            </Box>
-          </Box>
+              </StyledSnakeArrowRight>
+            </StyledSnakeArrowsWrapp>
+          </StyledSnakeArrowsContainer>
         </>
       ) : (
         <Box>
-          <Box className={classes.snakeArrowContainer}>
-            <Box
-              sx={{ position: "relative", top: "0px" }}
+          <StyledSnakeArrowsWrapper>
+            <StyledSnakeBigBtnContainer
               onClick={() => handleButtonClick && handleButtonClick("up")}
             >
               <BigButton>
                 <FaCaretUp />
               </BigButton>
-            </Box>
-            <Box className={classes.snakeArrowWrap}>
-              <Box
-                sx={{ position: "relative", left: "0px" }}
+            </StyledSnakeBigBtnContainer>
+            <StyledSnakeBigBtnLeftWrapp>
+              <StyledSnakeBigBtnLeftPosition
                 onClick={() => handleButtonClick && handleButtonClick("left")}
               >
                 <BigButton>
                   <FaCaretLeft />
                 </BigButton>
-              </Box>
+              </StyledSnakeBigBtnLeftPosition>
               <Box
                 onClick={() => handleButtonClick && handleButtonClick("down")}
               >
@@ -75,8 +83,8 @@ const KeyboardSnake: FC<KeyboardSnakeProps> = ({
                   <FaCaretRight />
                 </BigButton>
               </Box>
-            </Box>
-          </Box>
+            </StyledSnakeBigBtnLeftWrapp>
+          </StyledSnakeArrowsWrapper>
         </Box>
       )}
     </>

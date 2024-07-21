@@ -21,7 +21,10 @@ export const StyledComponentsContainer = styled(Box)(({ theme }) => ({
   overflowY: "hidden",
   [theme.breakpoints.down("md")]: {
     overflowY: "auto !important",
-    minHeight: "80dvh",
+    height: "calc(100dvh - 56px - 56px)",
+    marginTop: "56px",
+    marginBottom: "56px",
+    position: "relative",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
@@ -33,6 +36,8 @@ export const StyledComponentsWrapp = styled(Box)(({ theme }) => ({
   display: "flex",
   [theme.breakpoints.down("md")]: {
     display: "block",
+    position: "relative",
+    top: "-56px",
   },
 }));
 export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({

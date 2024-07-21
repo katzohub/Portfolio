@@ -39,7 +39,7 @@ export const StyledContainerHome = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     width: "100%",
-    height: "auto",
+
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",

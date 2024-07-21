@@ -32,18 +32,14 @@ const SkillsContent = ({
     <StyledSkillsContainer>
       <StyledSkillsWrapp>
         <StyledSkillsWrapper>
-          <StyledSkillsGridContainer container spacing={2}>
+          <StyledSkillsGridContainer>
             {filteredProjects.map((project) => (
-              <StyledSkillsGridWrapper item xs={12} md={4} key={project.id}>
+              <StyledSkillsGridWrapper item key={project.id}>
                 <StyledSkillsCard>
                   <img src={project.img} alt={project.nameProject} />
                   <StyledSkillCardHeading>
-                    <h2 className="heading-card">
-                      {intl.formatMessage({ id: project.nameProject })}
-                    </h2>
-                    <p className="description-card">
-                      {intl.formatMessage({ id: project.detailProject })}
-                    </p>
+                    <h2>{intl.formatMessage({ id: project.nameProject })}</h2>
+                    <p>{intl.formatMessage({ id: project.detailProject })}</p>
 
                     <StyledSkillCardContainer>
                       {project.icon &&

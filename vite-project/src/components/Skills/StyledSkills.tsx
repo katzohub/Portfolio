@@ -75,18 +75,24 @@ export const StyledSkillsWrapp = styled(Box)(({ theme }) => ({
     overflowX: "hidden !important",
   },
 }));
-export const StyledSkillsWrapper = styled(Box)(() => ({
+export const StyledSkillsWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
-  padding: "0 10px",
-  margin: "0 10px",
+  paddingLeft: "22px",
+  [theme.breakpoints.down("md")]: {
+    paddingLeft: "17px",
+  },
 }));
 export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
   paddingBottom: "120px",
   position: "relative",
   left: "-8px",
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+  gridColumnGap: "12px",
+  gridRowGap: "12px",
   [theme.breakpoints.down("md")]: {
     marginBottom: "0px",
-    padding: "0 20px",
+    // padding: "0 20px",
   },
 }));
 export const StyledSkillsGridWrapp = styled(Grid)(({ theme }) => ({
@@ -100,6 +106,7 @@ export const StyledSkillsGridWrapp = styled(Grid)(({ theme }) => ({
 }));
 export const StyledSkillsGridWrapper = styled(Grid)(({ theme }) => ({
   position: "relative",
+
   [theme.breakpoints.down(800)]: {
     marginTop: "10px",
   },
@@ -110,6 +117,7 @@ export const StyledSkillsCard = styled(Box)(({ theme }) => ({
   background: theme.myColors.colorInCard,
   maxWidth: "100%",
   height: "420px",
+
   overflow: "hidden",
   [theme.breakpoints.down("md")]: {
     height: "350px",

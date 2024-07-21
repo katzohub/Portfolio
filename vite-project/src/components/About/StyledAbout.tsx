@@ -280,6 +280,7 @@ export const StyledAboutItemBtnNav = styled(ListItemButton)(({ theme }) => ({
 }));
 // Styled components for TemplateAbout
 // Display name for components
+
 StyledAboutContainer.displayName = "StyledAboutContainer";
 StyledAboutContainerTemplate.displayName = "StyledAboutContainerTemplate";
 StyledAboutWrappTemplate.displayName = "StyledAboutWrappTemplate";
@@ -296,3 +297,12 @@ StyledAboutTextOrange.displayName = "StyledAboutTextOrange";
 StyledAboutNextText.displayName = "StyledAboutNextText";
 StyledAboutCodeWrapper.displayName = "StyledAboutCodeWrapper";
 StyledAboutImgContainer.displayName = "StyledAboutImgContainer";
+StyledAboutTemplateContainer.displayName = "StyledAboutTemplateContainer";
+StyledAboutSidebarContainer.displayName = "StyledAboutSidebarContainer";
+StyledAboutIconBio.displayName = "StyledAboutIconBio";
+StyledAboutIconInterest.displayName = "StyledAboutIconInterest";
+StyledAboutItemBtn.displayName = "StyledAboutItemBtn";
+StyledAboutIconEducation.displayName = "StyledAboutIconEducation";
+StyledAboutBtnText.displayName = "StyledAboutBtnText";
+StyledAboutCollapseList.displayName = "StyledAboutCollapseList";
+StyledAboutItemBtnNav.displayName = "StyledAboutItemBtnNav";

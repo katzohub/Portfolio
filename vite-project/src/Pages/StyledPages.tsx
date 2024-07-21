@@ -179,3 +179,15 @@ export const StyledBtnThanks = styled(Button)(({ theme }) => ({
   gap: "10px !important",
   marginTop: "25px !important",
 }));
+StyledContainerError.displayName = "StyledContainerError";
+StyledGeneralTextError.displayName = "StyledGeneralTextError";
+StyledPrimaryTextError.displayName = "StyledPrimaryTextError";
+StyledContainerHome.displayName = "StyledContainerHome";
+StyledWrappHome.displayName = "StyledWrappHome";
+StyledWrapperLeftHome.displayName = "StyledWrapperLeftHome";
+StyledWrapperRightHome.displayName = "StyledWrapperRightHome";
+StyledGeneralContainer.displayName = "StyledGeneralContainer";
+StyledContainerGameSnake.displayName = "StyledContainerGameSnake";
+StyledContainerThanks.displayName = "StyledContainerThanks";
+StyledHeadingThanks.displayName = "StyledHeadingThanks";
+StyledBtnThanks.displayName = "StyledBtnThanks";

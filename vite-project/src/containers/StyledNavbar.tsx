@@ -76,3 +76,6 @@ export const StyledMenuIcon = styled(MenuIcon)(({ theme }) => ({
     },
   },
 }));
+StyledNavContainer.displayName = "StyledNavContainer";
+StyledNavLink.displayName = "StyledNavLink";
+StyledMenuIcon.displayName = "StyledMenuIcon";

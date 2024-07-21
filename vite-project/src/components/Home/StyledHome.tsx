@@ -554,3 +554,45 @@ export const StyledLeftContainerBtns = styled(Box)(({ theme }) => ({
     top: "0px",
   },
 }));
+StyledContactMinWidth.displayName = "StyledContactMinWidth";
+StyledContactMaxWidth.displayName = "StyledContactMaxWidth";
+ContainerSnake.displayName = "ContainerSnake";
+StyledMiniCircleWrapper.displayName = "StyledMiniCircleWrapper";
+StyledSnakeGameArea.displayName = "StyledSnakeGameArea";
+StyledSnakeScreenLogo.displayName = "StyledSnakeScreenLogo";
+StyledStartGameBtn.displayName = "StyledStartGameBtn";
+StyledTextStartGame.displayName = "StyledTextStartGame";
+StyledContainerContinue.displayName = "StyledContainerContinue";
+StyledTextContinue.displayName = "StyledTextContinue";
+StyledContainerStart.displayName = "StyledContainerStart";
+StyledContainerGameOver.displayName = "StyledContainerGameOver";
+StyledTextGameOver.displayName = "StyledTextGameOver";
+StyledContainerStartGame.displayName = "StyledContainerStartGame";
+StyledSnakeBoxSettingMinScreen.displayName = "StyledSnakeBoxSettingMinScreen";
+StyledSnakeBoxSettingMaxScreen.displayName = "StyledSnakeBoxSettingMaxScreen";
+StyledSnakeBoxSetting.displayName = "StyledSnakeBoxSetting";
+StyledSnakeArrowTextFirst.displayName = "StyledSnakeArrowTextFirst";
+StyledSnakeArrowTextSecond.displayName = "StyledSnakeArrowTextSecond";
+StyledSnakeContainerFoodMinWidth.displayName =
+  "StyledSnakeContainerFoodMinWidth";
+StyledSnakeContainerFoodMaxWidth.displayName =
+  "StyledSnakeContainerFoodMaxWidth";
+StyledSnakeContainerFood.displayName = "StyledSnakeContainerFood";
+StyledSnakeFoodLeft.displayName = "StyledSnakeFoodLeft";
+StyledSnakePointContainer.displayName = "StyledSnakePointContainer";
+StyledLeftContainer.displayName = "StyledLeftContainer";
+StyledLeftWrapp.displayName = "StyledLeftWrapp";
+StyledLeftWrapper.displayName = "StyledLeftWrapper";
+StyledLeftHeadingGeneral.displayName = "StyledLeftHeadingGeneral";
+StyledLeftHeadingName.displayName = "StyledLeftHeadingName";
+StyledLeftHeadingProfes.displayName = "StyledLeftHeadingProfes";
+StyledLeftArticleContainer.displayName = "StyledLeftArticleContainer";
+StyledLeftArticlePrimaryText.displayName = "StyledLeftArticlePrimaryText";
+StyledLeftArticlePrimaryTextMobile.displayName =
+  "StyledLeftArticlePrimaryTextMobile";
+StyledLeftArticlePurpleText.displayName = "StyledLeftArticlePurpleText";
+StyledLeftArticleGreen.displayName = "StyledLeftArticleGreen";
+StyledLeftArticleWhite.displayName = "StyledLeftArticleWhite";
+StyledLeftArticleLinkMaxScreen.displayName = "StyledLeftArticleLinkMaxScreen";
+StyledLeftArticleLinkMinScreen.displayName = "StyledLeftArticleLinkMinScreen";
+StyledLeftContainerBtns.displayName = "StyledLeftContainerBtns";

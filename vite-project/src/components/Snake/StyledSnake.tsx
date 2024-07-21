@@ -87,3 +87,13 @@ export const StyledSnakeBigBtnLeftPosition = styled(Box)(() => ({
   position: "relative",
   left: "0px",
 }));
+StyledSnakeArrowsContainer.displayName = "StyledSnakeArrowsContainer";
+StyledSnakeArrowUp.displayName = "StyledSnakeArrowUp";
+StyledSnakeArrowsWrapp.displayName = "StyledSnakeArrowsWrapp";
+StyledSnakeArrowLeft.displayName = "StyledSnakeArrowLeft";
+StyledSnakeArrowDown.displayName = "StyledSnakeArrowDown";
+StyledSnakeArrowRight.displayName = "StyledSnakeArrowRight";
+StyledSnakeArrowsWrapper.displayName = "StyledSnakeArrowsWrapper";
+StyledSnakeBigBtnContainer.displayName = "StyledSnakeBigBtnContainer";
+StyledSnakeBigBtnLeftWrapp.displayName = "StyledSnakeBigBtnLeftWrapp";
+StyledSnakeBigBtnLeftPosition.displayName = "StyledSnakeBigBtnLeftPosition";

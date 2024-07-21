@@ -165,6 +165,16 @@ export const StyledSkillCardBtn = styled(Button)(({ theme }) => ({
   "&:hover": {
     transform: "scale(0.95)",
   },
+  "& a": {
+    color: theme.myColors.whiteColor,
+    fontFamily: "Fira Code",
+    fontSize: "14px",
+    fontStyle: "normal",
+    fontWeight: 450,
+    lineHeight: "normal",
+    textDecoration: "none",
+    textTransform: "lowercase",
+  },
 }));
 // Styled SkillsSidebar
 export const StyledSkillsRightForm = styled(FormGroup)(({ theme }) => ({
@@ -220,3 +230,22 @@ export const StyledSkillsBoxDividerTop = styled(Divider)(({ theme }) => ({
     width: "100vw !important",
   },
 }));
+StyledContainerAlert.displayName = "StyledContainerAlert";
+StyledSkillsContainer.displayName = "StyledSkillsContainer";
+StyledSkillsWrapp.displayName = "StyledSkillsWrapp";
+StyledSkillsWrapper.displayName = "StyledSkillsWrapper";
+StyledSkillsGridContainer.displayName = "StyledSkillsGridContainer";
+StyledSkillsGridWrapp.displayName = "StyledSkillsGridWrapp";
+StyledSkillsGridWrapper.displayName = "StyledSkillsGridWrapper";
+StyledSkillsCard.displayName = "StyledSkillsCard";
+StyledSkillCardHeading.displayName = "StyledSkillCardHeading";
+StyledSkillCardContainer.displayName = "StyledSkillCardContainer";
+StyledSkillCardIconWrap.displayName = "StyledSkillCardIconWrap";
+StyledSkillCardBtn.displayName = "StyledSkillCardBtn";
+StyledSkillsRightForm.displayName = "StyledSkillsRightForm";
+StyledSkillsLabel.displayName = "StyledSkillsLabel";
+StyledSkillsCheckbox.displayName = "StyledSkillsCheckbox";
+StyledSkillsListItem.displayName = "StyledSkillsListItem";
+StyledCategoryIcon.displayName = "StyledCategoryIcon";
+StyledSkillsRowLabel.displayName = "StyledSkillsRowLabel";
+StyledSkillsBoxDividerTop.displayName = "StyledSkillsBoxDividerTop";

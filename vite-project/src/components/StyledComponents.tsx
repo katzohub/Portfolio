@@ -328,3 +328,29 @@ export const StyledRowWithin = styled(Typography)(({ theme }) => ({
     display: "none",
   },
 }));
+StyledComponentsContainer.displayName = "StyledComponentsContainer";
+StyledComponentsWrapp.displayName = "StyledComponentsWrapp";
+StyledComponentsWrapper.displayName = "StyledComponentsWrapper";
+StyledComponentsDivider.displayName = "StyledComponentsDivider";
+StyledComponentsGeneralContainer.displayName =
+  "StyledComponentsGeneralContainer";
+StyledComponentsGeneralBoxHeading.displayName =
+  "StyledComponentsGeneralBoxHeading";
+StyledComponentsGeneralBoxText.displayName = "StyledComponentsGeneralBoxText";
+StyledComponentsGeneralContainerMinWidth.displayName =
+  "StyledComponentsGeneralContainerMinWidth";
+StyledDrawer.displayName = "StyledDrawer";
+StyledDrawerListContainer.displayName = "StyledDrawerListContainer";
+StyledDrawerListItems.displayName = "StyledDrawerListItems";
+StyledDrawerIcenBtn.displayName = "StyledDrawerIcenBtn";
+StyledNavigationContianer.displayName = "StyledNavigationContianer";
+StyledNavigationTopWrapp.displayName = "StyledNavigationTopWrapp";
+StyledNavigationIconMinScreen.displayName = "StyledNavigationIconMinScreen";
+StyledNavigationLinkMinScreen.displayName = "StyledNavigationLinkMinScreen";
+StyledSwitchBtnContianer.displayName = "StyledSwitchBtnContianer";
+StyledSwitchBtnWrapp.displayName = "StyledSwitchBtnWrapp";
+StyledSwitchLanguage.displayName = "StyledSwitchLanguage";
+StyledLightModeIcon.displayName = "StyledLightModeIcon";
+StyledDarkModeIcon.displayName = "StyledDarkModeIcon";
+StyledRow.displayName = "StyledRow";
+StyledRowWithin.displayName = "StyledRowWithin";

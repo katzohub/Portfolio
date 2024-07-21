@@ -294,3 +294,20 @@ export const StyledTextPurple = styled(Typography)(({ theme }) => ({
     fontSize: "11px",
   },
 }));
+StyledContactBtnContainer.displayName = "StyledContactBtnContainer";
+StyledContactDivider.displayName = "StyledContactDivider";
+StyledContactBtnOpenFind.displayName = "StyledContactBtnOpenFind";
+StyledContactListItem.displayName = "StyledContactListItem";
+StyledShareIcon.displayName = "StyledShareIcon";
+StyledLeftContactBtn.displayName = "StyledLeftContactBtn";
+StyledNavigateText.displayName = "StyledNavigateText";
+StyledTextField.displayName = "StyledTextField";
+StyledContactFormContainer.displayName = "StyledContactFormContainer";
+StyledContactFormWrap.displayName = "StyledContactFormWrap";
+StyledContactFormDivider.displayName = "StyledContactFormDivider";
+StyledSubmitFormBtn.displayName = "StyledSubmitFormBtn";
+StyledFormTextContainer.displayName = "StyledFormTextContainer";
+StyledTextGray.displayName = "StyledTextGray";
+StyledTextPink.displayName = "StyledTextPink";
+StyledTextOrange.displayName = "StyledTextOrange";
+StyledTextPurple.displayName = "StyledTextPurple";

@@ -1,6 +1,5 @@
 import dataSkills from "../../constants/DataSkills";
 import { CheckedStateProps } from "../../types";
-import usePageStyles from "../../styles/stylePages";
 import {
   StyledSkillsContainer,
   StyledSkillsWrapp,
@@ -28,7 +27,7 @@ const SkillsContent = ({
           ([key, value]) => value && project.technologies.includes(key)
         )
       );
-  const classes = usePageStyles();
+
   return (
     <StyledSkillsContainer>
       <StyledSkillsWrapp>
@@ -55,11 +54,7 @@ const SkillsContent = ({
                         ))}
                     </StyledSkillCardContainer>
                     <StyledSkillCardBtn variant="contained">
-                      <a
-                        href={project.openProject}
-                        target="_blank"
-                        className={classes.skillCardLink}
-                      >
+                      <a href={project.openProject} target="_blank">
                         View-Project
                       </a>
                     </StyledSkillCardBtn>

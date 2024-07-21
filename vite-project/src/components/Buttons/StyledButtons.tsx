@@ -208,3 +208,16 @@ export const StyledListItemContainer = styled(ListItem)(({ theme }) => ({
 }));
 // Display name for components
 StyledBigButton.displayName = "StyledBigButton";
+StyledListButtonsCollapse.displayName = "StyledListButtonsCollapse";
+StyledBtnText.displayName = "StyledBtnText";
+StyledCollapseAll.displayName = "StyledCollapseAll";
+StyledCollapseButton.displayName = "StyledCollapseButton";
+StyledEmailIcon.displayName = "StyledEmailIcon";
+StyledPhoneButton.displayName = "StyledPhoneButton";
+StyledIconPhone.displayName = "StyledIconPhone";
+StyledBtnInstagram.displayName = "StyledBtnInstagram";
+StyledTextInstagram.displayName = "StyledTextInstagram";
+StyledTextNavigate.displayName = "StyledTextNavigate";
+StyledTextNavigateContact.displayName = "StyledTextNavigateContact";
+StyledListDropDown.displayName = "StyledListDropDown";
+StyledListItemContainer.displayName = "StyledListItemContainer";

@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect, useRef, useCallback } from "react";
 import { PointSnake, KeyboardSnake } from "../Snake";
 import { useIntl } from "react-intl";
-import MiniCircle from "../../assets/svg/MiniCircle";
+import { MiniCircle } from "../../assets/svg";
 import { Box, Typography } from "@mui/material";
 import {
   BackroundGlassSnakeLeft,

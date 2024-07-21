@@ -5,8 +5,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import usePageStyles from "../styles/style";
 import SwitchButton from "./SwitchButton";
-import AmericaFlag from "../assets/svg/AmericaFlag";
-import SlovakiaFlag from "../assets/svg/SlovakiaFlag";
+import { AmericaFlag, SlovakiaFlag } from "../assets/svg";
 
 const SwitchContainer: FC = () => {
   const classes = usePageStyles();

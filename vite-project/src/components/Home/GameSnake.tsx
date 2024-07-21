@@ -165,8 +165,6 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   };
 
   const handleButtonClick = (direction: string) => {
-    console.log("clicked id", direction);
-
     handleDirectionChange(direction);
   };
 

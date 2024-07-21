@@ -22,7 +22,6 @@ const AboutMe: FC = () => {
   const intl = useIntl();
 
   const handleClickContact = () => {
-    console.log("click");
     setOpenContact(!openContact);
     setActiveContactButton((prevState) =>
       prevState === "contact" ? "" : "contact"

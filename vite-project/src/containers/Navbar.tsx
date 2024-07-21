@@ -35,11 +35,9 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
 
   const onSelectItem = (path: string) => {
     if (path === pathname) {
-      console.log("run handleDrawerClose");
       handleDrawerClose();
       return;
     }
-    console.log("run navigate");
     navigate(path);
   };
   const navigateFullSCreen = (path: string) => {

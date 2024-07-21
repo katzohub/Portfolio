@@ -35,7 +35,6 @@ const LeftSectionHome: FC = () => {
   const openSnakeGame = () => {
     window.open("/game_snake", "_blank", "noopener,noreferrer");
   };
-  console.log(language);
 
   return (
     <>

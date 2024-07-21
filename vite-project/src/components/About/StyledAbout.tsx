@@ -95,9 +95,14 @@ export const StyledAboutContainerRight = styled(Box)(({ theme }) => ({
   justifyContent: "start !important",
   paddingTop: "15px !important",
   alignContent: "center !important",
+
   [theme.breakpoints.down("lg")]: {
-    paddingTop: "30p !important",
+    paddingTop: "30px !important",
   },
+  [theme.breakpoints.down("md")]: {
+    paddingTop: "60px !important",
+  },
+
   [theme.breakpoints.down("sm")]: {
     padding: "120px 10px 0 10px !important",
   },

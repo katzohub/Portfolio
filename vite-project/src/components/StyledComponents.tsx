@@ -47,6 +47,24 @@ export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({
     borderRight: `0px solid transparent !important`,
   },
 }));
+export const StyledComponentsContentContainer = styled(Box)(({ theme }) => ({
+  width: "100vw",
+  height: "56px",
+  fontFamily: "Fira Code !important",
+  display: "flex",
+  justifyContent: "center",
+  color: `${theme.myColors.colorFFF} !important`,
+  fontSize: "16px !important",
+  fontStyle: "normal",
+  position: "relative",
+  fontWeight: 400,
+  [theme.breakpoints.down("md")]: {
+    width: "auto !important",
+    borderBottom: `1px solid transparent`,
+    left: "0px",
+    display: "none",
+  },
+}));
 export const StyledComponentsDivider = styled(Box)(({ theme }) => ({
   position: "absolute",
   right: "0px",
@@ -354,3 +372,5 @@ StyledLightModeIcon.displayName = "StyledLightModeIcon";
 StyledDarkModeIcon.displayName = "StyledDarkModeIcon";
 StyledRow.displayName = "StyledRow";
 StyledRowWithin.displayName = "StyledRowWithin";
+StyledComponentsContentContainer.displayName =
+  "StyledComponentsContentContainer";

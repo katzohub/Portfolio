@@ -55,7 +55,7 @@ const SkillsContent = ({
                     </StyledSkillCardContainer>
                     <StyledSkillCardBtn variant="contained">
                       <a href={project.openProject} target="_blank">
-                        View-Project
+                        {intl.formatMessage({ id: "project.viewProject" })}
                       </a>
                     </StyledSkillCardBtn>
                   </StyledSkillCardHeading>

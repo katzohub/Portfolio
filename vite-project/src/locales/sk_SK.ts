@@ -112,7 +112,7 @@ export default {
     "Môj prvý projekt s REACT ktorý nedopadol veľmi dobre...",
   "project.nameNotesText": "Môj ďalší projekt s REACT",
   "project.nameMarkPlaceText": "Môj ďalší mini projekt s REACT",
-  "project.button": "pozrieť-projekt",
+  "project.viewProject": "pozrieť-projekt",
   /*05.Contact-me*/
   "contact.LeftCard": "kontakt",
   "contact.contact": "_kontakt",
@@ -120,6 +120,7 @@ export default {
   "contact.findMeIn": "tiež_ma_nájdete",
   "contact.instagramAccount": "Instagram profil",
   "contact.twitchAccount": "X profil",
+  "contact.redditAccount": "Reddit profil",
   "contact.name": "Meno",
   "contact.email": "Email",
   "contact.message": "Správa",
@@ -131,4 +132,7 @@ export default {
   "thankYou.thankYouText":
     "Vaša správa bola prijatá. Odpoveď dostanete čoskoro!",
   "thankYou.thankYouBtn": "poslať-novú-správu",
+  /*07.Not found Message*/
+  "notFound.generalText": "404 Chyba",
+  "notFound.primaryText": "Na tejto stránke nič nie je!",
 };

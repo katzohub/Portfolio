@@ -129,7 +129,11 @@ const ButtonCollapse: FC<ContactLeftProps> = ({
               >
                 <StyledBtnInstagram>
                   <FaReddit style={{ fontSize: "24px" }} />
-                  <StyledBtnText primary="Reddit" />
+                  <StyledBtnText
+                    primary={intl.formatMessage({
+                      id: "contact.redditAccount",
+                    })}
+                  />
                 </StyledBtnInstagram>
               </StyledTextNavigate>
             }

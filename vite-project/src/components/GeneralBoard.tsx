@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-import { Box } from "@mui/material";
 import {
   StyledComponentsContainer,
   StyledComponentsWrapp,
@@ -9,6 +8,7 @@ import {
   StyledComponentsGeneralBoxHeading,
   StyledComponentsGeneralBoxText,
   StyledComponentsGeneralContainerMinWidth,
+  StyledComponentsContentContainer,
 } from "./StyledComponents";
 import { useIntl } from "react-intl";
 
@@ -39,26 +39,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
             aria-labelledby="nested-list-subheader"
           >
             <StyledComponentsDivider></StyledComponentsDivider>
-            <Box
-              sx={(theme) => ({
-                width: "100vw",
-                height: "56px",
-                fontFamily: "Fira Code !important",
-                display: "flex",
-                justifyContent: "center",
-                color: `${theme.myColors.colorFFF} !important`,
-                fontSize: "16px !important",
-                fontStyle: "normal",
-                position: "relative",
-                fontWeight: 400,
-                [theme.breakpoints.down("md")]: {
-                  width: "auto !important",
-                  borderBottom: `1px solid transparent`,
-                  left: "0px",
-                  display: "none",
-                },
-              })}
-            >
+            <StyledComponentsContentContainer>
               <StyledComponentsGeneralContainer>
                 <StyledComponentsGeneralBoxHeading>
                   {intl.formatMessage({ id: generalHeading })}
@@ -68,7 +49,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
                   {intl.formatMessage({ id: generalText })}
                 </StyledComponentsGeneralBoxText>
               </StyledComponentsGeneralContainer>
-            </Box>
+            </StyledComponentsContentContainer>
             <StyledComponentsGeneralContainerMinWidth
               id="nested-list-subheader"
               disableGutters

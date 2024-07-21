@@ -108,13 +108,15 @@ export default {
   "project.nameDatabaseText": "My first react project is not very good...",
   "project.nameNotesText": "My next project with react",
   "project.nameMarkPlaceText": "My next mini project with react",
-  "project.button": "view-project",
+  "project.viewProject": "view-project",
+
   /*05.Contact-me*/
   "contact.LeftCard": "contact",
   "contact.contact": "_contact",
   "contact.contactName": "_contact_me",
   "contact.instagramAccount": "Instagram account",
   "contact.twitchAccount": "X profile",
+  "contact.redditAccount": "Reddit profile",
   "contact.findMeIn": "find-me-also-in",
   "contact.name": "Name",
   "contact.email": "Email",
@@ -127,4 +129,7 @@ export default {
   "thankYou.thankYouText":
     "Your message has been accepted. You will recieve answer really soon!",
   "thankYou.thankYouBtn": "send-new-message",
+  /*07.Not found Message*/
+  "notFound.generalText": "404 Not Found",
+  "notFound.primaryText": "The page that does not exist!",
 };

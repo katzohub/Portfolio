@@ -92,7 +92,6 @@ export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
   gridRowGap: "12px",
   [theme.breakpoints.down("md")]: {
     marginBottom: "0px",
-    // padding: "0 20px",
   },
 }));
 export const StyledSkillsGridWrapp = styled(Grid)(({ theme }) => ({
@@ -171,7 +170,7 @@ export const StyledSkillCardBtn = styled(Button)(({ theme }) => ({
   transition: "transform 0.3s ease !important",
   background: `${theme.myColors.colorLinie} !important`,
   "&:hover": {
-    transform: "scale(0.95)",
+    transform: "scale(1.03)",
   },
   "& a": {
     color: theme.myColors.whiteColor,

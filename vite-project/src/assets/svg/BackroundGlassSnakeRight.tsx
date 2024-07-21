@@ -13,16 +13,18 @@ const BackroundGlassSnakeRight = () => {
           position: "absolute",
           background: theme.myColors.colorCircleRight,
           filter: "blur(174px)",
-          bottom: -120,
+          bottom: -70,
           right: -70,
 
           zIndex: "-1 !important",
           [theme.breakpoints.down("lg")]: {
-            bottom: -25,
+            bottom: -55,
             right: -70,
           },
           [theme.breakpoints.down("md")]: {
-            bottom: 425,
+            width: 300,
+            height: 300,
+            bottom: -30,
             right: -170,
           },
           [theme.breakpoints.down("sm")]: {

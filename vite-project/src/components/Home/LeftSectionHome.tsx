@@ -13,7 +13,6 @@ import {
   StyledLeftArticlePurpleText,
   StyledLeftArticleGreen,
   StyledLeftArticleWhite,
-  StyledLeftArticleLinkMaxScreen,
   StyledLeftArticleLinkMinScreen,
   StyledLeftContainerBtns,
 } from "./StyledHome";
@@ -60,10 +59,8 @@ const LeftSectionHome: FC = () => {
             <StyledLeftArticlePrimaryText variant="body2">
               // {intl.formatMessage({ id: "home.posTitleOne" })}
             </StyledLeftArticlePrimaryText>
-            <StyledLeftArticlePrimaryText variant="body2">
-              // {intl.formatMessage({ id: "home.posTitleTwo" })}
-            </StyledLeftArticlePrimaryText>
-            <StyledLeftArticlePrimaryTextMobile>
+
+            <StyledLeftArticlePrimaryTextMobile variant="body2">
               // {intl.formatMessage({ id: "home.posTitleMobile" })}
             </StyledLeftArticlePrimaryTextMobile>
 
@@ -79,14 +76,6 @@ const LeftSectionHome: FC = () => {
                 ={" "}
               </StyledLeftArticleWhite>
               <span>
-                {" "}
-                <StyledLeftArticleLinkMaxScreen
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/katzohub/Portfolio/tree/main/vite-project/src/components"
-                >
-                  “https://github.com/gameSnake”
-                </StyledLeftArticleLinkMaxScreen>
                 <StyledLeftArticleLinkMinScreen
                   target="_blank"
                   rel="noopener noreferrer"

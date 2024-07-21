@@ -28,7 +28,7 @@ export const StyledContainerHome = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("lg")]: {
     display: "flex",
-    height: "100dvh",
+    minheight: "100dvh",
     flexDirection: "column",
 
     alignItems: "center",
@@ -63,18 +63,14 @@ export const StyledWrappHome = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("lg")]: {
     flexDirection: "column",
     position: "relative",
-
-    margin: "0px 0px",
-    padding: "0px",
     alignItems: "center",
-    alignContent: "center",
-    justifyContent: "center",
-    gap: "80px 0",
     height: "100%",
   },
   [theme.breakpoints.down("md")]: {
     top: "0px",
     height: "100dvh",
+    alignContent: "center",
+    justifyContent: "center",
   },
   [theme.breakpoints.down("sm")]: {
     zIndex: "5",
@@ -105,6 +101,7 @@ export const StyledWrapperLeftHome = styled(Box)(({ theme }) => ({
     width: "100%",
     padding: "0 20px",
     marginBlockEnd: "0px",
+
     alignItems: "center",
     justifyContent: "center",
   },
@@ -118,6 +115,9 @@ export const StyledWrapperRightHome = styled(Box)(({ theme }) => ({
   position: "relative",
   [theme.breakpoints.down("xl")]: {
     width: "550px",
+  },
+  [theme.breakpoints.down("lg")]: {
+    paddingTop: "100px",
   },
 }));
 // Shared Page

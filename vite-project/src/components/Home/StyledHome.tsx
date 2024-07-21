@@ -468,9 +468,12 @@ export const StyledLeftArticlePrimaryText = styled(Typography)(({ theme }) => ({
 }));
 export const StyledLeftArticlePrimaryTextMobile = styled(Typography)(
   ({ theme }) => ({
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
+    fontFamily: "Fira Code !important",
+    color: `${theme.myColors.textColorNav} !important`,
+    fontStyle: "normal",
+    fontWeight: 450,
+    padding: "2.5px 0",
+    lineHeight: "normal",
     [theme.breakpoints.down("md")]: {
       fontSize: "14px !important",
       fontFamily: "Fira Code !important",
@@ -505,7 +508,8 @@ export const StyledLeftArticleWhite = styled(Typography)(({ theme }) => ({
   fontWeight: 500,
   lineHeight: "normal",
 }));
-export const StyledLeftArticleLinkMaxScreen = styled(Link)(({ theme }) => ({
+
+export const StyledLeftArticleLinkMinScreen = styled(Link)(({ theme }) => ({
   fontFamily: "Fira Code",
   color: theme.myColors.colorLightLinkHomeGithub,
   fontSize: "16px",
@@ -515,27 +519,14 @@ export const StyledLeftArticleLinkMaxScreen = styled(Link)(({ theme }) => ({
   borderBottom: "2px solid transparent",
   transition: "border-bottom 0.3s ease-in",
   textDecoration: "none",
-  "&:hover": {
-    borderBottom: `2px solid ${theme.myColors.colorLightLinkHomeGithub}`,
-  },
   [theme.breakpoints.down("md")]: {
-    display: "none",
-  },
-}));
-export const StyledLeftArticleLinkMinScreen = styled(Link)(({ theme }) => ({
-  textDecoration: "none",
-  [theme.breakpoints.up("md")]: {
-    display: "none",
-  },
-  [theme.breakpoints.down("md")]: {
+    textDecoration: "none",
     fontFamily: "Fira Code",
     color: theme.myColors.colorLightLinkHomeGithub,
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "normal",
-    borderBottom: "2px solid transparent",
-    transition: "border-bottom 0.3s ease-in",
   },
   "&:hover": {
     borderBottom: `2px solid ${theme.myColors.colorLightLinkHomeGithub}`,
@@ -590,6 +581,5 @@ StyledLeftArticlePrimaryTextMobile.displayName =
 StyledLeftArticlePurpleText.displayName = "StyledLeftArticlePurpleText";
 StyledLeftArticleGreen.displayName = "StyledLeftArticleGreen";
 StyledLeftArticleWhite.displayName = "StyledLeftArticleWhite";
-StyledLeftArticleLinkMaxScreen.displayName = "StyledLeftArticleLinkMaxScreen";
 StyledLeftArticleLinkMinScreen.displayName = "StyledLeftArticleLinkMinScreen";
 StyledLeftContainerBtns.displayName = "StyledLeftContainerBtns";

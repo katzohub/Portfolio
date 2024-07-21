@@ -65,7 +65,7 @@ export const StyledComponentsContentContainer = styled(Box)(({ theme }) => ({
   fontWeight: 400,
   [theme.breakpoints.down("md")]: {
     width: "auto !important",
-    borderBottom: `1px solid transparent`,
+    borderBottom: `2px solid transparent`,
     left: "0px",
     display: "none",
   },
@@ -75,7 +75,7 @@ export const StyledComponentsDivider = styled(Box)(({ theme }) => ({
   right: "0px",
   top: "0px",
   width: "2px",
-  border: `1px solid ${theme.myColors.colorLinie} !important`,
+  border: `0px solid ${theme.myColors.colorLinie} !important`,
   height: "100vh",
   zIndex: 999,
   background: theme.myColors.colorLinie,
@@ -211,10 +211,10 @@ export const StyledNavigationTopWrapp = styled(ListItemButton)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     borderRight: "none !important",
-    borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+    borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
 
     "&:last-child": {
-      borderBottom: `1px solid ${theme.myColors.colorLinie} !important`,
+      borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
       borderRight: "none",
       borderLeft: "none !important",
       position: "relative",
@@ -224,7 +224,7 @@ export const StyledNavigationTopWrapp = styled(ListItemButton)(({ theme }) => ({
       borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
     },
     "&:first-of-type": {
-      borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
+      borderTop: `2px solid ${theme.myColors.colorLinie} !important`,
     },
     "&:hover": {
       background: "rgba(255, 255, 255, 0.08) !important",

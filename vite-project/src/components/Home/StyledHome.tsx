@@ -10,7 +10,7 @@ const StyledContactMinWidth = styled(Box)(({ theme }) => ({
   padding: "30px 0",
   background: `linear-gradient(150deg, ${theme.myColors.backgroundAreaFirst} 1.7%, ${theme.myColors.backgroundAreaSecond} 81.82%)`,
   boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
-  border: `1px solid ${theme.myColors.borderTableSnake}`,
+  border: `2px solid ${theme.myColors.borderTableSnake}`,
   borderRadius: "8px",
   position: "relative",
   zIndex: "99",
@@ -30,7 +30,7 @@ const StyledContactMaxWidth = styled(Box)(({ theme }) => ({
   background:
     "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
   boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
-  border: `1px solid ${theme.myColors.borderTableSnake}`,
+  border: `2px solid ${theme.myColors.borderTableSnake}`,
   position: "relative",
   zIndex: "9999",
   [theme.breakpoints.down("md")]: {
@@ -512,11 +512,11 @@ export const StyledLeftArticleLinkMaxScreen = styled(Link)(({ theme }) => ({
   fontStyle: "normal",
   fontWeight: 500,
   lineHeight: "normal",
-  borderBottom: "1px solid transparent",
+  borderBottom: "2px solid transparent",
   transition: "border-bottom 0.3s ease-in",
   textDecoration: "none",
   "&:hover": {
-    borderBottom: `1px solid ${theme.myColors.colorLightLinkHomeGithub}`,
+    borderBottom: `2px solid ${theme.myColors.colorLightLinkHomeGithub}`,
   },
   [theme.breakpoints.down("md")]: {
     display: "none",
@@ -534,11 +534,11 @@ export const StyledLeftArticleLinkMinScreen = styled(Link)(({ theme }) => ({
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "normal",
-    borderBottom: "1px solid transparent",
+    borderBottom: "2px solid transparent",
     transition: "border-bottom 0.3s ease-in",
   },
   "&:hover": {
-    borderBottom: `1px solid ${theme.myColors.colorLightLinkHomeGithub}`,
+    borderBottom: `2px solid ${theme.myColors.colorLightLinkHomeGithub}`,
   },
 }));
 export const StyledLeftContainerBtns = styled(Box)(({ theme }) => ({

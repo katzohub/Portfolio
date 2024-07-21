@@ -69,6 +69,12 @@ export const StyledSnakeArrowsWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  position: "relative",
+  top: "-25px",
+  [theme.breakpoints.down("lg")]: {
+    position: "relative",
+    top: "7.5px",
+  },
   [theme.breakpoints.down("sm")]: {
     position: "relative",
     top: "-10px",

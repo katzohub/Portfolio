@@ -144,7 +144,7 @@ export const StyledContactFormContainer = styled(Box)(({ theme }) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingTop: "150px",
+    paddingTop: "142px",
     paddingBottom: "100px",
     overflowY: "auto",
     minHeight: "80dvh",

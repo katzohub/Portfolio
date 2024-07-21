@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { Box, Typography } from "@mui/material";
 import {
   StyledLeftContainer,
@@ -17,12 +17,13 @@ import {
   StyledLeftArticleLinkMinScreen,
   StyledLeftContainerBtns,
 } from "./StyledHome";
+import { LanguageContext } from "../../context/LanguageProvider";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { Link } from "@mui/material";
 import { BigButton } from "../../components/Buttons";
-import canvaSvk from "../../assets/canva_svk.pdf";
-// import canvaUs from "../assets/canva_svk.pdf";
+import canvaSvk from "../../assets/resume/canva_svk.pdf";
+import canvaUs from "../../assets/resume/canva_anj.pdf";
 import {
   BackroundGlassSnakeLeft,
   BackroundGlassSnakeRight,
@@ -30,9 +31,12 @@ import {
 
 const LeftSectionHome: FC = () => {
   const intl = useIntl();
+  const { language } = useContext(LanguageContext);
   const openSnakeGame = () => {
     window.open("/game_snake", "_blank", "noopener,noreferrer");
   };
+  console.log(language);
+
   return (
     <>
       <StyledLeftContainer>
@@ -100,11 +104,11 @@ const LeftSectionHome: FC = () => {
             </BigButton>
 
             <Link
-              href={canvaSvk}
+              href={language === "sk-SK" ? canvaSvk : canvaUs}
               download={"portfolio_design"}
               sx={(theme) => ({
                 color: `${theme.myColors.textColorNav} !important`,
-                textDecoration: "none",
+                textDecoration: "none !important",
                 "&:hover": {
                   color: `${theme.myColors.whiteColor} !important`,
                 },

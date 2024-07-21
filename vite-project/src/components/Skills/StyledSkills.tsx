@@ -55,7 +55,7 @@ export const StyledSkillsContainer = styled(Box)(({ theme }) => ({
 
 export const StyledSkillsWrapp = styled(Box)(({ theme }) => ({
   position: "relative",
-  top: "150px",
+  top: "122px",
   left: "0px",
   height: "83dvh",
   width: "100%",

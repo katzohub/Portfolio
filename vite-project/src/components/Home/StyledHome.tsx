@@ -518,7 +518,7 @@ export const StyledLeftArticleLinkMaxScreen = styled(Link)(({ theme }) => ({
   lineHeight: "normal",
   borderBottom: "1px solid transparent",
   transition: "border-bottom 0.3s ease-in",
-
+  textDecoration: "none",
   "&:hover": {
     borderBottom: `1px solid ${theme.myColors.colorLightLinkHomeGithub}`,
   },
@@ -527,6 +527,7 @@ export const StyledLeftArticleLinkMaxScreen = styled(Link)(({ theme }) => ({
   },
 }));
 export const StyledLeftArticleLinkMinScreen = styled(Link)(({ theme }) => ({
+  textDecoration: "none",
   [theme.breakpoints.up("md")]: {
     display: "none",
   },

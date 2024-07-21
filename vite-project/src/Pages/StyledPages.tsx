@@ -127,10 +127,10 @@ export const StyledGeneralContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.myColors.generalBackground,
 }));
 // SnakeGame Page
-export const StyledContainerGameSnake = styled(Box)(() => ({
+export const StyledContainerGameSnake = styled(Box)(({ theme }) => ({
   height: "100dvh",
   color: "#fff",
-  background: "#dab07a",
+  background: theme.myColors.generalBackground,
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

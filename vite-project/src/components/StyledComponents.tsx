@@ -200,7 +200,7 @@ export const StyledNavigationTopWrapp = styled(ListItemButton)(({ theme }) => ({
       color: `${theme.myColors.colorTextLink} !important`,
       borderBottom: `4px solid ${theme.myColors.colorBottomNavLink} !important`,
     },
-    "&:first-child": {
+    "&:first-of-type": {
       borderTop: `1px solid ${theme.myColors.colorLinie} !important`,
     },
     "&:hover": {
@@ -276,7 +276,7 @@ export const StyledNavigationLinkMinScreen = styled(Link)(({ theme }) => ({
       position: "static",
       textDecoration: "none !important",
     },
-    "&:first-child": {
+    "&:first-of-type": {
       borderLeft: `2px solid ${theme.myColors.colorLinie}`,
     },
   },

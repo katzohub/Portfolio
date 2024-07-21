@@ -1,7 +1,18 @@
-import { Box, useMediaQuery, Grid, Button } from "@mui/material";
 import dataSkills from "../../constants/DataSkills";
 import { CheckedStateProps } from "../../types";
 import usePageStyles from "../../styles/stylePages";
+import {
+  StyledSkillsContainer,
+  StyledSkillsWrapp,
+  StyledSkillsWrapper,
+  StyledSkillsGridContainer,
+  StyledSkillsGridWrapper,
+  StyledSkillsCard,
+  StyledSkillCardHeading,
+  StyledSkillCardContainer,
+  StyledSkillCardIconWrap,
+  StyledSkillCardBtn,
+} from "./StyledSkills";
 import { useIntl } from "react-intl";
 
 const SkillsContent = ({
@@ -10,8 +21,6 @@ const SkillsContent = ({
   checkedState: CheckedStateProps;
 }) => {
   const intl = useIntl();
-
-  const isMobile = useMediaQuery("(max-width:800px)");
   const filteredProjects = checkedState.all
     ? dataSkills
     : dataSkills.filter((project) =>
@@ -21,61 +30,31 @@ const SkillsContent = ({
       );
   const classes = usePageStyles();
   return (
-    <Box className={classes.skillContainer}>
-      <Box className={classes.skillWrap}>
-        <Box className={classes.skillPositionWrap}>
-          <Grid
-            container
-            spacing={2}
-            className={classes.skillBoxCard}
-            sx={{ position: "relative", left: "-8px" }}
-          >
+    <StyledSkillsContainer>
+      <StyledSkillsWrapp>
+        <StyledSkillsWrapper>
+          <StyledSkillsGridContainer container spacing={2}>
             {filteredProjects.map((project) => (
-              <Grid
-                sx={{
-                  position: "relative",
-                  ...(isMobile && { marginTop: "10px" }),
-                }}
-                item
-                xs={12}
-                sm={isMobile ? 12 : 6}
-                md={isMobile ? 12 : 4}
-                key={project.id}
-              >
-                <div className={classes.skillCard}>
-                  <img
-                    src={project.img}
-                    alt={project.nameProject}
-                    className={classes.skillCardImg}
-                  />
-                  <div className={classes.skillCardHeading}>
-                    <h2 className={classes.skillCardText}>
+              <StyledSkillsGridWrapper item xs={12} md={4} key={project.id}>
+                <StyledSkillsCard>
+                  <img src={project.img} alt={project.nameProject} />
+                  <StyledSkillCardHeading>
+                    <h2 className="heading-card">
                       {intl.formatMessage({ id: project.nameProject })}
                     </h2>
-                    <p style={{ fontSize: "15px" }}>
+                    <p className="description-card">
                       {intl.formatMessage({ id: project.detailProject })}
                     </p>
 
-                    <Box className={classes.skillCardContainer}>
+                    <StyledSkillCardContainer>
                       {project.icon &&
                         project.icon.map((icon, index) => (
-                          <Box
-                            className={classes.skillCardIconWrap}
-                            key={index}
-                          >
+                          <StyledSkillCardIconWrap key={index}>
                             {icon}
-                          </Box>
+                          </StyledSkillCardIconWrap>
                         ))}
-                    </Box>
-                    <Button
-                      variant="contained"
-                      sx={{
-                        position: "absolute ",
-                        left: "25px",
-                        bottom: "15px",
-                      }}
-                      className={classes.skillCardBtn}
-                    >
+                    </StyledSkillCardContainer>
+                    <StyledSkillCardBtn variant="contained">
                       <a
                         href={project.openProject}
                         target="_blank"
@@ -83,15 +62,15 @@ const SkillsContent = ({
                       >
                         View-Project
                       </a>
-                    </Button>
-                  </div>
-                </div>
-              </Grid>
+                    </StyledSkillCardBtn>
+                  </StyledSkillCardHeading>
+                </StyledSkillsCard>
+              </StyledSkillsGridWrapper>
             ))}
-          </Grid>
-        </Box>
-      </Box>
-    </Box>
+          </StyledSkillsGridContainer>
+        </StyledSkillsWrapper>
+      </StyledSkillsWrapp>
+    </StyledSkillsContainer>
   );
 };
 

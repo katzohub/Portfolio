@@ -1,11 +1,14 @@
 import { FC } from "react";
+import { FormControlLabel } from "@mui/material";
 import {
-  Box,
-  Checkbox,
-  FormControlLabel,
-  Divider,
-  FormGroup,
-} from "@mui/material";
+  StyledSkillsRightForm,
+  StyledSkillsLabel,
+  StyledSkillsListItem,
+  StyledSkillsCheckbox,
+  StyledCategoryIcon,
+  StyledSkillsRowLabel,
+  StyledSkillsBoxDividerTop,
+} from "./StyledSkills";
 import { SiHtml5, SiCss3, SiSass, SiTailwindcss, SiMui } from "react-icons/si";
 import {
   SiJavascript,
@@ -15,9 +18,7 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { CheckedStateProps } from "../../types";
-import CategoryIcon from "@mui/icons-material/Category";
 import { useIntl } from "react-intl";
-import usePageStyles from "../../styles/stylePages";
 
 type SkillsSidebarProps = {
   checkedState: CheckedStateProps;
@@ -28,268 +29,234 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
   checkedState,
   handleCheckboxChange,
 }) => {
-  const classes = usePageStyles();
   const intl = useIntl();
 
   return (
     <>
-      <FormGroup
-        className={classes.projectRightForm}
-        sx={{ overflow: "hidden" }}
-      >
-        <FormControlLabel
-          className={classes.projectLabel}
+      <StyledSkillsRightForm>
+        <StyledSkillsLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.all}
               onChange={handleCheckboxChange}
               name="all"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsListItem
               sx={{
                 color: checkedState.all ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <CategoryIcon
-                fontSize="small"
-                className={classes.projectCategory}
-              />
+              <StyledCategoryIcon fontSize="small" />
               {intl.formatMessage({ id: "project.allCategory" })}
-            </Box>
+            </StyledSkillsListItem>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
-              className={classes.projectCheckBox}
+            <StyledSkillsCheckbox
               checked={checkedState.html}
               onChange={handleCheckboxChange}
               name="html"
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.html ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiHtml5 className={classes.projectCategory} />
+              <SiHtml5 className="label-icon" />
               HTML
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.css}
               onChange={handleCheckboxChange}
               name="css"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.css ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiCss3 className={classes.projectCategory} />
+              <SiCss3 className="label-icon" />
               CSS
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.sass}
               onChange={handleCheckboxChange}
               name="sass"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.sass ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiSass className={classes.projectCategory} />
+              <SiSass className="label-icon" />
               SCSS
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.tailwind}
               onChange={handleCheckboxChange}
               name="tailwind"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.tailwind ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiTailwindcss className={classes.projectCategory} />
+              <SiTailwindcss className="label-icon" />
               TailWind
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.mui}
               onChange={handleCheckboxChange}
               name="mui"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.mui ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiMui className={classes.projectCategory} />
+              <SiMui className="label-icon" />
               MUI
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.javascript}
               onChange={handleCheckboxChange}
               name="javascript"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.javascript ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiJavascript className={classes.projectCategory} />
+              <SiJavascript className="label-icon" />
               JavaScript
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.typescript}
               onChange={handleCheckboxChange}
               name="typescript"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.typescript ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiTypescript className={classes.projectCategory} />
+              <SiTypescript className="label-icon" />
               Typescript
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.php}
               onChange={handleCheckboxChange}
               name="php"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.php ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiPhp className={classes.projectCategory} />
+              <SiPhp className="label-icon" />
               PHP
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.react}
               onChange={handleCheckboxChange}
               name="react"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.react ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiReact className={classes.projectCategory} />
+              <SiReact className="label-icon" />
               React
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
         {/* Firebase Checkbox */}
         <FormControlLabel
           control={
-            <Checkbox
+            <StyledSkillsCheckbox
               checked={checkedState.firebase}
               onChange={handleCheckboxChange}
               name="firebase"
-              className={classes.projectCheckBox}
             />
           }
           label={
-            <Box
+            <StyledSkillsRowLabel
               sx={{
                 color: checkedState.firebase ? "#fff" : "#607B96",
               }}
-              className={classes.projectHoverBox}
             >
-              <SiFirebase className={classes.projectCategory} />
+              <SiFirebase className="label-icon" />
               Firebase
-            </Box>
+            </StyledSkillsRowLabel>
           }
         />
 
-        <Divider
-          orientation="vertical"
-          flexItem
-          className={classes.skillBoxDividerTop}
-        />
-      </FormGroup>
+        <StyledSkillsBoxDividerTop orientation="vertical" flexItem />
+      </StyledSkillsRightForm>
     </>
   );
 };

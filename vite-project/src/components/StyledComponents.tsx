@@ -22,9 +22,10 @@ export const StyledComponentsContainer = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     overflowY: "auto !important",
     height: "calc(100dvh - 56px - 56px)",
-    marginTop: "56px",
-    marginBottom: "56px",
+    marginTop: "0px",
+    marginBottom: "0px",
     position: "relative",
+    top: "56px",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
@@ -37,7 +38,6 @@ export const StyledComponentsWrapp = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     display: "block",
     position: "relative",
-    top: "-56px",
   },
 }));
 export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({
@@ -48,7 +48,7 @@ export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     width: "100%",
     height: "auto",
-    paddingTop: "56px !important",
+    paddingTop: "0px !important",
     borderRight: `0px solid transparent !important`,
   },
 }));

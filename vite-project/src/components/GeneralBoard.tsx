@@ -12,6 +12,7 @@ import {
 } from "./StyledComponents";
 import { useIntl } from "react-intl";
 import { GeneralBoardProps } from "../types";
+import { Box } from "@mui/material";
 
 const GeneralBoard: FC<GeneralBoardProps> = ({
   generalHeading,
@@ -23,7 +24,14 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
 }) => {
   const intl = useIntl();
   return (
-    <>
+    <Box
+      sx={(theme) => ({
+        [theme.breakpoints.down("md")]: {
+          minHeight: "100dvh",
+          overflowY: "hidden",
+        },
+      })}
+    >
       <StyledComponentsContainer>
         <StyledComponentsWrapp>
           <StyledComponentsWrapper
@@ -54,7 +62,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
           {generalTemplate}
         </StyledComponentsWrapp>
       </StyledComponentsContainer>
-    </>
+    </Box>
   );
 };
 

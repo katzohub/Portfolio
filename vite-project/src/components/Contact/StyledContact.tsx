@@ -213,7 +213,7 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   textTransform: "lowercase",
   background: `${theme.myColors.colorBackInput} !important`,
   "&:hover": {
-    transform: "scale(1.03)",
+    transform: "scale(0.97)",
     background: `${theme.myColors.colorBackInput} !important`,
   },
 }));

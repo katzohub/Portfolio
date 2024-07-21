@@ -17,13 +17,8 @@ import {
   SiReact,
   SiFirebase,
 } from "react-icons/si";
-import { CheckedStateProps } from "../../types";
+import { SkillsSidebarProps } from "../../types";
 import { useIntl } from "react-intl";
-
-type SkillsSidebarProps = {
-  checkedState: CheckedStateProps;
-  handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
 
 const SkillsSidebar: FC<SkillsSidebarProps> = ({
   checkedState,

@@ -7,12 +7,8 @@ import {
 } from "./StyledComponents";
 import Navigation from "./Navigation";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { MobileDrawerProps } from "../types";
 
-type MobileDrawerProps = {
-  myOnOpen: boolean;
-  myOnCloseFn: () => void;
-  onSelectItem: (path: string) => void;
-};
 const MobileDrawer: FC<MobileDrawerProps> = ({
   myOnOpen,
   myOnCloseFn,

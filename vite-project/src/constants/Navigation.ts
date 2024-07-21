@@ -4,6 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
+import { NavigationDataProps } from "../types";
 
 const FaHomeIcon = createElement(FaHome);
 const FaPhoneAltIcon = createElement(FaPhoneAlt);
@@ -13,12 +14,6 @@ const GitHubMuiIcon = createElement(GitHubIcon);
 const LinkedInMuiIcon = createElement(LinkedInIcon);
 const FacebookMuiIcon = createElement(FacebookIcon);
 const XIconMuiIcon = createElement(XIcon);
-
-type NavigationDataProps = {
-  goUrl: string;
-  icon: JSX.Element;
-  text?: string;
-};
 
 export const falseNavigationData: NavigationDataProps[] = [
   {

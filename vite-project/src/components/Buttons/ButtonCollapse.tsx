@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { ListItemText, Collapse } from "@mui/material";
 import {
   StyledListButtonsCollapse,
@@ -20,19 +20,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa6";
 import { DropdownButtons } from "../Buttons";
-
+import { ButtonCollapseProps } from "../../types";
 // TODO reapain component
-type ContactLeftProps = {
-  isTrue: boolean;
-  isScreen: boolean;
-  handleClickContact?: () => void | undefined;
-  activeContactButton?: string;
-  openContact: boolean;
-  nameCollapse: string;
-  myIcon?: ReactNode;
-};
 
-const ButtonCollapse: FC<ContactLeftProps> = ({
+const ButtonCollapse: FC<ButtonCollapseProps> = ({
   isTrue,
   isScreen,
   handleClickContact,

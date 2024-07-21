@@ -12,11 +12,7 @@ import {
   trueNavigationData,
   falseNavigationData,
 } from "../constants/Navigation";
-
-type NavigationProps = {
-  isNavigationLink: boolean;
-  onSelectItem?: (path: string) => void;
-};
+import { NavigationProps } from "../types";
 
 const Navigation: FC<NavigationProps> = ({
   isNavigationLink,

@@ -19,11 +19,7 @@ import {
   StyledSnakeBigBtnLeftPosition,
 } from "./StyledSnake";
 import { BigButton } from "../../components/Buttons";
-
-type KeyboardSnakeProps = {
-  isFunctionKeyboard: boolean;
-  handleButtonClick?: (direction: string) => void;
-};
+import { KeyboardSnakeProps } from "../../types";
 
 const KeyboardSnake: FC<KeyboardSnakeProps> = ({
   isFunctionKeyboard,

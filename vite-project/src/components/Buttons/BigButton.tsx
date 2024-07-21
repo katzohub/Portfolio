@@ -1,12 +1,8 @@
 import { FC } from "react";
 import { StyledBigButton } from "./StyledButtons";
+import { BigButtonProps } from "../../types";
 
-type MyButtonProps = {
-  children?: React.ReactNode;
-  myBtnFn?: () => void;
-};
-
-const BigButton: FC<MyButtonProps> = ({ children, myBtnFn }) => {
+const BigButton: FC<BigButtonProps> = ({ children, myBtnFn }) => {
   return (
     <>
       <StyledBigButton onClick={myBtnFn} className="learn-more">

@@ -123,3 +123,92 @@ export interface ThemeProps {
     snakeLogoUrl: string;
   };
 }
+export type GeneralBoardProps = {
+  generalHeading: string;
+  generalText: string;
+  leftTemplate: ReactNode;
+  postprimaryTemplate?: ReactNode;
+  generalTemplate: ReactNode;
+  smallGeneralHeading: string;
+};
+export type MobileDrawerProps = {
+  myOnOpen: boolean;
+  myOnCloseFn: () => void;
+  onSelectItem: (path: string) => void;
+};
+export type NavigationProps = {
+  isNavigationLink: boolean;
+  onSelectItem?: (path: string) => void;
+};
+export type SwitchButtonProps = {
+  trueIcon: JSX.Element;
+  falseIcon: JSX.Element;
+  condition: boolean;
+  toggleSwitch: () => void;
+};
+export type TemplateRowProps = {
+  myNumber: string;
+  text: ReactNode;
+};
+export type AboutContentProps = {
+  templateProps: ReactNode;
+  activeButton: string;
+};
+export type AboutNavButtonProps = {
+  text: string;
+  myIcon: ReactNode;
+  myCondition: boolean;
+  changeText: (translate: string, changeText: string) => void;
+};
+export type AboutSideBarProps = {
+  changeText: (translate: string, changeText: string) => void;
+  activeButton: string;
+};
+export type BigButtonProps = {
+  children?: React.ReactNode;
+  myBtnFn?: () => void;
+};
+export type ButtonCollapseProps = {
+  isTrue: boolean;
+  isScreen: boolean;
+  handleClickContact?: () => void | undefined;
+  activeContactButton?: string;
+  openContact: boolean;
+  nameCollapse: string;
+  myIcon?: ReactNode;
+};
+export type DropdownButtonsProps = {
+  myFirstInfo: ReactNode;
+  mySecondInfo: ReactNode;
+  myThirdInfo?: ReactNode;
+};
+export type Coordinate = { x: number; y: number };
+export type GameSnakeProps = {
+  isFullWindow: boolean;
+};
+
+export type ContainerSnakeProps = {
+  isFullWindow: boolean;
+  children: React.ReactNode;
+};
+export type SkillsSidebarProps = {
+  checkedState: CheckedStateProps;
+  handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+export type KeyboardSnakeProps = {
+  isFunctionKeyboard: boolean;
+  handleButtonClick?: (direction: string) => void;
+};
+export type NavigationDataProps = {
+  goUrl: string;
+  icon: JSX.Element;
+  text?: string;
+};
+export type NavbarProps = {
+  isTopnav: boolean;
+  text?: string;
+};
+export const defaultMenuContext: MenuContextType = {
+  isMenuOpen: false,
+  setIsMenuOpen: () => {},
+};

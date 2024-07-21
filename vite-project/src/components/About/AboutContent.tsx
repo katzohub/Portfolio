@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { Box } from "@mui/material";
 import ja from "../../assets/img/ja.png";
 import { useIntl } from "react-intl";
@@ -20,13 +20,9 @@ import {
   StyledAboutCodeWrapper,
   StyledAboutImgContainer,
 } from "./StyledAbout";
+import { AboutContentProps } from "../../types";
 
-type GeneralBoardProps = {
-  templateProps: ReactNode;
-  activeButton: string;
-};
-
-const AboutContent: FC<GeneralBoardProps> = ({
+const AboutContent: FC<AboutContentProps> = ({
   templateProps,
   activeButton,
 }) => {

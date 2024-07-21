@@ -9,11 +9,7 @@ import {
   StyledMenuIcon,
 } from "./StyledNavbar";
 import MobileDrawer from "../components/MobileDrawer";
-
-type NavbarProps = {
-  isTopnav: boolean;
-  text?: string;
-};
+import { NavbarProps } from "../types";
 
 const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
   const [open, setOpen] = useState(false);

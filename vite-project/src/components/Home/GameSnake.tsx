@@ -27,11 +27,12 @@ import {
   StyledSnakeFoodLeft,
   StyledSnakePointContainer,
 } from "./StyledHome";
+import { Coordinate, GameSnakeProps } from "../../types";
 
 const gridSize = 20;
 const gridHeight = 34;
 const cellSize = 12;
-type Coordinate = { x: number; y: number };
+
 const initialSnake: Coordinate[] = [
   { x: 10, y: 10 },
   { x: 9, y: 10 },
@@ -39,10 +40,6 @@ const initialSnake: Coordinate[] = [
   { x: 7, y: 10 },
 ];
 const initialCandy: Coordinate = { x: 5, y: 5 };
-
-interface GameSnakeProps {
-  isFullWindow: boolean;
-}
 
 const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   const [snake, setSnake] = useState<Coordinate[]>(initialSnake);

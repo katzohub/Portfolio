@@ -1,10 +1,6 @@
 import { styled } from "@mui/system";
 import { Box, Button, Typography, Link } from "@mui/material";
-
-type ContainerSnakeProps = {
-  isFullWindow: boolean;
-  children: React.ReactNode;
-};
+import { ContainerSnakeProps } from "../../types";
 
 // Styled GameSNake
 const StyledContactMinWidth = styled(Box)(({ theme }) => ({

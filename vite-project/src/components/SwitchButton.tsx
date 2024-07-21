@@ -5,15 +5,9 @@ import {
   StyledSwitchBtnWrapp,
   StyledSwitchLanguage,
 } from "./StyledComponents";
+import { SwitchButtonProps } from "../types";
 
-type MySwitchProps = {
-  trueIcon: JSX.Element;
-  falseIcon: JSX.Element;
-  condition: boolean;
-  toggleSwitch: () => void;
-};
-
-const SwitchButton: FC<MySwitchProps> = ({
+const SwitchButton: FC<SwitchButtonProps> = ({
   trueIcon,
   falseIcon,
   condition,

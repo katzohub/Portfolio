@@ -1,10 +1,6 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { StyledRow, StyledRowWithin } from "./StyledComponents";
-
-type TemplateRowProps = {
-  myNumber: string;
-  text: ReactNode;
-};
+import { TemplateRowProps } from "../types";
 
 const TemplateRow: FC<TemplateRowProps> = ({ text, myNumber }) => {
   return (

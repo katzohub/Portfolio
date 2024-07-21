@@ -14,11 +14,7 @@ import AboutNavButton from "./AboutNavButton";
 import SchoolIcon from "@mui/icons-material/School";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useIntl } from "react-intl";
-
-type AboutSideBarProps = {
-  changeText: (translate: string, changeText: string) => void;
-  activeButton: string;
-};
+import { AboutSideBarProps } from "../../types";
 
 const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
   const intl = useIntl();

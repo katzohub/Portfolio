@@ -1,18 +1,12 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { ListItemIcon } from "@mui/material";
 import { StyledAboutItemBtnNav, StyledAboutBtnText } from "./StyledAbout";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Theme } from "@mui/system";
 import { useIntl } from "react-intl";
+import { AboutNavButtonProps } from "../../types";
 
-type ChangeButtonProps = {
-  text: string;
-  myIcon: ReactNode;
-  myCondition: boolean;
-  changeText: (translate: string, changeText: string) => void;
-};
-
-const AboutNavButton: FC<ChangeButtonProps> = ({
+const AboutNavButton: FC<AboutNavButtonProps> = ({
   text,
   myIcon,
   myCondition,

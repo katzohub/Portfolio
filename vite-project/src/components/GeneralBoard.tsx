@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import {
   StyledComponentsContainer,
   StyledComponentsWrapp,
@@ -11,15 +11,7 @@ import {
   StyledComponentsContentContainer,
 } from "./StyledComponents";
 import { useIntl } from "react-intl";
-
-type GeneralBoardProps = {
-  generalHeading: string;
-  generalText: string;
-  leftTemplate: ReactNode;
-  postprimaryTemplate?: ReactNode;
-  generalTemplate: ReactNode;
-  smallGeneralHeading: string;
-};
+import { GeneralBoardProps } from "../types";
 
 const GeneralBoard: FC<GeneralBoardProps> = ({
   generalHeading,

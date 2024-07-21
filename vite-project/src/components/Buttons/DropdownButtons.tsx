@@ -1,13 +1,8 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { StyledListDropDown, StyledListItemContainer } from "./StyledButtons";
+import { DropdownButtonsProps } from "../../types";
 
-type LeftContactProps = {
-  myFirstInfo: ReactNode;
-  mySecondInfo: ReactNode;
-  myThirdInfo?: ReactNode;
-};
-
-const DropdownButtons: FC<LeftContactProps> = ({
+const DropdownButtons: FC<DropdownButtonsProps> = ({
   myFirstInfo,
   mySecondInfo,
   myThirdInfo,

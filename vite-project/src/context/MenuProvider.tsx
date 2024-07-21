@@ -1,10 +1,9 @@
 import { useState, createContext } from "react";
-import { MenuContextType, MenuProviderProps } from "../types";
-
-const defaultMenuContext: MenuContextType = {
-  isMenuOpen: false,
-  setIsMenuOpen: () => {},
-};
+import {
+  defaultMenuContext,
+  MenuProviderProps,
+  MenuContextType,
+} from "../types";
 
 export const MenuContext = createContext<MenuContextType>(defaultMenuContext);
 

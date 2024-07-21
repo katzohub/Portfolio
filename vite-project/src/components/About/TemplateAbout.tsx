@@ -60,8 +60,8 @@ const TemplateAbout: FC<TextProps> = ({
         <TemplateRow myNumber="22" text={textTwentyTwo} />
         <TemplateRow myNumber="23" text={textTwentyThree} />
         <TemplateRow myNumber="24" text={textTwentyFour} />
-        <TemplateRow myNumber="24" text={textTwentyFive} />
-        <TemplateRow myNumber="24" text={textTwentySix} />
+        <TemplateRow myNumber="25" text={textTwentyFive} />
+        <TemplateRow myNumber="26" text={textTwentySix} />
         <Typography variant="body2">*/</Typography>
       </StyledAboutTemplateContainer>
     </>

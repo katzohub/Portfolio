@@ -31,60 +31,114 @@ export default {
   "about.education": "vzdelanie",
   "about.primary-school": "základná-škola",
   "about.high-school": "stredná-škola",
-  /*03.1.Bio*/
-  "about.bioTextOne": "Ahojte",
-  "about.bioTextTwo": "Ja som Tomáš a mám 25 rokov",
-  "about.bioTextThree": "Od 1.5.2022 sa učím programovať.",
-  "about.bioTextFour": "Môj obľúbený programovací jazyk",
-  "about.bioTextFive": "je React,Typescript/JavaScript.",
-  "about.bioTextSix": "Ja by som chcel mať programovaciu kariéru.",
-  "about.bioTextSeven": "Ja rád sa učím programovať.",
-  "about.bioTextEight": "Prosím ohodnoťte moje projekty.",
-  "about.bioTextNine": "Ďakujem že ste navštívili moje portfolio.",
-  "about.bioTextTen": "Ďakujem že ste ohodnotili moje projekty.",
-  "about.bioTextEleven": "Ďakujem za vašu spätnú väzbu :)",
-  "about.bioTextTwelve": "Dovidenia, prajem pekný deň",
-  /*03.1.Interests*/
-  "about.interestsTextOne": "Moje záľuby",
-  "about.interestsTextTwo": "Ja rád hrám futbal, bedminton a skialpinizmus",
-  "about.interestsTextThree": "Ja a moji priatelia rádi hráme bedminton spolu",
-  "about.interestsTextFour": "a tiež rádi chodíme na skialpinistické túry.",
-  "about.interestsTextFive":
-    "Ja rád sledujem futbal a hokej ako pasívne športy",
-  "about.interestsTextSix": "Ja rád hrám na playstation",
-  "about.interestsTextSeven": "Moje obľúbené hry sú The last of us Part I",
-  "about.interestsTextEight": "a part II,God of war a God of war Ragnarok",
-  "about.interestsTextNine": "* Moja aktuálna hra je Fortnite",
-  "about.interestsTextTen": "Ja rád hovorím aj o iných veciach.",
-  "about.interestsTextEleven": "To sú všetky moje záľuby.",
-  "about.interestsTextTwelve": "Ďakujem a prajem pekný deň",
-  /*03.1.Education*/
-  "about.educationTextOne": "Moja základná škola",
-  "about.educationTextTwo": "Moja základná škola sa nachádza na adrese",
-  "about.educationTextThree": "Detvianska Huta 369, 962 05",
-  "about.educationTextFour": "Táto škola ma veľa naučila",
-  "about.educationTextFive": "Stále využívam skúsenosti, ktoré som tam získal",
-  "about.educationTextSix": "vďaka našim múdrym učiteľom",
-  "about.educationTextSeven": "ktorý sa nachádzajú v našej obci",
-  "about.educationTextEight": "Ja som veľmi rád, že ich tu máme.",
-  "about.educationTextNine": "* Ja som študoval na tejto škole",
-  "about.educationTextTen": "od roku 2005 do 2014",
-  "about.educationTextEleven": "Ďakujem",
-  "about.educationTextTwelve": "Dovidenia, prajem pekný deň.",
-  /*03.1.HighEducation*/
-  "about.highEducationTextOne": "Moja stredná škola",
-  "about.highEducationTextTwo": "Moja stredná škola sa nachádza na adrese",
-  "about.highEducationTextThree": "Štúrova 848, 962 12 Detva.",
-  "about.highEducationTextFour": "Ja som študoval odbor CNC-nastavovač.",
-  "about.highEducationTextFive": "Ja som sa naučil cnc technológie",
-  "about.highEducationTextSix": "a programovanie cnc strojov.",
-  "about.highEducationTextSeven": "Ja som dlho pri tom neostal",
-  "about.highEducationTextEight": "Ja som na škole mal rád len programovanie.",
-  "about.highEducationTextNine":
-    "* V konečnom dôsledku som sa rozhodol pre web programovanie",
-  "about.highEducationTextTen": "Je dosť ťažké nájsť si prácu,",
-  "about.highEducationTextEleven": "na Slovensku ako Junior programátor.",
-  "about.highEducationTextTwelve": "Dovidenia, ďakujem a prajem pekný deň.",
+  /* 03.1. Bio */
+  "templateAbout.textOne": "Ahoj",
+  "templateAbout.textTwo": "Rád ťa vítam na mojej stránke",
+  "templateAbout.textThree":
+    "Dúfam, že sa ti páči a zanecháš mi taktiež aj hodnotenie,",
+  "templateAbout.textFour": " prípadne pošleš ponuku ... :)",
+  "templateAbout.textFive":
+    "Toto portfólio som vytvoril preto, aby som sa zlepšil a získal skúsenosti.",
+  "templateAbout.textSix":
+    "Tak dúfam, že sa ti páči a zanecháš mi aj spätnú väzbu",
+  "templateAbout.textSeven": "Moja kariérna cesta začala v roku 2023",
+  "templateAbout.textEight":
+    "keď som si uvedomil, že programovanie je to, čo ma baví",
+  "templateAbout.textNine":
+    "odvtedy sa snažím učiť sa, zlepšovať sa a nájsť si aj nejakú prácu.",
+  "templateAbout.textTen":
+    "Kvôli tomu som sa rozhodol spraviť si toto portfólio,",
+  "templateAbout.textEleven": "ktoré bude odrážať pár mojich znalostí",
+  "templateAbout.textTwelve":
+    "Medzi niektoré patria napríklad: HTML, CSS, SASS, Tailwind, JavaScript,",
+  "templateAbout.textThirteen":
+    "TypeScript, PHP, React, Firebase, Next.js, MongoDB.",
+  "templateAbout.textFourteen":
+    "Taktiež ma zaujímajú technológie ako sú GraphQL, Node.js, Docker,",
+  "templateAbout.textFifteen":
+    "React Native, Three.js, s týmito technológiami už mám menší prehľad.",
+  "templateAbout.textSixteen":
+    "Taktiež ma bavia knižnice na komponenty ako sú MUI, Shadcn, DaisyUI,",
+  "templateAbout.textSeventeen": "s týmito knižnicami mám skúsenosti.",
+  "templateAbout.textEighteen":
+    "Medzi ďalšie môj stack, s ktorými už mám reálne skúsenosti, patria: Git, GitHub,",
+  "templateAbout.textTwenty":
+    "GitLab, Trello, Jira, UploadThing, Figma, Canva, AWS SDK, Redux, Zustand...",
+  "templateAbout.textTwentyOne":
+    "Rád sa učím novým veciam a zlepšovaniu a taktiež sa snažím byť kreatívny.",
+  "templateAbout.textTwentyTwo":
+    "Dúfam, že sa mi podarí nájsť si môj vytúžený job",
+  "templateAbout.textTwentyThree":
+    "a že sa mi podarí získať skúsenosti, ktoré patria aj do reálneho sveta.",
+  "templateAbout.textTwentyFour":
+    "Ak by som vás náhodou oslovil, neváhajte ma kontaktovať",
+  "templateAbout.textTwentyFive":
+    "a ja sa budem snažíť vás čo najskôr kontaktovať.",
+  "templateAbout.textTwentySix": "Ďakujem za váš čas a prajem pekný deň",
+  /* 03.2. Interest */
+  "templateInterest.textOne": "Vitaj v sekcii moje zaujmy",
+  "templateInterest.textTwo":
+    "Mimo programovania mám veľký záujem o nové technológie",
+  "templateInterest.textThree":
+    "a neustále sledujem najnovšie trendy v IT svete.",
+  "templateInterest.textFour":
+    "Fascinujú ma oblasti ako umelá inteligencia,virtuálna realita...",
+  "templateInterest.textFive": "Okrem technológií ma baví aj dizajn a UX/UI.",
+  "templateInterest.textSix":
+    "Pracujem s nástrojmi ako Figma a Canva, aby som vytváral vizuálne",
+  "templateInterest.textSeven":
+    "príťažlivé a používateľsky prívetivé rozhrania.",
+  "templateInterest.textEight":
+    "Vo voľnom čase rád športujem a cestujem, medzi obľubené športy patrí",
+  "templateInterest.textNine":
+    "behanie,cyklistika,badminton a cez zimu je to skialpinizmus.",
+  "templateInterest.textTen":
+    "Taktiež rad sledujem filmy a seriály a hram playstation,",
+  "templateInterest.textTwelve":
+    "ale najradšej sa stretávam s priateľmi a trávim čas s rodinou.",
+  "templateInterest.textThirteen":
+    "Som tiež veľkým fanúšikom open-source projektov",
+  "templateInterest.textFourteen":
+    "a rád prispievam do rôznych komunitných projektov,",
+  "templateInterest.textFifteen":
+    "kde môžem zdieľať svoje znalosti a učiť sa od ostatných",
+  "templateInterest.textSixteen":
+    "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)",
+  /* 03.3. Primary School */
+  "templatePrimarySchool.textOne": "Vítaj v sekcii moja základná škola",
+  "templatePrimarySchool.textTwo":
+    "Základnú školu som navštevoval na Základnej škole",
+  "templatePrimarySchool.textThree":
+    "Základná škola s materskou školou Milana Kolibiara",
+  "templatePrimarySchool.textFour":
+    "ktorá sa nachádza na Detvianskej Hute v mojej dedine, kde som vyrastal.",
+  "templatePrimarySchool.textFive":
+    "Počas týchto rokov som získal pevné základy vo všeobecných predmetoch,",
+  "templatePrimarySchool.textSix": "ako sú matematika, prírodné vedy a jazyky.",
+  "templatePrimarySchool.textSeven":
+    "Vďaka našim múdrym učiteľom som sa naučil veľa nových vecí.",
+  "templatePrimarySchool.textEight":
+    "A stále využívam skúsenosti, ktoré som tam získal.",
+  "templatePrimarySchool.textNine":
+    "Som veľmi rád, že som mohol navštevovať túto školu.",
+  /* 03.4. High School */
+  "templateHighSchool.textOne": "Vítaj v sekcii moja stredná škola",
+  "templateHighSchool.textTwo":
+    "Strednú školu som absolvoval na Strednej škole v Detve,",
+  "templateHighSchool.textThree": "kde som študoval odbor CNC-nastavovač.",
+  "templateHighSchool.textFour": "Na tejto škole som sa naučil CNC technológie",
+  "templateHighSchool.textFive": "a taktiež programovanie CNC strojov.",
+  "templateHighSchool.textSix": "Žiaľ, dlho som pri tom neostal,",
+  "templateHighSchool.textSeven": "pretože som mal rád iné programovanie.",
+  "templateHighSchool.textEight":
+    "Počas štúdia som sa začal zaujímať o webové technológie a programovanie,",
+  "templateHighSchool.textNine":
+    "čo ma viedlo k tomu, aby som sa venoval tejto oblasti.",
+  "templateHighSchool.textTen":
+    "Aktívne som sa zapájal do rôznych projektov, kde som získal cenné skúsenosti.",
+  "templateHighSchool.textEleven":
+    "Tieto aktivity ma motivovali aby som neskôr prehodnotiť moje ciele",
+  "templateHighSchool.textTwelve": "a začal sa učiť programovať.",
   /*04.Projects*/
   "project.projects": "_projekty",
   "project.category": "kategórie",
@@ -132,7 +186,7 @@ export default {
   "thankYou.thankYouText":
     "Vaša správa bola prijatá. Odpoveď dostanete čoskoro!",
   "thankYou.thankYouBtn": "poslať-novú-správu",
-  /*07.Not found Message*/
+  /*08 Not found Message*/
   "notFound.generalText": "404 Chyba",
   "notFound.primaryText": "Na tejto stránke nič nie je!",
 };

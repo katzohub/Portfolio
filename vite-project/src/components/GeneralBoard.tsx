@@ -1,7 +1,16 @@
 import { FC, ReactNode } from "react";
-import { ListSubheader, Box } from "@mui/material";
+import { Box } from "@mui/material";
+import {
+  StyledComponentsContainer,
+  StyledComponentsWrapp,
+  StyledComponentsWrapper,
+  StyledComponentsDivider,
+  StyledComponentsGeneralContainer,
+  StyledComponentsGeneralBoxHeading,
+  StyledComponentsGeneralBoxText,
+  StyledComponentsGeneralContainerMinWidth,
+} from "./StyledComponents";
 import { useIntl } from "react-intl";
-import usePageStyles from "../styles/stylePages";
 
 type GeneralBoardProps = {
   generalHeading: string;
@@ -20,43 +29,16 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
   generalTemplate,
   smallGeneralHeading,
 }) => {
-  const classes = usePageStyles();
   const intl = useIntl();
   return (
     <>
-      <Box className={classes.aboutContainer}>
-        <Box
-          sx={(theme) => ({
-            width: "100%",
-            height: "100dvh",
-            display: "flex",
-
-            [theme.breakpoints.down("md")]: {
-              display: "block",
-            },
-          })}
-        >
-          <Box
-            sx={{ position: "relative" }}
-            className={classes.aboutLeftNavContainer}
+      <StyledComponentsContainer>
+        <StyledComponentsWrapp>
+          <StyledComponentsWrapper
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
-            <Box
-              sx={(theme) => ({
-                position: "absolute",
-                right: "0px",
-                top: "0px",
-                width: "2px",
-                border: `1px solid ${theme.myColors.colorLinie} !important`,
-                height: "100vh",
-                zIndex: 999,
-                background: theme.myColors.colorLinie,
-                [theme.breakpoints.down("md")]: {
-                  display: "none",
-                },
-              })}
-            ></Box>
+            <StyledComponentsDivider></StyledComponentsDivider>
             <Box
               sx={(theme) => ({
                 width: "100vw",
@@ -77,48 +59,28 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
                 },
               })}
             >
-              <Box
-                sx={(theme) => ({
-                  width: "95%",
-                  height: "100%",
-                  background: theme.myColors.generalBackground,
-                  zIndex: 500,
-                  borderBottom: `2px solid ${theme.myColors.colorLinie}`,
-                  display: "flex",
-                  alignItems: "center",
-                  [theme.breakpoints.down("md")]: {
-                    width: "100%",
-                  },
-                })}
-              >
-                <Box sx={{ width: "232px" }}>
+              <StyledComponentsGeneralContainer>
+                <StyledComponentsGeneralBoxHeading>
                   {intl.formatMessage({ id: generalHeading })}
-                </Box>
+                </StyledComponentsGeneralBoxHeading>
 
-                <Box
-                  sx={{
-                    position: "absolute",
-                    left: "285px",
-                  }}
-                >
+                <StyledComponentsGeneralBoxText>
                   {intl.formatMessage({ id: generalText })}
-                </Box>
-              </Box>
+                </StyledComponentsGeneralBoxText>
+              </StyledComponentsGeneralContainer>
             </Box>
-            <ListSubheader
-              component="div"
+            <StyledComponentsGeneralContainerMinWidth
               id="nested-list-subheader"
               disableGutters
-              className={classes.aboutMinWidth}
             >
               {intl.formatMessage({ id: smallGeneralHeading })}
-            </ListSubheader>
+            </StyledComponentsGeneralContainerMinWidth>
             {leftTemplate}
             {postprimaryTemplate}
-          </Box>
+          </StyledComponentsWrapper>
           {generalTemplate}
-        </Box>
-      </Box>
+        </StyledComponentsWrapp>
+      </StyledComponentsContainer>
     </>
   );
 };

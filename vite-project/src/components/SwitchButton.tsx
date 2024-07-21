@@ -1,6 +1,10 @@
 import { FC } from "react";
-import { Grid, Box, Switch } from "@mui/material";
-import usePageStyles from "../styles/style";
+
+import {
+  StyledSwitchBtnContianer,
+  StyledSwitchBtnWrapp,
+  StyledSwitchLanguage,
+} from "./StyledComponents";
 
 type MySwitchProps = {
   trueIcon: JSX.Element;
@@ -15,20 +19,18 @@ const SwitchButton: FC<MySwitchProps> = ({
   condition,
   toggleSwitch,
 }) => {
-  const classes = usePageStyles();
   return (
     <>
-      <Grid item className={classes.switchBox}>
-        <Box className={classes.navBoxItem}>
-          <Switch
-            className={classes.switchLanguage}
+      <StyledSwitchBtnContianer>
+        <StyledSwitchBtnWrapp>
+          <StyledSwitchLanguage
             icon={trueIcon}
             checkedIcon={falseIcon}
             checked={condition}
             onChange={toggleSwitch}
           />
-        </Box>
-      </Grid>
+        </StyledSwitchBtnWrapp>
+      </StyledSwitchBtnContianer>
     </>
   );
 };

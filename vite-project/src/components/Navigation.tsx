@@ -1,20 +1,17 @@
 import { FC } from "react";
+import { ListItemText, Box, Typography } from "@mui/material";
 import {
-  Grid,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Box,
-  Link,
-  Typography,
-} from "@mui/material";
+  StyledNavigationContianer,
+  StyledNavigationIconMinScreen,
+  StyledNavigationTopWrapp,
+  StyledNavigationLinkMinScreen,
+} from "./StyledComponents";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router-dom";
 import {
   trueNavigationData,
   falseNavigationData,
 } from "../constants/Navigation";
-import usePageStyles from "../styles/style";
 
 type NavigationProps = {
   isNavigationLink: boolean;
@@ -25,59 +22,55 @@ const Navigation: FC<NavigationProps> = ({
   isNavigationLink,
   onSelectItem,
 }) => {
-  const classes = usePageStyles();
   const intl = useIntl();
   const location = useLocation();
   const { pathname } = location;
 
   return (
-    <Grid sx={{ width: "100%" }}>
+    <StyledNavigationContianer>
       <Box
         className={
           isNavigationLink
-            ? classes.navBoxItemCenter
-            : classes.navBoxItemCenterBottom
+            ? "navigation-top-contianer"
+            : "navigation-bottom-contianer"
         }
       >
         {isNavigationLink
           ? trueNavigationData.map((item, index) => {
               const { goUrl, text, icon } = item;
               return (
-                <ListItemButton
+                <StyledNavigationTopWrapp
                   key={index}
-                  className={`${classes.navBoxCenter} ${
-                    pathname === goUrl ? "active" : ""
-                  }`}
+                  className={`${pathname === goUrl ? "active" : ""}`}
                   onClick={() => onSelectItem && onSelectItem(goUrl)}
                 >
-                  <ListItemIcon className={classes.iconMobileMenu}>
+                  <StyledNavigationIconMinScreen>
                     {icon}
-                  </ListItemIcon>
+                  </StyledNavigationIconMinScreen>
                   <ListItemText>
                     {intl.formatMessage({ id: text })}
                   </ListItemText>
-                </ListItemButton>
+                </StyledNavigationTopWrapp>
               );
             })
           : falseNavigationData.map((item, index) => {
               const { goUrl, icon, text } = item;
               return (
-                <Link
+                <StyledNavigationLinkMinScreen
                   key={index}
                   target="_blank"
                   rel="noopener noreferrer"
                   href={goUrl}
-                  className={classes.navLinkLeft}
                 >
                   {text && (
                     <Typography className="github-link">{text}</Typography>
                   )}
                   {icon}
-                </Link>
+                </StyledNavigationLinkMinScreen>
               );
             })}
       </Box>
-    </Grid>
+    </StyledNavigationContianer>
   );
 };
 

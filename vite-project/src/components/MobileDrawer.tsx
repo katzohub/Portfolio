@@ -1,20 +1,12 @@
 import { FC } from "react";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
+import {
+  StyledDrawer,
+  StyledDrawerListContainer,
+  StyledDrawerListItems,
+  StyledDrawerIcenBtn,
+} from "./StyledComponents";
 import Navigation from "./Navigation";
-import ListItem from "@mui/material/ListItem";
-import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
-const item = {
-  py: "14px",
-  px: 3,
-};
-
-const itemCategory = {
-  py: 1.5,
-  px: 3,
-};
 
 type MobileDrawerProps = {
   myOnOpen: boolean;
@@ -26,54 +18,24 @@ const MobileDrawer: FC<MobileDrawerProps> = ({
   myOnCloseFn,
   onSelectItem,
 }) => {
-  const drawerWidth = 256;
-
   return (
     <>
-      <Drawer
+      <StyledDrawer
         variant="temporary"
-        PaperProps={{ style: { width: drawerWidth } }}
+        PaperProps={{ style: { width: "256px" } }}
         open={myOnOpen}
         onClose={myOnCloseFn}
         anchor="right"
-        sx={(theme) => ({
-          zIndex: 999999,
-          "& .MuiDrawer-paperAnchorRight": {
-            backgroundColor: theme.myColors.colorDarkBlue,
-          },
-        })}
       >
-        <List disablePadding sx={{ position: "relative", height: "100%" }}>
-          <ListItem
-            sx={{
-              ...item,
-              ...itemCategory,
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <IconButton
-              onClick={myOnCloseFn}
-              aria-label="delete"
-              sx={(theme) => ({
-                position: "relative",
-                left: "-10px",
-                cursor: "pointer",
-                color: `${theme.myColors.textColorNav} !important`,
-                background: "transparent",
-                "&:hover, &:focus": {
-                  transition: "color .2s,background .2s",
-                  color: `${theme.myColors.whiteColor} !important`,
-                  background: "rgba(255, 255, 255, 0.08)",
-                },
-              })}
-            >
+        <StyledDrawerListContainer disablePadding>
+          <StyledDrawerListItems sx={{ py: 1.5, px: 3 }}>
+            <StyledDrawerIcenBtn onClick={myOnCloseFn} aria-label="delete">
               <ChevronRightIcon />
-            </IconButton>
-          </ListItem>
+            </StyledDrawerIcenBtn>
+          </StyledDrawerListItems>
           <Navigation isNavigationLink={true} onSelectItem={onSelectItem} />
-        </List>
-      </Drawer>
+        </StyledDrawerListContainer>
+      </StyledDrawer>
     </>
   );
 };

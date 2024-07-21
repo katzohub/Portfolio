@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import { Typography } from "@mui/material";
+import { StyledRow, StyledRowWithin } from "./StyledComponents";
 
 type TemplateRowProps = {
   myNumber: string;
@@ -10,20 +10,12 @@ const TemplateRow: FC<TemplateRowProps> = ({ text, myNumber }) => {
   return (
     <>
       {text && (
-        <Typography variant="body2" sx={{ display: "flex" }}>
-          <Typography
-            variant="caption"
-            sx={(theme) => ({
-              fontSize: "clamp(13px, 1vw, 16px)",
-              [theme.breakpoints.down(525)]: {
-                display: "none",
-              },
-            })}
-          >
+        <StyledRow variant="body2">
+          <StyledRowWithin variant="caption">
             {myNumber} * &nbsp;{" "}
-          </Typography>
+          </StyledRowWithin>
           {text}
-        </Typography>
+        </StyledRow>
       )}
     </>
   );

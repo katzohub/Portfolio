@@ -1,10 +1,13 @@
 import { FC, useState, useEffect } from "react";
 import SwitchContainer from "../components/SwitchContainer";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import usePageStyles from "../styles/style";
+import { Box } from "@mui/material";
 import Navigation from "../components/Navigation";
+import {
+  StyledNavContainer,
+  StyledNavLink,
+  StyledMenuIcon,
+} from "./StyledNavbar";
 import MobileDrawer from "../components/MobileDrawer";
 
 type NavbarProps = {
@@ -13,7 +16,6 @@ type NavbarProps = {
 };
 
 const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
-  const classes = usePageStyles();
   const [open, setOpen] = useState(false);
 
   const location = useLocation();
@@ -45,12 +47,10 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
   };
 
   return (
-    <Box sx={{ width: "100vw", display: "flex", justifyContent: "center" }}>
-      <nav
-        className={isTopnav ? classes.navContainer : classes.bottomNavContainer}
-      >
+    <StyledNavContainer>
+      <nav className={isTopnav ? "top-container" : "bottom-container"}>
         <Box>
-          <Typography className={classes.navLink}>{text}</Typography>
+          <StyledNavLink>{text}</StyledNavLink>
         </Box>
         {isTopnav && <SwitchContainer />}
 
@@ -69,28 +69,9 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
         </Box>
         {isTopnav && (
           <>
-            <MenuIcon
+            <StyledMenuIcon
               aria-label="open drawer"
               onClick={handleDrawerOpen}
-              sx={(theme) => ({
-                display: "none",
-                [theme.breakpoints.down("md")]: {
-                  display: "block",
-                  position: "absolute",
-                  right: "10px",
-                  height: "56px",
-                  borderLeft: `2px solid ${theme.myColors.colorLinie}`,
-                  paddingLeft: "10px",
-                  fontSize: "2.2rem",
-                  transition: "transform 0.3s ease",
-                  cursor: "pointer",
-                  color: theme.myColors.textColorNav,
-                  "&:hover": {
-                    transition: "color 0.3s",
-                    color: theme.myColors.colorFFF,
-                  },
-                },
-              })}
             />
             <MobileDrawer
               myOnOpen={open}
@@ -100,7 +81,7 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
           </>
         )}
       </nav>
-    </Box>
+    </StyledNavContainer>
   );
 };
 

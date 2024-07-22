@@ -63,15 +63,12 @@ export const StyledSkillsWrapp = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   [theme.breakpoints.down("md")]: {
-    overflowY: "auto",
-  },
-
-  [theme.breakpoints.down("md")]: {
     position: "relative",
     top: "0px",
     left: "0px",
     height: "100%",
-    // marginBottom: "100px",
+    overflowY: "auto",
+    marginRight: "10px",
     overflowX: "hidden !important",
   },
 }));
@@ -90,7 +87,7 @@ export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
   gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
   gridColumnGap: "12px",
   gridRowGap: "12px",
-  paddingRight: "20px",
+  paddingRight: "22px",
   [theme.breakpoints.down("md")]: {
     marginBottom: "0px",
     paddingRight: "0px",

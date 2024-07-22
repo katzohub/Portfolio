@@ -64,7 +64,7 @@ export const StyledAboutWrappTemplate = styled(Box)(({ theme }) => ({
 export const StyledAboutDivider = styled(Box)(({ theme }) => ({
   position: "absolute",
   width: "2px",
-  border: `2px solid ${theme.myColors.colorLinie} !important`,
+  border: `1px solid ${theme.myColors.colorLinie} !important`,
   height: "100%",
   zIndex: 10,
   background: theme.myColors.colorLinie,

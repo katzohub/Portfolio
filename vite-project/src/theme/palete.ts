@@ -64,6 +64,8 @@ export const themeOptions: ThemeOptions = createTheme({
     colorSnakeLong: "67, 217, 173",
     colorCircleLeft: "#43D9AD",
     colorCircleRight: "#4D5BCE",
+    colorSkillsBtnText: "#fff",
+    colorSkillsBtnBack: "#1E2D3D",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

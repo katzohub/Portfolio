@@ -88,6 +88,7 @@ export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
   gridColumnGap: "12px",
   gridRowGap: "12px",
   paddingRight: "22px",
+  marginBottom: "52px",
   [theme.breakpoints.down("md")]: {
     marginBottom: "0px",
     paddingRight: "0px",
@@ -166,13 +167,10 @@ export const StyledSkillCardBtn = styled(Button)(({ theme }) => ({
   position: "absolute",
   left: "25px",
   bottom: "15px",
-  transition: "transform 0.3s ease !important",
-  background: `${theme.myColors.colorLinie} !important`,
-  "&:hover": {
-    transform: "scale(1.03)",
-  },
+  background: `${theme.myColors.colorSkillsBtnBack} !important`,
+
   "& a": {
-    color: theme.myColors.whiteColor,
+    color: theme.myColors.colorSkillsBtnText,
     fontFamily: "Fira Code",
     fontSize: "14px",
     fontStyle: "normal",

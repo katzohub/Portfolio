@@ -201,7 +201,8 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   width: "50%",
   height: "40px",
   marginTop: "10px !important",
-  color: theme.myColors.whiteColor,
+  color: theme.myColors.colorFFF,
+  background: `${theme.myColors.colorBackInput} !important`,
   textAlign: "center",
   fontFamily: "Fira Code !important",
   fontSize: "14px",
@@ -209,13 +210,7 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   fontWeight: 450,
   lineHeight: "normal",
   borderRadius: "8px",
-  transition: "all .3s ease-in-out",
   textTransform: "lowercase",
-  background: `${theme.myColors.colorBackInput} !important`,
-  "&:hover": {
-    transform: "scale(0.97)",
-    background: `${theme.myColors.colorBackInput} !important`,
-  },
 }));
 export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
   maxWidth: "600px",

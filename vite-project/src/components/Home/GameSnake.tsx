@@ -112,7 +112,6 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
 
         if (candyCount + 1 === 10) {
           wellDoneGame();
-          // endGame();
           return oldSnake;
         }
       } else {
@@ -299,7 +298,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
                       fontSize={15}
                       sx={{ color: "#fff" }}
                     >
-                      play-again
+                      {intl.formatMessage({ id: "home.playAgain" })}
                     </Typography>
                   </StyledContainerStart>
                 </StyledContainerContinue>

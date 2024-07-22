@@ -244,10 +244,9 @@ export const StyledSnakeBoxSetting: React.FC<ContainerSnakeProps> = ({
 export const StyledSnakeArrowTextFirst = styled(Typography)(({ theme }) => ({
   marginBottom: "8px !important",
   fontFamily: "Fira Code !important",
-  fontSize: "14px",
+  fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 450,
-  lineHeight: "normal",
   position: "relative",
   left: "-4px",
   [theme.breakpoints.down("md")]: {
@@ -258,7 +257,7 @@ export const StyledSnakeArrowTextFirst = styled(Typography)(({ theme }) => ({
 export const StyledSnakeArrowTextSecond = styled(Typography)(({ theme }) => ({
   marginBottom: "16px !important",
   fontFamily: "Fira Code !important",
-  fontSize: "14px",
+  fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "normal",
@@ -321,7 +320,7 @@ export const StyledSnakeContainerFood: React.FC<ContainerSnakeProps> = ({
 export const StyledSnakeFoodLeft = styled(Typography)(() => ({
   color: "#FFF",
   fontFamily: "Fira Code !important",
-  fontSize: "14px",
+  fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "normal",

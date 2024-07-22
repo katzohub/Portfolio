@@ -173,7 +173,7 @@ export interface BigButtonProps {
 export interface ButtonCollapseProps {
   isTrue: boolean;
   isScreen: boolean;
-  handleClickContact?: () => undefined;
+  handleClickContact?: () => void;
   activeContactButton?: string;
   openContact: boolean;
   nameCollapse: string;

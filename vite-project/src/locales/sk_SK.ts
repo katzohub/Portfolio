@@ -9,6 +9,7 @@ export default {
   "home.name": "Ahojte všetci. Som",
   "home.nameHeader": "Tomáš Olšiak",
   "home.myWork": "Front End Vývojár",
+  "home.designer": "UX/UI Dizajnér",
   "home.posTitleOne": "dokončite hru a pokračujte",
   "home.posTitleTwo": "môžete si ju pozrieť aj na mojej stránke Github",
   "home.posTitleMobile": "pozrite môj profil na Github:",

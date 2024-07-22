@@ -16,6 +16,8 @@ import {
   StyledLeftArticleLinkMinScreen,
   StyledLeftContainerBtns,
 } from "./StyledHome";
+import { motion } from "framer-motion";
+import useTypewriter from "../../hooks/useTypewriter";
 import { LanguageContext } from "../../context/LanguageProvider";
 import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
@@ -34,6 +36,11 @@ const LeftSectionHome: FC = () => {
   const openSnakeGame = () => {
     window.open("/game_snake", "_blank", "noopener,noreferrer");
   };
+  const words = [
+    intl.formatMessage({ id: "home.myWork" }),
+    intl.formatMessage({ id: "home.designer" }),
+  ];
+  const typedText = useTypewriter(words);
 
   return (
     <>
@@ -51,8 +58,23 @@ const LeftSectionHome: FC = () => {
               {intl.formatMessage({ id: "home.nameHeader" })}
             </StyledLeftHeadingName>
             <StyledLeftHeadingProfes variant="h2">
-              <FaChevronRight className="chevronRight" />
-              {intl.formatMessage({ id: "home.myWork" })}
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FaChevronRight className="chevronRight" /> {typedText}
+              </motion.span>
+              <motion.span
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatDelay: 0.5,
+                }}
+              >
+                |
+              </motion.span>
             </StyledLeftHeadingProfes>
           </Box>
           <StyledLeftArticleContainer>

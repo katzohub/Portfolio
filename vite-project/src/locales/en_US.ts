@@ -8,7 +8,8 @@ export default {
   /* 02.Home Page */
   "home.name": "Hi all. I am",
   "home.nameHeader": "Tomas Olsiak",
-  "home.myWork": " Front End Developer",
+  "home.myWork": "Front End Developer",
+  "home.designer": "UX/UI Designer",
   "home.posTitleOne": "complete the game to continue",
   "home.posTitleTwo": "you can also see it on my Github page",
   "home.posTitleMobile": "find my profile on Github:",

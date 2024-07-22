@@ -3,7 +3,7 @@ export default {
   "nav.name": "tomas-olsiak",
   "nav.home": "_domov",
   "nav.about": "_o-mne",
-  "nav.project": "_porjekty",
+  "nav.project": "_projekty",
   "nav.contact": "_kontakt",
   /* 02.Home Page */
   "home.name": "Ahojte všetci. Som",

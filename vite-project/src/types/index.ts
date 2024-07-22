@@ -1,26 +1,26 @@
 import { ReactNode, SetStateAction, Dispatch } from "react";
-export type PointSnakeProps = {
+export interface PointSnakeProps {
   index: number;
   candyCount: number;
-};
-export type MenuContextType = {
+}
+export interface MenuContextType {
   isMenuOpen: boolean;
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
-};
-export type MenuProviderProps = {
+}
+export interface MenuProviderProps {
   children: ReactNode;
-};
-export type ThemeContextType = {
+}
+export interface ThemeContextType {
   themeMode: string;
   toggleTheme: () => void;
-};
-export type DisplayDataProps = {
+}
+export interface DisplayDataProps {
   name: string;
   email: string;
   message: string;
   date: string;
-};
-export type CheckedStateProps = {
+}
+export interface CheckedStateProps {
   all: boolean;
   html: boolean;
   css: boolean;
@@ -32,8 +32,8 @@ export type CheckedStateProps = {
   php: boolean;
   react: boolean;
   firebase: boolean;
-};
-export type TextProps = {
+}
+export interface TextProps {
   textOne: string;
   textTwo?: string;
   textThree?: string;
@@ -60,7 +60,7 @@ export type TextProps = {
   textTwentyFour?: string;
   textTwentyFive?: string;
   textTwentySix?: string;
-};
+}
 export interface ThemeProps {
   myColors: {
     colorFFF: string;
@@ -125,92 +125,97 @@ export interface ThemeProps {
     snakeLogoUrl: string;
   };
 }
-export type GeneralBoardProps = {
+export interface GeneralBoardProps {
   generalHeading: string;
   generalText: string;
   leftTemplate: ReactNode;
   postprimaryTemplate?: ReactNode;
   generalTemplate: ReactNode;
   smallGeneralHeading: string;
-};
-export type MobileDrawerProps = {
+}
+export interface MobileDrawerProps {
   myOnOpen: boolean;
   myOnCloseFn: () => void;
   onSelectItem: (path: string) => void;
-};
-export type NavigationProps = {
+}
+export interface NavigationProps {
   isNavigationLink: boolean;
   onSelectItem?: (path: string) => void;
-};
-export type SwitchButtonProps = {
+}
+export interface SwitchButtonProps {
   trueIcon: JSX.Element;
   falseIcon: JSX.Element;
   condition: boolean;
   toggleSwitch: () => void;
-};
-export type TemplateRowProps = {
+}
+export interface TemplateRowProps {
   myNumber: string;
   text: ReactNode;
-};
-export type AboutContentProps = {
+}
+export interface AboutContentProps {
   templateProps: ReactNode;
   activeButton: string;
-};
-export type AboutNavButtonProps = {
+}
+export interface AboutNavButtonProps {
   text: string;
   myIcon: ReactNode;
   myCondition: boolean;
   changeText: (translate: string, changeText: string) => void;
-};
-export type AboutSideBarProps = {
+}
+export interface AboutSideBarProps {
   changeText: (translate: string, changeText: string) => void;
   activeButton: string;
-};
-export type BigButtonProps = {
+}
+export interface BigButtonProps {
   children?: React.ReactNode;
   myBtnFn?: () => void;
-};
-export type ButtonCollapseProps = {
+}
+export interface ButtonCollapseProps {
   isTrue: boolean;
   isScreen: boolean;
-  handleClickContact?: () => void | undefined;
+  handleClickContact?: () => undefined;
   activeContactButton?: string;
   openContact: boolean;
   nameCollapse: string;
   myIcon?: ReactNode;
-};
-export type DropdownButtonsProps = {
+}
+export interface DropdownButtonsProps {
   myFirstInfo: ReactNode;
   mySecondInfo: ReactNode;
   myThirdInfo?: ReactNode;
-};
-export type Coordinate = { x: number; y: number };
-export type GameSnakeProps = {
+}
+export interface Coordinate {
+  x: number;
+  y: number;
+}
+export interface GameSnakeProps {
   isFullWindow: boolean;
-};
+}
 
-export type ContainerSnakeProps = {
+export interface ContainerSnakeProps {
   isFullWindow: boolean;
   children: React.ReactNode;
-};
-export type SkillsSidebarProps = {
+}
+export interface SkillsSidebarProps {
   checkedState: CheckedStateProps;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
-export type KeyboardSnakeProps = {
+}
+export interface KeyboardSnakeProps {
   isFunctionKeyboard: boolean;
   handleButtonClick?: (direction: string) => void;
-};
-export type NavigationDataProps = {
+}
+export interface NavigationDataProps {
   goUrl: string;
   icon: JSX.Element;
   text?: string;
-};
-export type NavbarProps = {
+}
+export interface NavbarProps {
   isTopnav: boolean;
   text?: string;
-};
+}
 export const defaultMenuContext: MenuContextType = {
   isMenuOpen: false,
-  setIsMenuOpen: () => {},
+  setIsMenuOpen: () => {
+    // This function is empty by default
+  },
 };

@@ -143,7 +143,11 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
     setKeyPressed(false);
     gameAreaRef.current?.focus();
   };
-
+  useEffect(() => {
+    if (gameStarted) {
+      gameAreaRef.current?.focus();
+    }
+  }, [gameStarted]);
   useEffect(() => {
     if (gameOver || !gameStarted) return;
 
@@ -158,6 +162,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
     if (keyPressed) return;
     setKeyPressed(true);
     handleDirectionChange(e.key);
+    e.preventDefault();
   };
 
   const handleButtonClick = (direction: string) => {

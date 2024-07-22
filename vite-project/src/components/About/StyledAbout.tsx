@@ -208,6 +208,9 @@ export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
+  [theme.breakpoints.down("lg")]: {
+    paddingBottom: "15px",
+  },
   "& p": {
     fontSize: "clamp(13px, 1vw, 16px)",
     whiteSpace: "nowrap",

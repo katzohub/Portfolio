@@ -19,7 +19,7 @@ const GlobalStyles = () => (
         width: "100vw",
         minHeight: "100dvh",
         color: " #fff",
-        overflowX: "hidden",
+        overflowX: "hidden !important",
         overflowY: "auto",
         fontFamily: `"Fira Code" !important`,
       },
@@ -28,6 +28,7 @@ const GlobalStyles = () => (
         minHeight: "100dvh",
         position: "relative",
         overflow: "hidden",
+        overflowX: "hidden !important",
       },
     }}
   />

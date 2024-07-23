@@ -34,6 +34,7 @@ const ContactForm: React.FC = () => {
     message: "",
     date: "",
   });
+
   const intl = useIntl();
   useEffect(() => {
     const currentDate = new Date();
@@ -132,8 +133,8 @@ const ContactForm: React.FC = () => {
                 margin="normal"
                 value={name}
                 onChange={handleNameChange}
-                error={!!errors.name}
-                helperText={errors.name}
+                error={!!errors.name && name.trim() !== ""}
+                helperText={name.trim() !== "" ? errors.name : ""}
               />
               <StyledTextField
                 name="email"
@@ -144,8 +145,8 @@ const ContactForm: React.FC = () => {
                 margin="normal"
                 value={email}
                 onChange={handleEmailChange}
-                error={!!errors.email}
-                helperText={errors.email}
+                error={!!errors.email && email.trim() !== ""}
+                helperText={email.trim() !== "" ? errors.email : ""}
               />
               <StyledTextField
                 name="message"
@@ -158,8 +159,8 @@ const ContactForm: React.FC = () => {
                 margin="normal"
                 value={message}
                 onChange={handleMessageChange}
-                error={!!errors.message}
-                helperText={errors.message}
+                error={!!errors.message && message.trim() !== ""}
+                helperText={message.trim() !== "" ? errors.message : ""}
               />
               <input
                 type="hidden"

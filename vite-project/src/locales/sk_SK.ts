@@ -191,4 +191,9 @@ export default {
   /*08 Not found Message*/
   "notFound.generalText": "404 Chyba",
   "notFound.primaryText": "Na tejto stránke nič nie je!",
+  /*08.Valid form */
+  "valid.name": "Názov nemôže byť prázdny alebo len medzery.",
+  "valid.name.number": "Meno nemôže obsahovať čísla.",
+  "valid.email": "Neplatná emailová adresa.",
+  "valid.message": "Správa musí mať aspoň 10 znakov.",
 };

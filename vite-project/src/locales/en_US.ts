@@ -187,4 +187,9 @@ export default {
   /*07.Not found Message*/
   "notFound.generalText": "404 Not Found",
   "notFound.primaryText": "The page that does not exist!",
+  /*08.Valid form */
+  "valid.name": "Name cannot be empty or just spaces.",
+  "valid.name.number": "Name cannot contain numbers.",
+  "valid.email": "Invalid email address.",
+  "valid.message": "Message must be at least 10 characters long.",
 };

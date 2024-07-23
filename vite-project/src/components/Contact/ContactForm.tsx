@@ -23,6 +23,11 @@ const ContactForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
   const [displayData, setDisplayData] = useState<DisplayDataProps>({
     name: "",
     email: "",
@@ -43,7 +48,67 @@ const ContactForm: React.FC = () => {
   useEffect(() => {
     setIsReady(true);
   }, []);
+  const validateName = (name: string) => {
+    if (!name.trim()) {
+      return intl.formatMessage({ id: "valid.name" });
+    }
+    if (/\d/.test(name)) {
+      return intl.formatMessage({ id: "valid.name.number" });
+    }
+    return "";
+  };
 
+  const validateEmail = (email: string) => {
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(email)) {
+      return intl.formatMessage({ id: "valid.email" });
+    }
+    return "";
+  };
+
+  const validateMessage = (message: string) => {
+    if (message.length < 10) {
+      return intl.formatMessage({ id: "valid.message" });
+    }
+    return "";
+  };
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newName = e.target.value;
+    setName(newName);
+    setErrors((prevErrors) => ({ ...prevErrors, name: validateName(newName) }));
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      email: validateEmail(newEmail),
+    }));
+  };
+
+  const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newMessage = e.target.value;
+    setMessage(newMessage);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      message: validateMessage(newMessage),
+    }));
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const nameError = validateName(name);
+    const emailError = validateEmail(email);
+    const messageError = validateMessage(message);
+
+    if (nameError || emailError || messageError) {
+      setErrors({ name: nameError, email: emailError, message: messageError });
+      return;
+    }
+    e.currentTarget.submit();
+  };
   return (
     <StyledContactFormContainer>
       <AnimatePresence>
@@ -56,6 +121,7 @@ const ContactForm: React.FC = () => {
             <form
               action="https://formsubmit.co/tomasolsiak1@gmail.com"
               method="POST"
+              onSubmit={handleSubmit}
             >
               <StyledTextField
                 name="name"
@@ -65,7 +131,9 @@ const ContactForm: React.FC = () => {
                 fullWidth
                 margin="normal"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
+                error={!!errors.name}
+                helperText={errors.name}
               />
               <StyledTextField
                 name="email"
@@ -75,7 +143,9 @@ const ContactForm: React.FC = () => {
                 fullWidth
                 margin="normal"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
+                error={!!errors.email}
+                helperText={errors.email}
               />
               <StyledTextField
                 name="message"
@@ -87,13 +157,26 @@ const ContactForm: React.FC = () => {
                 fullWidth
                 margin="normal"
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={handleMessageChange}
+                error={!!errors.message}
+                helperText={errors.message}
               />
               <input
                 type="hidden"
                 name="_next"
                 value={`${window.location.origin}/thank-you`}
               />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Message from portolio"
+              ></input>
+              <input
+                type="hidden"
+                name="_cc"
+                value="aneroid_telo0k@icloud.com"
+              />
+              <input type="hidden" name="_template" value="table"></input>
               <StyledSubmitFormBtn
                 type="submit"
                 variant="contained"
@@ -195,5 +278,4 @@ const ContactForm: React.FC = () => {
     </StyledContactFormContainer>
   );
 };
-
 export default ContactForm;

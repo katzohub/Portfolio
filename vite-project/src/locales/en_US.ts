@@ -192,4 +192,5 @@ export default {
   "valid.name.number": "Name cannot contain numbers.",
   "valid.email": "Invalid email address.",
   "valid.message": "Message must be at least 10 characters long.",
+  "valid.message.maxLegth": "Message cannot be longer than 1 000 characters.",
 };

@@ -12,6 +12,7 @@ import {
   StyledTextOrange,
   StyledTextPurple,
 } from "./StyledContact";
+import { Box } from "@mui/system";
 import { useIntl } from "react-intl";
 import { DisplayDataProps } from "../../types";
 import { motion } from "framer-motion";
@@ -71,6 +72,9 @@ const ContactForm: React.FC = () => {
   const validateMessage = (message: string) => {
     if (message.length < 10) {
       return intl.formatMessage({ id: "valid.message" });
+    }
+    if (message.length > 1000) {
+      return intl.formatMessage({ id: "valid.message.maxLegth" });
     }
     return "";
   };
@@ -225,16 +229,28 @@ const ContactForm: React.FC = () => {
             <StyledTextGray variant="caption">:</StyledTextGray>
             <StyledTextOrange variant="caption">{`"${displayData.email}"`}</StyledTextOrange>
             <br />
-            <StyledTextGray variant="caption">6</StyledTextGray>
-            &nbsp;&nbsp;
-            <StyledTextPurple variant="caption">Message</StyledTextPurple>
-            <StyledTextGray variant="caption">:</StyledTextGray>
-            <StyledTextOrange
-              variant="caption"
-              sx={{ width: "200px !important", background: "yellow" }}
-            >{`"${displayData.message}"`}</StyledTextOrange>
-            &nbsp;&nbsp;
-            <br />
+            <Box sx={{ display: "flex" }}>
+              {" "}
+              <StyledTextGray variant="caption">6</StyledTextGray>
+              &nbsp;&nbsp;
+              <StyledTextPurple variant="caption">Message</StyledTextPurple>
+              <StyledTextGray variant="caption">:</StyledTextGray>
+              <StyledTextOrange
+                title={`"${displayData.message}"`}
+                sx={{
+                  display: "-webkit-box",
+                  maxHeight: "300px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  WebkitLineClamp: 10,
+                  WebkitBoxOrient: "vertical",
+                  width: "100% !important",
+                }}
+                variant="caption"
+              >
+                {`"${displayData.message}"`}
+              </StyledTextOrange>
+            </Box>
             <StyledTextGray variant="caption">7&nbsp;</StyledTextGray>
             <StyledTextGray variant="caption">Date:</StyledTextGray>
             <StyledTextOrange variant="caption">{`"${displayData.date}"`}</StyledTextOrange>

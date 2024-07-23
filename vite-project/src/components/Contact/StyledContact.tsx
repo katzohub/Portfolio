@@ -163,7 +163,7 @@ export const StyledContactFormContainer = styled(Box)(({ theme }) => ({
 }));
 export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   width: "100%",
-  maxWidth: "500px",
+  maxWidth: "400px",
   position: "relative",
   top: "15px",
   [theme.breakpoints.down("xl")]: {
@@ -213,7 +213,7 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   textTransform: "lowercase",
 }));
 export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
-  maxWidth: "600px",
+  maxWidth: "500px",
   color: "white",
   padding: 2,
   height: "100dvh",

@@ -196,4 +196,5 @@ export default {
   "valid.name.number": "Meno nemôže obsahovať čísla.",
   "valid.email": "Neplatná emailová adresa.",
   "valid.message": "Správa musí mať aspoň 10 znakov.",
+  "valid.message.maxLegth": "Správa nemôže mať viac ako 1 000 znakov.",
 };

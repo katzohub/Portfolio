@@ -76,7 +76,7 @@ export interface ThemeProps {
     colorTextCard: string;
     colorBackInput: string;
     whiteColor: string;
-
+    colorBackgroundFullScrenn: string;
     colorGrey: string;
     colorPurple: string;
     colorOrangeText: string;

@@ -27,8 +27,7 @@ const StyledContactMaxWidth = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100%",
   overflow: "hidden",
-  background:
-    "linear-gradient(150deg, rgba(23, 85, 83, 0.70) 1.7%, rgba(67, 217, 173, 0.09) 81.82%)",
+  background: theme.myColors.colorBackgroundFullScrenn,
   boxShadow: "0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset",
   border: `2px solid ${theme.myColors.borderTableSnake}`,
   position: "relative",

@@ -25,7 +25,11 @@ const MobileDrawer: FC<MobileDrawerProps> = ({
       >
         <StyledDrawerListContainer disablePadding>
           <StyledDrawerListItems sx={{ py: 1.5, px: 3 }}>
-            <StyledDrawerIcenBtn onClick={myOnCloseFn} aria-label="delete">
+            <StyledDrawerIcenBtn
+              onClick={myOnCloseFn}
+              aria-label="delete"
+              data-cy="btn-closed-drawer"
+            >
               <ChevronRightIcon />
             </StyledDrawerIcenBtn>
           </StyledDrawerListItems>

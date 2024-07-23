@@ -33,12 +33,13 @@ const Navigation: FC<NavigationProps> = ({
       >
         {isNavigationLink
           ? trueNavigationData.map((item, index) => {
-              const { goUrl, text, icon } = item;
+              const { goUrl, text, icon, dataCy } = item;
               return (
                 <StyledNavigationTopWrapp
                   key={index}
                   className={`${pathname === goUrl ? "active" : ""}`}
                   onClick={() => onSelectItem && onSelectItem(goUrl)}
+                  data-cy={dataCy}
                 >
                   <StyledNavigationIconMinScreen>
                     {icon}
@@ -50,13 +51,14 @@ const Navigation: FC<NavigationProps> = ({
               );
             })
           : falseNavigationData.map((item, index) => {
-              const { goUrl, icon, text } = item;
+              const { goUrl, icon, text, dataCy } = item;
               return (
                 <StyledNavigationLinkMinScreen
                   key={index}
                   target="_blank"
                   rel="noopener noreferrer"
                   href={goUrl}
+                  data-cy={dataCy}
                 >
                   {text && (
                     <Typography className="github-link">{text}</Typography>

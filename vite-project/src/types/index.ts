@@ -208,6 +208,7 @@ export interface NavigationDataProps {
   goUrl: string;
   icon: JSX.Element;
   text?: string;
+  dataCy: string;
 }
 export interface NavbarProps {
   isTopnav: boolean;

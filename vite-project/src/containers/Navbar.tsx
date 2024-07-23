@@ -66,6 +66,7 @@ const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
             <StyledMenuIcon
               aria-label="open drawer"
               onClick={handleDrawerOpen}
+              data-cy="btn-drawer"
             />
             <MobileDrawer
               myOnOpen={open}

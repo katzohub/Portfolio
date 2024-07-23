@@ -4,10 +4,6 @@ import { useIntl } from "react-intl";
 import { MiniCircle } from "../../assets/svg";
 import { Box, Typography } from "@mui/material";
 import {
-  BackroundGlassSnakeLeft,
-  BackroundGlassSnakeRight,
-} from "../../assets/svg";
-import {
   ContainerSnake,
   StyledMiniCircleWrapper,
   StyledSnakeGameArea,
@@ -27,6 +23,7 @@ import {
   StyledSnakeFoodLeft,
   StyledSnakePointContainer,
 } from "./StyledHome";
+
 import { Coordinate, GameSnakeProps } from "../../types";
 
 const gridSize = 20;
@@ -211,8 +208,6 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
 
   return (
     <ContainerSnake isFullWindow={isFullWindow}>
-      <BackroundGlassSnakeLeft />
-      <BackroundGlassSnakeRight />
       <StyledMiniCircleWrapper
         sx={{
           position: "absolute",

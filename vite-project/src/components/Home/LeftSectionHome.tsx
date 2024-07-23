@@ -2,7 +2,6 @@ import { FC, useContext } from "react";
 import { Box, Typography } from "@mui/material";
 import {
   StyledLeftContainer,
-  StyledLeftWrapp,
   StyledLeftWrapper,
   StyledLeftHeadingGeneral,
   StyledLeftHeadingName,
@@ -25,10 +24,6 @@ import { Link } from "@mui/material";
 import { BigButton } from "../../components/Buttons";
 import canvaSvk from "../../assets/resume/canva_svk.pdf";
 import canvaUs from "../../assets/resume/canva_anj.pdf";
-import {
-  BackroundGlassSnakeLeft,
-  BackroundGlassSnakeRight,
-} from "../../assets/svg";
 
 const LeftSectionHome: FC = () => {
   const intl = useIntl();
@@ -45,10 +40,6 @@ const LeftSectionHome: FC = () => {
   return (
     <>
       <StyledLeftContainer>
-        <StyledLeftWrapp>
-          <BackroundGlassSnakeLeft />
-          <BackroundGlassSnakeRight />
-        </StyledLeftWrapp>
         <StyledLeftWrapper>
           <Box>
             <StyledLeftHeadingGeneral variant="h3">

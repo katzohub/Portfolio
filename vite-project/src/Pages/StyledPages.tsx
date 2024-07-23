@@ -59,10 +59,9 @@ export const StyledWrappHome = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-
+  position: "relative",
   [theme.breakpoints.down("lg")]: {
     flexDirection: "column",
-    position: "relative",
     alignItems: "center",
     height: "100%",
   },
@@ -75,6 +74,54 @@ export const StyledWrappHome = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     zIndex: "5",
     padding: "0px",
+  },
+  // this
+  "& .blue": {
+    position: "absolute",
+    left: "42%",
+    transform: "rotate(275deg)",
+    width: "700px",
+    [theme.breakpoints.down("lg")]: {
+      left: "30%",
+      bottom: "0%",
+      width: "600px",
+      height: "600px",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "350px",
+      height: "350px",
+      top: "25%",
+      left: "40%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "350px",
+      height: "350px",
+      top: "25%",
+      right: "5%",
+    },
+  },
+  "& .green": {
+    position: "absolute",
+    left: "20%",
+    transform: "rotate(275deg)",
+    width: "700px",
+    [theme.breakpoints.down("lg")]: {
+      width: "600px",
+      height: "600px",
+      top: "0%",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "350px",
+      height: "350px",
+      top: "40%",
+      left: "15%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "350px",
+      height: "350px",
+      top: "40%",
+      left: "-5%",
+    },
   },
 }));
 export const StyledWrapperLeftHome = styled(Box)(({ theme }) => ({

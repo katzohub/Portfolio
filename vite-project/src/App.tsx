@@ -1,4 +1,4 @@
-import { lazy, useContext, ReactNode, Suspense } from "react";
+import { lazy, Suspense, useContext, ReactNode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
@@ -10,13 +10,13 @@ import { IntlProvider } from "react-intl";
 import en from "./locales/en_US";
 import sk from "./locales/sk_SK";
 
+const Home = lazy(() => import("./Pages/Home.tsx"));
 const AboutMe = lazy(() => import("./Pages/AboutMe"));
 const Skills = lazy(() => import("./Pages/Skills.tsx"));
 const ContactMe = lazy(() => import("./Pages/ContactMe"));
 const ThankYou = lazy(() => import("./Pages/ThankYou"));
 const SnakeGame = lazy(() => import("./Pages/SnakeGame"));
 const Error = lazy(() => import("./Pages/Error"));
-const Home = lazy(() => import("./Pages/Home.tsx"));
 
 const App = () => {
   return (
@@ -45,16 +45,15 @@ const App = () => {
                 }
               >
                 <Routes>
-                  {/* TODO FIX THIS LOADING PAGES */}
                   <Route path="/" element={<SharedLayout />}>
                     <Route index element={<Home />} />
-                    <Route path="/about-me" element={<AboutMe />}></Route>
-                    <Route path="/projects" element={<Skills />}></Route>
-                    <Route path="/contact-me" element={<ContactMe />}></Route>
-                    <Route path="/thank-you" element={<ThankYou />}></Route>
+                    <Route path="/about-me" element={<AboutMe />} />
+                    <Route path="/projects" element={<Skills />} />
+                    <Route path="/contact-me" element={<ContactMe />} />
+                    <Route path="/thank-you" element={<ThankYou />} />
                     <Route path="*" element={<Error />} />
                   </Route>
-                  <Route path="/game_snake" element={<SnakeGame />}></Route>
+                  <Route path="/game_snake" element={<SnakeGame />} />
                 </Routes>
               </Suspense>
             </IntlProviderWrapper>

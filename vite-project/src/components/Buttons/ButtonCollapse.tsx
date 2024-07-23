@@ -53,6 +53,7 @@ const ButtonCollapse: FC<ButtonCollapseProps> = ({
             {" "}
             <>
               <StyledListButtonsCollapse
+                data-cy="btn-contact-dropdown"
                 sx={(theme: Theme) => ({
                   display: isTrue ? "flex" : "none",
                   color:
@@ -80,7 +81,10 @@ const ButtonCollapse: FC<ButtonCollapseProps> = ({
               {isScreen ? (
                 <DropdownButtons
                   myFirstInfo={
-                    <StyledTextNavigateContact href="mailto:tomasolsiak1@gmail.com">
+                    <StyledTextNavigateContact
+                      data-cy="mail-contact"
+                      href="mailto:tomasolsiak1@gmail.com"
+                    >
                       <StyledCollapseButton>
                         <StyledEmailIcon />
                         <ListItemText primary="tomasolsiak1@gmail.com" />
@@ -88,7 +92,10 @@ const ButtonCollapse: FC<ButtonCollapseProps> = ({
                     </StyledTextNavigateContact>
                   }
                   mySecondInfo={
-                    <StyledTextNavigateContact href="tel:+421915515974">
+                    <StyledTextNavigateContact
+                      data-cy="tel-contact"
+                      href="tel:+421915515974"
+                    >
                       <StyledPhoneButton>
                         <StyledIconPhone />
                         <ListItemText primary="+421 915 515 974" />

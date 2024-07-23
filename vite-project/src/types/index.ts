@@ -160,6 +160,7 @@ export interface AboutNavButtonProps {
   text: string;
   myIcon: ReactNode;
   myCondition: boolean;
+  testCy: string;
   changeText: (translate: string, changeText: string) => void;
 }
 export interface AboutSideBarProps {

@@ -42,11 +42,13 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
           >
             <AboutNavButton
               text={"about.bio"}
+              testCy="btn-bio"
               myIcon={<StyledAboutIconBio />}
               myCondition={activeButton === "bio"}
               changeText={() => changeText("about.bio", "bio")}
             />
             <AboutNavButton
+              testCy="btn-interests"
               text={"about.interests"}
               myIcon={<StyledAboutIconInterest />}
               myCondition={activeButton === "interests"}
@@ -68,12 +70,14 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
                 <StyledAboutIconEducation />
               </ListItemIcon>
               <StyledAboutBtnText
+                data-cy="btn-collapse-education"
                 primary={intl.formatMessage({ id: "about.education" })}
               />
             </StyledAboutItemBtn>
             <Collapse in={open} timeout="auto" unmountOnExit>
               <StyledAboutCollapseList disablePadding>
                 <AboutNavButton
+                  testCy="btn-primary-school"
                   text={"about.primary-school"}
                   myIcon={<SchoolIcon />}
                   myCondition={activeButton === "primary-school"}
@@ -82,6 +86,7 @@ const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
                   }
                 />
                 <AboutNavButton
+                  testCy="btn-high-school"
                   text={"about.high-school"}
                   myIcon={<SchoolIcon />}
                   myCondition={activeButton === "high-school"}

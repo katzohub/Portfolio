@@ -166,6 +166,7 @@ export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   maxWidth: "400px",
   position: "relative",
   top: "15px",
+  height: "max-content",
   [theme.breakpoints.down("xl")]: {
     maxWidth: "350px",
   },
@@ -216,10 +217,8 @@ export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
   maxWidth: "457px",
   color: "white",
   padding: 2,
-  height: "100dvh",
-  [theme.breakpoints.down("lg")]: {
-    height: "auto",
-  },
+  height: "max-content",
+  [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("sm")]: {
     width: "100%",
     display: "flex",

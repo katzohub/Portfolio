@@ -18,7 +18,6 @@ export const StyledAboutContainer = styled(Box)(({ theme }) => ({
   justifyContent: "space-evenly",
   alignItems: "start",
   overflowY: "auto",
-
   [theme.breakpoints.down("lg")]: {
     display: "flex",
     flexDirection: "column",

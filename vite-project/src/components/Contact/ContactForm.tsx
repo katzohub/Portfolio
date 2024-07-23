@@ -11,8 +11,9 @@ import {
   StyledTextPink,
   StyledTextOrange,
   StyledTextPurple,
+  StyledTextContainerMessage,
+  StyledTextMessage,
 } from "./StyledContact";
-import { Box } from "@mui/system";
 import { useIntl } from "react-intl";
 import { DisplayDataProps } from "../../types";
 import { motion } from "framer-motion";
@@ -229,28 +230,18 @@ const ContactForm: React.FC = () => {
             <StyledTextGray variant="caption">:</StyledTextGray>
             <StyledTextOrange variant="caption">{`"${displayData.email}"`}</StyledTextOrange>
             <br />
-            <Box sx={{ display: "flex" }}>
-              {" "}
+            <StyledTextContainerMessage>
               <StyledTextGray variant="caption">6</StyledTextGray>
               &nbsp;&nbsp;
               <StyledTextPurple variant="caption">Message</StyledTextPurple>
               <StyledTextGray variant="caption">:</StyledTextGray>
-              <StyledTextOrange
+              <StyledTextMessage
                 title={`"${displayData.message}"`}
-                sx={{
-                  display: "-webkit-box",
-                  maxHeight: "300px",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  WebkitLineClamp: 10,
-                  WebkitBoxOrient: "vertical",
-                  width: "100% !important",
-                }}
                 variant="caption"
               >
                 {`"${displayData.message}"`}
-              </StyledTextOrange>
-            </Box>
+              </StyledTextMessage>
+            </StyledTextContainerMessage>
             <StyledTextGray variant="caption">7&nbsp;</StyledTextGray>
             <StyledTextGray variant="caption">Date:</StyledTextGray>
             <StyledTextOrange variant="caption">{`"${displayData.date}"`}</StyledTextOrange>

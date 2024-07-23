@@ -213,7 +213,7 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   textTransform: "lowercase",
 }));
 export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
-  maxWidth: "500px",
+  maxWidth: "457px",
   color: "white",
   padding: 2,
   height: "100dvh",
@@ -289,6 +289,31 @@ export const StyledTextPurple = styled(Typography)(({ theme }) => ({
     fontSize: "11px",
   },
 }));
+export const StyledTextContainerMessage = styled(Box)(() => ({
+  display: "flex",
+}));
+export const StyledTextMessage = styled(Typography)(({ theme }) => ({
+  display: "-webkit-box",
+  maxHeight: "300px",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  WebkitLineClamp: 10,
+  WebkitBoxOrient: "vertical",
+  width: "auto !important",
+  color: theme.myColors.colorOrangeText,
+  fontFamily: "Fira Code",
+  fontSize: "18px",
+  fontStyle: "normal",
+  fontWeight: 450,
+  lineHeight: "150%",
+  [theme.breakpoints.down("xl")]: {
+    fontSize: "14px",
+    fontWeight: 600,
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "11px",
+  },
+}));
 StyledContactBtnContainer.displayName = "StyledContactBtnContainer";
 StyledContactDivider.displayName = "StyledContactDivider";
 StyledContactBtnOpenFind.displayName = "StyledContactBtnOpenFind";
@@ -306,3 +331,5 @@ StyledTextGray.displayName = "StyledTextGray";
 StyledTextPink.displayName = "StyledTextPink";
 StyledTextOrange.displayName = "StyledTextOrange";
 StyledTextPurple.displayName = "StyledTextPurple";
+StyledTextContainerMessage.displayName = "StyledTextContainerMessage";
+StyledTextMessage.displayName = "StyledTextMessage";

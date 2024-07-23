@@ -234,7 +234,10 @@ const ContactForm: React.FC = () => {
               &nbsp;&nbsp;
               <StyledTextPurple variant="caption">Message</StyledTextPurple>
               <StyledTextGray variant="caption">:</StyledTextGray>
-              <StyledTextOrange variant="caption">{`"${displayData.message}"`}</StyledTextOrange>
+              <StyledTextOrange
+                variant="caption"
+                sx={{ width: "200px !important", background: "yellow" }}
+              >{`"${displayData.message}"`}</StyledTextOrange>
               &nbsp;&nbsp;
               <br />
               <StyledTextGray variant="caption">7&nbsp;</StyledTextGray>

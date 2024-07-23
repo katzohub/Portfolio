@@ -178,7 +178,7 @@ export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   },
 }));
 export const StyledContactFormDivider = styled(Divider)(({ theme }) => ({
-  width: "2px",
+  width: "1px",
   border: `1px solid ${theme.myColors.colorLinie} !important`,
   height: "100%",
   zIndex: 10,

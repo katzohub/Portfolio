@@ -52,6 +52,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsListItem
+                data-cy="checkbox-all"
                 sx={{
                   color: checkedState.all ? "#fff" : "#607B96",
                 }}
@@ -72,6 +73,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-html"
                 sx={{
                   color: checkedState.html ? "#fff" : "#607B96",
                 }}
@@ -92,6 +94,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-css"
                 sx={{
                   color: checkedState.css ? "#fff" : "#607B96",
                 }}
@@ -112,6 +115,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-scss"
                 sx={{
                   color: checkedState.sass ? "#fff" : "#607B96",
                 }}
@@ -132,6 +136,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-tailwind"
                 sx={{
                   color: checkedState.tailwind ? "#fff" : "#607B96",
                 }}
@@ -152,6 +157,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-mui"
                 sx={{
                   color: checkedState.mui ? "#fff" : "#607B96",
                 }}
@@ -172,6 +178,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-javascript"
                 sx={{
                   color: checkedState.javascript ? "#fff" : "#607B96",
                 }}
@@ -192,6 +199,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-typescript"
                 sx={{
                   color: checkedState.typescript ? "#fff" : "#607B96",
                 }}
@@ -212,6 +220,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-php"
                 sx={{
                   color: checkedState.php ? "#fff" : "#607B96",
                 }}
@@ -232,6 +241,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-react"
                 sx={{
                   color: checkedState.react ? "#fff" : "#607B96",
                 }}
@@ -253,6 +263,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
             }
             label={
               <StyledSkillsRowLabel
+                data-cy="checkbox-firebase"
                 sx={{
                   color: checkedState.firebase ? "#fff" : "#607B96",
                 }}

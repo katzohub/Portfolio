@@ -1,6 +1,10 @@
+import { byTestCy } from "../support/commands";
+
 const allScreen = () => {
   cy.contains("404 Not Found").should("be.visible");
   cy.contains("The page that does not exist!").should("be.visible");
+  cy.get(byTestCy("go-btn-home")).click();
+  cy.url().should("include", "/");
 };
 
 describe("Navigate tour", () => {

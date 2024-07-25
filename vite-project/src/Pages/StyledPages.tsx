@@ -9,6 +9,23 @@ export const StyledContainerError = styled(Box)(() => ({
   alignItems: "center",
   justifyContent: "center",
 }));
+export const StyledGoHomeBtn = styled(Button)(({ theme }) => ({
+  width: "auto",
+  padding: "0 25px",
+  height: "40px",
+  marginTop: "10px !important",
+  color: theme.myColors.colorFFF,
+  background: `${theme.myColors.colorBackInput} !important`,
+  textAlign: "center",
+  fontFamily: "Fira Code !important",
+  fontSize: "14px",
+  fontStyle: "normal",
+  fontWeight: 450,
+  lineHeight: "normal",
+  borderRadius: "8px",
+  textTransform: "lowercase",
+  "& a": { color: theme.myColors.colorFFF },
+}));
 export const StyledGeneralTextError = styled(Typography)(() => ({
   color: "#607b96",
 }));

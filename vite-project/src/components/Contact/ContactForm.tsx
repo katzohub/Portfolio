@@ -139,6 +139,7 @@ const ContactForm: React.FC = () => {
               onChange={handleNameChange}
               error={!!errors.name && name.trim() !== ""}
               helperText={name.trim() !== "" ? errors.name : ""}
+              data-cy="name-field"
             />
             <StyledTextField
               name="email"
@@ -151,6 +152,7 @@ const ContactForm: React.FC = () => {
               onChange={handleEmailChange}
               error={!!errors.email && email.trim() !== ""}
               helperText={email.trim() !== "" ? errors.email : ""}
+              data-cy="email-field"
             />
             <StyledTextField
               name="message"
@@ -165,6 +167,7 @@ const ContactForm: React.FC = () => {
               onChange={handleMessageChange}
               error={!!errors.message && message.trim() !== ""}
               helperText={message.trim() !== "" ? errors.message : ""}
+              data-cy="message-area"
             />
             <input
               type="hidden"
@@ -182,6 +185,7 @@ const ContactForm: React.FC = () => {
               type="submit"
               variant="contained"
               color="primary"
+              data-cy="submit-email"
             >
               {intl.formatMessage({ id: "contact.submit" })}
             </StyledSubmitFormBtn>

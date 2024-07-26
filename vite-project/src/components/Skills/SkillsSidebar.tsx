@@ -1,12 +1,10 @@
 import { FC, useEffect, useState } from "react";
-import { FormControlLabel } from "@mui/material";
 import {
   StyledSkillsRightForm,
   StyledSkillsLabel,
   StyledSkillsListItem,
   StyledSkillsCheckbox,
   StyledCategoryIcon,
-  StyledSkillsRowLabel,
   StyledSkillsBoxDividerTop,
 } from "./StyledSkills";
 import CheckSkill from "./CheckSkill";

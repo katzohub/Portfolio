@@ -9,6 +9,7 @@ import {
   StyledSkillsRowLabel,
   StyledSkillsBoxDividerTop,
 } from "./StyledSkills";
+import CheckSkill from "./CheckSkill";
 import { SiHtml5, SiCss3, SiSass, SiTailwindcss, SiMui } from "react-icons/si";
 import {
   SiJavascript,
@@ -33,6 +34,119 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
   useEffect(() => {
     setIsReady(true);
   }, []);
+
+  const dataChecked = [
+    {
+      checked: checkedState.html,
+      name: "html",
+      testCy: "checkbox-html",
+      icon: (
+        <>
+          <SiHtml5 className="label-icon" />
+          HTML
+        </>
+      ),
+    },
+    {
+      checked: checkedState.css,
+      name: "css",
+      testCy: "checkbox-css",
+      icon: (
+        <>
+          <SiCss3 className="label-icon" />
+          CSS
+        </>
+      ),
+    },
+    {
+      checked: checkedState.sass,
+      name: "sass",
+      testCy: "checkbox-scss",
+      icon: (
+        <>
+          <SiSass className="label-icon" />
+          SCSS
+        </>
+      ),
+    },
+    {
+      checked: checkedState.tailwind,
+      name: "tailwind",
+      testCy: "checkbox-tailwind",
+      icon: (
+        <>
+          <SiTailwindcss className="label-icon" />
+          TailWind
+        </>
+      ),
+    },
+    {
+      checked: checkedState.mui,
+      name: "mui",
+      testCy: "checkbox-mui",
+      icon: (
+        <>
+          <SiMui className="label-icon" />
+          MUI
+        </>
+      ),
+    },
+    {
+      checked: checkedState.javascript,
+      name: "javascript",
+      testCy: "checkbox-javascript",
+      icon: (
+        <>
+          <SiJavascript className="label-icon" />
+          JavaScript
+        </>
+      ),
+    },
+    {
+      checked: checkedState.typescript,
+      name: "typescript",
+      testCy: "checkbox-typescript",
+      icon: (
+        <>
+          <SiTypescript className="label-icon" />
+          Typescript
+        </>
+      ),
+    },
+    {
+      checked: checkedState.php,
+      name: "php",
+      testCy: "checkbox-php",
+      icon: (
+        <>
+          <SiPhp className="label-icon" />
+          PHP
+        </>
+      ),
+    },
+    {
+      checked: checkedState.react,
+      name: "react",
+      testCy: "checkbox-react",
+      icon: (
+        <>
+          <SiReact className="label-icon" />
+          React
+        </>
+      ),
+    },
+    {
+      checked: checkedState.firebase,
+      name: "firebase",
+      testCy: "checkbox-firebase",
+      icon: (
+        <>
+          <SiFirebase className="label-icon" />
+          Firebase
+        </>
+      ),
+    },
+  ];
 
   return (
     <AnimatePresence>
@@ -62,217 +176,16 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
               </StyledSkillsListItem>
             }
           />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.html}
-                onChange={handleCheckboxChange}
-                name="html"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-html"
-                sx={{
-                  color: checkedState.html ? "#fff" : "#607B96",
-                }}
-              >
-                <SiHtml5 className="label-icon" />
-                HTML
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.css}
-                onChange={handleCheckboxChange}
-                name="css"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-css"
-                sx={{
-                  color: checkedState.css ? "#fff" : "#607B96",
-                }}
-              >
-                <SiCss3 className="label-icon" />
-                CSS
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.sass}
-                onChange={handleCheckboxChange}
-                name="sass"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-scss"
-                sx={{
-                  color: checkedState.sass ? "#fff" : "#607B96",
-                }}
-              >
-                <SiSass className="label-icon" />
-                SCSS
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.tailwind}
-                onChange={handleCheckboxChange}
-                name="tailwind"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-tailwind"
-                sx={{
-                  color: checkedState.tailwind ? "#fff" : "#607B96",
-                }}
-              >
-                <SiTailwindcss className="label-icon" />
-                TailWind
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.mui}
-                onChange={handleCheckboxChange}
-                name="mui"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-mui"
-                sx={{
-                  color: checkedState.mui ? "#fff" : "#607B96",
-                }}
-              >
-                <SiMui className="label-icon" />
-                MUI
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.javascript}
-                onChange={handleCheckboxChange}
-                name="javascript"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-javascript"
-                sx={{
-                  color: checkedState.javascript ? "#fff" : "#607B96",
-                }}
-              >
-                <SiJavascript className="label-icon" />
-                JavaScript
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.typescript}
-                onChange={handleCheckboxChange}
-                name="typescript"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-typescript"
-                sx={{
-                  color: checkedState.typescript ? "#fff" : "#607B96",
-                }}
-              >
-                <SiTypescript className="label-icon" />
-                Typescript
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.php}
-                onChange={handleCheckboxChange}
-                name="php"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-php"
-                sx={{
-                  color: checkedState.php ? "#fff" : "#607B96",
-                }}
-              >
-                <SiPhp className="label-icon" />
-                PHP
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.react}
-                onChange={handleCheckboxChange}
-                name="react"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-react"
-                sx={{
-                  color: checkedState.react ? "#fff" : "#607B96",
-                }}
-              >
-                <SiReact className="label-icon" />
-                React
-              </StyledSkillsRowLabel>
-            }
-          />
-
-          {/* Firebase Checkbox */}
-          <FormControlLabel
-            control={
-              <StyledSkillsCheckbox
-                checked={checkedState.firebase}
-                onChange={handleCheckboxChange}
-                name="firebase"
-              />
-            }
-            label={
-              <StyledSkillsRowLabel
-                data-cy="checkbox-firebase"
-                sx={{
-                  color: checkedState.firebase ? "#fff" : "#607B96",
-                }}
-              >
-                <SiFirebase className="label-icon" />
-                Firebase
-              </StyledSkillsRowLabel>
-            }
-          />
+          {dataChecked.map(({ checked, name, testCy, icon }, index) => (
+            <CheckSkill
+              key={index}
+              checked={checked}
+              changeFn={handleCheckboxChange}
+              name={name}
+              testCy={testCy}
+              icon={icon}
+            />
+          ))}
 
           <StyledSkillsBoxDividerTop orientation="vertical" flexItem />
         </MotionStyledSkillsRightForm>

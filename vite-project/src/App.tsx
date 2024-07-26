@@ -1,22 +1,21 @@
-import { lazy, Suspense, useContext, ReactNode } from "react";
+import { useContext, ReactNode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
 import SharedLayout from "./Pages/SharedLayout";
 import { LanguageProvider, LanguageContext } from "./context/LanguageProvider";
-import { CssBaseline, Skeleton } from "@mui/material";
+import { CssBaseline } from "@mui/material";
+import Home from "./Pages/Home";
+import AboutMe from "./Pages/AboutMe";
+import Skills from "./Pages/Skills";
+import ContactMe from "./Pages/ContactMe";
+import ThankYou from "./Pages/ThankYou";
+import Error from "./Pages/Error";
+import SnakeGame from "./Pages/SnakeGame";
 import GlobalStyles from "./theme/GlobalStyles.tsx";
 import { IntlProvider } from "react-intl";
 import en from "./locales/en_US";
 import sk from "./locales/sk_SK";
-
-const Home = lazy(() => import("./Pages/Home.tsx"));
-const AboutMe = lazy(() => import("./Pages/AboutMe"));
-const Skills = lazy(() => import("./Pages/Skills.tsx"));
-const ContactMe = lazy(() => import("./Pages/ContactMe"));
-const ThankYou = lazy(() => import("./Pages/ThankYou"));
-const SnakeGame = lazy(() => import("./Pages/SnakeGame"));
-const Error = lazy(() => import("./Pages/Error"));
 
 const App = () => {
   return (
@@ -28,34 +27,17 @@ const App = () => {
         <MenuProvider>
           <LanguageProvider>
             <IntlProviderWrapper>
-              <Suspense
-                fallback={
-                  <Skeleton
-                    animation="wave"
-                    variant="rectangular"
-                    sx={(theme) => ({
-                      bgcolor: theme.myColors.generalBackground,
-                      width: "100vw !important",
-                      height: "100vh !important",
-                      padding: "0",
-                      margin: "0",
-                      overflow: "hidden",
-                    })}
-                  />
-                }
-              >
-                <Routes>
-                  <Route path="/" element={<SharedLayout />}>
-                    <Route index element={<Home />} />
-                    <Route path="/about-me" element={<AboutMe />} />
-                    <Route path="/projects" element={<Skills />} />
-                    <Route path="/contact-me" element={<ContactMe />} />
-                    <Route path="/thank-you" element={<ThankYou />} />
-                    <Route path="*" element={<Error />} />
-                  </Route>
-                  <Route path="/game_snake" element={<SnakeGame />} />
-                </Routes>
-              </Suspense>
+              <Routes>
+                <Route path="/" element={<SharedLayout />}>
+                  <Route index element={<Home />} />
+                  <Route path="/about-me" element={<AboutMe />} />
+                  <Route path="/projects" element={<Skills />} />
+                  <Route path="/contact-me" element={<ContactMe />} />
+                  <Route path="/thank-you" element={<ThankYou />} />
+                  <Route path="*" element={<Error />} />
+                </Route>
+                <Route path="/game_snake" element={<SnakeGame />} />
+              </Routes>
             </IntlProviderWrapper>
           </LanguageProvider>
         </MenuProvider>

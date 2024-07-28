@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Typography } from "@mui/material";
+import { useState, useEffect, useRef } from "react";
+import { Typography, Snackbar, Alert } from "@mui/material";
 import {
   StyledTextField,
   StyledContactFormContainer,
@@ -14,6 +14,8 @@ import {
   StyledTextContainerMessage,
   StyledTextMessage,
 } from "./StyledContact";
+import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import { useIntl } from "react-intl";
 import { DisplayDataProps } from "../../types";
 import { motion } from "framer-motion";
@@ -25,6 +27,9 @@ const ContactForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [openSnackBar, setOpenSnackBar] = useState(false);
+  const navigate = useNavigate();
+
   const [errors, setErrors] = useState<{
     name?: string;
     email?: string;
@@ -36,7 +41,9 @@ const ContactForm: React.FC = () => {
     message: "",
     date: "",
   });
-
+  const handleClose = () => {
+    setOpenSnackBar(!openSnackBar);
+  };
   const intl = useIntl();
   useEffect(() => {
     const currentDate = new Date();
@@ -47,6 +54,11 @@ const ContactForm: React.FC = () => {
   }, [name, email, message]);
 
   const [isReady, setIsReady] = useState(false);
+  const dataEmailJS = {
+    servicesId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  };
 
   useEffect(() => {
     setIsReady(true);
@@ -102,9 +114,11 @@ const ContactForm: React.FC = () => {
       message: validateMessage(newMessage),
     }));
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
 
+  const form = useRef() as React.MutableRefObject<HTMLFormElement>;
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
     const nameError = validateName(name);
     const emailError = validateEmail(email);
     const messageError = validateMessage(message);
@@ -113,28 +127,55 @@ const ContactForm: React.FC = () => {
       setErrors({ name: nameError, email: emailError, message: messageError });
       return;
     }
-    e.currentTarget.submit();
+
+    emailjs
+      .sendForm(dataEmailJS.servicesId, dataEmailJS.templateId, form.current, {
+        publicKey: dataEmailJS.publicKey,
+      })
+      .then(
+        () => {
+          navigate("/thank-you");
+        },
+        (error) => {
+          setOpenSnackBar(!openSnackBar);
+          throw new Error(error.text);
+        }
+      );
   };
   return (
     <StyledContactFormContainer>
+      <Snackbar
+        sx={{ zIndex: 999999 }}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={openSnackBar}
+        autoHideDuration={5000}
+        onClose={handleClose}
+      >
+        <Alert
+          onClose={handleClose}
+          severity="error"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          {intl.formatMessage({ id: "error.snack" })} <br />
+          {intl.formatMessage({ id: "error.snackTwo" })}
+        </Alert>
+      </Snackbar>
       {isReady && (
         <MotionStyledContactFormWrap
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <form
-            action="https://formsubmit.co/tomasolsiak1@gmail.com"
-            method="POST"
-            onSubmit={handleSubmit}
-          >
+          <form ref={form} onSubmit={sendEmail}>
             <StyledTextField
-              name="name"
+              name="user_name"
               label={intl.formatMessage({ id: "contact.name" })}
               variant="outlined"
               required
               fullWidth
               margin="normal"
+              type="text"
               value={name}
               onChange={handleNameChange}
               error={!!errors.name && name.trim() !== ""}
@@ -142,7 +183,8 @@ const ContactForm: React.FC = () => {
               data-cy="name-field"
             />
             <StyledTextField
-              name="email"
+              type="email"
+              name="user_email"
               label={intl.formatMessage({ id: "contact.email" })}
               variant="outlined"
               required
@@ -169,20 +211,10 @@ const ContactForm: React.FC = () => {
               helperText={message.trim() !== "" ? errors.message : ""}
               data-cy="message-area"
             />
-            <input
-              type="hidden"
-              name="_next"
-              value={`${window.location.origin}/thank-you`}
-            />
-            <input
-              type="hidden"
-              name="_subject"
-              value="Message from portolio"
-            ></input>
-            <input type="hidden" name="_cc" value="aneroid_telo0k@icloud.com" />
-            <input type="hidden" name="_template" value="table"></input>
+
             <StyledSubmitFormBtn
               type="submit"
+              value="Send"
               variant="contained"
               color="primary"
               data-cy="submit-email"
@@ -192,9 +224,7 @@ const ContactForm: React.FC = () => {
           </form>
         </MotionStyledContactFormWrap>
       )}
-
       <StyledContactFormDivider orientation="vertical" flexItem />
-
       {isReady && (
         <MotionStyledFormTextContainer
           initial={{ x: "100%" }}

@@ -194,4 +194,7 @@ export default {
   "valid.email": "Invalid email address.",
   "valid.message": "Message must be at least 10 characters long.",
   "valid.message.maxLegth": "Message cannot be longer than 1 000 characters.",
+  /*09.Snack Bar */
+  "error.snack": "Server side error",
+  "error.snackTwo": "try again in a moment",
 };

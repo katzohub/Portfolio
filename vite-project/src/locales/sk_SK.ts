@@ -198,4 +198,7 @@ export default {
   "valid.email": "Neplatná emailová adresa.",
   "valid.message": "Správa musí mať aspoň 10 znakov.",
   "valid.message.maxLegth": "Správa nemôže mať viac ako 1 000 znakov.",
+  /*09.Snack Bar */
+  "error.snack": "Chyba na strane servera",
+  "error.snackTwo": "skúste to znova za chvíľu",
 };

@@ -170,6 +170,7 @@ export interface AboutSideBarProps {
 export interface BigButtonProps {
   children?: React.ReactNode;
   myBtnFn?: () => void;
+  testId?: string;
 }
 export interface ButtonCollapseProps {
   isTrue: boolean;

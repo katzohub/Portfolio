@@ -90,6 +90,7 @@ const LeftSectionHome: FC = () => {
               </StyledLeftArticleWhite>
               <span>
                 <StyledLeftArticleLinkMinScreen
+                  data-cy="github-link-porfile"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/katzohub"
@@ -100,7 +101,7 @@ const LeftSectionHome: FC = () => {
             </Typography>
           </StyledLeftArticleContainer>
           <StyledLeftContainerBtns>
-            <BigButton myBtnFn={openSnakeGame}>
+            <BigButton myBtnFn={openSnakeGame} testId="start-game">
               {intl.formatMessage({ id: "home.startGameBtn" })}
             </BigButton>
 
@@ -115,7 +116,7 @@ const LeftSectionHome: FC = () => {
                 },
               })}
             >
-              <BigButton>
+              <BigButton testId="download-cv">
                 {intl.formatMessage({ id: "home.download.cv" })}
               </BigButton>
             </Link>

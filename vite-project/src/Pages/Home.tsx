@@ -37,8 +37,6 @@ const Home: FC = () => {
             <img src={blue} alt="background blue effect" className="blue" />
           </>
         )}
-
-        {/* my png */}
         <AnimatePresence>
           {isReady && (
             <>

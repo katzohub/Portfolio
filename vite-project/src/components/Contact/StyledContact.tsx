@@ -218,12 +218,11 @@ export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
   color: "white",
   padding: 2,
   height: "max-content",
-
   [theme.breakpoints.down("lg")]: {
     maxWidth: "480px",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "100%",
+    width: "350px",
     "& p": {
       width: "350px",
       fontSize: "10px",

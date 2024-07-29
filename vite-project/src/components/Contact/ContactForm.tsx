@@ -245,8 +245,10 @@ const ContactForm: React.FC = () => {
             <StyledTextOrange variant="caption">'#sendBtn'</StyledTextOrange>
             <StyledTextGray variant="caption">);</StyledTextGray>
             <br />
-            <StyledTextGrayNone variant="caption">2&nbsp;</StyledTextGrayNone>
-            <br />
+            <StyledTextGrayNone variant="caption">
+              2&nbsp;
+              <br />
+            </StyledTextGrayNone>
             <StyledTextGrayNone variant="caption">3&nbsp;</StyledTextGrayNone>
             <StyledTextPink variant="caption">const </StyledTextPink>
             <StyledTextPurple variant="caption">message </StyledTextPurple>
@@ -285,8 +287,9 @@ const ContactForm: React.FC = () => {
             <StyledTextGrayNone variant="caption">8&nbsp;</StyledTextGrayNone>
             <StyledTextGray variant="caption">{`}`}</StyledTextGray>
             <br />
-            <StyledTextGrayNone variant="caption">9&nbsp;</StyledTextGrayNone>
-            <br />
+            <StyledTextGrayNone variant="caption">
+              9&nbsp; <br />
+            </StyledTextGrayNone>
             <StyledTextGrayNone variant="caption">10&nbsp;</StyledTextGrayNone>
             <StyledTextPurple variant="caption">
               button

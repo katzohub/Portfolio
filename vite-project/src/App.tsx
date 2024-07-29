@@ -2,15 +2,18 @@ import { useContext, ReactNode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
-import OnePage from "./components/OnePage";
 import SharedLayout from "./Pages/SharedLayout";
+import { LanguageProvider, LanguageContext } from "./context/LanguageProvider";
+import { CssBaseline } from "@mui/material";
+import Home from "./Pages/Home";
 import AboutMe from "./Pages/AboutMe";
-import Projects from "./Pages/Projects";
+import Skills from "./Pages/Skills";
 import ContactMe from "./Pages/ContactMe";
 import ThankYou from "./Pages/ThankYou";
 import Error from "./Pages/Error";
+import SnakeGame from "./Pages/SnakeGame";
+import GlobalStyles from "./theme/GlobalStyles.tsx";
 import { IntlProvider } from "react-intl";
-import { LanguageProvider, LanguageContext } from "./context/LanguageProvider";
 import en from "./locales/en_US";
 import sk from "./locales/sk_SK";
 
@@ -18,18 +21,22 @@ const App = () => {
   return (
     <BrowserRouter>
       <CustomThemeProvider>
+        <CssBaseline />
+        <GlobalStyles />
+
         <MenuProvider>
           <LanguageProvider>
             <IntlProviderWrapper>
               <Routes>
                 <Route path="/" element={<SharedLayout />}>
-                  <Route index element={<OnePage />} />
-                  <Route path="/about-me" element={<AboutMe />}></Route>
-                  <Route path="/projects" element={<Projects />}></Route>
-                  <Route path="/contact-me" element={<ContactMe />}></Route>
-                  <Route path="/thank-you" element={<ThankYou />}></Route>
+                  <Route index element={<Home />} />
+                  <Route path="/about-me" element={<AboutMe />} />
+                  <Route path="/projects" element={<Skills />} />
+                  <Route path="/contact-me" element={<ContactMe />} />
+                  <Route path="/thank-you" element={<ThankYou />} />
                   <Route path="*" element={<Error />} />
                 </Route>
+                <Route path="/game_snake" element={<SnakeGame />} />
               </Routes>
             </IntlProviderWrapper>
           </LanguageProvider>

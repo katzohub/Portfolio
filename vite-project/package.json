@@ -10,13 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.14",
-    "@mui/material": "^5.14.14",
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.4",
+    "@mui/material": "^5.16.4",
     "@mui/styled-engine-sc": "^6.0.0-alpha.2",
     "@mui/styles": "^5.14.14",
     "@types/glidejs__glide": "^3.6.3",
+    "framer-motion": "^11.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
@@ -25,15 +27,21 @@
     "styled-components": "^6.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/eslint": "^8.56.10",
+    "@types/eslint__js": "^8.42.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "cypress": "^13.13.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1",
     "vite": "^4.4.5"
   }
 }

@@ -1,4 +1,4 @@
-![alt text](./vite-project/src//img/firstLook/firstScreen.png)
+![alt text](./vite-project/src/assets/img/firstLook/firstScreen.png)
 
 # ENGLISH
 

@@ -1,18 +1,22 @@
-import TopNav from "../components/TopNav";
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
-import { Box } from "@mui/material";
-import usePageStyles from "../styles/style";
+import { StyledGeneralContainer } from "./StyledPages";
+import { Navbar } from "../containers";
+import { useIntl } from "react-intl";
 
-const SharedLayout = () => {
-  const classes = usePageStyles();
+const SharedLayout: FC = () => {
+  const intl = useIntl();
+
   return (
     <>
-      <Box className={classes.backColor}>
-        <TopNav />
+      <StyledGeneralContainer>
+        <Navbar isTopnav={true} text={intl.formatMessage({ id: "nav.name" })} />
         <Outlet />
-        <Footer />
-      </Box>
+        <Navbar
+          isTopnav={false}
+          text={intl.formatMessage({ id: "footer.findMeIn" })}
+        />
+      </StyledGeneralContainer>
     </>
   );
 };

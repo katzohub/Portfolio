@@ -15,7 +15,7 @@ import filmDatabase from "../assets/img/film database.webp";
 import logicGame from "../assets/img/logic game.webp";
 import marketPlace from "../assets/img/marketplace.webp";
 import upgradePorfolio from "../assets/img/upgradePorfolio.jpeg";
-import menu from "../assets/img/menu.png";
+import menu from "../assets/img/menu.webp";
 import notes from "../assets/img/notes.webp";
 import portfolio from "../assets/img/portfolio.webp";
 

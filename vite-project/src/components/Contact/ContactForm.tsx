@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Snackbar, Alert } from "@mui/material";
+import { Snackbar, Alert, Box } from "@mui/material";
 import {
   StyledTextField,
   StyledContactFormContainer,
@@ -8,6 +8,7 @@ import {
   StyledSubmitFormBtn,
   StyledFormTextContainer,
   StyledTextGray,
+  StyledTextGrayNone,
   StyledTextPink,
   StyledTextOrange,
   StyledTextPurple,
@@ -226,91 +227,95 @@ const ContactForm: React.FC = () => {
       )}
       <StyledContactFormDivider orientation="vertical" flexItem />
       {isReady && (
-        <MotionStyledFormTextContainer
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <br />
-          <StyledTextGray variant="caption">1&nbsp;</StyledTextGray>
-          <StyledTextPink variant="caption">const</StyledTextPink>{" "}
-          <StyledTextPurple variant="caption">button</StyledTextPurple>{" "}
-          <StyledTextPink variant="caption">=</StyledTextPink>{" "}
-          <StyledTextPurple variant="caption">
-            document.querySelector
-          </StyledTextPurple>{" "}
-          <StyledTextGray variant="caption">(</StyledTextGray>
-          <StyledTextOrange variant="caption">'#sendBtn'</StyledTextOrange>
-          <StyledTextGray variant="caption">);</StyledTextGray>
-          <br />
-          <StyledTextGray variant="caption">2&nbsp;</StyledTextGray>
-          <br />
-          <StyledTextGray variant="caption">3&nbsp;</StyledTextGray>
-          <StyledTextPink variant="caption">const </StyledTextPink>
-          <StyledTextPurple variant="caption">message </StyledTextPurple>
-          <StyledTextPink variant="caption">= </StyledTextPink>
-          <StyledTextGray variant="caption">{`{`}</StyledTextGray>
-          <br />
-          <StyledTextGray variant="caption">4</StyledTextGray>
-          &nbsp;&nbsp;
-          <StyledTextPurple variant="caption">Name</StyledTextPurple>
-          <StyledTextGray variant="caption">:</StyledTextGray>
-          <StyledTextOrange variant="caption">{`"${displayData.name}"`}</StyledTextOrange>
-          <br />
-          <StyledTextGray variant="caption">5</StyledTextGray>
-          &nbsp;&nbsp;
-          <StyledTextPurple variant="caption">Email</StyledTextPurple>
-          <StyledTextGray variant="caption">:</StyledTextGray>
-          <StyledTextOrange variant="caption">{`"${displayData.email}"`}</StyledTextOrange>
-          <br />
-          <StyledTextContainerMessage>
-            <StyledTextGray variant="caption">6</StyledTextGray>
+        <Box>
+          <MotionStyledFormTextContainer
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <br />
+            <StyledTextGrayNone variant="caption">1&nbsp;</StyledTextGrayNone>
+            <StyledTextPink variant="caption">const</StyledTextPink>{" "}
+            <StyledTextPurple variant="caption">button</StyledTextPurple>{" "}
+            <StyledTextPink variant="caption">=</StyledTextPink>{" "}
+            <StyledTextPurple variant="caption">
+              document.querySelector
+            </StyledTextPurple>{" "}
+            <StyledTextGray variant="caption">(</StyledTextGray>
+            <StyledTextOrange variant="caption">'#sendBtn'</StyledTextOrange>
+            <StyledTextGray variant="caption">);</StyledTextGray>
+            <br />
+            <StyledTextGrayNone variant="caption">2&nbsp;</StyledTextGrayNone>
+            <br />
+            <StyledTextGrayNone variant="caption">3&nbsp;</StyledTextGrayNone>
+            <StyledTextPink variant="caption">const </StyledTextPink>
+            <StyledTextPurple variant="caption">message </StyledTextPurple>
+            <StyledTextPink variant="caption">= </StyledTextPink>
+            <StyledTextGray variant="caption">{`{`}</StyledTextGray>
+            <br />
+            <StyledTextGrayNone variant="caption">4</StyledTextGrayNone>
             &nbsp;&nbsp;
-            <StyledTextPurple variant="caption">Message</StyledTextPurple>
+            <StyledTextPurple variant="caption">Name</StyledTextPurple>
             <StyledTextGray variant="caption">:</StyledTextGray>
-            <StyledTextMessage
-              title={`"${displayData.message}"`}
-              variant="caption"
-            >
-              {`"${displayData.message}"`}
-            </StyledTextMessage>
-          </StyledTextContainerMessage>
-          <StyledTextGray variant="caption">7&nbsp;</StyledTextGray>
-          <StyledTextGray variant="caption">Date:</StyledTextGray>
-          <StyledTextOrange variant="caption">{`"${displayData.date}"`}</StyledTextOrange>
-          &nbsp;&nbsp;
-          <br />
-          <StyledTextGray variant="caption">8&nbsp;</StyledTextGray>
-          <StyledTextGray variant="caption">{`}`}</StyledTextGray>
-          <br />
-          <StyledTextGray variant="caption">9&nbsp;</StyledTextGray>
-          <br />
-          <StyledTextGray variant="caption">10&nbsp;</StyledTextGray>
-          <StyledTextPurple variant="caption">
-            button
-            <StyledTextGray variant="caption">.</StyledTextGray>
-            addEventListener
-          </StyledTextPurple>
-          <StyledTextGray variant="caption">(</StyledTextGray>
-          <StyledTextOrange variant="caption">'click'</StyledTextOrange>
-          <StyledTextGray variant="caption">, ()</StyledTextGray>
-          <StyledTextPink variant="caption">{` => `}</StyledTextPink>
-          <StyledTextGray variant="caption">{`{`}</StyledTextGray>
-          <br />
-          <StyledTextGray variant="caption">11&nbsp;</StyledTextGray>
-          &nbsp;&nbsp;
-          <StyledTextPurple variant="caption">
-            form<StyledTextGray variant="caption">.</StyledTextGray>send
-          </StyledTextPurple>
-          <StyledTextGray variant="caption">(</StyledTextGray>
-          <StyledTextPurple variant="caption">message</StyledTextPurple>
-          <StyledTextGray variant="caption">
-            ); <br />
-            <StyledTextGray variant="caption">12&nbsp;</StyledTextGray>
-            {`}`})
-          </StyledTextGray>
-          <br />
-        </MotionStyledFormTextContainer>
+            <StyledTextOrange variant="caption">{`"${displayData.name}"`}</StyledTextOrange>
+            <br />
+            <StyledTextGrayNone variant="caption">5</StyledTextGrayNone>
+            &nbsp;&nbsp;
+            <StyledTextPurple variant="caption">Email</StyledTextPurple>
+            <StyledTextGray variant="caption">:</StyledTextGray>
+            <StyledTextOrange variant="caption">{`"${displayData.email}"`}</StyledTextOrange>
+            <br />
+            <StyledTextContainerMessage>
+              <StyledTextGrayNone variant="caption">6</StyledTextGrayNone>
+              &nbsp;&nbsp;
+              <StyledTextPurple variant="caption">Message</StyledTextPurple>
+              <StyledTextGray variant="caption">:</StyledTextGray>
+              <StyledTextMessage
+                title={`"${displayData.message}"`}
+                variant="caption"
+              >
+                {`"${displayData.message}"`}
+              </StyledTextMessage>
+            </StyledTextContainerMessage>
+            <StyledTextGrayNone variant="caption">7&nbsp;</StyledTextGrayNone>
+            <StyledTextGray variant="caption">Date:</StyledTextGray>
+            <StyledTextOrange variant="caption">{`"${displayData.date}"`}</StyledTextOrange>
+            &nbsp;&nbsp;
+            <br />
+            <StyledTextGrayNone variant="caption">8&nbsp;</StyledTextGrayNone>
+            <StyledTextGray variant="caption">{`}`}</StyledTextGray>
+            <br />
+            <StyledTextGrayNone variant="caption">9&nbsp;</StyledTextGrayNone>
+            <br />
+            <StyledTextGrayNone variant="caption">10&nbsp;</StyledTextGrayNone>
+            <StyledTextPurple variant="caption">
+              button
+              <StyledTextGray variant="caption">.</StyledTextGray>
+              addEventListener
+            </StyledTextPurple>
+            <StyledTextGray variant="caption">(</StyledTextGray>
+            <StyledTextOrange variant="caption">'click'</StyledTextOrange>
+            <StyledTextGray variant="caption">, ()</StyledTextGray>
+            <StyledTextPink variant="caption">{` => `}</StyledTextPink>
+            <StyledTextGray variant="caption">{`{`}</StyledTextGray>
+            <br />
+            <StyledTextGrayNone variant="caption">11&nbsp;</StyledTextGrayNone>
+            &nbsp;&nbsp;
+            <StyledTextPurple variant="caption">
+              form<StyledTextGray variant="caption">.</StyledTextGray>send
+            </StyledTextPurple>
+            <StyledTextGray variant="caption">(</StyledTextGray>
+            <StyledTextPurple variant="caption">message</StyledTextPurple>
+            <StyledTextGray variant="caption">
+              ); <br />
+              <StyledTextGrayNone variant="caption">
+                12&nbsp;
+              </StyledTextGrayNone>
+              {`}`})
+            </StyledTextGray>
+            <br />
+          </MotionStyledFormTextContainer>
+        </Box>
       )}
     </StyledContactFormContainer>
   );

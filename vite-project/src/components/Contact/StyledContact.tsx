@@ -214,18 +214,36 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   textTransform: "lowercase",
 }));
 export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
-  maxWidth: "457px",
+  maxWidth: "500px",
   color: "white",
   padding: 2,
   height: "max-content",
-  [theme.breakpoints.down("lg")]: {},
+
+  [theme.breakpoints.down("lg")]: {
+    maxWidth: "480px",
+  },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
-    display: "flex",
-    justifyContent: "center",
     "& p": {
       width: "350px",
+      fontSize: "10px",
     },
+  },
+}));
+export const StyledTextGrayNone = styled(Typography)(({ theme }) => ({
+  color: theme.myColors.colorGreyText,
+  fontFamily: "Fira Code",
+  fontSize: "18px",
+  fontStyle: "normal",
+  fontWeight: 450,
+  lineHeight: "150%",
+  [theme.breakpoints.down("xl")]: {
+    fontSize: "14px",
+    fontWeight: 600,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
   },
 }));
 export const StyledTextGray = styled(Typography)(({ theme }) => ({

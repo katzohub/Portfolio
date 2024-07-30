@@ -51,6 +51,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   const gameLoopRef = useRef<number | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
   const intl = useIntl();
+
   const endGame = useCallback(() => {
     if (gameLoopRef.current) clearInterval(gameLoopRef.current);
     setGameOver(true);
@@ -95,7 +96,6 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
       for (const part of newSnake) {
         if (part.x === newHead.x && part.y === newHead.y) {
           endGame();
-
           return oldSnake;
         }
       }
@@ -140,11 +140,13 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
     setKeyPressed(false);
     gameAreaRef.current?.focus();
   };
+
   useEffect(() => {
     if (gameStarted) {
       gameAreaRef.current?.focus();
     }
   }, [gameStarted]);
+
   useEffect(() => {
     if (gameOver || !gameStarted) return;
 
@@ -202,6 +204,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
     }
     setDir(newDir);
   };
+
   const handleKeyUp = () => {
     setKeyPressed(false);
   };

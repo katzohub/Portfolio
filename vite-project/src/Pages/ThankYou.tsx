@@ -1,33 +1,29 @@
-import { Box, Typography, Button } from "@mui/material";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { useIntl } from "react-intl";
-import usePageStyles from "../styles/stylePages";
+import {
+  StyledContainerThanks,
+  StyledHeadingThanks,
+  StyledBtnThanks,
+} from "./StyledPages";
 
-const ThankYou = () => {
+const ThankYou: FC = () => {
   const navigate = useNavigate();
-  const classes = usePageStyles();
   const intl = useIntl();
   const handleButtonClick = () => {
     navigate("/contact-me");
   };
 
   return (
-    <Box className={classes.thankYouContainer}>
-      <Typography className={classes.thankYouHeading} variant="h2">
+    <StyledContainerThanks>
+      <StyledHeadingThanks variant="h2">
         {intl.formatMessage({ id: "thankYou.thankYou" })}
-      </Typography>
-      <p className={classes.thankYouText}>
-        {intl.formatMessage({ id: "thankYou.thankYouText" })}
-      </p>
-      <Button
-        className={classes.thankYouBtn}
-        variant="contained"
-        sx={{ textTransform: "lowercase" }}
-        onClick={handleButtonClick}
-      >
+      </StyledHeadingThanks>
+      <p>{intl.formatMessage({ id: "thankYou.thankYouText" })}</p>
+      <StyledBtnThanks variant="contained" onClick={handleButtonClick}>
         {intl.formatMessage({ id: "thankYou.thankYouBtn" })}
-      </Button>
-    </Box>
+      </StyledBtnThanks>
+    </StyledContainerThanks>
   );
 };
 

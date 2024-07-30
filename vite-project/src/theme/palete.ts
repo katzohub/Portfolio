@@ -1,89 +1,11 @@
 import { ThemeOptions, createTheme } from "@mui/material/styles";
+import { DefaultTheme } from "@mui/system";
+import { ThemeProps } from "../types";
+import urlSnakeLogo from "../assets/img/dark_logo_snake.png";
 
-declare module "@mui/material/styles" {
-  interface Theme {
-    myColors: {
-      colorFFF: string;
-      generalBackground: string;
-      colorLinie: string;
-      colorNavBar: string;
-      colorBottomNavLink: string;
-      colorTextLink: string;
-      hoverDownLinie: string;
-      textColorNav: string;
-      colorNonActive: string;
-      colorGreyText: string;
-      colorTextCard: string;
-      colorBackInput: string;
-      whiteColor: string;
-
-      colorGrey: string;
-      colorPurple: string;
-      colorOrangeText: string;
-      colorLightOrange: string;
-      colorLightGreen: string;
-      colorPurpleFolder: string;
-      colorTextInput: string;
-      colorDarkBlue: string;
-      borderTableSnake: string;
-      colorDarkBlack: string;
-      colorLightLinkHomeGithub: string;
-      colorDarkGrey: string;
-      colorPurpleText: string;
-      colorPinkText: string;
-      colorInputSend: string;
-      colorInCard: string;
-    };
-    myShadow: {
-      shadowSideBar: string;
-      shadowChat: string;
-      shadowInput: string;
-      shadowField: string;
-      shadowTextField: string;
-    };
-  }
-
-  // Rozšírte ThemeOptions o vlastné vlastnosti
-  interface ThemeOptions {
-    myColors?: {
-      colorFFF?: string;
-      generalBackground?: string;
-      colorLinie?: string;
-      colorNavBar?: string;
-      colorBottomNavLink?: string;
-      hoverDownLinie?: string;
-      colorTextLink?: string;
-      colorBackInput?: string;
-      colorOrangeText?: string;
-      textColorNav?: string;
-      colorNonActive?: string;
-      colorTextCard?: string;
-      whiteColor?: string;
-      colorGrey?: string;
-      colorPurple?: string;
-      colorLightOrange?: string;
-      colorLightGreen?: string;
-      colorPurpleFolder?: string;
-      colorDarkBlue?: string;
-      colorLightLinkHomeGithub?: string;
-      borderTableSnake?: string;
-      colorTextInput?: string;
-      colorGreyText?: string;
-      colorDarkBlack?: string;
-      colorDarkGrey?: string;
-      colorPurpleText?: string;
-      colorPinkText?: string;
-      colorInCard?: string;
-      colorInputSend?: string;
-    };
-    myShadow?: {
-      shadowSideBar?: string;
-      shadowChat?: string;
-      shadowInput?: string;
-      shadowField?: string;
-      shadowTextField?: string;
-    };
-  }
+declare module "@mui/system" {
+  interface Theme extends ThemeProps, DefaultTheme {}
+  interface ThemeOptions extends ThemeProps, DefaultTheme {}
 }
 
 export const themeOptions: ThemeOptions = createTheme({
@@ -126,6 +48,24 @@ export const themeOptions: ThemeOptions = createTheme({
     colorTextInput: "#607B96",
     colorNavBar: "#010c15",
     colorInCard: "#011221",
+    backgroundAreaSnake: "#021927",
+    backgroundBtnSnake: "rgba(1, 22, 39, 0.84)",
+    backgroundAreaFirst: "rgba(23, 85, 83, 0.70)",
+    backgroundAreaSecond: "rgba(67, 217, 173, 0.09)",
+    fotnBtnSnake: "#43D9AD",
+    stopColorIn: "#196C6A",
+    stopColorOut: "#114B4A",
+    strokeMiniCircle: "#114944",
+    resultCanal: "hardAlpha",
+    inCanal: "SourceAlpha",
+    pointSnake: "#43D9AD",
+    pointSnakeSecond: "#297877",
+    pointSnakeThread: "#2e8c82",
+    colorSnakeLong: "67, 217, 173",
+    colorCircleLeft: "#43D9AD",
+    colorCircleRight: "#4D5BCE",
+    colorSkillsBtnText: "#fff",
+    colorSkillsBtnBack: "#1E2D3D",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",
@@ -133,5 +73,10 @@ export const themeOptions: ThemeOptions = createTheme({
     shadowInput: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
     shadowField: "0px 0px 0px 2px rgba(96, 123, 150, 0.30)",
     shadowTextField: "3px 3px 6px 0px rgba(0,0,0,0.5)",
+    shadowAreaSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.71)",
+    shadowBtnSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.71)",
+  },
+  myUrl: {
+    snakeLogoUrl: `${urlSnakeLogo}`,
   },
 });

@@ -1,88 +1,11 @@
 import { ThemeOptions, createTheme } from "@mui/material/styles";
+import { ThemeProps } from "../types";
+import { DefaultTheme } from "@mui/system";
+import urlSnakeLogo from "../assets/img/light_logo_snake.png";
 
-declare module "@mui/material/styles" {
-  interface Theme {
-    myColors: {
-      colorFFF: string;
-      generalBackground: string;
-      colorBottomNavLink: string;
-      colorTextLink: string;
-      colorNavBar: string;
-      colorLinie: string;
-      hoverDownLinie: string;
-      textColorNav: string;
-      colorNonActive: string;
-      colorBackInput: string;
-      borderTableSnake: string;
-      whiteColor: string;
-      colorTextCard: string;
-      colorGreyText: string;
-      colorGrey: string;
-      colorLightLinkHomeGithub: string;
-      colorPurple: string;
-      colorLightOrange: string;
-      colorOrangeText: string;
-      colorLightGreen: string;
-      colorPurpleFolder: string;
-      colorDarkBlue: string;
-      colorDarkBlack: string;
-      colorTextInput: string;
-      colorDarkGrey: string;
-      colorPurpleText: string;
-      colorPinkText: string;
-      colorInputSend: string;
-      colorInCard: string;
-    };
-    myShadow: {
-      shadowSideBar: string;
-      shadowChat: string;
-      shadowInput: string;
-      shadowField: string;
-      shadowTextField: string;
-    };
-  }
-
-  // Rozšírte ThemeOptions o vlastné vlastnosti
-  interface ThemeOptions {
-    myColors?: {
-      colorFFF?: string;
-      generalBackground?: string;
-      colorTextLink?: string;
-      colorLinie?: string;
-      colorTextInput?: string;
-      colorTextCard?: string;
-      colorLightLinkHomeGithub?: string;
-      colorBottomNavLink?: string;
-      colorOrangeText?: string;
-      hoverDownLinie?: string;
-      textColorNav?: string;
-      colorBackInput?: string;
-      colorNonActive?: string;
-      colorGreyText?: string;
-      whiteColor?: string;
-      borderTableSnake?: string;
-      colorGrey?: string;
-      colorPurple?: string;
-      colorLightOrange?: string;
-      colorLightGreen?: string;
-      colorPurpleFolder?: string;
-      colorDarkBlue?: string;
-      colorDarkBlack?: string;
-      colorDarkGrey?: string;
-      colorPurpleText?: string;
-      colorPinkText?: string;
-      colorNavBar?: string;
-      colorInputSend?: string;
-      colorInCard?: string;
-    };
-    myShadow?: {
-      shadowSideBar?: string;
-      shadowChat?: string;
-      shadowInput?: string;
-      shadowField?: string;
-      shadowTextField?: string;
-    };
-  }
+declare module "@mui/system" {
+  interface Theme extends ThemeProps, DefaultTheme {}
+  interface ThemeOptions extends ThemeProps, DefaultTheme {}
 }
 
 export const themeOptionsLight: ThemeOptions = createTheme({
@@ -100,7 +23,7 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorTextLink: "#607B96",
     colorBottomNavLink: "#f2c039",
     generalBackground: "#DAB07A",
-    borderTableSnake: "#888",
+    borderTableSnake: "#d3a05f",
     colorLinie: "#fff",
     hoverDownLinie: "#fff",
     textColorNav: "#fff",
@@ -123,8 +46,26 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorInputSend: "#d3a05f",
     colorBackInput: "#d3a05f",
     colorTextInput: "#fff",
-    colorNavBar: "#cc9044",
-    colorInCard: "#cc9044",
+    colorNavBar: "#d3a05f",
+    colorInCard: "#d3a05f",
+    backgroundAreaSnake: "#d3a05f",
+    backgroundAreaFirst: "rgba(218, 176, 122, 0.70)",
+    backgroundAreaSecond: "rgba(255, 255, 255, 0.09)",
+    backgroundBtnSnake: "#d3a05f",
+    fotnBtnSnake: "#ffda85",
+    stopColorIn: "#d3a05f",
+    stopColorOut: "#ffda85",
+    strokeMiniCircle: "#ffff",
+    resultCanal: "",
+    inCanal: "",
+    pointSnake: "#ccae6a",
+    pointSnakeSecond: "#d3a05f",
+    pointSnakeThread: "#fffbf2",
+    colorSnakeLong: "255, 218, 133",
+    colorCircleLeft: "#FF0",
+    colorCircleRight: "#4D5BCE",
+    colorSkillsBtnText: "#fff",
+    colorSkillsBtnBack: "#dab07a",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",
@@ -132,5 +73,10 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     shadowInput: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
     shadowField: "0px 0px 0px 2px rgba(96, 123, 150, 0.30)",
     shadowTextField: "3px 3px 6px 0px rgba(0,0,0,0.5)",
+    shadowAreaSnake: "1px 5px 11px 0px rgba(2, 18, 27, 0.25)",
+    shadowBtnSnake: "5px 5px 11px 11px rgba(2, 18, 27, 0.21)",
+  },
+  myUrl: {
+    snakeLogoUrl: `${urlSnakeLogo}`,
   },
 });

@@ -1,25 +1,22 @@
-import { Box, Typography } from "@mui/material";
+import {
+  StyledContainerError,
+  StyledPrimaryTextError,
+  StyledGeneralTextError,
+} from "./StyledPages";
+import { useIntl } from "react-intl";
 
 const Eroor = () => {
+  const intl = useIntl();
   return (
     <>
-      <Box
-        sx={{
-          width: "100vw",
-          height: "100dvh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Typography variant="h1" color="#607b96" fontSize={35}>
-          404 Not Found
-        </Typography>
-        <Typography variant="h4" color="#607b96" fontSize={20} mt={3}>
-          The page that does not exist!
-        </Typography>
-      </Box>
+      <StyledContainerError>
+        <StyledGeneralTextError variant="h1" fontSize={35}>
+          {intl.formatMessage({ id: "notFound.generalText" })}
+        </StyledGeneralTextError>
+        <StyledPrimaryTextError variant="h4" fontSize={20} mt={3}>
+          {intl.formatMessage({ id: "notFound.primaryText" })}
+        </StyledPrimaryTextError>
+      </StyledContainerError>
     </>
   );
 };

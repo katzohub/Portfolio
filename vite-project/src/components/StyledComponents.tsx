@@ -125,7 +125,6 @@ export const StyledComponentsGeneralContainerMinWidth = styled(ListSubheader)(
   })
 );
 
-// MobileDrawer styled
 export const StyledDrawer = styled(Drawer)(({ theme }) => ({
   zIndex: 999999,
   "& .MuiDrawer-paperAnchorRight": {

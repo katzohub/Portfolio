@@ -22,8 +22,8 @@ import { FaChevronRight } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { Link } from "@mui/material";
 import { BigButton } from "../../components/Buttons";
-import canvaSvk from "../../assets/resume/canva_svk.pdf";
-import canvaUs from "../../assets/resume/canva_anj.pdf";
+import canvaSvk from "../../assets/resume/canva_svk.webp";
+import canvaUs from "../../assets/resume/canva_anj.webp";
 
 const LeftSectionHome: FC = () => {
   const intl = useIntl();

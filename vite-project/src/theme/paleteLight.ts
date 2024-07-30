@@ -66,6 +66,8 @@ export const themeOptionsLight: ThemeOptions = createTheme({
     colorCircleRight: "#4D5BCE",
     colorSkillsBtnText: "#fff",
     colorSkillsBtnBack: "#dab07a",
+    colorBackgroundFullScrenn:
+      "linear-gradient(150deg, rgba(23, 85, 83, 0.90) 1.7%, rgba(255, 255, 0, 0.22) 70%)",
   },
   myShadow: {
     shadowSideBar: "2px 2px 4px 0px rgba(0, 0, 0, 0.25)",

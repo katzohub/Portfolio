@@ -2,10 +2,14 @@ import { FC } from "react";
 import { StyledBigButton } from "./StyledButtons";
 import { BigButtonProps } from "../../types";
 
-const BigButton: FC<BigButtonProps> = ({ children, myBtnFn }) => {
+const BigButton: FC<BigButtonProps> = ({ children, myBtnFn, testId }) => {
   return (
     <>
-      <StyledBigButton onClick={myBtnFn} className="learn-more">
+      <StyledBigButton
+        onClick={myBtnFn}
+        className="learn-more"
+        data-cy={testId}
+      >
         {children}
       </StyledBigButton>
     </>

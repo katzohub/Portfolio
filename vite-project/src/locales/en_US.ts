@@ -8,7 +8,8 @@ export default {
   /* 02.Home Page */
   "home.name": "Hi all. I am",
   "home.nameHeader": "Tomas Olsiak",
-  "home.myWork": " Front End Developer",
+  "home.myWork": "Front End Developer",
+  "home.designer": "UX/UI Designer",
   "home.posTitleOne": "complete the game to continue",
   "home.posTitleTwo": "you can also see it on my Github page",
   "home.posTitleMobile": "find my profile on Github:",
@@ -16,7 +17,7 @@ export default {
   "home.gameOver": "GAME-OVER",
   "home.wellDone": "WELL-DONE",
   "home.tryAgain": "TRY-AGAIN",
-  "home.useKeyboard": "use keyboard",
+  "home.useKeyboard": "// use keyboard",
   "home.usePlay": "button to play ",
   "home.lastFood": "food left",
   "home.playAgain": "play-again",
@@ -186,4 +187,14 @@ export default {
   /*07.Not found Message*/
   "notFound.generalText": "404 Not Found",
   "notFound.primaryText": "The page that does not exist!",
+  "notFound.goHome": "_back_to_home",
+  /*08.Valid form */
+  "valid.name": "Name cannot be empty or just spaces.",
+  "valid.name.number": "Name cannot contain numbers.",
+  "valid.email": "Invalid email address.",
+  "valid.message": "Message must be at least 10 characters long.",
+  "valid.message.maxLegth": "Message cannot be longer than 1 000 characters.",
+  /*09.Snack Bar */
+  "error.snack": "Server side error",
+  "error.snackTwo": "try again in a moment",
 };

@@ -13,12 +13,11 @@ export const StyledAboutContainer = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100dvh",
   paddingTop: "112px",
-  paddingBottom: "160px",
+  paddingBottom: "100px",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "start",
   overflowY: "auto",
-
   [theme.breakpoints.down("lg")]: {
     display: "flex",
     flexDirection: "column",

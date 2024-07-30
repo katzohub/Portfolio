@@ -3,12 +3,13 @@ export default {
   "nav.name": "tomas-olsiak",
   "nav.home": "_domov",
   "nav.about": "_o-mne",
-  "nav.project": "_porjekty",
+  "nav.project": "_projekty",
   "nav.contact": "_kontakt",
   /* 02.Home Page */
   "home.name": "Ahojte všetci. Som",
   "home.nameHeader": "Tomáš Olšiak",
   "home.myWork": "Front End Vývojár",
+  "home.designer": "UX/UI Dizajnér",
   "home.posTitleOne": "dokončite hru a pokračujte",
   "home.posTitleTwo": "môžete si ju pozrieť aj na mojej stránke Github",
   "home.posTitleMobile": "pozrite môj profil na Github:",
@@ -16,7 +17,7 @@ export default {
   "home.gameOver": "KONIEC-HRY",
   "home.wellDone": "GRATULUJEM",
   "home.tryAgain": "HRAŤ-ZNOVA",
-  "home.useKeyboard": "stlačte klávesnicu",
+  "home.useKeyboard": "// stlačte klávesnicu",
   "home.usePlay": "šípky pre hranie",
   "home.lastFood": "zostáva jedlo",
   "home.playAgain": "hrať-znovu",
@@ -190,4 +191,14 @@ export default {
   /*08 Not found Message*/
   "notFound.generalText": "404 Chyba",
   "notFound.primaryText": "Na tejto stránke nič nie je!",
+  "notFound.goHome": "_späť_na_domov",
+  /*08.Valid form */
+  "valid.name": "Názov nemôže byť prázdny alebo len medzery.",
+  "valid.name.number": "Meno nemôže obsahovať čísla.",
+  "valid.email": "Neplatná emailová adresa.",
+  "valid.message": "Správa musí mať aspoň 10 znakov.",
+  "valid.message.maxLegth": "Správa nemôže mať viac ako 1 000 znakov.",
+  /*09.Snack Bar */
+  "error.snack": "Chyba na strane servera",
+  "error.snackTwo": "skúste to znova za chvíľu",
 };

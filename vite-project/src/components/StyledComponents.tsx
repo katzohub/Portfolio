@@ -21,6 +21,7 @@ export const StyledComponentsContainer = styled(Box)(({ theme }) => ({
   overflowY: "hidden",
   [theme.breakpoints.down("md")]: {
     overflowY: "auto !important",
+    overflowX: "hidden !important",
     height: "calc(100dvh - 56px - 56px)",
     marginTop: "0px",
     marginBottom: "0px",

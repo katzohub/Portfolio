@@ -4,10 +4,6 @@ import { useIntl } from "react-intl";
 import { MiniCircle } from "../../assets/svg";
 import { Box, Typography } from "@mui/material";
 import {
-  BackroundGlassSnakeLeft,
-  BackroundGlassSnakeRight,
-} from "../../assets/svg";
-import {
   ContainerSnake,
   StyledMiniCircleWrapper,
   StyledSnakeGameArea,
@@ -27,6 +23,7 @@ import {
   StyledSnakeFoodLeft,
   StyledSnakePointContainer,
 } from "./StyledHome";
+
 import { Coordinate, GameSnakeProps } from "../../types";
 
 const gridSize = 20;
@@ -54,6 +51,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
   const gameLoopRef = useRef<number | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
   const intl = useIntl();
+
   const endGame = useCallback(() => {
     if (gameLoopRef.current) clearInterval(gameLoopRef.current);
     setGameOver(true);
@@ -98,7 +96,6 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
       for (const part of newSnake) {
         if (part.x === newHead.x && part.y === newHead.y) {
           endGame();
-
           return oldSnake;
         }
       }
@@ -143,11 +140,13 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
     setKeyPressed(false);
     gameAreaRef.current?.focus();
   };
+
   useEffect(() => {
     if (gameStarted) {
       gameAreaRef.current?.focus();
     }
   }, [gameStarted]);
+
   useEffect(() => {
     if (gameOver || !gameStarted) return;
 
@@ -205,14 +204,13 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
     }
     setDir(newDir);
   };
+
   const handleKeyUp = () => {
     setKeyPressed(false);
   };
 
   return (
     <ContainerSnake isFullWindow={isFullWindow}>
-      <BackroundGlassSnakeLeft />
-      <BackroundGlassSnakeRight />
       <StyledMiniCircleWrapper
         sx={{
           position: "absolute",
@@ -338,7 +336,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
       <Box>
         <StyledSnakeBoxSetting isFullWindow={isFullWindow}>
           <StyledSnakeArrowTextFirst>
-            // {intl.formatMessage({ id: "home.useKeyboard" })}
+            {isFullWindow ? intl.formatMessage({ id: "home.useKeyboard" }) : ""}
           </StyledSnakeArrowTextFirst>
           <StyledSnakeArrowTextSecond variant="body2">
             // {intl.formatMessage({ id: "home.usePlay" })}

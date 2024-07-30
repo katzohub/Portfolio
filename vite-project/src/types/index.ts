@@ -76,7 +76,7 @@ export interface ThemeProps {
     colorTextCard: string;
     colorBackInput: string;
     whiteColor: string;
-
+    colorBackgroundFullScrenn: string;
     colorGrey: string;
     colorPurple: string;
     colorOrangeText: string;
@@ -160,6 +160,7 @@ export interface AboutNavButtonProps {
   text: string;
   myIcon: ReactNode;
   myCondition: boolean;
+  testCy: string;
   changeText: (translate: string, changeText: string) => void;
 }
 export interface AboutSideBarProps {
@@ -169,6 +170,7 @@ export interface AboutSideBarProps {
 export interface BigButtonProps {
   children?: React.ReactNode;
   myBtnFn?: () => void;
+  testId?: string;
 }
 export interface ButtonCollapseProps {
   isTrue: boolean;
@@ -208,6 +210,7 @@ export interface NavigationDataProps {
   goUrl: string;
   icon: JSX.Element;
   text?: string;
+  dataCy: string;
 }
 export interface NavbarProps {
   isTopnav: boolean;

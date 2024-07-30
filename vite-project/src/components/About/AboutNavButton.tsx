@@ -11,11 +11,13 @@ const AboutNavButton: FC<AboutNavButtonProps> = ({
   myIcon,
   myCondition,
   changeText,
+  testCy,
 }) => {
   const intl = useIntl();
   return (
     <>
       <StyledAboutItemBtnNav
+        data-cy={testCy}
         sx={(theme: Theme) => ({
           color: myCondition
             ? theme.myColors.colorFFF

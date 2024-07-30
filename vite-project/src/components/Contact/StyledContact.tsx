@@ -163,9 +163,10 @@ export const StyledContactFormContainer = styled(Box)(({ theme }) => ({
 }));
 export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   width: "100%",
-  maxWidth: "500px",
+  maxWidth: "400px",
   position: "relative",
   top: "15px",
+  height: "max-content",
   [theme.breakpoints.down("xl")]: {
     maxWidth: "350px",
   },
@@ -178,7 +179,7 @@ export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   },
 }));
 export const StyledContactFormDivider = styled(Divider)(({ theme }) => ({
-  width: "2px",
+  width: "1px",
   border: `1px solid ${theme.myColors.colorLinie} !important`,
   height: "100%",
   zIndex: 10,
@@ -213,20 +214,35 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   textTransform: "lowercase",
 }));
 export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
-  maxWidth: "600px",
+  maxWidth: "500px",
   color: "white",
   padding: 2,
-  height: "100dvh",
+  height: "max-content",
   [theme.breakpoints.down("lg")]: {
-    height: "auto",
+    maxWidth: "480px",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
+    width: "350px",
     "& p": {
       width: "350px",
+      fontSize: "10px",
     },
+  },
+}));
+export const StyledTextGrayNone = styled(Typography)(({ theme }) => ({
+  color: theme.myColors.colorGreyText,
+  fontFamily: "Fira Code",
+  fontSize: "18px",
+  fontStyle: "normal",
+  fontWeight: 450,
+  lineHeight: "150%",
+  [theme.breakpoints.down("xl")]: {
+    fontSize: "14px",
+    fontWeight: 600,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
   },
 }));
 export const StyledTextGray = styled(Typography)(({ theme }) => ({
@@ -289,6 +305,31 @@ export const StyledTextPurple = styled(Typography)(({ theme }) => ({
     fontSize: "11px",
   },
 }));
+export const StyledTextContainerMessage = styled(Box)(() => ({
+  display: "flex",
+}));
+export const StyledTextMessage = styled(Typography)(({ theme }) => ({
+  display: "-webkit-box",
+  maxHeight: "300px",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  WebkitLineClamp: 10,
+  WebkitBoxOrient: "vertical",
+  width: "auto !important",
+  color: theme.myColors.colorOrangeText,
+  fontFamily: "Fira Code",
+  fontSize: "18px",
+  fontStyle: "normal",
+  fontWeight: 450,
+  lineHeight: "150%",
+  [theme.breakpoints.down("xl")]: {
+    fontSize: "14px",
+    fontWeight: 600,
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "11px",
+  },
+}));
 StyledContactBtnContainer.displayName = "StyledContactBtnContainer";
 StyledContactDivider.displayName = "StyledContactDivider";
 StyledContactBtnOpenFind.displayName = "StyledContactBtnOpenFind";
@@ -306,3 +347,5 @@ StyledTextGray.displayName = "StyledTextGray";
 StyledTextPink.displayName = "StyledTextPink";
 StyledTextOrange.displayName = "StyledTextOrange";
 StyledTextPurple.displayName = "StyledTextPurple";
+StyledTextContainerMessage.displayName = "StyledTextContainerMessage";
+StyledTextMessage.displayName = "StyledTextMessage";

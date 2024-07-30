@@ -68,12 +68,13 @@ export const StyledBigButton = styled(Button)(({ theme }) => ({
       },
     },
   },
-  [theme.breakpoints.down("lg")]: {
+  [theme.breakpoints.down("md")]: {
     width: "100%",
     "&.learn-more": {
       padding: "0.75em 1.5em",
     },
   },
+
   [theme.breakpoints.down("sm")]: {
     width: "100%",
     "&.learn-more": {

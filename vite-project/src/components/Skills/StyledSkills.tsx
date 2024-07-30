@@ -25,7 +25,8 @@ export const StyledContainerAlert = styled(Box)(({ theme }) => ({
     fontWeight: 450,
     [theme.breakpoints.down("md")]: {
       transform: "translate(-50%, -50%)",
-      paddingTop: "70px",
+      paddingTop: "90px",
+      fontSize: "1.25rem",
     },
     [theme.breakpoints.down("sm")]: {
       paddingTop: "175px",

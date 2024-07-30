@@ -1,7 +1,6 @@
 import { styled } from "@mui/system";
 import { Box } from "@mui/material";
 
-// Styled KeyboardSnake
 export const StyledSnakeArrowsContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",

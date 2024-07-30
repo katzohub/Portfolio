@@ -1,6 +1,6 @@
 import { styled } from "@mui/system";
 import { Box, Typography, Button } from "@mui/material";
-// Error Page
+
 export const StyledContainerError = styled(Box)(() => ({
   width: "100vw",
   height: "100dvh",
@@ -32,7 +32,7 @@ export const StyledGeneralTextError = styled(Typography)(() => ({
 export const StyledPrimaryTextError = styled(Typography)(() => ({
   color: "#607b96",
 }));
-// Home Page
+
 export const StyledContainerHome = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100dvh",
@@ -94,7 +94,7 @@ export const StyledWrappHome = styled(Box)(({ theme }) => ({
     zIndex: "5",
     padding: "0px",
   },
-  // this
+
   "& .blue": {
     position: "fixed",
 
@@ -190,13 +190,13 @@ export const StyledWrapperRightHome = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
-// Shared Page
+
 export const StyledGeneralContainer = styled(Box)(({ theme }) => ({
   width: "100vw",
   minHeight: "100dvh",
   backgroundColor: theme.myColors.generalBackground,
 }));
-// SnakeGame Page
+
 export const StyledContainerGameSnake = styled(Box)(({ theme }) => ({
   height: "100dvh",
   color: "#fff",
@@ -205,7 +205,7 @@ export const StyledContainerGameSnake = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
 }));
-// ThankYou Page
+
 export const StyledContainerThanks = styled(Box)(({ theme }) => ({
   width: "100vw",
   height: "100dvh",

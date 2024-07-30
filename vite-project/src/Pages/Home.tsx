@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import { LeftSectionHome, GameSnake } from "../components/Home";
-import blue from "../assets/background/blue.png";
-import green from "../assets/background/green.png";
+import blue from "../assets/background/blue.webp";
+import green from "../assets/background/green.webp";
 import yellow from "../assets/background/yellow.png";
 import { useThemeContext } from "../context/themeContext";
 import {

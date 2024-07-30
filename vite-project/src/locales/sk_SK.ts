@@ -17,7 +17,7 @@ export default {
   "home.gameOver": "KONIEC-HRY",
   "home.wellDone": "GRATULUJEM",
   "home.tryAgain": "HRAŤ-ZNOVA",
-  "home.useKeyboard": "stlačte klávesnicu",
+  "home.useKeyboard": "// stlačte klávesnicu",
   "home.usePlay": "šípky pre hranie",
   "home.lastFood": "zostáva jedlo",
   "home.playAgain": "hrať-znovu",

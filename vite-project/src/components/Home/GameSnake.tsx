@@ -333,7 +333,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
       <Box>
         <StyledSnakeBoxSetting isFullWindow={isFullWindow}>
           <StyledSnakeArrowTextFirst>
-            // {intl.formatMessage({ id: "home.useKeyboard" })}
+            {isFullWindow ? intl.formatMessage({ id: "home.useKeyboard" }) : ""}
           </StyledSnakeArrowTextFirst>
           <StyledSnakeArrowTextSecond variant="body2">
             // {intl.formatMessage({ id: "home.usePlay" })}

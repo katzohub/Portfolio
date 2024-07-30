@@ -17,7 +17,7 @@ export default {
   "home.gameOver": "GAME-OVER",
   "home.wellDone": "WELL-DONE",
   "home.tryAgain": "TRY-AGAIN",
-  "home.useKeyboard": "use keyboard",
+  "home.useKeyboard": "// use keyboard",
   "home.usePlay": "button to play ",
   "home.lastFood": "food left",
   "home.playAgain": "play-again",

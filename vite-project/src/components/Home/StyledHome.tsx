@@ -354,8 +354,6 @@ export const StyledLeftContainer = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: "7px",
-    paddingBottom: "102px",
   },
 }));
 export const StyledLeftWrapp = styled(Box)(({ theme }) => ({

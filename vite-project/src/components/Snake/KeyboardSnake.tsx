@@ -72,7 +72,12 @@ const KeyboardSnake: FC<KeyboardSnakeProps> = ({
                 </BigButton>
               </Box>
               <Box
-                sx={{ position: "relative", right: "0px" }}
+                sx={(theme) => ({
+                  [theme.breakpoints.down("md")]: {
+                    position: "relative",
+                    right: "-5px",
+                  },
+                })}
                 onClick={() => handleButtonClick && handleButtonClick("right")}
               >
                 <BigButton>

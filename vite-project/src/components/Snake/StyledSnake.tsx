@@ -70,28 +70,33 @@ export const StyledSnakeArrowsWrapper = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   position: "relative",
-  top: "-25px",
-  [theme.breakpoints.down("lg")]: {
+  top: "-2.5px",
+  [theme.breakpoints.down("md")]: {
     position: "relative",
-    top: "7.5px",
+    top: "10px",
   },
   [theme.breakpoints.down("sm")]: {
     position: "relative",
-    top: "-10px",
   },
 }));
-export const StyledSnakeBigBtnContainer = styled(Box)(() => ({
+export const StyledSnakeBigBtnContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   top: "0px",
+  [theme.breakpoints.down("md")]: {
+    top: "-15px",
+  },
 }));
 export const StyledSnakeBigBtnLeftWrapp = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   width: "100%",
 }));
-export const StyledSnakeBigBtnLeftPosition = styled(Box)(() => ({
+export const StyledSnakeBigBtnLeftPosition = styled(Box)(({ theme }) => ({
   position: "relative",
   left: "0px",
+  [theme.breakpoints.down("md")]: {
+    left: "-5px",
+  },
 }));
 StyledSnakeArrowsContainer.displayName = "StyledSnakeArrowsContainer";
 StyledSnakeArrowUp.displayName = "StyledSnakeArrowUp";

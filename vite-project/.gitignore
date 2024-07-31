@@ -29,7 +29,8 @@ dist-ssr
 .next
 
 build/
-
+DS_Store
+DS_STORE
 .history
 .DS_STORE
 .DS_Store

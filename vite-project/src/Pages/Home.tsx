@@ -33,7 +33,11 @@ const Home: FC = () => {
           </>
         ) : (
           <>
-            <img src={yellow} alt="background green effect" className="green" />
+            <img
+              src={yellow}
+              alt="background yellow effect"
+              className="green"
+            />
             <img src={blue} alt="background blue effect" className="blue" />
           </>
         )}

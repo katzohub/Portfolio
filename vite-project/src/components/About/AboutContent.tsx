@@ -185,7 +185,7 @@ const AboutContent: FC<AboutContentProps> = ({
               <StyledAboutTextGray variant="caption">
                 // Result
               </StyledAboutTextGray>
-              <img src={ja} alt="Mine photo" />
+              <img src={ja} alt="photo me" />
             </StyledAboutImgContainer>
           </MotionStyledAboutContainerRight>
         )}

@@ -30,7 +30,7 @@ const CheckSkill: FC<CheckSkillProps> = ({
         <StyledSkillsRowLabel
           data-cy={testCy}
           sx={{
-            color: checked ? "#fff" : "#607B96",
+            color: checked ? "#fff" : "#6f88a0 ",
           }}
         >
           {icon}

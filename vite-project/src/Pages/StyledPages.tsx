@@ -27,10 +27,10 @@ export const StyledGoHomeBtn = styled(Button)(({ theme }) => ({
   "& a": { color: theme.myColors.colorFFF },
 }));
 export const StyledGeneralTextError = styled(Typography)(() => ({
-  color: "#607b96",
+  color: "#6f88a0 ",
 }));
 export const StyledPrimaryTextError = styled(Typography)(() => ({
-  color: "#607b96",
+  color: "#6f88a0 ",
 }));
 
 export const StyledContainerHome = styled(Box)(({ theme }) => ({

@@ -25,6 +25,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
   const intl = useIntl();
   return (
     <Box
+      component={"main"}
       sx={(theme) => ({
         [theme.breakpoints.down("md")]: {
           minHeight: "100dvh",

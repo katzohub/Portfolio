@@ -30,7 +30,7 @@ const ContactCollapse = () => {
     <>
       <StyledContactBtnContainer
         sx={{
-          color: activeButton === "contact" ? "#fff" : "#607B96",
+          color: activeButton === "contact" ? "#fff" : "#6f88a0 ",
         }}
         onClick={() => {
           handleClickContactOne();
@@ -47,7 +47,7 @@ const ContactCollapse = () => {
 
       <StyledContactBtnOpenFind
         sx={{
-          color: activeContactButton === "contact" ? "#fff" : "#607B96",
+          color: activeContactButton === "contact" ? "#fff" : "#6f88a0 ",
         }}
         onClick={() => {
           handleClickContact();

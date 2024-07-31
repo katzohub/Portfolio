@@ -24,7 +24,7 @@ const Home: FC = () => {
   }, []);
 
   return (
-    <StyledContainerHome>
+    <StyledContainerHome component={"main"}>
       <StyledWrappHome>
         {themeMode === "dark" ? (
           <>

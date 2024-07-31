@@ -166,7 +166,7 @@ const SkillsSidebar: FC<SkillsSidebarProps> = ({
               <StyledSkillsListItem
                 data-cy="checkbox-all"
                 sx={{
-                  color: checkedState.all ? "#fff" : "#607B96",
+                  color: checkedState.all ? "#fff" : "#6f88a0 ",
                 }}
               >
                 <StyledCategoryIcon fontSize="small" />

@@ -249,7 +249,7 @@ const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
           <>
             {!gameStarted && <StyledSnakeScreenLogo />}
             <StyledStartGameBtn variant="text" size="small" onClick={startGame}>
-              <StyledTextStartGame variant="h4" fontSize={15}>
+              <StyledTextStartGame variant="h5" fontSize={15}>
                 {intl.formatMessage({ id: "home.startGame" })}
               </StyledTextStartGame>
             </StyledStartGameBtn>

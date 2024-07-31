@@ -51,7 +51,7 @@ const Navigation: FC<NavigationProps> = ({
               );
             })
           : falseNavigationData.map((item, index) => {
-              const { goUrl, icon, text, dataCy } = item;
+              const { goUrl, icon, text, dataCy, aria } = item;
               return (
                 <StyledNavigationLinkMinScreen
                   key={index}
@@ -59,6 +59,7 @@ const Navigation: FC<NavigationProps> = ({
                   rel="noopener noreferrer"
                   href={goUrl}
                   data-cy={dataCy}
+                  aria-label={aria}
                 >
                   {text && (
                     <Typography className="github-link">{text}</Typography>

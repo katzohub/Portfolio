@@ -12,12 +12,14 @@ const SwitchButton: FC<SwitchButtonProps> = ({
   falseIcon,
   condition,
   toggleSwitch,
+  myLabelName,
 }) => {
   return (
     <>
       <StyledSwitchBtnContianer>
         <StyledSwitchBtnWrapp>
           <StyledSwitchLanguage
+            inputProps={{ "aria-label": myLabelName }}
             icon={trueIcon}
             checkedIcon={falseIcon}
             checked={condition}

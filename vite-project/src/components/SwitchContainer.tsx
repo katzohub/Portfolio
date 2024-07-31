@@ -16,12 +16,14 @@ const SwitchContainer: FC = () => {
     <>
       {/* DARKMODE SWITCH */}
       <SwitchButton
+        myLabelName="button for darkmode and lightmode"
         trueIcon={<StyledLightModeIcon />}
         falseIcon={<StyledDarkModeIcon />}
         condition={themeMode === "dark"}
         toggleSwitch={toggleTheme}
       />
       <SwitchButton
+        myLabelName="button for slovak language and english language"
         trueIcon={<AmericaFlag />}
         falseIcon={<SlovakiaFlag />}
         condition={language === "sk-SK"}

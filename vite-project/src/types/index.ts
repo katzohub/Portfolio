@@ -147,6 +147,7 @@ export interface SwitchButtonProps {
   falseIcon: JSX.Element;
   condition: boolean;
   toggleSwitch: () => void;
+  myLabelName: string;
 }
 export interface TemplateRowProps {
   myNumber: string;
@@ -211,6 +212,7 @@ export interface NavigationDataProps {
   icon: JSX.Element;
   text?: string;
   dataCy: string;
+  aria?: string;
 }
 export interface NavbarProps {
   isTopnav: boolean;

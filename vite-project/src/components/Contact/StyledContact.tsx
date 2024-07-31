@@ -36,7 +36,7 @@ export const StyledContactDivider = styled(Divider)(({ theme }) => ({
 }));
 export const StyledContactBtnOpenFind = styled(ListItemButton)(({ theme }) => ({
   marginTop: "50px !important",
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "16px",
   fontStyle: "normal",
   fontWeight: 400,
@@ -205,7 +205,7 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   color: theme.myColors.colorFFF,
   background: `${theme.myColors.colorBackInput} !important`,
   textAlign: "center",
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "14px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -231,7 +231,7 @@ export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
 }));
 export const StyledTextGrayNone = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorGreyText,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -247,7 +247,7 @@ export const StyledTextGrayNone = styled(Typography)(({ theme }) => ({
 }));
 export const StyledTextGray = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorGreyText,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -262,7 +262,7 @@ export const StyledTextGray = styled(Typography)(({ theme }) => ({
 }));
 export const StyledTextPink = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorPinkText,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -277,7 +277,7 @@ export const StyledTextPink = styled(Typography)(({ theme }) => ({
 }));
 export const StyledTextOrange = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorOrangeText,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -292,7 +292,7 @@ export const StyledTextOrange = styled(Typography)(({ theme }) => ({
 }));
 export const StyledTextPurple = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorPurpleText,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -317,7 +317,7 @@ export const StyledTextMessage = styled(Typography)(({ theme }) => ({
   WebkitBoxOrient: "vertical",
   width: "auto !important",
   color: theme.myColors.colorOrangeText,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,

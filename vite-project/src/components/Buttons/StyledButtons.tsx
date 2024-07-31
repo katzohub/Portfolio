@@ -19,7 +19,7 @@ export const StyledBigButton = styled(Button)(({ theme }) => ({
   verticalAlign: "middle",
   textDecoration: "none",
   fontSize: "inherit",
-  fontFamily: "inherit",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   width: "100%",
   position: "relative",
   zIndex: 555,
@@ -86,7 +86,7 @@ export const StyledBigButton = styled(Button)(({ theme }) => ({
 export const StyledListButtonsCollapse = styled(ListItemButton)(
   ({ theme }) => ({
     marginTop: "50px !important",
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontSize: "16px",
     fontStyle: "normal",
     fontWeight: 400,

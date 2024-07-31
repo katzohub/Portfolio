@@ -39,7 +39,7 @@ export const StyledNavContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledNavLink = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "1rem",
   fontStyle: "normal",
   fontWeight: 450,

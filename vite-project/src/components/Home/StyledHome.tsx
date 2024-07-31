@@ -91,7 +91,7 @@ export const StyledStartGameBtn = styled(Button)(() => ({
   display: "flex",
   alignItems: "center",
   color: "#6f88a0 ",
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "normal",
@@ -107,7 +107,7 @@ export const StyledTextStartGame = styled(Typography)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   color: theme.myColors.fotnBtnSnake,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "100%",
@@ -129,7 +129,7 @@ export const StyledTextContinue = styled(Typography)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "100%",
@@ -141,7 +141,7 @@ export const StyledContainerStart = styled(Button)(() => ({
   display: "flex",
   alignItems: "center",
   color: "#6f88a0 ",
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "normal",
@@ -164,7 +164,7 @@ export const StyledTextGameOver = styled(Typography)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "100%",
@@ -177,7 +177,7 @@ export const StyledContainerStartGame = styled(Button)(() => ({
   display: "flex",
   alignItems: "center",
   color: "#6f88a0 ",
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontStyle: "normal",
   fontWeight: 450,
   lineHeight: "normal",
@@ -211,7 +211,7 @@ const StyledSnakeBoxSettingMaxScreen = styled(Box)(({ theme }) => ({
   left: "50px",
   "& p": {
     fontSize: 14,
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontWeight: "450",
     wordWrap: "break-word",
   },
@@ -242,7 +242,7 @@ export const StyledSnakeBoxSetting: React.FC<ContainerSnakeProps> = ({
 };
 export const StyledSnakeArrowTextFirst = styled(Typography)(({ theme }) => ({
   marginBottom: "8px !important",
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -255,7 +255,7 @@ export const StyledSnakeArrowTextFirst = styled(Typography)(({ theme }) => ({
 
 export const StyledSnakeArrowTextSecond = styled(Typography)(({ theme }) => ({
   marginBottom: "16px !important",
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -318,7 +318,7 @@ export const StyledSnakeContainerFood: React.FC<ContainerSnakeProps> = ({
 };
 export const StyledSnakeFoodLeft = styled(Typography)(() => ({
   color: "#FFF",
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -384,7 +384,7 @@ export const StyledLeftWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 export const StyledLeftHeadingGeneral = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: `${theme.myColors.colorGrey} !important`,
   fontSize: "18px !important",
   fontStyle: "normal",
@@ -397,7 +397,7 @@ export const StyledLeftHeadingGeneral = styled(Typography)(({ theme }) => ({
   },
 }));
 export const StyledLeftHeadingName = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: `${theme.myColors.colorGrey} !important`,
   fontSize: "62px !important",
   fontStyle: "normal",
@@ -411,7 +411,7 @@ export const StyledLeftHeadingName = styled(Typography)(({ theme }) => ({
   },
 }));
 export const StyledLeftHeadingProfes = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: `${theme.myColors.colorPurple} !important`,
   fontSize: "30px !important",
   fontStyle: "normal",
@@ -451,7 +451,7 @@ export const StyledLeftArticleContainer = styled(Box)(({ theme }) => ({
   },
 }));
 export const StyledLeftArticlePrimaryText = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: `${theme.myColors.textColorNav} !important`,
 
   fontStyle: "normal",
@@ -464,7 +464,7 @@ export const StyledLeftArticlePrimaryText = styled(Typography)(({ theme }) => ({
 }));
 export const StyledLeftArticlePrimaryTextMobile = styled(Typography)(
   ({ theme }) => ({
-    fontFamily: "Fira Code !important",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     color: `${theme.myColors.textColorNav} !important`,
     fontStyle: "normal",
     fontWeight: 450,
@@ -472,7 +472,7 @@ export const StyledLeftArticlePrimaryTextMobile = styled(Typography)(
     lineHeight: "normal",
     [theme.breakpoints.down("md")]: {
       fontSize: "14px !important",
-      fontFamily: "Fira Code !important",
+      fontFamily: `"Fira Code","Poppins", sans-serif`,
       color: `${theme.myColors.textColorNav} !important`,
       fontStyle: "normal",
       fontWeight: 450,
@@ -482,7 +482,7 @@ export const StyledLeftArticlePrimaryTextMobile = styled(Typography)(
   })
 );
 export const StyledLeftArticlePurpleText = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: `${theme.myColors.colorPurple} !important`,
   fontSize: "16px",
   fontStyle: "normal",
@@ -490,7 +490,7 @@ export const StyledLeftArticlePurpleText = styled(Typography)(({ theme }) => ({
   lineHeight: "normal",
 }));
 export const StyledLeftArticleGreen = styled(Typography)(({ theme }) => ({
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: theme.myColors.colorLightGreen,
   fontSize: "16px",
   fontStyle: "normal",
@@ -506,7 +506,7 @@ export const StyledLeftArticleWhite = styled(Typography)(({ theme }) => ({
 }));
 
 export const StyledLeftArticleLinkMinScreen = styled(Link)(({ theme }) => ({
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   color: theme.myColors.colorLightLinkHomeGithub,
   fontSize: "16px",
   fontStyle: "normal",
@@ -517,7 +517,7 @@ export const StyledLeftArticleLinkMinScreen = styled(Link)(({ theme }) => ({
   textDecoration: "none",
   [theme.breakpoints.down("md")]: {
     textDecoration: "none",
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     color: theme.myColors.colorLightLinkHomeGithub,
     fontSize: "16px",
     fontStyle: "normal",

@@ -20,7 +20,7 @@ export const StyledContainerAlert = styled(Box)(({ theme }) => ({
     width: "350px",
     height: "250px",
     color: "#fff",
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontStyle: "normal",
     fontWeight: 450,
     [theme.breakpoints.down("md")]: {
@@ -132,7 +132,7 @@ export const StyledSkillCardHeading = styled(Box)(({ theme }) => ({
   padding: "10px",
   "& h2": {
     color: "#fff",
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontStyle: "normal",
     lineHeight: "normal",
     fontSize: "16px",
@@ -141,7 +141,7 @@ export const StyledSkillCardHeading = styled(Box)(({ theme }) => ({
   "& p": {
     marginTop: "5px",
     color: theme.myColors.colorTextCard,
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontSize: "15px",
     fontStyle: "normal",
     fontWeight: 450,
@@ -172,7 +172,7 @@ export const StyledSkillCardBtn = styled(Button)(({ theme }) => ({
 
   "& a": {
     color: theme.myColors.colorSkillsBtnText,
-    fontFamily: "Fira Code",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontSize: "14px",
     fontStyle: "normal",
     fontWeight: 450,

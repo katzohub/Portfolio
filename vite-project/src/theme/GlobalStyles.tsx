@@ -18,7 +18,7 @@ const GlobalStyles = () => (
       body: {
         width: "100vw",
         minHeight: "100dvh",
-        color: " #fff",
+        color: "#fff",
         overflowX: "hidden !important",
         overflowY: "auto",
         fontFamily: `"Fira Code","Poppins", sans-serif`,
@@ -29,6 +29,7 @@ const GlobalStyles = () => (
         position: "relative",
         overflow: "hidden",
         overflowX: "hidden !important",
+        fontFamily: `"Fira Code","Poppins", sans-serif`,
       },
     }}
   />

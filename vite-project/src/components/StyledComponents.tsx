@@ -56,7 +56,7 @@ export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({
 export const StyledComponentsContentContainer = styled(Box)(({ theme }) => ({
   width: "100vw",
   height: "56px",
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   display: "flex",
   justifyContent: "center",
   color: `${theme.myColors.colorFFF} !important`,
@@ -114,7 +114,7 @@ export const StyledComponentsGeneralContainerMinWidth = styled(ListSubheader)(
       background: `${theme.myColors.colorDarkBlack} !important`,
       borderBottom: `2px solid ${theme.myColors.colorLinie} !important`,
 
-      fontFamily: "Fira Code !important",
+      fontFamily: `"Fira Code","Poppins", sans-serif`,
       fontSize: "16px !important",
       fontStyle: "normal",
       fontWeight: 400,
@@ -171,7 +171,7 @@ export const StyledNavigationContianer = styled(Grid)(({ theme }) => ({
   },
 }));
 export const StyledNavigationTopWrapp = styled(ListItemButton)(({ theme }) => ({
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "1rem",
   fontStyle: "normal",
   fontWeight: 450,
@@ -239,7 +239,7 @@ export const StyledNavigationIconMinScreen = styled(ListItemIcon)(
       fontSize: "1.25rem",
       width: "auto !important",
       padding: "0 !important",
-      fontFamily: "Fira Code",
+      fontFamily: `"Fira Code","Poppins", sans-serif`,
       alignItems: "center",
       fontStyle: "normal",
       fontWeight: 450,
@@ -256,7 +256,7 @@ export const StyledNavigationIconMinScreen = styled(ListItemIcon)(
   })
 );
 export const StyledNavigationLinkMinScreen = styled(Link)(({ theme }) => ({
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "1rem",
   fontStyle: "normal",
   fontWeight: 450,

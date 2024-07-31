@@ -127,7 +127,7 @@ export const StyledAboutText = styled(Box)(({ theme }) => ({
     fontSize: "clamp(10px, 1vw, 14px) !important",
     whiteSpace: "nowrap !important",
     overflow: "hidden !important",
-    fontFamily: "Fira Code !important",
+    fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontStyle: "normal !important",
     fontWeight: "450 !important",
     lineHeight: "150% !important",
@@ -161,7 +161,7 @@ export const StyledAboutTextPink = styled(Typography)(({ theme }) => ({
 }));
 export const StyledAboutTextPurple = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorPurpleText,
-  fontFamily: "Fira Code !important",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
 }));
 export const StyledAboutTextOrange = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorOrangeText,
@@ -203,7 +203,7 @@ export const StyledAboutImgContainer = styled(Box)(({ theme }) => ({
 // Styled components for TemplateAbout
 export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
   color: theme.myColors.textColorNav,
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 450,
@@ -254,7 +254,7 @@ export const StyledAboutIconEducation = styled(FolderIcon)(({ theme }) => ({
   color: `${theme.myColors.colorPurpleFolder} !important`,
 }));
 export const StyledAboutBtnText = styled(ListItemText)(() => ({
-  fontFamily: "Fira Code",
+  fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "16px",
   fontStyle: "normal",
   fontWeight: 400,
@@ -285,8 +285,6 @@ export const StyledAboutItemBtnNav = styled(ListItemButton)(({ theme }) => ({
     color: `${theme.myColors.colorFFF} !important`,
   },
 }));
-// Styled components for TemplateAbout
-// Display name for components
 
 StyledAboutContainer.displayName = "StyledAboutContainer";
 StyledAboutContainerTemplate.displayName = "StyledAboutContainerTemplate";

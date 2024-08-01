@@ -166,9 +166,10 @@ export const StyledSkillCardIconWrap = styled(Box)(() => ({
 }));
 export const StyledSkillCardBtn = styled(Button)(({ theme }) => ({
   position: "absolute",
-  left: "25px",
-  bottom: "15px",
+  left: "12.5px",
+  bottom: "12.5px",
   background: `${theme.myColors.colorSkillsBtnBack} !important`,
+  borderRadius: "7.5px",
 
   "& a": {
     color: theme.myColors.colorSkillsBtnText,

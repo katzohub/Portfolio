@@ -1,5 +1,6 @@
 {
-  "name": "vite-project",
+  "homepage": "https://portfolio_tomas.github.io/portfolio_tomas",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+      "predeploy": "npm run build --legacy-peer-deps",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -40,6 +43,7 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^7.16.1",
     "vite": "^4.4.5"

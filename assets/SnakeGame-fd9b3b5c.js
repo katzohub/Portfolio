@@ -1,0 +1,1 @@
+import{j as a,aB as e}from"./index-5e63910f.js";import{G as r}from"./GameSnake-1839ad79.js";import"./ButtonCollapse-787d606e.js";import"./index-54c9f60f.js";const n=()=>a.jsx(e,{children:a.jsx(r,{isFullWindow:!1})});export{n as default};

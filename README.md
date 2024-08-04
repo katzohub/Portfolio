@@ -4,9 +4,17 @@
 
 ## Porfolio
 
-## Hello everyone
+# Hello!
 
-Hello everyone, I'm learning programming. Please rate my code and feedback send me please.
+Welcome to my portfolio repository. I used the following stack:
+
+- **React with TypeScript**
+- **Material-UI**
+- **React Router Dom**
+- **ESLint** for code linting and maintaining consistent code style
+- **Cypress** for short e2e tests
+
+I hope you enjoy my portfolio!
 
 <!-- Send Link For my portfolio
 Check my [Porfolio](https://katzohub.github.io/Portfolio-App/indexEN.html)
@@ -18,9 +26,17 @@ Thank you everyone.
 
 ## Porfólio
 
-### Zdravím všetkých
+# Ahojte!
 
-Zdravím učím sa programovať a rád by som si vypočul spätnú väzbu na môj kód aby som vedel na čom mám zapracovať ďalej aby som sa mohol stať vývojárom webu.
+Vitajte v mojom repozitári pre portfólio. Použil som nasledujúci stack:
+
+- **React s TypeScriptom**
+- **Material-UI**
+- **React Router Dom**
+- **ESLint** na kontrolu a udržiavanie konzistentného štýlu kódu
+- **Cypress** na krátke e2e testy
+
+Dúfam, že sa vám moje portfólio bude páčiť!
 
 <!-- Send Link For my portfolio
 Pozri moje [Porfólio](https://katzohub.github.io/Portfolio-App/)

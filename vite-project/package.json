@@ -1,5 +1,5 @@
 {
-  "homepage": "https://katzohub.github.io/",
+  "homepage": "https://tom-dev.sk",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -20,7 +20,6 @@
     "@mui/material": "^5.16.4",
     "@mui/styled-engine-sc": "^6.0.0-alpha.2",
     "@mui/styles": "^5.14.14",
-    "@types/glidejs__glide": "^3.6.3",
     "framer-motion": "^11.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

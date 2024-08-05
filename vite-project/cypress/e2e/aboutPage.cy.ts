@@ -26,11 +26,11 @@ const allScreen = () => {
   cy.contains("Welcome to the section about my high school").should("exist");
   cy.contains("and start learning to program.").should("exist");
   cy.get(byTestCy("btn-contact-dropdown")).click();
-  cy.contains("tomasolsiak1@gmail.com").should("be.visible");
+  cy.contains("tomas.olsiak@tom-dev.sk").should("be.visible");
   cy.contains("+421 915 515 974").should("be.visible");
   cy.get(byTestCy("mail-contact"))
     .should("have.attr", "href")
-    .and("include", "mailto:tomasolsiak1@gmail.com");
+    .and("include", "mailto:tomas.olsiak@tom-dev.sk");
 
   cy.get(byTestCy("tel-contact"))
     .should("have.attr", "href")

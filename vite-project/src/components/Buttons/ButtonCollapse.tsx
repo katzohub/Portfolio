@@ -83,11 +83,11 @@ const ButtonCollapse: FC<ButtonCollapseProps> = ({
                   myFirstInfo={
                     <StyledTextNavigateContact
                       data-cy="mail-contact"
-                      href="mailto:tomasolsiak1@gmail.com"
+                      href="mailto:tomas.olsiak@tom-dev.sk"
                     >
                       <StyledCollapseButton>
                         <StyledEmailIcon />
-                        <ListItemText primary="tomasolsiak1@gmail.com" />
+                        <ListItemText primary="tomas.olsiak@tom-dev.sk" />
                       </StyledCollapseButton>
                     </StyledTextNavigateContact>
                   }

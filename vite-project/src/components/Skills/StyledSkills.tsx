@@ -150,8 +150,8 @@ export const StyledSkillCardHeading = styled(Box)(({ theme }) => ({
 }));
 export const StyledSkillCardContainer = styled(Box)(({ theme }) => ({
   position: "absolute",
-  right: "15px",
-  top: "25px",
+  right: "7.5px",
+  top: "7.5px",
   display: "flex",
   justifyContent: "center",
   gap: "10px",

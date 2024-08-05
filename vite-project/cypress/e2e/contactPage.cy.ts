@@ -9,7 +9,7 @@ describe("Navigate tour", () => {
     cy.contains("_contact-me").should("exist");
     cy.get(byTestCy("mail-contact"))
       .should("have.attr", "href")
-      .and("include", "mailto:tomasolsiak1@gmail.com");
+      .and("include", "mailto:tomas.olsiak@tom-dev.sk");
 
     cy.get(byTestCy("tel-contact"))
       .should("have.attr", "href")

@@ -136,11 +136,9 @@ export const StyledAboutText = styled(Box)(({ theme }) => ({
     overflow: "hidden !important",
     fontFamily: `"Fira Code","Poppins", sans-serif`,
     fontStyle: "normal !important",
-    fontWeight: "450 !important",
     lineHeight: "150% !important",
-
+    fontWeight: "600 !important",
     [theme.breakpoints.down("xl")]: {
-      fontWeight: "600 !important",
       fontSize: "13px !important",
     },
     [theme.breakpoints.down("sm")]: {

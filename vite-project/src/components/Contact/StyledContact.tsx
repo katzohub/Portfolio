@@ -160,6 +160,10 @@ export const StyledContactFormContainer = styled(Box)(({ theme }) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
   },
+  [theme.breakpoints.down(525)]: {
+    paddingLeft: "20px",
+    paddingRight: "20px",
+  },
 }));
 export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -172,7 +176,7 @@ export const StyledContactFormWrap = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("lg")]: {
     top: "-30px",
-    maxWidth: "450px",
+    maxWidth: "477px",
   },
   [theme.breakpoints.down("sm")]: {
     maxWidth: "350px",
@@ -208,13 +212,13 @@ export const StyledSubmitFormBtn = styled(Button)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "14px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "normal",
   borderRadius: "8px",
   textTransform: "lowercase",
 }));
 export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
-  maxWidth: "500px",
+  // maxWidth: "500px",
   color: "white",
   padding: 2,
   height: "max-content",
@@ -225,7 +229,7 @@ export const StyledFormTextContainer = styled(Box)(({ theme }) => ({
     width: "350px",
     "& p": {
       width: "350px",
-      fontSize: "10px",
+      fontSize: "10px !important",
     },
   },
 }));
@@ -234,7 +238,7 @@ export const StyledTextGrayNone = styled(Typography)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "150%",
   [theme.breakpoints.down("xl")]: {
     fontSize: "14px",
@@ -250,14 +254,14 @@ export const StyledTextGray = styled(Typography)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "150%",
   [theme.breakpoints.down("xl")]: {
     fontSize: "14px",
     fontWeight: 600,
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
+    fontSize: "14px",
   },
 }));
 export const StyledTextPink = styled(Typography)(({ theme }) => ({
@@ -265,14 +269,14 @@ export const StyledTextPink = styled(Typography)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "150%",
   [theme.breakpoints.down("xl")]: {
     fontSize: "14px",
     fontWeight: 600,
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
+    fontSize: "14px",
   },
 }));
 export const StyledTextOrange = styled(Typography)(({ theme }) => ({
@@ -280,14 +284,14 @@ export const StyledTextOrange = styled(Typography)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "150%",
   [theme.breakpoints.down("xl")]: {
     fontSize: "14px",
     fontWeight: 600,
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
+    fontSize: "14px",
   },
 }));
 export const StyledTextPurple = styled(Typography)(({ theme }) => ({
@@ -295,14 +299,14 @@ export const StyledTextPurple = styled(Typography)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "150%",
   [theme.breakpoints.down("xl")]: {
     fontSize: "14px",
     fontWeight: 600,
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
+    fontSize: "14px",
   },
 }));
 export const StyledTextContainerMessage = styled(Box)(() => ({
@@ -320,14 +324,14 @@ export const StyledTextMessage = styled(Typography)(({ theme }) => ({
   fontFamily: `"Fira Code","Poppins", sans-serif`,
   fontSize: "18px",
   fontStyle: "normal",
-  fontWeight: 450,
+  fontWeight: 600,
   lineHeight: "150%",
   [theme.breakpoints.down("xl")]: {
     fontSize: "14px",
     fontWeight: 600,
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "11px",
+    fontSize: "14px",
   },
 }));
 StyledContactBtnContainer.displayName = "StyledContactBtnContainer";

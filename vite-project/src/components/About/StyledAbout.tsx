@@ -94,15 +94,16 @@ export const StyledAboutContainerRight = styled(Box)(({ theme }) => ({
   justifyContent: "start !important",
   paddingTop: "15px !important",
   alignContent: "center !important",
-
+  paddingLeft: "20px",
   [theme.breakpoints.down("lg")]: {
     paddingTop: "30px !important",
+    paddingLeft: "0px",
   },
   [theme.breakpoints.down("md")]: {
     paddingTop: "60px !important",
   },
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down(525)]: {
     padding: "120px 10px 0 10px !important",
   },
 }));
@@ -111,7 +112,11 @@ export const StyledAboutWrappRight = styled(Box)(({ theme }) => ({
   border: `2px solid ${theme.myColors.colorLinie}`,
   background: theme.myColors.colorInCard,
   padding: "7px 12.5px !important",
-  [theme.breakpoints.down("sm")]: {
+
+  [theme.breakpoints.down("lg")]: {
+    width: "491px !important",
+  },
+  [theme.breakpoints.down(525)]: {
     width: "100% !important",
     display: "flex",
     justifyContent: "center !important",
@@ -119,9 +124,11 @@ export const StyledAboutWrappRight = styled(Box)(({ theme }) => ({
   },
 }));
 export const StyledAboutText = styled(Box)(({ theme }) => ({
+  width: "max-content",
+
   [theme.breakpoints.down("sm")]: {
-    width: "auto",
-    padding: "2.5px",
+    width: "100%",
+    padding: "0 2.5px",
   },
   "& span": {
     fontSize: "clamp(10px, 1vw, 14px) !important",
@@ -131,19 +138,21 @@ export const StyledAboutText = styled(Box)(({ theme }) => ({
     fontStyle: "normal !important",
     fontWeight: "450 !important",
     lineHeight: "150% !important",
+
     [theme.breakpoints.down("xl")]: {
       fontWeight: "600 !important",
-      fontSize: "11px !important",
+      fontSize: "13px !important",
     },
     [theme.breakpoints.down("sm")]: {
-      // fontSize: "11px !important",
+      fontSize: "12px !important",
     },
   },
 }));
 export const StyledAboutTextWrap = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
-  [theme.breakpoints.down("sm")]: {
+
+  [theme.breakpoints.down(525)]: {
     flexDirection: "column",
   },
 }));
@@ -152,7 +161,7 @@ export const StyledAboutTextGray = styled(Typography)(({ theme }) => ({
 }));
 export const StyledAboutTextGrayNone = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorGreyText,
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down(525)]: {
     display: "none",
   },
 }));
@@ -170,12 +179,12 @@ export const StyledAboutNextText = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex !important",
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down(525)]: {
     flexDirection: "column",
   },
 }));
 export const StyledAboutCodeWrapper = styled(Box)(({ theme }) => ({
-  [theme.breakpoints.down("sm")]: { paddingLeft: "48px" },
+  [theme.breakpoints.down(525)]: { paddingLeft: "48px" },
 }));
 export const StyledAboutImgContainer = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -214,8 +223,8 @@ export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
     fontSize: "clamp(13px, 1vw, 16px)",
     whiteSpace: "nowrap",
     overflow: "hidden",
-    [theme.breakpoints.down(500)]: {
-      fontSize: "11px",
+    [theme.breakpoints.down(525)]: {
+      fontSize: "15px",
       whiteSpace: "wrap",
       overflow: "auto",
       padding: "0 10px",

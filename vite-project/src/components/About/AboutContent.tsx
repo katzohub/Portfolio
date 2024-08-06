@@ -39,7 +39,7 @@ const AboutContent: FC<AboutContentProps> = ({
 
   return (
     <>
-      <StyledAboutContainer>
+      <StyledAboutContainer sx={{ overflowX: "hidden" }}>
         {isReady && (
           <MotionStyledAboutContainerTemplate
             initial={{ x: "-100%" }}

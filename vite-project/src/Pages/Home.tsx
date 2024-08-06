@@ -24,7 +24,7 @@ const Home: FC = () => {
   }, []);
 
   return (
-    <StyledContainerHome component={"main"}>
+    <StyledContainerHome component={"main"} sx={{ overflowX: "hidden" }}>
       <StyledWrappHome>
         {themeMode === "dark" ? (
           <>

@@ -34,7 +34,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
       })}
     >
       <StyledComponentsContainer>
-        <StyledComponentsWrapp>
+        <StyledComponentsWrapp sx={{ overflowX: "hidden" }}>
           <StyledComponentsWrapper
             component="nav"
             aria-labelledby="nested-list-subheader"

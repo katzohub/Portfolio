@@ -144,7 +144,7 @@ const ContactForm: React.FC = () => {
       );
   };
   return (
-    <StyledContactFormContainer>
+    <StyledContactFormContainer sx={{ overflowX: "hidden" }}>
       <Snackbar
         sx={{ zIndex: 999999 }}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}

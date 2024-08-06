@@ -47,6 +47,7 @@ export const StyledContainerAlert = styled(Box)(({ theme }) => ({
 export const StyledSkillsContainer = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
+
   justifyContent: "center",
   height: "auto",
   [theme.breakpoints.up("md")]: {

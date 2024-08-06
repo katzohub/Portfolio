@@ -64,6 +64,7 @@ const ContactForm: React.FC = () => {
   useEffect(() => {
     setIsReady(true);
   }, []);
+
   const validateName = (name: string) => {
     if (!name.trim()) {
       return intl.formatMessage({ id: "valid.name" });
@@ -92,27 +93,34 @@ const ContactForm: React.FC = () => {
     }
     return "";
   };
+
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newName = e.target.value;
-    setName(newName);
-    setErrors((prevErrors) => ({ ...prevErrors, name: validateName(newName) }));
+    setName(e.target.value);
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newEmail = e.target.value;
-    setEmail(newEmail);
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      email: validateEmail(newEmail),
-    }));
+    setEmail(e.target.value);
   };
 
   const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newMessage = e.target.value;
-    setMessage(newMessage);
+    setMessage(e.target.value);
+  };
+
+  const handleNameBlur = () => {
+    setErrors((prevErrors) => ({ ...prevErrors, name: validateName(name) }));
+  };
+
+  const handleEmailBlur = () => {
     setErrors((prevErrors) => ({
       ...prevErrors,
-      message: validateMessage(newMessage),
+      email: validateEmail(email),
+    }));
+  };
+
+  const handleMessageBlur = () => {
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      message: validateMessage(message),
     }));
   };
 
@@ -143,6 +151,7 @@ const ContactForm: React.FC = () => {
         }
       );
   };
+
   return (
     <StyledContactFormContainer sx={{ overflowX: "hidden" }}>
       <Snackbar
@@ -179,6 +188,7 @@ const ContactForm: React.FC = () => {
               type="text"
               value={name}
               onChange={handleNameChange}
+              onBlur={handleNameBlur}
               error={!!errors.name && name.trim() !== ""}
               helperText={name.trim() !== "" ? errors.name : ""}
               data-cy="name-field"
@@ -193,6 +203,7 @@ const ContactForm: React.FC = () => {
               margin="normal"
               value={email}
               onChange={handleEmailChange}
+              onBlur={handleEmailBlur}
               error={!!errors.email && email.trim() !== ""}
               helperText={email.trim() !== "" ? errors.email : ""}
               data-cy="email-field"
@@ -208,6 +219,7 @@ const ContactForm: React.FC = () => {
               margin="normal"
               value={message}
               onChange={handleMessageChange}
+              onBlur={handleMessageBlur}
               error={!!errors.message && message.trim() !== ""}
               helperText={message.trim() !== "" ? errors.message : ""}
               data-cy="message-area"
@@ -323,4 +335,5 @@ const ContactForm: React.FC = () => {
     </StyledContactFormContainer>
   );
 };
+
 export default ContactForm;

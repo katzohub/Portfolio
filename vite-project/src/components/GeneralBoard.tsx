@@ -1,7 +1,6 @@
 import { FC } from "react";
 import {
   StyledComponentsContainer,
-  StyledComponentsWrapp,
   StyledComponentsWrapper,
   StyledComponentsDivider,
   StyledComponentsGeneralContainer,
@@ -24,6 +23,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
   isPageSkills,
 }) => {
   const intl = useIntl();
+
   return (
     <Box
       component={"main"}
@@ -35,7 +35,19 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
       })}
     >
       <StyledComponentsContainer>
-        <StyledComponentsWrapp sx={{ overflow: isPageSkills ? "hidden" : "" }}>
+        <Box
+          sx={(theme) => ({
+            overflow: isPageSkills ? "hidden" : "visible",
+            width: "100%",
+            height: "100dvh",
+            display: "flex",
+            [theme.breakpoints.down("md")]: {
+              display: "block",
+              position: "relative",
+              overflow: isPageSkills ? "visible" : "visible",
+            },
+          })}
+        >
           <StyledComponentsWrapper
             component="nav"
             aria-labelledby="nested-list-subheader"
@@ -62,7 +74,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
             {postprimaryTemplate}
           </StyledComponentsWrapper>
           {generalTemplate}
-        </StyledComponentsWrapp>
+        </Box>
       </StyledComponentsContainer>
     </Box>
   );

@@ -32,15 +32,7 @@ export const StyledComponentsContainer = styled(Box)(({ theme }) => ({
     justifyContent: "space-between",
   },
 }));
-export const StyledComponentsWrapp = styled(Box)(({ theme }) => ({
-  width: "100%",
-  height: "100dvh",
-  display: "flex",
-  [theme.breakpoints.down("md")]: {
-    display: "block",
-    position: "relative",
-  },
-}));
+
 export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({
   width: "269px",
   paddingTop: "56px !important",
@@ -352,7 +344,6 @@ export const StyledRowWithin = styled(Typography)(({ theme }) => ({
   },
 }));
 StyledComponentsContainer.displayName = "StyledComponentsContainer";
-StyledComponentsWrapp.displayName = "StyledComponentsWrapp";
 StyledComponentsWrapper.displayName = "StyledComponentsWrapper";
 StyledComponentsDivider.displayName = "StyledComponentsDivider";
 StyledComponentsGeneralContainer.displayName =

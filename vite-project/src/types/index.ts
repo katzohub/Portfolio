@@ -132,6 +132,7 @@ export interface GeneralBoardProps {
   postprimaryTemplate?: ReactNode;
   generalTemplate: ReactNode;
   smallGeneralHeading: string;
+  isPageSkills?: boolean;
 }
 export interface MobileDrawerProps {
   myOnOpen: boolean;

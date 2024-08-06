@@ -21,6 +21,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
   postprimaryTemplate,
   generalTemplate,
   smallGeneralHeading,
+  isPageSkills,
 }) => {
   const intl = useIntl();
   return (
@@ -34,7 +35,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
       })}
     >
       <StyledComponentsContainer>
-        <StyledComponentsWrapp sx={{ overflowX: "hidden" }}>
+        <StyledComponentsWrapp sx={{ overflow: isPageSkills ? "hidden" : "" }}>
           <StyledComponentsWrapper
             component="nav"
             aria-labelledby="nested-list-subheader"

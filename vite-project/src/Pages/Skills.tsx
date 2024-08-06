@@ -61,6 +61,7 @@ const Skills: React.FC = () => {
         }
         generalTemplate={<SkillsContent checkedState={checkedState} />}
         smallGeneralHeading="project.projects"
+        isPageSkills={true}
       />
       {areAllCheckboxesFalse() && <SkillsAlert />}
     </>

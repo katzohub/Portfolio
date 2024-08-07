@@ -1,5 +1,5 @@
 import { lazy, useContext, ReactNode, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { CustomThemeProvider } from "./context/themeContext";
 import { MenuProvider } from "./context/MenuProvider";
 import SharedLayout from "./Pages/SharedLayout";
@@ -20,7 +20,7 @@ const Home = lazy(() => import("./Pages/Home.tsx"));
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <CustomThemeProvider>
         <CssBaseline />
         <GlobalStyles />
@@ -45,7 +45,6 @@ const App = () => {
                 }
               >
                 <Routes>
-                  {/* TODO FIX THIS LOADING PAGES */}
                   <Route path="/" element={<SharedLayout />}>
                     <Route index element={<Home />} />
                     <Route path="/about-me" element={<AboutMe />}></Route>
@@ -61,7 +60,7 @@ const App = () => {
           </LanguageProvider>
         </MenuProvider>
       </CustomThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

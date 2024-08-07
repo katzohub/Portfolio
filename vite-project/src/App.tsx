@@ -20,11 +20,10 @@ const Home = lazy(() => import("./Pages/Home.tsx"));
 
 const App = () => {
   return (
-    <HashRouter>
+    <HashRouter future={{ v7_startTransition: true }}>
       <CustomThemeProvider>
         <CssBaseline />
         <GlobalStyles />
-
         <MenuProvider>
           <LanguageProvider>
             <IntlProviderWrapper>

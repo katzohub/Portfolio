@@ -29,7 +29,7 @@ const LeftSectionHome: FC = () => {
   const intl = useIntl();
   const { language } = useContext(LanguageContext);
   const openSnakeGame = () => {
-    window.open("/game_snake", "_blank", "noopener,noreferrer");
+    window.open("#/game_snake", "_blank", "noopener,noreferrer");
   };
   const words = [
     intl.formatMessage({ id: "home.myWork" }),

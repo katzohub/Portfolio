@@ -91,7 +91,7 @@ export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
   gridRowGap: "12px",
   paddingRight: "22px",
   [theme.breakpoints.down("md")]: {
-    marginBottom: "0px",
+    paddingBottom: "20px",
     paddingRight: "0px",
   },
 }));

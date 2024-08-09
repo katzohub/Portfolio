@@ -362,7 +362,7 @@ export const StyledLeftWrapp = styled(Box)(({ theme }) => ({
 }));
 export const StyledLeftWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
-  height: "100vh",
+  height: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "space-between",

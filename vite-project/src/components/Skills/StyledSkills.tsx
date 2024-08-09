@@ -82,7 +82,7 @@ export const StyledSkillsWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
-  paddingBottom: "20px",
+  paddingBottom: "72px",
   position: "relative",
   left: "-8px",
   display: "grid",
@@ -90,7 +90,6 @@ export const StyledSkillsGridContainer = styled(Grid)(({ theme }) => ({
   gridColumnGap: "12px",
   gridRowGap: "12px",
   paddingRight: "22px",
-  marginBottom: "52px",
   [theme.breakpoints.down("md")]: {
     marginBottom: "0px",
     paddingRight: "0px",

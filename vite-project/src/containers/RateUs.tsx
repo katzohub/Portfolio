@@ -1,19 +1,20 @@
 import { useState, forwardRef, ReactElement, Ref } from "react";
-import {
-  Box,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  IconButton,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Dialog, DialogContent, TextField } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import { useIntl } from "react-intl";
 import { StyledSubmitFormBtn } from "../components/Contact/StyledContact";
-import { styled } from "@mui/material/styles";
-import Rating, { IconContainerProps } from "@mui/material/Rating";
+import {
+  StyledRating,
+  StyledContainerModal,
+  StyledIconButton,
+  StyledWrapIconBtnText,
+  StyledDialogTitle,
+  StyledWrapLegend,
+  StyledTypographyLegend,
+  StyledDialogActions,
+} from "./StyledRateUs";
+import { useTheme } from "@mui/material/styles";
+import { IconContainerProps } from "@mui/material/Rating";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
 import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
@@ -31,11 +32,13 @@ const Transition = forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const MotionStyledIconButton = motion(IconButton);
+const MotionStyledIconButton = motion(StyledIconButton);
 
 const RateUs = () => {
   const [open, setOpen] = useState(false);
   const intl = useIntl();
+  const theme = useTheme(); // Použití useTheme k získání aktuálního tématu
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -44,22 +47,6 @@ const RateUs = () => {
   };
   // TODO: add function send feedback to database
   //   const handleSendFeedBack = () => {};
-
-  const StyledRating = styled(Rating)(({ theme }) => ({
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    "& .MuiRating-iconEmpty .MuiSvgIcon-root": {
-      color: theme.palette.action.disabled,
-      fontSize: "5rem",
-    },
-    "& .MuiRating-iconHover .MuiSvgIcon-root": {
-      fontSize: "5rem",
-    },
-    "& .MuiRating-iconFilled .MuiSvgIcon-root": {
-      fontSize: "5rem",
-    },
-  }));
 
   const customIcons: Record<
     number,
@@ -86,36 +73,23 @@ const RateUs = () => {
       label: "Very Satisfied",
     },
   };
+
   function IconContainer(props: IconContainerProps) {
     const { value, ...other } = props;
     return <span {...other}>{customIcons[value].icon}</span>;
   }
+
   return (
-    <Box
-      sx={{ position: "fixed", bottom: "76px", left: "64px", zIndex: "999999" }}
-    >
+    <StyledContainerModal>
       <MotionStyledIconButton
         whileHover={{ y: [0, -5, 5, -5, 5, 0] }}
         transition={{ duration: 0.3 }}
         onClick={handleClickOpen}
-        style={{
-          backgroundColor: "#d3a05f",
-          color: "white",
-          borderRadius: "50%",
-          width: "60px",
-          height: "60px",
-        }}
       >
-        <Box
-          sx={{
-            textAlign: "center",
-            fontSize: "0.85rem",
-            fontWeight: "bold",
-          }}
-        >
+        <StyledWrapIconBtnText>
           <div>{intl.formatMessage({ id: "rateUs.rate" })}</div>
           <div>{intl.formatMessage({ id: "rateUs.us" })}</div>
-        </Box>
+        </StyledWrapIconBtnText>
       </MotionStyledIconButton>
       <Dialog
         open={open}
@@ -123,15 +97,13 @@ const RateUs = () => {
         TransitionComponent={Transition}
         PaperProps={{
           sx: {
-            backgroundColor: "#dab07a",
+            backgroundColor: `${theme.myColors.generalBackground} !important`,
           },
         }}
       >
-        <DialogTitle
-          sx={{ fontSize: "1.15rem", fontWeight: "bold", color: "#fff" }}
-        >
+        <StyledDialogTitle>
           {intl.formatMessage({ id: "rateUs.name.modal" })}
-        </DialogTitle>
+        </StyledDialogTitle>
         <DialogContent>
           <Box sx={{ "& > legend": { mt: 2 } }}>
             <StyledRating
@@ -141,14 +113,14 @@ const RateUs = () => {
               getLabelText={(value: number) => customIcons[value].label}
               highlightSelectedOnly
             />
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-              <Typography component="legend" sx={{ color: "#fff" }}>
+            <StyledWrapLegend>
+              <StyledTypographyLegend>
                 {intl.formatMessage({ id: "rateUs.very.bad" })}
-              </Typography>
-              <Typography component="legend" sx={{ color: "#fff" }}>
+              </StyledTypographyLegend>
+              <StyledTypographyLegend>
                 {intl.formatMessage({ id: "rateUs.very.good" })}
-              </Typography>
-            </Box>
+              </StyledTypographyLegend>
+            </StyledWrapLegend>
           </Box>
 
           <TextField
@@ -162,7 +134,7 @@ const RateUs = () => {
             variant="outlined"
           />
         </DialogContent>
-        <DialogActions sx={{ padding: "0px 20px 24px 20px" }}>
+        <StyledDialogActions>
           <StyledSubmitFormBtn
             variant="contained"
             color="primary"
@@ -184,9 +156,9 @@ const RateUs = () => {
           >
             {intl.formatMessage({ id: "rateUs.send" })}
           </StyledSubmitFormBtn>
-        </DialogActions>
+        </StyledDialogActions>
       </Dialog>
-    </Box>
+    </StyledContainerModal>
   );
 };
 

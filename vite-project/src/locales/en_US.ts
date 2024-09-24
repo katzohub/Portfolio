@@ -197,4 +197,13 @@ export default {
   /*09.Snack Bar */
   "error.snack": "Server side error",
   "error.snackTwo": "try again in a moment",
+  /*10.Rate Us*/
+  "rateUs.rate": "Rate",
+  "rateUs.us": "Us",
+  "rateUs.name.modal": "Please rate this section of the website",
+  "rateUs.very.good": "Very well",
+  "rateUs.very.bad": "Very bad",
+  "rateUs.placeholder": "Please write what you like or what you would improve.",
+  "rateUs.close.modal": "Close",
+  "rateUs.send": "send",
 };

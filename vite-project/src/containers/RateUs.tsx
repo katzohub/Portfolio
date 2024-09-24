@@ -113,8 +113,8 @@ const RateUs = () => {
             fontWeight: "bold",
           }}
         >
-          <div>Rate</div>
-          <div>Us</div>
+          <div>{intl.formatMessage({ id: "rateUs.rate" })}</div>
+          <div>{intl.formatMessage({ id: "rateUs.us" })}</div>
         </Box>
       </MotionStyledIconButton>
       <Dialog
@@ -130,7 +130,7 @@ const RateUs = () => {
         <DialogTitle
           sx={{ fontSize: "1.15rem", fontWeight: "bold", color: "#fff" }}
         >
-          Prosím ohodnoťte tuto časť web stránky od 1 do 5
+          {intl.formatMessage({ id: "rateUs.name.modal" })}
         </DialogTitle>
         <DialogContent>
           <Box sx={{ "& > legend": { mt: 2 } }}>
@@ -143,10 +143,10 @@ const RateUs = () => {
             />
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
               <Typography component="legend" sx={{ color: "#fff" }}>
-                Velmi zle
+                {intl.formatMessage({ id: "rateUs.very.bad" })}
               </Typography>
               <Typography component="legend" sx={{ color: "#fff" }}>
-                Velmi dobre
+                {intl.formatMessage({ id: "rateUs.very.good" })}
               </Typography>
             </Box>
           </Box>
@@ -154,7 +154,7 @@ const RateUs = () => {
           <TextField
             autoFocus
             margin="dense"
-            label="Prosím napíš čo sa ti páči alebo čo by si zlepšil."
+            label={intl.formatMessage({ id: "rateUs.placeholder" })}
             type="text"
             fullWidth
             multiline
@@ -170,7 +170,7 @@ const RateUs = () => {
             sx={{ width: "auto" }}
             onClick={handleClose}
           >
-            Zatvoriť
+            {intl.formatMessage({ id: "rateUs.close.modal" })}
           </StyledSubmitFormBtn>
           <StyledSubmitFormBtn
             sx={{ width: "auto" }}
@@ -182,7 +182,7 @@ const RateUs = () => {
             //  add function send feedback to database
             //  onClick={handleSendFeedback}
           >
-            {intl.formatMessage({ id: "contact.submit" })}
+            {intl.formatMessage({ id: "rateUs.send" })}
           </StyledSubmitFormBtn>
         </DialogActions>
       </Dialog>

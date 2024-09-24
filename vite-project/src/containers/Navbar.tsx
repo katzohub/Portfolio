@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SwitchContainer from "../components/SwitchContainer";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
@@ -11,7 +11,7 @@ import {
 import MobileDrawer from "../components/MobileDrawer";
 import { NavbarProps } from "../types";
 
-const Navbar: FC<NavbarProps> = ({ isTopnav, text }) => {
+const Navbar = ({ isTopnav, text }: NavbarProps) => {
   const [open, setOpen] = useState(false);
 
   const location = useLocation();

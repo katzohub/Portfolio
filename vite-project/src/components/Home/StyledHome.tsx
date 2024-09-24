@@ -36,10 +36,10 @@ const StyledContactMaxWidth = styled(Box)(({ theme }) => ({
     flexDirection: "column",
   },
 }));
-export const ContainerSnake: React.FC<ContainerSnakeProps> = ({
+export const ContainerSnake = ({
   isFullWindow,
   children,
-}) => {
+}: ContainerSnakeProps) => {
   return (
     <>
       {isFullWindow ? (
@@ -222,10 +222,10 @@ const StyledSnakeBoxSettingMaxScreen = styled(Box)(({ theme }) => ({
     left: "0px",
   },
 }));
-export const StyledSnakeBoxSetting: React.FC<ContainerSnakeProps> = ({
+export const StyledSnakeBoxSetting = ({
   isFullWindow,
   children,
-}) => {
+}: ContainerSnakeProps) => {
   return (
     <>
       {isFullWindow ? (
@@ -298,10 +298,10 @@ const StyledSnakeContainerFoodMaxWidth = styled(Box)(({ theme }) => ({
     flexDirection: "column",
   },
 }));
-export const StyledSnakeContainerFood: React.FC<ContainerSnakeProps> = ({
+export const StyledSnakeContainerFood = ({
   isFullWindow,
   children,
-}) => {
+}: ContainerSnakeProps) => {
   return (
     <>
       {isFullWindow ? (

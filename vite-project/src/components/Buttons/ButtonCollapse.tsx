@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ListItemText, Collapse, Box } from "@mui/material";
 import {
   StyledListButtonsCollapse,
@@ -25,7 +25,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const MotionBoxContainerCollapseeBtn = motion(Box);
 
-const ButtonCollapse: FC<ButtonCollapseProps> = ({
+const ButtonCollapse = ({
   isTrue,
   isScreen,
   handleClickContact,
@@ -33,7 +33,7 @@ const ButtonCollapse: FC<ButtonCollapseProps> = ({
   openContact,
   nameCollapse,
   myIcon,
-}) => {
+}: ButtonCollapseProps) => {
   const intl = useIntl();
   const [isReady, setIsReady] = useState(false);
 

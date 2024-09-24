@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { useIntl } from "react-intl";
 import { GeneralBoard } from "../components";
 import {
@@ -11,7 +11,7 @@ import { AboutSideBar, AboutContent } from "../components/About";
 import { ButtonCollapse } from "../components/Buttons";
 import { GrContactInfo } from "react-icons/gr";
 
-const AboutMe: FC = () => {
+const AboutMe = () => {
   const [activeButton, setActiveButton] = useState<string>("bio");
   const [activeContactButton, setActiveContactButton] = useState<string>("");
 

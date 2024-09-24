@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import { FormControlLabel } from "@mui/material";
 import { StyledSkillsCheckbox, StyledSkillsRowLabel } from "./StyledSkills";
 
@@ -10,13 +10,13 @@ interface CheckSkillProps {
   testCy: string;
 }
 
-const CheckSkill: FC<CheckSkillProps> = ({
+const CheckSkill = ({
   checked,
   changeFn,
   name,
   testCy,
   icon,
-}) => {
+}: CheckSkillProps) => {
   return (
     <FormControlLabel
       control={

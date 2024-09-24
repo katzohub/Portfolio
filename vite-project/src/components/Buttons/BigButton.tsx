@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { StyledBigButton } from "./StyledButtons";
 import { BigButtonProps } from "../../types";
 
-const BigButton: FC<BigButtonProps> = ({ children, myBtnFn, testId }) => {
+const BigButton = ({ children, myBtnFn, testId }: BigButtonProps) => {
   return (
     <>
       <StyledBigButton

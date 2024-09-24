@@ -1,12 +1,11 @@
-import { FC } from "react";
 import { StyledListDropDown, StyledListItemContainer } from "./StyledButtons";
 import { DropdownButtonsProps } from "../../types";
 
-const DropdownButtons: FC<DropdownButtonsProps> = ({
+const DropdownButtons = ({
   myFirstInfo,
   mySecondInfo,
   myThirdInfo,
-}) => {
+}: DropdownButtonsProps) => {
   return (
     <>
       <nav aria-label="main mailbox folders">

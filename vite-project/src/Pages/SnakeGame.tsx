@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { StyledContainerGameSnake } from "./StyledPages";
 import { GameSnake } from "../components/Home";
 
-const SnakeGame: FC = () => {
+const SnakeGame = () => {
   return (
     <StyledContainerGameSnake>
       <GameSnake isFullWindow={false} />

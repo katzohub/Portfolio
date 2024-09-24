@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import {
   StyledSwitchBtnContianer,
   StyledSwitchBtnWrapp,
@@ -7,13 +5,13 @@ import {
 } from "./StyledComponents";
 import { SwitchButtonProps } from "../types";
 
-const SwitchButton: FC<SwitchButtonProps> = ({
+const SwitchButton = ({
   trueIcon,
   falseIcon,
   condition,
   toggleSwitch,
   myLabelName,
-}) => {
+}: SwitchButtonProps) => {
   return (
     <>
       <StyledSwitchBtnContianer>

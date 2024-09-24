@@ -1,11 +1,11 @@
-import { useContext, FC } from "react";
+import { useContext } from "react";
 import { LanguageContext } from "../context/LanguageProvider";
 import { useThemeContext } from "../context/themeContext";
 import { StyledLightModeIcon, StyledDarkModeIcon } from "./StyledComponents";
 import SwitchButton from "./SwitchButton";
 import { AmericaFlag, SlovakiaFlag } from "../assets/svg";
 
-const SwitchContainer: FC = () => {
+const SwitchContainer = () => {
   const { language, setLanguage } = useContext(LanguageContext);
   const { themeMode, toggleTheme } = useThemeContext();
 

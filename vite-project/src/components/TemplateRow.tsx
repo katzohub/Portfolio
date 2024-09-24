@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { StyledRow, StyledRowWithin } from "./StyledComponents";
 import { TemplateRowProps } from "../types";
 
-const TemplateRow: FC<TemplateRowProps> = ({ text, myNumber }) => {
+const TemplateRow = ({ text, myNumber }: TemplateRowProps) => {
   return (
     <>
       {text && (

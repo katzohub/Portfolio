@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { LeftSectionHome, GameSnake } from "../components/Home";
 import blue from "../assets/background/blue.webp";
 import green from "../assets/background/green.webp";
@@ -16,7 +16,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const MotionStyledWrapperLeftHome = motion(StyledWrapperLeftHome);
 const MotionStyledWrapperRightHome = motion(StyledWrapperRightHome);
 
-const Home: FC = () => {
+const Home = () => {
   const [isReady, setIsReady] = useState(false);
   const { themeMode } = useThemeContext();
   useEffect(() => {

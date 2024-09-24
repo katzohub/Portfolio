@@ -24,7 +24,7 @@ import { motion } from "framer-motion";
 const MotionStyledContactFormWrap = motion(StyledContactFormWrap);
 const MotionStyledFormTextContainer = motion(StyledFormTextContainer);
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");

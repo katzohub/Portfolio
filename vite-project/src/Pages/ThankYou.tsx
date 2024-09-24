@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { useIntl } from "react-intl";
 import {
@@ -7,7 +6,7 @@ import {
   StyledBtnThanks,
 } from "./StyledPages";
 
-const ThankYou: FC = () => {
+const ThankYou = () => {
   const navigate = useNavigate();
   const intl = useIntl();
   const handleButtonClick = () => {

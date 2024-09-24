@@ -1,10 +1,9 @@
-import { FC } from "react";
 import { Outlet } from "react-router-dom";
 import { StyledGeneralContainer } from "./StyledPages";
 import { Navbar } from "../containers";
 import { useIntl } from "react-intl";
 
-const SharedLayout: FC = () => {
+const SharedLayout = () => {
   const intl = useIntl();
 
   return (

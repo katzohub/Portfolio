@@ -1,4 +1,3 @@
-import { FC } from "react";
 import {
   StyledDrawer,
   StyledDrawerListContainer,
@@ -9,11 +8,11 @@ import Navigation from "./Navigation";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { MobileDrawerProps } from "../types";
 
-const MobileDrawer: FC<MobileDrawerProps> = ({
+const MobileDrawer = ({
   myOnOpen,
   myOnCloseFn,
   onSelectItem,
-}) => {
+}: MobileDrawerProps) => {
   return (
     <>
       <StyledDrawer

@@ -1,10 +1,9 @@
-import { FC } from "react";
 import { Typography } from "@mui/material";
 import { StyledAboutTemplateContainer } from "./StyledAbout";
 import { TemplateRow } from "..";
 import { TextProps } from "../../types";
 
-const TemplateAbout: FC<TextProps> = ({
+const TemplateAbout = ({
   textOne,
   textTwo,
   textThree,
@@ -31,7 +30,7 @@ const TemplateAbout: FC<TextProps> = ({
   textTwentyFour,
   textTwentyFive,
   textTwentySix,
-}) => {
+}: TextProps) => {
   return (
     <>
       <StyledAboutTemplateContainer>

@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { PointSnake, KeyboardSnake } from "../Snake";
 import { useIntl } from "react-intl";
 import { MiniCircle } from "../../assets/svg";
@@ -38,7 +38,7 @@ const initialSnake: Coordinate[] = [
 ];
 const initialCandy: Coordinate = { x: 5, y: 5 };
 
-const GameSnake: FC<GameSnakeProps> = ({ isFullWindow }) => {
+const GameSnake = ({ isFullWindow }: GameSnakeProps) => {
   const [snake, setSnake] = useState<Coordinate[]>(initialSnake);
   const [candy, setCandy] = useState<Coordinate>(initialCandy);
   const [dir, setDir] = useState<Coordinate>({ x: 1, y: 0 });

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import ja from "../../assets/img/ja.png";
 import { useIntl } from "react-intl";
@@ -26,10 +26,7 @@ import { motion } from "framer-motion";
 const MotionStyledAboutContainerTemplate = motion(StyledAboutContainerTemplate);
 const MotionStyledAboutContainerRight = motion(StyledAboutContainerRight);
 
-const AboutContent: FC<AboutContentProps> = ({
-  templateProps,
-  activeButton,
-}) => {
+const AboutContent = ({ templateProps, activeButton }: AboutContentProps) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {

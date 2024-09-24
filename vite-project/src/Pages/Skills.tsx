@@ -7,7 +7,7 @@ import {
   SkillsAlert,
 } from "../components/Skills";
 
-const Skills: React.FC = () => {
+const Skills = () => {
   const [checkedState, setCheckedState] = useState<CheckedStateProps>({
     all: true,
     html: false,

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import {
   StyledComponentsContainer,
   StyledComponentsWrapper,
@@ -13,7 +12,7 @@ import { useIntl } from "react-intl";
 import { GeneralBoardProps } from "../types";
 import { Box } from "@mui/material";
 
-const GeneralBoard: FC<GeneralBoardProps> = ({
+const GeneralBoard = ({
   generalHeading,
   generalText,
   leftTemplate,
@@ -21,7 +20,7 @@ const GeneralBoard: FC<GeneralBoardProps> = ({
   generalTemplate,
   smallGeneralHeading,
   isPageSkills,
-}) => {
+}: GeneralBoardProps) => {
   const intl = useIntl();
 
   return (

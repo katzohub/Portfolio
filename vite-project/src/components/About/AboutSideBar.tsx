@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Collapse, ListItemIcon } from "@mui/material";
 import {
   StyledAboutSidebarContainer,
@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const MontionStyledAboutSidebarContainer = motion(StyledAboutSidebarContainer);
 
-const AboutSideBar: FC<AboutSideBarProps> = ({ changeText, activeButton }) => {
+const AboutSideBar = ({ changeText, activeButton }: AboutSideBarProps) => {
   const intl = useIntl();
   const [open, setOpen] = useState<boolean>(false);
   const handleClick = () => {

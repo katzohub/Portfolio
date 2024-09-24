@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   StyledSkillsRightForm,
   StyledSkillsLabel,
@@ -22,10 +22,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const MotionStyledSkillsRightForm = motion(StyledSkillsRightForm);
 
-const SkillsSidebar: FC<SkillsSidebarProps> = ({
+const SkillsSidebar = ({
   checkedState,
   handleCheckboxChange,
-}) => {
+}: SkillsSidebarProps) => {
   const intl = useIntl();
   const [isReady, setIsReady] = useState(false);
 

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Box } from "@mui/material";
 import {
   FaCaretLeft,
@@ -21,10 +20,10 @@ import {
 import { BigButton } from "../../components/Buttons";
 import { KeyboardSnakeProps } from "../../types";
 
-const KeyboardSnake: FC<KeyboardSnakeProps> = ({
+const KeyboardSnake = ({
   isFunctionKeyboard,
   handleButtonClick,
-}) => {
+}: KeyboardSnakeProps) => {
   return (
     <>
       {isFunctionKeyboard ? (

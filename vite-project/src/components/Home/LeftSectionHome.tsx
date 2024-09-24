@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { useContext } from "react";
 import { Box, Typography } from "@mui/material";
 import {
   StyledLeftContainer,
@@ -25,7 +25,7 @@ import { BigButton } from "../../components/Buttons";
 import canvaSvk from "../../assets/resume/canva_svk.webp";
 import canvaUs from "../../assets/resume/canva_anj.webp";
 
-const LeftSectionHome: FC = () => {
+const LeftSectionHome = () => {
   const intl = useIntl();
   const { language } = useContext(LanguageContext);
   const openSnakeGame = () => {

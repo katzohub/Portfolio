@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { ListItemText, Box, Typography } from "@mui/material";
 import {
   StyledNavigationContianer,
@@ -14,10 +13,7 @@ import {
 } from "../constants/Navigation";
 import { NavigationProps } from "../types";
 
-const Navigation: FC<NavigationProps> = ({
-  isNavigationLink,
-  onSelectItem,
-}) => {
+const Navigation = ({ isNavigationLink, onSelectItem }: NavigationProps) => {
   const intl = useIntl();
   const location = useLocation();
   const { pathname } = location;

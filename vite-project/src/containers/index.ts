@@ -1,3 +1,4 @@
 import Navbar from "./Navbar";
+import RateUs from "./RateUs";
 
-export { Navbar };
+export { Navbar, RateUs };

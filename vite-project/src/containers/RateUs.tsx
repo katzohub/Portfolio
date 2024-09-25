@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, SyntheticEvent } from "react";
 import { Box, Dialog, DialogContent } from "@mui/material";
 import { useIntl } from "react-intl";
 import {
@@ -94,7 +94,9 @@ const RateUs = () => {
               IconContainerComponent={IconContainer}
               getLabelText={(value: number) => customIcons[value].label}
               highlightSelectedOnly
-              onChange={(event, newValue) => setRate(newValue)}
+              onChange={(e: SyntheticEvent<Element, Event>, newValue) =>
+                setRate(newValue)
+              }
             />
             <StyledWrapLegend>
               <StyledTypographyLegend>

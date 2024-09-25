@@ -38,6 +38,7 @@ export const StyledComponentsWrapper = styled(Box)(({ theme }) => ({
   paddingTop: "56px !important",
   position: "relative",
   height: "auto",
+  zIndex: 99,
   [theme.breakpoints.down("md")]: {
     width: "100%",
     height: "auto",

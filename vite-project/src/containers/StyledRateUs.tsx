@@ -11,26 +11,37 @@ import Rating from "@mui/material/Rating";
 export const StyledRating = styled(Rating)(({ theme }) => ({
   width: "100%",
   display: "flex",
-  justifyContent: "center",
+  justifyContent: "space-between",
   "& .MuiRating-iconEmpty .MuiSvgIcon-root": {
     color: theme.myColors.colorRateUsSelect,
-    // color: "#8c8c8c",
     fontSize: "5rem",
     opacity: theme.myOpacity.opacitySelectRateUs,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3rem",
+    },
   },
   "& .MuiRating-iconHover .MuiSvgIcon-root": {
     fontSize: "5rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3rem",
+    },
   },
   "& .MuiRating-iconFilled .MuiSvgIcon-root": {
     fontSize: "5rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3rem",
+    },
   },
 }));
 
-export const StyledContainerModal = styled(Box)(() => ({
+export const StyledContainerModal = styled(Box)(({ theme }) => ({
   position: "fixed",
   bottom: "76px",
   left: "64px",
   zIndex: "999999",
+  [theme.breakpoints.down("md")]: {
+    left: "5px",
+  },
 }));
 export const StyledIconButton = styled(IconButton)(({ theme }) => ({
   backgroundColor: theme.myColors.colorBackInput,

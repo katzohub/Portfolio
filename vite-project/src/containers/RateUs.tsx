@@ -1,6 +1,5 @@
-import { useState, FormEvent, forwardRef, ReactElement, Ref } from "react";
+import { useState, FormEvent } from "react";
 import { Box, Dialog, DialogContent } from "@mui/material";
-import Slide from "@mui/material/Slide";
 import { useIntl } from "react-intl";
 import {
   StyledSubmitFormBtn,
@@ -9,51 +8,34 @@ import {
 import {
   StyledRating,
   StyledContainerModal,
-  StyledIconButton,
   StyledWrapIconBtnText,
   StyledDialogTitle,
   StyledWrapLegend,
   StyledTypographyLegend,
   StyledDialogActions,
+  Transition,
+  MotionStyledIconButton,
 } from "./StyledRateUs";
 import { db } from "../config/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useTheme } from "@mui/material/styles";
 import { IconContainerProps } from "@mui/material/Rating";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
-import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAltOutlined";
-import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
-import { motion } from "framer-motion";
-import { TransitionProps } from "@mui/material/transitions";
-
-const Transition = forwardRef(function Transition(
-  props: TransitionProps & {
-    children: ReactElement;
-  },
-  ref: Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
-
-const MotionStyledIconButton = motion(StyledIconButton);
+import { customIcons } from "../constants/dataRateUS";
 
 const RateUs = () => {
   const [open, setOpen] = useState(false);
   const intl = useIntl();
   const theme = useTheme();
-
   const [currentUrl, setCurrentUrl] = useState("");
   const [message, setMessage] = useState("");
   const [rate, setRate] = useState<number | null>(null);
 
-  const handleClickOpen = () => {
+  const handleOpenModal = () => {
     setCurrentUrl(window.location.href);
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleCloseModal = () => {
     setOpen(false);
   };
 
@@ -69,36 +51,10 @@ const RateUs = () => {
       setCurrentUrl("");
       setMessage("");
       setRate(null);
-      handleClose();
+      handleCloseModal();
     } catch (err) {
       console.log((err as Error).message);
     }
-  };
-
-  const customIcons: Record<
-    number,
-    { icon: React.ReactElement; label: string }
-  > = {
-    1: {
-      icon: <SentimentVeryDissatisfiedIcon color="error" />,
-      label: "Very Dissatisfied",
-    },
-    2: {
-      icon: <SentimentDissatisfiedIcon color="error" />,
-      label: "Dissatisfied",
-    },
-    3: {
-      icon: <SentimentSatisfiedIcon color="warning" />,
-      label: "Neutral",
-    },
-    4: {
-      icon: <SentimentSatisfiedAltIcon color="success" />,
-      label: "Satisfied",
-    },
-    5: {
-      icon: <SentimentVerySatisfiedIcon color="success" />,
-      label: "Very Satisfied",
-    },
   };
 
   function IconContainer(props: IconContainerProps) {
@@ -111,7 +67,7 @@ const RateUs = () => {
       <MotionStyledIconButton
         whileHover={{ y: [0, -5, 5, -5, 5, 0] }}
         transition={{ duration: 0.3 }}
-        onClick={handleClickOpen}
+        onClick={handleOpenModal}
       >
         <StyledWrapIconBtnText>
           <div>{intl.formatMessage({ id: "rateUs.rate" })}</div>
@@ -120,7 +76,7 @@ const RateUs = () => {
       </MotionStyledIconButton>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={handleCloseModal}
         TransitionComponent={Transition}
         PaperProps={{
           sx: {
@@ -169,7 +125,7 @@ const RateUs = () => {
             color="primary"
             data-cy="close-feedback"
             sx={{ width: "auto" }}
-            onClick={handleClose}
+            onClick={handleCloseModal}
           >
             {intl.formatMessage({ id: "rateUs.close.modal" })}
           </StyledSubmitFormBtn>

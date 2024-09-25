@@ -1,3 +1,6 @@
+import { forwardRef, ReactElement, Ref } from "react";
+import { TransitionProps } from "@mui/material/transitions";
+import Slide from "@mui/material/Slide";
 import { styled } from "@mui/system";
 import {
   Box,
@@ -7,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
+import { motion } from "framer-motion";
 
 export const StyledRating = styled(Rating)(({ theme }) => ({
   width: "100%",
@@ -70,6 +74,17 @@ export const StyledTypographyLegend = styled(Typography)(({ theme }) => ({
 export const StyledDialogActions = styled(DialogActions)(() => ({
   padding: "0px 20px 24px 20px",
 }));
+
+export const Transition = forwardRef(function Transition(
+  props: TransitionProps & {
+    children: ReactElement;
+  },
+  ref: Ref<unknown>
+) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+export const MotionStyledIconButton = motion(StyledIconButton);
 
 StyledRating.displayName = "StyledRating";
 StyledContainerModal.displayName = "StyledContainerModal";

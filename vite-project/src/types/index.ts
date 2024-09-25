@@ -63,6 +63,7 @@ export interface TextProps {
 }
 export interface ThemeProps {
   myColors: {
+    colorRateUsSelect: string;
     colorFFF: string;
     generalBackground: string;
     colorLinie: string;
@@ -123,6 +124,9 @@ export interface ThemeProps {
   };
   myUrl: {
     snakeLogoUrl: string;
+  };
+  myOpacity: {
+    opacitySelectRateUs: string;
   };
 }
 export interface GeneralBoardProps {

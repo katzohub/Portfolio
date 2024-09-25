@@ -19,6 +19,7 @@ export const themeOptions: ThemeOptions = createTheme({
     },
   },
   myColors: {
+    colorRateUsSelect: "#8c8c8c",
     colorFFF: "#fff",
     colorTextLink: "#fff",
     colorBottomNavLink: "#fea55f",
@@ -80,5 +81,8 @@ export const themeOptions: ThemeOptions = createTheme({
   },
   myUrl: {
     snakeLogoUrl: `${urlSnakeLogo}`,
+  },
+  myOpacity: {
+    opacitySelectRateUs: "0.6",
   },
 });

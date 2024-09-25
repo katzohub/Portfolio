@@ -13,8 +13,10 @@ export const StyledRating = styled(Rating)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   "& .MuiRating-iconEmpty .MuiSvgIcon-root": {
-    color: theme.palette.action.disabled,
+    color: theme.myColors.colorRateUsSelect,
+    // color: "#8c8c8c",
     fontSize: "5rem",
+    opacity: theme.myOpacity.opacitySelectRateUs,
   },
   "& .MuiRating-iconHover .MuiSvgIcon-root": {
     fontSize: "5rem",

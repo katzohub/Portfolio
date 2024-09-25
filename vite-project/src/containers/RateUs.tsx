@@ -1,8 +1,11 @@
 import { useState, forwardRef, ReactElement, Ref } from "react";
-import { Box, Dialog, DialogContent, TextField } from "@mui/material";
+import { Box, Dialog, DialogContent } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import { useIntl } from "react-intl";
-import { StyledSubmitFormBtn } from "../components/Contact/StyledContact";
+import {
+  StyledSubmitFormBtn,
+  StyledTextField,
+} from "../components/Contact/StyledContact";
 import {
   StyledRating,
   StyledContainerModal,
@@ -108,7 +111,6 @@ const RateUs = () => {
           <Box sx={{ "& > legend": { mt: 2 } }}>
             <StyledRating
               name="highlight-selected-only"
-              defaultValue={2}
               IconContainerComponent={IconContainer}
               getLabelText={(value: number) => customIcons[value].label}
               highlightSelectedOnly
@@ -122,16 +124,21 @@ const RateUs = () => {
               </StyledTypographyLegend>
             </StyledWrapLegend>
           </Box>
-
-          <TextField
-            autoFocus
-            margin="dense"
+          <StyledTextField
+            name="message"
             label={intl.formatMessage({ id: "rateUs.placeholder" })}
-            type="text"
-            fullWidth
+            variant="outlined"
+            required
             multiline
             rows={4}
-            variant="outlined"
+            fullWidth
+            margin="normal"
+            //   value={message}
+            //   onChange={handleMessageChange}
+            //   onBlur={handleMessageBlur}
+            //   error={!!errors.message && message.trim() !== ""}
+            //   helperText={message.trim() !== "" ? errors.message : ""}
+            data-cy="message-feedback"
           />
         </DialogContent>
         <StyledDialogActions>

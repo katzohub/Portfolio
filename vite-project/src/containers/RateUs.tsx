@@ -1,4 +1,4 @@
-import { useState, forwardRef, ReactElement, Ref } from "react";
+import { useState, FormEvent, forwardRef, ReactElement, Ref } from "react";
 import { Box, Dialog, DialogContent } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import { useIntl } from "react-intl";
@@ -16,6 +16,8 @@ import {
   StyledTypographyLegend,
   StyledDialogActions,
 } from "./StyledRateUs";
+import { db } from "../config/firebase";
+import { collection, addDoc } from "firebase/firestore";
 import { useTheme } from "@mui/material/styles";
 import { IconContainerProps } from "@mui/material/Rating";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
@@ -40,16 +42,38 @@ const MotionStyledIconButton = motion(StyledIconButton);
 const RateUs = () => {
   const [open, setOpen] = useState(false);
   const intl = useIntl();
-  const theme = useTheme(); // Použití useTheme k získání aktuálního tématu
+  const theme = useTheme();
+
+  const [currentUrl, setCurrentUrl] = useState("");
+  const [message, setMessage] = useState("");
+  const [rate, setRate] = useState<number | null>(null);
 
   const handleClickOpen = () => {
+    setCurrentUrl(window.location.href);
     setOpen(true);
   };
+
   const handleClose = () => {
     setOpen(false);
   };
-  // TODO: add function send feedback to database
-  //   const handleSendFeedBack = () => {};
+
+  const handleSendFeedBack = async (e: FormEvent) => {
+    e.preventDefault();
+    const newFeedback = {
+      currentUrl,
+      message,
+      rate,
+    };
+    try {
+      await addDoc(collection(db, "rate_us"), newFeedback);
+      setCurrentUrl("");
+      setMessage("");
+      setRate(null);
+      handleClose();
+    } catch (err) {
+      console.log((err as Error).message);
+    }
+  };
 
   const customIcons: Record<
     number,
@@ -114,6 +138,7 @@ const RateUs = () => {
               IconContainerComponent={IconContainer}
               getLabelText={(value: number) => customIcons[value].label}
               highlightSelectedOnly
+              onChange={(event, newValue) => setRate(newValue)}
             />
             <StyledWrapLegend>
               <StyledTypographyLegend>
@@ -133,11 +158,8 @@ const RateUs = () => {
             rows={4}
             fullWidth
             margin="normal"
-            //   value={message}
-            //   onChange={handleMessageChange}
-            //   onBlur={handleMessageBlur}
-            //   error={!!errors.message && message.trim() !== ""}
-            //   helperText={message.trim() !== "" ? errors.message : ""}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             data-cy="message-feedback"
           />
         </DialogContent>
@@ -158,8 +180,7 @@ const RateUs = () => {
             variant="contained"
             color="primary"
             data-cy="submit-feedback"
-            //  add function send feedback to database
-            //  onClick={handleSendFeedback}
+            onClick={handleSendFeedBack}
           >
             {intl.formatMessage({ id: "rateUs.send" })}
           </StyledSubmitFormBtn>

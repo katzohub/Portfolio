@@ -42,7 +42,7 @@ export const StyledContainerModal = styled(Box)(({ theme }) => ({
   position: "fixed",
   bottom: "76px",
   left: "64px",
-  zIndex: "999999",
+  zIndex: "8888",
   [theme.breakpoints.down("md")]: {
     left: "5px",
   },

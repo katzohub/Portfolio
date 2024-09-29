@@ -68,8 +68,8 @@ export const StyledAboutDivider = styled(Box)(({ theme }) => ({
   zIndex: 10,
   background: theme.myColors.colorLinie,
   [theme.breakpoints.down(1300)]: {
-    left: "63.5%",
-    transform: "translateX(-63.5%)",
+    left: "61%",
+    transform: "translateX(-61%)",
   },
   [theme.breakpoints.down("lg")]: {
     left: "-1.75%",
@@ -218,7 +218,7 @@ export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
     paddingBottom: "15px",
   },
   "& p": {
-    fontSize: "clamp(13px, 1vw, 16px)",
+    fontSize: "clamp(12px, 1vw, 16px)",
     whiteSpace: "nowrap",
     overflow: "hidden",
     [theme.breakpoints.down(525)]: {
@@ -229,7 +229,7 @@ export const StyledAboutTemplateContainer = styled(Box)(({ theme }) => ({
     },
   },
   "& span": {
-    fontSize: "clamp(13px, 1vw, 16px)",
+    fontSize: "clamp(12px, 1vw, 16px)",
     whiteSpace: "nowrap",
     overflow: "hidden",
   },

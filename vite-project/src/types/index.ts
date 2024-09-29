@@ -113,6 +113,7 @@ export interface ThemeProps {
     pointSnakeThread: string;
     colorSkillsBtnText: string;
     colorSkillsBtnBack: string;
+    colorFolderRoute: string;
   };
   myShadow: {
     shadowSideBar: string;

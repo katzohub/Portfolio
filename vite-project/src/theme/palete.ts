@@ -62,6 +62,7 @@ export const themeOptions: ThemeOptions = createTheme({
     pointSnake: "#43D9AD",
     pointSnakeSecond: "#297877",
     pointSnakeThread: "#2e8c82",
+    colorFolderRoute: "#56c4f3",
     colorSnakeLong: "67, 217, 173",
     colorCircleLeft: "#43D9AD",
     colorCircleRight: "#4D5BCE",

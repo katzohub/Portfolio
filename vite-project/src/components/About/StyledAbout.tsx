@@ -245,8 +245,8 @@ export const StyledAboutIconBio = styled(FolderIcon)(({ theme }) => ({
 export const StyledAboutIconInterest = styled(FolderIcon)(({ theme }) => ({
   color: `${theme.myColors.colorLightGreen} !important`,
 }));
-export const StyledAboutIconRoute = styled(FolderIcon)(() => ({
-  color: "#e60000 !important",
+export const StyledAboutIconRoute = styled(FolderIcon)(({ theme }) => ({
+  color: `${theme.myColors.colorFolderRoute} !important`,
 }));
 export const StyledAboutItemBtn = styled(ListItemButton)(({ theme }) => ({
   padding: "8px 16px 8px 0px",

@@ -32,6 +32,7 @@ export interface CheckedStateProps {
   php: boolean;
   react: boolean;
   firebase: boolean;
+  cypress: boolean;
 }
 export interface TextProps {
   textOne: string;

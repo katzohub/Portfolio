@@ -41,8 +41,9 @@ export const StyledRating = styled(Rating)(({ theme }) => ({
 export const StyledContainerModal = styled(Box)(({ theme }) => ({
   position: "fixed",
   bottom: "76px",
-  left: "64px",
+  left: "3%",
   zIndex: "8888",
+
   [theme.breakpoints.down("md")]: {
     left: "5px",
   },
@@ -53,6 +54,9 @@ export const StyledIconButton = styled(IconButton)(({ theme }) => ({
   borderRadius: "50%",
   width: "60px",
   height: "60px",
+  "&.MuiButtonBase-root": {
+    backgroundColor: `${theme.myColors.colorBackInput} !important`,
+  },
 }));
 export const StyledWrapIconBtnText = styled(Box)(() => ({
   extAlign: "center",

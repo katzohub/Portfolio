@@ -16,7 +16,7 @@ export const StyledNavContainer = styled(Box)(({ theme }) => ({
     justifyContent: "start",
     alignItems: "center",
     background: `${theme.myColors.generalBackground} !important`,
-    zIndex: "9999",
+    zIndex: "998",
     [theme.breakpoints.down("md")]: {
       width: "100%",
     },
@@ -31,7 +31,7 @@ export const StyledNavContainer = styled(Box)(({ theme }) => ({
     justifyContent: "start",
     alignItems: "center",
     background: theme.myColors.generalBackground,
-    zIndex: 9999,
+    zIndex: "998",
     [theme.breakpoints.down("md")]: {
       width: "100%",
     },

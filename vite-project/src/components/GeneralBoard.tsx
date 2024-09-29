@@ -40,6 +40,7 @@ const GeneralBoard = ({
             width: "100%",
             height: "100dvh",
             display: "flex",
+
             [theme.breakpoints.down("md")]: {
               display: "block",
               position: "relative",

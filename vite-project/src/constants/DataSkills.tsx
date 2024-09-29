@@ -10,6 +10,7 @@ import {
   SiFirebase,
   SiMui,
 } from "react-icons/si";
+import { TbBrandCypress } from "react-icons/tb";
 import boxOffice from "../assets/img/box office.webp";
 import filmDatabase from "../assets/img/film database.webp";
 import logicGame from "../assets/img/logic game.webp";
@@ -116,8 +117,10 @@ const DataSkills = [
       <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
       <SiTypescript style={{ fontSize: "20px", color: "#007acc" }} />,
       <SiMui style={{ fontSize: "20px", color: "#007fff" }} />,
+      <SiFirebase style={{ fontSize: "20px", color: "#ffcc32" }} />,
+      <TbBrandCypress style={{ fontSize: "20px", color: "#1c896a" }} />,
     ],
-    technologies: ["react", "typescript", "mui"],
+    technologies: ["react", "typescript", "mui", "cypress", "firebase"],
     img: upgradePorfolio,
     nameProject: "project.portolioUpgrade",
     detailProject: "project.portolioUpgradeText",

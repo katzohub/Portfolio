@@ -201,4 +201,16 @@ export default {
   /*09.Snack Bar */
   "error.snack": "Chyba na strane servera",
   "error.snackTwo": "skúste to znova za chvíľu",
+  "rateUs.errorSelectSmile": "Vyberte prosím smajlíka",
+  "rateUs.dontShow": "Nezobrazovať",
+  "rateUs.thankYou": "Ďakujem za hodnotenie",
+  /*10.Rate Us*/
+  "rateUs.rate": "Klikni",
+  "rateUs.us": "Tu",
+  "rateUs.name.modal": "Prosím ohodnoťte môj projekt",
+  "rateUs.very.good": "Veľmi dobre",
+  "rateUs.very.bad": "Veľmi zle",
+  "rateUs.placeholder": "Prosím napíš čo sa ti páči alebo čo by si zlepšil.",
+  "rateUs.close.modal": "Zatvoriť",
+  "rateUs.send": "odoslať",
 };

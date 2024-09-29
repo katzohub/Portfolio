@@ -16,6 +16,7 @@ import {
   SiReact,
   SiFirebase,
 } from "react-icons/si";
+import { TbBrandCypress } from "react-icons/tb";
 import { SkillsSidebarProps } from "../../types";
 import { useIntl } from "react-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -141,6 +142,17 @@ const SkillsSidebar = ({
         <>
           <SiFirebase className="label-icon" />
           Firebase
+        </>
+      ),
+    },
+    {
+      checked: checkedState.cypress,
+      name: "cypress",
+      testCy: "checkbox-cypress",
+      icon: (
+        <>
+          <TbBrandCypress className="label-icon" />
+          Cypress
         </>
       ),
     },

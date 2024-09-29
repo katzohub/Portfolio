@@ -194,7 +194,20 @@ export default {
   "valid.email": "Invalid email address.",
   "valid.message": "Message must be at least 10 characters long.",
   "valid.message.maxLegth": "Message cannot be longer than 1 000 characters.",
+
   /*09.Snack Bar */
   "error.snack": "Server side error",
   "error.snackTwo": "try again in a moment",
+  "rateUs.errorSelectSmile": "Please select a smiley face",
+  "rateUs.dontShow": "Do not show",
+  "rateUs.thankYou": "Thank you for your feedback",
+  /*10.Rate Us*/
+  "rateUs.rate": "Rate",
+  "rateUs.us": "Us",
+  "rateUs.name.modal": "Please rate my project",
+  "rateUs.very.good": "Very well",
+  "rateUs.very.bad": "Very bad",
+  "rateUs.placeholder": "Please write what you like or what you would improve.",
+  "rateUs.close.modal": "Close",
+  "rateUs.send": "send",
 };

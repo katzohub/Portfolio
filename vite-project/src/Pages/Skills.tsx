@@ -20,6 +20,7 @@ const Skills = () => {
     php: false,
     react: false,
     firebase: false,
+    cypress: false,
   });
 
   const areAllCheckboxesFalse = () => {
@@ -42,6 +43,7 @@ const Skills = () => {
         php: false,
         react: false,
         firebase: false,
+        cypress: false,
       });
     } else {
       setCheckedState({ ...checkedState, [name]: checked, all: false });

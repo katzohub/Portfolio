@@ -109,7 +109,7 @@ export default {
     "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)",
   /* 03.3. Route */
   "aboutRoute.textOne": "Pracovné skúsenosti",
-  "aboutRoute.textTwo": "Dronend Developer na projekte Finage",
+  "aboutRoute.textTwo": "Frontend Developer na projekte Finage",
   "aboutRoute.textThree": "Január 2024 - súčasnosť",
   "aboutRoute.textFour":
     "Začal som pracovať na projekte Finage pre moju rodinu,",

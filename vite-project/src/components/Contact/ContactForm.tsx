@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Snackbar, Alert, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import {
   StyledTextField,
   StyledContactFormContainer,
@@ -15,6 +15,7 @@ import {
   StyledTextContainerMessage,
   StyledTextMessage,
 } from "./StyledContact";
+import ToastAlert from "../ToastAlert";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useIntl } from "react-intl";
@@ -154,23 +155,17 @@ const ContactForm = () => {
 
   return (
     <StyledContactFormContainer sx={{ overflowX: "hidden" }}>
-      <Snackbar
-        sx={{ zIndex: 999999 }}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        open={openSnackBar}
-        autoHideDuration={5000}
-        onClose={handleClose}
-      >
-        <Alert
-          onClose={handleClose}
-          severity="error"
-          variant="filled"
-          sx={{ width: "100%" }}
-        >
-          {intl.formatMessage({ id: "error.snack" })} <br />
-          {intl.formatMessage({ id: "error.snackTwo" })}
-        </Alert>
-      </Snackbar>
+      <ToastAlert
+        openToast={openSnackBar}
+        handleClosedToast={handleClose}
+        messageToast={
+          <p>
+            {intl.formatMessage({ id: "error.snack" })} <br />
+            {intl.formatMessage({ id: "error.snackTwo" })}
+          </p>
+        }
+      />
+
       {isReady && (
         <MotionStyledContactFormWrap
           initial={{ x: "-100%" }}

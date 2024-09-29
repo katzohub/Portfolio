@@ -1,6 +1,7 @@
 import { useState, useEffect, FormEvent, SyntheticEvent } from "react";
-import { Box, Dialog, Snackbar, Alert, DialogContent } from "@mui/material";
+import { Box, Dialog, DialogContent } from "@mui/material";
 import { useIntl } from "react-intl";
+import { ToastAlert } from "../components";
 import {
   StyledSubmitFormBtn,
   StyledTextField,
@@ -196,12 +197,10 @@ const RateUs = () => {
                 {intl.formatMessage({ id: "rateUs.dontShow" })}
               </StyledSubmitFormBtn>
               <Box
-                sx={(theme) => ({
-                  [theme.breakpoints.down("sm")]: {
-                    display: "flex",
-                    gap: "5px",
-                  },
-                })}
+                sx={{
+                  display: "flex",
+                  gap: "7.5px",
+                }}
               >
                 <StyledSubmitFormBtn
                   variant="contained"
@@ -227,22 +226,11 @@ const RateUs = () => {
           </form>
         </DialogContent>
       </Dialog>
-      <Snackbar
-        sx={{ zIndex: 999999 }}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        open={openSnackBar}
-        autoHideDuration={5000}
-        onClose={handleCloseSnackBar}
-      >
-        <Alert
-          onClose={handleCloseSnackBar}
-          severity="error"
-          variant="filled"
-          sx={{ width: "100%" }}
-        >
-          {snackBarMessage}
-        </Alert>
-      </Snackbar>
+      <ToastAlert
+        openToast={openSnackBar}
+        messageToast={snackBarMessage}
+        handleClosedToast={handleCloseSnackBar}
+      />
     </StyledContainerModal>
   );
 };

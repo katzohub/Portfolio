@@ -200,6 +200,7 @@ export default {
   "error.snackTwo": "try again in a moment",
   "rateUs.errorSelectSmile": "Please select a smiley face",
   "rateUs.dontShow": "Do not show",
+  "rateUs.thankYou": "Thank you for your feedback",
   /*10.Rate Us*/
   "rateUs.rate": "Rate",
   "rateUs.us": "Us",

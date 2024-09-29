@@ -158,6 +158,7 @@ const ContactForm = () => {
       <ToastAlert
         openToast={openSnackBar}
         handleClosedToast={handleClose}
+        severity="error"
         messageToast={
           <p>
             {intl.formatMessage({ id: "error.snack" })} <br />

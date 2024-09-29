@@ -38,15 +38,11 @@ const getRatedUrls = (): string[] => {
   return [];
 };
 
-// Add a new URL to ratedUrls in localStorage
 const addRatedUrl = (url: string): void => {
   const ratedUrls = getRatedUrls();
   if (!ratedUrls.includes(url)) {
     ratedUrls.push(url);
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(ratedUrls));
-    console.log(`Added "${url}" to ratedUrls in localStorage.`);
-  } else {
-    console.log(`"${url}" is already in ratedUrls.`);
   }
 };
 
@@ -58,10 +54,14 @@ const RateUs = () => {
   const [rate, setRate] = useState<number | null>(null);
   const [isRated, setIsRated] = useState(false);
   const [openSnackBar, setOpenSnackBar] = useState(false);
+  const [openSnackBarSucces, setOpenSnackBarSucces] = useState(false);
   const [snackBarMessage, setSnackBarMessage] = useState("");
 
   const handleCloseSnackBar = () => {
     setOpenSnackBar(false);
+  };
+  const handleCloseSnackBarSuccess = () => {
+    setOpenSnackBarSucces(false);
   };
 
   useEffect(() => {
@@ -103,21 +103,15 @@ const RateUs = () => {
       setRate(null);
       setIsRated(true);
       handleCloseModal();
-      setSnackBarMessage(intl.formatMessage({ id: "rateUs.thankYou" }));
-      setOpenSnackBar(true);
-      console.log(`Feedback submitted for "${window.location.href}".`);
+      setOpenSnackBarSucces(true);
     } catch (err) {
-      console.log((err as Error).message);
+      console.error((err as Error).message);
     }
   };
 
   function IconContainer(props: IconContainerProps) {
     const { value, ...other } = props;
     return <span {...other}>{customIcons[value].icon}</span>;
-  }
-
-  if (isRated) {
-    return null;
   }
 
   const handleRemoveThisComponent = () => {
@@ -128,17 +122,19 @@ const RateUs = () => {
 
   return (
     <StyledContainerModal>
-      <MotionStyledIconButton
-        whileHover={{ y: [0, -5, 5, -5, 5, 0] }}
-        transition={{ duration: 0.3 }}
-        onClick={handleOpenModal}
-        data-cy="open-feedback-modal"
-      >
-        <StyledWrapIconBtnText>
-          <div>{intl.formatMessage({ id: "rateUs.rate" })}</div>
-          <div>{intl.formatMessage({ id: "rateUs.us" })}</div>
-        </StyledWrapIconBtnText>
-      </MotionStyledIconButton>
+      <Box sx={{ display: isRated ? "none" : "block" }}>
+        <MotionStyledIconButton
+          whileHover={{ y: [0, -5, 5, -5, 5, 0] }}
+          transition={{ duration: 0.3 }}
+          onClick={handleOpenModal}
+          data-cy="open-feedback-modal"
+        >
+          <StyledWrapIconBtnText>
+            <div>{intl.formatMessage({ id: "rateUs.rate" })}</div>
+            <div>{intl.formatMessage({ id: "rateUs.us" })}</div>
+          </StyledWrapIconBtnText>
+        </MotionStyledIconButton>
+      </Box>
       <Dialog
         open={open}
         onClose={handleCloseModal}
@@ -229,7 +225,14 @@ const RateUs = () => {
       <ToastAlert
         openToast={openSnackBar}
         messageToast={snackBarMessage}
+        severity="error"
         handleClosedToast={handleCloseSnackBar}
+      />
+      <ToastAlert
+        openToast={openSnackBarSucces}
+        messageToast={intl.formatMessage({ id: "rateUs.thankYou" })}
+        severity="success"
+        handleClosedToast={handleCloseSnackBarSuccess}
       />
     </StyledContainerModal>
   );

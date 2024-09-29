@@ -5,12 +5,14 @@ interface ToastAlertProps {
   openToast: boolean;
   handleClosedToast: () => void;
   messageToast: string | ReactNode;
+  severity: "success" | "error" | "warning" | "info";
 }
 
 const ToastAlert = ({
   openToast,
   handleClosedToast,
   messageToast,
+  severity,
 }: ToastAlertProps) => {
   return (
     <>
@@ -23,7 +25,7 @@ const ToastAlert = ({
       >
         <Alert
           onClose={handleClosedToast}
-          severity="error"
+          severity={severity}
           variant="filled"
           sx={{ width: "100%" }}
         >

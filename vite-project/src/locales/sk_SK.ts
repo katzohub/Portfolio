@@ -203,6 +203,7 @@ export default {
   "error.snackTwo": "skúste to znova za chvíľu",
   "rateUs.errorSelectSmile": "Vyberte prosím smajlíka",
   "rateUs.dontShow": "Nezobrazovať",
+  "rateUs.thankYou": "Ďakujem za hodnotenie",
   /*10.Rate Us*/
   "rateUs.rate": "Klikni",
   "rateUs.us": "Tu",

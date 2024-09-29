@@ -4,6 +4,7 @@ import { GeneralBoard } from "../components";
 import {
   TemplateTextBio,
   TemplateTextInterest,
+  TemplateTextRoute,
   TemplateTextPrimarySchool,
   TemplateTextHighSchool,
 } from "../constants/TemplatesAbout";
@@ -33,6 +34,8 @@ const AboutMe = () => {
       return <TemplateTextBio />;
     } else if (active === intl.formatMessage({ id: "about.interests" })) {
       return <TemplateTextInterest />;
+    } else if (active === intl.formatMessage({ id: "about.route" })) {
+      return <TemplateTextRoute />;
     } else if (active === intl.formatMessage({ id: "about.primary-school" })) {
       return <TemplateTextPrimarySchool />;
     } else if (active === intl.formatMessage({ id: "about.high-school" })) {

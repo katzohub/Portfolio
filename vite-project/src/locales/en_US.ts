@@ -30,6 +30,7 @@ export default {
   "about.aboutTitleCard": "About me",
   "about.bio": "bio",
   "about.interests": "interests",
+  "about.route": "real-experience",
   "about.education": "education",
   "about.primary-school": "primary-school",
   "about.high-school": "high-school",
@@ -53,7 +54,7 @@ export default {
   "templateAbout.textThirteen":
     "TypeScript, PHP, React, Firebase, Next.js, MongoDB.",
   "templateAbout.textFourteen":
-    "I am also interested in technologies like GraphQL, Node.js, Docker,",
+    "I am also interested in technologies like, Node.js, Docker,",
   "templateAbout.textFifteen":
     "React Native, Three.js, I have some basic knowledge of these technologies.",
   "templateAbout.textSixteen":
@@ -102,6 +103,41 @@ export default {
     "where I can share my knowledge and learn from others",
   "templateInterest.textSixteen":
     "There is much more, but let's leave something for a personal meeting... :)",
+  /* 03.3. Route */
+  "aboutRoute.textOne": "Work Experience",
+  "aboutRoute.textTwo": "Frontend Developer on the Finage Project",
+  "aboutRoute.textThree": "January 2024 - Present",
+  "aboutRoute.textFour":
+    "I started working on the Finage project for my family,",
+  "aboutRoute.textFive": "where I focused on frontend development.",
+  "aboutRoute.textSix":
+    "In this project, I utilized the following technology stack:",
+  "aboutRoute.textSeven":
+    "React, TypeScript, Material UI, React Toastify, AWS SDK, Socket.io, Moment.js",
+  "aboutRoute.textEight":
+    "Additionally, I worked with other libraries and tools such as axios",
+  "aboutRoute.textNine": "for HTTP requests, react-router-dom for navigation,",
+  "aboutRoute.textTen":
+    "react-hook-form for form management, and vite for faster application builds.",
+  "aboutRoute.textEleven": "Soft Skills",
+  "aboutRoute.textTwelve":
+    "Code Organization: Emphasis on clean and readable code,",
+  "aboutRoute.textThirteen": "which is easily maintainable and extendable.",
+  "aboutRoute.textFourteen": "Teamwork: Ability to communicate effectively",
+  "aboutRoute.textFifteen": "and collaborate with other team members.",
+  "aboutRoute.textSixteen": "Problem Solving: Ability to analyze problems",
+  "aboutRoute.textSeventeen": "and propose effective solutions.",
+  "aboutRoute.textEighteen":
+    "Adaptability: Quickly adapting to new technologies",
+  "aboutRoute.textNineteen": "and workflows.",
+  "aboutRoute.textTwenty":
+    "As a junior developer, I constantly strived to improve",
+  "aboutRoute.textTwentyOne":
+    "my skills and contribute to the project's success.",
+  "aboutRoute.textTwentyTwo": "My efforts were focused on delivering quality",
+  "aboutRoute.textTwentyThree": "code and solving problems efficiently,",
+  "aboutRoute.textTwentyFour":
+    "which helped me grow within the team and gain valuable experience.",
   /* 03.3. Primary School */
   "templatePrimarySchool.textOne":
     "Welcome to the section about my primary school",

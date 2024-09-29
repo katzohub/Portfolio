@@ -8,6 +8,7 @@ import {
   StyledAboutIconEducation,
   StyledAboutBtnText,
   StyledAboutCollapseList,
+  StyledAboutIconRoute,
 } from "./StyledAbout";
 import { Theme } from "@mui/system";
 import AboutNavButton from "./AboutNavButton";
@@ -53,6 +54,13 @@ const AboutSideBar = ({ changeText, activeButton }: AboutSideBarProps) => {
               myIcon={<StyledAboutIconInterest />}
               myCondition={activeButton === "interests"}
               changeText={() => changeText("about.interests", "interests")}
+            />
+            <AboutNavButton
+              testCy="btn-route"
+              text={"about.route"}
+              myIcon={<StyledAboutIconRoute />}
+              myCondition={activeButton === "route"}
+              changeText={() => changeText("about.route", "route")}
             />
             <StyledAboutItemBtn
               sx={(theme: Theme) => ({

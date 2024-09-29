@@ -3,7 +3,7 @@ import { byTestCy } from "../support/commands";
 const allScreen = () => {
   cy.contains("I hope you like it and leave me a review,").should("exist");
   cy.contains(
-    "I am also interested in technologies like GraphQL, Node.js, Docker,"
+    "I am also interested in technologies like, Node.js, Docker,"
   ).should("exist");
   cy.contains("Thank you for your time and have a nice day").should("exist");
   cy.contains("26").should("exist");

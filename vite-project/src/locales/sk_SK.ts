@@ -30,6 +30,7 @@ export default {
   "about.aboutTitleCard": "O mne",
   "about.bio": "bio",
   "about.interests": "záujmy",
+  "about.route": "reálne skúsenosti",
   "about.education": "vzdelanie",
   "about.primary-school": "základná-škola",
   "about.high-school": "stredná-škola",
@@ -56,7 +57,7 @@ export default {
   "templateAbout.textThirteen":
     "TypeScript, PHP, React, Firebase, Next.js, MongoDB.",
   "templateAbout.textFourteen":
-    "Taktiež ma zaujímajú technológie ako sú GraphQL, Node.js, Docker,",
+    "Taktiež ma zaujímajú technológie ako sú, Node.js, Docker,",
   "templateAbout.textFifteen":
     "React Native, Three.js, s týmito technológiami už mám menší prehľad.",
   "templateAbout.textSixteen":
@@ -106,6 +107,46 @@ export default {
     "kde môžem zdieľať svoje znalosti a učiť sa od ostatných",
   "templateInterest.textSixteen":
     "Je toho kopec viac ale niečo si necháme aj na osobné stretnutie... :)",
+  /* 03.3. Route */
+  "aboutRoute.textOne": "Pracovné skúsenosti",
+  "aboutRoute.textTwo": "Dronend Developer na projekte Finage",
+  "aboutRoute.textThree": "Január 2024 - súčasnosť",
+  "aboutRoute.textFour":
+    "Začal som pracovať na projekte Finage pre moju rodinu,",
+  "aboutRoute.textFive": "kde som sa zameral na vývoj frontendu. ",
+  "aboutRoute.textSix":
+    "V rámci tohto projektu som využil nasledujúci technologický stack:",
+  "aboutRoute.textSeven":
+    "React,TypeScript,Material UI,React Toastify,AWS SDK,Socket.io,Moment.js",
+  "aboutRoute.textEight":
+    "Okrem toho som pracoval s ďalšími knižnicami a nástrojmi, ako sú axios",
+  "aboutRoute.textNine": "pre HTTP požiadavky, react-router-dom pre navigáciu,",
+  "aboutRoute.textTen": "react-hook-form pre správu formulárov, a vite pre",
+  "aboutRoute.textEleven": "rýchlejšie zostavovanie aplikácie.",
+  "aboutRoute.textTwelve": "Mäkké zručnosti",
+  "aboutRoute.textThirteen":
+    "Organizácia kódu: Dôraz na čistý a prehľadný kód,",
+  "aboutRoute.textFourteen": "ktorý je ľahko udržiavateľný a rozšíriteľný.",
+  "aboutRoute.textFifteen": "Práca v tíme: Schopnosť efektívne komunikovať",
+  "aboutRoute.textSixteen": "a spolupracovať s ostatnými členmi tímu.",
+  "aboutRoute.textSeventeen":
+    "Riešenie problémov: Schopnosť analyzovať problémy",
+  "aboutRoute.textEighteen": "a navrhovať efektívne riešenia.",
+  "aboutRoute.textNineteen":
+    "Adaptabilita: Rýchle prispôsobenie sa novým technológiám",
+  "aboutRoute.textTwenty": "a pracovným postupom.",
+  "aboutRoute.textTwentyOne":
+    "Ako junior developer som sa snažil neustále zlepšovať",
+  "aboutRoute.textTwentyTwo":
+    "svoje zručnosti a prispievať k úspechu projektu.",
+  "aboutRoute.textTwentyThree":
+    "zlepšovať svoje zručnosti a prispievať k úspechu projektu.",
+  "aboutRoute.textTwentyFour":
+    "Moje úsilie bolo zamerané na dodávanie kvalitného",
+  "aboutRoute.textTwentyFive": "kódu a efektívne riešenie problémov,",
+  "aboutRoute.textTwentySix":
+    "čo mi pomohlo rásť v rámci tímu a získať cenné skúsenosti.",
+
   /* 03.3. Primary School */
   "templatePrimarySchool.textOne": "Vítaj v sekcii moja základná škola",
   "templatePrimarySchool.textTwo":

@@ -19,10 +19,27 @@ import upgradePorfolio from "../assets/img/upgradePorfolio.webp";
 import menu from "../assets/img/menu.webp";
 import notes from "../assets/img/notes.webp";
 import portfolio from "../assets/img/portfolio.webp";
+import finage from "../assets/img/finage.webp";
 
 const DataSkills = [
   {
     id: 1,
+    img: finage,
+    icon: [
+      <SiHtml5 style={{ fontSize: "20px", color: "#e44d26" }} />,
+      <SiCss3 style={{ fontSize: "20px", color: "#306af1" }} />,
+      <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
+      <SiMui style={{ fontSize: "20px", color: "#007fff" }} />,
+      <SiTypescript style={{ fontSize: "20px", color: "#007acc" }} />,
+      <TbBrandCypress style={{ fontSize: "20px", color: "#1c896a" }} />,
+    ],
+    technologies: ["html", "css", "typescript", "mui", "cypress"],
+    nameProject: "project.finage",
+    detailProject: "project.finageText",
+    openProject: "https://finage.sk/",
+  },
+  {
+    id: 2,
     img: portfolio,
     icon: [
       <SiHtml5 style={{ fontSize: "20px", color: "#e44d26" }} />,
@@ -35,7 +52,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/Portfolio-App",
   },
   {
-    id: 2,
+    id: 3,
     img: menu,
     icon: [
       <SiHtml5 style={{ fontSize: "20px", color: "#e44d26" }} />,
@@ -48,7 +65,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/Info-Food-App",
   },
   {
-    id: 3,
+    id: 4,
     img: logicGame,
     icon: [
       <SiHtml5 style={{ fontSize: "20px", color: "#e44d26" }} />,
@@ -61,7 +78,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/Game-Seven-App",
   },
   {
-    id: 4,
+    id: 5,
     img: boxOffice,
     icon: [
       <SiPhp style={{ fontSize: "20px", color: "#7b7fb5" }} />,
@@ -73,7 +90,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/Box-office-php",
   },
   {
-    id: 5,
+    id: 6,
     img: filmDatabase,
     icon: [
       <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
@@ -86,7 +103,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/Film-Database-App",
   },
   {
-    id: 6,
+    id: 7,
     img: notes,
     icon: [
       <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
@@ -99,7 +116,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/REACT-TS",
   },
   {
-    id: 7,
+    id: 8,
     icon: [
       <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
       <SiTypescript style={{ fontSize: "20px", color: "#007acc" }} />,
@@ -112,7 +129,7 @@ const DataSkills = [
     openProject: "https://github.com/katzohub/marketplace-Mobile-App",
   },
   {
-    id: 8,
+    id: 9,
     icon: [
       <SiReact style={{ fontSize: "20px", color: "#61dafb" }} />,
       <SiTypescript style={{ fontSize: "20px", color: "#007acc" }} />,

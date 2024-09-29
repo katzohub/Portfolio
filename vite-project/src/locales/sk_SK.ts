@@ -188,27 +188,34 @@ export default {
   "project.allCategory": "Všetko",
   "project.sorry": "Prepáčte",
   "project.please":
-    "Ak chcete vidieť moje projekty musíte zakliknúť aspoň jednu kategóriu",
+    "Ak chcete vidieť moje projekty, musíte zakliknúť aspoň jednu kategóriu",
   "project.namePortfolio": "Portfólio",
+  "project.finage": "Reálny-projekt",
   "project.restaurant": "Menu-pre-reštauráciu",
-  "project.nameGame": "Hra-sedemička",
+  "project.nameGame": "Hra-sedmička",
   "project.nameOffice": "Box-Office",
   "project.nameDatabase": "Filmová-Databáza",
-  "project.nameNotes": "Zápisnik",
-  "project.nameMarkPlace": "Bazar",
+  "project.nameNotes": "Zápisník",
+  "project.nameMarkPlace": "Bazár",
   "project.portolioUpgrade": "Vylepšené-portfólio",
   "project.portolioUpgradeText":
-    "Moje vylepšené portfólio s novými technológiami ktoré som sa naučil",
+    "Moje vylepšené portfólio s novými technológiami, ktoré som sa naučil",
   "project.namePortfolioText":
-    "Môj prvý projekt portfólio html,css a javascript",
+    "Môj prvý projekt portfólio, kde som sa naučil základy HTML, CSS a JavaScriptu",
+  "project.finageText":
+    "Môj prvý projekt, na ktorom som mohol pracovať v tíme a zdokonaľovať sa a učiť sa nové veci so skúsenými programátormi.",
   "project.restaurantText":
-    "Moje prvé menu pre reštaurácie html, css a javascript",
-  "project.nameGameText": "Moja prvá hra pomocou html, css a javascript",
-  "project.nameOfficeText": "Môj prvý mini projekt s php",
+    "Môj jednoduchý projekt s HTML, CSS a JavaScriptom, kde som sa učil základy programovania. Tu som sa snažil vytvoriť jednoduchú stránku pre reštauráciu.",
+  "project.nameGameText":
+    "Moje zdokonaľovanie sa v JavaScripte, kde som vytvoril logickú hru sedmička, kde hráč musí správne zoradiť odpovede.",
+  "project.nameOfficeText":
+    "Môj prvý mini projekt s PHP, kde som sa učil základy programovania. Tu som sa snažil vytvoriť jednoduchú stránku pre tržby v kine.",
   "project.nameDatabaseText":
-    "Môj prvý projekt s REACT ktorý nedopadol veľmi dobre...",
-  "project.nameNotesText": "Môj ďalší projekt s REACT",
-  "project.nameMarkPlaceText": "Môj ďalší mini projekt s REACT",
+    "Môj prvý projekt s REACT, kde som sa naučil základy Reactu.",
+  "project.nameNotesText":
+    "Môj pokročilejší projekt s REACT, kde som vytvoril menší zápisník úloh.",
+  "project.nameMarkPlaceText":
+    "Moje ďalšie zdokonaľovanie sa v REACTE, kde som sa už snažil zapojiť aj databázu Firebase.",
   "project.viewProject": "pozrieť-projekt",
   /*05.Contact-me*/
   "contact.LeftCard": "kontakt",

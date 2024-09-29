@@ -182,25 +182,33 @@ export default {
   "project.sorry": "Sorry",
   "project.please": "Please one checkbox click and view mine project.",
   "project.namePortfolio": "Portfolio",
+  "project.finage": "Real-Project",
   "project.restaurant": "Menu-restaurant",
-  "project.nameGame": "Game-seven",
+  "project.nameGame": "Game-Seven",
   "project.nameOffice": "Box-Office",
-  "project.nameDatabase": "Film-Database",
+  "project.nameDatabase": "Movie-Database",
   "project.nameNotes": "Notes",
-  "project.nameMarkPlace": "Market-Place",
-  "project.portolioUpgrade": "Upgrade-portfolio",
+  "project.nameMarkPlace": "Marketplace",
+  "project.portolioUpgrade": "Upgraded-Portfolio",
   "project.portolioUpgradeText":
-    "My upgraded portfolio with the new technologies I learned",
-  "project.namePortfolioText": "My first portfolio html,css and javascript",
+    "My upgraded portfolio with new technologies that I have learned",
+  "project.namePortfolioText":
+    "My first portfolio project where I learned the basics of HTML, CSS, and JavaScript",
+  "project.finageText":
+    "My first project where I could work in a team and improve myself and learn new things with experienced programmers.",
   "project.restaurantText":
-    "My first menu for restaurant html,css and javascript",
-  "project.nameGameText": "My first game html,css and javascript",
-  "project.nameOfficeText": "My first mini project with php",
-  "project.nameDatabaseText": "My first react project is not very good...",
-  "project.nameNotesText": "My next project with react",
-  "project.nameMarkPlaceText": "My next mini project with react",
+    "My simple project with HTML, CSS, and JavaScript where I learned the basics of programming. Here I tried to create a simple page for a restaurant.",
+  "project.nameGameText":
+    "My improvement in JavaScript where I created a logic game called Seven where the player must correctly arrange the answers.",
+  "project.nameOfficeText":
+    "My first mini project with PHP where I learned the basics of programming. Here I tried to create a simple page for cinema revenues.",
+  "project.nameDatabaseText":
+    "My first project with REACT where I learned the basics of React.",
+  "project.nameNotesText":
+    "My more advanced project with REACT where I created a small task notebook.",
+  "project.nameMarkPlaceText":
+    "My further improvement in REACT where I tried to integrate a Firebase database.",
   "project.viewProject": "view-project",
-
   /*05.Contact-me*/
   "contact.LeftCard": "contact",
   "contact.contact": "_contact",

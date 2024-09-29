@@ -57,6 +57,7 @@ const RateUs = () => {
   const [rate, setRate] = useState<number | null>(null);
   const [isRated, setIsRated] = useState(false);
   const [openSnackBar, setOpenSnackBar] = useState(false);
+  const [snackBarMessage, setSnackBarMessage] = useState("");
 
   const handleCloseSnackBar = () => {
     setOpenSnackBar(false);
@@ -82,6 +83,7 @@ const RateUs = () => {
     e.preventDefault();
 
     if (rate === null) {
+      setSnackBarMessage(intl.formatMessage({ id: "rateUs.errorSelectSmile" }));
       setOpenSnackBar(true);
       return;
     }
@@ -100,6 +102,8 @@ const RateUs = () => {
       setRate(null);
       setIsRated(true);
       handleCloseModal();
+      setSnackBarMessage(intl.formatMessage({ id: "rateUs.thankYou" }));
+      setOpenSnackBar(true);
       console.log(`Feedback submitted for "${window.location.href}".`);
     } catch (err) {
       console.log((err as Error).message);
@@ -189,27 +193,36 @@ const RateUs = () => {
                 sx={{ width: "auto" }}
                 onClick={handleRemoveThisComponent}
               >
-                Nezobrazovat
+                {intl.formatMessage({ id: "rateUs.dontShow" })}
               </StyledSubmitFormBtn>
-              <StyledSubmitFormBtn
-                variant="contained"
-                color="primary"
-                data-cy="close-feedback"
-                sx={{ width: "auto" }}
-                onClick={handleCloseModal}
+              <Box
+                sx={(theme) => ({
+                  [theme.breakpoints.down("sm")]: {
+                    display: "flex",
+                    gap: "5px",
+                  },
+                })}
               >
-                {intl.formatMessage({ id: "rateUs.close.modal" })}
-              </StyledSubmitFormBtn>
-              <StyledSubmitFormBtn
-                sx={{ width: "auto" }}
-                type="submit"
-                value="Send"
-                variant="contained"
-                color="primary"
-                data-cy="submit-feedback"
-              >
-                {intl.formatMessage({ id: "rateUs.send" })}
-              </StyledSubmitFormBtn>
+                <StyledSubmitFormBtn
+                  variant="contained"
+                  color="primary"
+                  data-cy="close-feedback"
+                  sx={{ width: "auto" }}
+                  onClick={handleCloseModal}
+                >
+                  {intl.formatMessage({ id: "rateUs.close.modal" })}
+                </StyledSubmitFormBtn>
+                <StyledSubmitFormBtn
+                  sx={{ width: "auto" }}
+                  type="submit"
+                  value="Send"
+                  variant="contained"
+                  color="primary"
+                  data-cy="submit-feedback"
+                >
+                  {intl.formatMessage({ id: "rateUs.send" })}
+                </StyledSubmitFormBtn>
+              </Box>
             </StyledDialogActions>
           </form>
         </DialogContent>
@@ -227,7 +240,7 @@ const RateUs = () => {
           variant="filled"
           sx={{ width: "100%" }}
         >
-          Please rate us
+          {snackBarMessage}
         </Alert>
       </Snackbar>
     </StyledContainerModal>

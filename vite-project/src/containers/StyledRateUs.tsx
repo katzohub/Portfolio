@@ -71,8 +71,14 @@ export const StyledWrapLegend = styled(Box)(() => ({
 export const StyledTypographyLegend = styled(Typography)(({ theme }) => ({
   color: theme.myColors.colorFFF,
 }));
-export const StyledDialogActions = styled(DialogActions)(() => ({
+export const StyledDialogActions = styled(DialogActions)(({ theme }) => ({
   padding: "0px 20px 24px 20px",
+  [theme.breakpoints.down("sm")]: {
+    display: "flex",
+    flexDirection: "column",
+
+    alignItems: "end",
+  },
 }));
 
 export const Transition = forwardRef(function Transition(

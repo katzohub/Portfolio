@@ -119,6 +119,12 @@ const RateUs = () => {
     addRatedUrl(currentUrl);
     setIsRated(true);
   };
+  const handleRateChange = (
+    _: SyntheticEvent<Element, Event>,
+    newValue: number | null
+  ) => {
+    setRate(newValue);
+  };
 
   return (
     <StyledContainerModal>
@@ -156,9 +162,7 @@ const RateUs = () => {
                 IconContainerComponent={IconContainer}
                 getLabelText={(value: number) => customIcons[value].label}
                 highlightSelectedOnly
-                onChange={(e: SyntheticEvent<Element, Event>, newValue) =>
-                  setRate(newValue)
-                }
+                onChange={handleRateChange}
               />
               <StyledWrapLegend>
                 <StyledTypographyLegend>
